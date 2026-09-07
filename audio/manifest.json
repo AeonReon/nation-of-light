@@ -1,11 +1,6 @@
 {
- "voice": "bf_emma",
+ "voice": "af_heart",
  "clips": [
-  "lesson-chair",
-  "lesson-feet",
-  "lesson-fetch",
-  "lesson-seat",
-  "lesson-world",
   "mv-air",
   "mv-ball",
   "mv-breath",
@@ -19,7 +14,6 @@
   "mv-knot",
   "mv-leg",
   "mv-name",
-  "mv-north",
   "mv-phrase",
   "mv-plane",
   "mv-press",
@@ -31,9 +25,7 @@
   "mv-still",
   "mv-tap",
   "mv-thirty",
-  "mv-twos",
   "mv-up",
-  "mv-whistle",
   "story-s1",
   "story-s2",
   "story-s3",
@@ -48,12 +40,8 @@
   "ui-break-feet",
   "ui-break-fetch",
   "ui-break-seat",
-  "ui-choose",
   "ui-deck",
-  "ui-first",
-  "ui-scroll",
-  "ui-today",
-  "ui-welcome"
+  "ui-first"
  ],
  "marcus": [
   "a-d1",

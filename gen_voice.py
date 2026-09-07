@@ -1,4 +1,4 @@
-"""The narrator's voice (Aurelia, keeper of the flame): Kokoro bf_emma, local.
+"""The narrator's voice (Aurelia, keeper of the flame): Kokoro af_heart, local.
 Reads every exercise tablet, tier line, story scroll and UI line in content.json
 and writes audio/voice/<id>.mp3. Marcus's own clips are NOT made here — they
 are Chatterbox clones made in APPS/school-of-light (gen_mentors.py) and copied.
@@ -9,7 +9,7 @@ are Chatterbox clones made in APPS/school-of-light (gen_mentors.py) and copied.
 import json, sys, hashlib, subprocess, urllib.request
 from pathlib import Path
 HERE = Path(__file__).parent; OUT = HERE / "audio" / "voice"; OUT.mkdir(parents=True, exist_ok=True)
-TTS = "http://127.0.0.1:8765/api/tts"; VOICE = "bf_emma"; FORCE = "--force" in sys.argv
+TTS = "http://127.0.0.1:8765/api/tts"; VOICE = "af_heart"; FORCE = "--force" in sys.argv
 C = json.loads((HERE / "content.json").read_text())
 lines = {}
 for m in C["moves"]: lines["mv-" + m["id"]] = m["test"]

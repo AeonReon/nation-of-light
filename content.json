@@ -1,5 +1,5 @@
 {
- "version": 3,
+ "version": 4,
  "rule": "A mentor's voice only ever says that mentor's own recorded words, lightly modernised. Every line carries its source. The stories about them are the school's words, in the school's voice, and say so.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -406,18 +406,18 @@
  "voice": {
   "first": "He is here. Tap him any time and he will speak.",
   "deck": "Twenty-five in one sitting. You tapped, breathed, stood, threw, drew, spoke to a stranger and rang two shops. More action than most people take in a month, and you can feel it. This is what Light School runs on, and from here it gets bigger.",
-  "break-seat": "Five done. You moved, and most people never do. The next five stay in the chair, and you will reach for a reason not to. Find a way. A finger on the table counts.",
-  "break-chair": "Ten. You found a way every time. Now stand up. The body goes first and the mind follows it, and everything here is in the room you are in.",
-  "break-feet": "Fifteen, and you are up out of the chair. The next five need one thing from the room. No ball is not a reason. A sock is a ball.",
+  "break-seat": "Five done. You moved, and most people never do. The next five stay in the chair. You will reach for a reason not to. Find a way anyway.",
+  "break-chair": "Ten. You found a way every time, and that is the whole skill. Now stand up. The body goes first and the mind follows it. Everything here is in the room you are in.",
+  "break-feet": "Fifteen, and you are up out of the chair. The next five need one thing from the room. Whatever you cannot find, something in the room will do instead.",
   "break-fetch": "Twenty. The last five have other people in them, and the last two are phone calls. Nothing in them is hard. What stops people is a feeling, and the feeling is made of paper."
  },
  "cover": {
   "em": "Nation of",
   "title": "Light School",
   "lines": [
-   "Twenty-five tiny actions, about ten minutes, from the chair you are in.",
-   "They break the frozen state where nothing happens. By the fifth you will feel it: momentum.",
-   "Do not think about them. Do one, tap Done, do the next."
+   "Most people wait. For more money, more time, the right moment. Life goes past while they wait.",
+   "Light School is for the ones who move. A spectacular life is here already, with nothing new needed: a walk, a park, a gallery, a building that has stood for centuries. Most of it is free. It is a choice.",
+   "The choice needs momentum. Twenty-five tiny actions, about ten minutes, from the chair you are in. Do not think about them. Do one, tap Done, do the next."
   ],
   "begin": "Begin",
   "what": "What is this?"
@@ -425,7 +425,7 @@
  "what": {
   "title": "What Light School is",
   "paras": [
-   "A school for people who want to live at full strength now, not once the money or the time arrives. Its full name is the Nation of Light School. Everyone calls it Light School.",
+   "A school for people who choose to live at full strength now, not once the money or the time arrives. A spectacular life is here already and most of it is free; it is a choice, and the choice needs momentum. Its full name is the Nation of Light School. Everyone calls it Light School.",
    "It starts with momentum: twenty-five small actions in one sitting, from the chair you are in, to prove to yourself that you move. Tapping, breathing, standing, throwing, folding, drawing, speaking, two phone calls. Most people never take that much action in a month.",
    "Then the things that light you up get more of your life, and a small group and a mentor take you deeper. Behind the app there is a real community. The app is the way in, and the way in is the twenty-five."
   ],
@@ -491,17 +491,17 @@
   {
    "after": "seat",
    "line": "m-x3",
-   "t": "Five done. You moved, and most people never do. The next five stay in the chair, and you will reach for a reason not to. Find a way. A finger on the table counts."
+   "t": "Five done. You moved, and most people never do. The next five stay in the chair. You will reach for a reason not to. Find a way anyway."
   },
   {
    "after": "chair",
    "line": "m-x1",
-   "t": "Ten. You found a way every time. Now stand up. The body goes first and the mind follows it, and everything here is in the room you are in."
+   "t": "Ten. You found a way every time, and that is the whole skill. Now stand up. The body goes first and the mind follows it. Everything here is in the room you are in."
   },
   {
    "after": "feet",
    "line": "m-d4",
-   "t": "Fifteen, and you are up out of the chair. The next five need one thing from the room. No ball is not a reason. A sock is a ball."
+   "t": "Fifteen, and you are up out of the chair. The next five need one thing from the room. Whatever you cannot find, something in the room will do instead."
   },
   {
    "after": "fetch",

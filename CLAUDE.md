@@ -20,7 +20,7 @@ a different front: one drawn scene, a living mentor, one tablet at a time.
   Regenerate by hand if the source changes; keep the sources on every line.
 - `audio/marcus/` — his 10 Chatterbox clips + `visemes.json`, COPIED from school-of-light.
   Never generate his voice here; new lines are made there (`gen_mentors.py`) and copied over.
-- `audio/voice/` — Aurelia the narrator (Kokoro `bf_emma`, local :8765). `python3 gen_voice.py`.
+- `audio/voice/` — Aurelia the narrator (Kokoro `af_heart` (his choice over bf_emma: "much more pleasant"), local :8765). `python3 gen_voice.py`.
 
 ## Rules carried over, not negotiable
 
