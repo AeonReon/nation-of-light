@@ -1,5 +1,5 @@
 {
- "version": 2,
+ "version": 3,
  "rule": "A mentor's voice only ever says that mentor's own recorded words, lightly modernised. Every line carries its source. The stories about them are the school's words, in the school's voice, and say so.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -73,6 +73,66 @@
      "id": "m-x2",
      "t": "Be like the headland the waves keep breaking against. It stands firm, and the water around it goes quiet.",
      "src": "Meditations, book 4, note 49"
+    },
+    {
+     "id": "m-x3",
+     "t": "Be satisfied with the smallest step forward, and treat that outcome as no small thing.",
+     "src": "Meditations, book 9, note 29"
+    },
+    {
+     "id": "m-x4",
+     "t": "If a thing is hard for you to do, do not think it impossible for a human being. If it is possible for a human being and fits them, think it within your reach too.",
+     "src": "Meditations, book 6, note 19"
+    },
+    {
+     "id": "m-x5",
+     "t": "Build your life act by act, and be content if each act reaches its end as far as it can. Nobody can stop you doing that.",
+     "src": "Meditations, book 8, note 32"
+    },
+    {
+     "id": "m-x6",
+     "t": "Every hour, decide firmly, like a Roman and a human being, to do what is in front of you with simple dignity.",
+     "src": "Meditations, book 2, note 5"
+    },
+    {
+     "id": "m-x7",
+     "t": "Let no act be done without a purpose.",
+     "src": "Meditations, book 4, note 2"
+    },
+    {
+     "id": "m-x8",
+     "t": "If it is not right, do not do it. If it is not true, do not say it.",
+     "src": "Meditations, book 12, note 17"
+    },
+    {
+     "id": "m-x9",
+     "t": "Your mind takes on the colour of your thoughts. The soul is dyed by them.",
+     "src": "Meditations, book 5, note 16"
+    },
+    {
+     "id": "m-x10",
+     "t": "Nowhere can a person find a quieter or more untroubled retreat than in their own soul.",
+     "src": "Meditations, book 4, note 3"
+    },
+    {
+     "id": "m-x11",
+     "t": "Do not let the future trouble you. You will come to it, if you must, carrying the same reason you use for the present.",
+     "src": "Meditations, book 7, note 8"
+    },
+    {
+     "id": "m-x12",
+     "t": "If you work at what is in front of you, seriously, vigorously, calmly, without letting anything distract you, you will live happy. And there is nobody able to prevent this.",
+     "src": "Meditations, book 3, note 12"
+    },
+    {
+     "id": "m-x13",
+     "t": "Let it make no difference to you whether you are cold or warm, drowsy or well rested, if you are doing what needs doing.",
+     "src": "Meditations, book 6, note 2"
+    },
+    {
+     "id": "m-x14",
+     "t": "Attend to the matter in front of you, whether it is a thought, an act, or a word.",
+     "src": "Meditations, book 8, note 22"
     }
    ]
   }
@@ -344,30 +404,30 @@
   }
  ],
  "voice": {
-  "choose": "Choose how far you are going. Thirty days, or ninety. You can always go further.",
-  "today": "That is today. Five things done, and the flame is lit. Come back tomorrow, and Marcus will be here.",
-  "scroll": "A scroll has opened. A piece of who he really was.",
-  "first": "He is here. Tap him any time and he will speak. The first tablet is below.",
-  "welcome": "Come in. This is the portico. Marcus keeps it, and from today it is yours as well.",
-  "deck": "Twenty-five things, and you did every one. Most people never take that much action in a month. You are one of the few who does."
+  "first": "He is here. Tap him any time and he will speak.",
+  "deck": "Twenty-five in one sitting. You tapped, breathed, stood, threw, drew, spoke to a stranger and rang two shops. More action than most people take in a month, and you can feel it. This is what Light School runs on, and from here it gets bigger.",
+  "break-seat": "Five done. You moved, and most people never do. The next five stay in the chair, and you will reach for a reason not to. Find a way. A finger on the table counts.",
+  "break-chair": "Ten. You found a way every time. Now stand up. The body goes first and the mind follows it, and everything here is in the room you are in.",
+  "break-feet": "Fifteen, and you are up out of the chair. The next five need one thing from the room. No ball is not a reason. A sock is a ball.",
+  "break-fetch": "Twenty. The last five have other people in them, and the last two are phone calls. Nothing in them is hard. What stops people is a feeling, and the feeling is made of paper."
  },
  "cover": {
-  "em": "Nation of Light",
-  "title": "For the ones who move.",
+  "em": "Nation of",
+  "title": "Light School",
   "lines": [
-   "Most people wait. For money, for time, for the right moment, for somebody's permission. Life goes past while they wait.",
-   "This is a school for the ones who move. Twenty-five small things, nothing to buy, nobody to ask.",
-   "You will feel what it is about before anyone explains it."
+   "Twenty-five tiny actions, about ten minutes, from the chair you are in.",
+   "They break the frozen state where nothing happens. By the fifth you will feel it: momentum.",
+   "Do not think about them. Do one, tap Done, do the next."
   ],
   "begin": "Begin",
   "what": "What is this?"
  },
  "what": {
-  "title": "What this is",
+  "title": "What Light School is",
   "paras": [
-   "A school for people who want to live at full strength now, not once the money or the time arrives.",
-   "It starts with momentum: twenty-five small actions, from the chair you are in, to prove to yourself that you move. Most people never take that much action in a month.",
-   "Then the things that light you up get more of your life, and a small group and a mentor take you deeper. Behind the app there is a real community. The app is the way in, and the way in is the first five."
+   "A school for people who want to live at full strength now, not once the money or the time arrives. Its full name is the Nation of Light School. Everyone calls it Light School.",
+   "It starts with momentum: twenty-five small actions in one sitting, from the chair you are in, to prove to yourself that you move. Tapping, breathing, standing, throwing, folding, drawing, speaking, two phone calls. Most people never take that much action in a month.",
+   "Then the things that light you up get more of your life, and a small group and a mentor take you deeper. Behind the app there is a real community. The app is the way in, and the way in is the twenty-five."
   ],
   "who": "The school's words."
  },
@@ -403,5 +463,54 @@
   "id": "a-d2",
   "t": "It is not in the still calm of life that great characters are formed.",
   "src": "Letter to John Quincy, January 1780"
+ },
+ "speak": {
+  "name": "m-g3",
+  "reach": "m-x6",
+  "hand": "m-d1",
+  "breath": "m-x4",
+  "still": "m-x10",
+  "leg": "m-x5",
+  "ball": "m-d2",
+  "plane": "m-x7",
+  "juggle": "m-x14",
+  "draw": "m-x9",
+  "knot": "m-x8",
+  "phrase": "m-x11",
+  "glad": "m-g4",
+  "hello": "m-x12",
+  "ring": "m-x2"
+ },
+ "greet": [
+  "m-g1",
+  "m-g2",
+  "m-x13",
+  "m-g4"
+ ],
+ "breaks": [
+  {
+   "after": "seat",
+   "line": "m-x3",
+   "t": "Five done. You moved, and most people never do. The next five stay in the chair, and you will reach for a reason not to. Find a way. A finger on the table counts."
+  },
+  {
+   "after": "chair",
+   "line": "m-x1",
+   "t": "Ten. You found a way every time. Now stand up. The body goes first and the mind follows it, and everything here is in the room you are in."
+  },
+  {
+   "after": "feet",
+   "line": "m-d4",
+   "t": "Fifteen, and you are up out of the chair. The next five need one thing from the room. No ball is not a reason. A sock is a ball."
+  },
+  {
+   "after": "fetch",
+   "line": "m-d3",
+   "t": "Twenty. The last five have other people in them, and the last two are phone calls. Nothing in them is hard. What stops people is a feeling, and the feeling is made of paper."
+  }
+ ],
+ "finale": {
+  "line": "m-g2",
+  "t": "Twenty-five in one sitting. You tapped, breathed, stood, threw, drew, spoke to a stranger and rang two shops. More action than most people take in a month, and you can feel it. This is what Light School runs on, and from here it gets bigger."
  }
 }

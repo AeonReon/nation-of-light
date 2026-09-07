@@ -73,8 +73,6 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .bubble.school{font-family:var(--sans);font-weight:500;font-size:14px}
 @keyframes bubblein{0%{transform:translateY(8px) scale(.94)}100%{transform:none}}
 @keyframes wordin{0%{opacity:.3;transform:translateY(5px)}100%{opacity:1;transform:none}}
-.tapme{position:absolute;left:66%;top:36%;z-index:4;pointer-events:none;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.55);box-shadow:0 0 0 0 rgba(255,255,255,.7);animation:ring 1.6s ease-out infinite}
-@keyframes ring{0%{box-shadow:0 0 0 0 rgba(255,255,255,.75);opacity:1}100%{box-shadow:0 0 0 22px rgba(255,255,255,0);opacity:.6}}
 
 /* ---- HUD over the entablature ---- */
 .hud{position:absolute;left:0;right:0;top:9px;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:0 10px;pointer-events:none}
@@ -117,7 +115,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .tablet .num{font-family:var(--display);font-weight:600;font-size:13px;color:var(--gold-deep);letter-spacing:.04em;text-transform:uppercase}
 .kind{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:10px;color:#fff;background:var(--k)}
 .kind-courage{--k:var(--k-courage)}.kind-skill{--k:var(--k-skill)}.kind-kindness{--k:var(--k-kindness)}.kind-attention{--k:var(--k-attention)}
-.tablet .test{font-family:var(--display);font-weight:500;font-size:clamp(18px,5.4vw,22px);line-height:1.3;color:var(--ink);flex:1 1 auto;display:flex;align-items:center;font-variation-settings:"SOFT" 40,"WONK" 0}
+.tablet .test{font-family:var(--display);font-weight:500;font-size:clamp(18px,5.4vw,22px);line-height:1.3;color:var(--ink);flex:1 1 auto;min-height:0;overflow-y:auto;display:flex;align-items:center;font-variation-settings:"SOFT" 40,"WONK" 0}
 .tablet .test .w{width:100%}
 .tablet .test span{display:inline-block}
 .tablet .test.say span{animation:wordin .4s var(--spring) both;animation-delay:calc(var(--i) * 45ms)}
@@ -225,3 +223,11 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 @keyframes reveal{0%{transform:translateY(14px)}100%{transform:none}}
 .whatcard .who{font-size:12px;color:var(--ink-faint);font-style:italic;margin:0 0 14px}
 .whatcard p{font-size:15px;line-height:1.5;color:var(--ink);margin:0 0 10px}
+
+/* ---- v3: Light School ---- */
+.cover .em{font-size:14px;letter-spacing:.18em;color:var(--gold-lt);margin-bottom:8px}
+.cover h1 .t{font-size:clamp(46px,13vw,58px)}
+.cover p .ln{display:block;margin-bottom:9px}
+.cover p .ln:first-child{color:#FFF7E4;font-weight:600}
+.tablet .top .kind[hidden]{display:none}
+.tablet .test .w{margin:auto 0}

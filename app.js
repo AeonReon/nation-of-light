@@ -1,45 +1,37 @@
-/* Nation of Light — v1. The first scene, end to end.
+/* Light School (the Nation of Light School) — v3. The twenty-five, in one sitting.
 
-   The shape of a session: Marcus walks into the portico and says one of his
-   own lines. A tablet rises with one small thing to do; Aurelia, the keeper,
-   reads it out. You do it, tap Done. A laurel leaf fills, the sun climbs a
-   little, Marcus reacts. Five tablets make a tier, and a tier finished hangs
-   a wreath on the frieze and opens a scroll: one true piece of his life, in
-   the school's words. Five tablets is also a day. The brazier's flame is the
-   days you have shown up; it dims if you miss one, it never goes out on you.
+   The whole opening is one thing: get a person out of the frozen state by
+   doing twenty-five tiny actions, one after another, with Marcus beside
+   them, in about ten minutes. Nothing is explained that does not need to be.
+   Cover (what, why, how) → Marcus speaks → a tablet → Done → the next.
+   After every five, a breath: Marcus says one line that fits what was just
+   done, one line of encouragement points at the next five, and on it goes.
+   At twenty-five, the finish. One voice at a time, always.
 
-   The rule from the school app holds here and is not negotiable: Marcus's
-   voice only ever says his own recorded words (mentors.json → content.json,
-   every line with its source). Everything else is Aurelia's voice, labelled
-   as the school's words. */
+   The rule that holds: Marcus's voice only ever says his own recorded words
+   (content.json, every line with its source). Aurelia reads the tablets and
+   the breaks in the school's words. Nothing is put in his mouth. */
 (function () {
   'use strict';
   const $ = id => document.getElementById(id);
-  const KEY = 'nol.v1', SESSION = 5;
-  const BUILD = 'v2';
-  let C = null, VIS = null, PORTICO = null, RIG = null, CUES = null;
-  const NAR = new Audio(), MAR = new Audio(), MEN = new Audio(), MUS = new Audio(); NAR.preload = 'auto'; MAR.preload = 'auto'; MUS.preload = 'auto'; MUS.src = 'audio/music/dawn.mp3';
+  const KEY = 'nol.v1';
+  let C = null, VIS = null, PORTICO = null, RIG = null, CUES = null, LINES = {};
+  const NAR = new Audio(), MAR = new Audio(), MUS = new Audio(); NAR.preload = 'auto'; MAR.preload = 'auto'; MUS.preload = 'auto'; MUS.src = 'audio/music/dawn.mp3';
   let S = load();
 
   /* ---------- state ---------- */
   function load() {
-    try { const s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s && s.v === 1) return s; } catch (e) {}
-    return { v: 1, journey: 0, start: null, done: [], skipped: [], days: {}, sound: true, taps: 0, greeted: 0, dones: 0, scrolls: [], opened: [], seenHelp: false };
+    try { const s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s && s.v === 1) { s.said = s.said || []; s.skipped = s.skipped || []; return s; } } catch (e) {}
+    return { v: 1, start: null, done: [], skipped: [], days: {}, sound: true, taps: 0, visits: 0, said: [], seenHelp: false };
   }
   function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
   const today = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
-  const dayBefore = iso => { const d = new Date(iso + 'T12:00:00'); d.setDate(d.getDate() - 1); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
-  function dayNumber() { if (!S.start) return 1; const a = new Date(S.start + 'T12:00:00'), b = new Date(today() + 'T12:00:00'); return Math.max(1, Math.round((b - a) / 864e5) + 1); }
-  const litDays = () => Object.values(S.days).filter(n => n > 0).length;
-  function flameState() {
-    const t = today(); if ((S.days[t] || 0) > 0) return 'lit';
-    if ((S.days[dayBefore(t)] || 0) > 0) return 'lit';           // still warm from yesterday
-    return litDays() ? 'dim' : 'out';
-  }
-  const doneToday = () => S.days[today()] || 0;
   const remaining = () => [...C.moves.filter(m => !S.done.includes(m.id) && !S.skipped.includes(m.id)), ...C.moves.filter(m => !S.done.includes(m.id) && S.skipped.includes(m.id))];
   const tierDone = tid => C.moves.filter(m => m.tier === tid).every(m => S.done.includes(m.id));
   const tiersDone = () => C.tiers.filter(t => tierDone(t.id)).length;
+  const line = id => LINES[id];
+  /* a line he has not said this sitting; if every candidate is used, the first */
+  function fresh(ids) { const f = ids.find(i => !S.said.includes(i)); return line(f || ids[0]); }
 
   /* ---------- sound ---------- */
   let AC = null;
@@ -60,23 +52,16 @@
   }
   const voiceOn = () => S.sound;
   function paintSound() { $('soundbtn').classList.toggle('off', !S.sound); }
-  function hush() { NAR.pause(); MAR.pause(); MEN.pause(); if (RIG) RIG.hush(); $('readbtn').classList.remove('on'); musicDuck(false); }
+  function hush() { NAR.pause(); MAR.pause(); if (RIG) RIG.hush(); $('readbtn').classList.remove('on'); musicDuck(false); }
   /* the music: one nocturne, in on Begin, under every voice, out on its own */
   let MUSV = 0, MUST = null;
   function musicTo(v, ms) { clearInterval(MUST); const from = MUS.volume, t0 = performance.now(); MUST = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / ms); MUS.volume = from + (v - from) * k; if (k >= 1) clearInterval(MUST); }, 50); }
   function musicStart() { if (!S.sound) return; MUSV = .55; MUS.volume = 0; MUS.currentTime = 0; MUS.play().then(() => musicTo(MUSV, 2600)).catch(() => {}); }
   function musicDuck(on) { if (MUS.paused) return; musicTo(on ? .14 : MUSV, on ? 350 : 1400); }
   function musicStop() { if (MUS.paused) return; musicTo(0, 1200); setTimeout(() => MUS.pause(), 1300); }
-  [NAR, MAR, MEN].forEach(el => { el.addEventListener('play', () => musicDuck(true)); el.addEventListener('ended', () => { if (NAR.paused && MAR.paused && MEN.paused) musicDuck(false); }); el.addEventListener('pause', () => { if (NAR.paused && MAR.paused && MEN.paused) musicDuck(false); }); });
-  /* another mentor's own line, in their own voice, off a medallion */
-  function mentorClip(q, medal, after) {
-    if (!voiceOn()) { if (after) setTimeout(after, 400); return; }
-    MEN.pause(); MEN.src = 'audio/marcus/' + q.id + '.mp3'; if (medal) medal.classList.add('on');
-    MEN.onended = () => { if (medal) medal.classList.remove('on'); if (after) after(); }; MEN.onerror = MEN.onended;
-    MEN.play().catch(() => MEN.onended());
-  }
+  [NAR, MAR].forEach(el => { el.addEventListener('play', () => musicDuck(true)); const back = () => { if (NAR.paused && MAR.paused) musicDuck(false); }; el.addEventListener('ended', back); el.addEventListener('pause', back); });
 
-  /* Aurelia reads: the exercises, the tiers, the scrolls, the UI lines. */
+  /* Aurelia reads: the tablets, the breaks, the finish. */
   function narrate(id, after) {
     if (!voiceOn()) { if (after) setTimeout(after, 300); return; }
     NAR.pause(); NAR.src = 'audio/voice/' + id + '.mp3'; NAR.onended = () => { $('readbtn').classList.remove('on'); if (after) after(); }; NAR.onerror = () => { if (after) after(); };
@@ -84,21 +69,22 @@
   }
   /* Marcus speaks: only a line from content.json, mouth off the audio clock. */
   function marcusSay(ln, pose, after) {
-    if (!RIG || RIG.hidden) { if (after) after(); return; }
-    const b = $('bubble'); b.hidden = false; b.classList.remove('school');
+    if (!ln || !RIG || RIG.hidden) { if (after) after(); return; }
+    if (!S.said.includes(ln.id)) { S.said.push(ln.id); save(); }
+    const b = $('bubble'); b.hidden = false;
     b.innerHTML = wordSpans(ln.t) + `<span class="src">${ln.src}</span>`;
     b.classList.remove('say'); void b.offsetWidth; b.classList.add('say');
     if (pose && RIG[pose]) RIG[pose]();
     clearTimeout(marcusSay._t);
     const finish = () => { RIG.hush(); marcusSay._t = setTimeout(() => { b.hidden = true; }, 1800); if (after) after(); };
+    const est = Math.min(12000, ln.t.length * 70);
     if (voiceOn()) {
       MAR.pause(); CUES = (VIS && VIS[ln.id]) || null; MAR.src = 'audio/marcus/' + ln.id + '.mp3';
-      MAR.onended = finish; MAR.onerror = () => { RIG.talk(Math.min(12, ln.t.length / 14)); setTimeout(finish, Math.min(12000, ln.t.length * 70)); };
-      RIG.talk(20); MAR.play().catch(() => { RIG.talk(Math.min(12, ln.t.length / 14)); setTimeout(finish, Math.min(12000, ln.t.length * 70)); });
-    } else { RIG.talk(Math.min(12, ln.t.length / 14)); setTimeout(finish, Math.min(12000, ln.t.length * 70)); }
+      MAR.onended = finish; MAR.onerror = () => { RIG.talk(est / 1000); setTimeout(finish, est); };
+      RIG.talk(20); MAR.play().catch(() => { RIG.talk(est / 1000); setTimeout(finish, est); });
+    } else { RIG.talk(est / 1000); setTimeout(finish, est); }
   }
   const wordSpans = t => t.split(/\s+/).map((w, i) => `<span style="--i:${i}">${w}</span>`).join(' ');
-  const pick = (arr, n) => arr[n % arr.length];
 
   /* ---------- the scene ---------- */
   function buildScene() {
@@ -110,114 +96,116 @@
       while (lo <= hi) { const mid = (lo + hi) >> 1; if (c[mid][0] <= t) { best = mid; lo = mid + 1; } else hi = mid - 1; }
       return best < 0 ? 'X' : c[best][1];
     };
-    PORTICO.setWreaths(tiersDone()); PORTICO.setFlame(flameState()); PORTICO.setPhase(skyFor());
+    PORTICO.setWreaths(tiersDone()); PORTICO.setFlame(S.done.length ? 'lit' : 'out'); PORTICO.setPhase(skyFor());
     $('mfig').addEventListener('click', onMarcusTap);
     $('stage').addEventListener('pointerdown', e => { if (RIG && !RIG.hidden) RIG.lookAt(e.clientX, e.clientY); }, { passive: true });
   }
-  const skyFor = () => Math.min(1, doneToday() / SESSION) * (doneToday() >= SESSION ? 1 : .55);
+  /* dawn at the first tablet, full morning by the middle, gold at the twenty-fifth */
+  const skyFor = () => Math.min(1, S.done.length / C.moves.length);
 
   function onMarcusTap() {
     if (!RIG || RIG.hidden) return;
-    $('tapme').hidden = true; sfx('tap'); S.taps++; save();
-    const pose = pick(['wave', 'salute', 'think', 'nod', 'laugh'], S.taps);
-    marcusSay(pick(C.marcus.lines.greet, S.taps), pose);
+    sfx('tap'); S.taps++; save();
+    const poses = ['wave', 'salute', 'think', 'nod', 'laugh'];
+    const all = Object.keys(LINES);
+    marcusSay(fresh(all.slice(S.taps % all.length).concat(all)), poses[S.taps % poses.length]);
   }
 
   /* ---------- HUD + laurel ---------- */
   function paintHud() {
-    $('dayn').textContent = dayNumber(); $('dayof').textContent = S.journey || 30;
+    $('countn').textContent = S.done.length; $('countof').textContent = C.moves.length;
     const bar = $('laurelbar'); if (!bar.children.length) for (let i = 0; i < C.moves.length; i++) { const l = document.createElement('i'); l.className = 'leaf'; bar.appendChild(l); }
     [...bar.children].forEach((l, i) => l.classList.toggle('on', i < S.done.length));
-    $('laurelcount').innerHTML = `<b>${S.done.length}</b> / ${C.moves.length}`;
     paintSound();
   }
   function popLeaf(i) { const l = $('laurelbar').children[i]; if (!l) return; l.classList.add('on'); l.classList.remove('pop'); void l.offsetWidth; l.classList.add('pop'); }
 
   /* ---------- the tablet ---------- */
-  let CUR = null;
+  let CUR = null, MODE = 'task';
+  function riseTablet() { const t = $('tablet'); t.classList.remove('sink'); t.classList.remove('rise'); void t.offsetWidth; t.classList.add('rise'); }
+  function setText(el, text) { el.innerHTML = '<div class="w">' + wordSpans(text) + '</div>'; el.classList.remove('say'); void el.offsetWidth; el.classList.add('say'); }
   function showTablet(m, autoRead) {
-    CUR = m; const t = $('tablet');
+    CUR = m; MODE = 'task';
     const tier = C.tiers.find(x => x.id === m.tier), idx = C.moves.indexOf(m) + 1;
-    $('tnum').textContent = 'Tablet ' + idx; $('tkind').textContent = m.kind; $('tkind').className = 'kind kind-' + m.kind;
+    $('tnum').textContent = 'Tablet ' + idx; $('tkind').textContent = m.kind; $('tkind').className = 'kind kind-' + m.kind; $('tkind').hidden = false;
     $('tierline').textContent = tier.name + ' · ' + tier.line;
-    const tx = $('ttext'); tx.innerHTML = '<div class="w">' + wordSpans(m.test) + '</div>'; tx.classList.remove('say'); void tx.offsetWidth; tx.classList.add('say');
+    setText($('ttext'), m.test);
     $('tfall').innerHTML = m.fallback ? '<b>No excuses.</b> ' + m.fallback : '';
     $('donebtn').textContent = 'Done'; $('donebtn').disabled = false; $('skipbtn').hidden = false; $('readbtn').hidden = false;
-    t.classList.remove('sink'); t.classList.remove('rise'); void t.offsetWidth; t.classList.add('rise'); sfx('rise');
+    riseTablet(); sfx('rise');
     if (RIG && !RIG.hidden) setTimeout(() => RIG.point(), 250);
-    if (autoRead) { const go = () => { if (CUR === m) readTablet(); }; if (!MAR.paused && !MAR.ended) { const once = () => { MAR.removeEventListener('ended', once); setTimeout(go, 350); }; MAR.addEventListener('ended', once); } else setTimeout(go, 700); }
+    if (autoRead) { const go = () => { if (CUR === m && MODE === 'task') readTablet(); }; if (!MAR.paused && !MAR.ended) { const once = () => { MAR.removeEventListener('ended', once); setTimeout(go, 350); }; MAR.addEventListener('ended', once); } else setTimeout(go, 700); }
   }
   function readTablet() {
     if (!CUR) return; const b = $('readbtn');
     if (!NAR.paused && NAR.src.includes('mv-' + CUR.id)) { NAR.pause(); b.classList.remove('on'); return; }
     MAR.pause(); if (RIG) RIG.hush(); b.classList.add('on'); narrate('mv-' + CUR.id);
   }
+  /* the card between fives: a breath, one line pointing at the next five */
+  function breakCard(b, then) {
+    CUR = null; MODE = 'break';
+    $('tnum').textContent = S.done.length + ' done'; $('tkind').hidden = true;
+    const nx = remaining()[0]; $('tierline').textContent = nx ? 'Next: ' + C.tiers.find(x => x.id === nx.tier).name : '';
+    setText($('ttext'), b.t); $('tfall').innerHTML = '';
+    $('readbtn').hidden = true; $('skipbtn').hidden = true; $('donebtn').textContent = 'Next five'; $('donebtn').disabled = false;
+    riseTablet(); sfx('scroll');
+    breakCard._then = then;
+  }
   function restTablet() {
-    CUR = null; const t = $('tablet'); const next = remaining()[0];
-    $('tnum').textContent = 'Day ' + dayNumber() + ' done'; $('tkind').textContent = ''; $('tkind').className = 'kind'; $('tkind').style.display = 'none';
-    $('tierline').textContent = next ? 'Tomorrow: ' + C.tiers.find(x => x.id === next.tier).name : 'The first deck is done';
-    const tx = $('ttext'); tx.innerHTML = '<div class="w">' + wordSpans(next ? 'The flame is lit and Marcus is here. Come back tomorrow, or do one more now if you want to.' : 'Twenty-five things, and you did every one. More tablets are being written; the portico will be here.');
-    tx.classList.remove('say'); void tx.offsetWidth; tx.classList.add('say');
-    $('tfall').innerHTML = ''; $('readbtn').hidden = true; $('skipbtn').hidden = true; $('donebtn').textContent = next ? 'One more' : 'Sit with Marcus'; $('donebtn').disabled = false;
-    t.classList.remove('sink'); t.classList.remove('rise'); void t.offsetWidth; t.classList.add('rise');
+    CUR = null; MODE = 'rest'; const next = remaining()[0];
+    $('tnum').textContent = next ? S.done.length + ' of ' + C.moves.length : 'The twenty-five'; $('tkind').hidden = true;
+    $('tierline').textContent = next ? 'Next: ' + C.tiers.find(x => x.id === next.tier).name : 'Done, every one';
+    setText($('ttext'), next ? 'Marcus is here and the next tablet is ready when you are.' : 'Twenty-five things, and you did every one. More is being written, and the portico will be here.');
+    $('tfall').innerHTML = ''; $('readbtn').hidden = true; $('skipbtn').hidden = true; $('donebtn').textContent = next ? 'Next tablet' : 'Sit with Marcus'; $('donebtn').disabled = false;
+    riseTablet();
   }
-  function nextTablet(autoRead) {
-    $('tkind').style.display = ''; const r = remaining();
-    if (!r.length) { restTablet(); return; }
-    const m = r[0];
-    if (!S.opened.includes(m.tier)) { tierCard(C.tiers.find(t => t.id === m.tier), () => showTablet(m, autoRead)); return; }
-    showTablet(m, autoRead);
-  }
-  function tierCard(tier, then) {
-    S.opened.push(tier.id); save(); sfx('scroll');
-    const n = C.tiers.indexOf(tier) + 1, q = tier.quote, who = C.mentors[q.who];
-    const v = veil(`<div class="panel tiercard">
-      <div class="eyebrow"><i></i>Five things · ${n} of 5</div>
-      <h2>${tier.name}</h2>
-      <p class="lesson">${tier.lesson}</p>
-      <div class="mq"><div class="medal" id="medal"><img src="${who.portrait}" alt=""></div><div><div class="q">${q.t}</div><span class="who"><b>${who.name}</b>, in ${q.who === 'abigail' ? 'her' : 'his'} own words · ${q.src}</span></div>
-        <button class="play" aria-label="Hear it"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5v14l12-7z"/></svg></button></div>
-      <div class="row"><button class="btn btn-gold" id="tierok" style="flex:1">Begin the five</button></div>
-    </div>`, 'light');
-    const medal = v.querySelector('#medal');
-    const sayQuote = () => { if (q.who === 'marcus') marcusSay(q, 'nod'); else mentorClip(q, medal); };
-    narrate('lesson-' + tier.id, () => setTimeout(sayQuote, 350));
-    v.querySelector('.play').addEventListener('click', () => { NAR.pause(); sayQuote(); });
-    v.querySelector('#tierok').addEventListener('click', () => { sfx('tap'); NAR.pause(); MEN.pause(); closeVeil(then); });
-  }
+  function nextTablet(autoRead) { const r = remaining(); if (!r.length) { restTablet(); return; } showTablet(r[0], autoRead); }
 
   let busy = false;
   function onDone() {
     if (busy) return;
-    if (!CUR) { // the rest tablet's button
-      const r = remaining(); if (r.length) { $('tablet').classList.add('sink'); setTimeout(() => nextTablet(true), 380); } else onMarcusTap();
-      return;
-    }
-    busy = true; const m = CUR; const i = S.done.length;
-    S.done.push(m.id); S.skipped = S.skipped.filter(x => x !== m.id); S.dones++;
-    const t = today(); if (!S.start) S.start = t; const first = !(S.days[t] > 0); S.days[t] = (S.days[t] || 0) + 1; save();
-    hush(); sfx('done'); popLeaf(i); $('laurelcount').innerHTML = `<b>${S.done.length}</b> / ${C.moves.length}`;
+    if (MODE === 'break') { $('tablet').classList.add('sink'); sfx('tap'); hush(); setTimeout(() => { const t = breakCard._then; breakCard._then = null; if (t) t(); else nextTablet(true); }, 380); return; }
+    if (MODE === 'rest') { const r = remaining(); if (r.length) { $('tablet').classList.add('sink'); setTimeout(() => nextTablet(true), 380); } else onMarcusTap(); return; }
+    if (!CUR) return;
+    busy = true; const m = CUR, i = S.done.length;
+    S.done.push(m.id); S.skipped = S.skipped.filter(x => x !== m.id);
+    const t = today(); if (!S.start) S.start = t; S.days[t] = (S.days[t] || 0) + 1; save();
+    hush(); sfx('done'); popLeaf(i); $('countn').textContent = S.done.length;
     $('donebtn').disabled = true;
     PORTICO.glideTo(skyFor());
-    if (first) { PORTICO.setFlame('lit'); PORTICO.flare(); sfx('flame'); }
-    // Marcus: every second one he speaks, the rest he answers with the body
-    const speak = S.dones % 2 === 1;
-    if (speak) marcusSay(pick(C.marcus.lines.done, Math.floor(S.dones / 2)), S.dones % 4 === 1 ? 'cheer' : 'nod');
-    else { RIG.cheer(); }
-    const wreathIdx = C.tiers.findIndex(x => x.id === m.tier);
-    const finishedTier = tierDone(m.tier), finishedDay = doneToday() % SESSION === 0, finishedDeck = !remaining().length;
+    if (i === 0) { PORTICO.setFlame('lit'); PORTICO.flare(); sfx('flame'); }
+    const finishedTier = tierDone(m.tier), finishedDeck = !remaining().length;
+    const tierIdx = C.tiers.findIndex(x => x.id === m.tier);
+    // his answer: a line that fits the thing just done, or the body alone
+    const sid = C.speak[m.id];
+    let spoke = false;
+    if (sid && !finishedTier && !finishedDeck) { spoke = true; marcusSay(line(sid), i % 3 === 0 ? 'cheer' : 'nod'); }
+    else RIG.cheer();
     $('tablet').classList.add('sink');
     setTimeout(() => {
       busy = false;
-      if (finishedTier) { PORTICO.hangWreath(wreathIdx); sfx('wreath'); setTimeout(() => openScroll(wreathIdx, finishedDay, finishedDeck), 900); }
-      else if (finishedDay) endOfDay(finishedDeck);
+      if (finishedDeck) { PORTICO.hangWreath(tierIdx); sfx('wreath'); setTimeout(finale, 700); }
+      else if (finishedTier) { PORTICO.hangWreath(tierIdx); sfx('wreath'); setTimeout(() => theBreak(tierIdx), 600); }
       else nextTablet(true);
-    }, speak ? 1400 : 700);
+    }, spoke ? 1200 : 700);
   }
   function onSkip() {
     if (!CUR || busy) return; sfx('tap');
     if (!S.skipped.includes(CUR.id)) S.skipped.push(CUR.id); save();
     $('tablet').classList.add('sink'); setTimeout(() => nextTablet(true), 380);
+  }
+  /* after five: Marcus first, then Aurelia's one line, then the button */
+  function theBreak(tierIdx) {
+    const b = C.breaks[tierIdx]; if (!b) { nextTablet(true); return; }
+    marcusSay(line(b.line), 'salute', () => { breakCard(b, () => nextTablet(true)); setTimeout(() => narrate('ui-break-' + b.after), 500); });
+  }
+  function finale() {
+    for (let i = 0; i < 40; i++) { const l = document.createElement('i'); l.className = 'fall'; l.style.left = Math.random() * 100 + '%'; l.style.animationDuration = (2.6 + Math.random() * 2.4) + 's'; l.style.animationDelay = (Math.random() * 1.6) + 's'; $('stage').appendChild(l); setTimeout(() => l.remove(), 6000); }
+    RIG.cheer(); sfx('wreath'); PORTICO.glideTo(1, 3000);
+    setTimeout(() => marcusSay(line(C.finale.line), 'salute', () => {
+      breakCard({ t: C.finale.t, after: 'finale' }, () => restTablet()); $('tnum').textContent = 'Twenty-five'; $('donebtn').textContent = 'Sit with Marcus';
+      setTimeout(() => narrate('ui-deck'), 500);
+    }), 800);
   }
 
   /* ---------- overlays ---------- */
@@ -225,19 +213,17 @@
   function closeVeil(then) { const v = $('overlay').firstElementChild; if (!v) { if (then) then(); return; } v.classList.remove('in'); v.classList.add('out'); setTimeout(() => { $('overlay').innerHTML = ''; if (then) then(); }, 480); }
 
   function cover() {
-    const back = !!S.start, cv = C.cover;
+    const back = S.done.length > 0, cv = C.cover, left = C.moves.length - S.done.length;
     const v = veil(`<div class="cover">
-      <h1><span class="em">${cv.em}</span><span class="t">${back ? 'Welcome back.' : cv.title}</span></h1>
-      <p>${back ? `Day ${dayNumber()} of ${S.journey}. ${litDays()} ${litDays() === 1 ? 'day' : 'days'} lit. Marcus is waiting.` : cv.lines.join(' ')}</p>
+      <h1><span class="em">${cv.em}</span><span class="t">${cv.title}</span></h1>
+      <p>${back ? (left ? `Welcome back. ${S.done.length} of ${C.moves.length} done, ${left} to go. Marcus is waiting.` : 'Welcome back. The twenty-five are done. Marcus is waiting.') : cv.lines.map(l => `<span class="ln">${l}</span>`).join('')}</p>
       <button class="btn btn-gold" id="begin">${back ? 'Go in' : cv.begin}</button>
       <button class="what" id="what">${cv.what}</button>
       <div class="small">Sound on is the whole point. Headphones are lovely.</div>
     </div>`);
     v.querySelector('#begin').addEventListener('click', () => {
       ac(); MAR.muted = true; MAR.src = 'audio/marcus/m-g1.mp3'; MAR.play().then(() => { MAR.pause(); MAR.muted = false; MAR.currentTime = 0; }).catch(() => { MAR.muted = false; });
-      MEN.muted = true; MEN.src = 'audio/marcus/f-g2.mp3'; MEN.play().then(() => { MEN.pause(); MEN.muted = false; }).catch(() => { MEN.muted = false; });
-      sfx('tap'); musicStart();
-      if (!S.journey) chooseJourney(); else closeVeil(enter);
+      sfx('tap'); musicStart(); closeVeil(enter);
     });
     v.querySelector('#what').addEventListener('click', () => { sfx('tap'); whatIsThis(); });
   }
@@ -246,75 +232,27 @@
     const v = veil(`<div class="panel whatcard">
       <h2>${w.title}</h2><p class="who">${w.who}</p>
       ${w.paras.map(p => `<p>${p}</p>`).join('')}
-      <div class="row" style="margin-top:6px"><button class="btn btn-gold" id="whatok" style="flex:1">${S.start ? 'Go in' : 'Begin'}</button></div>
+      <div class="row" style="margin-top:6px"><button class="btn btn-gold" id="whatok" style="flex:1">${S.done.length ? 'Go in' : 'Begin'}</button></div>
     </div>`, 'light');
     v.querySelector('#whatok').addEventListener('click', () => { sfx('tap'); closeVeil(cover); setTimeout(() => { const b = $('begin'); if (b) b.click(); }, 520); });
   }
-  function chooseJourney() {
-    const v = veil(`<div class="panel">
-      <h2>How far are you going?</h2>
-      <p class="lede">Pick it now, before you start. It ends, and it frees you. You can always go again.</p>
-      <div class="choices">
-        <button class="choice" data-j="30"><b>30</b><small>days</small><em>One tier a day. The whole first deck in a week, then on.</em></button>
-        <button class="choice ninety" data-j="90"><b>90</b><small>days</small><em>A season. Long enough for a different person to walk out.</em></button>
-      </div>
-      <p class="foot">The flame counts the days you show up. Miss one and it dims. It does not go out on you, and it never scolds.</p>
-    </div>`, 'light');
-    narrate('ui-choose');
-    v.querySelectorAll('.choice').forEach(b => b.addEventListener('click', () => { S.journey = +b.dataset.j; save(); sfx('tap'); NAR.pause(); closeVeil(enter); }));
-  }
   function enter() {
     $('hud').hidden = false; $('deck').hidden = false; paintHud();
+    if (S.done.length === 0) S.said = [];            // a fresh sitting starts with every line fresh
+    const visit = S.visits++; save();
     RIG.enter();
-    const greetIdx = S.greeted++; save();
-    const restDay = doneToday() >= SESSION && doneToday() % SESSION === 0 && !S._more;
-    const go = () => { if (restDay) restTablet(); else nextTablet(true); };
-    const greet = () => marcusSay(pick(C.marcus.lines.greet, greetIdx), null, () => { if (S.taps === 0) $('tapme').hidden = false; setTimeout(go, 500); });
-    if (greetIdx === 0) setTimeout(() => narrate('ui-welcome', () => setTimeout(greet, 400)), 1400);
-    else setTimeout(greet, 1300);
-  }
-  function openScroll(i, finishedDay, finishedDeck) {
-    const s = C.story[i]; if (!S.scrolls.includes(s.id)) S.scrolls.push(s.id); save(); sfx('scroll');
-    const v = veil(`<div class="panel scroll">
-      <div class="eyebrow"><i></i>A scroll opens · ${i + 1} of 5</div>
-      <h2>${s.title}</h2>
-      <div class="text">${s.t}</div>
-      <div class="who">The school's words, about him. His own words only ever come from him.</div>
-      <div class="row"><button class="btn btn-gold" id="scrollok">${finishedDeck ? 'The deck is done' : finishedDay ? 'That is today' : 'On we go'}</button></div>
-    </div>`, 'light');
-    narrate('story-' + s.id);
-    v.querySelector('#scrollok').addEventListener('click', () => { sfx('tap'); NAR.pause(); closeVeil(() => { if (finishedDeck) deckDone(); else if (finishedDay) endOfDay(false); else nextTablet(true); }); });
-  }
-  function endOfDay(finishedDeck) {
-    const ev = pick(C.marcus.lines.evening, dayNumber() - 1);
-    PORTICO.glideTo(1, 3000);
-    const v = veil(`<div class="panel today">
-      <svg class="flamebig" viewBox="0 0 16 20"><path d="M8 19c-3.6 0-6-2.5-6-5.8 0-2.6 1.6-4.3 2.7-5.6.6-.7 1-1.3 1.2-2 .6 1.1 1.2 2 2 2.7C9.7 10 11 11.4 11 13.6c0 1.2-.5 2.3-1.2 3 .9-.2 4.2-1.6 4.2-5.7 0-3.2-2.2-5-3.5-6.6C9.4 3 8.9 1.8 9 0c-3 1.4-3.4 4.3-3.6 5.8C4.6 4.7 4.2 3.4 4.2 2 1.7 3.8 0 7.2 0 10.6 0 15.6 3.7 19 8 19z" fill="#E0812A"/><path d="M8 19c-1.9 0-3.2-1.4-3.2-3.2 0-1.5 1-2.4 1.6-3.2.4-.5.6-.9.7-1.4.5.8.9 1.3 1.4 1.8.7.7 1.6 1.6 1.6 2.8C10.1 17.6 9.2 19 8 19z" fill="#FFD36B"/></svg>
-      <h2 style="text-align:center">That is today.</h2>
-      <div class="stat"><div><b>${dayNumber()}</b><small>of ${S.journey}</small></div><div><b>${litDays()}</b><small>${litDays() === 1 ? 'day' : 'days'} lit</small></div><div><b>${S.done.length}</b><small>of 25</small></div></div>
-      <div class="quote" id="evq">${ev.t}<span class="src">Marcus, in his own words · ${ev.src}</span><button class="play" aria-label="Hear it"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5v14l12-7z"/></svg></button></div>
-      <div class="row"><button class="btn btn-ghost" id="more">One more</button><button class="btn btn-gold" id="rest">Until tomorrow</button></div>
-    </div>`, 'light');
-    narrate('ui-today', () => setTimeout(() => marcusSay(ev, 'bow'), 300));
-    v.querySelector('#evq .play').addEventListener('click', () => { NAR.pause(); marcusSay(ev, 'nod'); });
-    v.querySelector('#more').addEventListener('click', () => { sfx('tap'); hush(); S._more = true; closeVeil(() => { PORTICO.glideTo(.1); nextTablet(true); }); });
-    v.querySelector('#rest').addEventListener('click', () => { sfx('tap'); hush(); closeVeil(restTablet); });
-  }
-  function deckDone() {
-    for (let i = 0; i < 40; i++) { const l = document.createElement('i'); l.className = 'fall'; l.style.left = Math.random() * 100 + '%'; l.style.animationDuration = (2.6 + Math.random() * 2.4) + 's'; l.style.animationDelay = (Math.random() * 1.6) + 's'; $('stage').appendChild(l); setTimeout(() => l.remove(), 6000); }
-    RIG.cheer(); sfx('wreath'); PORTICO.glideTo(1, 3000);
-    const head = (C.marcus.lines.extra || []).find(l => l.id === 'm-x2') || C.marcus.lines.done[0];
-    setTimeout(() => narrate('ui-deck', () => marcusSay(head, 'salute', () => restTablet())), 600);
+    const greet = () => marcusSay(fresh(C.greet.slice(visit % C.greet.length).concat(C.greet)), null, () => setTimeout(() => nextTablet(true), 500));
+    setTimeout(greet, 1300);
   }
   function help() {
     const v = veil(`<div class="help"><div class="panel">
       <h3>What is here</h3>
       <ul>
         <li><b>Marcus</b> stands in the portico. Tap him and he speaks. Every word is his own, from the Meditations, with its source shown.</li>
-        <li><b>The tablet</b> is one small thing to do, now, where you are. Aurelia reads it out. Do it, tap Done.</li>
-        <li><b>The laurel</b> fills one leaf per tablet. Five tablets hang a <b>wreath</b> on the frieze and open a <b>scroll</b> of his real life.</li>
-        <li><b>The flame</b> is the days you show up. Miss one and it dims. It never goes out on you.</li>
-        <li>Five tablets is a day. More if you want. The sun climbs as you go.</li>
+        <li><b>The tablet</b> is one small thing to do, now, where you are. Aurelia reads it out. Do it, tap Done, and the next one comes.</li>
+        <li><b>Twenty-five</b> in one sitting, about ten minutes. The laurel fills a leaf each. Every five hangs a wreath and Marcus has a word.</li>
+        <li><b>No excuses</b> is the line under each one: what to use when you don't have the thing.</li>
+        <li>The flame lights on your first Done. The sun climbs as you go.</li>
       </ul>
       <button class="btn btn-gold close" id="helpok">Back to the portico</button>
     </div></div>`, 'light');
@@ -325,13 +263,15 @@
   /* ---------- boot ---------- */
   async function boot() {
     const [c, v] = await Promise.all([fetch('content.json').then(r => r.json()), fetch('audio/marcus/visemes.json').then(r => r.json()).catch(() => null)]);
-    C = c; VIS = v; buildScene();
+    C = c; VIS = v;
+    for (const k in C.marcus.lines) for (const l of C.marcus.lines[k]) LINES[l.id] = l;
+    buildScene();
     $('donebtn').addEventListener('click', onDone); $('skipbtn').addEventListener('click', onSkip); $('readbtn').addEventListener('click', readTablet);
     $('soundbtn').addEventListener('click', () => { S.sound = !S.sound; save(); paintSound(); if (!S.sound) { hush(); musicStop(); } else sfx('tap'); });
     $('helpbtn').addEventListener('click', () => { sfx('tap'); help(); });
     cover();
     if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
-    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG };
+    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES };
   }
   document.addEventListener('DOMContentLoaded', boot);
 })();

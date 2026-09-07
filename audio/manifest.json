@@ -44,6 +44,10 @@
   "tier-fetch",
   "tier-seat",
   "tier-world",
+  "ui-break-chair",
+  "ui-break-feet",
+  "ui-break-fetch",
+  "ui-break-seat",
   "ui-choose",
   "ui-deck",
   "ui-first",
@@ -67,6 +71,20 @@
   "m-g1",
   "m-g2",
   "m-g3",
-  "m-g4"
+  "m-g4",
+  "m-x1",
+  "m-x10",
+  "m-x11",
+  "m-x12",
+  "m-x13",
+  "m-x14",
+  "m-x2",
+  "m-x3",
+  "m-x4",
+  "m-x5",
+  "m-x6",
+  "m-x7",
+  "m-x8",
+  "m-x9"
  ]
 }

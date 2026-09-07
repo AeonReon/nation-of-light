@@ -13,7 +13,7 @@ TTS = "http://127.0.0.1:8765/api/tts"; VOICE = "bf_emma"; FORCE = "--force" in s
 C = json.loads((HERE / "content.json").read_text())
 lines = {}
 for m in C["moves"]: lines["mv-" + m["id"]] = m["test"]
-for t in C["tiers"]: lines["tier-" + t["id"]] = t["line"]; lines["lesson-" + t["id"]] = t["lesson"]
+for t in C["tiers"]: lines["tier-" + t["id"]] = t["line"]
 for s in C["story"]: lines["story-" + s["id"]] = s["t"]
 for k, v in C["voice"].items(): lines["ui-" + k] = v
 made = 0
