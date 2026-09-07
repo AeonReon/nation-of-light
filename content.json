@@ -1,5 +1,5 @@
 {
- "version": 1,
+ "version": 2,
  "rule": "A mentor's voice only ever says that mentor's own recorded words, lightly modernised. Every line carries its source. The stories about them are the school's words, in the school's voice, and say so.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -62,6 +62,18 @@
      "t": "From my tutor: to endure hard work, to want little, to work with my own hands, and not to meddle in other people's affairs.",
      "src": "Meditations, book 1, note 5"
     }
+   ],
+   "extra": [
+    {
+     "id": "m-x1",
+     "t": "The art of living is more like wrestling than dancing. It must stand ready and firm to meet whatever comes, even the unforeseen.",
+     "src": "Meditations, book 7, note 61"
+    },
+    {
+     "id": "m-x2",
+     "t": "Be like the headland the waves keep breaking against. It stands firm, and the water around it goes quiet.",
+     "src": "Meditations, book 4, note 49"
+    }
    ]
   }
  },
@@ -69,27 +81,62 @@
   {
    "id": "seat",
    "name": "Right where you are",
-   "line": "Nothing but you, about five seconds each. Do not think about it."
+   "line": "Nothing but you, about five seconds each. Do not think about it.",
+   "lesson": "Nothing to fetch and nothing to decide. The whole school starts with whether you will move at all, and most people never do. Five things, about five seconds each. Go.",
+   "quote": {
+    "who": "franklin",
+    "id": "f-g2",
+    "t": "Well done is better than well said.",
+    "src": "Poor Richard's Almanack, 1737"
+   }
   },
   {
    "id": "chair",
    "name": "Still in your chair",
-   "line": "Half a minute each. Nothing to fetch and nowhere to go."
+   "line": "Half a minute each. Nothing to fetch and nowhere to go.",
+   "lesson": "You will reach for a reason not to. Nothing to write with. Can't hold it that long. The lesson of these five is: find a way. A finger on the table counts. Half of it counts. Starting counts.",
+   "quote": {
+    "who": "marcus",
+    "id": "m-d1",
+    "t": "Practise even the things you despair of. The left hand, useless at most things for want of practice, holds the reins better than the right, because it has been trained to it.",
+    "src": "Meditations, book 12, note 6"
+   }
   },
   {
    "id": "feet",
    "name": "On your feet",
-   "line": "Stand up. All of these are in the room you are already in."
+   "line": "Stand up. All of these are in the room you are already in.",
+   "lesson": "The body goes first and the mind follows it. Marcus wrestled and boxed as a boy. Jefferson told his nephew to give two hours a day to it. Stand up. Everything here is in the room you are already in.",
+   "quote": {
+    "who": "marcus",
+    "id": "m-x1",
+    "t": "The art of living is more like wrestling than dancing. It must stand ready and firm to meet whatever comes, even the unforeseen.",
+    "src": "Meditations, book 7, note 61"
+   }
   },
   {
    "id": "fetch",
    "name": "One thing to find",
-   "line": "Whatever is already in the room with you. Nowhere else to go and looking."
+   "line": "Whatever is already in the room with you. Nowhere else to go and looking.",
+   "lesson": "No ball. No pen. The wrong kind of paper. This tier is made of excuses, and every one has an answer already in the room with you: a rolled sock, a scrunched page, a finger, a stone. Resourceful is not a talent. It is a habit, and it starts here.",
+   "quote": {
+    "who": "epictetus",
+    "id": "e-d1",
+    "t": "Every habit and every ability is kept and grown by the matching action. Walking, by walking. Running, by running.",
+    "src": "Discourses, book 2, chapter 18"
+   }
   },
   {
    "id": "world",
    "name": "Where other people are",
-   "line": "Somebody else is in these — and every one can be done from where you are sitting."
+   "line": "Somebody else is in these, and every one can be done from where you are sitting. The last two are calls.",
+   "lesson": "The last five have other people in them, and the last two are phone calls. Nothing in them is hard. What stops people is a feeling, and the feeling is made of paper. Walk through it once and it stays walked through.",
+   "quote": {
+    "who": "epictetus",
+    "id": "e-d3",
+    "t": "It is not things that trouble us, but our judgements about things.",
+    "src": "Enchiridion, chapter 5"
+   }
   }
  ],
  "moves": [
@@ -97,151 +144,176 @@
    "id": "tap",
    "tier": "seat",
    "kind": "skill",
-   "test": "Tap three times with your left hand, then three times with your right, on whatever is in front of you."
+   "test": "Tap three times with your left hand, then three times with your right, on whatever is in front of you.",
+   "fallback": "Table, knee, book, the arm of the chair. Anything."
   },
   {
    "id": "air",
    "tier": "seat",
    "kind": "attention",
-   "test": "Sit up straight, shoulders back, and take one slow breath all the way in and all the way out."
+   "test": "Sit up straight, shoulders back, and take one slow breath all the way in and all the way out.",
+   "fallback": "Back hurts? Do it lying down."
   },
   {
    "id": "name",
    "tier": "seat",
    "kind": "courage",
-   "test": "Say your own name out loud. Once. Actually out loud."
+   "test": "Say your own name out loud. Once. Actually out loud.",
+   "fallback": "Whisper it if there are people about. Out loud still means out loud."
   },
   {
    "id": "reach",
    "tier": "seat",
    "kind": "attention",
-   "test": "Reach both arms straight up, as high as they will go, until it pulls."
+   "test": "Reach both arms straight up, as high as they will go, until it pulls.",
+   "fallback": "From the chair is fine. Reach until it pulls."
   },
   {
    "id": "up",
    "tier": "seat",
    "kind": "attention",
-   "test": "Stand up, and sit back down again."
+   "test": "Stand up, and sit back down again.",
+   "fallback": "Hands on the arms of the chair if you need them. Once is enough."
   },
   {
    "id": "hand",
    "tier": "chair",
    "kind": "skill",
-   "test": "Write your name with your other hand. A finger on the table will do if there is nothing to write with."
+   "test": "Write your name with your other hand. A finger on the table will do if there is nothing to write with.",
+   "fallback": "Nothing to write with? A finger on the table. A stick in the dirt. Your finger in the air."
   },
   {
    "id": "thirty",
    "tier": "chair",
    "kind": "attention",
-   "test": "Close your eyes and count slowly to thirty. Slowly."
+   "test": "Close your eyes and count slowly to thirty. Slowly.",
+   "fallback": "Lose count? Start again from wherever you think you were. Slow is the point."
   },
   {
    "id": "breath",
    "tier": "chair",
    "kind": "skill",
-   "test": "Hold your breath for thirty seconds, sitting still."
+   "test": "Hold your breath for thirty seconds, sitting still.",
+   "fallback": "Can't manage thirty? Do the longest you can, and that is your number."
   },
   {
-   "id": "whistle",
+   "id": "hum",
    "tier": "chair",
-   "kind": "skill",
-   "test": "Whistle one clear note."
-  },
-  {
-   "id": "twos",
-   "tier": "chair",
-   "kind": "attention",
-   "test": "Count in twos up to twenty, out loud."
+   "kind": "courage",
+   "test": "Hum one note, and hold it for five seconds.",
+   "fallback": "Any note. Quietly is fine. Five seconds, then stop."
   },
   {
    "id": "still",
    "tier": "chair",
    "kind": "attention",
-   "test": "Sit completely still and completely quiet for one minute."
+   "test": "Sit completely still and completely quiet for one minute.",
+   "fallback": "Fidgeted? That was still the minute. Count it."
   },
   {
    "id": "leg",
    "tier": "feet",
    "kind": "attention",
-   "test": "Stand on one leg for thirty seconds. Then the other one."
+   "test": "Stand on one leg for thirty seconds. Then the other one.",
+   "fallback": "One finger on the wall or a chair. Still counts."
   },
   {
    "id": "press",
    "tier": "feet",
    "kind": "skill",
-   "test": "Two proper press-ups. Knees on the floor is fine."
+   "test": "Two proper press-ups. Knees on the floor is fine.",
+   "fallback": "Knees down is a press-up. Against the wall is a press-up."
   },
   {
    "id": "situp",
    "tier": "feet",
    "kind": "skill",
-   "test": "Five sit-ups."
+   "test": "Five sit-ups.",
+   "fallback": "Lying down and lifting your head is one. Five of those."
   },
   {
    "id": "ball",
    "tier": "feet",
    "kind": "attention",
-   "test": "Scrunch any paper into a ball and throw it into a bin from five paces."
+   "test": "Scrunch any paper into a ball and throw it into a bin from five paces.",
+   "fallback": "No bin? A box, a bag, a bowl, a circle of shoes on the floor."
   },
   {
    "id": "plane",
    "tier": "feet",
    "kind": "attention",
-   "test": "Fold a paper aeroplane that flies across the room."
+   "test": "Fold a paper aeroplane that flies across the room.",
+   "fallback": "Any paper. A receipt, a page from a notebook, the back of an envelope."
   },
   {
    "id": "juggle",
    "tier": "fetch",
    "kind": "attention",
-   "test": "Throw one ball from hand to hand, ten times, without dropping it."
+   "test": "Throw one ball from hand to hand, ten times, without dropping it.",
+   "fallback": "No ball? Roll a sock. Scrunch a page. An orange. A bunch of keys."
   },
   {
    "id": "draw",
    "tier": "fetch",
    "kind": "attention",
-   "test": "Draw something well enough that somebody would know what it is without being told."
+   "test": "Draw something well enough that somebody would know what it is without being told.",
+   "fallback": "Nothing to draw with? A finger in flour, a stick in soil, your finger on a steamed-up window."
   },
   {
    "id": "stack",
    "tier": "fetch",
    "kind": "attention",
-   "test": "Stack any three things you can reach without standing up, so they balance on their own for three seconds."
+   "test": "Stack any three things you can reach without standing up, so they balance on their own for three seconds.",
+   "fallback": "A cup on a book on a phone. A remote on a mug. Three seconds."
   },
   {
    "id": "knot",
    "tier": "fetch",
    "kind": "attention",
-   "test": "Tie a knot in anything within reach that has two ends — a shoelace, a hair tie, a charger cable, a sock."
+   "test": "Tie a knot in anything within reach that has two ends — a shoelace, a hair tie, a charger cable, a sock.",
+   "fallback": "A shoelace, a hair tie, a charger cable, the belt of a dressing gown."
   },
   {
    "id": "roundsquare",
    "tier": "fetch",
    "kind": "attention",
-   "test": "Find something round and something square, both within reach, and hold one in each hand."
-  },
-  {
-   "id": "north",
-   "tier": "world",
-   "kind": "attention",
-   "test": "Point which way is north, and be right."
+   "test": "Find something round and something square, both within reach, and hold one in each hand.",
+   "fallback": "A coin and a book. A lid and a box. An apple and a phone."
   },
   {
    "id": "phrase",
    "tier": "world",
    "kind": "attention",
-   "test": "Learn one usable sentence of another language, and say it out loud until it flows."
-  },
-  {
-   "id": "ring",
-   "tier": "world",
-   "kind": "courage",
-   "test": "Ring a shop or a cafe and ask what time they close."
+   "test": "Learn one usable sentence of another language, and say it out loud until it flows.",
+   "fallback": "One you already half know is fine. Where is the station, in anything."
   },
   {
    "id": "glad",
    "tier": "world",
    "kind": "kindness",
-   "test": "Tell one person something you are glad about them. Out loud, or in a voice message. Not thanks — something they did."
+   "test": "Tell one person something you are glad about them. Out loud, or in a voice message. Not thanks — something they did.",
+   "fallback": "A text counts. A voice note is better. Out loud is best."
+  },
+  {
+   "id": "hello",
+   "tier": "world",
+   "kind": "courage",
+   "test": "Say hello to somebody you have never met. Out loud, and mean it.",
+   "fallback": "The person at the till. Somebody walking a dog. The postman. One word, and look at them."
+  },
+  {
+   "id": "ring",
+   "tier": "world",
+   "kind": "courage",
+   "test": "Ring a shop or a cafe and ask what time they close.",
+   "fallback": "Any shop. If it goes to voicemail, that counts. Ring the next one."
+  },
+  {
+   "id": "enquiry",
+   "tier": "world",
+   "kind": "courage",
+   "test": "Ring about something you admire and cannot yet afford. A house you like: is it still available? A car you like: do they do test drives? One minute. Thank you. Hang up.",
+   "fallback": "They exist to answer exactly this. You are asking for information, not taking anything. Say thank you, and go."
   }
  ],
  "story": [
@@ -275,6 +347,61 @@
   "choose": "Choose how far you are going. Thirty days, or ninety. You can always go further.",
   "today": "That is today. Five things done, and the flame is lit. Come back tomorrow, and Marcus will be here.",
   "scroll": "A scroll has opened. A piece of who he really was.",
-  "first": "He is here. Tap him any time and he will speak. The first tablet is below."
+  "first": "He is here. Tap him any time and he will speak. The first tablet is below.",
+  "welcome": "Come in. This is the portico. Marcus keeps it, and from today it is yours as well.",
+  "deck": "Twenty-five things, and you did every one. Most people never take that much action in a month. You are one of the few who does."
+ },
+ "cover": {
+  "em": "Nation of Light",
+  "title": "For the ones who move.",
+  "lines": [
+   "Most people wait. For money, for time, for the right moment, for somebody's permission. Life goes past while they wait.",
+   "This is a school for the ones who move. Twenty-five small things, nothing to buy, nobody to ask.",
+   "You will feel what it is about before anyone explains it."
+  ],
+  "begin": "Begin",
+  "what": "What is this?"
+ },
+ "what": {
+  "title": "What this is",
+  "paras": [
+   "A school for people who want to live at full strength now, not once the money or the time arrives.",
+   "It starts with momentum: twenty-five small actions, from the chair you are in, to prove to yourself that you move. Most people never take that much action in a month.",
+   "Then the things that light you up get more of your life, and a small group and a mentor take you deeper. Behind the app there is a real community. The app is the way in, and the way in is the first five."
+  ],
+  "who": "The school's words."
+ },
+ "mentors": {
+  "marcus": {
+   "name": "Marcus Aurelius",
+   "short": "Marcus",
+   "portrait": "images/mentors/marcus.jpg"
+  },
+  "franklin": {
+   "name": "Benjamin Franklin",
+   "short": "Franklin",
+   "portrait": "images/mentors/franklin.jpg"
+  },
+  "epictetus": {
+   "name": "Epictetus",
+   "short": "Epictetus",
+   "portrait": "images/mentors/epictetus.jpg"
+  },
+  "jefferson": {
+   "name": "Thomas Jefferson",
+   "short": "Jefferson",
+   "portrait": "images/mentors/jefferson.jpg"
+  },
+  "abigail": {
+   "name": "Abigail Adams",
+   "short": "Abigail",
+   "portrait": "images/mentors/abigail.jpg"
+  }
+ },
+ "deckQuote": {
+  "who": "abigail",
+  "id": "a-d2",
+  "t": "It is not in the still calm of life that great characters are formed.",
+  "src": "Letter to John Quincy, January 1780"
  }
 }

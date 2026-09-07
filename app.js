@@ -16,15 +16,15 @@
   'use strict';
   const $ = id => document.getElementById(id);
   const KEY = 'nol.v1', SESSION = 5;
-  const BUILD = 'v1';
+  const BUILD = 'v2';
   let C = null, VIS = null, PORTICO = null, RIG = null, CUES = null;
-  const NAR = new Audio(), MAR = new Audio(); NAR.preload = 'auto'; MAR.preload = 'auto';
+  const NAR = new Audio(), MAR = new Audio(), MEN = new Audio(), MUS = new Audio(); NAR.preload = 'auto'; MAR.preload = 'auto'; MUS.preload = 'auto'; MUS.src = 'audio/music/dawn.mp3';
   let S = load();
 
   /* ---------- state ---------- */
   function load() {
     try { const s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s && s.v === 1) return s; } catch (e) {}
-    return { v: 1, journey: 0, start: null, done: [], skipped: [], days: {}, sound: true, taps: 0, greeted: 0, dones: 0, scrolls: [], seenHelp: false };
+    return { v: 1, journey: 0, start: null, done: [], skipped: [], days: {}, sound: true, taps: 0, greeted: 0, dones: 0, scrolls: [], opened: [], seenHelp: false };
   }
   function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
   const today = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
@@ -60,7 +60,21 @@
   }
   const voiceOn = () => S.sound;
   function paintSound() { $('soundbtn').classList.toggle('off', !S.sound); }
-  function hush() { NAR.pause(); MAR.pause(); if (RIG) RIG.hush(); $('readbtn').classList.remove('on'); }
+  function hush() { NAR.pause(); MAR.pause(); MEN.pause(); if (RIG) RIG.hush(); $('readbtn').classList.remove('on'); musicDuck(false); }
+  /* the music: one nocturne, in on Begin, under every voice, out on its own */
+  let MUSV = 0, MUST = null;
+  function musicTo(v, ms) { clearInterval(MUST); const from = MUS.volume, t0 = performance.now(); MUST = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / ms); MUS.volume = from + (v - from) * k; if (k >= 1) clearInterval(MUST); }, 50); }
+  function musicStart() { if (!S.sound) return; MUSV = .55; MUS.volume = 0; MUS.currentTime = 0; MUS.play().then(() => musicTo(MUSV, 2600)).catch(() => {}); }
+  function musicDuck(on) { if (MUS.paused) return; musicTo(on ? .14 : MUSV, on ? 350 : 1400); }
+  function musicStop() { if (MUS.paused) return; musicTo(0, 1200); setTimeout(() => MUS.pause(), 1300); }
+  [NAR, MAR, MEN].forEach(el => { el.addEventListener('play', () => musicDuck(true)); el.addEventListener('ended', () => { if (NAR.paused && MAR.paused && MEN.paused) musicDuck(false); }); el.addEventListener('pause', () => { if (NAR.paused && MAR.paused && MEN.paused) musicDuck(false); }); });
+  /* another mentor's own line, in their own voice, off a medallion */
+  function mentorClip(q, medal, after) {
+    if (!voiceOn()) { if (after) setTimeout(after, 400); return; }
+    MEN.pause(); MEN.src = 'audio/marcus/' + q.id + '.mp3'; if (medal) medal.classList.add('on');
+    MEN.onended = () => { if (medal) medal.classList.remove('on'); if (after) after(); }; MEN.onerror = MEN.onended;
+    MEN.play().catch(() => MEN.onended());
+  }
 
   /* Aurelia reads: the exercises, the tiers, the scrolls, the UI lines. */
   function narrate(id, after) {
@@ -127,6 +141,7 @@
     $('tnum').textContent = 'Tablet ' + idx; $('tkind').textContent = m.kind; $('tkind').className = 'kind kind-' + m.kind;
     $('tierline').textContent = tier.name + ' · ' + tier.line;
     const tx = $('ttext'); tx.innerHTML = '<div class="w">' + wordSpans(m.test) + '</div>'; tx.classList.remove('say'); void tx.offsetWidth; tx.classList.add('say');
+    $('tfall').innerHTML = m.fallback ? '<b>No excuses.</b> ' + m.fallback : '';
     $('donebtn').textContent = 'Done'; $('donebtn').disabled = false; $('skipbtn').hidden = false; $('readbtn').hidden = false;
     t.classList.remove('sink'); t.classList.remove('rise'); void t.offsetWidth; t.classList.add('rise'); sfx('rise');
     if (RIG && !RIG.hidden) setTimeout(() => RIG.point(), 250);
@@ -143,13 +158,32 @@
     $('tierline').textContent = next ? 'Tomorrow: ' + C.tiers.find(x => x.id === next.tier).name : 'The first deck is done';
     const tx = $('ttext'); tx.innerHTML = '<div class="w">' + wordSpans(next ? 'The flame is lit and Marcus is here. Come back tomorrow, or do one more now if you want to.' : 'Twenty-five things, and you did every one. More tablets are being written; the portico will be here.');
     tx.classList.remove('say'); void tx.offsetWidth; tx.classList.add('say');
-    $('readbtn').hidden = true; $('skipbtn').hidden = true; $('donebtn').textContent = next ? 'One more' : 'Sit with Marcus'; $('donebtn').disabled = false;
+    $('tfall').innerHTML = ''; $('readbtn').hidden = true; $('skipbtn').hidden = true; $('donebtn').textContent = next ? 'One more' : 'Sit with Marcus'; $('donebtn').disabled = false;
     t.classList.remove('sink'); t.classList.remove('rise'); void t.offsetWidth; t.classList.add('rise');
   }
   function nextTablet(autoRead) {
     $('tkind').style.display = ''; const r = remaining();
     if (!r.length) { restTablet(); return; }
-    showTablet(r[0], autoRead);
+    const m = r[0];
+    if (!S.opened.includes(m.tier)) { tierCard(C.tiers.find(t => t.id === m.tier), () => showTablet(m, autoRead)); return; }
+    showTablet(m, autoRead);
+  }
+  function tierCard(tier, then) {
+    S.opened.push(tier.id); save(); sfx('scroll');
+    const n = C.tiers.indexOf(tier) + 1, q = tier.quote, who = C.mentors[q.who];
+    const v = veil(`<div class="panel tiercard">
+      <div class="eyebrow"><i></i>Five things · ${n} of 5</div>
+      <h2>${tier.name}</h2>
+      <p class="lesson">${tier.lesson}</p>
+      <div class="mq"><div class="medal" id="medal"><img src="${who.portrait}" alt=""></div><div><div class="q">${q.t}</div><span class="who"><b>${who.name}</b>, in ${q.who === 'abigail' ? 'her' : 'his'} own words · ${q.src}</span></div>
+        <button class="play" aria-label="Hear it"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5v14l12-7z"/></svg></button></div>
+      <div class="row"><button class="btn btn-gold" id="tierok" style="flex:1">Begin the five</button></div>
+    </div>`, 'light');
+    const medal = v.querySelector('#medal');
+    const sayQuote = () => { if (q.who === 'marcus') marcusSay(q, 'nod'); else mentorClip(q, medal); };
+    narrate('lesson-' + tier.id, () => setTimeout(sayQuote, 350));
+    v.querySelector('.play').addEventListener('click', () => { NAR.pause(); sayQuote(); });
+    v.querySelector('#tierok').addEventListener('click', () => { sfx('tap'); NAR.pause(); MEN.pause(); closeVeil(then); });
   }
 
   let busy = false;
@@ -191,18 +225,30 @@
   function closeVeil(then) { const v = $('overlay').firstElementChild; if (!v) { if (then) then(); return; } v.classList.remove('in'); v.classList.add('out'); setTimeout(() => { $('overlay').innerHTML = ''; if (then) then(); }, 480); }
 
   function cover() {
-    const back = !!S.start;
+    const back = !!S.start, cv = C.cover;
     const v = veil(`<div class="cover">
-      <h1><span class="em">Nation of Light</span>${back ? 'Welcome back.' : 'The portico at dawn.'}</h1>
-      <p>${back ? `Day ${dayNumber()} of ${S.journey}. ${litDays()} ${litDays() === 1 ? 'day' : 'days'} lit. Marcus is waiting.` : 'Twenty-five small things, one at a time, with Marcus Aurelius beside you. His own words, and nothing else.'}</p>
-      <button class="btn btn-gold" id="begin">${back ? 'Go in' : 'Begin'}</button>
+      <h1><span class="em">${cv.em}</span><span class="t">${back ? 'Welcome back.' : cv.title}</span></h1>
+      <p>${back ? `Day ${dayNumber()} of ${S.journey}. ${litDays()} ${litDays() === 1 ? 'day' : 'days'} lit. Marcus is waiting.` : cv.lines.join(' ')}</p>
+      <button class="btn btn-gold" id="begin">${back ? 'Go in' : cv.begin}</button>
+      <button class="what" id="what">${cv.what}</button>
       <div class="small">Sound on is the whole point. Headphones are lovely.</div>
     </div>`);
     v.querySelector('#begin').addEventListener('click', () => {
       ac(); MAR.muted = true; MAR.src = 'audio/marcus/m-g1.mp3'; MAR.play().then(() => { MAR.pause(); MAR.muted = false; MAR.currentTime = 0; }).catch(() => { MAR.muted = false; });
-      sfx('tap');
+      MEN.muted = true; MEN.src = 'audio/marcus/f-g2.mp3'; MEN.play().then(() => { MEN.pause(); MEN.muted = false; }).catch(() => { MEN.muted = false; });
+      sfx('tap'); musicStart();
       if (!S.journey) chooseJourney(); else closeVeil(enter);
     });
+    v.querySelector('#what').addEventListener('click', () => { sfx('tap'); whatIsThis(); });
+  }
+  function whatIsThis() {
+    const w = C.what;
+    const v = veil(`<div class="panel whatcard">
+      <h2>${w.title}</h2><p class="who">${w.who}</p>
+      ${w.paras.map(p => `<p>${p}</p>`).join('')}
+      <div class="row" style="margin-top:6px"><button class="btn btn-gold" id="whatok" style="flex:1">${S.start ? 'Go in' : 'Begin'}</button></div>
+    </div>`, 'light');
+    v.querySelector('#whatok').addEventListener('click', () => { sfx('tap'); closeVeil(cover); setTimeout(() => { const b = $('begin'); if (b) b.click(); }, 520); });
   }
   function chooseJourney() {
     const v = veil(`<div class="panel">
@@ -221,13 +267,11 @@
     $('hud').hidden = false; $('deck').hidden = false; paintHud();
     RIG.enter();
     const greetIdx = S.greeted++; save();
-    setTimeout(() => {
-      marcusSay(pick(C.marcus.lines.greet, greetIdx), null, () => {
-        if (S.taps === 0) $('tapme').hidden = false;
-      });
-    }, 1300);
     const restDay = doneToday() >= SESSION && doneToday() % SESSION === 0 && !S._more;
-    setTimeout(() => { if (restDay) restTablet(); else nextTablet(true); }, greetIdx === 0 ? 5200 : 3800);
+    const go = () => { if (restDay) restTablet(); else nextTablet(true); };
+    const greet = () => marcusSay(pick(C.marcus.lines.greet, greetIdx), null, () => { if (S.taps === 0) $('tapme').hidden = false; setTimeout(go, 500); });
+    if (greetIdx === 0) setTimeout(() => narrate('ui-welcome', () => setTimeout(greet, 400)), 1400);
+    else setTimeout(greet, 1300);
   }
   function openScroll(i, finishedDay, finishedDeck) {
     const s = C.story[i]; if (!S.scrolls.includes(s.id)) S.scrolls.push(s.id); save(); sfx('scroll');
@@ -259,7 +303,8 @@
   function deckDone() {
     for (let i = 0; i < 40; i++) { const l = document.createElement('i'); l.className = 'fall'; l.style.left = Math.random() * 100 + '%'; l.style.animationDuration = (2.6 + Math.random() * 2.4) + 's'; l.style.animationDelay = (Math.random() * 1.6) + 's'; $('stage').appendChild(l); setTimeout(() => l.remove(), 6000); }
     RIG.cheer(); sfx('wreath'); PORTICO.glideTo(1, 3000);
-    setTimeout(() => marcusSay(C.marcus.lines.done[0], 'cheer', () => restTablet()), 600);
+    const head = (C.marcus.lines.extra || []).find(l => l.id === 'm-x2') || C.marcus.lines.done[0];
+    setTimeout(() => narrate('ui-deck', () => marcusSay(head, 'salute', () => restTablet())), 600);
   }
   function help() {
     const v = veil(`<div class="help"><div class="panel">
@@ -282,7 +327,7 @@
     const [c, v] = await Promise.all([fetch('content.json').then(r => r.json()), fetch('audio/marcus/visemes.json').then(r => r.json()).catch(() => null)]);
     C = c; VIS = v; buildScene();
     $('donebtn').addEventListener('click', onDone); $('skipbtn').addEventListener('click', onSkip); $('readbtn').addEventListener('click', readTablet);
-    $('soundbtn').addEventListener('click', () => { S.sound = !S.sound; save(); paintSound(); if (!S.sound) hush(); else sfx('tap'); });
+    $('soundbtn').addEventListener('click', () => { S.sound = !S.sound; save(); paintSound(); if (!S.sound) { hush(); musicStop(); } else sfx('tap'); });
     $('helpbtn').addEventListener('click', () => { sfx('tap'); help(); });
     cover();
     if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
