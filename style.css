@@ -231,3 +231,12 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .cover p .ln:first-child{color:#FFF7E4;font-weight:600}
 .tablet .top .kind[hidden]{display:none}
 .tablet .test .w{margin:auto 0}
+
+/* ---- v6: the doors open ---- */
+.cover.intro{justify-content:center}
+.cover.intro p{font-family:var(--display);font-weight:500;font-size:clamp(19px,5.6vw,23px);line-height:1.38;color:#FFF7E4;max-width:none;margin:0 0 18px}
+.cover.intro .p1 .ln,.cover.intro .p2 .ln{color:#FFF7E4;font-weight:500;margin:0}
+.cover.intro .p1{animation:reveal 1.2s var(--ease) both}
+.cover.intro .p2.arrive{animation:reveal 1.2s var(--ease) both}
+.cover.intro .btn-gold{animation-delay:1.6s;margin-top:8px}
+.veil.deep{background:linear-gradient(180deg,rgba(24,28,58,.62) 0%,rgba(24,28,58,.8) 40%,rgba(18,22,48,.94) 100%)}

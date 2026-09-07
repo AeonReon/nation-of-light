@@ -48,6 +48,9 @@
     else if (name === 'rise') { tone(330, t, .18, 'sine', .05, ctx); tone(440, t + .06, .22, 'sine', .05, ctx); }
     else if (name === 'wreath') { tone(196, t, .5, 'triangle', .12, ctx); tone(392, t + .05, .7, 'sine', .08, ctx); tone(587, t + .25, 1.2, 'sine', .07, ctx); tone(784, t + .45, 1.4, 'sine', .05, ctx); }
     else if (name === 'flame') { const n = ctx.createBufferSource(), b = ctx.createBuffer(1, ctx.sampleRate * .5, ctx.sampleRate), d = b.getChannelData(0); for (let i = 0; i < d.length; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / d.length, 2); n.buffer = b; const f = ctx.createBiquadFilter(); f.type = 'bandpass'; f.frequency.value = 900; f.Q.value = .8; const g = ctx.createGain(); g.gain.value = .18; n.connect(f); f.connect(g); g.connect(ctx.destination); n.start(t); tone(262, t + .05, 1.4, 'sine', .07, ctx); tone(392, t + .2, 1.6, 'sine', .05, ctx); }
+    else if (name === 'begin') { const g = ctx.createGain(); g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(.09, t + 1.6); g.gain.exponentialRampToValueAtTime(.0008, t + 4.2); g.connect(ctx.destination);
+      [130.8, 196, 261.6, 329.6, 392, 523.3].forEach((f, i) => { const o = ctx.createOscillator(); o.type = i < 2 ? 'triangle' : 'sine'; o.frequency.setValueAtTime(f * .94, t); o.frequency.exponentialRampToValueAtTime(f, t + 1.8); const og = ctx.createGain(); og.gain.value = i < 2 ? .5 : .35; o.connect(og); og.connect(g); o.start(t + i * .12); o.stop(t + 4.4); });
+      tone(1046.5, t + 1.5, 1.6, 'sine', .04, ctx); tone(1568, t + 1.7, 1.8, 'sine', .03, ctx); }
     else if (name === 'scroll') { tone(523, t, .3, 'sine', .07, ctx); tone(659, t + .12, .35, 'sine', .07, ctx); tone(784, t + .24, .8, 'sine', .07, ctx); }
   }
   /* ---- the room: birds beyond the parapet, the brazier, a breath of wind. Made in code. ---- */
@@ -136,6 +139,12 @@
   function onMarcusTap() {
     if (!RIG || RIG.hidden) return;
     sfx('tap'); S.taps++; save();
+    const key = MODE + ':' + (CUR ? CUR.id : '-');
+    if (onMarcusTap._helped !== key) {
+      onMarcusTap._helped = key;
+      const id = MODE === 'break' ? 'c-help-break' : MODE === 'rest' ? 'c-help-rest' : (S.done.length === 0 ? 'c-help-task' : 'c-help-go');
+      if (line(id)) { hush(); marcusSay(line(id), 'point'); return; }
+    }
     const poses = ['wave', 'salute', 'think', 'nod', 'laugh'];
     const all = Object.keys(LINES).filter(k => k.startsWith('m-'));
     marcusSay(fresh(all.slice(S.taps % all.length).concat(all)), poses[S.taps % poses.length]);
@@ -263,9 +272,23 @@
     </div>`);
     v.querySelector('#begin').addEventListener('click', () => {
       ac(); MAR.muted = true; MAR.src = 'audio/marcus/m-g1.mp3'; MAR.play().then(() => { MAR.pause(); MAR.muted = false; MAR.currentTime = 0; }).catch(() => { MAR.muted = false; });
-      sfx('tap'); musicStart(); ambStart(); closeVeil(enter);
+      musicStart(); ambStart();
+      if (back) { sfx('tap'); NAR.muted = true; NAR.src = 'audio/voice/ui-first.mp3'; NAR.play().then(() => { NAR.pause(); NAR.muted = false; }).catch(() => { NAR.muted = false; }); closeVeil(enter); }
+      else { sfx('begin'); intro(); }
     });
     v.querySelector('#what').addEventListener('click', () => { sfx('tap'); whatIsThis(); });
+  }
+  /* the doors open: Aurelia says why, the words arrive as she says them, then Go in */
+  function intro() {
+    const I = C.intro;
+    const v = veil(`<div class="cover intro">
+      <p class="p1"><span class="ln">${I.paras[0]}</span></p>
+      <p class="p2" hidden><span class="ln">${I.paras[1]}</span></p>
+      <button class="btn btn-gold" id="goin">${I.go}</button>
+    </div>`, 'deep');
+    const p2 = v.querySelector('.p2');
+    narrate('ui-intro1', () => { p2.hidden = false; p2.classList.add('arrive'); narrate('ui-intro2'); });
+    v.querySelector('#goin').addEventListener('click', () => { sfx('tap'); NAR.pause(); closeVeil(enter); });
   }
   function whatIsThis() {
     const w = C.what;

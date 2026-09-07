@@ -1,7 +1,7 @@
 /* Nation of Light — service worker. The shell is network-first so a deploy is
    seen on the next open; audio is cache-first because it never changes. */
-const V = 'nol-v5';
-const SHELL = ['./', 'index.html', 'style.css?v=5', 'rig.js?v=5', 'scene.js?v=5', 'app.js?v=5', 'content.json', 'audio/marcus/visemes.json', 'manifest.webmanifest?v=5'];
+const V = 'nol-v6';
+const SHELL = ['./', 'index.html', 'style.css?v=6', 'rig.js?v=6', 'scene.js?v=6', 'app.js?v=6', 'content.json', 'audio/marcus/visemes.json', 'manifest.webmanifest?v=6'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(V).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener('fetch', e => {

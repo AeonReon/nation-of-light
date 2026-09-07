@@ -1,5 +1,5 @@
 {
- "version": 5,
+ "version": 6,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -196,6 +196,22 @@
    {
     "id": "c-hello",
     "t": "A stranger, out loud. That one changes people. On you go."
+   },
+   {
+    "id": "c-help-task",
+    "t": "Read the tablet below, do what it says, then tap Done. That is all there is to it. If you cannot do this one, tap Not this one today, and it waits for you at the end."
+   },
+   {
+    "id": "c-help-go",
+    "t": "The tablet below is the next one. Do it, tap Done, and I will be right here."
+   },
+   {
+    "id": "c-help-break",
+    "t": "That is a breath between fives. When you are ready, tap Next five."
+   },
+   {
+    "id": "c-help-rest",
+    "t": "The twenty-five are done. Come back tomorrow and there will be more. Tap me again and I will give you something to think about."
    }
   ]
  },
@@ -471,15 +487,15 @@
   "break-seat": "Five done. You moved, and most people never do. The next five stay in the chair. You will reach for a reason not to. Find a way anyway.",
   "break-chair": "Ten. You found a way every time, and that is the whole skill. Now stand up. The body goes first and the mind follows it. Everything here is in the room you are in.",
   "break-feet": "Fifteen, and you are up out of the chair. The next five need one thing from the room. Whatever you cannot find, something in the room will do instead.",
-  "break-fetch": "Twenty. The last five have other people in them, and the last two are phone calls. Nothing in them is hard. What stops people is a feeling, and the feeling is made of paper."
+  "break-fetch": "Twenty. The last five have other people in them, and the last two are phone calls. Nothing in them is hard. What stops people is a feeling, and the feeling is made of paper.",
+  "intro1": "Light School is for the ones who move. A spectacular life is here already, with nothing new needed: a walk, a park, a gallery, a building that has stood for centuries, a country estate open to anyone, the finest shop in town, the people you read about, who live near you and can be met. Most of it is free. It is a choice.",
+  "intro2": "The choice needs momentum. Twenty-five tiny actions, about ten minutes, from the chair you are in. Do not think about them. Do one, tap Done, do the next."
  },
  "cover": {
   "em": "Nation of",
   "title": "Light School",
   "lines": [
-   "Most people wait. For more money, more time, the right moment. Life goes past while they wait.",
-   "Light School is for the ones who move. A spectacular life is here already, with nothing new needed: a walk, a park, a gallery, a building that has stood for centuries, a country estate open to anyone, the finest shop in town, the people you read about, who live near you and can be met. Most of it is free. It is a choice.",
-   "The choice needs momentum. Twenty-five tiny actions, about ten minutes, from the chair you are in. Do not think about them. Do one, tap Done, do the next."
+   "Most people wait. For more money, more time, the right moment. Life goes past while they wait."
   ],
   "begin": "Begin",
   "what": "What is this?"
@@ -587,5 +603,12 @@
  "before": {
   "ring": "c-ring",
   "enquiry": "c-enquiry"
+ },
+ "intro": {
+  "paras": [
+   "Light School is for the ones who move. A spectacular life is here already, with nothing new needed: a walk, a park, a gallery, a building that has stood for centuries, a country estate open to anyone, the finest shop in town, the people you read about, who live near you and can be met. Most of it is free. It is a choice.",
+   "The choice needs momentum. Twenty-five tiny actions, about ten minutes, from the chair you are in. Do not think about them. Do one, tap Done, do the next."
+  ],
+  "go": "Go in"
  }
 }
