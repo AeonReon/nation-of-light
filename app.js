@@ -122,7 +122,7 @@
 
   /* ---------- the tablet ---------- */
   let CUR = null, MODE = 'task';
-  function riseTablet() { const t = $('tablet'); t.classList.remove('sink'); t.classList.remove('rise'); void t.offsetWidth; t.classList.add('rise'); }
+  function riseTablet() { const t = $('tablet'); t.hidden = false; t.classList.remove('sink'); t.classList.remove('rise'); void t.offsetWidth; t.classList.add('rise'); }
   function setText(el, text) { el.innerHTML = '<div class="w">' + wordSpans(text) + '</div>'; el.classList.remove('say'); void el.offsetWidth; el.classList.add('say'); }
   function showTablet(m, autoRead) {
     CUR = m; MODE = 'task';
