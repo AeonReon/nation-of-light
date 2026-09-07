@@ -50,13 +50,42 @@
     else if (name === 'flame') { const n = ctx.createBufferSource(), b = ctx.createBuffer(1, ctx.sampleRate * .5, ctx.sampleRate), d = b.getChannelData(0); for (let i = 0; i < d.length; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / d.length, 2); n.buffer = b; const f = ctx.createBiquadFilter(); f.type = 'bandpass'; f.frequency.value = 900; f.Q.value = .8; const g = ctx.createGain(); g.gain.value = .18; n.connect(f); f.connect(g); g.connect(ctx.destination); n.start(t); tone(262, t + .05, 1.4, 'sine', .07, ctx); tone(392, t + .2, 1.6, 'sine', .05, ctx); }
     else if (name === 'scroll') { tone(523, t, .3, 'sine', .07, ctx); tone(659, t + .12, .35, 'sine', .07, ctx); tone(784, t + .24, .8, 'sine', .07, ctx); }
   }
+  /* ---- the room: birds beyond the parapet, the brazier, a breath of wind. Made in code. ---- */
+  const AMB = { on: false, nodes: [], timers: [] };
+  function noiseBuffer(ctx, secs) { const b = ctx.createBuffer(1, ctx.sampleRate * secs, ctx.sampleRate), d = b.getChannelData(0); let last = 0; for (let i = 0; i < d.length; i++) { const w = Math.random() * 2 - 1; last = (last + 0.02 * w) / 1.02; d[i] = last * 3.5; } return b; }
+  function ambStart() {
+    if (AMB.on || !S.sound) return; const ctx = ac(); if (!ctx) return; AMB.on = true;
+    const master = ctx.createGain(); master.gain.value = 0; master.connect(ctx.destination); AMB.master = master;
+    master.gain.linearRampToValueAtTime(1, ctx.currentTime + 4);
+    // wind: brown noise through a low-pass, slowly breathing
+    const wind = ctx.createBufferSource(); wind.buffer = noiseBuffer(ctx, 6); wind.loop = true;
+    const wf = ctx.createBiquadFilter(); wf.type = 'lowpass'; wf.frequency.value = 260; const wg = ctx.createGain(); wg.gain.value = .05;
+    const lfo = ctx.createOscillator(); lfo.frequency.value = .07; const lg = ctx.createGain(); lg.gain.value = .025; lfo.connect(lg); lg.connect(wg.gain);
+    wind.connect(wf); wf.connect(wg); wg.connect(master); wind.start(); lfo.start(); AMB.nodes.push(wind, lfo);
+    // the brazier: a bed of hiss and the odd pop, only once the flame is lit
+    const fire = ctx.createBufferSource(); fire.buffer = noiseBuffer(ctx, 4); fire.loop = true;
+    const ff = ctx.createBiquadFilter(); ff.type = 'bandpass'; ff.frequency.value = 1400; ff.Q.value = .6; const fg = ctx.createGain(); fg.gain.value = 0; AMB.fire = fg;
+    fire.connect(ff); ff.connect(fg); fg.connect(master); fire.start(); AMB.nodes.push(fire);
+    const pop = () => { if (!AMB.on) return; if (AMB.fire.gain.value > 0) { const t = ctx.currentTime, o = ctx.createOscillator(), g = ctx.createGain(); o.type = 'triangle'; o.frequency.setValueAtTime(900 + Math.random() * 1400, t); o.frequency.exponentialRampToValueAtTime(200, t + .04); g.gain.setValueAtTime(.05 + Math.random() * .05, t); g.gain.exponentialRampToValueAtTime(.0005, t + .06); o.connect(g); g.connect(master); o.start(t); o.stop(t + .08); } AMB.timers.push(setTimeout(pop, 250 + Math.random() * 1600)); };
+    pop();
+    // birds: two of them, out beyond the parapet, left and right
+    const chirp = (pan) => { const t = ctx.currentTime, n = 2 + Math.floor(Math.random() * 4), base = 2300 + Math.random() * 1500;
+      for (let i = 0; i < n; i++) { const t0 = t + i * (.09 + Math.random() * .07), o = ctx.createOscillator(), g = ctx.createGain(), p = ctx.createStereoPanner ? ctx.createStereoPanner() : null;
+        o.type = 'sine'; o.frequency.setValueAtTime(base, t0); o.frequency.exponentialRampToValueAtTime(base * (1.25 + Math.random() * .3), t0 + .05); o.frequency.exponentialRampToValueAtTime(base * .9, t0 + .1);
+        g.gain.setValueAtTime(0, t0); g.gain.linearRampToValueAtTime(.022, t0 + .015); g.gain.exponentialRampToValueAtTime(.0005, t0 + .11);
+        o.connect(g); if (p) { p.pan.value = pan; g.connect(p); p.connect(master); } else g.connect(master); o.start(t0); o.stop(t0 + .13); } };
+    const bird = (pan) => { if (!AMB.on) return; chirp(pan); AMB.timers.push(setTimeout(() => bird(pan), 2500 + Math.random() * 7000)); };
+    AMB.timers.push(setTimeout(() => bird(-.6), 1200), setTimeout(() => bird(.7), 4200));
+  }
+  function ambFire(on) { if (AMB.fire) AMB.fire.gain.linearRampToValueAtTime(on ? .09 : 0, ac().currentTime + 1.5); }
+  function ambStop() { if (!AMB.on) return; AMB.on = false; AMB.timers.forEach(clearTimeout); AMB.timers = []; try { AMB.master.gain.linearRampToValueAtTime(0, ac().currentTime + .8); } catch (e) {} setTimeout(() => { AMB.nodes.forEach(n => { try { n.stop(); } catch (e) {} }); AMB.nodes = []; }, 900); }
   const voiceOn = () => S.sound;
   function paintSound() { $('soundbtn').classList.toggle('off', !S.sound); }
   function hush() { NAR.pause(); MAR.pause(); if (RIG) RIG.hush(); $('readbtn').classList.remove('on'); musicDuck(false); }
   /* the music: one nocturne, in on Begin, under every voice, out on its own */
   let MUSV = 0, MUST = null;
   function musicTo(v, ms) { clearInterval(MUST); const from = MUS.volume, t0 = performance.now(); MUST = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / ms); MUS.volume = from + (v - from) * k; if (k >= 1) clearInterval(MUST); }, 50); }
-  function musicStart() { if (!S.sound) return; MUSV = .55; MUS.volume = 0; MUS.currentTime = 0; MUS.play().then(() => musicTo(MUSV, 2600)).catch(() => {}); }
+  function musicStart(v) { if (!S.sound) return; MUSV = v || .55; MUS.volume = 0; MUS.currentTime = 0; MUS.play().then(() => musicTo(MUSV, 2600)).catch(() => {}); }
   function musicDuck(on) { if (MUS.paused) return; musicTo(on ? .14 : MUSV, on ? 350 : 1400); }
   function musicStop() { if (MUS.paused) return; musicTo(0, 1200); setTimeout(() => MUS.pause(), 1300); }
   [NAR, MAR].forEach(el => { el.addEventListener('play', () => musicDuck(true)); const back = () => { if (NAR.paused && MAR.paused) musicDuck(false); }; el.addEventListener('ended', back); el.addEventListener('pause', back); });
@@ -71,8 +100,8 @@
   function marcusSay(ln, pose, after) {
     if (!ln || !RIG || RIG.hidden) { if (after) after(); return; }
     if (!S.said.includes(ln.id)) { S.said.push(ln.id); save(); }
-    const b = $('bubble'); b.hidden = false;
-    b.innerHTML = wordSpans(ln.t) + `<span class="src">${ln.src}</span>`;
+    const b = $('bubble'); b.hidden = false; b.classList.toggle('school', !ln.src);
+    b.innerHTML = wordSpans(ln.t) + (ln.src ? `<span class="src">${ln.src}</span>` : '');
     b.classList.remove('say'); void b.offsetWidth; b.classList.add('say');
     if (pose && RIG[pose]) RIG[pose]();
     clearTimeout(marcusSay._t);
@@ -97,6 +126,7 @@
       return best < 0 ? 'X' : c[best][1];
     };
     PORTICO.setWreaths(tiersDone()); PORTICO.setFlame(S.done.length ? 'lit' : 'out'); PORTICO.setPhase(skyFor());
+    if (S.done.length) setTimeout(() => ambFire(true), 3000);
     $('mfig').addEventListener('click', onMarcusTap);
     $('stage').addEventListener('pointerdown', e => { if (RIG && !RIG.hidden) RIG.lookAt(e.clientX, e.clientY); }, { passive: true });
   }
@@ -107,7 +137,7 @@
     if (!RIG || RIG.hidden) return;
     sfx('tap'); S.taps++; save();
     const poses = ['wave', 'salute', 'think', 'nod', 'laugh'];
-    const all = Object.keys(LINES);
+    const all = Object.keys(LINES).filter(k => k.startsWith('m-'));
     marcusSay(fresh(all.slice(S.taps % all.length).concat(all)), poses[S.taps % poses.length]);
   }
 
@@ -134,8 +164,13 @@
     $('donebtn').textContent = 'Done'; $('donebtn').disabled = false; $('skipbtn').hidden = false; $('readbtn').hidden = false;
     riseTablet(); sfx('rise');
     if (RIG && !RIG.hidden) setTimeout(() => RIG.point(), 250);
+    const pre = C.before && C.before[m.id];
+    if (pre && line(pre) && !S.said.includes(pre)) setTimeout(() => marcusSay(line(pre), 'point'), 300);
+    idleWatch(m);
     if (autoRead) { const go = () => { if (CUR === m && MODE === 'task') readTablet(); }; if (!MAR.paused && !MAR.ended) { const once = () => { MAR.removeEventListener('ended', once); setTimeout(go, 350); }; MAR.addEventListener('ended', once); } else setTimeout(go, 700); }
   }
+  let IDLE = null;
+  function idleWatch(m) { clearTimeout(IDLE); IDLE = setTimeout(() => { if (CUR === m && MODE === 'task' && MAR.paused && NAR.paused && line('c-idle') && !S.said.includes('c-idle')) marcusSay(line('c-idle'), 'think'); }, 60000); }
   function readTablet() {
     if (!CUR) return; const b = $('readbtn');
     if (!NAR.paused && NAR.src.includes('mv-' + CUR.id)) { NAR.pause(); b.classList.remove('on'); return; }
@@ -173,39 +208,44 @@
     hush(); sfx('done'); popLeaf(i); $('countn').textContent = S.done.length;
     $('donebtn').disabled = true;
     PORTICO.glideTo(skyFor());
-    if (i === 0) { PORTICO.setFlame('lit'); PORTICO.flare(); sfx('flame'); }
-    const finishedTier = tierDone(m.tier), finishedDeck = !remaining().length;
-    const tierIdx = C.tiers.findIndex(x => x.id === m.tier);
+    if (i === 0) { PORTICO.setFlame('lit'); PORTICO.flare(); sfx('flame'); ambFire(true); }
+    const finishedTier = tierDone(m.tier), finishedDeck = !remaining().length, finishedFive = S.done.length % 5 === 0;
+    const tierIdx = C.tiers.findIndex(x => x.id === m.tier), fiveIdx = S.done.length / 5 - 1;
     // his answer: a line that fits the thing just done, or the body alone
     const sid = C.speak[m.id];
     let spoke = false;
-    if (sid && !finishedTier && !finishedDeck) { spoke = true; marcusSay(line(sid), i % 3 === 0 ? 'cheer' : 'nod'); }
+    if (sid && !finishedFive && !finishedDeck) { spoke = true; marcusSay(line(sid), i % 3 === 0 ? 'cheer' : 'nod'); }
     else RIG.cheer();
     $('tablet').classList.add('sink');
     setTimeout(() => {
       busy = false;
-      if (finishedDeck) { PORTICO.hangWreath(tierIdx); sfx('wreath'); setTimeout(finale, 700); }
-      else if (finishedTier) { PORTICO.hangWreath(tierIdx); sfx('wreath'); setTimeout(() => theBreak(tierIdx), 600); }
+      if (finishedTier) { PORTICO.hangWreath(tierIdx); sfx('wreath'); }
+      if (finishedDeck) setTimeout(finale, 700);
+      else if (finishedFive) setTimeout(() => theBreak(fiveIdx), 600);
       else nextTablet(true);
     }, spoke ? 1200 : 700);
   }
   function onSkip() {
     if (!CUR || busy) return; sfx('tap');
     if (!S.skipped.includes(CUR.id)) S.skipped.push(CUR.id); save();
+    if (S.skipped.length === 1 && line('c-skip')) marcusSay(line('c-skip'), 'think');
     $('tablet').classList.add('sink'); setTimeout(() => nextTablet(true), 380);
   }
   /* after five: Marcus first, then Aurelia's one line, then the button */
   function theBreak(tierIdx) {
     const b = C.breaks[tierIdx]; if (!b) { nextTablet(true); return; }
-    marcusSay(line(b.line), 'salute', () => { breakCard(b, () => nextTablet(true)); setTimeout(() => narrate('ui-break-' + b.after), 500); });
+    const say = (b.saySkip && S.skipped.length) ? b.saySkip : b.say;
+    const quote = () => marcusSay(line(b.line), 'nod', () => { breakCard(b, () => nextTablet(true)); setTimeout(() => narrate('ui-break-' + b.after), 500); });
+    if (say && line(say)) marcusSay(line(say), 'salute', () => setTimeout(quote, 400)); else quote();
   }
   function finale() {
     for (let i = 0; i < 40; i++) { const l = document.createElement('i'); l.className = 'fall'; l.style.left = Math.random() * 100 + '%'; l.style.animationDuration = (2.6 + Math.random() * 2.4) + 's'; l.style.animationDelay = (Math.random() * 1.6) + 's'; $('stage').appendChild(l); setTimeout(() => l.remove(), 6000); }
-    RIG.cheer(); sfx('wreath'); PORTICO.glideTo(1, 3000);
-    setTimeout(() => marcusSay(line(C.finale.line), 'salute', () => {
+    RIG.cheer(); sfx('wreath'); PORTICO.glideTo(1, 3000); musicStart(.45);
+    const last = () => marcusSay(line(C.finale.line), 'salute', () => {
       breakCard({ t: C.finale.t, after: 'finale' }, () => restTablet()); $('tnum').textContent = 'Twenty-five'; $('donebtn').textContent = 'Sit with Marcus';
       setTimeout(() => narrate('ui-deck'), 500);
-    }), 800);
+    });
+    setTimeout(() => { if (C.finale.say && line(C.finale.say)) marcusSay(line(C.finale.say), 'cheer', () => setTimeout(last, 400)); else last(); }, 800);
   }
 
   /* ---------- overlays ---------- */
@@ -223,7 +263,7 @@
     </div>`);
     v.querySelector('#begin').addEventListener('click', () => {
       ac(); MAR.muted = true; MAR.src = 'audio/marcus/m-g1.mp3'; MAR.play().then(() => { MAR.pause(); MAR.muted = false; MAR.currentTime = 0; }).catch(() => { MAR.muted = false; });
-      sfx('tap'); musicStart(); closeVeil(enter);
+      sfx('tap'); musicStart(); ambStart(); closeVeil(enter);
     });
     v.querySelector('#what').addEventListener('click', () => { sfx('tap'); whatIsThis(); });
   }
@@ -241,7 +281,7 @@
     if (S.done.length === 0) S.said = [];            // a fresh sitting starts with every line fresh
     const visit = S.visits++; save();
     RIG.enter();
-    const greet = () => marcusSay(fresh(C.greet.slice(visit % C.greet.length).concat(C.greet)), null, () => setTimeout(() => nextTablet(true), 500));
+    const greet = () => marcusSay(line(S.done.length === 0 && visit === 0 ? 'c-enter' : 'c-return') || fresh(C.greet), null, () => setTimeout(() => nextTablet(true), 500));
     setTimeout(greet, 1300);
   }
   function help() {
@@ -265,9 +305,10 @@
     const [c, v] = await Promise.all([fetch('content.json').then(r => r.json()), fetch('audio/marcus/visemes.json').then(r => r.json()).catch(() => null)]);
     C = c; VIS = v;
     for (const k in C.marcus.lines) for (const l of C.marcus.lines[k]) LINES[l.id] = l;
+    for (const l of (C.marcus.spoken || [])) LINES[l.id] = l;
     buildScene();
     $('donebtn').addEventListener('click', onDone); $('skipbtn').addEventListener('click', onSkip); $('readbtn').addEventListener('click', readTablet);
-    $('soundbtn').addEventListener('click', () => { S.sound = !S.sound; save(); paintSound(); if (!S.sound) { hush(); musicStop(); } else sfx('tap'); });
+    $('soundbtn').addEventListener('click', () => { S.sound = !S.sound; save(); paintSound(); if (!S.sound) { hush(); musicStop(); ambStop(); } else { sfx('tap'); ambStart(); if (S.done.length) ambFire(true); } });
     $('helpbtn').addEventListener('click', () => { sfx('tap'); help(); });
     cover();
     if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});

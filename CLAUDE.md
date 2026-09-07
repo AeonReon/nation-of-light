@@ -24,8 +24,11 @@ a different front: one drawn scene, a living mentor, one tablet at a time.
 
 ## Rules carried over, not negotiable
 
-- Marcus's voice only ever says his own recorded words, each with its source shown. The stories
-  about him are the school's words and are labelled so in the app.
+- Two kinds of Marcus line, never mixed in one bubble (his call, 2026-09-07 evening): a QUOTE is
+  his own recorded words and always shows its source (serif bubble); a COMPANION line is the
+  school's words in his character (congratulations, tips, the word about skipping) and shows no
+  source (sans bubble). Quotes come from school-of-light; companion lines are `marcus.spoken` in
+  content.json, voiced here by `gen_marcus.py` with the same pinned reference voice.
 - The flame dims, it never resets, it never scolds. No leagues, no hearts, no guilt copy.
 - One thing done really well before the next twist. Next waves, in order: a second scene
   (evening / the study), sealed letters at milestones, the other four mentors, conversation.

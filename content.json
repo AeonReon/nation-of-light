@@ -1,6 +1,6 @@
 {
- "version": 4,
- "rule": "A mentor's voice only ever says that mentor's own recorded words, lightly modernised. Every line carries its source. The stories about them are the school's words, in the school's voice, and say so.",
+ "version": 5,
+ "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
   "dates": "121 – 180",
@@ -135,7 +135,69 @@
      "src": "Meditations, book 8, note 22"
     }
    ]
-  }
+  },
+  "spoken": [
+   {
+    "id": "c-enter",
+    "t": "Good. You came. Sit where you are. The first one needs nothing but you."
+   },
+   {
+    "id": "c-return",
+    "t": "You came back. That is the habit forming. The next one is ready."
+   },
+   {
+    "id": "c-first",
+    "t": "That is the whole trick. You moved. Now the next one."
+   },
+   {
+    "id": "c-five",
+    "t": "Five. Feel that? That is momentum starting. Do not let it cool."
+   },
+   {
+    "id": "c-ten",
+    "t": "Ten, and you have not skipped one. These were made easy on purpose, so there was nothing in the way but you, and you moved every time. Most people watch their lives from the seats. You are on the field. Well done."
+   },
+   {
+    "id": "c-ten-skip",
+    "t": "Ten done, and some skipped. I am not scolding you. I am asking: what were you waiting for? These were made easy on purpose, so there was nothing in the way but you. Every one of them shows you which you are: someone who acts, or a spectator. The two make very different lives. The ones you skipped are waiting at the end. Take them."
+   },
+   {
+    "id": "c-fifteen",
+    "t": "Fifteen. You are out of the chair, and I can see it in you. One thing from the room now."
+   },
+   {
+    "id": "c-twenty",
+    "t": "Twenty. The last five are the ones people talk themselves out of. Not you. I am right here."
+   },
+   {
+    "id": "c-ring",
+    "t": "This one is a phone call. Thirty seconds. Everyone hesitates. Do it hesitating."
+   },
+   {
+    "id": "c-enquiry",
+    "t": "The last one. Ask about the house, or the car. They are there to answer. One minute, thank you, and it is done."
+   },
+   {
+    "id": "c-finale",
+    "t": "Twenty-five. Look at what you did in ten minutes. This is who you are when you move. I will be here tomorrow."
+   },
+   {
+    "id": "c-skip",
+    "t": "Skipped. Once is fine. It waits for you at the end."
+   },
+   {
+    "id": "c-hard",
+    "t": "Harder than it looked? Good. Those are the ones that count."
+   },
+   {
+    "id": "c-idle",
+    "t": "I am here. Take the next one when you are ready."
+   },
+   {
+    "id": "c-hello",
+    "t": "A stranger, out loud. That one changes people. On you go."
+   }
+  ]
  },
  "tiers": [
   {
@@ -416,7 +478,7 @@
   "title": "Light School",
   "lines": [
    "Most people wait. For more money, more time, the right moment. Life goes past while they wait.",
-   "Light School is for the ones who move. A spectacular life is here already, with nothing new needed: a walk, a park, a gallery, a building that has stood for centuries. Most of it is free. It is a choice.",
+   "Light School is for the ones who move. A spectacular life is here already, with nothing new needed: a walk, a park, a gallery, a building that has stood for centuries, a country estate open to anyone, the finest shop in town, the people you read about, who live near you and can be met. Most of it is free. It is a choice.",
    "The choice needs momentum. Twenty-five tiny actions, about ten minutes, from the chair you are in. Do not think about them. Do one, tap Done, do the next."
   ],
   "begin": "Begin",
@@ -468,7 +530,7 @@
   "name": "m-g3",
   "reach": "m-x6",
   "hand": "m-d1",
-  "breath": "m-x4",
+  "breath": "c-hard",
   "still": "m-x10",
   "leg": "m-x5",
   "ball": "m-d2",
@@ -478,39 +540,52 @@
   "knot": "m-x8",
   "phrase": "m-x11",
   "glad": "m-g4",
-  "hello": "m-x12",
-  "ring": "m-x2"
+  "hello": "c-hello",
+  "ring": "m-x2",
+  "thirty": "m-x4",
+  "roundsquare": "m-x12",
+  "tap": "c-first"
  },
  "greet": [
   "m-g1",
-  "m-g2",
   "m-x13",
-  "m-g4"
+  "m-g4",
+  "m-g2"
  ],
  "breaks": [
   {
    "after": "seat",
    "line": "m-x3",
-   "t": "Five done. You moved, and most people never do. The next five stay in the chair. You will reach for a reason not to. Find a way anyway."
+   "t": "Five done. You moved, and most people never do. The next five stay in the chair. You will reach for a reason not to. Find a way anyway.",
+   "say": "c-five"
   },
   {
    "after": "chair",
    "line": "m-x1",
-   "t": "Ten. You found a way every time, and that is the whole skill. Now stand up. The body goes first and the mind follows it. Everything here is in the room you are in."
+   "t": "Ten. You found a way every time, and that is the whole skill. Now stand up. The body goes first and the mind follows it. Everything here is in the room you are in.",
+   "say": "c-ten",
+   "saySkip": "c-ten-skip"
   },
   {
    "after": "feet",
    "line": "m-d4",
-   "t": "Fifteen, and you are up out of the chair. The next five need one thing from the room. Whatever you cannot find, something in the room will do instead."
+   "t": "Fifteen, and you are up out of the chair. The next five need one thing from the room. Whatever you cannot find, something in the room will do instead.",
+   "say": "c-fifteen"
   },
   {
    "after": "fetch",
    "line": "m-d3",
-   "t": "Twenty. The last five have other people in them, and the last two are phone calls. Nothing in them is hard. What stops people is a feeling, and the feeling is made of paper."
+   "t": "Twenty. The last five have other people in them, and the last two are phone calls. Nothing in them is hard. What stops people is a feeling, and the feeling is made of paper.",
+   "say": "c-twenty"
   }
  ],
  "finale": {
   "line": "m-g2",
-  "t": "Twenty-five in one sitting. You tapped, breathed, stood, threw, drew, spoke to a stranger and rang two shops. More action than most people take in a month, and you can feel it. This is what Light School runs on, and from here it gets bigger."
+  "t": "Twenty-five in one sitting. You tapped, breathed, stood, threw, drew, spoke to a stranger and rang two shops. More action than most people take in a month, and you can feel it. This is what Light School runs on, and from here it gets bigger.",
+  "say": "c-finale"
+ },
+ "before": {
+  "ring": "c-ring",
+  "enquiry": "c-enquiry"
  }
 }
