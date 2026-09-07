@@ -1,0 +1,280 @@
+{
+ "version": 1,
+ "rule": "A mentor's voice only ever says that mentor's own recorded words, lightly modernised. Every line carries its source. The stories about them are the school's words, in the school's voice, and say so.",
+ "marcus": {
+  "name": "Marcus Aurelius",
+  "dates": "121 – 180",
+  "role": "Emperor of Rome, who wrote notes to himself",
+  "credit": "Marble bust, Louvre MR 561, about 170 AD. Photograph public domain, via Wikimedia Commons.",
+  "lines": {
+   "greet": [
+    {
+     "id": "m-g1",
+     "t": "In the morning, when you are slow to get up, keep this in mind: I am rising to do the work of a human being.",
+     "src": "Meditations, book 5, note 1"
+    },
+    {
+     "id": "m-g2",
+     "t": "Do not act as if you were going to live ten thousand years. While you live, while it is in your power, be good.",
+     "src": "Meditations, book 4, note 17"
+    },
+    {
+     "id": "m-g3",
+     "t": "Stop talking about what a good person should be. Be one.",
+     "src": "Meditations, book 10, note 16"
+    },
+    {
+     "id": "m-g4",
+     "t": "Look inward. Within is the fountain of good, and it will always bubble up if you keep digging.",
+     "src": "Meditations, book 7, note 59"
+    }
+   ],
+   "done": [
+    {
+     "id": "m-d1",
+     "t": "Practise even the things you despair of. The left hand, useless at most things for want of practice, holds the reins better than the right, because it has been trained to it.",
+     "src": "Meditations, book 12, note 6"
+    },
+    {
+     "id": "m-d2",
+     "t": "What stands in the way of the work becomes part of the work. The obstacle on the road helps us along the road.",
+     "src": "Meditations, book 5, note 20"
+    },
+    {
+     "id": "m-d3",
+     "t": "Do not be ashamed to be helped.",
+     "src": "Meditations, book 7, note 7"
+    },
+    {
+     "id": "m-d4",
+     "t": "Stop talking about what a good person should be. Be one.",
+     "src": "Meditations, book 10, note 16"
+    }
+   ],
+   "evening": [
+    {
+     "id": "m-e1",
+     "t": "From my grandfather Verus I learned good habits, and to keep my temper.",
+     "src": "Meditations, book 1, note 1"
+    },
+    {
+     "id": "m-e2",
+     "t": "From my tutor: to endure hard work, to want little, to work with my own hands, and not to meddle in other people's affairs.",
+     "src": "Meditations, book 1, note 5"
+    }
+   ]
+  }
+ },
+ "tiers": [
+  {
+   "id": "seat",
+   "name": "Right where you are",
+   "line": "Nothing but you, about five seconds each. Do not think about it."
+  },
+  {
+   "id": "chair",
+   "name": "Still in your chair",
+   "line": "Half a minute each. Nothing to fetch and nowhere to go."
+  },
+  {
+   "id": "feet",
+   "name": "On your feet",
+   "line": "Stand up. All of these are in the room you are already in."
+  },
+  {
+   "id": "fetch",
+   "name": "One thing to find",
+   "line": "Whatever is already in the room with you. Nowhere else to go and looking."
+  },
+  {
+   "id": "world",
+   "name": "Where other people are",
+   "line": "Somebody else is in these — and every one can be done from where you are sitting."
+  }
+ ],
+ "moves": [
+  {
+   "id": "tap",
+   "tier": "seat",
+   "kind": "skill",
+   "test": "Tap three times with your left hand, then three times with your right, on whatever is in front of you."
+  },
+  {
+   "id": "air",
+   "tier": "seat",
+   "kind": "attention",
+   "test": "Sit up straight, shoulders back, and take one slow breath all the way in and all the way out."
+  },
+  {
+   "id": "name",
+   "tier": "seat",
+   "kind": "courage",
+   "test": "Say your own name out loud. Once. Actually out loud."
+  },
+  {
+   "id": "reach",
+   "tier": "seat",
+   "kind": "attention",
+   "test": "Reach both arms straight up, as high as they will go, until it pulls."
+  },
+  {
+   "id": "up",
+   "tier": "seat",
+   "kind": "attention",
+   "test": "Stand up, and sit back down again."
+  },
+  {
+   "id": "hand",
+   "tier": "chair",
+   "kind": "skill",
+   "test": "Write your name with your other hand. A finger on the table will do if there is nothing to write with."
+  },
+  {
+   "id": "thirty",
+   "tier": "chair",
+   "kind": "attention",
+   "test": "Close your eyes and count slowly to thirty. Slowly."
+  },
+  {
+   "id": "breath",
+   "tier": "chair",
+   "kind": "skill",
+   "test": "Hold your breath for thirty seconds, sitting still."
+  },
+  {
+   "id": "whistle",
+   "tier": "chair",
+   "kind": "skill",
+   "test": "Whistle one clear note."
+  },
+  {
+   "id": "twos",
+   "tier": "chair",
+   "kind": "attention",
+   "test": "Count in twos up to twenty, out loud."
+  },
+  {
+   "id": "still",
+   "tier": "chair",
+   "kind": "attention",
+   "test": "Sit completely still and completely quiet for one minute."
+  },
+  {
+   "id": "leg",
+   "tier": "feet",
+   "kind": "attention",
+   "test": "Stand on one leg for thirty seconds. Then the other one."
+  },
+  {
+   "id": "press",
+   "tier": "feet",
+   "kind": "skill",
+   "test": "Two proper press-ups. Knees on the floor is fine."
+  },
+  {
+   "id": "situp",
+   "tier": "feet",
+   "kind": "skill",
+   "test": "Five sit-ups."
+  },
+  {
+   "id": "ball",
+   "tier": "feet",
+   "kind": "attention",
+   "test": "Scrunch any paper into a ball and throw it into a bin from five paces."
+  },
+  {
+   "id": "plane",
+   "tier": "feet",
+   "kind": "attention",
+   "test": "Fold a paper aeroplane that flies across the room."
+  },
+  {
+   "id": "juggle",
+   "tier": "fetch",
+   "kind": "attention",
+   "test": "Throw one ball from hand to hand, ten times, without dropping it."
+  },
+  {
+   "id": "draw",
+   "tier": "fetch",
+   "kind": "attention",
+   "test": "Draw something well enough that somebody would know what it is without being told."
+  },
+  {
+   "id": "stack",
+   "tier": "fetch",
+   "kind": "attention",
+   "test": "Stack any three things you can reach without standing up, so they balance on their own for three seconds."
+  },
+  {
+   "id": "knot",
+   "tier": "fetch",
+   "kind": "attention",
+   "test": "Tie a knot in anything within reach that has two ends — a shoelace, a hair tie, a charger cable, a sock."
+  },
+  {
+   "id": "roundsquare",
+   "tier": "fetch",
+   "kind": "attention",
+   "test": "Find something round and something square, both within reach, and hold one in each hand."
+  },
+  {
+   "id": "north",
+   "tier": "world",
+   "kind": "attention",
+   "test": "Point which way is north, and be right."
+  },
+  {
+   "id": "phrase",
+   "tier": "world",
+   "kind": "attention",
+   "test": "Learn one usable sentence of another language, and say it out loud until it flows."
+  },
+  {
+   "id": "ring",
+   "tier": "world",
+   "kind": "courage",
+   "test": "Ring a shop or a cafe and ask what time they close."
+  },
+  {
+   "id": "glad",
+   "tier": "world",
+   "kind": "kindness",
+   "test": "Tell one person something you are glad about them. Out loud, or in a voice message. Not thanks — something they did."
+  }
+ ],
+ "story": [
+  {
+   "id": "s1",
+   "title": "The boy who loved to wrestle",
+   "t": "Marcus grew up in Rome, and loved wrestling, boxing, running and riding. The emperor Hadrian is said to have given him a nickname: Verissimus, the most truthful."
+  },
+  {
+   "id": "s2",
+   "title": "The emperor in a tent",
+   "t": "He was made emperor at thirty-nine. He spent years of it not in a palace but in a tent by the river Danube, with the army."
+  },
+  {
+   "id": "s3",
+   "title": "Notes to himself",
+   "t": "At night, in that tent, he wrote notes to himself in a little book, about how to be a good person the next day. Nobody was ever meant to read them."
+  },
+  {
+   "id": "s4",
+   "title": "The first page",
+   "t": "The very first page of that book is a list of everyone who taught him something, thanked one by one. His grandfather, for good habits and a held temper. His tutor, for working with his own hands and wanting little."
+  },
+  {
+   "id": "s5",
+   "title": "The book that survived",
+   "t": "The book outlived him by eighteen hundred years. We call it the Meditations. Every word Marcus says to you here is taken from it, put into modern English. Nothing else is ever put in his mouth."
+  }
+ ],
+ "voice": {
+  "choose": "Choose how far you are going. Thirty days, or ninety. You can always go further.",
+  "today": "That is today. Five things done, and the flame is lit. Come back tomorrow, and Marcus will be here.",
+  "scroll": "A scroll has opened. A piece of who he really was.",
+  "first": "He is here. Tap him any time and he will speak. The first tablet is below."
+ }
+}

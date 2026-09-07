@@ -1,0 +1,5 @@
+.DS_Store
+tools/*.log
+audio/voice/*.sha
+audio/voice/*.wav
+__pycache__/
