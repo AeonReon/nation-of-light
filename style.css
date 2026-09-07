@@ -61,7 +61,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .mfig:active{transform:scale(.985)}
 .mfig svg{width:100%;height:100%;overflow:visible;display:block}
 .mfig.walk-in{animation:walkin 1.15s var(--ease) both}
-@keyframes walkin{0%{transform:translateX(60%) translateY(0);opacity:0}12%{opacity:1}30%{transform:translateX(38%) translateY(-1.2%)}55%{transform:translateX(18%) translateY(0)}80%{transform:translateX(4%) translateY(-.8%)}100%{transform:none}}
+@keyframes walkin{0%{transform:translateX(60%) translateY(0)}30%{transform:translateX(38%) translateY(-1.2%)}55%{transform:translateX(18%) translateY(0)}80%{transform:translateX(4%) translateY(-.8%)}100%{transform:none}}
 .mfig.is-hidden{visibility:hidden}
 .bubble{position:absolute;left:3%;top:22%;width:56%;z-index:4;background:var(--card);border-radius:18px 18px 18px 4px;padding:11px 13px 9px;
   font-family:var(--display);font-weight:500;font-size:15px;line-height:1.36;color:var(--ink);box-shadow:var(--shadow);animation:bubblein .45s var(--spring) both}
@@ -71,8 +71,8 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .bubble.say span{animation:wordin .4s var(--spring) both;animation-delay:calc(var(--i) * 60ms)}
 .bubble .src{display:block;margin-top:6px;font-family:var(--sans);font-size:11px;font-style:italic;color:var(--ink-faint);font-weight:500}
 .bubble.school{font-family:var(--sans);font-weight:500;font-size:14px}
-@keyframes bubblein{0%{opacity:0;transform:translateY(8px) scale(.94)}100%{opacity:1;transform:none}}
-@keyframes wordin{0%{opacity:0;transform:translateY(5px)}100%{opacity:1;transform:none}}
+@keyframes bubblein{0%{transform:translateY(8px) scale(.94)}100%{transform:none}}
+@keyframes wordin{0%{opacity:.3;transform:translateY(5px)}100%{opacity:1;transform:none}}
 .tapme{position:absolute;left:66%;top:36%;z-index:4;pointer-events:none;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.55);box-shadow:0 0 0 0 rgba(255,255,255,.7);animation:ring 1.6s ease-out infinite}
 @keyframes ring{0%{box-shadow:0 0 0 0 rgba(255,255,255,.75);opacity:1}100%{box-shadow:0 0 0 22px rgba(255,255,255,0);opacity:.6}}
 
@@ -110,7 +110,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
   --g1:var(--gold-lt);--g2:var(--gold)}
 .tablet::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:2px;background:linear-gradient(135deg,var(--g1),var(--g2));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
 .tablet.rise{animation:rise .75s var(--spring) both}
-@keyframes rise{0%{opacity:0;transform:translateY(60px) scale(.96)}100%{opacity:1;transform:none}}
+@keyframes rise{0%{transform:translateY(60px) scale(.96)}100%{transform:none}}
 .tablet.sink{animation:sink .4s var(--ease) both}
 @keyframes sink{0%{opacity:1;transform:none}100%{opacity:0;transform:translateY(30px) scale(.97)}}
 .tablet .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
@@ -153,7 +153,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .cover .small{margin-top:14px;font-size:12px;color:rgba(255,247,228,.55);text-align:center}
 .panel{background:var(--card);border-radius:var(--r);padding:22px 20px 20px;box-shadow:var(--shadow-lift);position:relative;--g1:var(--gold-lt);--g2:var(--gold);animation:panelin .6s var(--spring) both}
 .panel::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:2px;background:linear-gradient(135deg,var(--g1),var(--g2));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
-@keyframes panelin{0%{opacity:0;transform:translateY(30px) scale(.96)}100%{opacity:1;transform:none}}
+@keyframes panelin{0%{transform:translateY(30px) scale(.96)}100%{transform:none}}
 .panel h2{font-size:26px;line-height:1.15;margin-bottom:6px}
 .panel .lede{color:var(--ink-soft);font-size:15px;line-height:1.5;margin:0 0 16px}
 .choices{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}

@@ -3,3 +3,4 @@ tools/*.log
 audio/voice/*.sha
 audio/voice/*.wav
 __pycache__/
+.vercel
