@@ -247,7 +247,6 @@
         <path d="M100 138 Q110 143 120 138" stroke="${A_SKIN_D}" stroke-width="1" fill="none" opacity=".5"/>
         <g class="r-mouth"><ellipse class="r-mouth-shape" cx="0" cy="0" rx="7" ry="1.6" fill="${A_LIP}"/></g>
       </g>
-      <path d="M103 121 Q110 118 117 121" stroke="${A_LIP}" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".9"/>
       <ellipse cx="89" cy="112" rx="6.5" ry="4" fill="#F0A0A0" opacity=".24"/>
       <ellipse cx="131" cy="112" rx="6.5" ry="4" fill="#F0A0A0" opacity=".24"/>
       <path d="M108 94 Q105 106 108 111 Q111 113 114 110 Q115 104 112 94" fill="${A_SKIN_D}" opacity=".55"/>

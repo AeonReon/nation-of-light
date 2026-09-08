@@ -84,7 +84,7 @@
   function ambStop() { if (!AMB.on) return; AMB.on = false; AMB.timers.forEach(clearTimeout); AMB.timers = []; try { AMB.master.gain.linearRampToValueAtTime(0, ac().currentTime + .8); } catch (e) {} setTimeout(() => { AMB.nodes.forEach(n => { try { n.stop(); } catch (e) {} }); AMB.nodes = []; }, 900); }
   const voiceOn = () => S.sound;
   function paintSound() { $('soundbtn').classList.toggle('off', !S.sound); }
-  function hush() { NAR.pause(); MAR.pause(); if (RIG) RIG.hush(); $('readbtn').classList.remove('on'); musicDuck(false); }
+  function hush() { NAR.pause(); MAR.pause(); if (RIG) RIG.hush(); if (ARIG) ARIG.hush(); $('readbtn').classList.remove('on'); musicDuck(false); clearTimeout(marcusSay._t); $('bubble').hidden = true; }
   /* the music: one nocturne, in on Begin, under every voice, out on its own */
   let MUSV = 0, MUST = null;
   function musicTo(v, ms) { clearInterval(MUST); const from = MUS.volume, t0 = performance.now(); MUST = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / ms); MUS.volume = from + (v - from) * k; if (k >= 1) clearInterval(MUST); }, 50); }
@@ -104,7 +104,7 @@
     if (!ln || !RIG || RIG.hidden) { if (after) after(); return; }
     if (!S.said.includes(ln.id)) { S.said.push(ln.id); save(); }
     const b = $('bubble'); b.hidden = MODE === 'welcome'; b.classList.toggle('school', !ln.src);
-    b.innerHTML = wordSpans(ln.t) + (ln.src ? `<span class="src">${ln.src}</span>` : '');
+    b.innerHTML = wordSpans(ln.t) + (ln.src ? `<span class="who">Marcus Aurelius</span><span class="src">${ln.src}</span>` : `<span class="who">Marcus</span>`);
     b.classList.remove('say'); void b.offsetWidth; b.classList.add('say');
     if (pose && RIG[pose]) RIG[pose]();
     clearTimeout(marcusSay._t);
@@ -237,6 +237,7 @@
     const sid = C.speak[m.id];
     let spoke = false;
     if (sid && !finishedFive && !finishedDeck) { spoke = true; marcusSay(line(sid), i % 3 === 0 ? 'cheer' : 'nod'); }
+    else if (!finishedFive && !finishedDeck && C.affirm) { const y = fresh(C.affirm.slice(i % C.affirm.length).concat(C.affirm)); if (y) { marcusSay(y, i % 2 ? 'cheer' : 'nod'); } else RIG.cheer(); }
     else RIG.cheer();
     $('tablet').classList.add('sink');
     setTimeout(() => {
@@ -259,10 +260,20 @@
     const b = C.breaks[tierIdx]; if (!b) { nextTablet(true); return; }
     const say = (b.saySkip && S.skipped.length) ? b.saySkip : b.say;
     const quote = () => marcusSay(line(b.line), 'nod', () => { breakCard(b, () => nextTablet(true)); setTimeout(() => narrate('ui-break-' + b.after), 500); });
+    if (b.scene) {
+      ARIG.show(true); $('afig').classList.remove('walk-out-l', 'walk-in-l'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l');
+      let i = 0; const step = () => {
+        const ln = b.scene[i++];
+        if (!ln) { $('afig').classList.remove('walk-in-l'); $('afig').classList.add('walk-out-l'); setTimeout(() => { ARIG.show(false); $('afig').classList.remove('walk-out-l'); }, 1100); setTimeout(quote, 500); return; }
+        if (ln.who === 'marcus') marcusSay(line(ln.id) || { id: ln.id, t: ln.t }, 'nod', () => setTimeout(step, 450));
+        else { ARIG[i === 1 ? 'point' : 'nod'](); aureliaSay(ln.id, () => setTimeout(step, 450)); }
+      };
+      setTimeout(step, 1300); return;
+    }
     if (say && line(say)) marcusSay(line(say), 'salute', () => setTimeout(quote, 400)); else quote();
   }
   function finale() {
-    for (let i = 0; i < 40; i++) { const l = document.createElement('i'); l.className = 'fall'; l.style.left = Math.random() * 100 + '%'; l.style.animationDuration = (2.6 + Math.random() * 2.4) + 's'; l.style.animationDelay = (Math.random() * 1.6) + 's'; $('stage').appendChild(l); setTimeout(() => l.remove(), 6000); }
+    for (let i = 0; i < 40; i++) { const l = document.createElement('i'); l.className = 'leaffall'; l.style.left = Math.random() * 100 + '%'; l.style.animationDuration = (2.6 + Math.random() * 2.4) + 's'; l.style.animationDelay = (Math.random() * 1.6) + 's'; $('stage').appendChild(l); setTimeout(() => l.remove(), 6000); }
     RIG.cheer(); sfx('wreath'); PORTICO.glideTo(1, 3000); musicStart(.45);
     const last = () => marcusSay(line(C.finale.line), 'salute', () => {
       breakCard({ t: C.finale.t, after: 'finale' }, () => restTablet()); $('tnum').textContent = 'Twenty-five'; $('donebtn').textContent = 'Sit with Marcus';
@@ -302,13 +313,13 @@
     $('tfall').innerHTML = ''; $('readbtn').hidden = true; $('skipbtn').hidden = false; $('skipbtn').textContent = C.welcome.skip;
     $('donebtn').textContent = C.welcome.ready; $('donebtn').hidden = true;
     setText($('ttext'), '');
-    RIG.enter(); setTimeout(() => { ARIG.show(true); $('afig').classList.remove('walk-in-l'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l'); setTimeout(() => ARIG.bow(), 950); }, 500);
+    plates(true); RIG.enter(); setTimeout(() => { ARIG.show(true); $('afig').classList.remove('walk-in-l'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l'); setTimeout(() => ARIG.bow(), 950); }, 500);
     let i = 0, alive = true; welcome._stop = () => { alive = false; };
     const next = () => {
       if (!alive) return;
       const ln = C.welcome.lines[i++];
       if (!ln) { $('donebtn').hidden = false; $('donebtn').classList.add('arrive'); $('skipbtn').hidden = true; return; }
-      $('tnum').textContent = ln.who === 'marcus' ? 'Marcus' : 'Aurelia';
+      $('tnum').textContent = ln.who === 'marcus' ? 'Marcus Aurelius' : 'Aurelia, keeper of the flame';
       setText($('ttext'), ln.t);
       const after = () => setTimeout(next, 650);
       if (ln.who === 'marcus') { const l = line(ln.id) || { id: ln.id, t: ln.t }; marcusSay(l, i % 2 ? 'point' : 'nod', after); $('bubble').hidden = true; }
@@ -316,8 +327,9 @@
     };
     setTimeout(next, 2400);
   }
+  function plates(on) { document.querySelectorAll('.nameplate').forEach(n => n.remove()); if (!on) return; $('scene').insertAdjacentHTML('beforeend', '<div class="nameplate a">Aurelia</div><div class="nameplate m">Marcus Aurelius</div>'); }
   function welcomeDone() {
-    if (welcome._stop) welcome._stop(); hush(); $('bubble').hidden = true;
+    if (welcome._stop) welcome._stop(); hush(); $('bubble').hidden = true; plates(false);
     $('tablet').classList.remove('welcome'); $('skipbtn').textContent = 'Not this one today'; $('donebtn').hidden = false; $('donebtn').classList.remove('arrive');
     $('afig').classList.remove('walk-in-l'); $('afig').classList.add('walk-out-l'); setTimeout(() => { ARIG.show(false); $('afig').classList.remove('walk-out-l'); }, 1100);
     $('hud').hidden = false; S.visits++; save();

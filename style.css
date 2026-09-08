@@ -25,11 +25,11 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 [hidden]{display:none!important}
 
 /* ---- the column: a phone, centred on a big screen ---- */
-.stage{position:relative;width:100%;max-width:440px;height:100dvh;height:100vh;margin:0 auto;background:var(--marble);overflow:hidden;display:flex;flex-direction:column}
+.stage{position:relative;width:100%;max-width:440px;height:100vh;height:100dvh;margin:0 auto;background:var(--marble);overflow:hidden;display:flex;flex-direction:column}
 @media(min-width:520px){.stage{height:min(100vh,940px);margin-top:max(0px,calc((100vh - 940px)/2));border-radius:34px;box-shadow:0 40px 120px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.08)}}
 
 /* ---- the scene ---- */
-.scene{position:relative;width:100%;aspect-ratio:390/470;flex:0 0 auto;overflow:hidden;background:#2F3D72}
+.scene{position:relative;width:100%;aspect-ratio:390/470;max-height:54vh;max-height:54dvh;flex:0 0 auto;overflow:hidden;background:#2F3D72}
 .scene-svg{position:absolute;inset:0;width:100%;height:100%;display:block}
 .lyr{will-change:transform}
 .mote{animation:mote var(--d) ease-in-out infinite;animation-delay:calc(var(--o) * -1);opacity:0}
@@ -115,7 +115,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .tablet .num{font-family:var(--display);font-weight:600;font-size:13px;color:var(--gold-deep);letter-spacing:.04em;text-transform:uppercase}
 .kind{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:10px;color:#fff;background:var(--k)}
 .kind-courage{--k:var(--k-courage)}.kind-skill{--k:var(--k-skill)}.kind-kindness{--k:var(--k-kindness)}.kind-attention{--k:var(--k-attention)}
-.tablet .test{font-family:var(--display);font-weight:500;font-size:clamp(18px,5.4vw,22px);line-height:1.3;color:var(--ink);flex:1 1 auto;min-height:0;overflow-y:auto;display:flex;align-items:center;font-variation-settings:"SOFT" 40,"WONK" 0}
+.tablet .test{font-family:var(--display);font-weight:500;font-size:clamp(18px,5.4vw,22px);line-height:1.3;color:var(--ink);flex:1 1 auto;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;display:flex;align-items:center;font-variation-settings:"SOFT" 40,"WONK" 0}
 .tablet .test .w{width:100%}
 .tablet .test span{display:inline-block}
 .tablet .test.say span{animation:wordin .4s var(--spring) both;animation-delay:calc(var(--i) * 45ms)}
@@ -192,8 +192,8 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .ver{position:absolute;right:10px;bottom:6px;z-index:6;font-size:10.5px;color:rgba(30,23,15,.35);font-weight:600;letter-spacing:.04em}
 .toast{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);z-index:40;background:var(--ink);color:#FFF7E4;font-size:13.5px;font-weight:600;padding:10px 16px;border-radius:14px;box-shadow:var(--shadow-lift);animation:panelin .45s var(--spring) both;white-space:nowrap}
 /* leaves falling when a deck is done */
-.fall{position:absolute;top:-20px;width:12px;height:20px;border-radius:60% 0 60% 0;background:linear-gradient(135deg,var(--laurel-lt),var(--laurel));z-index:25;pointer-events:none;animation:fall linear both}
-@keyframes fall{0%{transform:translateY(0) rotate(0);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:.2}}
+.leaffall{position:absolute;top:-20px;width:12px;height:20px;border-radius:60% 0 60% 0;background:linear-gradient(135deg,var(--laurel-lt),var(--laurel));z-index:25;pointer-events:none;animation:leaffall linear both}
+@keyframes leaffall{0%{transform:translateY(0) rotate(0);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:.2}}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important}.mote{opacity:.4}}
 
 /* ---- v2: the fallback line, the tier card, the medallion, the cover reveal ---- */
@@ -255,3 +255,23 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .tablet.welcome .test{font-size:clamp(19px,5.6vw,23px)}
 .tablet.welcome .skip{margin-top:auto}
 .btn.arrive{animation:panelin .6s var(--spring) both}
+
+/* short viewports (a phone browser with its toolbars): tighter deck, the text always readable */
+@media (max-height:740px){
+  .deck{padding:8px 12px 10px}
+  .tierline{display:none}
+  .laurel{padding-bottom:6px}
+  .tablet{padding:12px 14px 10px}
+  .tablet .test{font-size:clamp(17px,4.8vw,19px);line-height:1.28}
+  .tablet .fall{font-size:12px;padding:6px 8px 6px 10px;margin-top:4px}
+  .tablet .row{margin-top:8px}
+  .btn{height:46px}
+  .btn-ghost{height:40px}
+  .skip{margin-top:2px;padding:4px 10px}
+}
+@media (max-height:640px){ .scene{max-height:46vh;max-height:46dvh} .tablet .fall{display:none} }
+/* who is speaking */
+.bubble .who{display:block;margin-top:5px;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-deep)}
+.bubble .src{margin-top:3px}
+.nameplate{position:absolute;bottom:2%;z-index:4;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#FFF7E4;background:rgba(30,23,15,.55);padding:4px 9px;border-radius:9px;pointer-events:none;animation:panelin .6s var(--spring) both}
+.nameplate.m{left:55%}.nameplate.a{left:12%}

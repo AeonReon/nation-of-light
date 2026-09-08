@@ -1,5 +1,5 @@
 {
- "version": 7,
+ "version": 8,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -224,6 +224,58 @@
    {
     "id": "c-w3",
     "t": "It takes one decision: to be that version of yourself, today. Ready?"
+   },
+   {
+    "id": "c-b15",
+    "t": "I see it. It shows."
+   },
+   {
+    "id": "c-y1",
+    "t": "Good."
+   },
+   {
+    "id": "c-y2",
+    "t": "Well done."
+   },
+   {
+    "id": "c-y3",
+    "t": "That is it."
+   },
+   {
+    "id": "c-y4",
+    "t": "Yes. Keep going."
+   },
+   {
+    "id": "c-y5",
+    "t": "You see? Easy."
+   },
+   {
+    "id": "c-y6",
+    "t": "Ha. Good."
+   },
+   {
+    "id": "c-y7",
+    "t": "Strong."
+   },
+   {
+    "id": "c-y8",
+    "t": "Fantastic."
+   },
+   {
+    "id": "c-y9",
+    "t": "Again, good."
+   },
+   {
+    "id": "c-y10",
+    "t": "Lovely. Next."
+   },
+   {
+    "id": "c-y11",
+    "t": "There it is."
+   },
+   {
+    "id": "c-y12",
+    "t": "Better every time."
    }
   ]
  },
@@ -502,9 +554,11 @@
   "break-fetch": "Twenty. The last five have other people in them, and the last two are phone calls. Nothing in them is hard. What stops people is a feeling, and the feeling is made of paper.",
   "intro1": "Light School is for the ones who move. A spectacular life is here already, with nothing new needed: a walk, a park, a gallery, a building that has stood for centuries, a country estate open to anyone, the finest shop in town, the people you read about, who live near you and can be met. Most of it is free. It is a choice.",
   "intro2": "The choice needs momentum. Twenty-five tiny actions, about ten minutes, from the chair you are in. Do not think about them. Do one, tap Done, do the next.",
-  "w1": "Welcome to Light School. Most people wait: for money, for time, for the right moment. Life goes past while they wait.",
+  "w1": "Welcome to Light School. I am Aurelia, and this is Marcus. Most people wait: for money, for time, for the right moment. Life goes past while they wait.",
   "w2": "Choosing takes momentum. So we start with twenty-five tiny actions, about ten minutes, from the chair you are in.",
-  "w3": "We are not going to convince you. Feel what it is like to have momentum, and see who you are at the end of it."
+  "w3": "We are not going to convince you. Feel what it is like to have momentum, and see who you are at the end of it.",
+  "b15a": "Fifteen, Marcus. Look at them. Out of the chair and moving.",
+  "b15b": "My son grew up in the loudest street in Rome, and I taught him myself. He was never still a day in his life. The world knows him as Julius Caesar."
  },
  "cover": {
   "em": "Nation of",
@@ -599,7 +653,24 @@
    "after": "feet",
    "line": "m-d4",
    "t": "Fifteen, and you are up out of the chair. The next five need one thing from the room. Whatever you cannot find, something in the room will do instead.",
-   "say": "c-fifteen"
+   "say": null,
+   "scene": [
+    {
+     "who": "aurelia",
+     "id": "ui-b15a",
+     "t": "Fifteen, Marcus. Look at them. Out of the chair and moving."
+    },
+    {
+     "who": "marcus",
+     "id": "c-b15",
+     "t": "I see it. It shows."
+    },
+    {
+     "who": "aurelia",
+     "id": "ui-b15b",
+     "t": "My son grew up in the loudest street in Rome, and I taught him myself. He was never still a day in his life. The world knows him as Julius Caesar."
+    }
+   ]
   },
   {
    "after": "fetch",
@@ -624,7 +695,7 @@
    {
     "who": "aurelia",
     "id": "ui-w1",
-    "t": "Welcome to Light School. Most people wait: for money, for time, for the right moment. Life goes past while they wait."
+    "t": "Welcome to Light School. I am Aurelia, and this is Marcus. Most people wait: for money, for time, for the right moment. Life goes past while they wait."
    },
    {
     "who": "marcus",
@@ -657,5 +728,19 @@
   "name": "Aurelia",
   "role": "Keeper of the flame",
   "named_for": "Aurelia Cotta, about 120 to 54 BC, who taught her son herself"
- }
+ },
+ "affirm": [
+  "c-y1",
+  "c-y2",
+  "c-y3",
+  "c-y4",
+  "c-y5",
+  "c-y6",
+  "c-y7",
+  "c-y8",
+  "c-y9",
+  "c-y10",
+  "c-y11",
+  "c-y12"
+ ]
 }
