@@ -84,7 +84,7 @@
   function ambStop() { if (!AMB.on) return; AMB.on = false; AMB.timers.forEach(clearTimeout); AMB.timers = []; try { AMB.master.gain.linearRampToValueAtTime(0, ac().currentTime + .8); } catch (e) {} setTimeout(() => { AMB.nodes.forEach(n => { try { n.stop(); } catch (e) {} }); AMB.nodes = []; }, 900); }
   const voiceOn = () => S.sound;
   function paintSound() { $('soundbtn').classList.toggle('off', !S.sound); }
-  function hush() { NAR.pause(); MAR.pause(); if (RIG) RIG.hush(); if (ARIG) ARIG.hush(); $('readbtn').classList.remove('on'); musicDuck(false); clearTimeout(marcusSay._t); $('bubble').hidden = true; $('abubble').hidden = true; SPEAKING = null; MQ.length = 0; }
+  function hush() { NAR.pause(); MAR.pause(); if (RIG) RIG.hush(); if (ARIG) ARIG.hush(); $('readbtn').classList.remove('on'); musicDuck(false); clearTimeout(marcusSay._t); $('bubble').hidden = true; $('abubble').hidden = true; if ($('popcap')) capHide(0); SPEAKING = null; MQ.length = 0; }
   /* the music: one nocturne, in on Begin, under every voice, out on its own */
   let MUSV = 0, MUST = null;
   function musicTo(v, ms) { clearInterval(MUST); const from = MUS.volume, t0 = performance.now(); MUST = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / ms); MUS.volume = from + (v - from) * k; if (k >= 1) clearInterval(MUST); }, 50); }
@@ -107,12 +107,13 @@
     if (SPEAKING) { MQ.push([ln, pose, after]); return; }
     SPEAKING = ln.id;
     if (!S.said.includes(ln.id)) { S.said.push(ln.id); save(); }
-    const b = $('bubble'); b.hidden = MODE === 'welcome' || MODE === 'scene'; b.classList.toggle('school', !ln.src);
+    const b = $('bubble'); b.hidden = MODE === 'welcome' || MODE === 'scene' || MODE === 'school'; b.classList.toggle('school', !ln.src);
     b.innerHTML = wordSpans(ln.t) + (ln.src ? `<span class="who">Marcus Aurelius</span><span class="src">${ln.src}</span>` : `<span class="who">Marcus</span>`);
+    if (MODE === 'school') cap('marcus', ln.t, ln.src);
     b.classList.remove('say'); void b.offsetWidth; b.classList.add('say');
     if (pose && RIG[pose]) RIG[pose]();
     clearTimeout(marcusSay._t);
-    const finish = () => { if (SPEAKING !== ln.id) return; SPEAKING = null; RIG.hush(); marcusSay._t = setTimeout(() => { b.hidden = true; }, 1800); if (after) after(); const nx = MQ.shift(); if (nx) setTimeout(() => marcusSay(nx[0], nx[1], nx[2]), 350); };
+    const finish = () => { if (SPEAKING !== ln.id) return; SPEAKING = null; RIG.hush(); marcusSay._t = setTimeout(() => { b.hidden = true; }, 1800); if (MODE === 'school') capHide(1600); if (after) after(); const nx = MQ.shift(); if (nx) setTimeout(() => marcusSay(nx[0], nx[1], nx[2]), 350); };
     const est = Math.min(12000, ln.t.length * 70);
     if (voiceOn()) {
       MAR.pause(); CUES = (VIS && VIS[ln.id]) || null; MAR.src = 'audio/marcus/' + ln.id + '.mp3?v=' + C.version;
@@ -125,9 +126,11 @@
     if (MODE === 'school') { /* fine: she answers */ }
     sfx('tap'); const ids = C.aurelia.lines.map(l => l.id); const pick = ids.find(i => !S.said.includes(i)) || ids[S.taps % ids.length]; S.taps++;
     if (!S.said.includes(pick)) S.said.push(pick); save();
-    const ln = C.aurelia.lines.find(l => l.id === pick); const b = $('abubble'); b.hidden = false; b.innerHTML = wordSpans(ln.t) + '<span class="who">Aurelia</span>';
-    b.classList.remove('say'); void b.offsetWidth; b.classList.add('say'); ARIG.nod();
-    hush(); clearTimeout(onAureliaTap._t); aureliaSay(pick, () => { onAureliaTap._t = setTimeout(() => { b.hidden = true; }, 1800); });
+    const ln = C.aurelia.lines.find(l => l.id === pick); const b = $('abubble'); const inSchool = MODE === 'school';
+    hush(); clearTimeout(onAureliaTap._t); ARIG.nod();
+    if (inSchool) { cap('aurelia', ln.t); if (!$('stage').classList.contains('room')) popIn('aurelia'); aureliaSay(pick, () => { capHide(1600); if (!$('stage').classList.contains('room')) popOut('aurelia', 1500); }); return; }
+    b.hidden = false; b.innerHTML = wordSpans(ln.t) + '<span class="who">Aurelia</span>'; b.classList.remove('say'); void b.offsetWidth; b.classList.add('say');
+    aureliaSay(pick, () => { onAureliaTap._t = setTimeout(() => { b.hidden = true; }, 1800); });
   }
   function aureliaSay(id, after) {
     if (!ARIG || ARIG.hidden || !voiceOn()) { narrate(id, after); return; }
@@ -165,7 +168,7 @@
     if (!RIG || RIG.hidden) return;
     sfx('tap'); S.taps++; save();
     if (MODE === 'scene' || MODE === 'welcome') return;
-    if (MODE === 'school') { hush(); const all = Object.keys(LINES).filter(k => k.startsWith('m-')); S.taps++; save(); marcusSay(fresh(all.slice(S.taps % all.length).concat(all)), ['wave', 'salute', 'think', 'nod', 'laugh'][S.taps % 5]); return; }
+    if (MODE === 'school') { hush(); const all = Object.keys(LINES).filter(k => k.startsWith('m-')); S.taps++; save(); const inRoom = $('stage').classList.contains('room'); marcusSay(fresh(all.slice(S.taps % all.length).concat(all)), ['wave', 'salute', 'think', 'nod', 'laugh'][S.taps % 5], () => { if (!inRoom) popOut('marcus', 1400); }); return; }
     if (MODE === 'rest' && line('c-help-rest') && !S.said.includes('c-help-rest')) { hush(); marcusSay(line('c-help-rest'), 'point'); return; }
     const poses = ['wave', 'salute', 'think', 'nod', 'laugh'];
     hush();
@@ -483,52 +486,85 @@
   const catOf = tr => SCH.categories.find(c => c.tracks.includes(tr));
   const allTracks = () => SCH.categories.flatMap(c => c.tracks);
   const findStep = key => { for (const tr of allTracks()) for (const st of tr.steps) if (skey(tr, st) === key) return [tr, st]; return null; };
+  /* where the two of them stand: in the portico, or popped in at the edge of the screen */
+  function dock(where) {
+    const pop = $('pop'), scene = $('scene');
+    if (where === 'pop') { pop.appendChild($('afig')); pop.appendChild($('abubble')); pop.appendChild($('mfig')); pop.appendChild($('bubble')); $('stage').classList.add('popmode'); }
+    else { scene.appendChild($('afig')); scene.appendChild($('abubble')); scene.appendChild($('mfig')); scene.appendChild($('bubble')); $('stage').classList.remove('popmode'); }
+  }
+  let POPT = {}, CAPT = null;
+  function cap(who, text, src) {
+    const c = $('popcap'); clearTimeout(CAPT); c.hidden = false;
+    c.innerHTML = `<b>${who === 'marcus' ? (src ? C.names.marcus : 'Marcus') : 'Aurelia'}</b>${wordSpans(text)}${src ? `<i>${src}</i>` : ''}`;
+    c.classList.remove('say'); void c.offsetWidth; c.classList.add('say');
+  }
+  function capHide(delay) { clearTimeout(CAPT); CAPT = setTimeout(() => { $('popcap').hidden = true; }, delay || 0); }
+  function popIn(who) {
+    const el = $(who === 'marcus' ? 'mfig' : 'afig'), rig = who === 'marcus' ? RIG : ARIG;
+    clearTimeout(POPT[who]); el.classList.remove('popout'); rig.show(true); el.classList.add('popin');
+  }
+  function popOut(who, delay) {
+    const el = $(who === 'marcus' ? 'mfig' : 'afig'), rig = who === 'marcus' ? RIG : ARIG;
+    clearTimeout(POPT[who]); POPT[who] = setTimeout(() => { el.classList.remove('popin'); el.classList.add('popout'); setTimeout(() => { rig.show(false); el.classList.remove('popout'); }, 700); }, delay || 0);
+  }
   function enterSchool() {
     $('stage').classList.add('school'); $('deck').hidden = true; $('school').hidden = false; $('hud').hidden = false;
-    paintSchoolCount();
-    RIG.enter(); setTimeout(() => { ARIG.show(true); $('afig').classList.remove('walk-out-l', 'walk-in-l'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l'); }, 400);
-    plates(false); MODE = 'school'; CUR = null;
+    $('shead').appendChild($('hud')); paintSchoolCount();
+    plates(false); MODE = 'school'; CUR = null; RIG.show(false); ARIG.show(false); $('mfig').classList.remove('walk-in'); dock('pop');
     renderSchool();
-    if (!S.schoolWelcomed) { S.schoolWelcomed = true; save(); setTimeout(() => speakSchool(C.school.welcome), 1800); }
+    if (!S.schoolWelcomed) { S.schoolWelcomed = true; save(); setTimeout(() => speakSchool(C.school.welcome), 900); }
   }
   function paintSchoolCount() { const n = Object.keys(S.school.done).length; $('countn').textContent = n; const of = $('countn').nextElementSibling; of.hidden = false; of.textContent = 'done'; }
   /* a line from either of them, shown in the strip above the rooms */
   function speakSchool(lines) {
-    const strip = $('scap'); let i = 0;
+    const inRoom = $('stage').classList.contains('room'); let i = 0;
+    const who = new Set(lines.map(l => l.who));
+    if (!inRoom) who.forEach(w => popIn(w));
     const step = () => {
-      const ln = lines[i++]; if (!ln) { setTimeout(() => { strip.hidden = true; }, 1600); return; }
-      strip.hidden = false; strip.innerHTML = `<b>${ln.who === 'marcus' ? C.names.marcus : C.names.aurelia}</b>${ln.t}`;
-      if (ln.who === 'marcus') { ARIG.smile(3); marcusSay(line(ln.id) || { id: ln.id, t: ln.t }, 'nod', () => setTimeout(step, 400)); $('bubble').hidden = true; }
-      else { RIG.smile(3); ARIG.nod(); aureliaSay(ln.id, () => setTimeout(step, 400)); }
+      const ln = lines[i++];
+      if (!ln) { if (!inRoom) who.forEach(w => popOut(w, 1500)); return; }
+      if (ln.who === 'marcus') { if (!ARIG.hidden) ARIG.smile(3); marcusSay(line(ln.id) || { id: ln.id, t: ln.t }, 'nod', () => setTimeout(step, 400)); }
+      else { if (!RIG.hidden) RIG.smile(3); ARIG.nod(); cap('aurelia', ln.t); aureliaSay(ln.id, () => { capHide(1600); setTimeout(step, 400); }); }
     };
-    step();
+    setTimeout(step, inRoom ? 300 : 900);
   }
   function renderSchool() {
     const tabs = $('stabs'); tabs.innerHTML = C.school.tabs.map(([k, l]) => `<button class="stab ${TAB === k ? 'on' : ''}" data-t="${k}">${l}</button>`).join('');
     tabs.querySelectorAll('.stab').forEach(b => b.addEventListener('click', () => { sfx('tap'); TAB = b.dataset.t; CAT = null; renderSchool(); }));
     const list = $('slist'); list.scrollTop = 0;
-    if (TAB === 'next') {
-      $('sline').textContent = C.school.nextLine;
-      const easy = (SCH.journey.find(j => j.id === 'easy') || { steps: [] }).steps.map(findStep).filter(Boolean).filter(([tr, st]) => !sdone(skey(tr, st)));
-      const firsts = allTracks().map(tr => [tr, tr.steps.find(s => !sdone(skey(tr, s)))]).filter(([tr, st]) => st && st.n === 1 && !easy.some(([t2]) => t2 === tr));
-      const items = easy.concat(firsts).slice(0, 8);
-      list.innerHTML = items.map(([tr, st]) => stepRow(tr, st)).join('') || '<div class="sempty">Every quick one is done. The long game is where the rest of you lives.</div>';
-    } else if (TAB === 'long') {
-      $('sline').textContent = C.school.longLine;
-      const trs = allTracks().filter(tr => tr.steps.length >= 4).sort((x, y) => (trackDone(y) > 0) - (trackDone(x) > 0) || x.name.localeCompare(y.name));
-      list.innerHTML = trs.map(trackRow).join('');
+    const cat = SCH.categories.find(c => c.id === CAT);
+    $('stage').classList.toggle('room', !!cat);
+    if (cat) {
+      dock('scene'); RIG.show(true); ARIG.show(true); $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout');
+      $('stabs').hidden = true; $('sline').textContent = '';
+      list.innerHTML = `<button class="sback" id="roomback">‹ ${TAB === 'all' ? 'All rooms' : C.school.tabs.find(t => t[0] === TAB)[1]}</button>
+        <div class="roomhead" style="--c:${cat.accent};--c2:${cat.accent2}"><img src="images/cat/${cat.id}.jpg" alt=""><div><h2>${cat.name}</h2><p>${cat.line}</p></div></div>` + cat.tracks.map(trackRow).join('');
+      list.querySelector('#roomback').addEventListener('click', () => { sfx('tap'); hush(); CAT = null; renderSchool(); });
     } else {
-      $('sline').textContent = C.school.allLine;
-      const pills = SCH.categories.map(c => `<button class="cpill ${CAT === c.id ? 'on' : ''}" style="--c:${c.accent};--c2:${c.accent2}" data-c="${c.id}">${c.name}</button>`).join('');
-      const cat = SCH.categories.find(c => c.id === CAT);
-      list.innerHTML = `<div class="cpills">${pills}</div>` + (cat ? `<div class="catline" style="--c:${cat.accent}">${cat.line}</div>` + cat.tracks.map(trackRow).join('') : '<div class="sempty">Pick a room.</div>');
-      list.querySelectorAll('.cpill').forEach(b => b.addEventListener('click', () => { sfx('tap'); CAT = b.dataset.c; renderSchool(); const id = C.school.catLines[CAT]; if (id && !SAIDCAT.has(CAT)) { SAIDCAT.add(CAT); hush(); speakSchool([{ who: 'aurelia', id, t: SCH.categories.find(c => c.id === CAT).name }]); } }));
+      dock('pop'); $('stabs').hidden = false;
+      if (TAB === 'next') {
+        $('sline').textContent = C.school.nextLine;
+        const easy = (SCH.journey.find(j => j.id === 'easy') || { steps: [] }).steps.map(findStep).filter(Boolean).filter(([tr, st]) => !sdone(skey(tr, st)));
+        const firsts = allTracks().map(tr => [tr, tr.steps.find(s => !sdone(skey(tr, s)))]).filter(([tr, st]) => st && st.n === 1 && !easy.some(([t2]) => t2 === tr));
+        const items = easy.concat(firsts).slice(0, 10);
+        list.innerHTML = items.map(([tr, st]) => stepRow(tr, st)).join('') || '<div class="sempty">Every quick one is done. The long game is where the rest of you lives.</div>';
+      } else if (TAB === 'long') {
+        $('sline').textContent = C.school.longLine;
+        list.innerHTML = SCH.groups.map(g => { const cats = g.categories.map(id => SCH.categories.find(c => c.id === id)).filter(Boolean);
+          return `<div class="ghead"><h3>${g.name}</h3><p>${g.line}</p></div>` + cats.map(c => { const trs = c.tracks.filter(tr => tr.steps.length >= 4); if (!trs.length) return ''; return `<button class="chead" data-room="${c.id}" style="--c:${c.accent}"><img src="images/cat/${c.id}.jpg" alt=""><span>${c.name}</span></button>` + trs.map(trackRow).join(''); }).join(''); }).join('');
+      } else {
+        $('sline').textContent = C.school.allLine;
+        list.innerHTML = SCH.groups.map(g => { const cats = g.categories.map(id => SCH.categories.find(c => c.id === id)).filter(Boolean);
+          return `<div class="ghead"><h3>${g.name}</h3><p>${g.line}</p></div><div class="tiles">` + cats.map(c => { const n = c.tracks.reduce((s, tr) => s + trackDone(tr), 0), N = c.tracks.reduce((s, tr) => s + tr.steps.length, 0);
+            return `<button class="tile" data-room="${c.id}" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/cat/${c.id}.jpg" alt="" loading="lazy"><span class="tname">${c.name}</span><span class="tnum">${n ? n + ' of ' + N : c.tracks.length + ' tracks'}</span></button>`; }).join('') + '</div>'; }).join('');
+      }
+      list.querySelectorAll('[data-room]').forEach(el => el.addEventListener('click', () => { sfx('tap'); CAT = el.dataset.room; renderSchool(); const id = C.school.catLines[CAT]; if (id && !SAIDCAT.has(CAT)) { SAIDCAT.add(CAT); hush(); speakSchool([{ who: 'aurelia', id, t: SCH.categories.find(c => c.id === CAT).name }]); } }));
     }
     list.querySelectorAll('[data-step]').forEach(el => el.addEventListener('click', () => { sfx('tap'); const r = findStep(el.dataset.step); if (r) stepSheet(r[0], r[1]); }));
     list.querySelectorAll('[data-track]').forEach(el => el.addEventListener('click', () => { sfx('tap'); trackSheet(allTracks().find(t => t.id === el.dataset.track)); }));
   }
-  function stepRow(tr, st) { const c = catOf(tr); return `<button class="srow" style="--c:${c.accent};--c2:${c.accent2}" data-step="${skey(tr, st)}"><span class="scat">${c.name} · ${tr.name}</span><span class="stest">${st.test}</span></button>`; }
-  function trackRow(tr) { const c = catOf(tr), n = trackDone(tr), N = tr.steps.length; return `<button class="srow track" style="--c:${c.accent};--c2:${c.accent2}" data-track="${tr.id}"><span class="scat">${c.name}</span><span class="stest">${tr.name}</span><span class="sline2">${tr.line || ''}</span><span class="sprog"><i style="width:${Math.round(n / N * 100)}%"></i></span><span class="snum">${n} of ${N}</span></button>`; }
+  function stepRow(tr, st) { const c = catOf(tr); return `<button class="srow pic" style="--c:${c.accent};--c2:${c.accent2}" data-step="${skey(tr, st)}"><img src="images/track/${tr.id}.jpg" alt="" loading="lazy" onerror="this.src='images/cat/${c.id}.jpg'"><span class="stxt"><span class="scat">${c.name} · ${tr.name}</span><span class="stest">${st.test}</span></span></button>`; }
+  function trackRow(tr) { const c = catOf(tr), n = trackDone(tr), N = tr.steps.length; return `<button class="srow track pic" style="--c:${c.accent};--c2:${c.accent2}" data-track="${tr.id}"><img src="images/track/${tr.id}.jpg" alt="" loading="lazy" onerror="this.src='images/cat/${c.id}.jpg'"><span class="stxt"><span class="stest">${tr.name}</span><span class="sline2">${tr.line || ''}</span><span class="sprog"><i style="width:${Math.round(n / N * 100)}%"></i></span></span><span class="snum">${n} of ${N}</span></button>`; }
   function trackSheet(tr) {
     const c = catOf(tr); const next = tr.steps.find(s => !sdone(skey(tr, s)));
     const v = veil(`<div class="panel sheet" style="--c:${c.accent};--c2:${c.accent2}">
@@ -551,7 +587,7 @@
       S.school.done[k] = new Date().toISOString(); S.school.points++; save();
       sfx('done'); sparks(); RIG.smile(1.8); if (ARIG && !ARIG.hidden) ARIG.smile(1.8); paintSchoolCount();
       const n = Object.keys(S.school.done).length; const y = C.school.affirm[(n - 1) % C.school.affirm.length];
-      if (line(y)) setTimeout(() => marcusSay(line(y), n % 2 ? 'cheer' : 'nod'), 500);
+      if (line(y)) { const inRoom = $('stage').classList.contains('room'); if (!inRoom) popIn('marcus'); setTimeout(() => marcusSay(line(y), n % 2 ? 'cheer' : 'nod', () => { if (!inRoom) popOut('marcus', 1400); }), inRoom ? 400 : 900); }
       closeVeil(() => { renderSchool(); if (from) trackSheet(from); });
     });
   }

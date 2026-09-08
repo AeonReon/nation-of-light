@@ -359,3 +359,67 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .sheet .step.act b{background:var(--c);color:#fff;box-shadow:none}
 .sheet .what.dark{color:var(--gold-deep);width:100%;text-align:center;margin-top:4px}
 .veil.light:has(.sheet){overflow-y:auto;justify-content:flex-end}
+
+/* ---- v15: the school full screen; the two of them pop in at the edge; a band only inside a room ---- */
+.stage.school .scene{display:none}
+.stage.school.room .scene{display:block;max-height:30vh;max-height:30dvh}
+.stage.school.room .mfig{width:38%;left:50%}
+.stage.school.room .afig{width:35%;left:5%}
+.stage.school.room .bubble{top:4%;width:52%;font-size:13px;padding:8px 10px 7px}
+.stage.school.room .abubble{top:4%;left:4%;width:56%}
+.stage.school.room .hud{display:none}
+.shead{display:flex;align-items:center;justify-content:space-between;padding:max(10px,env(safe-area-inset-top)) 12px 4px;position:relative;z-index:2}
+.stitle{font-family:var(--display);font-weight:600;font-size:20px;color:var(--ink);letter-spacing:-.01em}
+.shead .hud{position:static;padding:0;gap:6px;flex:0 0 auto}
+.stage.school.room .shead{display:none}
+.school .ghead{padding:10px 4px 4px}
+.school .ghead h3{font-family:var(--display);font-weight:600;font-size:17px;color:var(--ink);margin:0}
+.school .ghead p{margin:2px 0 0;font-size:12.5px;color:var(--ink-faint)}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:6px}
+.tile{position:relative;text-align:left;border-radius:16px;overflow:hidden;background:var(--card);box-shadow:var(--shadow);--g1:var(--c2);--g2:var(--c);aspect-ratio:1/0.95;display:flex;flex-direction:column;transition:transform .2s var(--spring)}
+.tile::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.6px;background:linear-gradient(135deg,var(--g1),var(--g2));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;z-index:2}
+.tile:active{transform:scale(.97)}
+.tile img{width:100%;height:58%;object-fit:cover;display:block}
+.tile .tname{font-family:var(--display);font-weight:600;font-size:15px;line-height:1.15;color:var(--ink);padding:8px 10px 0}
+.tile .tnum{font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--c);padding:3px 10px 8px;margin-top:auto}
+.chead{display:flex;align-items:center;gap:10px;text-align:left;padding:8px 2px 6px;margin-top:4px}
+.chead img{width:44px;height:30px;object-fit:cover;border-radius:8px;box-shadow:0 0 0 1.5px var(--c)}
+.chead span{font-family:var(--display);font-weight:600;font-size:15px;color:var(--c)}
+.srow.pic{flex-direction:row;align-items:center;gap:11px;padding:9px 12px 9px 10px}
+.srow.pic img{width:64px;height:48px;object-fit:cover;border-radius:10px;flex:0 0 auto;box-shadow:0 0 0 1.2px var(--c2)}
+.srow.pic .stxt{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}
+.srow.pic .stest{font-size:15px}
+.srow.pic .sprog{margin-top:4px}
+.srow.pic .snum{position:static;flex:0 0 auto;margin-left:6px}
+.sback{align-self:flex-start;font-size:13.5px;font-weight:700;color:var(--gold-deep);padding:10px 4px 4px}
+.roomhead{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:4px;--g1:var(--c2);--g2:var(--c)}
+.roomhead::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.6px;background:linear-gradient(135deg,var(--g1),var(--g2));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;z-index:2}
+.roomhead img{width:100%;height:96px;object-fit:cover;display:block}
+.roomhead div{padding:9px 12px 11px;background:var(--card)}
+.roomhead h2{font-size:20px;margin:0}
+.roomhead p{margin:3px 0 0;font-size:13px;color:var(--ink-soft);line-height:1.4}
+/* the pop layer: they arrive at the bottom edge, in front of everything, and leave */
+.pop{position:absolute;inset:0;z-index:30;pointer-events:none;overflow:hidden}
+.pop .mfig,.pop .afig{position:absolute;bottom:-2%;width:36%;pointer-events:auto;z-index:31}
+.pop .mfig{left:auto;right:2%}
+.pop .afig{left:2%}
+.pop .mfig.is-hidden,.pop .afig.is-hidden{visibility:hidden}
+.pop .popin{animation:popin .7s var(--spring) both}
+.pop .mfig.popout,.pop .afig.popout{animation:popout .6s var(--ease) both}
+@keyframes popin{0%{transform:translateY(70%)}100%{transform:none}}
+@keyframes popout{0%{transform:none}100%{transform:translateY(80%)}}
+.pop .bubble{position:absolute;left:auto;right:4%;top:auto;bottom:31%;width:64%;pointer-events:auto;border-radius:18px 18px 4px 18px;z-index:32}
+.pop .bubble::after{right:22px;left:auto;top:auto;bottom:-9px;border-left:7px solid transparent;border-right:7px solid transparent;border-top:12px solid var(--card)}
+.pop .abubble{position:absolute;left:4%;right:auto;top:auto;bottom:31%;width:64%;border-radius:18px 18px 18px 4px}
+.pop .abubble::after{left:22px;right:auto;top:auto;bottom:-9px;border-left:7px solid transparent;border-right:7px solid transparent;border-top:12px solid var(--card)}
+.pop .spark{display:none}
+
+.pop .bubble,.pop .abubble{display:none!important}
+.stage.school.room .bubble,.stage.school.room .abubble{display:none!important}
+.popcap{position:absolute;left:12px;right:12px;bottom:calc(31% + 6px);z-index:33;background:var(--card);border-radius:16px;padding:10px 13px 9px;font-family:var(--display);font-weight:500;font-size:15px;line-height:1.36;color:var(--ink);box-shadow:var(--shadow-lift);pointer-events:none;animation:panelin .45s var(--spring) both}
+.popcap::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.6px;background:linear-gradient(135deg,var(--gold-lt),var(--gold));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.popcap b{display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:3px}
+.popcap i{display:block;font-family:var(--sans);font-size:11px;font-style:italic;color:var(--ink-faint);margin-top:4px}
+.popcap span{display:inline-block}
+.popcap.say span{animation:wordin .4s var(--spring) both;animation-delay:calc(var(--i) * 45ms)}
+.stage.school.room .popcap{bottom:auto;top:calc(30vh + 8px);top:calc(30dvh + 8px)}
