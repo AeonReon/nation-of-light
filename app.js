@@ -15,7 +15,7 @@
   'use strict';
   const $ = id => document.getElementById(id);
   const KEY = 'nol.v1';
-  let C = null, SCH = null, VIS = null, AVIS = null, PORTICO = null, RIG = null, ARIG = null, CUES = null, ACUES = null, LINES = {};
+  let C = null, SCH = null, FEED = [], VIS = null, AVIS = null, PORTICO = null, RIG = null, ARIG = null, CUES = null, ACUES = null, LINES = {};
   const NAR = new Audio(), MAR = new Audio(), MUS = new Audio(); NAR.preload = 'auto'; MAR.preload = 'auto'; MUS.preload = 'auto'; MUS.src = 'audio/music/dawn.mp3';
   let S = load();
 
@@ -538,9 +538,10 @@
   function enterSchool() {
     $('stage').classList.add('school'); $('deck').hidden = true; $('school').hidden = false; $('hud').hidden = false;
     $('shead').appendChild($('hud')); paintSchoolCount();
+    if (!$('roombtn')) { $('hud').insertAdjacentHTML('afterbegin', '<button class="roombtn" id="roombtn" aria-label="The portico"><svg viewBox="0 0 24 24" fill="none" stroke="#8F6F12" stroke-width="2" stroke-linecap="round"><path d="M3 9h18M4 9v10M9 9v10M15 9v10M20 9v10M2 19h20M12 3l9 6H3z"/></svg></button>'); $('roombtn').addEventListener('click', () => { sfx('tap'); roomView(); }); }
     plates(false); MODE = 'school'; CUR = null; $('mfig').classList.remove('walk-in');
     const d = today(), fresh0 = !S.school.arrivedEver;
-    if (S.school.arrived !== d) { S.school.arrived = d; save(); arrival(fresh0); } else { RIG.show(false); ARIG.show(false); dock('pop'); renderSchool(); }
+    if (S.school.arrived !== d) { S.school.arrived = d; save(); arrival(fresh0); } else { RIG.show(false); ARIG.show(false); dock('pop'); renderSchool(); if (!S.school.toured) setTimeout(offerTour, 600); }
   }
   function paintSchoolCount() { const p = points(), r = rankOf(p); $('countn').textContent = p; const of = $('countn').nextElementSibling; of.hidden = false; of.textContent = r.name; }
   /* ---- the arrival: the portico, the two of them, where you stand, three for today ---- */
@@ -571,7 +572,7 @@
     list.querySelector('#intoschool').addEventListener('click', () => { sfx('tap'); leaveArrival(); });
     list.querySelector('#skipschool').addEventListener('click', () => { sfx('tap'); leaveArrival(); });
   }
-  function leaveArrival() { hush(); $('stage').classList.remove('arrive'); RIG.show(false); ARIG.show(false); $('afig').classList.remove('walk-in-l'); dock('pop'); renderSchool(); }
+  function leaveArrival() { hush(); $('stage').classList.remove('arrive'); RIG.show(false); ARIG.show(false); $('afig').classList.remove('walk-in-l'); dock('pop'); TAB = 'next'; renderSchool(); if (!S.school.toured) setTimeout(offerTour, 600); }
   /* a line from either of them: from the portico when it is showing, popped in at the edge when not */
   function speakSchool(lines) {
     const st = $('stage'), inScene = st.classList.contains('room') || st.classList.contains('arrive'); let i = 0;
@@ -607,6 +608,59 @@
     }
     list.querySelectorAll('[data-step]').forEach(el => el.addEventListener('click', () => { sfx('tap'); const r = findStep(el.dataset.step); if (r) stepSheet(r[0], r[1]); }));
     list.querySelectorAll('[data-track]').forEach(el => el.addEventListener('click', () => { sfx('tap'); trackSheet(trackById(el.dataset.track)); }));
+  }
+  /* ---- the portico: nowhere to be, nothing asked. The two of them, the fire, the music, a thought a day, the group's news ---- */
+  let ROOMT = null, ROOMI = 0;
+  function roomView() {
+    hush(); CAT = null; const st = $('stage'); st.classList.add('portico'); st.classList.remove('room', 'arrive');
+    dock('scene'); RIG.show(true); ARIG.show(true); $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout', 'walk-out-l');
+    $('afig').classList.remove('walk-in-l'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l'); RIG.enter();
+    MODE = 'school'; if (MUS.paused) musicStart(.4); ambStart(); if (points()) ambFire(true);
+    const R = C.room, list = $('slist'); list.scrollTop = 0;
+    const rd = R.readings[daySeed() % R.readings.length];
+    list.innerHTML = `<div class="roomtop"><h2>${R.title}</h2><button class="what dark" id="roomback" style="width:auto;padding:6px 10px">${R.back}</button></div><p class="sline" style="margin:0 2px 8px">${R.lede}</p>
+      <div class="acard reading"><span class="eyebrow">${R.readingsLede}</span><h3>${rd.title}</h3><p>${rd.text}</p><div class="row"><button class="btn btn-ghost sm" id="readit">Aurelia reads it</button></div></div>
+      <div class="acard feedcard"><span class="eyebrow">${C.feed.title}</span>${FEED.length ? FEED.slice(0, 5).map(p => `<div class="feedpost"><h4>${p.title}</h4><small>${p.date}</small><p>${p.text}</p></div>`).join('') : `<p class="lede">${C.feed.empty}</p>`}</div>`;
+    list.querySelector('#roomback').addEventListener('click', () => { sfx('tap'); leaveRoom(); });
+    list.querySelector('#readit').addEventListener('click', () => { sfx('tap'); hush(); clearTimeout(ROOMT); cap('aurelia', rd.title); ARIG.nod(); aureliaSay('read-' + rd.id, () => { capHide(1500); idleRoom(); }); });
+    setTimeout(() => speakSchool(R.enter), 1400);
+    idleRoom(40000);
+  }
+  /* every so often one of them says something, in turn, unprompted */
+  function idleRoom(delay) {
+    clearTimeout(ROOMT); ROOMT = setTimeout(() => {
+      if (!$('stage').classList.contains('portico')) return;
+      if (SPEAKING || !NAR.paused) { idleRoom(15000); return; }
+      if (ROOMI++ % 2 === 0) { const ids = C.aurelia.lines.map(l => l.id); const id = ids.find(i => !S.said.includes(i)) || ids[ROOMI % ids.length]; const ln = C.aurelia.lines.find(l => l.id === id); if (!S.said.includes(id)) { S.said.push(id); save(); } cap('aurelia', ln.t); ARIG.nod(); aureliaSay(id, () => { capHide(1500); idleRoom(35000 + Math.random() * 20000); }); }
+      else { const all = Object.keys(LINES).filter(k => k.startsWith('m-')); marcusSay(fresh(all.slice(ROOMI % all.length).concat(all)), 'nod', () => idleRoom(35000 + Math.random() * 20000)); }
+    }, delay || 30000);
+  }
+  function leaveRoom() { hush(); clearTimeout(ROOMT); $('stage').classList.remove('portico'); RIG.show(false); ARIG.show(false); $('afig').classList.remove('walk-in-l'); dock('pop'); musicStop(); renderSchool(); }
+  /* ---- the tour: Aurelia shows the school round, one thing lit at a time ---- */
+  function offerTour() {
+    const T = C.tour; if (!T) return;
+    const v = veil(`<div class="panel offer"><h2>Shall I show you round?</h2><p class="lede">Five things, a minute, and you will know where everything is.</p><div class="row"><button class="btn btn-ghost" id="tourno">${T.skip}</button><button class="btn btn-gold" id="touryes" style="flex:1.3">${T.start}</button></div></div>`, 'light');
+    v.querySelector('#tourno').addEventListener('click', () => { sfx('tap'); S.school.toured = true; save(); closeVeil(); });
+    v.querySelector('#touryes').addEventListener('click', () => { sfx('tap'); S.school.toured = true; save(); closeVeil(tour); });
+  }
+  function tour() {
+    const T = C.tour; TAB = 'next'; CAT = null; renderSchool(); hush();
+    const layer = document.createElement('div'); layer.className = 'tour'; layer.innerHTML = '<div class="hole"></div><div class="tcap" id="tcap"></div>'; $('stage').appendChild(layer);
+    const hole = layer.querySelector('.hole'); let i = 0;
+    const place = (el) => { const r = el.getBoundingClientRect(), s = $('stage').getBoundingClientRect(); hole.style.left = (r.left - s.left - 6) + 'px'; hole.style.top = (r.top - s.top - 6) + 'px'; hole.style.width = (r.width + 12) + 'px'; hole.style.height = (r.height + 12) + 'px';
+      const capEl = layer.querySelector('#tcap'); const below = r.bottom - s.top + 14; capEl.style.top = ''; capEl.style.bottom = '';
+      if (below + 170 < s.height) capEl.style.top = below + 'px'; else capEl.style.bottom = (s.height - (r.top - s.top) + 14) + 'px'; };
+    const step = () => {
+      const st = T.steps[i];
+      if (!st) { layer.remove(); popIn('marcus'); setTimeout(() => marcusSay(line(T.done) || null, 'salute', () => popOut('marcus', 1400)), 600); return; }
+      const el = document.querySelector(st.sel); if (!el) { i++; step(); return; }
+      el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      setTimeout(() => { place(el); const capEl = layer.querySelector('#tcap'); capEl.innerHTML = `<b>Aurelia · ${i + 1} of ${T.steps.length}</b>${wordSpans(st.t)}<div class="row"><button class="btn btn-ghost" id="tskip">Skip</button><button class="btn btn-gold" id="tnext">${i === T.steps.length - 1 ? 'Done' : 'Next'}</button></div>`;
+        capEl.querySelector('#tnext').addEventListener('click', () => { sfx('tap'); NAR.pause(); i++; step(); });
+        capEl.querySelector('#tskip').addEventListener('click', () => { sfx('tap'); NAR.pause(); layer.remove(); });
+        narrate(st.id); }, 450);
+    };
+    step();
   }
   /* Next thing: the bar, ONE card, the week, a thought folded shut. Nothing else. */
   function renderNext(list) {
@@ -685,8 +739,16 @@
       const inScene = $('stage').classList.contains('room') || $('stage').classList.contains('arrive');
       const up = rankOf(points()).name !== before;
       const n = Object.keys(S.school.done).length;
-      const y = where === 'arrival' ? C.arrival.after : (up ? 'c-rank' : C.school.affirm[(n - 1) % C.school.affirm.length]);
-      if (line(y)) { if (!inScene) popIn('marcus'); setTimeout(() => marcusSay(line(y), up ? 'cheer' : (n % 2 ? 'cheer' : 'nod'), () => { if (!inScene) popOut('marcus', 1400); }), inScene ? 400 : 900); }
+      const hers = !up && where !== 'arrival' && n % 3 === 2 && C.aurelia.affirm && C.aurelia.affirm.length;
+      const both = n % 5 === 0;
+      if (hers) {
+        const al = C.aurelia.affirm[Math.floor(n / 3) % C.aurelia.affirm.length];
+        if (!inScene) { popIn('aurelia'); if (both) popIn('marcus'); }
+        setTimeout(() => { cap('aurelia', al.t); if (!RIG.hidden) RIG.smile(3); ARIG.nod(); aureliaSay(al.id, () => { capHide(1500); if (!inScene) { popOut('aurelia', 1400); if (both) popOut('marcus', 1400); } }); }, inScene ? 400 : 900);
+      } else {
+        const y = where === 'arrival' ? C.arrival.after : (up ? 'c-rank' : C.school.affirm[(n - 1) % C.school.affirm.length]);
+        if (line(y)) { if (!inScene) { popIn('marcus'); if (both) popIn('aurelia'); } setTimeout(() => { if (!ARIG.hidden) ARIG.smile(3); marcusSay(line(y), up ? 'cheer' : (n % 2 ? 'cheer' : 'nod'), () => { if (!inScene) { popOut('marcus', 1400); if (both) popOut('aurelia', 1400); } }); }, inScene ? 400 : 900); }
+      }
       closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); if (from) trackSheet(from); });
     });
   }
@@ -710,13 +772,14 @@
   async function boot() {
     const [c, v, av, sch] = await Promise.all([fetch('content.json').then(r => r.json()), fetch('audio/marcus/visemes.json').then(r => r.json()).catch(() => null), fetch('audio/voice/visemes.json').then(r => r.json()).catch(() => null), fetch('school.json').then(r => r.json()).catch(() => null)]);
     C = c; VIS = v; AVIS = av; SCH = sch;
+    fetch('feed.json?x=' + Date.now()).then(r => r.json()).then(f => { FEED = (f && f.posts) || []; if (FEED.length && C.arrival) C.arrival.post = FEED[0]; }).catch(() => {});
     const ids = new Set(C.moves.map(m => m.id)); S.done = S.done.filter(id => ids.has(id)); S.skipped = S.skipped.filter(id => ids.has(id)); save();
     for (const k in C.marcus.lines) for (const l of C.marcus.lines[k]) LINES[l.id] = l;
     for (const l of (C.marcus.spoken || [])) LINES[l.id] = l;
     buildScene();
     $('donebtn').addEventListener('click', onDone); $('skipbtn').addEventListener('click', onSkip); $('readbtn').addEventListener('click', readTablet);
     $('soundbtn').addEventListener('click', () => { S.sound = !S.sound; save(); paintSound(); if (!S.sound) { hush(); musicStop(); ambStop(); } else { sfx('tap'); ambStart(); if (S.done.length) ambFire(true); } });
-    $('helpbtn').addEventListener('click', () => { sfx('tap'); help(); });
+    $('helpbtn').addEventListener('click', () => { sfx('tap'); if (MODE === 'school' && C.tour && !$('stage').classList.contains('arrive')) { if ($('stage').classList.contains('portico')) leaveRoom(); tour(); } else help(); });
     cover();
     if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
     window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool };

@@ -17,7 +17,7 @@
   --shadow-lift:0 24px 60px rgba(40,28,10,.26),0 4px 12px rgba(40,28,10,.1);
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;padding:0;height:100%}
+html,body{margin:0;padding:0;height:100%;overflow:hidden}
 body{background:var(--night);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow:hidden;
   background-image:radial-gradient(900px 600px at 50% 110%,#5A4C7A 0%,transparent 60%),radial-gradient(700px 500px at 50% -10%,#3D5FA6 0%,transparent 65%)}
 button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;padding:0}
@@ -25,7 +25,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 [hidden]{display:none!important}
 
 /* ---- the column: a phone, centred on a big screen ---- */
-.stage{position:relative;width:100%;max-width:440px;height:100vh;height:100dvh;margin:0 auto;background:var(--marble);overflow:hidden;display:flex;flex-direction:column}
+.stage{position:relative;width:100%;max-width:440px;height:100vh;height:100dvh;min-height:100%;margin:0 auto;background:var(--marble);overflow:hidden;display:flex;flex-direction:column}
 @media(min-width:520px){.stage{height:min(100vh,940px);margin-top:max(0px,calc((100vh - 940px)/2));border-radius:34px;box-shadow:0 40px 120px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.08)}}
 
 /* ---- the scene ---- */
@@ -486,3 +486,36 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .pickp small{display:block;font-size:12.5px;color:var(--ink-soft);line-height:1.3}
 .pickp em{font-style:normal;font-size:12px;font-weight:700;color:var(--c);white-space:nowrap}
 .slist .what.dark{color:var(--gold-deep);width:100%;text-align:center;padding:8px}
+
+/* ---- v17: the portico room, the feed, the tour ---- */
+.shead .roombtn{width:34px;height:34px;border-radius:50%;background:rgba(250,245,234,.9);box-shadow:0 4px 14px rgba(40,28,10,.14),inset 0 0 0 1px rgba(201,162,39,.35);display:grid;place-items:center;margin-right:6px}
+.shead .roombtn svg{width:19px;height:19px}
+.stage.school.portico .scene{display:block;max-height:52vh;max-height:52dvh}
+.stage.school.portico .mfig{width:44%;left:46%}
+.stage.school.portico .afig{width:41%;left:3%}
+.stage.school.portico .shead,.stage.school.portico .stabs{display:none}
+.stage.school.portico .bubble,.stage.school.portico .abubble{display:none!important}
+.stage.school.portico .popcap{bottom:auto;top:calc(52vh + 8px);top:calc(52dvh + 8px)}
+.stage.school.portico .hud{display:none}
+.roomtop{display:flex;justify-content:space-between;align-items:center;padding:8px 2px 2px}
+.roomtop h2{font-size:20px;margin:0}
+.reading{--g1:#F3E3A8;--g2:var(--gold)}
+.reading h3{font-family:var(--display);font-weight:600;font-size:18px;margin:0}
+.reading p{margin:0;font-family:var(--display);font-weight:500;font-size:16px;line-height:1.45;color:var(--ink)}
+.reading .row{display:flex;gap:8px;margin-top:4px}
+.feedcard{--g1:#B8A5D8;--g2:#6B4E9E}
+.feedcard .eyebrow{color:#6B4E9E}
+.feedpost{border-top:1px solid var(--line);padding:9px 0 6px}
+.feedpost:first-of-type{border-top:0}
+.feedpost h4{margin:0;font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)}
+.feedpost small{display:block;font-size:11px;color:var(--ink-faint);margin:2px 0 4px;letter-spacing:.04em}
+.feedpost p{margin:0;font-size:14px;line-height:1.45;color:var(--ink-soft)}
+/* the tour: everything dims but the thing being explained */
+.tour{position:absolute;inset:0;z-index:40;pointer-events:auto}
+.tour .hole{position:absolute;border-radius:16px;box-shadow:0 0 0 9999px rgba(20,24,52,.62),0 0 0 3px var(--gold-lt);transition:all .5s var(--ease);pointer-events:none}
+.tour .tcap{position:absolute;left:12px;right:12px;background:var(--card);border-radius:16px;padding:12px 14px 10px;box-shadow:var(--shadow-lift);font-family:var(--display);font-weight:500;font-size:15.5px;line-height:1.4;color:var(--ink);animation:panelin .45s var(--spring) both}
+.tour .tcap b{display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:3px}
+.tour .tcap .row{display:flex;gap:8px;margin-top:10px}
+.tour .tcap .row .btn{flex:1;height:42px;font-size:14px}
+.offer{--g1:#F3E3A8;--g2:var(--gold)}
+.offer .row{display:flex;gap:8px}
