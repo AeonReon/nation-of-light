@@ -478,14 +478,6 @@
       p.querySelector('#codeback2').addEventListener('click', () => { sfx('tap'); closeVeil(() => { ARIG.show(false); restTablet(); }); }); });
     v.querySelector('#codeback').addEventListener('click', () => { sfx('tap'); closeVeil(fromCover ? cover : doorPanel); });
   }
-  /* ---------- the school: the rooms beyond the door ---------- */
-  let TAB = 'next', CAT = null, SAIDCAT = new Set();
-  const skey = (tr, st) => tr.id + '#' + st.n;
-  const sdone = k => !!S.school.done[k];
-  const trackDone = tr => tr.steps.filter(s => sdone(skey(tr, s))).length;
-  const catOf = tr => SCH.categories.find(c => c.tracks.includes(tr));
-  const allTracks = () => SCH.categories.flatMap(c => c.tracks);
-  const findStep = key => { for (const tr of allTracks()) for (const st of tr.steps) if (skey(tr, st) === key) return [tr, st]; return null; };
   /* where the two of them stand: in the portico, or popped in at the edge of the screen */
   function dock(where) {
     const pop = $('pop'), scene = $('scene');
@@ -507,66 +499,169 @@
     const el = $(who === 'marcus' ? 'mfig' : 'afig'), rig = who === 'marcus' ? RIG : ARIG;
     clearTimeout(POPT[who]); POPT[who] = setTimeout(() => { el.classList.remove('popin'); el.classList.add('popout'); setTimeout(() => { rig.show(false); el.classList.remove('popout'); }, 700); }, delay || 0);
   }
+  /* ---------- the school: the rooms beyond the door ----------
+     Three principles lifted from the school app, because they worked there:
+     Next thing is ONE card and a level bar, nothing else. The long game is up
+     to three things taken on deliberately, a dot per step, a bit today.
+     Everything is families, then rooms, then ladders. And every day begins
+     in the portico: the two of them, where you stand, three for today. */
+  let TAB = 'next', CAT = null, SAIDCAT = new Set(), LONGSAID = false;
+  const skey = (tr, st) => tr.id + '#' + st.n;
+  const sdone = k => !!S.school.done[k];
+  const trackDone = tr => tr.steps.filter(s => sdone(skey(tr, s))).length;
+  const nextStep = tr => tr.steps.find(s => !sdone(skey(tr, s)));
+  const catOf = tr => SCH.categories.find(c => c.tracks.includes(tr));
+  const allTracks = () => SCH.categories.flatMap(c => c.tracks);
+  const trackById = id => allTracks().find(t => t.id === id);
+  const findStep = key => { for (const tr of allTracks()) for (const st of tr.steps) if (skey(tr, st) === key) return [tr, st]; return null; };
+  const points = () => Object.keys(S.school.done).length + S.done.length;
+  function rankOf(p) { const R = C.school.ranks; let r = R[0], nx = null; for (let i = 0; i < R.length; i++) { if (p >= R[i][0]) { r = R[i]; nx = R[i + 1] || null; } } return { name: r[1], at: r[0], next: nx }; }
+  function daysLit() { const s = new Set(Object.keys(S.days).filter(k => S.days[k] > 0)); for (const k in S.school.done) { const v = S.school.done[k]; if (typeof v === 'string') s.add(v.slice(0, 10)); } return s; }
+  function seededShuffle(arr, seed) { const out = arr.slice(); let x = seed; for (let i = out.length - 1; i > 0; i--) { x = (x * 9301 + 49297) % 233280; const j = Math.floor(x / 233280 * (i + 1)); [out[i], out[j]] = [out[j], out[i]]; } return out; }
+  const daySeed = () => { const d = today(); return (+d.slice(0, 4)) * 372 + (+d.slice(5, 7)) * 31 + (+d.slice(8, 10)); };
+  /* the quick ones: the journey's easy wins, then any track's first step, not yet done */
+  function quickCandidates() {
+    const easy = (SCH.journey.find(j => j.id === 'easy') || { steps: [] }).steps.map(findStep).filter(Boolean).filter(([tr, st]) => !sdone(skey(tr, st)));
+    const firsts = allTracks().map(tr => [tr, nextStep(tr)]).filter(([tr, st]) => st && st.n === 1 && !easy.some(([t2]) => t2 === tr));
+    return seededShuffle(easy, daySeed()).concat(seededShuffle(firsts, daySeed() + 7));
+  }
+  function todayPicks() {
+    const T = S.school.today; const d = today();
+    if (!T || T.date !== d) S.school.today = { date: d, picks: [], skip: [] };
+    const t = S.school.today; const cand = quickCandidates().map(([tr, st]) => skey(tr, st));
+    t.picks = t.picks.filter(k => !sdone(k) && findStep(k));
+    for (const k of cand) { if (t.picks.length >= 3) break; if (!t.picks.includes(k) && !t.skip.includes(k)) t.picks.push(k); }
+    save(); return t.picks.map(findStep).filter(Boolean);
+  }
+  function notThis(key) { const t = S.school.today; t.skip.push(key); t.picks = t.picks.filter(k => k !== key); save(); }
+
   function enterSchool() {
     $('stage').classList.add('school'); $('deck').hidden = true; $('school').hidden = false; $('hud').hidden = false;
     $('shead').appendChild($('hud')); paintSchoolCount();
-    plates(false); MODE = 'school'; CUR = null; RIG.show(false); ARIG.show(false); $('mfig').classList.remove('walk-in'); dock('pop');
-    renderSchool();
-    if (!S.schoolWelcomed) { S.schoolWelcomed = true; save(); setTimeout(() => speakSchool(C.school.welcome), 900); }
+    plates(false); MODE = 'school'; CUR = null; $('mfig').classList.remove('walk-in');
+    const d = today(), fresh0 = !S.school.arrivedEver;
+    if (S.school.arrived !== d) { S.school.arrived = d; save(); arrival(fresh0); } else { RIG.show(false); ARIG.show(false); dock('pop'); renderSchool(); }
   }
-  function paintSchoolCount() { const n = Object.keys(S.school.done).length; $('countn').textContent = n; const of = $('countn').nextElementSibling; of.hidden = false; of.textContent = 'done'; }
-  /* a line from either of them, shown in the strip above the rooms */
+  function paintSchoolCount() { const p = points(), r = rankOf(p); $('countn').textContent = p; const of = $('countn').nextElementSibling; of.hidden = false; of.textContent = r.name; }
+  /* ---- the arrival: the portico, the two of them, where you stand, three for today ---- */
+  function arrival(first) {
+    $('stage').classList.add('arrive'); $('stage').classList.remove('room'); dock('scene');
+    RIG.enter(); setTimeout(() => { ARIG.show(true); $('afig').classList.remove('walk-out-l', 'walk-in-l', 'popin', 'popout'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l'); }, 350);
+    $('stabs').hidden = true; $('sline').textContent = '';
+    renderArrival();
+    const lines = first ? C.arrival.first : C.arrival.lines; S.school.arrivedEver = true; save();
+    setTimeout(() => speakSchool(lines), 1500);
+  }
+  function standCard() {
+    const p = points(), r = rankOf(p), lit = daysLit().size, A = C.arrival.stand;
+    const pct = r.next ? Math.round((p - r.at) / (r.next[0] - r.at) * 100) : 100;
+    return `<div class="stand"><div><b>${lit}</b><small>${A.days}</small></div><div><b>${p}</b><small>${A.steps}</small></div><div><b>${r.name}</b><small>${r.next ? (r.next[0] - p) + ' to ' + r.next[1] : A.rank}</small></div></div>
+      <div class="lvl"><i style="width:${pct}%"></i></div>`;
+  }
+  function renderArrival() {
+    const list = $('slist'); const picks = todayPicks(); const P = C.arrival, post = P.post;
+    list.innerHTML = `<div class="acard">${standCard()}</div>` +
+      (post ? `<div class="acard post"><span class="eyebrow">From the group</span><h3>${post.title}</h3><p>${post.text}</p></div>` : '') +
+      `<div class="acard"><span class="eyebrow">Three for today</span>` +
+      (picks.length ? picks.map(([tr, st]) => { const c = catOf(tr); return `<div class="pick" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span class="ptxt"><span class="scat">${c.name} · ${tr.name}</span><span class="stest">${st.test}</span></span><span class="pbtns"><button class="btn btn-gold sm" data-do="${skey(tr, st)}">${P.do}</button><button class="btn btn-ghost sm" data-not="${skey(tr, st)}">${P.notThis}</button></span></div>`; }).join('')
+        : `<p class="lede">Every quick one is done. The long game is where the rest of you lives.</p>`) +
+      `</div><button class="btn btn-gold" id="intoschool" style="width:100%;margin-top:4px">${P.go}</button><button class="what dark" id="skipschool">${P.skip}</button>`;
+    list.querySelectorAll('[data-do]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.do); if (r) stepSheet(r[0], r[1], null, 'arrival'); }));
+    list.querySelectorAll('[data-not]').forEach(b => b.addEventListener('click', () => { sfx('tap'); notThis(b.dataset.not); renderArrival(); if (line(C.arrival.another)) { hush(); marcusSay(line(C.arrival.another), 'nod'); } }));
+    list.querySelector('#intoschool').addEventListener('click', () => { sfx('tap'); leaveArrival(); });
+    list.querySelector('#skipschool').addEventListener('click', () => { sfx('tap'); leaveArrival(); });
+  }
+  function leaveArrival() { hush(); $('stage').classList.remove('arrive'); RIG.show(false); ARIG.show(false); $('afig').classList.remove('walk-in-l'); dock('pop'); renderSchool(); }
+  /* a line from either of them: from the portico when it is showing, popped in at the edge when not */
   function speakSchool(lines) {
-    const inRoom = $('stage').classList.contains('room'); let i = 0;
+    const st = $('stage'), inScene = st.classList.contains('room') || st.classList.contains('arrive'); let i = 0;
     const who = new Set(lines.map(l => l.who));
-    if (!inRoom) who.forEach(w => popIn(w));
+    if (!inScene) who.forEach(w => popIn(w));
     const step = () => {
       const ln = lines[i++];
-      if (!ln) { if (!inRoom) who.forEach(w => popOut(w, 1500)); return; }
+      if (!ln) { if (!inScene) who.forEach(w => popOut(w, 1500)); return; }
       if (ln.who === 'marcus') { if (!ARIG.hidden) ARIG.smile(3); marcusSay(line(ln.id) || { id: ln.id, t: ln.t }, 'nod', () => setTimeout(step, 400)); }
       else { if (!RIG.hidden) RIG.smile(3); ARIG.nod(); cap('aurelia', ln.t); aureliaSay(ln.id, () => { capHide(1600); setTimeout(step, 400); }); }
     };
-    setTimeout(step, inRoom ? 300 : 900);
+    setTimeout(step, inScene ? 300 : 900);
   }
+  /* ---- the three pages ---- */
   function renderSchool() {
-    const tabs = $('stabs'); tabs.innerHTML = C.school.tabs.map(([k, l]) => `<button class="stab ${TAB === k ? 'on' : ''}" data-t="${k}">${l}</button>`).join('');
+    const tabs = $('stabs'); tabs.hidden = false; tabs.innerHTML = C.school.tabs.map(([k, l]) => `<button class="stab ${TAB === k ? 'on' : ''}" data-t="${k}">${l}</button>`).join('');
     tabs.querySelectorAll('.stab').forEach(b => b.addEventListener('click', () => { sfx('tap'); TAB = b.dataset.t; CAT = null; renderSchool(); }));
-    const list = $('slist'); list.scrollTop = 0;
+    const list = $('slist'); list.scrollTop = 0; paintSchoolCount();
     const cat = SCH.categories.find(c => c.id === CAT);
     $('stage').classList.toggle('room', !!cat);
     if (cat) {
       dock('scene'); RIG.show(true); ARIG.show(true); $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout');
-      $('stabs').hidden = true; $('sline').textContent = '';
+      tabs.hidden = true; $('sline').textContent = '';
       list.innerHTML = `<button class="sback" id="roomback">‹ ${TAB === 'all' ? 'All rooms' : C.school.tabs.find(t => t[0] === TAB)[1]}</button>
         <div class="roomhead" style="--c:${cat.accent};--c2:${cat.accent2}"><img src="images/cat/${cat.id}.jpg" alt=""><div><h2>${cat.name}</h2><p>${cat.line}</p></div></div>` + cat.tracks.map(trackRow).join('');
       list.querySelector('#roomback').addEventListener('click', () => { sfx('tap'); hush(); CAT = null; renderSchool(); });
     } else {
-      dock('pop'); $('stabs').hidden = false;
-      if (TAB === 'next') {
-        $('sline').textContent = C.school.nextLine;
-        const easy = (SCH.journey.find(j => j.id === 'easy') || { steps: [] }).steps.map(findStep).filter(Boolean).filter(([tr, st]) => !sdone(skey(tr, st)));
-        const firsts = allTracks().map(tr => [tr, tr.steps.find(s => !sdone(skey(tr, s)))]).filter(([tr, st]) => st && st.n === 1 && !easy.some(([t2]) => t2 === tr));
-        const items = easy.concat(firsts).slice(0, 10);
-        list.innerHTML = items.map(([tr, st]) => stepRow(tr, st)).join('') || '<div class="sempty">Every quick one is done. The long game is where the rest of you lives.</div>';
-      } else if (TAB === 'long') {
-        $('sline').textContent = C.school.longLine;
-        list.innerHTML = SCH.groups.map(g => { const cats = g.categories.map(id => SCH.categories.find(c => c.id === id)).filter(Boolean);
-          return `<div class="ghead"><h3>${g.name}</h3><p>${g.line}</p></div>` + cats.map(c => { const trs = c.tracks.filter(tr => tr.steps.length >= 4); if (!trs.length) return ''; return `<button class="chead" data-room="${c.id}" style="--c:${c.accent}"><img src="images/cat/${c.id}.jpg" alt=""><span>${c.name}</span></button>` + trs.map(trackRow).join(''); }).join(''); }).join('');
-      } else {
-        $('sline').textContent = C.school.allLine;
-        list.innerHTML = SCH.groups.map(g => { const cats = g.categories.map(id => SCH.categories.find(c => c.id === id)).filter(Boolean);
-          return `<div class="ghead"><h3>${g.name}</h3><p>${g.line}</p></div><div class="tiles">` + cats.map(c => { const n = c.tracks.reduce((s, tr) => s + trackDone(tr), 0), N = c.tracks.reduce((s, tr) => s + tr.steps.length, 0);
-            return `<button class="tile" data-room="${c.id}" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/cat/${c.id}.jpg" alt="" loading="lazy"><span class="tname">${c.name}</span><span class="tnum">${n ? n + ' of ' + N : c.tracks.length + ' tracks'}</span></button>`; }).join('') + '</div>'; }).join('');
-      }
+      dock('pop');
+      if (TAB === 'next') renderNext(list);
+      else if (TAB === 'long') renderLong(list);
+      else renderAll(list);
       list.querySelectorAll('[data-room]').forEach(el => el.addEventListener('click', () => { sfx('tap'); CAT = el.dataset.room; renderSchool(); const id = C.school.catLines[CAT]; if (id && !SAIDCAT.has(CAT)) { SAIDCAT.add(CAT); hush(); speakSchool([{ who: 'aurelia', id, t: SCH.categories.find(c => c.id === CAT).name }]); } }));
     }
     list.querySelectorAll('[data-step]').forEach(el => el.addEventListener('click', () => { sfx('tap'); const r = findStep(el.dataset.step); if (r) stepSheet(r[0], r[1]); }));
-    list.querySelectorAll('[data-track]').forEach(el => el.addEventListener('click', () => { sfx('tap'); trackSheet(allTracks().find(t => t.id === el.dataset.track)); }));
+    list.querySelectorAll('[data-track]').forEach(el => el.addEventListener('click', () => { sfx('tap'); trackSheet(trackById(el.dataset.track)); }));
   }
-  function stepRow(tr, st) { const c = catOf(tr); return `<button class="srow pic" style="--c:${c.accent};--c2:${c.accent2}" data-step="${skey(tr, st)}"><img src="images/track/${tr.id}.jpg" alt="" loading="lazy" onerror="this.src='images/cat/${c.id}.jpg'"><span class="stxt"><span class="scat">${c.name} · ${tr.name}</span><span class="stest">${st.test}</span></span></button>`; }
+  /* Next thing: the bar, ONE card, the week, a thought folded shut. Nothing else. */
+  function renderNext(list) {
+    $('sline').textContent = C.school.nextLine;
+    const picks = todayPicks(); const pick = picks[0]; const P = C.arrival;
+    const lit = daysLit(), t = today(); const days = []; for (let i = 6; i >= 0; i--) { const d = new Date(); d.setDate(d.getDate() - i); days.push(d); }
+    const dk = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+    const th = line(C.school.thoughts[daySeed() % C.school.thoughts.length]);
+    list.innerHTML = `<div class="acard">${standCard()}</div>` +
+      (pick ? (([tr, st]) => { const c = catOf(tr); return `<div class="acard one" style="--c:${c.accent};--c2:${c.accent2}"><span class="eyebrow" style="color:var(--c)">${c.name} · ${tr.name}</span><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><div class="stestbig">${st.test}</div>${st.how ? `<p class="lede">${st.how[0]}</p>` : (st.note ? `<p class="lede">${st.note}</p>` : '')}<div class="row"><button class="btn btn-ghost" data-not="${skey(tr, st)}">${P.notThis}</button><button class="btn btn-gold" data-do="${skey(tr, st)}" style="flex:1.4">${P.do}</button></div></div>`; })(pick)
+        : `<div class="acard"><p class="lede">Every quick one is done. The long game is where the rest of you lives.</p></div>`) +
+      `<div class="acard week"><div class="wrow">${days.map(d => `<span class="wk ${lit.has(dk(d)) ? 'on' : ''} ${dk(d) === t ? 'td' : ''}"><i></i><b>${d.toLocaleDateString('en-GB', { weekday: 'narrow' })}</b></span>`).join('')}</div><p>${lit.size ? `<b>${lit.size}</b> day${lit.size === 1 ? '' : 's'} lit altogether` : 'One light a day is the whole habit'}${lit.has(t) ? ' · today is lit' : ''}</p></div>` +
+      (th ? `<details class="thought"><summary>A thought from Marcus</summary><p>${th.t}</p><i>${C.names.marcus} · ${th.src}</i></details>` : '');
+    list.querySelectorAll('[data-do]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.do); if (r) stepSheet(r[0], r[1]); }));
+    list.querySelectorAll('[data-not]').forEach(b => b.addEventListener('click', () => { sfx('tap'); notThis(b.dataset.not); renderSchool(); if (line(C.arrival.another)) { hush(); popIn('marcus'); marcusSay(line(C.arrival.another), 'nod', () => popOut('marcus', 1200)); } }));
+  }
+  /* The long game: up to three, taken on deliberately */
+  const projects = () => (S.school.projects || []).map(trackById).filter(tr => tr && nextStep(tr));
+  function longSuggest() {
+    const on = new Set(S.school.projects || []);
+    const started = allTracks().filter(tr => trackDone(tr) >= 1 && nextStep(tr)).sort((x, y) => trackDone(y) - trackDone(x));
+    const long = C.school.long.list.map(trackById).filter(tr => tr && nextStep(tr));
+    const out = [], seen = new Set();
+    [...started, ...long].forEach(tr => { if (on.has(tr.id) || seen.has(tr.id)) return; seen.add(tr.id); out.push(tr); });
+    return seededShuffle(out, daySeed() + (S.school.roll || 0) * 13).slice(0, 3);
+  }
+  function projectRow(tr) {
+    const c = catOf(tr), st = nextStep(tr), n = trackDone(tr);
+    return `<div class="proj" style="--c:${c.accent};--c2:${c.accent2}"><div class="ptop"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${c.name} · step ${n + 1} of ${tr.steps.length}</small></span><button class="px" data-drop="${tr.id}" aria-label="Put this one down">×</button></div>
+      <div class="pdots">${tr.steps.map(s => `<i class="${sdone(skey(tr, s)) ? 'on' : ''}"></i>`).join('')}</div>
+      <p class="pnext">${st.test}</p>
+      <div class="row"><button class="btn btn-ghost sm" data-track="${tr.id}">The whole ladder</button><button class="btn btn-gold sm" data-step="${skey(tr, st)}" style="flex:1.3">Do a bit today</button></div></div>`;
+  }
+  function renderLong(list) {
+    $('sline').textContent = C.school.longLine; const L = C.school.long; const mine = projects();
+    const room = L.max - mine.length; const sug = room > 0 ? longSuggest() : [];
+    list.innerHTML = (mine.length ? `<div class="acard"><span class="eyebrow">What you are working on</span><p class="lede">${L.intro}</p>${mine.map(projectRow).join('')}</div>` : '') +
+      (room > 0 ? `<div class="acard"><span class="eyebrow">${mine.length ? 'Take on another one' : 'Pick something that takes a month'}</span><p class="lede">${L.pickLine}</p>` +
+        sug.map(tr => { const c = catOf(tr), st = nextStep(tr); return `<button class="pickp" style="--c:${c.accent};--c2:${c.accent2}" data-take="${tr.id}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${st.test}</small></span><em>Take it on</em></button>`; }).join('') +
+        `<button class="what dark" id="rollp">Show me three others</button></div>` : '');
+    list.querySelectorAll('[data-take]').forEach(b => b.addEventListener('click', () => { sfx('tap'); S.school.projects = (S.school.projects || []).concat(b.dataset.take); save(); renderSchool(); }));
+    list.querySelectorAll('[data-drop]').forEach(b => b.addEventListener('click', () => { sfx('tap'); S.school.projects = (S.school.projects || []).filter(id => id !== b.dataset.drop); save(); renderSchool(); }));
+    const roll = list.querySelector('#rollp'); if (roll) roll.addEventListener('click', () => { sfx('tap'); S.school.roll = (S.school.roll || 0) + 1; save(); renderSchool(); });
+    if (!LONGSAID && line('c-long')) { LONGSAID = true; hush(); popIn('marcus'); setTimeout(() => marcusSay(line('c-long'), 'point', () => popOut('marcus', 1400)), 700); }
+  }
+  /* Everything: families, then rooms, then ladders */
+  function renderAll(list) {
+    $('sline').textContent = C.school.allLine;
+    list.innerHTML = SCH.groups.map(g => { const cats = g.categories.map(id => SCH.categories.find(c => c.id === id)).filter(Boolean);
+      return `<div class="ghead"><h3>${g.name}</h3><p>${g.line}</p></div><div class="tiles">` + cats.map(c => { const n = c.tracks.reduce((s, tr) => s + trackDone(tr), 0), N = c.tracks.reduce((s, tr) => s + tr.steps.length, 0);
+        return `<button class="tile" data-room="${c.id}" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/cat/${c.id}.jpg" alt="" loading="lazy"><span class="tname">${c.name}</span><span class="tnum">${n ? n + ' of ' + N : c.tracks.length + ' tracks'}</span></button>`; }).join('') + '</div>'; }).join('');
+  }
   function trackRow(tr) { const c = catOf(tr), n = trackDone(tr), N = tr.steps.length; return `<button class="srow track pic" style="--c:${c.accent};--c2:${c.accent2}" data-track="${tr.id}"><img src="images/track/${tr.id}.jpg" alt="" loading="lazy" onerror="this.src='images/cat/${c.id}.jpg'"><span class="stxt"><span class="stest">${tr.name}</span><span class="sline2">${tr.line || ''}</span><span class="sprog"><i style="width:${Math.round(n / N * 100)}%"></i></span></span><span class="snum">${n} of ${N}</span></button>`; }
   function trackSheet(tr) {
-    const c = catOf(tr); const next = tr.steps.find(s => !sdone(skey(tr, s)));
+    const c = catOf(tr); const next = nextStep(tr);
     const v = veil(`<div class="panel sheet" style="--c:${c.accent};--c2:${c.accent2}">
       <div class="eyebrow"><i></i>${c.name}</div><h2>${tr.name}</h2><p class="lede">${tr.line || ''}</p>
       <div class="steps">${tr.steps.map(s => { const k = skey(tr, s), d = sdone(k), act = next && next.n === s.n; return `<button class="step ${d ? 'done' : ''} ${act ? 'act' : ''}" data-step="${k}"><b>${s.n}</b><span>${s.test}</span></button>`; }).join('')}</div>
@@ -574,7 +669,7 @@
     v.querySelectorAll('.step').forEach(el => el.addEventListener('click', () => { sfx('tap'); const r = findStep(el.dataset.step); closeVeil(() => stepSheet(r[0], r[1], tr)); }));
     v.querySelector('#sheetback').addEventListener('click', () => { sfx('tap'); closeVeil(); });
   }
-  function stepSheet(tr, st, from) {
+  function stepSheet(tr, st, from, where) {
     const c = catOf(tr), k = skey(tr, st), d = sdone(k);
     const how = st.how ? `<ul class="how">${st.how.map(h => `<li>${h}</li>`).join('')}</ul>` : (st.note ? `<p class="note">${st.note}</p>` : '');
     const v = veil(`<div class="panel sheet" style="--c:${c.accent};--c2:${c.accent2}">
@@ -584,11 +679,15 @@
     </div>`, 'light');
     v.querySelector('#sback').addEventListener('click', () => { sfx('tap'); closeVeil(from ? () => trackSheet(from) : null); });
     v.querySelector('#sdone').addEventListener('click', () => {
-      S.school.done[k] = new Date().toISOString(); S.school.points++; save();
+      const before = rankOf(points()).name;
+      S.school.done[k] = new Date().toISOString(); S.school.points++; const t = today(); S.days[t] = (S.days[t] || 0) + 1; save();
       sfx('done'); sparks(); RIG.smile(1.8); if (ARIG && !ARIG.hidden) ARIG.smile(1.8); paintSchoolCount();
-      const n = Object.keys(S.school.done).length; const y = C.school.affirm[(n - 1) % C.school.affirm.length];
-      if (line(y)) { const inRoom = $('stage').classList.contains('room'); if (!inRoom) popIn('marcus'); setTimeout(() => marcusSay(line(y), n % 2 ? 'cheer' : 'nod', () => { if (!inRoom) popOut('marcus', 1400); }), inRoom ? 400 : 900); }
-      closeVeil(() => { renderSchool(); if (from) trackSheet(from); });
+      const inScene = $('stage').classList.contains('room') || $('stage').classList.contains('arrive');
+      const up = rankOf(points()).name !== before;
+      const n = Object.keys(S.school.done).length;
+      const y = where === 'arrival' ? C.arrival.after : (up ? 'c-rank' : C.school.affirm[(n - 1) % C.school.affirm.length]);
+      if (line(y)) { if (!inScene) popIn('marcus'); setTimeout(() => marcusSay(line(y), up ? 'cheer' : (n % 2 ? 'cheer' : 'nod'), () => { if (!inScene) popOut('marcus', 1400); }), inScene ? 400 : 900); }
+      closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); if (from) trackSheet(from); });
     });
   }
   function help() {

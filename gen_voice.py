@@ -38,7 +38,7 @@ import tempfile
 RHUBARB = "/Volumes/2TB SSD/APP-DATA/shared-models/rhubarb/Rhubarb-Lip-Sync-1.14.0-macOS/rhubarb"
 VIS = OUT / "visemes.json"; vis = json.loads(VIS.read_text()) if VIS.exists() else {}
 for name, text in lines.items():
-    if not (name.startswith("ui-w") or name.startswith("ui-b") or name.startswith("ui-fin") or name.startswith("ui-t") or name.startswith("ui-d") or name == "ui-godoor" or name.startswith("ui-s") or name == "ui-deck"): continue
+    if not (name.startswith("ui-w") or name.startswith("ui-b") or name.startswith("ui-fin") or name.startswith("ui-t") or name.startswith("ui-d") or name == "ui-godoor" or name.startswith("ui-s") or name.startswith("ui-a") or name == "ui-deck"): continue
     if name in vis and not FORCE: continue
     mp3 = OUT / f"{name}.mp3"
     if not mp3.exists(): continue

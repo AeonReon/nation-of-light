@@ -1,5 +1,5 @@
 {
- "version": 14,
+ "version": 16,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -324,6 +324,26 @@
    {
     "id": "c-sy3",
     "t": "Good. Wide first, then deep. This is wide."
+   },
+   {
+    "id": "c-a2",
+    "t": "Three for today. Do one. If it is not the one, say so, and we will find another."
+   },
+   {
+    "id": "c-a3",
+    "t": "Fair. Here is another."
+   },
+   {
+    "id": "c-a4",
+    "t": "One for today, and the flame is lit. The school is yours. Go on in when you like."
+   },
+   {
+    "id": "c-long",
+    "t": "Take one slow thing on. A little most days for a month is how juggling, a language, and a cube actually happen."
+   },
+   {
+    "id": "c-rank",
+    "t": "You have gone up. That is not a number. That is you, different from the person who started."
    }
   ]
  },
@@ -644,7 +664,9 @@
   "cat-home": "Home and repair. Keeping a place, mending, tools, bikes, first aid, engines.",
   "cat-care": "Care and kindness. Animals, younger ones, older people, giving, the community.",
   "cat-calm": "Focus and calm. Stillness, attention, sleep, cold, gratitude, doing hard things.",
-  "s1": "This is the school. Everything in here is yours now. Small things to keep the momentum, long things that take days and make you someone, and all of it laid out to be seen."
+  "s1": "This is the school. Everything in here is yours now. Small things to keep the momentum, long things that take days and make you someone, and all of it laid out to be seen.",
+  "a1": "Welcome back. Here is where you stand.",
+  "a0": "You are in. The school is open, and it starts the way everything here starts: with one small thing done today."
  },
  "cover": {
   "em": "Nation of",
@@ -1053,6 +1075,105 @@
    "c-sy1",
    "c-sy2",
    "c-sy3"
+  ],
+  "long": {
+   "max": 3,
+   "list": [
+    "body.juggle",
+    "mind.cube",
+    "music.instrument",
+    "words.lang",
+    "mind.chess",
+    "magic.cards",
+    "body.skip",
+    "make.draw",
+    "words.callig",
+    "music.sing",
+    "fit.pressup",
+    "mind.tables",
+    "body.breath",
+    "make.wood",
+    "words.poems",
+    "body.upside"
+   ],
+   "intro": "These do not finish today, and they are not meant to. A little most days for a month is how juggling and a language and the cube actually happen.",
+   "pickLine": "The quick wins keep you moving. One slow thing gives them somewhere to go. Take on up to three, do a little most days, and put one down whenever you like."
+  },
+  "ranks": [
+   [
+    0,
+    "Spark"
+   ],
+   [
+    25,
+    "Ember"
+   ],
+   [
+    75,
+    "Flame"
+   ],
+   [
+    150,
+    "Lantern"
+   ],
+   [
+    300,
+    "Beacon"
+   ],
+   [
+    600,
+    "Lighthouse"
+   ]
+  ],
+  "thoughts": [
+   "m-x3",
+   "m-x5",
+   "m-x6",
+   "m-x7",
+   "m-x12",
+   "m-x14",
+   "m-d2",
+   "m-g2",
+   "m-x4",
+   "m-x11"
   ]
+ },
+ "arrival": {
+  "lines": [
+   {
+    "who": "aurelia",
+    "id": "ui-a1",
+    "t": "Welcome back. Here is where you stand."
+   },
+   {
+    "who": "marcus",
+    "id": "c-a2",
+    "t": "Three for today. Do one. If it is not the one, say so, and we will find another."
+   }
+  ],
+  "first": [
+   {
+    "who": "aurelia",
+    "id": "ui-a0",
+    "t": "You are in. The school is open, and it starts the way everything here starts: with one small thing done today."
+   },
+   {
+    "who": "marcus",
+    "id": "c-a2",
+    "t": "Three for today. Do one. If it is not the one, say so, and we will find another."
+   }
+  ],
+  "another": "c-a3",
+  "after": "c-a4",
+  "go": "Into the school",
+  "skip": "Skip to the school",
+  "notThis": "Not this one",
+  "do": "Do it",
+  "stand": {
+   "days": "days lit",
+   "steps": "done",
+   "rank": "rank"
+  },
+  "post": null
  }
 }
