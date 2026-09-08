@@ -1,5 +1,5 @@
 {
- "version": 8,
+ "version": 9,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -151,7 +151,7 @@
    },
    {
     "id": "c-five",
-    "t": "Five. Feel that? That is momentum starting. Do not let it cool."
+    "t": "Five. Feel that? That is momentum starting. When I was a boy I boxed and wrestled and rode. Nobody becomes anything sitting still."
    },
    {
     "id": "c-ten",
@@ -276,6 +276,18 @@
    {
     "id": "c-y12",
     "t": "Better every time."
+   },
+   {
+    "id": "c-two",
+    "t": "There are two kinds of people, Aurelia. The ones who do the thing, and the ones who press past it, and miss the whole of life a few seconds at a time."
+   },
+   {
+    "id": "c-two-yes",
+    "t": "This one does the thing. Well done. Keep going."
+   },
+   {
+    "id": "c-two-skip",
+    "t": "Life is thousands of small actions, or thousands of small inactions. Nothing here was hard. It was only whether you would."
    }
   ]
  },
@@ -554,11 +566,15 @@
   "break-fetch": "Twenty. The last five have other people in them, and the last two are phone calls. Nothing in them is hard. What stops people is a feeling, and the feeling is made of paper.",
   "intro1": "Light School is for the ones who move. A spectacular life is here already, with nothing new needed: a walk, a park, a gallery, a building that has stood for centuries, a country estate open to anyone, the finest shop in town, the people you read about, who live near you and can be met. Most of it is free. It is a choice.",
   "intro2": "The choice needs momentum. Twenty-five tiny actions, about ten minutes, from the chair you are in. Do not think about them. Do one, tap Done, do the next.",
-  "w1": "Welcome to Light School. I am Aurelia, and this is Marcus. Most people wait: for money, for time, for the right moment. Life goes past while they wait.",
+  "w1": "Welcome to Light School. I am Aurelia Cotta, and this is Marcus Aurelius. Most people wait: for money, for time, for the right moment. Life goes past while they wait.",
   "w2": "Choosing takes momentum. So we start with twenty-five tiny actions, about ten minutes, from the chair you are in.",
   "w3": "We are not going to convince you. Feel what it is like to have momentum, and see who you are at the end of it.",
   "b15a": "Fifteen, Marcus. Look at them. Out of the chair and moving.",
-  "b15b": "My son grew up in the loudest street in Rome, and I taught him myself. He was never still a day in his life. The world knows him as Julius Caesar."
+  "b15b": "My son grew up in the loudest street in Rome, and I taught him myself. He was never still a day in his life. The world knows him as Julius Caesar.",
+  "b10a": "Ten, Marcus. And not one skipped.",
+  "b10b": "And this one does the thing.",
+  "b10c": "Ten, Marcus. A few were pressed past.",
+  "b10d": "The ones you skipped are waiting at the end. Take them."
  },
  "cover": {
   "em": "Nation of",
@@ -610,24 +626,12 @@
   "src": "Letter to John Quincy, January 1780"
  },
  "speak": {
-  "name": "m-g3",
-  "reach": "m-x6",
+  "tap": "c-first",
   "hand": "m-d1",
   "breath": "c-hard",
   "still": "m-x10",
-  "leg": "m-x5",
-  "ball": "m-d2",
-  "plane": "m-x7",
-  "juggle": "m-x14",
-  "draw": "m-x9",
-  "knot": "m-x8",
-  "phrase": "m-x11",
-  "glad": "m-g4",
   "hello": "c-hello",
-  "ring": "m-x2",
-  "thirty": "m-x4",
-  "roundsquare": "m-x12",
-  "tap": "c-first"
+  "ring": "m-x2"
  },
  "greet": [
   "m-g1",
@@ -646,8 +650,51 @@
    "after": "chair",
    "line": "m-x1",
    "t": "Ten. You found a way every time, and that is the whole skill. Now stand up. The body goes first and the mind follows it. Everything here is in the room you are in.",
-   "say": "c-ten",
-   "saySkip": "c-ten-skip"
+   "say": null,
+   "scene": [
+    {
+     "who": "aurelia",
+     "id": "ui-b10a",
+     "t": "Ten, Marcus. And not one skipped."
+    },
+    {
+     "who": "marcus",
+     "id": "c-two",
+     "t": "There are two kinds of people, Aurelia. The ones who do the thing, and the ones who press past it, and miss the whole of life a few seconds at a time."
+    },
+    {
+     "who": "aurelia",
+     "id": "ui-b10b",
+     "t": "And this one does the thing."
+    },
+    {
+     "who": "marcus",
+     "id": "c-two-yes",
+     "t": "This one does the thing. Well done. Keep going."
+    }
+   ],
+   "sceneSkip": [
+    {
+     "who": "aurelia",
+     "id": "ui-b10c",
+     "t": "Ten, Marcus. A few were pressed past."
+    },
+    {
+     "who": "marcus",
+     "id": "c-two",
+     "t": "There are two kinds of people, Aurelia. The ones who do the thing, and the ones who press past it, and miss the whole of life a few seconds at a time."
+    },
+    {
+     "who": "marcus",
+     "id": "c-two-skip",
+     "t": "Life is thousands of small actions, or thousands of small inactions. Nothing here was hard. It was only whether you would."
+    },
+    {
+     "who": "aurelia",
+     "id": "ui-b10d",
+     "t": "The ones you skipped are waiting at the end. Take them."
+    }
+   ]
   },
   {
    "after": "feet",
@@ -695,7 +742,7 @@
    {
     "who": "aurelia",
     "id": "ui-w1",
-    "t": "Welcome to Light School. I am Aurelia, and this is Marcus. Most people wait: for money, for time, for the right moment. Life goes past while they wait."
+    "t": "Welcome to Light School. I am Aurelia Cotta, and this is Marcus Aurelius. Most people wait: for money, for time, for the right moment. Life goes past while they wait."
    },
    {
     "who": "marcus",
@@ -742,5 +789,9 @@
   "c-y10",
   "c-y11",
   "c-y12"
- ]
+ ],
+ "names": {
+  "marcus": "Marcus Aurelius",
+  "aurelia": "Aurelia Cotta"
+ }
 }

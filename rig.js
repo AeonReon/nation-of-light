@@ -128,7 +128,7 @@
       <g class="r-jaw">
         <ellipse cx="110" cy="132" rx="26" ry="14" fill="${SKIN}"/>
         ${BEARD_LO}
-        <g class="r-mouth"><ellipse class="r-mouth-shape" cx="0" cy="0" rx="8" ry="1.5" fill="#6E3A30"/></g>
+        <g class="r-mouth"><ellipse class="r-mouth-shape" cx="0" cy="0" rx="8" ry="1.5" fill="#6E3A30"/><path class="r-smile" d="M-9 -1 Q0 7 9 -1" fill="none" stroke="#6E3A30" stroke-width="2.2" stroke-linecap="round" opacity="0"/></g>
       </g>
       <!-- moustache, sitting over the top of the mouth -->
       <path d="M96 122 Q104 116 110 121 Q116 116 124 122 Q118 126 110 124 Q102 126 96 122 Z" fill="${HAIR}"/>
@@ -245,7 +245,7 @@
       <g class="r-jaw">
         <ellipse cx="110" cy="128" rx="20" ry="11" fill="${A_SKIN}"/>
         <path d="M100 138 Q110 143 120 138" stroke="${A_SKIN_D}" stroke-width="1" fill="none" opacity=".5"/>
-        <g class="r-mouth"><ellipse class="r-mouth-shape" cx="0" cy="0" rx="7" ry="1.6" fill="${A_LIP}"/></g>
+        <g class="r-mouth"><ellipse class="r-mouth-shape" cx="0" cy="0" rx="7" ry="1.6" fill="${A_LIP}"/><path class="r-smile" d="M-8 -1 Q0 6 8 -1" fill="none" stroke="${A_LIP}" stroke-width="2.2" stroke-linecap="round" opacity="0"/></g>
       </g>
       <ellipse cx="89" cy="112" rx="6.5" ry="4" fill="#F0A0A0" opacity=".24"/>
       <ellipse cx="131" cy="112" rx="6.5" ry="4" fill="#F0A0A0" opacity=".24"/>
@@ -315,7 +315,7 @@
       const q = s => this.svg.querySelector(s);
       this.p = { root: q('.r-root'), body: q('.r-body'), head: q('.r-head'), hairL: q('.r-hair-l'), hairR: q('.r-hair-r'),
         armL: q('.r-arm-l'), armR: q('.r-arm-r'), eyeL: q('.r-eye-l'), eyeR: q('.r-eye-r'),
-        jaw: q('.r-jaw'), mouth: q('.r-mouth'), shape: q('.r-mouth-shape'), shadow: q('.r-shadow') };
+        jaw: q('.r-jaw'), mouth: q('.r-mouth'), shape: q('.r-mouth-shape'), smile: q('.r-smile'), shadow: q('.r-shadow') };
       // pivots: neck, feet, the two cloak pieces (shoulder pins), the shoulders, the mouth
       this.pivot = pivots || { neck: [110, 152], feet: [110, 310], hairL: [80, 152], hairR: [146, 154], armL: [76, 160], armR: [148, 160], mouth: [110, 130] };
       this.s = {
@@ -324,8 +324,10 @@
         hairL: new Spring(0, 70, 6), hairR: new Spring(0, 60, 5.5),        // cloth: soft, underdamped, lags and overshoots
         armL: new Spring(0, 160, 13), armR: new Spring(0, 140, 12),
         lid: new Spring(1, 520, 26), eyeX: new Spring(0, 160, 16), eyeY: new Spring(0, 160, 16),
-        mrx: new Spring(8, 300, 20), mry: new Spring(1.5, 300, 20), my: new Spring(0, 300, 20), jaw: new Spring(0, 260, 18)
+        mrx: new Spring(8, 300, 20), mry: new Spring(1.5, 300, 20), my: new Spring(0, 300, 20), jaw: new Spring(0, 260, 18),
+        smile: new Spring(0, 120, 11)
       };
+      this.smileUntil = 0;
       this.phase = Math.random() * 10; this.talkUntil = 0; this.nextBeat = 0;
       this.nextBlink = 1 + Math.random() * 3; this.blinkT = 0; this.doubleBlink = false;
       this.nextDart = 2 + Math.random() * 4; this.hidden = false; this.mood = null; this.moodUntil = 0;
@@ -345,6 +347,7 @@
       this.nextDart -= dt;
       if (this.nextDart <= 0) { S.eyeX.to((Math.random() - 0.5) * 3); S.eyeY.to((Math.random() - 0.5) * 2); this.nextDart = 1.6 + Math.random() * 3.5; }
       if (now < this.talkUntil) {
+        S.smile.to(0);
         const v = (this.visemeAt && this.visemeAt()) || 'X';
         const m = VISEME_MOUTH[v] || VISEME_MOUTH.X;
         S.mrx.to(m.rx); S.mry.to(m.ry); S.my.to(m.y); S.jaw.to(m.jaw);
@@ -356,6 +359,7 @@
         }
       } else {
         S.mrx.to(VISEME_MOUTH.X.rx); S.mry.to(VISEME_MOUTH.X.ry); S.my.to(0); S.jaw.to(0);
+        if (now < this.smileUntil) { S.smile.to(1); if (this.blinkT <= 0) S.lid.to(.74); } else S.smile.to(0);
         if (!this.mood && this.nextBeat) { S.armR.home(); this.nextBeat = 0; }
       }
       if (this.mood && now > this.moodUntil) this._clearMood();
@@ -378,7 +382,7 @@
       t(P.jaw, `translate(0 ${v.jaw.toFixed(2)})`);
       const [mx, my] = this.pivot.mouth;
       t(P.mouth, `translate(${mx} ${(my + v.my).toFixed(2)})`);
-      if (P.shape) { P.shape.setAttribute('rx', Math.max(1, v.mrx).toFixed(2)); P.shape.setAttribute('ry', Math.max(0.6, v.mry).toFixed(2)); }
+      if (P.shape) { const sm = Math.max(0, Math.min(1, v.smile)); P.shape.setAttribute('rx', Math.max(1, v.mrx).toFixed(2)); P.shape.setAttribute('ry', Math.max(0.6, v.mry * (1 - sm * .6)).toFixed(2)); P.shape.setAttribute('opacity', (1 - sm).toFixed(2)); if (P.smile) { P.smile.setAttribute('opacity', sm.toFixed(2)); P.smile.setAttribute('transform', `scale(${(0.8 + sm * .3).toFixed(3)})`); } }
       if (P.shadow) {
         const lift = Math.min(1, Math.abs(Math.min(0, v.y)) / 40);
         P.shadow.setAttribute('transform', `translate(${fx} ${fy + 4}) scale(${(1 - lift * 0.4).toFixed(3)}) translate(${-fx} ${-(fy + 4)})`);
@@ -401,6 +405,8 @@
     hush() { this.talkUntil = 0; }
     /* ---- poses: impulses, not animations ---- */
     nod() { this.s.headY.kick(-70); this.s.head.kick(40); }
+    /* graceful, not cheesy: the mouth curves, the eyes soften, the head lifts a touch */
+    smile(secs) { this.smileUntil = performance.now() / 1000 + (secs || 1.6); this.s.headY.kick(-30); this.s.head.kick((Math.random() - .5) * 16); }
     wave() {
       this._mood('wave', 1.5); const S = this.s; S.armR.to(-150); S.head.to(-6);
       let n = 0; const wag = () => { if (this.mood !== 'wave') return; S.armR.to(n % 2 ? -150 : -125); if (++n < 5) setTimeout(wag, 220); };

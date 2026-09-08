@@ -271,9 +271,16 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
   .btn-ghost{height:40px}
   .skip{margin-top:2px;padding:4px 10px}
 }
-@media (max-height:640px){ .scene{max-height:46vh;max-height:46dvh} .tablet .fall{display:none} }
+@media (max-height:740px){ .scene{max-height:46vh;max-height:46dvh} .mfig{width:44%;left:42%} .afig{width:41%;left:3%} .bubble{top:16%;width:54%;font-size:14px;padding:9px 11px 8px} .hud{top:6px} .nameplate{bottom:1%} }
+@media (max-height:640px){ .scene{max-height:40vh;max-height:40dvh} .mfig{width:40%;left:44%} .afig{width:37%;left:4%} .tablet .fall{display:none} }
 /* who is speaking */
 .bubble .who{display:block;margin-top:5px;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-deep)}
 .bubble .src{margin-top:3px}
 .nameplate{position:absolute;bottom:2%;z-index:4;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#FFF7E4;background:rgba(30,23,15,.55);padding:4px 9px;border-radius:9px;pointer-events:none;animation:panelin .6s var(--spring) both}
 .nameplate.m{left:55%}.nameplate.a{left:12%}
+
+/* ---- v9: sparks on Done; plates that fade ---- */
+.spark{position:absolute;width:6px;height:6px;border-radius:50%;background:radial-gradient(circle,#FFF3C4 0%,#F0C64A 55%,rgba(240,198,74,0) 100%);z-index:4;pointer-events:none;animation:spark 1.4s var(--ease) both}
+@keyframes spark{0%{transform:translate(0,0) scale(.6);opacity:0}15%{opacity:1}100%{transform:translate(var(--dx),var(--dy)) scale(1.1);opacity:0}}
+.nameplate.fade{animation:platefade .8s var(--ease) both}
+@keyframes platefade{to{opacity:0;transform:translateY(6px)}}

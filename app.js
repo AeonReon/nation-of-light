@@ -103,7 +103,7 @@
   function marcusSay(ln, pose, after) {
     if (!ln || !RIG || RIG.hidden) { if (after) after(); return; }
     if (!S.said.includes(ln.id)) { S.said.push(ln.id); save(); }
-    const b = $('bubble'); b.hidden = MODE === 'welcome'; b.classList.toggle('school', !ln.src);
+    const b = $('bubble'); b.hidden = MODE === 'welcome' || MODE === 'scene'; b.classList.toggle('school', !ln.src);
     b.innerHTML = wordSpans(ln.t) + (ln.src ? `<span class="who">Marcus Aurelius</span><span class="src">${ln.src}</span>` : `<span class="who">Marcus</span>`);
     b.classList.remove('say'); void b.offsetWidth; b.classList.add('say');
     if (pose && RIG[pose]) RIG[pose]();
@@ -154,6 +154,7 @@
     const key = MODE + ':' + (CUR ? CUR.id : '-');
     if (onMarcusTap._helped !== key) {
       onMarcusTap._helped = key;
+      if (MODE === 'scene') return;
       const id = MODE === 'break' ? 'c-help-break' : MODE === 'rest' ? 'c-help-rest' : (S.done.length === 0 ? 'c-help-task' : 'c-help-go');
       if (line(id)) { hush(); marcusSay(line(id), 'point'); return; }
     }
@@ -228,6 +229,7 @@
     S.done.push(m.id); S.skipped = S.skipped.filter(x => x !== m.id);
     const t = today(); if (!S.start) S.start = t; S.days[t] = (S.days[t] || 0) + 1; save();
     hush(); sfx('done'); popLeaf(i); $('countn').textContent = S.done.length;
+    RIG.smile(1.8); if (ARIG && !ARIG.hidden) ARIG.smile(1.8); sparks();
     $('donebtn').disabled = true;
     PORTICO.glideTo(skyFor());
     if (i === 0) { PORTICO.setFlame('lit'); PORTICO.flare(); sfx('flame'); ambFire(true); }
@@ -236,8 +238,8 @@
     // his answer: a line that fits the thing just done, or the body alone
     const sid = C.speak[m.id];
     let spoke = false;
-    if (sid && !finishedFive && !finishedDeck) { spoke = true; marcusSay(line(sid), i % 3 === 0 ? 'cheer' : 'nod'); }
-    else if (!finishedFive && !finishedDeck && C.affirm) { const y = fresh(C.affirm.slice(i % C.affirm.length).concat(C.affirm)); if (y) { marcusSay(y, i % 2 ? 'cheer' : 'nod'); } else RIG.cheer(); }
+    if (sid && !finishedFive && !finishedDeck) { spoke = true; setTimeout(() => marcusSay(line(sid), i % 3 === 0 ? 'cheer' : 'nod'), 650); }
+    else if (!finishedFive && !finishedDeck && C.affirm) { const y = fresh(C.affirm.slice(i % C.affirm.length).concat(C.affirm)); if (y) setTimeout(() => marcusSay(y, i % 2 ? 'cheer' : 'nod'), 650); else RIG.cheer(); }
     else RIG.cheer();
     $('tablet').classList.add('sink');
     setTimeout(() => {
@@ -247,6 +249,13 @@
       else if (finishedFive) setTimeout(() => theBreak(fiveIdx), 600);
       else nextTablet(true);
     }, spoke ? 1200 : 700);
+  }
+  /* a few gold sparks rise from the brazier */
+  function sparks() {
+    const sc = $('scene'), r = sc.getBoundingClientRect();
+    for (let k = 0; k < 9; k++) { const s = document.createElement('i'); s.className = 'spark'; const x = 0.86 + (Math.random() - .5) * .08, y = 0.76 + Math.random() * .05;
+      s.style.left = (x * 100) + '%'; s.style.top = (y * 100) + '%'; s.style.setProperty('--dx', ((Math.random() - .5) * 40).toFixed(0) + 'px'); s.style.setProperty('--dy', (-(40 + Math.random() * 70)).toFixed(0) + 'px'); s.style.animationDelay = (Math.random() * .35) + 's';
+      sc.appendChild(s); setTimeout(() => s.remove(), 1900); }
   }
   function onSkip() {
     if (MODE === 'welcome') { sfx('tap'); welcomeDone(); return; }
@@ -260,13 +269,21 @@
     const b = C.breaks[tierIdx]; if (!b) { nextTablet(true); return; }
     const say = (b.saySkip && S.skipped.length) ? b.saySkip : b.say;
     const quote = () => marcusSay(line(b.line), 'nod', () => { breakCard(b, () => nextTablet(true)); setTimeout(() => narrate('ui-break-' + b.after), 500); });
-    if (b.scene) {
+    const scene = (b.sceneSkip && S.skipped.length) ? b.sceneSkip : b.scene;
+    if (scene) {
       ARIG.show(true); $('afig').classList.remove('walk-out-l', 'walk-in-l'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l');
+      MODE = 'scene'; CUR = null; const t = $('tablet'); t.classList.add('welcome');
+      $('tkind').hidden = true; $('tierline').textContent = ''; $('tfall').innerHTML = ''; $('readbtn').hidden = true; $('skipbtn').hidden = true; $('donebtn').hidden = true;
+      $('tnum').textContent = ''; setText($('ttext'), ''); riseTablet();
       let i = 0; const step = () => {
-        const ln = b.scene[i++];
-        if (!ln) { $('afig').classList.remove('walk-in-l'); $('afig').classList.add('walk-out-l'); setTimeout(() => { ARIG.show(false); $('afig').classList.remove('walk-out-l'); }, 1100); setTimeout(quote, 500); return; }
-        if (ln.who === 'marcus') marcusSay(line(ln.id) || { id: ln.id, t: ln.t }, 'nod', () => setTimeout(step, 450));
-        else { ARIG[i === 1 ? 'point' : 'nod'](); aureliaSay(ln.id, () => setTimeout(step, 450)); }
+        const ln = scene[i++];
+        if (!ln) {
+          $('afig').classList.remove('walk-in-l'); $('afig').classList.add('walk-out-l'); setTimeout(() => { ARIG.show(false); $('afig').classList.remove('walk-out-l'); }, 1100);
+          t.classList.remove('welcome'); $('donebtn').hidden = false; MODE = 'break'; setTimeout(quote, 500); return;
+        }
+        $('tnum').textContent = ln.who === 'marcus' ? C.names.marcus : C.names.aurelia; setText($('ttext'), ln.t);
+        if (ln.who === 'marcus') { ARIG.smile(3); marcusSay(line(ln.id) || { id: ln.id, t: ln.t }, i % 2 ? 'point' : 'nod', () => setTimeout(step, 450)); }
+        else { RIG.smile(3); ARIG[i === 1 ? 'point' : 'nod'](); aureliaSay(ln.id, () => setTimeout(step, 450)); }
       };
       setTimeout(step, 1300); return;
     }
@@ -321,13 +338,14 @@
       if (!ln) { $('donebtn').hidden = false; $('donebtn').classList.add('arrive'); $('skipbtn').hidden = true; return; }
       $('tnum').textContent = ln.who === 'marcus' ? 'Marcus Aurelius' : 'Aurelia, keeper of the flame';
       setText($('ttext'), ln.t);
-      const after = () => setTimeout(next, 650);
+      const after = () => { if (i === 2) platesFade(); setTimeout(next, 650); };
       if (ln.who === 'marcus') { const l = line(ln.id) || { id: ln.id, t: ln.t }; marcusSay(l, i % 2 ? 'point' : 'nod', after); $('bubble').hidden = true; }
       else { ARIG[i === 1 ? 'wave' : 'nod'](); aureliaSay(ln.id, after); }
     };
     setTimeout(next, 2400);
   }
-  function plates(on) { document.querySelectorAll('.nameplate').forEach(n => n.remove()); if (!on) return; $('scene').insertAdjacentHTML('beforeend', '<div class="nameplate a">Aurelia</div><div class="nameplate m">Marcus Aurelius</div>'); }
+  function plates(on) { document.querySelectorAll('.nameplate').forEach(n => n.remove()); if (!on) return; $('scene').insertAdjacentHTML('beforeend', `<div class="nameplate a">${C.names.aurelia}</div><div class="nameplate m">${C.names.marcus}</div>`); }
+  function platesFade() { document.querySelectorAll('.nameplate').forEach(n => { n.classList.add('fade'); setTimeout(() => n.remove(), 900); }); }
   function welcomeDone() {
     if (welcome._stop) welcome._stop(); hush(); $('bubble').hidden = true; plates(false);
     $('tablet').classList.remove('welcome'); $('skipbtn').textContent = 'Not this one today'; $('donebtn').hidden = false; $('donebtn').classList.remove('arrive');

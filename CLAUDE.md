@@ -1,6 +1,6 @@
 # Nation of Light (`APPS/nation-of-light`)
 
-The character-led, scene-first version of the Nation of Light School. Built 2026-09-07 as a
+The character-led, scene-first version of Light School (full name: the Nation of Light School). Built 2026-09-07 as a
 SEPARATE app from `APPS/school-of-light` (the catalogue app live at nolschool.com) so the new
 delivery can be felt on its own before anything is merged. Same exercises, same mentor rule,
 a different front: one drawn scene, a living mentor, one tablet at a time.
