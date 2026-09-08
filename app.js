@@ -84,7 +84,7 @@
   function ambStop() { if (!AMB.on) return; AMB.on = false; AMB.timers.forEach(clearTimeout); AMB.timers = []; try { AMB.master.gain.linearRampToValueAtTime(0, ac().currentTime + .8); } catch (e) {} setTimeout(() => { AMB.nodes.forEach(n => { try { n.stop(); } catch (e) {} }); AMB.nodes = []; }, 900); }
   const voiceOn = () => S.sound;
   function paintSound() { $('soundbtn').classList.toggle('off', !S.sound); }
-  function hush() { NAR.pause(); MAR.pause(); if (RIG) RIG.hush(); if (ARIG) ARIG.hush(); $('readbtn').classList.remove('on'); musicDuck(false); clearTimeout(marcusSay._t); $('bubble').hidden = true; $('abubble').hidden = true; }
+  function hush() { NAR.pause(); MAR.pause(); if (RIG) RIG.hush(); if (ARIG) ARIG.hush(); $('readbtn').classList.remove('on'); musicDuck(false); clearTimeout(marcusSay._t); $('bubble').hidden = true; $('abubble').hidden = true; SPEAKING = null; MQ.length = 0; }
   /* the music: one nocturne, in on Begin, under every voice, out on its own */
   let MUSV = 0, MUST = null;
   function musicTo(v, ms) { clearInterval(MUST); const from = MUS.volume, t0 = performance.now(); MUST = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / ms); MUS.volume = from + (v - from) * k; if (k >= 1) clearInterval(MUST); }, 50); }
@@ -100,15 +100,19 @@
     NAR.play().catch(() => { if (after) after(); });
   }
   /* Marcus speaks: only a line from content.json, mouth off the audio clock. */
+  let SPEAKING = null; const MQ = [];
   function marcusSay(ln, pose, after) {
-    if (!ln || !RIG || RIG.hidden) { if (after) after(); return; }
+    if (!ln) { if (after) after(); return; }
+    if (!RIG || RIG.hidden) { if (after) after(); return; }
+    if (SPEAKING) { MQ.push([ln, pose, after]); return; }
+    SPEAKING = ln.id;
     if (!S.said.includes(ln.id)) { S.said.push(ln.id); save(); }
     const b = $('bubble'); b.hidden = MODE === 'welcome' || MODE === 'scene'; b.classList.toggle('school', !ln.src);
     b.innerHTML = wordSpans(ln.t) + (ln.src ? `<span class="who">Marcus Aurelius</span><span class="src">${ln.src}</span>` : `<span class="who">Marcus</span>`);
     b.classList.remove('say'); void b.offsetWidth; b.classList.add('say');
     if (pose && RIG[pose]) RIG[pose]();
     clearTimeout(marcusSay._t);
-    const finish = () => { RIG.hush(); marcusSay._t = setTimeout(() => { b.hidden = true; }, 1800); if (after) after(); };
+    const finish = () => { if (SPEAKING !== ln.id) return; SPEAKING = null; RIG.hush(); marcusSay._t = setTimeout(() => { b.hidden = true; }, 1800); if (after) after(); const nx = MQ.shift(); if (nx) setTimeout(() => marcusSay(nx[0], nx[1], nx[2]), 350); };
     const est = Math.min(12000, ln.t.length * 70);
     if (voiceOn()) {
       MAR.pause(); CUES = (VIS && VIS[ln.id]) || null; MAR.src = 'audio/marcus/' + ln.id + '.mp3?v=' + C.version;
@@ -243,7 +247,7 @@
   function onDone() {
     if (busy) return;
     if (MODE === 'welcome') { sfx('tap'); welcomeDone(); return; }
-    if (MODE === 'break') { $('tablet').classList.add('sink'); sfx('tap'); hush(); setTimeout(() => { const t = breakCard._then; breakCard._then = null; if (t) t(); else nextTablet(true); }, 380); return; }
+    if (MODE === 'break') { $('donebtn').classList.remove('arrive'); $('tablet').classList.add('sink'); sfx('tap'); hush(); setTimeout(() => { const t = breakCard._then; breakCard._then = null; if (t) t(); else nextTablet(true); }, 380); return; }
     if (MODE === 'rest') { const r = remaining(); if (r.length) { $('tablet').classList.add('sink'); setTimeout(() => nextTablet(true), 380); } else if (C.door) doorPanel(); else onMarcusTap(); return; }
     if (!CUR) return;
     busy = true; const m = CUR, i = S.done.length;
@@ -329,7 +333,7 @@
     RIG.cheer(); sfx('wreath'); PORTICO.glideTo(1, 3000); musicStart(.45);
     const last = () => marcusSay(line(C.finale.line), 'salute', () => finScene(() => {
       breakCard({ t: C.finale.t, after: 'finale' }, () => door()); $('tnum').textContent = 'Twenty-five'; $('donebtn').textContent = C.finale.go || 'Go to the door';
-      setTimeout(() => aureliaSay('ui-deck', () => ARIG.cheer()), 600);
+      setTimeout(() => aureliaSay('ui-deck', () => { ARIG.cheer(); if (C.finale.godoor) setTimeout(() => { ARIG.point(); aureliaSay('ui-godoor', () => { $('donebtn').classList.add('arrive'); }); }, 500); }), 600);
     }));
     setTimeout(() => { if (C.finale.say && line(C.finale.say)) marcusSay(line(C.finale.say), 'cheer', () => setTimeout(last, 400)); else last(); }, 800);
   }

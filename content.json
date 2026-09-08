@@ -1,5 +1,5 @@
 {
- "version": 12,
+ "version": 13,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -299,7 +299,7 @@
    },
    {
     "id": "c-fin2",
-    "t": "Nobody great was ever made alone."
+    "t": "Nobody great was ever made alone. Put high-minded people in one room, with someone to guide them, and what they build lasts thousands of years."
    },
    {
     "id": "c-d2",
@@ -605,7 +605,8 @@
   "t4": "Every one of these is small on purpose. The size of the step is not the point. Taking it is.",
   "d1": "Twenty-five. Marcus, how many people finish a thing they start?",
   "d3": "On the other side of this door is a whole world of people building a spectacular life without waiting for anything.",
-  "d5": "Light School takes people in by application. We choose who we bring in. Tell us who you are."
+  "d5": "Light School takes people in by application. We choose who we bring in. Tell us who you are.",
+  "godoor": "Now go to the door. Tap it, and tell us who you are."
  },
  "cover": {
   "em": "Nation of",
@@ -798,10 +799,14 @@
    {
     "who": "marcus",
     "id": "c-fin2",
-    "t": "Nobody great was ever made alone."
+    "t": "Nobody great was ever made alone. Put high-minded people in one room, with someone to guide them, and what they build lasts thousands of years."
    }
   ],
-  "go": "Go to the door"
+  "go": "Go to the door",
+  "godoor": {
+   "id": "ui-godoor",
+   "t": "Now go to the door. Tap it, and tell us who you are."
+  }
  },
  "before": {
   "ring": "c-ring",
@@ -913,14 +918,18 @@
    }
   ],
   "title": "The door",
-  "lede": "Light School takes people in by application. Tell us who you are, and what the twenty-five did.",
+  "lede": "Light School takes people in by application. Tell us who you are and what the twenty-five did, and we will tell you what is behind each door.",
   "fields": {
    "name": "Your name",
    "email": "Your email",
    "felt": "What did you feel by the twenty-fifth?",
-   "which": "Which door interests you?"
+   "which": "Which door would you like to hear about?"
   },
   "which": [
+   [
+    "all",
+    "I do not know yet. Tell me about all three."
+   ],
    [
     "online",
     "Online, on my own, fully automated"

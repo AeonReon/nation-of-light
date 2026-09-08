@@ -307,3 +307,5 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .doorcard .what.dark{color:var(--gold-deep);width:100%;text-align:center;margin-top:6px}
 .doorcard h2{font-size:24px;margin:6px 0 8px}
 .veil.light:has(.doorcard){overflow-y:auto;justify-content:flex-start;padding-top:max(14px,env(safe-area-inset-top))}
+.btn.arrive{animation:pulsebtn 1.6s ease-in-out infinite}
+@keyframes pulsebtn{0%,100%{box-shadow:0 10px 24px rgba(201,162,39,.35)}50%{box-shadow:0 12px 34px rgba(201,162,39,.7),0 0 0 6px rgba(201,162,39,.18)}}
