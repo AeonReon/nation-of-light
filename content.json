@@ -1,5 +1,5 @@
 {
- "version": 17,
+ "version": 18,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -339,7 +339,7 @@
    },
    {
     "id": "c-long",
-    "t": "Take one slow thing on. A little most days for a month is how juggling, a language, and a cube actually happen."
+    "t": "Take one skill on. Some take an afternoon, some a month. A little most days is how the breath, the juggling and the language actually happen."
    },
    {
     "id": "c-rank",
@@ -643,7 +643,7 @@
   "b20a": "Twenty. The last five go out loud, and out into the world.",
   "b20b": "The Greeks spoke of greatness so well that Rome went out and built it. Speak less. Build.",
   "fin1": "Socrates taught Plato. Plato taught Aristotle. Aristotle taught Alexander.",
-  "t1": "The historian Tacitus wrote that I took charge of my son's education myself, instead of handing it to someone else. That is the whole idea of this school.",
+  "t1": "The historian Tacitus wrote that I took charge of my son's education myself, instead of handing it to someone else. That son was Julius Caesar. That is the whole idea of this school.",
   "t2": "My house stood in the Subura, the loudest quarter of Rome. Greatness does not need quiet. It needs a start.",
   "t3": "Keep going. I raised a boy who never sat still, and the world still knows his name.",
   "t4": "Every one of these is small on purpose. The size of the step is not the point. Taking it is.",
@@ -746,7 +746,7 @@
   "y4": "Yes. Another one behind you. Keep the pace and do not stop to think.",
   "y5": "That is it. I taught a boy this way, one small thing at a time, and the world knows his name.",
   "y6": "Done, and done properly. The flame stays lit for that.",
-  "t-1": "Three buttons, and that is the whole school. Next thing hands you one small thing at a time. The long game is for skills that take a month. Everything is every room, laid out to be seen.",
+  "t-1": "Three buttons, and that is the whole school. Next thing hands you one small thing at a time. The long game is for skills with a ladder: an afternoon, a week, or a month. Everything is every room, laid out to be seen.",
   "t-2": "Where you stand: the days you have shown up, the things you have done, and your rank. The bar fills toward the next one.",
   "t-3": "This is your next thing. Do it and tap Done. If it is not the one, tap Not this one and we find another. That is all there is to it.",
   "t-4": "A flame for every day you show up. It never resets, and nobody scolds you. One light a day is the whole habit.",
@@ -999,7 +999,7 @@
   "lines": [
    {
     "id": "ui-t1",
-    "t": "The historian Tacitus wrote that I took charge of my son's education myself, instead of handing it to someone else. That is the whole idea of this school."
+    "t": "The historian Tacitus wrote that I took charge of my son's education myself, instead of handing it to someone else. That son was Julius Caesar. That is the whole idea of this school."
    },
    {
     "id": "ui-t2",
@@ -1156,7 +1156,7 @@
    }
   ],
   "nextLine": "Small, quick, doable now. Keep the momentum and try things widely.",
-  "longLine": "Skills that take days or weeks. One step at a time, the next one always ready.",
+  "longLine": "Skills with a ladder: an afternoon, a week, or a month. One step at a time, the next one always ready.",
   "allLine": "Every room in the school, laid out to be seen.",
   "catLines": {
    "body": "ui-cat-body",
@@ -1206,8 +1206,8 @@
     "words.poems",
     "body.upside"
    ],
-   "intro": "These do not finish today, and they are not meant to. A little most days for a month is how juggling and a language and the cube actually happen.",
-   "pickLine": "The quick wins keep you moving. One slow thing gives them somewhere to go. Take on up to three, do a little most days, and put one down whenever you like."
+   "intro": "These are skills, not a sitting. Some take an afternoon, some a week, some a month of a little most days. Each one is a ladder: it starts small and ends somewhere you cannot do yet.",
+   "pickLine": "The quick wins keep you moving. A skill gives them somewhere to go. Take on up to three, do a little most days, and put one down whenever you like."
   },
   "ranks": [
    [
@@ -1624,14 +1624,20 @@
    }
   ],
   "readingsLede": "One thought a day. Aurelia reads it.",
-  "back": "Back to the school"
+  "back": "Back to the school",
+  "libraryLede": {
+   "quote": "A line worth keeping",
+   "book": "A book worth your attention",
+   "beauty": "On beauty",
+   "figure": "One of ours"
+  }
  },
  "tour": {
   "steps": [
    {
     "sel": "#stabs",
     "id": "ui-t-1",
-    "t": "Three buttons, and that is the whole school. Next thing hands you one small thing at a time. The long game is for skills that take a month. Everything is every room, laid out to be seen."
+    "t": "Three buttons, and that is the whole school. Next thing hands you one small thing at a time. The long game is for skills with a ladder: an afternoon, a week, or a month. Everything is every room, laid out to be seen."
    },
    {
     "sel": ".stand",
@@ -1663,5 +1669,14 @@
   "title": "From the group",
   "lede": "Announcements from Light School, for those who are in.",
   "empty": "Nothing new. The group is quiet today."
+ },
+ "share": {
+  "url": "https://nation-of-light.vercel.app",
+  "title": "Light School",
+  "text": "Twenty-five tiny actions, about ten minutes, and you will feel it. Light School.",
+  "btn": "Share Light School",
+  "copy": "Copy the link",
+  "copied": "Copied",
+  "lede": "Tell a friend. They can start the twenty-five the moment they open it."
  }
 }

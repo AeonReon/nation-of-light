@@ -519,3 +519,33 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .tour .tcap .row .btn{flex:1;height:42px;font-size:14px}
 .offer{--g1:#F3E3A8;--g2:var(--gold)}
 .offer .row{display:flex;gap:8px}
+
+/* ---- v18 ---- */
+@media (max-width:519px){body{background:var(--marble);background-image:none}}
+@media (display-mode: standalone){.stage{height:100vh}}
+.pwhere{margin:0;font-size:13px;line-height:1.35;color:var(--ink-soft)}
+.pwhere b,.pnext b{color:var(--c);font-weight:700;font-family:var(--sans);font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+.pickp{grid-template-columns:52px 1fr}
+.pickp .ladder{margin-top:3px;font-size:12px;color:var(--ink-faint)}
+.pickp .ladder em{font-style:normal;color:var(--ink-soft)}
+.pickp .take{grid-column:2;font-size:12.5px;font-weight:700;color:var(--c);margin-top:4px}
+.acard.lib{--g1:#F3E3A8;--g2:var(--gold)}
+.acard.lib p{margin:0;font-family:var(--display);font-weight:500;font-size:16px;line-height:1.45;color:var(--ink)}
+.acard.lib i{font-size:11.5px;color:var(--ink-faint)}
+.sharecard .eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--gold-deep);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.sharecard .eyebrow i{width:22px;height:1.5px;background:var(--gold)}
+.sharecard h2{font-size:24px;margin-bottom:4px}
+.sharecard .qr{width:min(58vw,220px);margin:8px auto 4px;background:#fff;border-radius:16px;padding:10px;box-shadow:inset 0 0 0 1.5px var(--gold-lt)}
+.sharecard .qr img{width:100%;height:auto;display:block}
+.sharecard .url{text-align:center;font-weight:700;color:var(--gold-deep);margin:4px 0 12px;font-size:15px;letter-spacing:.01em}
+.sharecard .row{display:flex;gap:8px}
+.sharecard .what.dark{color:var(--gold-deep);width:100%;text-align:center;margin-top:6px}
+.cover .what+.what{margin-top:0}
+
+.stitle{font-size:18px;white-space:nowrap}
+.shead .roombtn,.shead .round{width:30px;height:30px}
+.shead .roombtn svg{width:17px;height:17px}
+.shead .pill{height:30px;font-size:12.5px;padding:0 10px 0 8px}
+.pop{z-index:15}
+.pop .mfig,.pop .afig{z-index:16}
+.popcap{z-index:17}
