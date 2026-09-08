@@ -37,3 +37,18 @@ a different front: one drawn scene, a living mentor, one tablet at a time.
 
 Preview: workspace `.claude/launch.json` → `nation-of-light` (python http.server :3149).
 Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
+
+## Navigation and captions (v20, 2026-09-08)
+
+- **Back is one button, top left, everywhere.** `backBtn(veil, fn)` puts it on any card and makes
+  tap-outside do the same thing; `stageBack(fn)` shows `#stageback` over the scene (portico room,
+  category room). Never add a "Back to the portico" text button; the finish states of the door and
+  code forms are the only forward-looking exceptions.
+- **Home** = the arrival (`goHome()` → `arrival(first, again, quiet)`), from the header pill. The
+  fire icon is the portico room (`roomView`, remembers `ROOM_FROM` so Back returns to the same tab/room).
+- **Captions** route through `cap()`: `#capband` (in flow under the scene) when `inScene()`, the
+  trophy show's own `#showcap` when one is open, otherwise `#popcap`. Both cards swipe or tap away.
+- **Trophies** = `awards()` (ranks as flames, the 25 as a wreath, a medal per room), drawn in
+  `trophySVG`, shelved by `shelfCard(compact)`, shown by `trophyShow(a)`; `NOL.show('rank.spark')` to test.
+- **Wording rule (his, important):** "most people" lines are about the people out there who never
+  take action, never a hint that people come here and leave. Keep it exciting: a special group.
