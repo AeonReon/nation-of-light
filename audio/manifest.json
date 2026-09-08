@@ -43,7 +43,10 @@
   "ui-deck",
   "ui-first",
   "ui-intro1",
-  "ui-intro2"
+  "ui-intro2",
+  "ui-w1",
+  "ui-w2",
+  "ui-w3"
  ],
  "marcus": [
   "a-d1",
@@ -56,6 +59,10 @@
   "c-five",
   "c-hard",
   "c-hello",
+  "c-help-break",
+  "c-help-go",
+  "c-help-rest",
+  "c-help-task",
   "c-idle",
   "c-return",
   "c-ring",

@@ -15,7 +15,7 @@
   'use strict';
   const $ = id => document.getElementById(id);
   const KEY = 'nol.v1';
-  let C = null, VIS = null, PORTICO = null, RIG = null, CUES = null, LINES = {};
+  let C = null, VIS = null, AVIS = null, PORTICO = null, RIG = null, ARIG = null, CUES = null, ACUES = null, LINES = {};
   const NAR = new Audio(), MAR = new Audio(), MUS = new Audio(); NAR.preload = 'auto'; MAR.preload = 'auto'; MUS.preload = 'auto'; MUS.src = 'audio/music/dawn.mp3';
   let S = load();
 
@@ -103,7 +103,7 @@
   function marcusSay(ln, pose, after) {
     if (!ln || !RIG || RIG.hidden) { if (after) after(); return; }
     if (!S.said.includes(ln.id)) { S.said.push(ln.id); save(); }
-    const b = $('bubble'); b.hidden = false; b.classList.toggle('school', !ln.src);
+    const b = $('bubble'); b.hidden = MODE === 'welcome'; b.classList.toggle('school', !ln.src);
     b.innerHTML = wordSpans(ln.t) + (ln.src ? `<span class="src">${ln.src}</span>` : '');
     b.classList.remove('say'); void b.offsetWidth; b.classList.add('say');
     if (pose && RIG[pose]) RIG[pose]();
@@ -115,6 +115,11 @@
       MAR.onended = finish; MAR.onerror = () => { RIG.talk(est / 1000); setTimeout(finish, est); };
       RIG.talk(20); MAR.play().catch(() => { RIG.talk(est / 1000); setTimeout(finish, est); });
     } else { RIG.talk(est / 1000); setTimeout(finish, est); }
+  }
+  function aureliaSay(id, after) {
+    if (!ARIG || ARIG.hidden || !voiceOn()) { narrate(id, after); return; }
+    ACUES = (AVIS && AVIS[id]) || null; ARIG.talk(20);
+    narrate(id, () => { ARIG.hush(); if (after) after(); });
   }
   const wordSpans = t => t.split(/\s+/).map((w, i) => `<span style="--i:${i}">${w}</span>`).join(' ');
 
@@ -128,10 +133,17 @@
       while (lo <= hi) { const mid = (lo + hi) >> 1; if (c[mid][0] <= t) { best = mid; lo = mid + 1; } else hi = mid - 1; }
       return best < 0 ? 'X' : c[best][1];
     };
+    ARIG = new MarcusRig.Figure($('afig'), MarcusRig.AURELIA_SVG, MarcusRig.AURELIA_PIVOTS); ARIG.show(false);
+    ARIG.visemeAt = () => {
+      const c = ACUES; if (!c || NAR.paused) return 'X';
+      const t = NAR.currentTime; let lo = 0, hi = c.length - 1, best = -1;
+      while (lo <= hi) { const mid = (lo + hi) >> 1; if (c[mid][0] <= t) { best = mid; lo = mid + 1; } else hi = mid - 1; }
+      return best < 0 ? 'X' : c[best][1];
+    };
     PORTICO.setWreaths(tiersDone()); PORTICO.setFlame(S.done.length ? 'lit' : 'out'); PORTICO.setPhase(skyFor());
     if (S.done.length) setTimeout(() => ambFire(true), 3000);
     $('mfig').addEventListener('click', onMarcusTap);
-    $('stage').addEventListener('pointerdown', e => { if (RIG && !RIG.hidden) RIG.lookAt(e.clientX, e.clientY); }, { passive: true });
+    $('stage').addEventListener('pointerdown', e => { if (RIG && !RIG.hidden) RIG.lookAt(e.clientX, e.clientY); if (ARIG && !ARIG.hidden) ARIG.lookAt(e.clientX, e.clientY); }, { passive: true });
   }
   /* dawn at the first tablet, full morning by the middle, gold at the twenty-fifth */
   const skyFor = () => Math.min(1, S.done.length / C.moves.length);
@@ -208,6 +220,7 @@
   let busy = false;
   function onDone() {
     if (busy) return;
+    if (MODE === 'welcome') { sfx('tap'); welcomeDone(); return; }
     if (MODE === 'break') { $('tablet').classList.add('sink'); sfx('tap'); hush(); setTimeout(() => { const t = breakCard._then; breakCard._then = null; if (t) t(); else nextTablet(true); }, 380); return; }
     if (MODE === 'rest') { const r = remaining(); if (r.length) { $('tablet').classList.add('sink'); setTimeout(() => nextTablet(true), 380); } else onMarcusTap(); return; }
     if (!CUR) return;
@@ -235,6 +248,7 @@
     }, spoke ? 1200 : 700);
   }
   function onSkip() {
+    if (MODE === 'welcome') { sfx('tap'); welcomeDone(); return; }
     if (!CUR || busy) return; sfx('tap');
     if (!S.skipped.includes(CUR.id)) S.skipped.push(CUR.id); save();
     if (S.skipped.length === 1 && line('c-skip')) marcusSay(line('c-skip'), 'think');
@@ -252,7 +266,8 @@
     RIG.cheer(); sfx('wreath'); PORTICO.glideTo(1, 3000); musicStart(.45);
     const last = () => marcusSay(line(C.finale.line), 'salute', () => {
       breakCard({ t: C.finale.t, after: 'finale' }, () => restTablet()); $('tnum').textContent = 'Twenty-five'; $('donebtn').textContent = 'Sit with Marcus';
-      setTimeout(() => narrate('ui-deck'), 500);
+      ARIG.show(true); $('afig').classList.remove('walk-in-l'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l');
+      setTimeout(() => aureliaSay('ui-deck', () => ARIG.cheer()), 1200);
     });
     setTimeout(() => { if (C.finale.say && line(C.finale.say)) marcusSay(line(C.finale.say), 'cheer', () => setTimeout(last, 400)); else last(); }, 800);
   }
@@ -265,7 +280,7 @@
     const back = S.done.length > 0, cv = C.cover, left = C.moves.length - S.done.length;
     const v = veil(`<div class="cover">
       <h1><span class="em">${cv.em}</span><span class="t">${cv.title}</span></h1>
-      <p>${back ? (left ? `Welcome back. ${S.done.length} of ${C.moves.length} done, ${left} to go. Marcus is waiting.` : 'Welcome back. The twenty-five are done. Marcus is waiting.') : cv.lines.map(l => `<span class="ln">${l}</span>`).join('')}</p>
+      <p class="tag">${back ? (left ? `Welcome back. ${S.done.length} of ${C.moves.length} done, ${left} to go. Marcus is waiting.` : 'Welcome back. The twenty-five are done. Marcus is waiting.') : cv.tag}</p>
       <button class="btn btn-gold" id="begin">${back ? 'Go in' : cv.begin}</button>
       <button class="what" id="what">${cv.what}</button>
       <div class="small">Sound on is the whole point. Headphones are lovely.</div>
@@ -274,21 +289,39 @@
       ac(); MAR.muted = true; MAR.src = 'audio/marcus/m-g1.mp3'; MAR.play().then(() => { MAR.pause(); MAR.muted = false; MAR.currentTime = 0; }).catch(() => { MAR.muted = false; });
       musicStart(); ambStart();
       if (back) { sfx('tap'); NAR.muted = true; NAR.src = 'audio/voice/ui-first.mp3'; NAR.play().then(() => { NAR.pause(); NAR.muted = false; }).catch(() => { NAR.muted = false; }); closeVeil(enter); }
-      else { sfx('begin'); intro(); }
+      else { sfx('begin'); closeVeil(welcome); }
     });
     v.querySelector('#what').addEventListener('click', () => { sfx('tap'); whatIsThis(); });
   }
-  /* the doors open: Aurelia says why, the words arrive as she says them, then Go in */
-  function intro() {
-    const I = C.intro;
-    const v = veil(`<div class="cover intro">
-      <p class="p1"><span class="ln">${I.paras[0]}</span></p>
-      <p class="p2" hidden><span class="ln">${I.paras[1]}</span></p>
-      <button class="btn btn-gold" id="goin">${I.go}</button>
-    </div>`, 'deep');
-    const p2 = v.querySelector('.p2');
-    narrate('ui-intro1', () => { p2.hidden = false; p2.classList.add('arrive'); narrate('ui-intro2'); });
-    v.querySelector('#goin').addEventListener('click', () => { sfx('tap'); NAR.pause(); closeVeil(enter); });
+  /* the welcome: the two of them in the portico, in turns, the line beneath them */
+  function welcome() {
+    $('hud').hidden = true; $('deck').hidden = false; paintHud();
+    MODE = 'welcome'; CUR = null;
+    const t = $('tablet'); t.hidden = false; t.classList.add('welcome');
+    $('tnum').textContent = ''; $('tkind').hidden = true; $('tierline').textContent = '';
+    $('tfall').innerHTML = ''; $('readbtn').hidden = true; $('skipbtn').hidden = false; $('skipbtn').textContent = C.welcome.skip;
+    $('donebtn').textContent = C.welcome.ready; $('donebtn').hidden = true;
+    setText($('ttext'), '');
+    RIG.enter(); setTimeout(() => { ARIG.show(true); $('afig').classList.remove('walk-in-l'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l'); setTimeout(() => ARIG.bow(), 950); }, 500);
+    let i = 0, alive = true; welcome._stop = () => { alive = false; };
+    const next = () => {
+      if (!alive) return;
+      const ln = C.welcome.lines[i++];
+      if (!ln) { $('donebtn').hidden = false; $('donebtn').classList.add('arrive'); $('skipbtn').hidden = true; return; }
+      $('tnum').textContent = ln.who === 'marcus' ? 'Marcus' : 'Aurelia';
+      setText($('ttext'), ln.t);
+      const after = () => setTimeout(next, 650);
+      if (ln.who === 'marcus') { const l = line(ln.id) || { id: ln.id, t: ln.t }; marcusSay(l, i % 2 ? 'point' : 'nod', after); $('bubble').hidden = true; }
+      else { ARIG[i === 1 ? 'wave' : 'nod'](); aureliaSay(ln.id, after); }
+    };
+    setTimeout(next, 2400);
+  }
+  function welcomeDone() {
+    if (welcome._stop) welcome._stop(); hush(); $('bubble').hidden = true;
+    $('tablet').classList.remove('welcome'); $('skipbtn').textContent = 'Not this one today'; $('donebtn').hidden = false; $('donebtn').classList.remove('arrive');
+    $('afig').classList.remove('walk-in-l'); $('afig').classList.add('walk-out-l'); setTimeout(() => { ARIG.show(false); $('afig').classList.remove('walk-out-l'); }, 1100);
+    $('hud').hidden = false; S.visits++; save();
+    $('tablet').classList.add('sink'); setTimeout(() => nextTablet(true), 500);
   }
   function whatIsThis() {
     const w = C.what;
@@ -325,8 +358,8 @@
 
   /* ---------- boot ---------- */
   async function boot() {
-    const [c, v] = await Promise.all([fetch('content.json').then(r => r.json()), fetch('audio/marcus/visemes.json').then(r => r.json()).catch(() => null)]);
-    C = c; VIS = v;
+    const [c, v, av] = await Promise.all([fetch('content.json').then(r => r.json()), fetch('audio/marcus/visemes.json').then(r => r.json()).catch(() => null), fetch('audio/voice/visemes.json').then(r => r.json()).catch(() => null)]);
+    C = c; VIS = v; AVIS = av;
     for (const k in C.marcus.lines) for (const l of C.marcus.lines[k]) LINES[l.id] = l;
     for (const l of (C.marcus.spoken || [])) LINES[l.id] = l;
     buildScene();

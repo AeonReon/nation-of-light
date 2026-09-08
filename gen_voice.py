@@ -32,3 +32,21 @@ for name, text in lines.items():
 (HERE / "audio" / "manifest.json").write_text(json.dumps({"voice": VOICE, "clips": sorted(p.stem for p in OUT.glob("*.mp3")),
     "marcus": sorted(p.stem for p in (HERE / "audio" / "marcus").glob("*.mp3"))}, indent=1))
 print("done,", made, "new of", len(lines))
+
+# ---- her mouth, for the lines she speaks on screen (the welcome and the finish) ----
+import tempfile
+RHUBARB = "/Volumes/2TB SSD/APP-DATA/shared-models/rhubarb/Rhubarb-Lip-Sync-1.14.0-macOS/rhubarb"
+VIS = OUT / "visemes.json"; vis = json.loads(VIS.read_text()) if VIS.exists() else {}
+for name, text in lines.items():
+    if not (name.startswith("ui-w") or name == "ui-deck"): continue
+    if name in vis and not FORCE: continue
+    mp3 = OUT / f"{name}.mp3"
+    if not mp3.exists(): continue
+    with tempfile.TemporaryDirectory() as td:
+        wav = Path(td) / "a.wav"; dlg = Path(td) / "d.txt"
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(mp3), "-ar", "16000", "-ac", "1", str(wav)], check=True)
+        dlg.write_text(text)
+        r = subprocess.run([RHUBARB, "-f", "json", "--dialogFile", str(dlg), str(wav)], capture_output=True, text=True, timeout=180)
+        vis[name] = [[round(c["start"], 2), c["value"]] for c in json.loads(r.stdout)["mouthCues"]]
+        print("baked", name)
+VIS.write_text(json.dumps(vis, separators=(",", ":")))

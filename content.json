@@ -1,5 +1,5 @@
 {
- "version": 6,
+ "version": 7,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -212,6 +212,18 @@
    {
     "id": "c-help-rest",
     "t": "The twenty-five are done. Come back tomorrow and there will be more. Tap me again and I will give you something to think about."
+   },
+   {
+    "id": "c-w1",
+    "t": "This is for the ones who move. A spectacular life is here already, and most of it is free. It only has to be chosen."
+   },
+   {
+    "id": "c-w2",
+    "t": "Nothing here is difficult. Do not think about them. Do one, tap Done, do the next."
+   },
+   {
+    "id": "c-w3",
+    "t": "It takes one decision: to be that version of yourself, today. Ready?"
    }
   ]
  },
@@ -489,14 +501,15 @@
   "break-feet": "Fifteen, and you are up out of the chair. The next five need one thing from the room. Whatever you cannot find, something in the room will do instead.",
   "break-fetch": "Twenty. The last five have other people in them, and the last two are phone calls. Nothing in them is hard. What stops people is a feeling, and the feeling is made of paper.",
   "intro1": "Light School is for the ones who move. A spectacular life is here already, with nothing new needed: a walk, a park, a gallery, a building that has stood for centuries, a country estate open to anyone, the finest shop in town, the people you read about, who live near you and can be met. Most of it is free. It is a choice.",
-  "intro2": "The choice needs momentum. Twenty-five tiny actions, about ten minutes, from the chair you are in. Do not think about them. Do one, tap Done, do the next."
+  "intro2": "The choice needs momentum. Twenty-five tiny actions, about ten minutes, from the chair you are in. Do not think about them. Do one, tap Done, do the next.",
+  "w1": "Welcome to Light School. Most people wait: for money, for time, for the right moment. Life goes past while they wait.",
+  "w2": "Choosing takes momentum. So we start with twenty-five tiny actions, about ten minutes, from the chair you are in.",
+  "w3": "We are not going to convince you. Feel what it is like to have momentum, and see who you are at the end of it."
  },
  "cover": {
   "em": "Nation of",
   "title": "Light School",
-  "lines": [
-   "Most people wait. For more money, more time, the right moment. Life goes past while they wait."
-  ],
+  "tag": "Seize the day. Build momentum. Craft a spectacular life.",
   "begin": "Begin",
   "what": "What is this?"
  },
@@ -604,11 +617,45 @@
   "ring": "c-ring",
   "enquiry": "c-enquiry"
  },
- "intro": {
-  "paras": [
-   "Light School is for the ones who move. A spectacular life is here already, with nothing new needed: a walk, a park, a gallery, a building that has stood for centuries, a country estate open to anyone, the finest shop in town, the people you read about, who live near you and can be met. Most of it is free. It is a choice.",
-   "The choice needs momentum. Twenty-five tiny actions, about ten minutes, from the chair you are in. Do not think about them. Do one, tap Done, do the next."
-  ],
-  "go": "Go in"
+ "welcome": {
+  "ready": "I am ready",
+  "skip": "Skip the welcome",
+  "lines": [
+   {
+    "who": "aurelia",
+    "id": "ui-w1",
+    "t": "Welcome to Light School. Most people wait: for money, for time, for the right moment. Life goes past while they wait."
+   },
+   {
+    "who": "marcus",
+    "id": "c-w1",
+    "t": "This is for the ones who move. A spectacular life is here already, and most of it is free. It only has to be chosen."
+   },
+   {
+    "who": "aurelia",
+    "id": "ui-w2",
+    "t": "Choosing takes momentum. So we start with twenty-five tiny actions, about ten minutes, from the chair you are in."
+   },
+   {
+    "who": "marcus",
+    "id": "c-w2",
+    "t": "Nothing here is difficult. Do not think about them. Do one, tap Done, do the next."
+   },
+   {
+    "who": "aurelia",
+    "id": "ui-w3",
+    "t": "We are not going to convince you. Feel what it is like to have momentum, and see who you are at the end of it."
+   },
+   {
+    "who": "marcus",
+    "id": "c-w3",
+    "t": "It takes one decision: to be that version of yourself, today. Ready?"
+   }
+  ]
+ },
+ "aurelia": {
+  "name": "Aurelia",
+  "role": "Keeper of the flame",
+  "named_for": "Aurelia Cotta, about 120 to 54 BC, who taught her son herself"
  }
 }

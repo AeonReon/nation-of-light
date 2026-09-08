@@ -240,3 +240,18 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .cover.intro .p2.arrive{animation:reveal 1.2s var(--ease) both}
 .cover.intro .btn-gold{animation-delay:1.6s;margin-top:8px}
 .veil.deep{background:linear-gradient(180deg,rgba(24,28,58,.62) 0%,rgba(24,28,58,.8) 40%,rgba(18,22,48,.94) 100%)}
+
+/* ---- v7: Aurelia, and the welcome ---- */
+.afig{position:absolute;left:2%;bottom:-1%;width:48%;aspect-ratio:220/330;z-index:3;transform-origin:50% 100%}
+.afig svg{width:100%;height:100%;overflow:visible;display:block}
+.afig.is-hidden{visibility:hidden}
+.afig.walk-in-l{animation:walkinl 1.15s var(--ease) both}
+@keyframes walkinl{0%{transform:translateX(-60%)}30%{transform:translateX(-38%) translateY(-1.2%)}55%{transform:translateX(-18%)}80%{transform:translateX(-4%) translateY(-.8%)}100%{transform:none}}
+.afig.walk-out-l{animation:walkoutl 1s var(--ease) both}
+@keyframes walkoutl{0%{transform:none}100%{transform:translateX(-70%)}}
+.cover .tag{font-family:var(--display);font-weight:500;font-size:clamp(19px,5.4vw,23px);line-height:1.3;color:#FFF7E4;margin:10px 0 22px;max-width:none}
+.tablet.welcome{--g1:#F3E3A8;--g2:var(--gold)}
+.tablet.welcome .num{font-size:12px}
+.tablet.welcome .test{font-size:clamp(19px,5.6vw,23px)}
+.tablet.welcome .skip{margin-top:auto}
+.btn.arrive{animation:panelin .6s var(--spring) both}

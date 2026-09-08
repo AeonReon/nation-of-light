@@ -155,6 +155,125 @@
   </g>
 </svg>`;
 
+
+  /* ---- Aurelia, keeper of the flame. Drawn, not painted, because nobody
+     ever painted the real woman. Healthy, radiant, classical: a white stola
+     to the ankle with a gold cord, a pale palla over one shoulder that lags
+     behind her, fair hair in a low knot with a gold fillet and two loose
+     strands, warm skin, clear eyes, and the small bronze lamp she carries. ---- */
+  const A_SKIN = '#F2CDA8', A_SKIN_D = '#DBAA82', A_SKIN_L = '#FBE3CB', A_HAIR = '#E2B860', A_HAIR_L = '#F3D485', A_HAIR_D = '#B9903E',
+    STOLA = '#FBF7EE', STOLA_D = '#E6DECD', STOLA_S = '#D2C8B3', PALLA = '#DCE8F0', PALLA_D = '#B9CEDD', PALLA_L = '#F1F6FA',
+    A_EYE = '#3F7A7C', A_LIP = '#C4606A', LAMP = '#8C7238', LAMP_D = '#5C4A22';
+  const AURELIA_SVG = `
+<svg viewBox="0 0 220 330" class="rig-svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="agStola" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${STOLA}"/><stop offset=".62" stop-color="${STOLA}"/><stop offset="1" stop-color="${STOLA_D}"/></linearGradient>
+    <linearGradient id="agPalla" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${PALLA_L}"/><stop offset=".6" stop-color="${PALLA}"/><stop offset="1" stop-color="${PALLA_D}"/></linearGradient>
+    <radialGradient id="agFace" cx=".38" cy=".3" r=".8"><stop offset="0" stop-color="${A_SKIN_L}"/><stop offset=".55" stop-color="${A_SKIN}"/><stop offset="1" stop-color="${A_SKIN_D}"/></radialGradient>
+    <radialGradient id="agLamp" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFC461" stop-opacity=".55"/><stop offset="1" stop-color="#FFC461" stop-opacity="0"/></radialGradient>
+  </defs>
+  <ellipse class="r-shadow" cx="110" cy="312" rx="52" ry="8" fill="rgba(60,40,20,.2)"/>
+  <g class="r-root">
+    <!-- the palla's long fall down her back, sprung from the shoulder -->
+    <g class="r-hair r-hair-r">
+      <path d="M142 152 Q168 190 160 286 Q140 292 126 280 Q136 214 134 166 Z" fill="url(#agPalla)"/>
+      <path d="M150 176 Q156 230 150 282" stroke="${PALLA_D}" stroke-width="1.6" fill="none" opacity=".6"/>
+    </g>
+    <!-- feet in sandals under the hem -->
+    <g class="r-legs">
+      <path d="M86 300 Q88 295 100 296 L110 296 Q114 302 110 308 L88 308 Q82 306 86 300 Z" fill="${A_SKIN}"/>
+      <path d="M112 300 Q114 295 126 296 L136 296 Q140 302 136 308 L114 308 Q108 306 112 300 Z" fill="${A_SKIN}"/>
+      <path d="M88 306 H110 M114 306 H136" stroke="${LAMP}" stroke-width="1.6"/>
+      <path d="M96 298 L100 302 L104 298 M122 298 L126 302 L130 298" stroke="${LAMP}" stroke-width="1.2" fill="none"/>
+    </g>
+    <g class="r-body">
+      <!-- left arm (viewer's left): bare from the shoulder pin, holding the lamp -->
+      <g class="r-arm r-arm-l">
+        <path d="M74 158 Q56 190 58 236 L76 240 Q78 200 88 168 Z" fill="${A_SKIN}"/>
+        <path d="M62 174 Q56 202 60 236 L66 238 Q64 204 72 178 Z" fill="${A_SKIN_D}" opacity=".3"/>
+        <ellipse cx="66" cy="246" rx="9" ry="8" fill="${A_SKIN}"/>
+        <g transform="translate(66 236)">
+          <ellipse cx="0" cy="-14" rx="26" ry="22" fill="url(#agLamp)"/>
+          <path d="M-14 -4 Q-16 4 -8 6 L8 6 Q16 4 14 -4 Q6 -8 -6 -8 Z" fill="${LAMP}"/>
+          <path d="M-14 -4 Q-8 -1 0 -1 Q8 -1 14 -4 Q6 -8 -6 -8 Z" fill="${LAMP_D}" opacity=".5"/>
+          <path d="M-13 -5 L-20 -8 L-14 -2 Z" fill="${LAMP}"/>
+          <path class="fl" d="M17 -6 Q13 -12 16 -18 Q18 -12 21 -16 Q23 -10 17 -6 Z" fill="#FFB43C"/>
+          <path d="M17 -6 Q15 -10 17 -13 Q19 -10 17 -6 Z" fill="#FFF0A8"/>
+        </g>
+      </g>
+      <!-- the stola: to the ankle, gathered under a gold cord, a soft overfold -->
+      <path d="M80 150 Q110 138 140 150 L154 180 L156 300 L64 300 L66 180 Z" fill="url(#agStola)"/>
+      <path d="M140 150 L154 180 L156 300 L132 300 L134 186 Z" fill="${STOLA_D}" opacity=".6"/>
+      <path d="M80 150 L66 180 L64 300 L82 300 L84 186 Z" fill="${STOLA_S}" opacity=".28"/>
+      <path d="M92 212 Q90 256 92 300 M110 212 Q110 256 110 300 M128 212 Q130 256 128 300" stroke="${STOLA_S}" stroke-width="1.3" fill="none" opacity=".8"/>
+      <path d="M72 200 Q110 214 148 200 L148 230 Q110 242 72 230 Z" fill="${STOLA}" opacity=".9"/>
+      <path d="M72 226 Q110 240 148 226" stroke="${STOLA_S}" stroke-width="1.2" fill="none" opacity=".7"/>
+      <!-- the gold cord -->
+      <path d="M70 200 Q110 212 150 200" stroke="${GOLD}" stroke-width="3" fill="none"/>
+      <path d="M110 206 l-4 14 M110 206 l5 15" stroke="${GOLD}" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <circle cx="106" cy="221" r="2" fill="${GOLD_D}"/><circle cx="115" cy="222" r="2" fill="${GOLD_D}"/>
+      <!-- the neckline and collarbones -->
+      <path d="M94 150 Q110 164 126 150 Q120 176 110 178 Q100 176 94 150 Z" fill="${A_SKIN}"/>
+      <path d="M100 160 Q110 166 120 160" stroke="${A_SKIN_D}" stroke-width="1.2" fill="none" opacity=".6"/>
+      <!-- the palla over the viewer's-right shoulder, and its brooch -->
+      <path d="M118 148 Q136 140 150 150 L156 176 Q136 166 118 160 Z" fill="url(#agPalla)"/>
+      <circle cx="146" cy="154" r="5" fill="${GOLD}"/><circle cx="146" cy="154" r="2.4" fill="${GOLD_D}"/>
+      <!-- right arm (viewer's right): bare, the one that gestures -->
+      <g class="r-arm r-arm-r">
+        <path d="M146 158 Q166 188 164 232 L146 238 Q144 202 134 168 Z" fill="${A_SKIN}"/>
+        <path d="M156 176 Q164 206 160 234 L164 232 Q166 200 156 172 Z" fill="${A_SKIN_D}" opacity=".35"/>
+        <ellipse cx="155" cy="243" rx="9" ry="8" fill="${A_SKIN}"/>
+        <path d="M124 154 Q140 150 146 158" stroke="${GOLD}" stroke-width="2" fill="none" opacity=".7"/>
+      </g>
+    </g>
+    <g class="r-head">
+      <path d="M100 118 L120 118 L124 152 L96 152 Z" fill="${A_SKIN_D}"/>
+      <path d="M100 118 L110 118 L110 152 L96 152 Z" fill="${A_SKIN}" opacity=".6"/>
+      <!-- hair behind the head, and the low knot -->
+      <path d="M74 92 Q68 130 82 148 L138 148 Q152 130 146 92 Z" fill="${A_HAIR_D}"/>
+      <ellipse cx="144" cy="126" rx="11" ry="13" fill="${A_HAIR}"/>
+      <ellipse cx="146" cy="123" rx="6" ry="7" fill="${A_HAIR_L}" opacity=".55"/>
+      <!-- a loose strand each side, sprung -->
+      <g class="r-hair r-hair-l">
+        <path d="M78 96 Q66 120 70 150 Q78 154 84 146 Q80 122 84 100 Z" fill="${A_HAIR}"/>
+        <path d="M78 100 Q72 122 76 146" stroke="${A_HAIR_L}" stroke-width="1.4" fill="none" opacity=".7"/>
+      </g>
+      <!-- face -->
+      <ellipse cx="110" cy="100" rx="32" ry="39" fill="url(#agFace)"/>
+      <path d="M124 66 Q142 84 140 114 Q139 128 128 136 Q138 116 136 96 Q134 78 124 66 Z" fill="${A_SKIN_D}" opacity=".3"/>
+      <!-- the jaw: chin, and the mouth that moves -->
+      <g class="r-jaw">
+        <ellipse cx="110" cy="128" rx="20" ry="11" fill="${A_SKIN}"/>
+        <path d="M100 138 Q110 143 120 138" stroke="${A_SKIN_D}" stroke-width="1" fill="none" opacity=".5"/>
+        <g class="r-mouth"><ellipse class="r-mouth-shape" cx="0" cy="0" rx="7" ry="1.6" fill="${A_LIP}"/></g>
+      </g>
+      <path d="M103 121 Q110 118 117 121" stroke="${A_LIP}" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".9"/>
+      <ellipse cx="89" cy="112" rx="6.5" ry="4" fill="#F0A0A0" opacity=".24"/>
+      <ellipse cx="131" cy="112" rx="6.5" ry="4" fill="#F0A0A0" opacity=".24"/>
+      <path d="M108 94 Q105 106 108 111 Q111 113 114 110 Q115 104 112 94" fill="${A_SKIN_D}" opacity=".55"/>
+      <path d="M86 86 Q95 81 103 86" stroke="${A_HAIR_D}" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <path d="M117 86 Q125 81 134 86" stroke="${A_HAIR_D}" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <ellipse cx="96" cy="97" rx="7.5" ry="5.4" fill="#FFFDF8"/>
+      <ellipse cx="124" cy="97" rx="7.5" ry="5.4" fill="#FFFDF8"/>
+      <g class="r-eye r-eye-l"><circle cx="97" cy="97.5" r="4.2" fill="${A_EYE}"/><circle cx="97" cy="97.5" r="2.1" fill="${INK}"/><circle class="r-shine" cx="98.4" cy="96" r="1.2" fill="#fff"/></g>
+      <g class="r-eye r-eye-r"><circle cx="125" cy="97.5" r="4.2" fill="${A_EYE}"/><circle cx="125" cy="97.5" r="2.1" fill="${INK}"/><circle class="r-shine" cx="126.4" cy="96" r="1.2" fill="#fff"/></g>
+      <path d="M89 94 Q96 90 103 94" stroke="${A_HAIR_D}" stroke-width="1.3" fill="none" opacity=".8"/>
+      <path d="M117 94 Q124 90 131 94" stroke="${A_HAIR_D}" stroke-width="1.3" fill="none" opacity=".8"/>
+      <!-- the hair over the brow, parted, and the gold fillet -->
+      <path d="M76 100 Q80 62 110 58 Q140 62 144 100 Q138 80 122 74 Q112 72 110 76 Q108 72 98 74 Q82 80 76 100 Z" fill="${A_HAIR}"/>
+      <path d="M84 86 Q94 68 110 64 Q126 68 136 86" stroke="${A_HAIR_L}" stroke-width="2.4" fill="none" opacity=".7"/>
+      <path d="M110 60 L110 76" stroke="${A_HAIR_D}" stroke-width="1" opacity=".5"/>
+      <path d="M80 84 Q110 62 140 84" stroke="${GOLD}" stroke-width="2.4" fill="none"/>
+      <circle cx="110" cy="68" r="2.2" fill="${GOLD_D}"/>
+      <!-- the strand on the viewer's right, over the knot -->
+      <g class="r-hair r-hair-l">
+        <path d="M140 98 Q150 122 146 150 Q140 152 136 146 Q140 122 136 102 Z" fill="${A_HAIR}" opacity=".95"/>
+      </g>
+    </g>
+  </g>
+</svg>`;
+  const AURELIA_PIVOTS = { neck: [110, 152], feet: [110, 310], hairL: [80, 96], hairR: [142, 152], armL: [78, 160], armR: [146, 160], mouth: [110, 128] };
+
   const VISEME_MOUTH = {
     X: { rx: 8,   ry: 1.5, y: 0,   jaw: 0 },
     A: { rx: 9,   ry: 1,   y: 0,   jaw: 0 },
@@ -191,7 +310,7 @@
   };
 
   class Figure {
-    constructor(host, svg) {
+    constructor(host, svg, pivots) {
       host.innerHTML = svg || MARCUS_SVG;
       this.el = host; this.svg = host.querySelector('svg');
       const q = s => this.svg.querySelector(s);
@@ -199,7 +318,7 @@
         armL: q('.r-arm-l'), armR: q('.r-arm-r'), eyeL: q('.r-eye-l'), eyeR: q('.r-eye-r'),
         jaw: q('.r-jaw'), mouth: q('.r-mouth'), shape: q('.r-mouth-shape'), shadow: q('.r-shadow') };
       // pivots: neck, feet, the two cloak pieces (shoulder pins), the shoulders, the mouth
-      this.pivot = { neck: [110, 152], feet: [110, 310], hairL: [80, 152], hairR: [146, 154], armL: [76, 160], armR: [148, 160], mouth: [110, 130] };
+      this.pivot = pivots || { neck: [110, 152], feet: [110, 310], hairL: [80, 152], hairR: [146, 154], armL: [76, 160], armR: [148, 160], mouth: [110, 130] };
       this.s = {
         y: new Spring(0, 190, 15), rot: new Spring(0, 150, 13), sx: new Spring(1, 240, 17), sy: new Spring(1, 240, 17),
         head: new Spring(0, 170, 12), headY: new Spring(0, 200, 15),
@@ -314,5 +433,5 @@
       clearTimeout(this._lookT); this._lookT = setTimeout(() => { if (!this.mood) this.s.head.home(); }, 1500);
     }
   }
-  window.MarcusRig = { Figure, MARCUS_SVG, Spring, Ticker };
+  window.MarcusRig = { Figure, MARCUS_SVG, AURELIA_SVG, AURELIA_PIVOTS, Spring, Ticker };
 })();
