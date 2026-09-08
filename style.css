@@ -284,3 +284,5 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 @keyframes spark{0%{transform:translate(0,0) scale(.6);opacity:0}15%{opacity:1}100%{transform:translate(var(--dx),var(--dy)) scale(1.1);opacity:0}}
 .nameplate.fade{animation:platefade .8s var(--ease) both}
 @keyframes platefade{to{opacity:0;transform:translateY(6px)}}
+.deck.measuring .tablet{animation:none!important;transform:none!important}
+.deck.measuring .tablet .test span{animation:none!important;transform:none!important}

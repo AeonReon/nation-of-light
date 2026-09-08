@@ -174,7 +174,24 @@
 
   /* ---------- the tablet ---------- */
   let CUR = null, MODE = 'task';
-  function riseTablet() { const t = $('tablet'); t.hidden = false; t.classList.remove('sink'); t.classList.remove('rise'); void t.offsetWidth; t.classList.add('rise'); }
+  /* whatever the phone, the tablet fits: measure the overflow and take it out of the scene */
+  let FIT = 0;
+  function fitDeck() {
+    const deck = $('deck'), scene = $('scene'), stage = $('stage'), t = $('tablet'), tx = $('ttext');
+    if (deck.hidden || t.hidden) return;
+    deck.classList.add('measuring');
+    const floor = Math.round(stage.clientHeight * .3);
+    let h = scene.getBoundingClientRect().height, guard = 0;
+    while (guard++ < 12) {
+      const over = Math.max(deck.scrollHeight - deck.clientHeight, tx.scrollHeight - tx.clientHeight);
+      if (over <= 0 || h <= floor) break;
+      h = Math.max(floor, h - over - 2); scene.style.maxHeight = h + 'px';
+    }
+    deck.classList.remove('measuring');
+  }
+  function fitSoon() { clearTimeout(FIT); FIT = setTimeout(fitDeck, 60); setTimeout(fitDeck, 900); }
+  window.addEventListener('resize', () => { $('scene').style.maxHeight = ''; fitSoon(); });
+  function riseTablet() { const t = $('tablet'); t.hidden = false; t.classList.remove('sink'); fitSoon(); t.classList.remove('rise'); void t.offsetWidth; t.classList.add('rise'); }
   function setText(el, text) { el.innerHTML = '<div class="w">' + wordSpans(text) + '</div>'; el.classList.remove('say'); void el.offsetWidth; el.classList.add('say'); }
   function showTablet(m, autoRead) {
     CUR = m; MODE = 'task';
@@ -289,14 +306,27 @@
     }
     if (say && line(say)) marcusSay(line(say), 'salute', () => setTimeout(quote, 400)); else quote();
   }
+  function finScene(then) {
+    const sc = C.finale.scene; if (!sc) { then(); return; }
+    ARIG.show(true); $('afig').classList.remove('walk-out-l', 'walk-in-l'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l');
+    MODE = 'scene'; CUR = null; const t = $('tablet'); t.classList.add('welcome');
+    $('tkind').hidden = true; $('tierline').textContent = ''; $('tfall').innerHTML = ''; $('readbtn').hidden = true; $('skipbtn').hidden = true; $('donebtn').hidden = true; $('tnum').textContent = ''; setText($('ttext'), ''); riseTablet();
+    let i = 0; const step = () => {
+      const ln = sc[i++];
+      if (!ln) { t.classList.remove('welcome'); $('donebtn').hidden = false; MODE = 'break'; then(); return; }
+      $('tnum').textContent = ln.who === 'marcus' ? C.names.marcus : C.names.aurelia; setText($('ttext'), ln.t);
+      if (ln.who === 'marcus') { ARIG.smile(3); marcusSay(line(ln.id) || { id: ln.id, t: ln.t }, 'nod', () => setTimeout(step, 450)); }
+      else { RIG.smile(3); ARIG.point(); aureliaSay(ln.id, () => setTimeout(step, 450)); }
+    };
+    setTimeout(step, 1300);
+  }
   function finale() {
     for (let i = 0; i < 40; i++) { const l = document.createElement('i'); l.className = 'leaffall'; l.style.left = Math.random() * 100 + '%'; l.style.animationDuration = (2.6 + Math.random() * 2.4) + 's'; l.style.animationDelay = (Math.random() * 1.6) + 's'; $('stage').appendChild(l); setTimeout(() => l.remove(), 6000); }
     RIG.cheer(); sfx('wreath'); PORTICO.glideTo(1, 3000); musicStart(.45);
-    const last = () => marcusSay(line(C.finale.line), 'salute', () => {
+    const last = () => marcusSay(line(C.finale.line), 'salute', () => finScene(() => {
       breakCard({ t: C.finale.t, after: 'finale' }, () => restTablet()); $('tnum').textContent = 'Twenty-five'; $('donebtn').textContent = 'Sit with Marcus';
-      ARIG.show(true); $('afig').classList.remove('walk-in-l'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l');
-      setTimeout(() => aureliaSay('ui-deck', () => ARIG.cheer()), 1200);
-    });
+      setTimeout(() => aureliaSay('ui-deck', () => ARIG.cheer()), 600);
+    }));
     setTimeout(() => { if (C.finale.say && line(C.finale.say)) marcusSay(line(C.finale.say), 'cheer', () => setTimeout(last, 400)); else last(); }, 800);
   }
 
@@ -338,7 +368,7 @@
       if (!ln) { $('donebtn').hidden = false; $('donebtn').classList.add('arrive'); $('skipbtn').hidden = true; return; }
       $('tnum').textContent = ln.who === 'marcus' ? 'Marcus Aurelius' : 'Aurelia, keeper of the flame';
       setText($('ttext'), ln.t);
-      const after = () => { if (i === 2) platesFade(); setTimeout(next, 650); };
+      const after = () => setTimeout(next, 650);
       if (ln.who === 'marcus') { const l = line(ln.id) || { id: ln.id, t: ln.t }; marcusSay(l, i % 2 ? 'point' : 'nod', after); $('bubble').hidden = true; }
       else { ARIG[i === 1 ? 'wave' : 'nod'](); aureliaSay(ln.id, after); }
     };
@@ -347,7 +377,7 @@
   function plates(on) { document.querySelectorAll('.nameplate').forEach(n => n.remove()); if (!on) return; $('scene').insertAdjacentHTML('beforeend', `<div class="nameplate a">${C.names.aurelia}</div><div class="nameplate m">${C.names.marcus}</div>`); }
   function platesFade() { document.querySelectorAll('.nameplate').forEach(n => { n.classList.add('fade'); setTimeout(() => n.remove(), 900); }); }
   function welcomeDone() {
-    if (welcome._stop) welcome._stop(); hush(); $('bubble').hidden = true; plates(false);
+    if (welcome._stop) welcome._stop(); hush(); $('bubble').hidden = true; platesFade();
     $('tablet').classList.remove('welcome'); $('skipbtn').textContent = 'Not this one today'; $('donebtn').hidden = false; $('donebtn').classList.remove('arrive');
     $('afig').classList.remove('walk-in-l'); $('afig').classList.add('walk-out-l'); setTimeout(() => { ARIG.show(false); $('afig').classList.remove('walk-out-l'); }, 1100);
     $('hud').hidden = false; S.visits++; save();
