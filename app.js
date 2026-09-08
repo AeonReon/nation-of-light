@@ -96,7 +96,7 @@
   /* Aurelia reads: the tablets, the breaks, the finish. */
   function narrate(id, after) {
     if (!voiceOn()) { if (after) setTimeout(after, 300); return; }
-    NAR.pause(); NAR.src = 'audio/voice/' + id + '.mp3'; NAR.onended = () => { $('readbtn').classList.remove('on'); if (after) after(); }; NAR.onerror = () => { if (after) after(); };
+    NAR.pause(); NAR.src = 'audio/voice/' + id + '.mp3?v=' + C.version; NAR.onended = () => { $('readbtn').classList.remove('on'); if (after) after(); }; NAR.onerror = () => { if (after) after(); };
     NAR.play().catch(() => { if (after) after(); });
   }
   /* Marcus speaks: only a line from content.json, mouth off the audio clock. */
@@ -111,7 +111,7 @@
     const finish = () => { RIG.hush(); marcusSay._t = setTimeout(() => { b.hidden = true; }, 1800); if (after) after(); };
     const est = Math.min(12000, ln.t.length * 70);
     if (voiceOn()) {
-      MAR.pause(); CUES = (VIS && VIS[ln.id]) || null; MAR.src = 'audio/marcus/' + ln.id + '.mp3';
+      MAR.pause(); CUES = (VIS && VIS[ln.id]) || null; MAR.src = 'audio/marcus/' + ln.id + '.mp3?v=' + C.version;
       MAR.onended = finish; MAR.onerror = () => { RIG.talk(est / 1000); setTimeout(finish, est); };
       RIG.talk(20); MAR.play().catch(() => { RIG.talk(est / 1000); setTimeout(finish, est); });
     } else { RIG.talk(est / 1000); setTimeout(finish, est); }
@@ -200,7 +200,7 @@
   function showTablet(m, autoRead) {
     CUR = m; MODE = 'task';
     const tier = C.tiers.find(x => x.id === m.tier), idx = C.moves.indexOf(m) + 1;
-    $('tnum').textContent = 'Tablet ' + idx; $('tkind').textContent = m.kind; $('tkind').className = 'kind kind-' + m.kind; $('tkind').hidden = false;
+    $('tnum').textContent = 'Tablet ' + idx + ' of ' + C.moves.length; $('tkind').textContent = m.kind; $('tkind').className = 'kind kind-' + m.kind; $('tkind').hidden = false;
     $('tierline').textContent = tier.name + ' · ' + tier.line;
     setText($('ttext'), m.test);
     $('tfall').innerHTML = m.fallback ? '<b>No excuses.</b> ' + m.fallback : '';
@@ -234,7 +234,7 @@
     $('tnum').textContent = next ? S.done.length + ' of ' + C.moves.length : 'The twenty-five'; $('tkind').hidden = true;
     $('tierline').textContent = next ? 'Next: ' + C.tiers.find(x => x.id === next.tier).name : 'Done, every one';
     setText($('ttext'), next ? 'Marcus is here and the next tablet is ready when you are.' : 'Twenty-five things, and you did every one. More is being written, and the portico will be here.');
-    $('tfall').innerHTML = ''; $('readbtn').hidden = true; $('skipbtn').hidden = true; $('donebtn').textContent = next ? 'Next tablet' : 'Sit with Marcus'; $('donebtn').disabled = false;
+    $('tfall').innerHTML = ''; $('readbtn').hidden = true; $('skipbtn').hidden = true; $('donebtn').textContent = next ? 'Next tablet' : (C.door ? 'The door' : 'Sit with Marcus'); $('donebtn').disabled = false; $('donebtn').hidden = false;
     riseTablet();
   }
   function nextTablet(autoRead) { const r = remaining(); if (!r.length) { restTablet(); return; } showTablet(r[0], autoRead); }
@@ -244,7 +244,7 @@
     if (busy) return;
     if (MODE === 'welcome') { sfx('tap'); welcomeDone(); return; }
     if (MODE === 'break') { $('tablet').classList.add('sink'); sfx('tap'); hush(); setTimeout(() => { const t = breakCard._then; breakCard._then = null; if (t) t(); else nextTablet(true); }, 380); return; }
-    if (MODE === 'rest') { const r = remaining(); if (r.length) { $('tablet').classList.add('sink'); setTimeout(() => nextTablet(true), 380); } else onMarcusTap(); return; }
+    if (MODE === 'rest') { const r = remaining(); if (r.length) { $('tablet').classList.add('sink'); setTimeout(() => nextTablet(true), 380); } else if (C.door) doorPanel(); else onMarcusTap(); return; }
     if (!CUR) return;
     busy = true; const m = CUR, i = S.done.length;
     S.done.push(m.id); S.skipped = S.skipped.filter(x => x !== m.id);
@@ -328,7 +328,7 @@
     for (let i = 0; i < 40; i++) { const l = document.createElement('i'); l.className = 'leaffall'; l.style.left = Math.random() * 100 + '%'; l.style.animationDuration = (2.6 + Math.random() * 2.4) + 's'; l.style.animationDelay = (Math.random() * 1.6) + 's'; $('stage').appendChild(l); setTimeout(() => l.remove(), 6000); }
     RIG.cheer(); sfx('wreath'); PORTICO.glideTo(1, 3000); musicStart(.45);
     const last = () => marcusSay(line(C.finale.line), 'salute', () => finScene(() => {
-      breakCard({ t: C.finale.t, after: 'finale' }, () => restTablet()); $('tnum').textContent = 'Twenty-five'; $('donebtn').textContent = 'Sit with Marcus';
+      breakCard({ t: C.finale.t, after: 'finale' }, () => door()); $('tnum').textContent = 'Twenty-five'; $('donebtn').textContent = C.finale.go || 'Go to the door';
       setTimeout(() => aureliaSay('ui-deck', () => ARIG.cheer()), 600);
     }));
     setTimeout(() => { if (C.finale.say && line(C.finale.say)) marcusSay(line(C.finale.say), 'cheer', () => setTimeout(last, 400)); else last(); }, 800);
@@ -404,6 +404,66 @@
     const greet = () => marcusSay(line(S.done.length === 0 && visit === 0 ? 'c-enter' : 'c-return') || fresh(C.greet), null, () => setTimeout(() => nextTablet(true), 500));
     setTimeout(greet, 1300);
   }
+  /* ---------- the door: the two of them, then the application ---------- */
+  function door() {
+    const D = C.door; if (!D) { restTablet(); return; }
+    ARIG.show(true); $('afig').classList.remove('walk-out-l', 'walk-in-l'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l');
+    MODE = 'scene'; CUR = null; const t = $('tablet'); t.classList.add('welcome');
+    $('tkind').hidden = true; $('tierline').textContent = ''; $('tfall').innerHTML = ''; $('readbtn').hidden = true; $('skipbtn').hidden = true; $('donebtn').hidden = true; $('tnum').textContent = ''; setText($('ttext'), ''); riseTablet();
+    let i = 0; const step = () => {
+      const ln = D.scene[i++];
+      if (!ln) { t.classList.remove('welcome'); MODE = 'break'; doorPanel(); return; }
+      $('tnum').textContent = ln.who === 'marcus' ? C.names.marcus : C.names.aurelia; setText($('ttext'), ln.t);
+      if (ln.who === 'marcus') { ARIG.smile(3); marcusSay(line(ln.id) || { id: ln.id, t: ln.t }, i === 4 ? 'point' : 'nod', () => setTimeout(step, 450)); }
+      else { RIG.smile(3); ARIG[i === 5 ? 'point' : 'nod'](); aureliaSay(ln.id, () => setTimeout(step, 450)); }
+    };
+    setTimeout(step, 1300);
+  }
+  function doorPanel() {
+    const D = C.door, F = D.fields, A = S.apply || {};
+    const v = veil(`<div class="panel doorcard">
+      <div class="eyebrow"><i></i>${D.title}</div>
+      <p class="lede">${D.lede}</p>
+      <form id="applyform">
+        <label>${F.name}<input name="name" required autocomplete="name" value="${A.name || ''}"></label>
+        <label>${F.email}<input name="email" type="email" required autocomplete="email" value="${A.email || ''}"></label>
+        <label>${F.felt}<textarea name="felt" rows="3" required>${A.felt || ''}</textarea></label>
+        <div class="whichl">${F.which}</div>
+        <div class="which">${D.which.map(([k, l], n) => `<label class="opt"><input type="radio" name="which" value="${k}" ${(A.which || 'community') === k ? 'checked' : ''}><span>${l}</span></label>`).join('')}</div>
+        <button class="btn btn-gold" type="submit" style="width:100%">${D.send}</button>
+      </form>
+      <button class="what dark" id="codebtn">${D.code}</button>
+      <button class="what dark" id="doorback">Back to the portico</button>
+    </div>`, 'light');
+    v.querySelector('#applyform').addEventListener('submit', async e => {
+      e.preventDefault(); sfx('tap'); const fd = new FormData(e.target); const data = Object.fromEntries(fd.entries());
+      S.apply = { ...data, done: S.done.length, skipped: S.skipped.length, at: new Date().toISOString() }; save();
+      const body = `Light School application\n\nName: ${data.name}\nEmail: ${data.email}\nDoor: ${data.which}\nTablets done: ${S.done.length} of ${C.moves.length}, skipped ${S.skipped.length}\n\nWhat they felt by the twenty-fifth:\n${data.felt}`;
+      let sent = false;
+      if (D.apply.web3forms) {
+        try { const r = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ access_key: D.apply.web3forms, subject: 'Light School application: ' + data.name, from_name: 'Light School', name: data.name, email: data.email, message: body }) }); sent = r.ok; } catch (err) {}
+      }
+      if (!sent) location.href = 'mailto:' + D.apply.to + '?subject=' + encodeURIComponent('Light School application: ' + data.name) + '&body=' + encodeURIComponent(body);
+      const p = v.querySelector('.doorcard'); p.innerHTML = `<div class="eyebrow"><i></i>${D.title}</div><h2>${D.sent}</h2><p class="lede">Marcus and Aurelia will be here tomorrow, and the tablets stay yours.</p><button class="btn btn-gold" id="doorback2" style="width:100%">Back to the portico</button>`;
+      p.querySelector('#doorback2').addEventListener('click', () => { sfx('tap'); closeVeil(() => { ARIG.show(false); restTablet(); }); });
+    });
+    v.querySelector('#codebtn').addEventListener('click', () => { sfx('tap'); codePanel(); });
+    v.querySelector('#doorback').addEventListener('click', () => { sfx('tap'); closeVeil(() => { ARIG.show(false); restTablet(); }); });
+  }
+  function codePanel() {
+    const D = C.door;
+    const v = veil(`<div class="panel doorcard">
+      <div class="eyebrow"><i></i>${D.codeTitle}</div>
+      <p class="lede">${D.codeLede}</p>
+      <form id="codeform"><label>${D.codeTitle}<input name="code" required autocomplete="off" autocapitalize="characters" value="${S.code || ''}"></label>
+        <button class="btn btn-gold" type="submit" style="width:100%">Open</button></form>
+      <button class="what dark" id="codeback">Back</button>
+    </div>`, 'light');
+    v.querySelector('#codeform').addEventListener('submit', e => { e.preventDefault(); sfx('tap'); S.code = new FormData(e.target).get('code').trim(); save();
+      const p = v.querySelector('.doorcard'); p.innerHTML = `<div class="eyebrow"><i></i>${D.codeTitle}</div><h2>Kept.</h2><p class="lede">${D.codeSoon}</p><button class="btn btn-gold" id="codeback2" style="width:100%">Back to the portico</button>`;
+      p.querySelector('#codeback2').addEventListener('click', () => { sfx('tap'); closeVeil(() => { ARIG.show(false); restTablet(); }); }); });
+    v.querySelector('#codeback').addEventListener('click', () => { sfx('tap'); closeVeil(doorPanel); });
+  }
   function help() {
     const v = veil(`<div class="help"><div class="panel">
       <h3>What is here</h3>
@@ -424,6 +484,7 @@
   async function boot() {
     const [c, v, av] = await Promise.all([fetch('content.json').then(r => r.json()), fetch('audio/marcus/visemes.json').then(r => r.json()).catch(() => null), fetch('audio/voice/visemes.json').then(r => r.json()).catch(() => null)]);
     C = c; VIS = v; AVIS = av;
+    const ids = new Set(C.moves.map(m => m.id)); S.done = S.done.filter(id => ids.has(id)); S.skipped = S.skipped.filter(id => ids.has(id)); save();
     for (const k in C.marcus.lines) for (const l of C.marcus.lines[k]) LINES[l.id] = l;
     for (const l of (C.marcus.spoken || [])) LINES[l.id] = l;
     buildScene();

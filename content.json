@@ -1,5 +1,5 @@
 {
- "version": 11,
+ "version": 12,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -300,6 +300,14 @@
    {
     "id": "c-fin2",
     "t": "Nobody great was ever made alone."
+   },
+   {
+    "id": "c-d2",
+    "t": "Almost none. You did, and you did it properly. That puts you in company most people never keep."
+   },
+   {
+    "id": "c-d4",
+    "t": "And if you tapped through without doing them, there is nothing on the other side for you. Not yet. The tablets are still here. Go back and do them."
    }
   ]
  },
@@ -594,7 +602,10 @@
   "t1": "The historian Tacitus wrote that I took charge of my son's education myself, instead of handing it to someone else. That is the whole idea of this school.",
   "t2": "My house stood in the Subura, the loudest quarter of Rome. Greatness does not need quiet. It needs a start.",
   "t3": "Keep going. I raised a boy who never sat still, and the world still knows his name.",
-  "t4": "Every one of these is small on purpose. The size of the step is not the point. Taking it is."
+  "t4": "Every one of these is small on purpose. The size of the step is not the point. Taking it is.",
+  "d1": "Twenty-five. Marcus, how many people finish a thing they start?",
+  "d3": "On the other side of this door is a whole world of people building a spectacular life without waiting for anything.",
+  "d5": "Light School takes people in by application. We choose who we bring in. Tell us who you are."
  },
  "cover": {
   "em": "Nation of",
@@ -789,7 +800,8 @@
     "id": "c-fin2",
     "t": "Nobody great was ever made alone."
    }
-  ]
+  ],
+  "go": "Go to the door"
  },
  "before": {
   "ring": "c-ring",
@@ -871,5 +883,66 @@
  "names": {
   "marcus": "Marcus Aurelius",
   "aurelia": "Aurelia Cotta"
+ },
+ "door": {
+  "scene": [
+   {
+    "who": "aurelia",
+    "id": "ui-d1",
+    "t": "Twenty-five. Marcus, how many people finish a thing they start?"
+   },
+   {
+    "who": "marcus",
+    "id": "c-d2",
+    "t": "Almost none. You did, and you did it properly. That puts you in company most people never keep."
+   },
+   {
+    "who": "aurelia",
+    "id": "ui-d3",
+    "t": "On the other side of this door is a whole world of people building a spectacular life without waiting for anything."
+   },
+   {
+    "who": "marcus",
+    "id": "c-d4",
+    "t": "And if you tapped through without doing them, there is nothing on the other side for you. Not yet. The tablets are still here. Go back and do them."
+   },
+   {
+    "who": "aurelia",
+    "id": "ui-d5",
+    "t": "Light School takes people in by application. We choose who we bring in. Tell us who you are."
+   }
+  ],
+  "title": "The door",
+  "lede": "Light School takes people in by application. Tell us who you are, and what the twenty-five did.",
+  "fields": {
+   "name": "Your name",
+   "email": "Your email",
+   "felt": "What did you feel by the twenty-fifth?",
+   "which": "Which door interests you?"
+  },
+  "which": [
+   [
+    "online",
+    "Online, on my own, fully automated"
+   ],
+   [
+    "community",
+    "Online with a community: calls, a group, mentors"
+   ],
+   [
+    "local",
+    "A local community: families raising children together"
+   ]
+  ],
+  "send": "Apply to Light School",
+  "code": "I have a code",
+  "codeTitle": "Your code",
+  "codeLede": "Members were given a code at the door. Enter it and the rooms beyond open.",
+  "codeSoon": "The rooms beyond are being built. Your code is kept, and they will open here.",
+  "sent": "Sent. We read every one, and we answer.",
+  "apply": {
+   "web3forms": "",
+   "to": "apply@aeonreon.com"
+  }
  }
 }
