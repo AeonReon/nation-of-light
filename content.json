@@ -1,5 +1,5 @@
 {
- "version": 18,
+ "version": 19,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -352,6 +352,18 @@
    {
     "id": "c-tour",
     "t": "That is the whole school. Three buttons, one thing at a time, and the two of us. Go on."
+   },
+   {
+    "id": "c-ret1",
+    "t": "Back again. That is the whole thing: coming back. Keep it going."
+   },
+   {
+    "id": "c-ret2",
+    "t": "You came back. Most people do not. Look at where you stand."
+   },
+   {
+    "id": "c-award",
+    "t": "That is an award. Not for a passion. For the cold, hard start of a thing. Well earned."
    }
   ]
  },
@@ -645,7 +657,7 @@
   "fin1": "Socrates taught Plato. Plato taught Aristotle. Aristotle taught Alexander.",
   "t1": "The historian Tacitus wrote that I took charge of my son's education myself, instead of handing it to someone else. That son was Julius Caesar. That is the whole idea of this school.",
   "t2": "My house stood in the Subura, the loudest quarter of Rome. Greatness does not need quiet. It needs a start.",
-  "t3": "Keep going. I raised a boy who never sat still, and the world still knows his name.",
+  "t3": "Keep going. I raised a boy who never sat still, and the world knows his name: Julius Caesar.",
   "t4": "Every one of these is small on purpose. The size of the step is not the point. Taking it is.",
   "d1": "Twenty-five. Marcus, how many people finish a thing they start?",
   "d3": "On the other side of this door is a whole world of people building a spectacular life without waiting for anything.",
@@ -750,7 +762,9 @@
   "t-2": "Where you stand: the days you have shown up, the things you have done, and your rank. The bar fills toward the next one.",
   "t-3": "This is your next thing. Do it and tap Done. If it is not the one, tap Not this one and we find another. That is all there is to it.",
   "t-4": "A flame for every day you show up. It never resets, and nobody scolds you. One light a day is the whole habit.",
-  "t-5": "And this is the portico. Nothing is asked of you there. Come and sit with us whenever you like."
+  "t-5": "And this is the portico. Nothing is asked of you there. Come and sit with us whenever you like.",
+  "ret1": "Welcome back. The flame is still lit, and so are you.",
+  "ret2": "Good. Coming back is the whole habit. Here is where you are."
  },
  "cover": {
   "em": "Nation of",
@@ -1007,7 +1021,7 @@
    },
    {
     "id": "ui-t3",
-    "t": "Keep going. I raised a boy who never sat still, and the world still knows his name."
+    "t": "Keep going. I raised a boy who never sat still, and the world knows his name: Julius Caesar."
    },
    {
     "id": "ui-t4",
@@ -1246,7 +1260,39 @@
    "m-g2",
    "m-x4",
    "m-x11"
-  ]
+  ],
+  "carry": {
+   "title": "Carry on where you left off",
+   "lede": "Ladders you have started. The next step is ready."
+  },
+  "awards": {
+   "title": "Your awards",
+   "lede": "Earned for the cold, hard start of things, never for a passion. A room's bronze at five steps, silver at fifteen, gold when every ladder in it is climbed.",
+   "tiers": [
+    [
+     "bronze",
+     "Bronze",
+     5
+    ],
+    [
+     "silver",
+     "Silver",
+     15
+    ],
+    [
+     "gold",
+     "Gold",
+     null
+    ]
+   ],
+   "special": [
+    {
+     "id": "twentyfive",
+     "name": "The twenty-five",
+     "line": "Every one of the first twenty-five, done."
+    }
+   ]
+  }
  },
  "arrival": {
   "lines": [
@@ -1284,7 +1330,34 @@
    "steps": "done",
    "rank": "rank"
   },
-  "post": null
+  "post": null,
+  "again": [
+   [
+    {
+     "who": "aurelia",
+     "id": "ui-ret1",
+     "t": "Welcome back. The flame is still lit, and so are you."
+    },
+    {
+     "who": "marcus",
+     "id": "c-ret1",
+     "t": "Back again. That is the whole thing: coming back. Keep it going."
+    }
+   ],
+   [
+    {
+     "who": "marcus",
+     "id": "c-ret2",
+     "t": "You came back. Most people do not. Look at where you stand."
+    },
+    {
+     "who": "aurelia",
+     "id": "ui-ret2",
+     "t": "Good. Coming back is the whole habit. Here is where you are."
+    }
+   ]
+  ],
+  "storyLede": "Something from us"
  },
  "room": {
   "title": "The portico",
@@ -1630,7 +1703,8 @@
    "book": "A book worth your attention",
    "beauty": "On beauty",
    "figure": "One of ours"
-  }
+  },
+  "progressTitle": "Where you stand"
  },
  "tour": {
   "steps": [

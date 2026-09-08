@@ -344,7 +344,7 @@
   }
 
   /* ---------- overlays ---------- */
-  function veil(html, cls = '') { const o = $('overlay'); o.innerHTML = `<div class="veil in ${cls}">${html}</div>`; return o.firstElementChild; }
+  function veil(html, cls = '') { const o = $('overlay'); o.innerHTML = `<div class="veil in ${cls}">${html}</div>`; const v = o.firstElementChild; if (cls.includes('light')) v.addEventListener('click', e => { if (e.target === v) { sfx('tap'); NAR.pause(); closeVeil(); } }); return v; }
   function closeVeil(then) { const v = $('overlay').firstElementChild; if (!v) { if (then) then(); return; } v.classList.remove('in'); v.classList.add('out'); setTimeout(() => { $('overlay').innerHTML = ''; if (then) then(); }, 480); }
 
   function cover() {
@@ -525,6 +525,12 @@
   function daysLit() { const s = new Set(Object.keys(S.days).filter(k => S.days[k] > 0)); for (const k in S.school.done) { const v = S.school.done[k]; if (typeof v === 'string') s.add(v.slice(0, 10)); } return s; }
   function seededShuffle(arr, seed) { const out = arr.slice(); let x = seed; for (let i = out.length - 1; i > 0; i--) { x = (x * 9301 + 49297) % 233280; const j = Math.floor(x / 233280 * (i + 1)); [out[i], out[j]] = [out[j], out[i]]; } return out; }
   const daySeed = () => { const d = today(); return (+d.slice(0, 4)) * 372 + (+d.slice(5, 7)) * 31 + (+d.slice(8, 10)); };
+  const started = () => allTracks().filter(tr => trackDone(tr) >= 1 && nextStep(tr) && !(S.school.projects || []).includes(tr.id)).sort((x, y) => (S.school.done[skey(y, y.steps[trackDone(y) - 1])] || '').localeCompare(S.school.done[skey(x, x.steps[trackDone(x) - 1])] || ''));
+  function carryCard(limit) {
+    const st = started().slice(0, limit || 4); if (!st.length) return '';
+    const K = C.school.carry;
+    return `<div class="acard carry"><span class="eyebrow">${K.title}</span>` + st.map(tr => { const c = catOf(tr), s = nextStep(tr), n = trackDone(tr); return `<button class="crow" style="--c:${c.accent};--c2:${c.accent2}" data-step="${skey(tr, s)}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${s.test}</small></span><i class="cprog"><b style="width:${Math.round(n / tr.steps.length * 100)}%"></b></i></button>`; }).join('') + '</div>';
+  }
   /* the quick ones: the journey's easy wins, then any track's first step, not yet done */
   function quickCandidates() {
     const easy = (SCH.journey.find(j => j.id === 'easy') || { steps: [] }).steps.map(findStep).filter(Boolean).filter(([tr, st]) => !sdone(skey(tr, st)));
@@ -547,16 +553,18 @@
     if (!$('roombtn')) { $('hud').insertAdjacentHTML('afterbegin', '<button class="roombtn" id="roombtn" aria-label="The portico"><svg viewBox="0 0 24 24" fill="none" stroke="#8F6F12" stroke-width="2" stroke-linecap="round"><path d="M3 9h18M4 9v10M9 9v10M15 9v10M20 9v10M2 19h20M12 3l9 6H3z"/></svg></button>'); $('roombtn').addEventListener('click', () => { sfx('tap'); roomView(); }); $('hud').insertAdjacentHTML('afterbegin', '<button class="roombtn" id="sharebtn" aria-label="Share"><svg viewBox="0 0 24 24" fill="none" stroke="#8F6F12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 001 1h14a1 1 0 001-1v-7M12 3v13M7 8l5-5 5 5"/></svg></button>'); $('sharebtn').addEventListener('click', () => { sfx('tap'); sharePanel(); }); }
     plates(false); MODE = 'school'; CUR = null; $('mfig').classList.remove('walk-in');
     const d = today(), fresh0 = !S.school.arrivedEver;
-    if (S.school.arrived !== d) { S.school.arrived = d; save(); arrival(fresh0); } else { RIG.show(false); ARIG.show(false); dock('pop'); renderSchool(); if (!S.school.toured) setTimeout(offerTour, 600); }
+    const again = S.school.arrived === d; S.school.arrived = d; S.school.visits = (S.school.visits || 0) + 1; save(); arrival(fresh0, again);
   }
   function paintSchoolCount() { const p = points(), r = rankOf(p); $('countn').textContent = p; const of = $('countn').nextElementSibling; of.hidden = false; of.textContent = r.name; }
   /* ---- the arrival: the portico, the two of them, where you stand, three for today ---- */
-  function arrival(first) {
+  function arrival(first, again) {
     $('stage').classList.add('arrive'); $('stage').classList.remove('room'); dock('scene');
     RIG.enter(); setTimeout(() => { ARIG.show(true); $('afig').classList.remove('walk-out-l', 'walk-in-l', 'popin', 'popout'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l'); }, 350);
     $('stabs').hidden = true; $('sline').textContent = '';
     renderArrival();
-    const lines = first ? C.arrival.first : C.arrival.lines; S.school.arrivedEver = true; save();
+    let lines = first ? C.arrival.first : (again && C.arrival.again ? C.arrival.again[(S.school.visits || 0) % C.arrival.again.length] : C.arrival.lines); S.school.arrivedEver = true; save();
+    // and something from them: one of her true lines, or one of his, in turn
+    if (!first) { const hers = (S.school.visits || 0) % 2 === 0; if (hers) { const ids = C.aurelia.lines.map(l => l.id); const id = ids[(S.school.visits || 0) % ids.length]; const ln = C.aurelia.lines.find(l => l.id === id); lines = lines.concat([{ who: 'aurelia', id, t: ln.t }]); } else { const all = Object.keys(LINES).filter(k => k.startsWith('m-')); const ln = fresh(all.slice((S.school.visits || 0) % all.length).concat(all)); if (ln) lines = lines.concat([{ who: 'marcus', id: ln.id, t: ln.t }]); } }
     setTimeout(() => speakSchool(lines), 1500);
   }
   function standCard() {
@@ -572,9 +580,10 @@
       `<div class="acard"><span class="eyebrow">Three for today</span>` +
       (picks.length ? picks.map(([tr, st]) => { const c = catOf(tr); return `<div class="pick" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span class="ptxt"><span class="scat">${c.name} · ${tr.name}</span><span class="stest">${st.test}</span></span><span class="pbtns"><button class="btn btn-gold sm" data-do="${skey(tr, st)}">${P.do}</button><button class="btn btn-ghost sm" data-not="${skey(tr, st)}">${P.notThis}</button></span></div>`; }).join('')
         : `<p class="lede">Every quick one is done. The long game is where the rest of you lives.</p>`) +
-      `</div><button class="btn btn-gold" id="intoschool" style="width:100%;margin-top:4px">${P.go}</button><button class="what dark" id="skipschool">${P.skip}</button><button class="what dark" id="sharearr">${C.share.btn}</button>`;
+      `</div>` + carryCard(3) + `<button class="btn btn-gold" id="intoschool" style="width:100%;margin-top:4px">${P.go}</button><button class="what dark" id="skipschool">${P.skip}</button><button class="what dark" id="sharearr">${C.share.btn}</button>`;
     list.querySelector('#sharearr').addEventListener('click', () => { sfx('tap'); sharePanel(); });
     list.querySelectorAll('[data-do]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.do); if (r) stepSheet(r[0], r[1], null, 'arrival'); }));
+    list.querySelectorAll('.crow[data-step]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.step); if (r) stepSheet(r[0], r[1], null, 'arrival'); }));
     list.querySelectorAll('[data-not]').forEach(b => b.addEventListener('click', () => { sfx('tap'); notThis(b.dataset.not); renderArrival(); if (line(C.arrival.another)) { hush(); marcusSay(line(C.arrival.another), 'nod'); } }));
     list.querySelector('#intoschool').addEventListener('click', () => { sfx('tap'); leaveArrival(); });
     list.querySelector('#skipschool').addEventListener('click', () => { sfx('tap'); leaveArrival(); });
@@ -626,6 +635,7 @@
     const R = C.room, list = $('slist'); list.scrollTop = 0;
     const rd = R.readings[daySeed() % R.readings.length];
     list.innerHTML = `<div class="roomtop"><h2>${R.title}</h2><button class="what dark" id="roomback" style="width:auto;padding:6px 10px">${R.back}</button></div><p class="sline" style="margin:0 2px 8px">${R.lede}</p>
+      ${progressCard()}
       <div class="acard reading"><span class="eyebrow">${R.readingsLede}</span><h3>${rd.title}</h3><p>${rd.text}</p><div class="row"><button class="btn btn-ghost sm" id="readit">Aurelia reads it</button></div></div>
       ${['quote', 'book', 'beauty', 'figure'].map(k => { const pool = LIB.filter(x => x.kind === k); if (!pool.length) return ''; const it = pool[(daySeed() + k.length) % pool.length]; return `<div class="acard lib"><span class="eyebrow">${R.libraryLede[k]}</span>${it.title ? `<h3>${it.title}</h3>` : ''}<p>${it.t}</p>${it.by ? `<i>${it.by}${it.src ? ' · ' + it.src : ''}</i>` : ''}</div>`; }).join('')}
       <div class="acard feedcard"><span class="eyebrow">${C.feed.title}</span>${FEED.length ? FEED.slice(0, 5).map(p => `<div class="feedpost"><h4>${p.title}</h4><small>${p.date}</small><p>${p.text}</p></div>`).join('') : `<p class="lede">${C.feed.empty}</p>`}</div>`;
@@ -633,6 +643,22 @@
     list.querySelector('#readit').addEventListener('click', () => { sfx('tap'); hush(); clearTimeout(ROOMT); cap('aurelia', rd.title); ARIG.nod(); aureliaSay('ui-read-' + rd.id, () => { capHide(1500); idleRoom(); }); });
     setTimeout(() => speakSchool(R.enter), 1400);
     idleRoom(40000);
+  }
+  function awards() {
+    const AW = C.school.awards, out = [];
+    SCH.categories.forEach(c => { const n = c.tracks.reduce((s, tr) => s + trackDone(tr), 0), N = c.tracks.reduce((s, tr) => s + tr.steps.length, 0);
+      AW.tiers.forEach(([id, name, at]) => { const need = at === null ? N : at; out.push({ id: c.id + '.' + id, room: c.name, tier: id, name: c.name + ' ' + name.toLowerCase(), earned: n >= need, at: need, n, accent: c.accent }); }); });
+    (AW.special || []).forEach(s => out.push({ id: s.id, name: s.name, line: s.line, tier: 'special', earned: s.id === 'twentyfive' ? S.done.length >= C.moves.length : false }));
+    return out;
+  }
+  function progressCard() {
+    const rooms = SCH.categories.map(c => ({ c, n: c.tracks.reduce((s, tr) => s + trackDone(tr), 0), N: c.tracks.reduce((s, tr) => s + tr.steps.length, 0) })).filter(r => r.n > 0).sort((x, y) => y.n - x.n).slice(0, 6);
+    const aw = awards(), got = aw.filter(x => x.earned), next = aw.filter(x => !x.earned && x.tier !== 'special').sort((x, y) => (x.at - x.n) - (y.at - y.n)).slice(0, 3);
+    return `<div class="acard prog"><span class="eyebrow">${C.room.progressTitle}</span>${standCard()}` +
+      (rooms.length ? `<div class="rooms">${rooms.map(r => `<div class="rr" style="--c:${r.c.accent};--c2:${r.c.accent2}"><span>${r.c.name}</span><i><b style="width:${Math.round(r.n / r.N * 100)}%"></b></i><small>${r.n} of ${r.N}</small></div>`).join('')}</div>` : `<p class="lede">No room climbed yet. The first step in any of them starts the count.</p>`) + `</div>` +
+      `<div class="acard shelf"><span class="eyebrow">${C.school.awards.title}</span><p class="lede">${C.school.awards.lede}</p>` +
+      (got.length ? `<div class="medals">${got.map(x => `<div class="medal ${x.tier}" style="--c:${x.accent || '#C9A227'}"><i></i><span>${x.name}</span></div>`).join('')}</div>` : '') +
+      (next.length ? `<div class="nextaw">${next.map(x => `<div class="na"><span>${x.name}</span><small>${x.at - x.n} more step${x.at - x.n === 1 ? '' : 's'}</small></div>`).join('')}</div>` : '') + `</div>`;
   }
   /* every so often one of them says something, in turn, unprompted */
   function idleRoom(delay) {
@@ -697,17 +723,20 @@
   }
   function projectRow(tr) {
     const c = catOf(tr), st = nextStep(tr), n = trackDone(tr);
-    const last = tr.steps[tr.steps.length - 1];
-    return `<div class="proj" style="--c:${c.accent};--c2:${c.accent2}"><div class="ptop"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${c.name} · a ladder of ${tr.steps.length}</small></span><button class="px" data-drop="${tr.id}" aria-label="Put this one down">×</button></div>
+    const last = tr.steps[tr.steps.length - 1], first = tr.steps[0];
+    return `<div class="proj" style="--c:${c.accent};--c2:${c.accent2}"><div class="ptop"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${c.name} · a ladder of ${tr.steps.length} steps</small></span><button class="px" data-drop="${tr.id}" aria-label="Put this one down">×</button></div>
+      <div class="ladder">
+        <div class="rung ${n === 0 ? 'here' : 'done'}"><b>1</b><span><em>${n === 0 ? 'Start here' : 'Started'}</em>${first.test}</span></div>
+        ${n > 0 ? `<div class="rung here"><b>${n + 1}</b><span><em>You are here</em>${st.test}</span></div>` : ''}
+        <div class="rung end"><b>${tr.steps.length}</b><span><em>Ends with</em>${last.test}</span></div>
+      </div>
       <div class="pdots">${tr.steps.map(s => `<i class="${sdone(skey(tr, s)) ? 'on' : ''}"></i>`).join('')}</div>
-      <p class="pwhere"><b>Ends with:</b> ${last.test}</p>
-      <p class="pnext"><b>Step ${n + 1} of ${tr.steps.length}:</b> ${st.test}</p>
       <div class="row"><button class="btn btn-ghost sm" data-track="${tr.id}">The whole ladder</button><button class="btn btn-gold sm" data-step="${skey(tr, st)}" style="flex:1.3">Do a bit today</button></div></div>`;
   }
   function renderLong(list) {
     $('sline').textContent = C.school.longLine; const L = C.school.long; const mine = projects();
     const room = L.max - mine.length; const sug = room > 0 ? longSuggest() : [];
-    list.innerHTML = (mine.length ? `<div class="acard"><span class="eyebrow">What you are working on</span><p class="lede">${L.intro}</p>${mine.map(projectRow).join('')}</div>` : '') +
+    list.innerHTML = carryCard(4) + (mine.length ? `<div class="acard"><span class="eyebrow">What you are working on</span><p class="lede">${L.intro}</p>${mine.map(projectRow).join('')}</div>` : '') +
       (room > 0 ? `<div class="acard"><span class="eyebrow">${mine.length ? 'Take on another one' : 'Pick something that takes a month'}</span><p class="lede">${L.pickLine}</p>` +
         sug.map(tr => { const c = catOf(tr), st = nextStep(tr), last = tr.steps[tr.steps.length - 1]; return `<button class="pickp" style="--c:${c.accent};--c2:${c.accent2}" data-take="${tr.id}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${c.name} · ${tr.steps.length} steps</small><small class="ladder">From <em>${st.test}</em> to <em>${last.test}</em></small></span><b class="take">Take it on</b></button>`; }).join('') +
         `<button class="what dark" id="rollp">Show me three others</button></div>` : '');
@@ -743,11 +772,12 @@
     </div>`, 'light');
     v.querySelector('#sback').addEventListener('click', () => { sfx('tap'); closeVeil(from ? () => trackSheet(from) : null); });
     v.querySelector('#sdone').addEventListener('click', () => {
-      const before = rankOf(points()).name;
+      const before = rankOf(points()).name, awBefore = awards().filter(x => x.earned).length;
       S.school.done[k] = new Date().toISOString(); S.school.points++; const t = today(); S.days[t] = (S.days[t] || 0) + 1; save();
       sfx('done'); sparks(); RIG.smile(1.8); if (ARIG && !ARIG.hidden) ARIG.smile(1.8); paintSchoolCount();
       const inScene = inSceneNow();
-      const up = rankOf(points()).name !== before;
+      const up = rankOf(points()).name !== before || awards().filter(x => x.earned).length > awBefore;
+      const gotAward = awards().filter(x => x.earned).length > awBefore;
       const n = Object.keys(S.school.done).length;
       const hers = !up && where !== 'arrival' && n % 3 === 2 && C.aurelia.affirm && C.aurelia.affirm.length;
       const both = n % 5 === 0;
@@ -756,7 +786,7 @@
         if (!inScene) { popIn('aurelia'); if (both) popIn('marcus'); }
         setTimeout(() => { cap('aurelia', al.t); if (!RIG.hidden) RIG.smile(3); ARIG.nod(); aureliaSay(al.id, () => { capHide(1500); if (!inScene) { popOut('aurelia', 1400); if (both) popOut('marcus', 1400); } }); }, inScene ? 400 : 900);
       } else {
-        const y = where === 'arrival' ? C.arrival.after : (up ? 'c-rank' : C.school.affirm[(n - 1) % C.school.affirm.length]);
+        const y = gotAward && line('c-award') ? 'c-award' : (where === 'arrival' ? C.arrival.after : (up ? 'c-rank' : C.school.affirm[(n - 1) % C.school.affirm.length]));
         if (line(y)) { if (!inScene) { popIn('marcus'); if (both) popIn('aurelia'); } setTimeout(() => { if (!ARIG.hidden) ARIG.smile(3); marcusSay(line(y), up ? 'cheer' : (n % 2 ? 'cheer' : 'nod'), () => { if (!inScene) { popOut('marcus', 1400); if (both) popOut('aurelia', 1400); } }); }, inScene ? 400 : 900); }
       }
       closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); if (from) trackSheet(from); });
@@ -807,7 +837,5 @@
     window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool };
   }
   /* iOS standalone computes the new viewport unit as if a toolbar were there; measure instead */
-  function fitStage() { const sa = window.navigator.standalone || (window.matchMedia && matchMedia('(display-mode: standalone)').matches); if (sa) $('stage').style.height = window.innerHeight + 'px'; }
-  window.addEventListener('resize', fitStage); window.addEventListener('orientationchange', () => setTimeout(fitStage, 300));
-  document.addEventListener('DOMContentLoaded', () => { fitStage(); boot(); });
+  document.addEventListener('DOMContentLoaded', boot);
 })();
