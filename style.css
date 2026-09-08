@@ -258,13 +258,15 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 
 /* short viewports (a phone browser with its toolbars): tighter deck, the text always readable */
 @media (max-height:740px){
-  .deck{padding:8px 12px 10px}
+  .deck{padding:6px 12px 8px}
   .tierline{display:none}
-  .laurel{padding-bottom:6px}
-  .tablet{padding:12px 14px 10px}
+  .laurel{padding-bottom:4px}
+  .laurel .bar{height:18px}
+  .tablet{padding:10px 14px 8px}
+  .tablet .top{margin-bottom:4px}
   .tablet .test{font-size:clamp(17px,4.8vw,19px);line-height:1.28}
   .tablet .fall{font-size:12px;padding:6px 8px 6px 10px;margin-top:4px}
-  .tablet .row{margin-top:8px}
+  .tablet .row{margin-top:6px}
   .btn{height:46px}
   .btn-ghost{height:40px}
   .skip{margin-top:2px;padding:4px 10px}
