@@ -1,5 +1,5 @@
 {
- "version": 10,
+ "version": 11,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -318,7 +318,7 @@
   },
   {
    "id": "chair",
-   "name": "Still in your chair",
+   "name": "Still where you are",
    "line": "Half a minute each. Nothing to fetch and nowhere to go.",
    "lesson": "You will reach for a reason not to. Nothing to write with. Can't hold it that long. The lesson of these five is: find a way. A finger on the table counts. Half of it counts. Starting counts.",
    "quote": {
@@ -354,8 +354,8 @@
   },
   {
    "id": "world",
-   "name": "Where other people are",
-   "line": "Somebody else is in these, and every one can be done from where you are sitting. The last two are calls.",
+   "name": "Out loud, and out into the world",
+   "line": "Nobody else has to be there. The last two are phone calls, and if nobody answers, ring the next one.",
    "lesson": "The last five have other people in them, and the last two are phone calls. Nothing in them is hard. What stops people is a feeling, and the feeling is made of paper. Walk through it once and it stays walked through.",
    "quote": {
     "who": "epictetus",
@@ -514,18 +514,18 @@
    "fallback": "One you already half know is fine. Where is the station, in anything."
   },
   {
-   "id": "glad",
-   "tier": "world",
-   "kind": "kindness",
-   "test": "Tell one person something you are glad about them. Out loud, or in a voice message. Not thanks — something they did.",
-   "fallback": "A text counts. A voice note is better. Out loud is best."
-  },
-  {
-   "id": "hello",
+   "id": "sing",
    "tier": "world",
    "kind": "courage",
-   "test": "Say hello to somebody you have never met. Out loud, and mean it.",
-   "fallback": "The person at the till. Somebody walking a dog. The postman. One word, and look at them."
+   "test": "Sing one line of any song, out loud, at full voice.",
+   "fallback": "Any song. The first line of the first one you think of. Alone in the room is perfect."
+  },
+  {
+   "id": "mirror",
+   "tier": "world",
+   "kind": "courage",
+   "test": "Look yourself in the eye in a mirror for thirty seconds. Then say, out loud: I am the kind of person who does the thing.",
+   "fallback": "No mirror? The black screen of your phone, or the selfie camera. Thirty seconds, then say it."
   },
   {
    "id": "ring",
@@ -538,8 +538,8 @@
    "id": "enquiry",
    "tier": "world",
    "kind": "courage",
-   "test": "Ring about something you admire and cannot yet afford. A house you like: is it still available? A car you like: do they do test drives? One minute. Thank you. Hang up.",
-   "fallback": "They exist to answer exactly this. You are asking for information, not taking anything. Say thank you, and go."
+   "test": "Ring somewhere prestigious. A luxury car dealer: do they do test drives? An estate agent with the grandest house in their window: is it still available? One minute. Thank you. Hang up.",
+   "fallback": "You do not have to want it. It is the same call as the corner shop, and that is the point. They exist to answer exactly this."
   }
  ],
  "story": [
@@ -571,15 +571,15 @@
  ],
  "voice": {
   "first": "He is here. Tap him any time and he will speak.",
-  "deck": "Twenty-five in one sitting. You tapped, breathed, stood, threw, drew, spoke to a stranger and rang two shops. More action than most people take in a month, and you can feel it. This is what Light School runs on, and from here it gets bigger.",
-  "break-seat": "Five done. You moved, and most people never do. The next five stay in the chair. You will reach for a reason not to. Find a way anyway.",
+  "deck": "Twenty-five in one sitting. You tapped, breathed, stood, threw, drew, sang, looked yourself in the eye and rang two shops. More action than most people take in a month, and you can feel it. This is what Light School runs on, and from here it gets bigger.",
+  "break-seat": "Five done. You moved, and most people never do. The next five you can do right where you are. You might reach for a reason not to. Find a way anyway.",
   "break-chair": "Ten. You found a way every time, and that is the whole skill. Now stand up. The body goes first and the mind follows it. Everything here is in the room you are in.",
   "break-feet": "Fifteen, and you are up out of the chair. The next five need one thing from the room. Whatever you cannot find, something in the room will do instead.",
-  "break-fetch": "Twenty. The last five have other people in them, and the last two are phone calls. Nothing in them is hard. What stops people is a feeling, and the feeling is made of paper.",
+  "break-fetch": "Twenty. The last five are out loud, and the last two are phone calls. If nobody answers, ring the next one. What stops people is a feeling, and the feeling is made of paper.",
   "intro1": "Light School is for the ones who move. A spectacular life is here already, with nothing new needed: a walk, a park, a gallery, a building that has stood for centuries, a country estate open to anyone, the finest shop in town, the people you read about, who live near you and can be met. Most of it is free. It is a choice.",
   "intro2": "The choice needs momentum. Twenty-five tiny actions, about ten minutes, from the chair you are in. Do not think about them. Do one, tap Done, do the next.",
   "w1": "Welcome to Light School. Most people wait: for money, for time, for the right moment. Life goes past while they wait.",
-  "w2": "Choosing takes momentum. So we start with twenty-five tiny actions, about ten minutes, from the chair you are in.",
+  "w2": "Choosing takes momentum. So we start with twenty-five tiny actions, about ten minutes, from the chair you are in. Tap either of us at any time, and we will have something for you.",
   "w3": "Most people who start something like this only watch it. That is the whole gap: watching, or doing. Feel what momentum is like, and see who you are at the end of it.",
   "b15a": "Fifteen, Marcus. Look at them. Out of the chair and moving.",
   "b15b": "My son grew up in the loudest street in Rome, and I taught him myself. He was never still a day in his life. The world knows him as Julius Caesar.",
@@ -588,9 +588,13 @@
   "b10c": "Ten, Marcus. A few were pressed past.",
   "b10d": "The ones you skipped are waiting at the end. Take them.",
   "b5a": "Five, Marcus, and every one done properly. Do you know how few people do that?",
-  "b20a": "Twenty. The last five have other people in them.",
+  "b20a": "Twenty. The last five go out loud, and out into the world.",
   "b20b": "The Greeks spoke of greatness so well that Rome went out and built it. Speak less. Build.",
-  "fin1": "Socrates taught Plato. Plato taught Aristotle. Aristotle taught Alexander."
+  "fin1": "Socrates taught Plato. Plato taught Aristotle. Aristotle taught Alexander.",
+  "t1": "The historian Tacitus wrote that I took charge of my son's education myself, instead of handing it to someone else. That is the whole idea of this school.",
+  "t2": "My house stood in the Subura, the loudest quarter of Rome. Greatness does not need quiet. It needs a start.",
+  "t3": "Keep going. I raised a boy who never sat still, and the world still knows his name.",
+  "t4": "Every one of these is small on purpose. The size of the step is not the point. Taking it is."
  },
  "cover": {
   "em": "Nation of",
@@ -646,7 +650,6 @@
   "hand": "m-d1",
   "breath": "c-hard",
   "still": "m-x10",
-  "hello": "c-hello",
   "ring": "m-x2"
  },
  "greet": [
@@ -659,7 +662,7 @@
   {
    "after": "seat",
    "line": "m-x3",
-   "t": "Five done. You moved, and most people never do. The next five stay in the chair. You will reach for a reason not to. Find a way anyway.",
+   "t": "Five done. You moved, and most people never do. The next five you can do right where you are. You might reach for a reason not to. Find a way anyway.",
    "say": null,
    "scene": [
     {
@@ -750,13 +753,13 @@
   {
    "after": "fetch",
    "line": "m-d3",
-   "t": "Twenty. The last five have other people in them, and the last two are phone calls. Nothing in them is hard. What stops people is a feeling, and the feeling is made of paper.",
+   "t": "Twenty. The last five are out loud, and the last two are phone calls. If nobody answers, ring the next one. What stops people is a feeling, and the feeling is made of paper.",
    "say": null,
    "scene": [
     {
      "who": "aurelia",
      "id": "ui-b20a",
-     "t": "Twenty. The last five have other people in them."
+     "t": "Twenty. The last five go out loud, and out into the world."
     },
     {
      "who": "marcus",
@@ -773,7 +776,7 @@
  ],
  "finale": {
   "line": "m-g2",
-  "t": "Twenty-five in one sitting. You tapped, breathed, stood, threw, drew, spoke to a stranger and rang two shops. More action than most people take in a month, and you can feel it. This is what Light School runs on, and from here it gets bigger.",
+  "t": "Twenty-five in one sitting. You tapped, breathed, stood, threw, drew, sang, looked yourself in the eye and rang two shops. More action than most people take in a month, and you can feel it. This is what Light School runs on, and from here it gets bigger.",
   "say": "c-finale",
   "scene": [
    {
@@ -809,7 +812,7 @@
    {
     "who": "aurelia",
     "id": "ui-w2",
-    "t": "Choosing takes momentum. So we start with twenty-five tiny actions, about ten minutes, from the chair you are in."
+    "t": "Choosing takes momentum. So we start with twenty-five tiny actions, about ten minutes, from the chair you are in. Tap either of us at any time, and we will have something for you."
    },
    {
     "who": "marcus",
@@ -831,7 +834,25 @@
  "aurelia": {
   "name": "Aurelia",
   "role": "Keeper of the flame",
-  "named_for": "Aurelia Cotta, about 120 to 54 BC, who taught her son herself"
+  "named_for": "Aurelia Cotta, about 120 to 54 BC, who taught her son herself",
+  "lines": [
+   {
+    "id": "ui-t1",
+    "t": "The historian Tacitus wrote that I took charge of my son's education myself, instead of handing it to someone else. That is the whole idea of this school."
+   },
+   {
+    "id": "ui-t2",
+    "t": "My house stood in the Subura, the loudest quarter of Rome. Greatness does not need quiet. It needs a start."
+   },
+   {
+    "id": "ui-t3",
+    "t": "Keep going. I raised a boy who never sat still, and the world still knows his name."
+   },
+   {
+    "id": "ui-t4",
+    "t": "Every one of these is small on purpose. The size of the step is not the point. Taking it is."
+   }
+  ]
  },
  "affirm": [
   "c-y1",

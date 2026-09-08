@@ -84,7 +84,7 @@
   function ambStop() { if (!AMB.on) return; AMB.on = false; AMB.timers.forEach(clearTimeout); AMB.timers = []; try { AMB.master.gain.linearRampToValueAtTime(0, ac().currentTime + .8); } catch (e) {} setTimeout(() => { AMB.nodes.forEach(n => { try { n.stop(); } catch (e) {} }); AMB.nodes = []; }, 900); }
   const voiceOn = () => S.sound;
   function paintSound() { $('soundbtn').classList.toggle('off', !S.sound); }
-  function hush() { NAR.pause(); MAR.pause(); if (RIG) RIG.hush(); if (ARIG) ARIG.hush(); $('readbtn').classList.remove('on'); musicDuck(false); clearTimeout(marcusSay._t); $('bubble').hidden = true; }
+  function hush() { NAR.pause(); MAR.pause(); if (RIG) RIG.hush(); if (ARIG) ARIG.hush(); $('readbtn').classList.remove('on'); musicDuck(false); clearTimeout(marcusSay._t); $('bubble').hidden = true; $('abubble').hidden = true; }
   /* the music: one nocturne, in on Begin, under every voice, out on its own */
   let MUSV = 0, MUST = null;
   function musicTo(v, ms) { clearInterval(MUST); const from = MUS.volume, t0 = performance.now(); MUST = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / ms); MUS.volume = from + (v - from) * k; if (k >= 1) clearInterval(MUST); }, 50); }
@@ -116,6 +116,14 @@
       RIG.talk(20); MAR.play().catch(() => { RIG.talk(est / 1000); setTimeout(finish, est); });
     } else { RIG.talk(est / 1000); setTimeout(finish, est); }
   }
+  function onAureliaTap() {
+    if (!ARIG || ARIG.hidden || MODE === 'scene' || MODE === 'welcome') return;
+    sfx('tap'); const ids = C.aurelia.lines.map(l => l.id); const pick = ids.find(i => !S.said.includes(i)) || ids[S.taps % ids.length]; S.taps++;
+    if (!S.said.includes(pick)) S.said.push(pick); save();
+    const ln = C.aurelia.lines.find(l => l.id === pick); const b = $('abubble'); b.hidden = false; b.innerHTML = wordSpans(ln.t) + '<span class="who">Aurelia</span>';
+    b.classList.remove('say'); void b.offsetWidth; b.classList.add('say'); ARIG.nod();
+    hush(); clearTimeout(onAureliaTap._t); aureliaSay(pick, () => { onAureliaTap._t = setTimeout(() => { b.hidden = true; }, 1800); });
+  }
   function aureliaSay(id, after) {
     if (!ARIG || ARIG.hidden || !voiceOn()) { narrate(id, after); return; }
     ACUES = (AVIS && AVIS[id]) || null; ARIG.talk(20);
@@ -142,7 +150,7 @@
     };
     PORTICO.setWreaths(tiersDone()); PORTICO.setFlame(S.done.length ? 'lit' : 'out'); PORTICO.setPhase(skyFor());
     if (S.done.length) setTimeout(() => ambFire(true), 3000);
-    $('mfig').addEventListener('click', onMarcusTap);
+    $('mfig').addEventListener('click', onMarcusTap); $('afig').addEventListener('click', onAureliaTap);
     $('stage').addEventListener('pointerdown', e => { if (RIG && !RIG.hidden) RIG.lookAt(e.clientX, e.clientY); if (ARIG && !ARIG.hidden) ARIG.lookAt(e.clientX, e.clientY); }, { passive: true });
   }
   /* dawn at the first tablet, full morning by the middle, gold at the twenty-fifth */
@@ -151,14 +159,10 @@
   function onMarcusTap() {
     if (!RIG || RIG.hidden) return;
     sfx('tap'); S.taps++; save();
-    const key = MODE + ':' + (CUR ? CUR.id : '-');
-    if (onMarcusTap._helped !== key) {
-      onMarcusTap._helped = key;
-      if (MODE === 'scene') return;
-      const id = MODE === 'break' ? 'c-help-break' : MODE === 'rest' ? 'c-help-rest' : (S.done.length === 0 ? 'c-help-task' : 'c-help-go');
-      if (line(id)) { hush(); marcusSay(line(id), 'point'); return; }
-    }
+    if (MODE === 'scene' || MODE === 'welcome') return;
+    if (MODE === 'rest' && line('c-help-rest') && !S.said.includes('c-help-rest')) { hush(); marcusSay(line('c-help-rest'), 'point'); return; }
     const poses = ['wave', 'salute', 'think', 'nod', 'laugh'];
+    hush();
     const all = Object.keys(LINES).filter(k => k.startsWith('m-'));
     marcusSay(fresh(all.slice(S.taps % all.length).concat(all)), poses[S.taps % poses.length]);
   }
