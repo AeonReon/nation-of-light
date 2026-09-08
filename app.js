@@ -622,7 +622,7 @@
       <div class="acard reading"><span class="eyebrow">${R.readingsLede}</span><h3>${rd.title}</h3><p>${rd.text}</p><div class="row"><button class="btn btn-ghost sm" id="readit">Aurelia reads it</button></div></div>
       <div class="acard feedcard"><span class="eyebrow">${C.feed.title}</span>${FEED.length ? FEED.slice(0, 5).map(p => `<div class="feedpost"><h4>${p.title}</h4><small>${p.date}</small><p>${p.text}</p></div>`).join('') : `<p class="lede">${C.feed.empty}</p>`}</div>`;
     list.querySelector('#roomback').addEventListener('click', () => { sfx('tap'); leaveRoom(); });
-    list.querySelector('#readit').addEventListener('click', () => { sfx('tap'); hush(); clearTimeout(ROOMT); cap('aurelia', rd.title); ARIG.nod(); aureliaSay('read-' + rd.id, () => { capHide(1500); idleRoom(); }); });
+    list.querySelector('#readit').addEventListener('click', () => { sfx('tap'); hush(); clearTimeout(ROOMT); cap('aurelia', rd.title); ARIG.nod(); aureliaSay('ui-read-' + rd.id, () => { capHide(1500); idleRoom(); }); });
     setTimeout(() => speakSchool(R.enter), 1400);
     idleRoom(40000);
   }
