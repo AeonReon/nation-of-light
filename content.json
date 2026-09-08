@@ -1,5 +1,5 @@
 {
- "version": 13,
+ "version": 14,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -308,6 +308,22 @@
    {
     "id": "c-d4",
     "t": "And if you tapped through without doing them, there is nothing on the other side for you. Not yet. The tablets are still here. Go back and do them."
+   },
+   {
+    "id": "c-s2",
+    "t": "Pick anything. The next thing keeps you moving. The long game is where you become somebody. Nothing here is out of reach."
+   },
+   {
+    "id": "c-sy1",
+    "t": "That is one. The school is open, and you are in it."
+   },
+   {
+    "id": "c-sy2",
+    "t": "A skill takes days. You just gave it one of them."
+   },
+   {
+    "id": "c-sy3",
+    "t": "Good. Wide first, then deep. This is wide."
    }
   ]
  },
@@ -606,7 +622,29 @@
   "d1": "Twenty-five. Marcus, how many people finish a thing they start?",
   "d3": "On the other side of this door is a whole world of people building a spectacular life without waiting for anything.",
   "d5": "Light School takes people in by application. We choose who we bring in. Tell us who you are.",
-  "godoor": "Now go to the door. Tap it, and tell us who you are."
+  "godoor": "Now go to the door. Tap it, and tell us who you are.",
+  "cat-body": "Body and movement. Juggling, skipping, upside down, breath, strength, speed.",
+  "cat-wild": "Outdoors and wild. Fire, finding your way, shelter, weather, tracks, wild food.",
+  "cat-water": "Water and boats. Swimming, cold water, rowing, sailing, fishing, rock pools.",
+  "cat-fit": "Fitness and strength. Press-ups, sit-ups, pull-ups, the plank, lifting, sprinting.",
+  "cat-sky": "Air and sky. Kites, rockets, planes, stars, weather in the sky.",
+  "cat-mind": "Mind and numbers. Tables, the cube, chess, memory, codes, puzzles.",
+  "cat-words": "Words and languages. A new language, reading, handwriting, poems, stories, signing.",
+  "cat-speak": "Speaking and people. Strangers, the stage, listening, hard things, humour, teaching.",
+  "cat-make": "Making and building. Wood, cloth, clay, drawing, knots, electronics, machines, code.",
+  "cat-music": "Music and voice. Singing, an instrument, rhythm, songs, whistling, reading music.",
+  "cat-magic": "Magic and performance. Card tricks, coins, sleight of hand, mind reading, mime, puppets.",
+  "cat-food": "Food and the kitchen. Knife skills, cooking, baking, growing, preserving, hosting.",
+  "cat-money": "Money and business. Handling it, earning it, selling, running something, investing.",
+  "cat-beauty": "Beauty and buildings. Why one street feels good and another does not. Shapes, proportion, arches, and your own town.",
+  "cat-classic": "The classical mind. Logic, the big questions, the great stories, and one beautiful thing a day.",
+  "cat-nerve": "Nerve. Small brave things, done on purpose, until they stop being brave. The later levels are for older ones and adults.",
+  "cat-deal": "Negotiation. Almost everything is flexible — the price, the terms, the timing. Most people simply never ask.",
+  "cat-belong": "You belong here. Fine shops, grand rooms and expensive things — so you never again decide somewhere is above you.",
+  "cat-home": "Home and repair. Keeping a place, mending, tools, bikes, first aid, engines.",
+  "cat-care": "Care and kindness. Animals, younger ones, older people, giving, the community.",
+  "cat-calm": "Focus and calm. Stillness, attention, sleep, cold, gratitude, doing hard things.",
+  "s1": "This is the school. Everything in here is yours now. Small things to keep the momentum, long things that take days and make you someone, and all of it laid out to be seen."
  },
  "cover": {
   "em": "Nation of",
@@ -953,5 +991,68 @@
    "web3forms": "",
    "to": "apply@aeonreon.com"
   }
+ },
+ "codes": [
+  "AURELIA",
+  "LIGHT"
+ ],
+ "school": {
+  "tabs": [
+   [
+    "next",
+    "Next thing"
+   ],
+   [
+    "long",
+    "The long game"
+   ],
+   [
+    "all",
+    "Everything"
+   ]
+  ],
+  "welcome": [
+   {
+    "who": "aurelia",
+    "id": "ui-s1",
+    "t": "This is the school. Everything in here is yours now. Small things to keep the momentum, long things that take days and make you someone, and all of it laid out to be seen."
+   },
+   {
+    "who": "marcus",
+    "id": "c-s2",
+    "t": "Pick anything. The next thing keeps you moving. The long game is where you become somebody. Nothing here is out of reach."
+   }
+  ],
+  "nextLine": "Small, quick, doable now. Keep the momentum and try things widely.",
+  "longLine": "Skills that take days or weeks. One step at a time, the next one always ready.",
+  "allLine": "Every room in the school, laid out to be seen.",
+  "catLines": {
+   "body": "ui-cat-body",
+   "wild": "ui-cat-wild",
+   "water": "ui-cat-water",
+   "fit": "ui-cat-fit",
+   "sky": "ui-cat-sky",
+   "mind": "ui-cat-mind",
+   "words": "ui-cat-words",
+   "speak": "ui-cat-speak",
+   "make": "ui-cat-make",
+   "music": "ui-cat-music",
+   "magic": "ui-cat-magic",
+   "food": "ui-cat-food",
+   "money": "ui-cat-money",
+   "beauty": "ui-cat-beauty",
+   "classic": "ui-cat-classic",
+   "nerve": "ui-cat-nerve",
+   "deal": "ui-cat-deal",
+   "belong": "ui-cat-belong",
+   "home": "ui-cat-home",
+   "care": "ui-cat-care",
+   "calm": "ui-cat-calm"
+  },
+  "affirm": [
+   "c-sy1",
+   "c-sy2",
+   "c-sy3"
+  ]
  }
 }

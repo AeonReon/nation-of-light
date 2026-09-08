@@ -15,14 +15,14 @@
   'use strict';
   const $ = id => document.getElementById(id);
   const KEY = 'nol.v1';
-  let C = null, VIS = null, AVIS = null, PORTICO = null, RIG = null, ARIG = null, CUES = null, ACUES = null, LINES = {};
+  let C = null, SCH = null, VIS = null, AVIS = null, PORTICO = null, RIG = null, ARIG = null, CUES = null, ACUES = null, LINES = {};
   const NAR = new Audio(), MAR = new Audio(), MUS = new Audio(); NAR.preload = 'auto'; MAR.preload = 'auto'; MUS.preload = 'auto'; MUS.src = 'audio/music/dawn.mp3';
   let S = load();
 
   /* ---------- state ---------- */
   function load() {
-    try { const s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s && s.v === 1) { s.said = s.said || []; s.skipped = s.skipped || []; return s; } } catch (e) {}
-    return { v: 1, start: null, done: [], skipped: [], days: {}, sound: true, taps: 0, visits: 0, said: [], seenHelp: false };
+    try { const s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s && s.v === 1) { s.said = s.said || []; s.skipped = s.skipped || []; s.school = s.school || { done: {}, points: 0 }; return s; } } catch (e) {}
+    return { v: 1, start: null, done: [], skipped: [], days: {}, sound: true, taps: 0, visits: 0, said: [], seenHelp: false, member: false, school: { done: {}, points: 0 } };
   }
   function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
   const today = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
@@ -122,6 +122,7 @@
   }
   function onAureliaTap() {
     if (!ARIG || ARIG.hidden || MODE === 'scene' || MODE === 'welcome') return;
+    if (MODE === 'school') { /* fine: she answers */ }
     sfx('tap'); const ids = C.aurelia.lines.map(l => l.id); const pick = ids.find(i => !S.said.includes(i)) || ids[S.taps % ids.length]; S.taps++;
     if (!S.said.includes(pick)) S.said.push(pick); save();
     const ln = C.aurelia.lines.find(l => l.id === pick); const b = $('abubble'); b.hidden = false; b.innerHTML = wordSpans(ln.t) + '<span class="who">Aurelia</span>';
@@ -164,6 +165,7 @@
     if (!RIG || RIG.hidden) return;
     sfx('tap'); S.taps++; save();
     if (MODE === 'scene' || MODE === 'welcome') return;
+    if (MODE === 'school') { hush(); const all = Object.keys(LINES).filter(k => k.startsWith('m-')); S.taps++; save(); marcusSay(fresh(all.slice(S.taps % all.length).concat(all)), ['wave', 'salute', 'think', 'nod', 'laugh'][S.taps % 5]); return; }
     if (MODE === 'rest' && line('c-help-rest') && !S.said.includes('c-help-rest')) { hush(); marcusSay(line('c-help-rest'), 'point'); return; }
     const poses = ['wave', 'salute', 'think', 'nod', 'laugh'];
     hush();
@@ -347,14 +349,17 @@
     const v = veil(`<div class="cover">
       <h1><span class="em">${cv.em}</span><span class="t">${cv.title}</span></h1>
       <p class="tag">${back ? (left ? `Welcome back. ${S.done.length} of ${C.moves.length} done, ${left} to go. Marcus is waiting.` : 'Welcome back. The twenty-five are done. Marcus is waiting.') : cv.tag}</p>
-      <button class="btn btn-gold" id="begin">${back ? 'Go in' : cv.begin}</button>
+      <button class="btn btn-gold" id="begin">${(back || S.member) ? 'Go in' : cv.begin}</button>
       <button class="what" id="what">${cv.what}</button>
+      <button class="what" id="codelink">${S.member ? 'Member' : (C.door && C.door.code) || 'I have a code'}</button>
       <div class="small">Sound on is the whole point. Headphones are lovely.</div>
     </div>`);
+    v.querySelector('#codelink').addEventListener('click', () => { sfx('tap'); codePanel(true); });
     v.querySelector('#begin').addEventListener('click', () => {
       ac(); MAR.muted = true; MAR.src = 'audio/marcus/m-g1.mp3'; MAR.play().then(() => { MAR.pause(); MAR.muted = false; MAR.currentTime = 0; }).catch(() => { MAR.muted = false; });
       musicStart(); ambStart();
-      if (back) { sfx('tap'); NAR.muted = true; NAR.src = 'audio/voice/ui-first.mp3'; NAR.play().then(() => { NAR.pause(); NAR.muted = false; }).catch(() => { NAR.muted = false; }); closeVeil(enter); }
+      if (S.member && SCH) { sfx('tap'); NAR.muted = true; NAR.src = 'audio/voice/ui-first.mp3'; NAR.play().then(() => { NAR.pause(); NAR.muted = false; }).catch(() => { NAR.muted = false; }); closeVeil(enterSchool); }
+      else if (back) { sfx('tap'); NAR.muted = true; NAR.src = 'audio/voice/ui-first.mp3'; NAR.play().then(() => { NAR.pause(); NAR.muted = false; }).catch(() => { NAR.muted = false; }); closeVeil(enter); }
       else { sfx('begin'); closeVeil(welcome); }
     });
     v.querySelector('#what').addEventListener('click', () => { sfx('tap'); whatIsThis(); });
@@ -454,7 +459,7 @@
     v.querySelector('#codebtn').addEventListener('click', () => { sfx('tap'); codePanel(); });
     v.querySelector('#doorback').addEventListener('click', () => { sfx('tap'); closeVeil(() => { ARIG.show(false); restTablet(); }); });
   }
-  function codePanel() {
+  function codePanel(fromCover) {
     const D = C.door;
     const v = veil(`<div class="panel doorcard">
       <div class="eyebrow"><i></i>${D.codeTitle}</div>
@@ -464,9 +469,91 @@
       <button class="what dark" id="codeback">Back</button>
     </div>`, 'light');
     v.querySelector('#codeform').addEventListener('submit', e => { e.preventDefault(); sfx('tap'); S.code = new FormData(e.target).get('code').trim(); save();
+      const good = (C.codes || []).some(k => k.toLowerCase() === S.code.toLowerCase());
+      if (good && SCH) { S.member = true; save(); ac(); musicStart(.4); ambStart(); closeVeil(enterSchool); return; }
       const p = v.querySelector('.doorcard'); p.innerHTML = `<div class="eyebrow"><i></i>${D.codeTitle}</div><h2>Kept.</h2><p class="lede">${D.codeSoon}</p><button class="btn btn-gold" id="codeback2" style="width:100%">Back to the portico</button>`;
       p.querySelector('#codeback2').addEventListener('click', () => { sfx('tap'); closeVeil(() => { ARIG.show(false); restTablet(); }); }); });
-    v.querySelector('#codeback').addEventListener('click', () => { sfx('tap'); closeVeil(doorPanel); });
+    v.querySelector('#codeback').addEventListener('click', () => { sfx('tap'); closeVeil(fromCover ? cover : doorPanel); });
+  }
+  /* ---------- the school: the rooms beyond the door ---------- */
+  let TAB = 'next', CAT = null, SAIDCAT = new Set();
+  const skey = (tr, st) => tr.id + '#' + st.n;
+  const sdone = k => !!S.school.done[k];
+  const trackDone = tr => tr.steps.filter(s => sdone(skey(tr, s))).length;
+  const catOf = tr => SCH.categories.find(c => c.tracks.includes(tr));
+  const allTracks = () => SCH.categories.flatMap(c => c.tracks);
+  const findStep = key => { for (const tr of allTracks()) for (const st of tr.steps) if (skey(tr, st) === key) return [tr, st]; return null; };
+  function enterSchool() {
+    $('stage').classList.add('school'); $('deck').hidden = true; $('school').hidden = false; $('hud').hidden = false;
+    paintSchoolCount();
+    RIG.enter(); setTimeout(() => { ARIG.show(true); $('afig').classList.remove('walk-out-l', 'walk-in-l'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l'); }, 400);
+    plates(false); MODE = 'school'; CUR = null;
+    renderSchool();
+    if (!S.schoolWelcomed) { S.schoolWelcomed = true; save(); setTimeout(() => speakSchool(C.school.welcome), 1800); }
+  }
+  function paintSchoolCount() { const n = Object.keys(S.school.done).length; $('countn').textContent = n; const of = $('countn').nextElementSibling; of.hidden = false; of.textContent = 'done'; }
+  /* a line from either of them, shown in the strip above the rooms */
+  function speakSchool(lines) {
+    const strip = $('scap'); let i = 0;
+    const step = () => {
+      const ln = lines[i++]; if (!ln) { setTimeout(() => { strip.hidden = true; }, 1600); return; }
+      strip.hidden = false; strip.innerHTML = `<b>${ln.who === 'marcus' ? C.names.marcus : C.names.aurelia}</b>${ln.t}`;
+      if (ln.who === 'marcus') { ARIG.smile(3); marcusSay(line(ln.id) || { id: ln.id, t: ln.t }, 'nod', () => setTimeout(step, 400)); $('bubble').hidden = true; }
+      else { RIG.smile(3); ARIG.nod(); aureliaSay(ln.id, () => setTimeout(step, 400)); }
+    };
+    step();
+  }
+  function renderSchool() {
+    const tabs = $('stabs'); tabs.innerHTML = C.school.tabs.map(([k, l]) => `<button class="stab ${TAB === k ? 'on' : ''}" data-t="${k}">${l}</button>`).join('');
+    tabs.querySelectorAll('.stab').forEach(b => b.addEventListener('click', () => { sfx('tap'); TAB = b.dataset.t; CAT = null; renderSchool(); }));
+    const list = $('slist'); list.scrollTop = 0;
+    if (TAB === 'next') {
+      $('sline').textContent = C.school.nextLine;
+      const easy = (SCH.journey.find(j => j.id === 'easy') || { steps: [] }).steps.map(findStep).filter(Boolean).filter(([tr, st]) => !sdone(skey(tr, st)));
+      const firsts = allTracks().map(tr => [tr, tr.steps.find(s => !sdone(skey(tr, s)))]).filter(([tr, st]) => st && st.n === 1 && !easy.some(([t2]) => t2 === tr));
+      const items = easy.concat(firsts).slice(0, 8);
+      list.innerHTML = items.map(([tr, st]) => stepRow(tr, st)).join('') || '<div class="sempty">Every quick one is done. The long game is where the rest of you lives.</div>';
+    } else if (TAB === 'long') {
+      $('sline').textContent = C.school.longLine;
+      const trs = allTracks().filter(tr => tr.steps.length >= 4).sort((x, y) => (trackDone(y) > 0) - (trackDone(x) > 0) || x.name.localeCompare(y.name));
+      list.innerHTML = trs.map(trackRow).join('');
+    } else {
+      $('sline').textContent = C.school.allLine;
+      const pills = SCH.categories.map(c => `<button class="cpill ${CAT === c.id ? 'on' : ''}" style="--c:${c.accent};--c2:${c.accent2}" data-c="${c.id}">${c.name}</button>`).join('');
+      const cat = SCH.categories.find(c => c.id === CAT);
+      list.innerHTML = `<div class="cpills">${pills}</div>` + (cat ? `<div class="catline" style="--c:${cat.accent}">${cat.line}</div>` + cat.tracks.map(trackRow).join('') : '<div class="sempty">Pick a room.</div>');
+      list.querySelectorAll('.cpill').forEach(b => b.addEventListener('click', () => { sfx('tap'); CAT = b.dataset.c; renderSchool(); const id = C.school.catLines[CAT]; if (id && !SAIDCAT.has(CAT)) { SAIDCAT.add(CAT); hush(); speakSchool([{ who: 'aurelia', id, t: SCH.categories.find(c => c.id === CAT).name }]); } }));
+    }
+    list.querySelectorAll('[data-step]').forEach(el => el.addEventListener('click', () => { sfx('tap'); const r = findStep(el.dataset.step); if (r) stepSheet(r[0], r[1]); }));
+    list.querySelectorAll('[data-track]').forEach(el => el.addEventListener('click', () => { sfx('tap'); trackSheet(allTracks().find(t => t.id === el.dataset.track)); }));
+  }
+  function stepRow(tr, st) { const c = catOf(tr); return `<button class="srow" style="--c:${c.accent};--c2:${c.accent2}" data-step="${skey(tr, st)}"><span class="scat">${c.name} · ${tr.name}</span><span class="stest">${st.test}</span></button>`; }
+  function trackRow(tr) { const c = catOf(tr), n = trackDone(tr), N = tr.steps.length; return `<button class="srow track" style="--c:${c.accent};--c2:${c.accent2}" data-track="${tr.id}"><span class="scat">${c.name}</span><span class="stest">${tr.name}</span><span class="sline2">${tr.line || ''}</span><span class="sprog"><i style="width:${Math.round(n / N * 100)}%"></i></span><span class="snum">${n} of ${N}</span></button>`; }
+  function trackSheet(tr) {
+    const c = catOf(tr); const next = tr.steps.find(s => !sdone(skey(tr, s)));
+    const v = veil(`<div class="panel sheet" style="--c:${c.accent};--c2:${c.accent2}">
+      <div class="eyebrow"><i></i>${c.name}</div><h2>${tr.name}</h2><p class="lede">${tr.line || ''}</p>
+      <div class="steps">${tr.steps.map(s => { const k = skey(tr, s), d = sdone(k), act = next && next.n === s.n; return `<button class="step ${d ? 'done' : ''} ${act ? 'act' : ''}" data-step="${k}"><b>${s.n}</b><span>${s.test}</span></button>`; }).join('')}</div>
+      <button class="what dark" id="sheetback">Back</button></div>`, 'light');
+    v.querySelectorAll('.step').forEach(el => el.addEventListener('click', () => { sfx('tap'); const r = findStep(el.dataset.step); closeVeil(() => stepSheet(r[0], r[1], tr)); }));
+    v.querySelector('#sheetback').addEventListener('click', () => { sfx('tap'); closeVeil(); });
+  }
+  function stepSheet(tr, st, from) {
+    const c = catOf(tr), k = skey(tr, st), d = sdone(k);
+    const how = st.how ? `<ul class="how">${st.how.map(h => `<li>${h}</li>`).join('')}</ul>` : (st.note ? `<p class="note">${st.note}</p>` : '');
+    const v = veil(`<div class="panel sheet" style="--c:${c.accent};--c2:${c.accent2}">
+      <div class="eyebrow"><i></i>${c.name} · ${tr.name} · step ${st.n} of ${tr.steps.length}</div>
+      <div class="stestbig">${st.test}</div>${how}
+      <div class="row"><button class="btn btn-ghost" id="sback">${from ? 'Back' : 'Not now'}</button><button class="btn btn-gold" id="sdone" ${d ? 'disabled' : ''}>${d ? 'Done already' : 'Done'}</button></div>
+    </div>`, 'light');
+    v.querySelector('#sback').addEventListener('click', () => { sfx('tap'); closeVeil(from ? () => trackSheet(from) : null); });
+    v.querySelector('#sdone').addEventListener('click', () => {
+      S.school.done[k] = new Date().toISOString(); S.school.points++; save();
+      sfx('done'); sparks(); RIG.smile(1.8); if (ARIG && !ARIG.hidden) ARIG.smile(1.8); paintSchoolCount();
+      const n = Object.keys(S.school.done).length; const y = C.school.affirm[(n - 1) % C.school.affirm.length];
+      if (line(y)) setTimeout(() => marcusSay(line(y), n % 2 ? 'cheer' : 'nod'), 500);
+      closeVeil(() => { renderSchool(); if (from) trackSheet(from); });
+    });
   }
   function help() {
     const v = veil(`<div class="help"><div class="panel">
@@ -486,8 +573,8 @@
 
   /* ---------- boot ---------- */
   async function boot() {
-    const [c, v, av] = await Promise.all([fetch('content.json').then(r => r.json()), fetch('audio/marcus/visemes.json').then(r => r.json()).catch(() => null), fetch('audio/voice/visemes.json').then(r => r.json()).catch(() => null)]);
-    C = c; VIS = v; AVIS = av;
+    const [c, v, av, sch] = await Promise.all([fetch('content.json').then(r => r.json()), fetch('audio/marcus/visemes.json').then(r => r.json()).catch(() => null), fetch('audio/voice/visemes.json').then(r => r.json()).catch(() => null), fetch('school.json').then(r => r.json()).catch(() => null)]);
+    C = c; VIS = v; AVIS = av; SCH = sch;
     const ids = new Set(C.moves.map(m => m.id)); S.done = S.done.filter(id => ids.has(id)); S.skipped = S.skipped.filter(id => ids.has(id)); save();
     for (const k in C.marcus.lines) for (const l of C.marcus.lines[k]) LINES[l.id] = l;
     for (const l of (C.marcus.spoken || [])) LINES[l.id] = l;
@@ -497,7 +584,7 @@
     $('helpbtn').addEventListener('click', () => { sfx('tap'); help(); });
     cover();
     if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
-    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES };
+    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool };
   }
   document.addEventListener('DOMContentLoaded', boot);
 })();
