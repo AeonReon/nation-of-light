@@ -52,3 +52,10 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   `trophySVG`, shelved by `shelfCard(compact)`, shown by `trophyShow(a)`; `NOL.show('rank.spark')` to test.
 - **Wording rule (his, important):** "most people" lines are about the people out there who never
   take action, never a hint that people come here and leave. Keep it exciting: a special group.
+- **Ranks (v21):** twelve, on points = school steps + the twenty-five (877 is everything): Spark 1 ·
+  Ember 25 · Flame 60 · Torch 100 · Lantern 150 · Hearth 220 · Beacon 300 · Bonfire 400 ·
+  Lighthouse 520 · Blaze 650 · Sun 780 · Radiant 877. Names + a line each in `school.ranks` /
+  `school.rankLines`; the flame trophy grows and glows by level; a rank's show carries the ladder.
+- **Banned phrasing (his, 2026-09-08):** never "wide first, then deep", "go wide then deep", "taste
+  wide", "width"/"go deep" as the method line. It invites jokes and this is also for children. Say
+  it plainly: try many things, then give real time to the ones that light you up.

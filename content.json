@@ -1,5 +1,5 @@
 {
- "version": 20,
+ "version": 21,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -323,7 +323,7 @@
    },
    {
     "id": "c-sy3",
-    "t": "Good. Wide first, then deep. This is wide."
+    "t": "Good. Try many things now. The ones that light you up get the time."
    },
    {
     "id": "c-a2",
@@ -705,7 +705,7 @@
   "a0": "You are in. The school is open, and it starts the way everything here starts: with one small thing done today.",
   "read-thousand": "A hard thing is never one big thing. It is a thousand small ones, done so often that you stopped noticing you were doing them. The person who can hold a difficult conversation has had ten thousand easy ones first. So the steps that look too small to bother with are not the warm-up before the real thing. They are the real thing, arriving early and in pieces.",
   "read-gap": "The question was never whether you can do these. Almost anybody can. What is being trained is the gap between reading one and starting it. Today that gap might be a day long. In a month it can be four seconds. Nothing else in this app matters as much as that number coming down, because every good thing you ever do sits on the other side of it.",
-  "read-width": "You cannot know what you love until you have tried it. Somebody does a voice warm-up for thirty mornings and finds out they love singing, and they would never have found out any other way. So the first job is width. Level one in as many things as take your fancy, including the ones that do not sound like you. The few you keep going back to are the ones worth going deep in.",
+  "read-width": "You cannot know what you love until you have tried it. Somebody does a voice warm-up for thirty mornings and finds out they love singing, and they would never have found out any other way. So the first job is to try many things. Level one in as many as take your fancy, including the ones that do not sound like you. The few you keep going back to are the ones worth giving real time to.",
   "read-levelone": "There is no age on any of this. A grandmother and a five-year-old both start at level one in juggling, and the grandmother is not further along for having lived longer. That is not a kindness we are extending to children. It is simply true, and most places pretend otherwise. Here the ladder is the same ladder, and the only thing that moves you up it is doing the thing.",
   "read-watching": "Most of what looks like support is delegation. We decide the learning is for the children, and we take the chair, and we watch and encourage and ask how it went, and call that being involved. It is not. The thing that works is simpler and much harder: let them see you being a beginner. A child who watches a grown-up be bad at something learns something that cannot be told to them.",
   "read-sock": "This is where people go looking for a reason to stop. No ball. No paper. Nothing in the house. But a rolled-up sock is a ball, and yesterday's junk mail is a paper aeroplane, and the sock you are already wearing is nearer than the drawer. The one who gets things done is not the one with the right equipment. It is the one who stopped hunting for the missing piece and used what was in front of them.",
@@ -741,7 +741,7 @@
   "read-practice": "Two hours on Sunday and nothing all week is worse than twenty minutes on six days, for almost every skill there is. This is inconvenient, because two hours on Sunday is easier to arrange. But the body files things overnight, and six nights of filing beats one. Which means the smallest daily amount you will actually do is a better plan than the amount you think you should do.",
   "read-names": "Ten tools and what each one is for. Every note on a line of music. The parts of a small boat. Naming looks like the dull part, and it is the part that turns a blur into a set of separate things you can think about one at a time. Nobody can hold an idea they have no word for. This is why so many level ones in here are simply: name them.",
   "read-yes": "Ask for something you want, out loud, in a full sentence, and give one good reason. That last part changes the answer more often than people expect. A request with a reason attached is easier to say yes to, because the person saying yes now has something to say to themselves about why they did. This is not a trick. It is simply how a reason works.",
-  "read-ownway": "There is no order, nothing expires, and no track is required. If a category does nothing for you, leave it entirely. The width is there so you can find what you love, not so that you tidy the whole thing up. A person who does forty steps in the two things that light them up has got far more out of this than a person who does one step in every track and felt nothing anywhere.",
+  "read-ownway": "There is no order, nothing expires, and no track is required. If a category does nothing for you, leave it entirely. The range is there so you can find what you love, not so that you tidy the whole thing up. A person who does forty steps in the two things that light them up has got far more out of this than a person who does one step in every track and felt nothing anywhere.",
   "read-excuse": "Watch yourself the next time you decide not to do one of these, and notice how quickly a reason arrives. It is almost never laziness. It is nearly always an object in a different room, or a person not being available, or the wrong time of day. Which is useful, because those are solvable. Half of getting things done is simply seeing the excuse arrive and recognising it as an excuse.",
   "read-small": "The first thing anybody does here is tap a table three times, and everybody who reads it thinks the same thought: this is too small to count. It is meant to be. Something that is obviously worth doing tells you nothing about yourself. Something that is obviously not worth doing, and that you do anyway, tells you a great deal, and it is the whole test.",
   "read-recordkeeping": "In three years the useful thing about this app will not be the points. It will be the list of what you actually did, with the dates on it, when you have forgotten most of them. People systematically underestimate their own past effort, because the effort is invisible once it has turned into a skill. A written record is the only defence against being unfair to yourself later.",
@@ -754,7 +754,7 @@
   "read-argument": "The commonest move in a losing argument is not a lie. It is a change of subject, done smoothly enough that nobody notices, usually to something the other person can be blamed for. Once you can see it happening, you cannot stop seeing it, in conversations and in speeches and in your own mouth. Noticing is the entire skill. You do not even have to say anything at the time.",
   "read-invite": "Say hello first, before the other person does. It is a tiny reordering and it changes who you are in the room. The person who greets first is, from that second onward, one of the hosts of the situation rather than one of the guests in it. Children work this out very fast when it is pointed out to them, and most adults have never had it pointed out at all.",
   "read-onelevel": "Every level in here is only slightly harder than the one before, and that is not a gentleness. It is the whole method. Progress stops the moment the next step is far enough away to require deciding about. Keep the next thing small enough that there is nothing to decide, and a person can climb an extraordinary distance without ever once needing to be brave.",
-  "read-seasons": "Width is for finding out what you love. Once you have found it, the opposite becomes true, and the useful thing is narrowness: two tracks for a whole season, gone deep on. A month of one skill looks slow from the outside and is the fastest thing there is. Choose them out loud, with somebody, so that the choosing is a real event and not a vague intention.",
+  "read-seasons": "Trying many things is for finding out what you love. Once you have found it, the opposite becomes true, and the useful thing is narrowness: two tracks for a whole season, properly worked at. A month of one skill looks slow from the outside and is the fastest thing there is. Choose them out loud, with somebody, so that the choosing is a real event and not a vague intention.",
   "read-first": "Not the hardest. The first. Whatever the thing is today, there is a large gap between none and one, and a small gap between one and five. This is why the advice is always the same and always sounds too simple: do one. Not a session, not a plan, not a good start. One. The rest tends to follow on its own and does not need to be arranged.",
   "read-quiet": "Sitting completely still and quiet for one minute is on the list of things that sound easy and are not. Most people last about twenty seconds before reaching for something. There is nothing mystical claimed here and no position you have to sit in. It is simply a measurement, taken on yourself, of how long you can currently go without an escape. The number goes up with practice.",
   "read-onthespot": "Speaking when you have prepared and speaking when you have not are separate skills, and life mostly asks for the second one. The fear around it comes from imagining the room is judging the content. It is not. It is mostly relieved that somebody spoke. Say one unprepared thing in a group this week and notice how completely the room fails to punish you for it.",
@@ -1190,7 +1190,7 @@
     "t": "Pick anything. The next thing keeps you moving. The long game is where you become somebody. Nothing here is out of reach."
    }
   ],
-  "nextLine": "Small, quick, doable now. Keep the momentum and try things widely.",
+  "nextLine": "Small, quick, doable now. Keep the momentum and try many things.",
   "longLine": "Skills with a ladder: an afternoon, a week, or a month. One step at a time, the next one always ready.",
   "allLine": "Every room in the school, laid out to be seen.",
   "catLines": {
@@ -1254,20 +1254,44 @@
     "Ember"
    ],
    [
-    75,
+    60,
     "Flame"
+   ],
+   [
+    100,
+    "Torch"
    ],
    [
     150,
     "Lantern"
    ],
    [
+    220,
+    "Hearth"
+   ],
+   [
     300,
     "Beacon"
    ],
    [
-    600,
+    400,
+    "Bonfire"
+   ],
+   [
+    520,
     "Lighthouse"
+   ],
+   [
+    650,
+    "Blaze"
+   ],
+   [
+    780,
+    "Sun"
+   ],
+   [
+    877,
+    "Radiant"
    ]
   ],
   "thoughts": [
@@ -1317,14 +1341,29 @@
     "earned": "Earned",
     "notyet": "Not yet",
     "more": "{n} more step{s}",
-    "rankAt": "Reached at {n} done",
-    "rankHave": "{n} done. This one is yours.",
+    "rankAt": "Reached at {n} done.",
+    "rankHave": "Yours at {n} done.",
     "rankLine": "A rank is where you stand. It only ever goes up.",
     "twentyfive": "The first twenty-five, every one, in a sitting.",
     "room": "{n} of {N} steps in {room}.",
     "roomNeed": "{n} of {need} steps in {room}.",
-    "first": "The first flame. Lit the moment you did one real thing."
+    "first": "The first flame. Lit the moment you did one real thing.",
+    "ladder": "The ladder"
    }
+  },
+  "rankLines": {
+   "Spark": "The first flame. Lit the moment you did one real thing.",
+   "Ember": "Warm and steady. It stays lit on its own now.",
+   "Flame": "Standing up on its own. People can see it.",
+   "Torch": "Carried. You take it with you wherever you go.",
+   "Lantern": "Kept safe. Wind and weather do not put it out.",
+   "Hearth": "The fire people gather round. Others warm themselves at what you do.",
+   "Beacon": "Seen from far off. Others set their course by it.",
+   "Bonfire": "Big enough that people bring what they have and add to it.",
+   "Lighthouse": "Steady through every storm, and other people find their way by it.",
+   "Blaze": "Nothing half-done. You are doing more of this than almost anyone alive.",
+   "Sun": "Everything around you grows in it.",
+   "Radiant": "Every step in the school, every one. Light coming off you."
   }
  },
  "arrival": {
@@ -1433,7 +1472,7 @@
    {
     "id": "width",
     "title": "Try a great many things, badly",
-    "text": "You cannot know what you love until you have tried it. Somebody does a voice warm-up for thirty mornings and finds out they love singing, and they would never have found out any other way. So the first job is width. Level one in as many things as take your fancy, including the ones that do not sound like you. The few you keep going back to are the ones worth going deep in."
+    "text": "You cannot know what you love until you have tried it. Somebody does a voice warm-up for thirty mornings and finds out they love singing, and they would never have found out any other way. So the first job is to try many things. Level one in as many as take your fancy, including the ones that do not sound like you. The few you keep going back to are the ones worth giving real time to."
    },
    {
     "id": "levelone",
@@ -1613,7 +1652,7 @@
    {
     "id": "ownway",
     "title": "Nothing here is compulsory",
-    "text": "There is no order, nothing expires, and no track is required. If a category does nothing for you, leave it entirely. The width is there so you can find what you love, not so that you tidy the whole thing up. A person who does forty steps in the two things that light them up has got far more out of this than a person who does one step in every track and felt nothing anywhere."
+    "text": "There is no order, nothing expires, and no track is required. If a category does nothing for you, leave it entirely. The range is there so you can find what you love, not so that you tidy the whole thing up. A person who does forty steps in the two things that light them up has got far more out of this than a person who does one step in every track and felt nothing anywhere."
    },
    {
     "id": "excuse",
@@ -1678,7 +1717,7 @@
    {
     "id": "seasons",
     "title": "Pick two for the season",
-    "text": "Width is for finding out what you love. Once you have found it, the opposite becomes true, and the useful thing is narrowness: two tracks for a whole season, gone deep on. A month of one skill looks slow from the outside and is the fastest thing there is. Choose them out loud, with somebody, so that the choosing is a real event and not a vague intention."
+    "text": "Trying many things is for finding out what you love. Once you have found it, the opposite becomes true, and the useful thing is narrowness: two tracks for a whole season, properly worked at. A month of one skill looks slow from the outside and is the fastest thing there is. Choose them out loud, with somebody, so that the choosing is a real event and not a vague intention."
    },
    {
     "id": "first",

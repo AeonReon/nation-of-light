@@ -678,7 +678,7 @@
   function awards() {
     const AW = C.school.awards, K = AW.show || {}, out = [], p = points();
     const fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
-    C.school.ranks.forEach((r, i) => { const need = Math.max(1, r[0]), earned = p >= need; out.push({ id: 'rank.' + r[1].toLowerCase(), kind: 'flame', level: i, tier: 'rank', name: r[1], short: r[1], earned, n: p, need, left: Math.max(0, need - p), line: i === 0 ? (K.first || '') : (earned ? fmt(K.rankHave, { n: p }) : fmt(K.rankAt, { n: need })), accent: '#E0812A' }); });
+    C.school.ranks.forEach((r, i) => { const need = Math.max(1, r[0]), earned = p >= need; out.push({ id: 'rank.' + r[1].toLowerCase(), kind: 'flame', level: i, tier: 'rank', name: r[1], short: r[1], earned, n: p, need, left: Math.max(0, need - p), line: ((C.school.rankLines || {})[r[1]] || '') + ' ' + (earned ? fmt(K.rankHave, { n: need }) : fmt(K.rankAt, { n: need })), accent: '#E0812A' }); });
     (AW.special || []).forEach(sp => { if (sp.id === 'twentyfive') { const n = S.done.length, N = C.moves.length; out.push({ id: sp.id, kind: 'wreath', tier: 'special', name: sp.name, short: 'The 25', earned: n >= N, n, need: N, left: Math.max(0, N - n), line: K.twentyfive || sp.line, accent: '#C9A227' }); } });
     SCH.categories.forEach(c => { const n = c.tracks.reduce((s, tr) => s + trackDone(tr), 0), N = c.tracks.reduce((s, tr) => s + tr.steps.length, 0);
       AW.tiers.forEach(([id, tname, at]) => { const need = at === null ? N : at, earned = n >= need; out.push({ id: c.id + '.' + id, kind: 'medal', metal: id, tier: id, room: c.name, name: c.name + ' ' + tname.toLowerCase(), short: c.name, earned, n, need, left: Math.max(0, need - n), line: earned ? fmt(K.room, { n, N, room: c.name }) : fmt(K.roomNeed, { n, need, room: c.name }), accent: c.accent, accent2: c.accent2 || c.accent }); }); });
@@ -689,8 +689,8 @@
   function trophySVG(a) {
     const grad = (id, c1, c2) => `<defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient></defs>`;
     if (a.kind === 'flame') {
-      const k = (1.6 + a.level * .32).toFixed(2);
-      return `<svg class="tsvg" viewBox="0 0 64 80">${grad('tg-gold', METALS.gold[0], METALS.gold[1])}<rect x="12" y="68" width="40" height="9" rx="2.5" fill="#D6CBB4"/><rect x="17" y="63" width="30" height="6" rx="1.5" fill="#EFE7D6"/><rect x="28" y="54" width="8" height="10" fill="url(#tg-gold)"/><path d="M14 44h36l-5 12H19z" fill="url(#tg-gold)"/><rect x="12" y="41" width="40" height="5" rx="2" fill="#B8860B"/><g transform="translate(32 42) scale(${k}) translate(-8 -19)">${HUD_FLAME}</g></svg>`;
+      const k = (1.5 + a.level * .12).toFixed(2), glow = a.level >= 4 ? `<circle cx="32" cy="${(34 - a.level * 1.2).toFixed(0)}" r="${(16 + a.level * 2.2).toFixed(0)}" fill="url(#tg-glow)" opacity="${Math.min(.95, .2 + a.level * .07).toFixed(2)}"/>` : '';
+      return `<svg class="tsvg" viewBox="0 0 64 80">${grad('tg-gold', METALS.gold[0], METALS.gold[1])}<defs><radialGradient id="tg-glow"><stop offset="0" stop-color="#FFF3C4"/><stop offset=".5" stop-color="#FFD36B" stop-opacity=".55"/><stop offset="1" stop-color="#FFD36B" stop-opacity="0"/></radialGradient></defs>${glow}<rect x="12" y="68" width="40" height="9" rx="2.5" fill="#D6CBB4"/><rect x="17" y="63" width="30" height="6" rx="1.5" fill="#EFE7D6"/><rect x="28" y="54" width="8" height="10" fill="url(#tg-gold)"/><path d="M14 44h36l-5 12H19z" fill="url(#tg-gold)"/><rect x="12" y="41" width="40" height="5" rx="2" fill="#B8860B"/><g transform="translate(32 42) scale(${k}) translate(-8 -19)">${HUD_FLAME}</g></svg>`;
     }
     if (a.kind === 'wreath') {
       let leaves = ''; for (let i = 0; i < 15; i++) { const th = (300 + i * 20) * Math.PI / 180, x = 32 + 22 * Math.cos(th), y = 44 + 22 * Math.sin(th); leaves += `<ellipse rx="3.4" ry="7.6" transform="translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${(300 + i * 20 + 115).toFixed(0)})" fill="url(#tg-gold)" stroke="#8F6F12" stroke-width=".5"/>`; }
@@ -711,7 +711,7 @@
   function trophyShow(a) {
     if (SHOW) closeShow(true);
     const K = C.school.awards.show || {}, sc = inScene(); hush();
-    const v = veil(`<div class="panel showcard"><div class="bigt ${a.earned ? '' : 'off'}">${trophySVG(a)}</div><div class="eyebrow"><i></i>${a.earned ? (K.earned || 'Earned') : (K.notyet || 'Not yet')}<i></i></div><h2>${a.name}</h2><p class="lede">${a.line}</p>${standCard()}<div class="showcap" id="showcap" hidden></div></div>`, 'light trophyveil');
+    const v = veil(`<div class="panel showcard"><div class="bigt ${a.earned ? '' : 'off'}">${trophySVG(a)}</div><div class="eyebrow"><i></i>${a.earned ? (K.earned || 'Earned') : (K.notyet || 'Not yet')}<i></i></div><h2>${a.name}</h2><p class="lede">${a.line}</p>${standCard()}${a.kind === 'flame' ? `<div class="ladderchips"><span class="eyebrow">${K.ladder || 'The ladder'}</span><div class="chips">${C.school.ranks.map((r, i) => `<span class="chip ${i < a.level || (i === a.level && a.earned) ? 'got' : ''} ${i === a.level ? 'this' : ''}">${r[1]}<small>${Math.max(1, r[0])}</small></span>`).join('')}</div></div>` : ''}<div class="showcap" id="showcap" hidden></div></div>`, 'light trophyveil');
     backBtn(v, () => closeShow());
     if (sc) { const scn = $('scene'); v.style.top = (scn.offsetTop + scn.offsetHeight) + 'px'; }
     SHOW = v;

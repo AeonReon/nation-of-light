@@ -694,3 +694,13 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .stage.school.arrive .veil.trophyveil,.stage.school.portico .veil.trophyveil,.stage.school.room .veil.trophyveil{padding-top:54px}
 .tro{width:86px}
 .tro span{max-width:84px;font-size:10.5px}
+/* v21: the ladder of ranks in a rank's show; room for tall flames on the shelf */
+.shrow{padding-top:16px}
+.ladderchips{margin:2px 0 0;text-align:left}
+.ladderchips .eyebrow{justify-content:flex-start;margin-bottom:6px}
+.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
+.chip{display:flex;flex-direction:column;align-items:center;padding:5px 2px 4px;border-radius:10px;background:var(--ivory);font-size:11px;font-weight:700;color:var(--ink-faint);box-shadow:inset 0 0 0 1px var(--line);line-height:1.1}
+.chip small{font-size:9.5px;font-weight:600;margin-top:2px;color:var(--ink-faint)}
+.chip.got{background:linear-gradient(135deg,#F3E3A8,#E0C25C);color:#2B2210;box-shadow:none}
+.chip.got small{color:#6B5410}
+.chip.this{box-shadow:0 0 0 2px var(--gold)}
