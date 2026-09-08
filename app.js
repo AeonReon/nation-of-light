@@ -344,7 +344,11 @@
   }
 
   /* ---------- overlays ---------- */
-  function veil(html, cls = '') { const o = $('overlay'); o.innerHTML = `<div class="veil in ${cls}">${html}</div>`; const v = o.firstElementChild; if (cls.includes('light')) v.addEventListener('click', e => { if (e.target === v) { sfx('tap'); NAR.pause(); closeVeil(); } }); return v; }
+  function veil(html, cls = '') { const o = $('overlay'); o.innerHTML = `<div class="veil in ${cls}">${html}</div>`; const v = o.firstElementChild; if (cls.includes('light')) v.addEventListener('click', e => { if (e.target === v) { sfx('tap'); NAR.pause(); (v._close || closeVeil)(); } }); return v; }
+  /* the back button: top left, always the same, and it goes exactly where you came from */
+  const CHEV = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>';
+  function backBtn(v, fn) { const b = document.createElement('button'); b.className = 'backbtn'; b.setAttribute('aria-label', 'Back'); b.innerHTML = CHEV; b.addEventListener('click', e => { e.stopPropagation(); sfx('tap'); NAR.pause(); fn(); }); v.appendChild(b); v._close = fn; return b; }
+  function stageBack(fn) { const b = $('stageback'); b.hidden = !fn; b.onclick = fn ? () => { sfx('tap'); fn(); } : null; }
   function closeVeil(then) { const v = $('overlay').firstElementChild; if (!v) { if (then) then(); return; } v.classList.remove('in'); v.classList.add('out'); setTimeout(() => { $('overlay').innerHTML = ''; if (then) then(); }, 480); }
 
   function cover() {
@@ -408,6 +412,7 @@
       ${w.paras.map(p => `<p>${p}</p>`).join('')}
       <div class="row" style="margin-top:6px"><button class="btn btn-gold" id="whatok" style="flex:1">${S.done.length ? 'Go in' : 'Begin'}</button></div>
     </div>`, 'light');
+    backBtn(v, () => closeVeil(cover));
     v.querySelector('#whatok').addEventListener('click', () => { sfx('tap'); closeVeil(cover); setTimeout(() => { const b = $('begin'); if (b) b.click(); }, 520); });
   }
   function enter() {
@@ -448,8 +453,8 @@
       </form>
       <button class="what dark" id="codebtn">${D.code}</button>
       <button class="what dark" id="doorshare">${C.share.btn}</button>
-      <button class="what dark" id="doorback">Back to the portico</button>
     </div>`, 'light');
+    backBtn(v, () => closeVeil(() => { ARIG.show(false); restTablet(); }));
     v.querySelector('#applyform').addEventListener('submit', async e => {
       e.preventDefault(); sfx('tap'); const fd = new FormData(e.target); const data = Object.fromEntries(fd.entries());
       S.apply = { ...data, done: S.done.length, skipped: S.skipped.length, at: new Date().toISOString() }; save();
@@ -464,7 +469,6 @@
     });
     v.querySelector('#codebtn').addEventListener('click', () => { sfx('tap'); codePanel(); });
     v.querySelector('#doorshare').addEventListener('click', () => { sfx('tap'); sharePanel(); });
-    v.querySelector('#doorback').addEventListener('click', () => { sfx('tap'); closeVeil(() => { ARIG.show(false); restTablet(); }); });
   }
   function codePanel(fromCover) {
     const D = C.door;
@@ -473,14 +477,13 @@
       <p class="lede">${D.codeLede}</p>
       <form id="codeform"><label>${D.codeTitle}<input name="code" required autocomplete="off" autocapitalize="characters" value="${S.code || ''}"></label>
         <button class="btn btn-gold" type="submit" style="width:100%">Open</button></form>
-      <button class="what dark" id="codeback">Back</button>
     </div>`, 'light');
+    backBtn(v, () => closeVeil(fromCover ? cover : doorPanel));
     v.querySelector('#codeform').addEventListener('submit', e => { e.preventDefault(); sfx('tap'); S.code = new FormData(e.target).get('code').trim(); save();
       const good = (C.codes || []).some(k => k.toLowerCase() === S.code.toLowerCase());
       if (good && SCH) { S.member = true; save(); ac(); musicStart(.4); ambStart(); closeVeil(enterSchool); return; }
       const p = v.querySelector('.doorcard'); p.innerHTML = `<div class="eyebrow"><i></i>${D.codeTitle}</div><h2>Kept.</h2><p class="lede">${D.codeSoon}</p><button class="btn btn-gold" id="codeback2" style="width:100%">Back to the portico</button>`;
       p.querySelector('#codeback2').addEventListener('click', () => { sfx('tap'); closeVeil(() => { ARIG.show(false); restTablet(); }); }); });
-    v.querySelector('#codeback').addEventListener('click', () => { sfx('tap'); closeVeil(fromCover ? cover : doorPanel); });
   }
   /* where the two of them stand: in the portico, or popped in at the edge of the screen */
   function dock(where) {
@@ -489,12 +492,24 @@
     else { scene.appendChild($('afig')); scene.appendChild($('abubble')); scene.appendChild($('mfig')); scene.appendChild($('bubble')); $('stage').classList.remove('popmode'); }
   }
   let POPT = {}, CAPT = null;
+  const capAll = () => [$('popcap'), $('capband'), SHOW && SHOW.querySelector('#showcap')].filter(Boolean);
+  const capTarget = () => SHOW ? SHOW.querySelector('#showcap') : (inScene() ? $('capband') : $('popcap'));
   function cap(who, text, src) {
-    const c = $('popcap'); clearTimeout(CAPT); c.hidden = false;
+    const c = capTarget(); if (!c) return; clearTimeout(CAPT);
+    capAll().forEach(x => { if (x !== c) { x.hidden = true; x.classList.remove('away'); } });
+    c.hidden = false; c.classList.remove('away');
     c.innerHTML = `<b>${who === 'marcus' ? (src ? C.names.marcus : 'Marcus') : 'Aurelia'}</b>${wordSpans(text)}${src ? `<i>${src}</i>` : ''}`;
     c.classList.remove('say'); void c.offsetWidth; c.classList.add('say');
   }
-  function capHide(delay) { clearTimeout(CAPT); CAPT = setTimeout(() => { $('popcap').hidden = true; }, delay || 0); }
+  function capHide(delay) { clearTimeout(CAPT); CAPT = setTimeout(() => { capAll().forEach(x => { x.hidden = true; x.classList.remove('away'); }); }, delay || 0); }
+  function capAway(el) { if (el.hidden || el.classList.contains('away')) return; el.classList.add('away'); setTimeout(() => { el.hidden = true; el.classList.remove('away'); }, 260); }
+  function capSwipe(el) {
+    let x0 = null, y0 = null;
+    el.addEventListener('pointerdown', e => { x0 = e.clientX; y0 = e.clientY; }, { passive: true });
+    el.addEventListener('pointermove', e => { if (x0 === null) return; if (Math.abs(e.clientX - x0) > 18 || Math.abs(e.clientY - y0) > 18) { x0 = null; capAway(el); } }, { passive: true });
+    el.addEventListener('pointerup', () => { if (x0 !== null) capAway(el); x0 = null; });
+    el.addEventListener('pointercancel', () => { x0 = null; });
+  }
   function popIn(who) {
     const el = $(who === 'marcus' ? 'mfig' : 'afig'), rig = who === 'marcus' ? RIG : ARIG;
     clearTimeout(POPT[who]); el.classList.remove('popout'); rig.show(true); el.classList.add('popin');
@@ -509,7 +524,7 @@
      to three things taken on deliberately, a dot per step, a bit today.
      Everything is families, then rooms, then ladders. And every day begins
      in the portico: the two of them, where you stand, three for today. */
-  let TAB = 'next', CAT = null, SAIDCAT = new Set(), LONGSAID = false, LIB = [];
+  let TAB = 'next', CAT = null, SAIDCAT = new Set(), LONGSAID = false, LIB = [], SHOW = null, SHOWN = 0, ROOM_FROM = null;
   const inSceneNow = () => inScene();
   const inScene = () => { const c = $('stage').classList; return c.contains('room') || c.contains('arrive') || c.contains('portico'); };
   const skey = (tr, st) => tr.id + '#' + st.n;
@@ -550,45 +565,52 @@
   function enterSchool() {
     $('stage').classList.add('school'); $('deck').hidden = true; $('school').hidden = false; $('hud').hidden = false;
     $('shead').appendChild($('hud')); paintSchoolCount();
-    if (!$('roombtn')) { $('hud').insertAdjacentHTML('afterbegin', '<button class="roombtn" id="roombtn" aria-label="The portico"><svg viewBox="0 0 24 24" fill="none" stroke="#8F6F12" stroke-width="2" stroke-linecap="round"><path d="M3 9h18M4 9v10M9 9v10M15 9v10M20 9v10M2 19h20M12 3l9 6H3z"/></svg></button>'); $('roombtn').addEventListener('click', () => { sfx('tap'); roomView(); }); $('hud').insertAdjacentHTML('afterbegin', '<button class="roombtn" id="sharebtn" aria-label="Share"><svg viewBox="0 0 24 24" fill="none" stroke="#8F6F12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 001 1h14a1 1 0 001-1v-7M12 3v13M7 8l5-5 5 5"/></svg></button>'); $('sharebtn').addEventListener('click', () => { sfx('tap'); sharePanel(); }); }
+    if (!$('roombtn')) { $('hud').insertAdjacentHTML('afterbegin', '<button class="roombtn" id="roombtn" aria-label="The portico: sit a while"><svg viewBox="0 0 16 20"><path d="M8 19c-3.6 0-6-2.5-6-5.8 0-2.6 1.6-4.3 2.7-5.6.6-.7 1-1.3 1.2-2 .6 1.1 1.2 2 2 2.7C9.7 10 11 11.4 11 13.6c0 1.2-.5 2.3-1.2 3 .9-.2 4.2-1.6 4.2-5.7 0-3.2-2.2-5-3.5-6.6C9.4 3 8.9 1.8 9 0c-3 1.4-3.4 4.3-3.6 5.8C4.6 4.7 4.2 3.4 4.2 2 1.7 3.8 0 7.2 0 10.6 0 15.6 3.7 19 8 19z" fill="#E0812A"/><path d="M8 19c-1.9 0-3.2-1.4-3.2-3.2 0-1.5 1-2.4 1.6-3.2.4-.5.6-.9.7-1.4.5.8.9 1.3 1.4 1.8.7.7 1.6 1.6 1.6 2.8C10.1 17.6 9.2 19 8 19z" fill="#FFD36B"/></svg></button>'); $('roombtn').addEventListener('click', () => { sfx('tap'); roomView(); }); }
     plates(false); MODE = 'school'; CUR = null; $('mfig').classList.remove('walk-in');
     const d = today(), fresh0 = !S.school.arrivedEver;
     const again = S.school.arrived === d; S.school.arrived = d; S.school.visits = (S.school.visits || 0) + 1; save(); arrival(fresh0, again);
   }
   function paintSchoolCount() { const p = points(), r = rankOf(p); $('countn').textContent = p; const of = $('countn').nextElementSibling; of.hidden = false; of.textContent = r.name; }
   /* ---- the arrival: the portico, the two of them, where you stand, three for today ---- */
-  function arrival(first, again) {
-    $('stage').classList.add('arrive'); $('stage').classList.remove('room'); dock('scene');
+  let HOMEN = 0;
+  function goHome() { if ($('stage').classList.contains('arrive')) return; hush(); clearTimeout(ROOMT); HOMEN++; CAT = null; arrival(false, true, true); }
+  const unpop = () => { clearTimeout(POPT.marcus); clearTimeout(POPT.aurelia); };
+  function arrival(first, again, quiet) {
+    const st = $('stage'); st.classList.add('arrive'); st.classList.remove('room', 'portico'); clearTimeout(ROOMT); stageBack(null); capHide(0); unpop(); dock('scene');
+    $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout');
     RIG.enter(); setTimeout(() => { ARIG.show(true); $('afig').classList.remove('walk-out-l', 'walk-in-l', 'popin', 'popout'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l'); }, 350);
     $('stabs').hidden = true; $('sline').textContent = '';
     renderArrival();
-    let lines = first ? C.arrival.first : (again && C.arrival.again ? C.arrival.again[(S.school.visits || 0) % C.arrival.again.length] : C.arrival.lines); S.school.arrivedEver = true; save();
+    const vn = (S.school.visits || 0) + HOMEN;
+    let lines = quiet ? [] : (first ? C.arrival.first : (again && C.arrival.again ? C.arrival.again[vn % C.arrival.again.length] : C.arrival.lines)); S.school.arrivedEver = true; save();
     // and something from them: one of her true lines, or one of his, in turn
-    if (!first) { const hers = (S.school.visits || 0) % 2 === 0; if (hers) { const ids = C.aurelia.lines.map(l => l.id); const id = ids[(S.school.visits || 0) % ids.length]; const ln = C.aurelia.lines.find(l => l.id === id); lines = lines.concat([{ who: 'aurelia', id, t: ln.t }]); } else { const all = Object.keys(LINES).filter(k => k.startsWith('m-')); const ln = fresh(all.slice((S.school.visits || 0) % all.length).concat(all)); if (ln) lines = lines.concat([{ who: 'marcus', id: ln.id, t: ln.t }]); } }
-    setTimeout(() => speakSchool(lines), 1500);
+    if (!first) { const hers = vn % 2 === 0; if (hers) { const ids = C.aurelia.lines.map(l => l.id); const id = ids[(S.school.visits || 0) % ids.length]; const ln = C.aurelia.lines.find(l => l.id === id); lines = lines.concat([{ who: 'aurelia', id, t: ln.t }]); } else { const all = Object.keys(LINES).filter(k => k.startsWith('m-')); const ln = fresh(all.slice((S.school.visits || 0) % all.length).concat(all)); if (ln) lines = lines.concat([{ who: 'marcus', id: ln.id, t: ln.t }]); } }
+    clearTimeout(arrival._t); arrival._t = setTimeout(() => { if ($('stage').classList.contains('arrive')) speakSchool(lines); }, 1500);
   }
+  function standLine() { const L = C.arrival.stand.lines || []; return L.length ? L[(daySeed() + (S.school.visits || 0) + HOMEN) % L.length] : ''; }
   function standCard() {
     const p = points(), r = rankOf(p), lit = daysLit().size, A = C.arrival.stand;
     const pct = r.next ? Math.round((p - r.at) / (r.next[0] - r.at) * 100) : 100;
     return `<div class="stand"><div><b>${lit}</b><small>${A.days}</small></div><div><b>${p}</b><small>${A.steps}</small></div><div><b>${r.name}</b><small>${r.next ? (r.next[0] - p) + ' to ' + r.next[1] : A.rank}</small></div></div>
       <div class="lvl"><i style="width:${pct}%"></i></div>`;
   }
+  const SHARE_IC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 001 1h14a1 1 0 001-1v-7M12 3v13M7 8l5-5 5 5"/></svg>';
   function renderArrival() {
     const list = $('slist'); const picks = todayPicks(); const P = C.arrival, post = P.post;
-    list.innerHTML = `<div class="acard">${standCard()}</div>` +
+    list.innerHTML = `<div class="acard standcard">${standCard()}<p class="punch">${standLine()}</p>${picks.length ? `<p class="nextp">${P.stand.next || ''}</p>` : ''}</div>` +
       (post ? `<div class="acard post"><span class="eyebrow">From the group</span><h3>${post.title}</h3><p>${post.text}</p></div>` : '') +
-      `<div class="acard"><span class="eyebrow">Three for today</span>` +
+      `<div class="acard todaycard"><span class="eyebrow">${P.todayTitle || 'Three for today'}</span>${P.todayLede ? `<p class="lede">${P.todayLede}</p>` : ''}` +
       (picks.length ? picks.map(([tr, st]) => { const c = catOf(tr); return `<div class="pick" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span class="ptxt"><span class="scat">${c.name} · ${tr.name}</span><span class="stest">${st.test}</span></span><span class="pbtns"><button class="btn btn-gold sm" data-do="${skey(tr, st)}">${P.do}</button><button class="btn btn-ghost sm" data-not="${skey(tr, st)}">${P.notThis}</button></span></div>`; }).join('')
         : `<p class="lede">Every quick one is done. The long game is where the rest of you lives.</p>`) +
-      `</div>` + carryCard(3) + `<button class="btn btn-gold" id="intoschool" style="width:100%;margin-top:4px">${P.go}</button><button class="what dark" id="skipschool">${P.skip}</button><button class="what dark" id="sharearr">${C.share.btn}</button>`;
+      `</div>` + shelfCard(true) + carryCard(3) + `<div class="gorow"><button class="btn btn-gold" id="intoschool">${P.go}</button><button class="iconbtn" id="sharearr" aria-label="${C.share.btn}">${SHARE_IC}</button></div>`;
     list.querySelector('#sharearr').addEventListener('click', () => { sfx('tap'); sharePanel(); });
+    wireShelf(list);
     list.querySelectorAll('[data-do]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.do); if (r) stepSheet(r[0], r[1], null, 'arrival'); }));
     list.querySelectorAll('.crow[data-step]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.step); if (r) stepSheet(r[0], r[1], null, 'arrival'); }));
     list.querySelectorAll('[data-not]').forEach(b => b.addEventListener('click', () => { sfx('tap'); notThis(b.dataset.not); renderArrival(); if (line(C.arrival.another)) { hush(); marcusSay(line(C.arrival.another), 'nod'); } }));
     list.querySelector('#intoschool').addEventListener('click', () => { sfx('tap'); leaveArrival(); });
-    list.querySelector('#skipschool').addEventListener('click', () => { sfx('tap'); leaveArrival(); });
   }
-  function leaveArrival() { hush(); $('stage').classList.remove('arrive'); RIG.show(false); ARIG.show(false); $('afig').classList.remove('walk-in-l'); dock('pop'); TAB = 'next'; renderSchool(); if (!S.school.toured) setTimeout(offerTour, 600); }
+  function leaveArrival() { clearTimeout(arrival._t); hush(); $('stage').classList.remove('arrive'); RIG.show(false); ARIG.show(false); $('afig').classList.remove('walk-in-l'); dock('pop'); renderSchool(); if (!S.school.toured) setTimeout(offerTour, 600); }
   /* a line from either of them: from the portico when it is showing, popped in at the edge when not */
   function speakSchool(lines) {
     const sc = inScene(); let i = 0;
@@ -612,11 +634,10 @@
     if (cat) {
       dock('scene'); RIG.show(true); ARIG.show(true); $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout');
       tabs.hidden = true; $('sline').textContent = '';
-      list.innerHTML = `<button class="sback" id="roomback">‹ ${TAB === 'all' ? 'All rooms' : C.school.tabs.find(t => t[0] === TAB)[1]}</button>
-        <div class="roomhead" style="--c:${cat.accent};--c2:${cat.accent2}"><img src="images/cat/${cat.id}.jpg" alt=""><div><h2>${cat.name}</h2><p>${cat.line}</p></div></div>` + cat.tracks.map(trackRow).join('');
-      list.querySelector('#roomback').addEventListener('click', () => { sfx('tap'); hush(); CAT = null; renderSchool(); });
+      list.innerHTML = `<div class="roomhead" style="--c:${cat.accent};--c2:${cat.accent2}"><img src="images/cat/${cat.id}.jpg" alt=""><div><h2>${cat.name}</h2><p>${cat.line}</p></div></div>` + cat.tracks.map(trackRow).join('');
+      stageBack(() => { hush(); CAT = null; renderSchool(); }); list.scrollTop = 0;
     } else {
-      dock('pop');
+      dock('pop'); stageBack(null);
       if (TAB === 'next') renderNext(list);
       else if (TAB === 'long') renderLong(list);
       else renderAll(list);
@@ -627,38 +648,90 @@
   }
   /* ---- the portico: nowhere to be, nothing asked. The two of them, the fire, the music, a thought a day, the group's news ---- */
   let ROOMT = null, ROOMI = 0;
+  const orn = () => '<div class="orn"><i></i><b></b><i></i></div>';
+  const SPK_IC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z" fill="currentColor" stroke="none"/><path d="M15.5 8.5a5 5 0 010 7M19 5.5a9 9 0 010 13"/></svg>';
   function roomView() {
-    hush(); CAT = null; const st = $('stage'); st.classList.add('portico'); st.classList.remove('room', 'arrive');
-    dock('scene'); RIG.show(true); ARIG.show(true); $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout', 'walk-out-l');
+    hush(); ROOM_FROM = { tab: TAB, cat: CAT }; CAT = null; const st = $('stage'); st.classList.add('portico'); st.classList.remove('room', 'arrive');
+    unpop(); dock('scene'); RIG.show(true); ARIG.show(true); $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout', 'walk-out-l');
     $('afig').classList.remove('walk-in-l'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l'); RIG.enter();
     MODE = 'school'; if (MUS.paused) musicStart(.4); ambStart(); if (points()) ambFire(true);
+    stageBack(leaveRoom); $('sline').textContent = '';
     const R = C.room, list = $('slist'); list.scrollTop = 0;
     const rd = R.readings[daySeed() % R.readings.length];
-    list.innerHTML = `<div class="roomtop"><h2>${R.title}</h2><button class="what dark" id="roomback" style="width:auto;padding:6px 10px">${R.back}</button></div><p class="sline" style="margin:0 2px 8px">${R.lede}</p>
+    const lib = ['quote', 'book', 'beauty', 'figure'].map(k => { const pool = LIB.filter(x => x.kind === k); if (!pool.length) return ''; const it = pool[(daySeed() + k.length) % pool.length]; return `<div class="acard lib ${k}"><span class="eyebrow">${R.libraryLede[k]}</span>${it.title ? `<h3>${it.title}</h3>` : ''}<p>${it.t}</p>${it.by ? `<i>${it.by}${it.src ? ' · ' + it.src : ''}</i>` : ''}</div>`; }).join('');
+    list.innerHTML = `<div class="roomtitle"><h2>${R.title}</h2><p>${R.lede}</p></div>
       ${progressCard()}
-      <div class="acard reading"><span class="eyebrow">${R.readingsLede}</span><h3>${rd.title}</h3><p>${rd.text}</p><div class="row"><button class="btn btn-ghost sm" id="readit">Aurelia reads it</button></div></div>
-      ${['quote', 'book', 'beauty', 'figure'].map(k => { const pool = LIB.filter(x => x.kind === k); if (!pool.length) return ''; const it = pool[(daySeed() + k.length) % pool.length]; return `<div class="acard lib"><span class="eyebrow">${R.libraryLede[k]}</span>${it.title ? `<h3>${it.title}</h3>` : ''}<p>${it.t}</p>${it.by ? `<i>${it.by}${it.src ? ' · ' + it.src : ''}</i>` : ''}</div>`; }).join('')}
-      <div class="acard feedcard"><span class="eyebrow">${C.feed.title}</span>${FEED.length ? FEED.slice(0, 5).map(p => `<div class="feedpost"><h4>${p.title}</h4><small>${p.date}</small><p>${p.text}</p></div>`).join('') : `<p class="lede">${C.feed.empty}</p>`}</div>`;
-    list.querySelector('#roomback').addEventListener('click', () => { sfx('tap'); leaveRoom(); });
+      ${shelfCard(false)}
+      ${orn()}
+      <div class="acard reading"><div class="rhead"><span class="eyebrow">${R.readingsLede}</span><button class="playbtn" id="readit" aria-label="Aurelia reads it">${SPK_IC}</button></div><h3>${rd.title}</h3><p>${rd.text}</p></div>
+      ${lib}
+      ${orn()}
+      <div class="acard feedcard"><span class="eyebrow">${C.feed.title}</span>${FEED.length ? FEED.slice(0, 5).map(p => `<div class="feedpost"><small>${p.date}</small><h4>${p.title}</h4><p>${p.text}</p></div>`).join('') : `<p class="lede">${C.feed.empty}</p>`}</div>
+      <div class="gorow"><button class="btn btn-ghost" id="roomshare" style="flex:1">${SHARE_IC}<span>${C.share.btn}</span></button></div>`;
+    list.querySelector('#roomshare').addEventListener('click', () => { sfx('tap'); sharePanel(); });
     list.querySelector('#readit').addEventListener('click', () => { sfx('tap'); hush(); clearTimeout(ROOMT); cap('aurelia', rd.title); ARIG.nod(); aureliaSay('ui-read-' + rd.id, () => { capHide(1500); idleRoom(); }); });
+    wireShelf(list);
     setTimeout(() => speakSchool(R.enter), 1400);
     idleRoom(40000);
   }
+  /* ---- trophies: ranks, the twenty-five, and a medal per room. Drawn, never emoji. ---- */
   function awards() {
-    const AW = C.school.awards, out = [];
+    const AW = C.school.awards, K = AW.show || {}, out = [], p = points();
+    const fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
+    C.school.ranks.forEach((r, i) => { const need = Math.max(1, r[0]), earned = p >= need; out.push({ id: 'rank.' + r[1].toLowerCase(), kind: 'flame', level: i, tier: 'rank', name: r[1], short: r[1], earned, n: p, need, left: Math.max(0, need - p), line: i === 0 ? (K.first || '') : (earned ? fmt(K.rankHave, { n: p }) : fmt(K.rankAt, { n: need })), accent: '#E0812A' }); });
+    (AW.special || []).forEach(sp => { if (sp.id === 'twentyfive') { const n = S.done.length, N = C.moves.length; out.push({ id: sp.id, kind: 'wreath', tier: 'special', name: sp.name, short: 'The 25', earned: n >= N, n, need: N, left: Math.max(0, N - n), line: K.twentyfive || sp.line, accent: '#C9A227' }); } });
     SCH.categories.forEach(c => { const n = c.tracks.reduce((s, tr) => s + trackDone(tr), 0), N = c.tracks.reduce((s, tr) => s + tr.steps.length, 0);
-      AW.tiers.forEach(([id, name, at]) => { const need = at === null ? N : at; out.push({ id: c.id + '.' + id, room: c.name, tier: id, name: c.name + ' ' + name.toLowerCase(), earned: n >= need, at: need, n, accent: c.accent }); }); });
-    (AW.special || []).forEach(s => out.push({ id: s.id, name: s.name, line: s.line, tier: 'special', earned: s.id === 'twentyfive' ? S.done.length >= C.moves.length : false }));
+      AW.tiers.forEach(([id, tname, at]) => { const need = at === null ? N : at, earned = n >= need; out.push({ id: c.id + '.' + id, kind: 'medal', metal: id, tier: id, room: c.name, name: c.name + ' ' + tname.toLowerCase(), short: c.name, earned, n, need, left: Math.max(0, need - n), line: earned ? fmt(K.room, { n, N, room: c.name }) : fmt(K.roomNeed, { n, need, room: c.name }), accent: c.accent, accent2: c.accent2 || c.accent }); }); });
     return out;
   }
+  const HUD_FLAME = '<path d="M8 19c-3.6 0-6-2.5-6-5.8 0-2.6 1.6-4.3 2.7-5.6.6-.7 1-1.3 1.2-2 .6 1.1 1.2 2 2 2.7C9.7 10 11 11.4 11 13.6c0 1.2-.5 2.3-1.2 3 .9-.2 4.2-1.6 4.2-5.7 0-3.2-2.2-5-3.5-6.6C9.4 3 8.9 1.8 9 0c-3 1.4-3.4 4.3-3.6 5.8C4.6 4.7 4.2 3.4 4.2 2 1.7 3.8 0 7.2 0 10.6 0 15.6 3.7 19 8 19z" fill="#E0812A"/><path d="M8 19c-1.9 0-3.2-1.4-3.2-3.2 0-1.5 1-2.4 1.6-3.2.4-.5.6-.9.7-1.4.5.8.9 1.3 1.4 1.8.7.7 1.6 1.6 1.6 2.8C10.1 17.6 9.2 19 8 19z" fill="#FFD36B"/>';
+  const METALS = { bronze: ['#E8B48C', '#8A4E22'], silver: ['#FFFFFF', '#8E939B'], gold: ['#FFE9A0', '#B8860B'] };
+  function trophySVG(a) {
+    const grad = (id, c1, c2) => `<defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient></defs>`;
+    if (a.kind === 'flame') {
+      const k = (1.6 + a.level * .32).toFixed(2);
+      return `<svg class="tsvg" viewBox="0 0 64 80">${grad('tg-gold', METALS.gold[0], METALS.gold[1])}<rect x="12" y="68" width="40" height="9" rx="2.5" fill="#D6CBB4"/><rect x="17" y="63" width="30" height="6" rx="1.5" fill="#EFE7D6"/><rect x="28" y="54" width="8" height="10" fill="url(#tg-gold)"/><path d="M14 44h36l-5 12H19z" fill="url(#tg-gold)"/><rect x="12" y="41" width="40" height="5" rx="2" fill="#B8860B"/><g transform="translate(32 42) scale(${k}) translate(-8 -19)">${HUD_FLAME}</g></svg>`;
+    }
+    if (a.kind === 'wreath') {
+      let leaves = ''; for (let i = 0; i < 15; i++) { const th = (300 + i * 20) * Math.PI / 180, x = 32 + 22 * Math.cos(th), y = 44 + 22 * Math.sin(th); leaves += `<ellipse rx="3.4" ry="7.6" transform="translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${(300 + i * 20 + 115).toFixed(0)})" fill="url(#tg-gold)" stroke="#8F6F12" stroke-width=".5"/>`; }
+      return `<svg class="tsvg" viewBox="0 0 64 80">${grad('tg-gold', METALS.gold[0], METALS.gold[1])}${leaves}<path d="M22 66l-4 12h8l2-8zM42 66l4 12h-8l-2-8z" fill="#93313D"/><text x="32" y="50" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="600" font-size="17" fill="#8F6F12">25</text></svg>`;
+    }
+    const m = METALS[a.metal] || METALS.gold;
+    return `<svg class="tsvg" viewBox="0 0 64 80">${grad('tg-' + a.metal, m[0], m[1])}<path d="M18 0h13l4 32-11 6z" fill="${a.accent}"/><path d="M46 0H33l-4 32 11 6z" fill="${a.accent}" opacity=".7"/><circle cx="32" cy="55" r="23" fill="url(#tg-${a.metal})" stroke="${m[1]}" stroke-width="1"/><circle cx="32" cy="55" r="17.5" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="1.6"/><path d="M32 43.5l3.5 7.2 7.9 1-5.8 5.5 1.5 7.9L32 61.3l-7.1 3.8 1.5-7.9-5.8-5.5 7.9-1z" fill="rgba(255,255,255,.9)"/></svg>`;
+  }
+  function shelfCard(compact) {
+    const aw = awards(), got = aw.filter(a => a.earned), next = aw.filter(a => !a.earned).sort((x, y) => (x.left - y.left) || (y.n - x.n)).slice(0, compact ? 2 : 4);
+    const items = got.concat(next), AW = C.school.awards, K = AW.show || {};
+    const fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
+    return `<div class="acard shelfcard"><div class="shtop"><span class="eyebrow">${AW.title}</span><small>${got.length} earned</small></div>${compact ? '' : `<p class="lede">${AW.lede}</p>`}
+      <div class="shelf"><div class="shrow">${items.map(a => `<button class="tro ${a.earned ? 'on' : 'off'}" data-tro="${a.id}">${trophySVG(a)}<span>${a.short}</span><small>${a.earned ? (a.kind === 'medal' ? a.tier : K.earned || 'Earned') : fmt(K.more, { n: a.left, s: a.left === 1 ? '' : 's' })}</small></button>`).join('')}</div><i class="plank"></i></div></div>`;
+  }
+  function wireShelf(root) { root.querySelectorAll('[data-tro]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const a = awards().find(x => x.id === b.dataset.tro); if (a) trophyShow(a); })); }
+  /* the show: the trophy large, gold falling, the stand, and the two of them with a word each */
+  function trophyShow(a) {
+    if (SHOW) closeShow(true);
+    const K = C.school.awards.show || {}, sc = inScene(); hush();
+    const v = veil(`<div class="panel showcard"><div class="bigt ${a.earned ? '' : 'off'}">${trophySVG(a)}</div><div class="eyebrow"><i></i>${a.earned ? (K.earned || 'Earned') : (K.notyet || 'Not yet')}<i></i></div><h2>${a.name}</h2><p class="lede">${a.line}</p>${standCard()}<div class="showcap" id="showcap" hidden></div></div>`, 'light trophyveil');
+    backBtn(v, () => closeShow());
+    if (sc) { const scn = $('scene'); v.style.top = (scn.offsetTop + scn.offsetHeight) + 'px'; }
+    SHOW = v;
+    if (a.earned) { sfx('wreath'); shower(); if (sc) { sparks(); PORTICO.flare(); } } else sfx('scroll');
+    const n = SHOWN++;
+    const mid = a.earned ? ['c-tr1', 'c-tr2', 'c-tr4'][n % 3] : 'c-tr3', aid = a.earned ? ['tr2', 'tr3', 'tr4'][n % 3] : 'tr-no';
+    if (!sc) { popIn('marcus'); popIn('aurelia'); }
+    setTimeout(() => {
+      if (SHOW !== v) return;
+      if (a.earned) { RIG.cheer(); ARIG.cheer(); }
+      const her = () => { if (SHOW !== v) return; cap('aurelia', C.voice[aid]); ARIG.nod(); aureliaSay('ui-' + aid, () => { capHide(1800); if (!sc) { popOut('marcus', 1600); popOut('aurelia', 1600); } }); };
+      if (line(mid)) marcusSay(line(mid), a.earned ? 'cheer' : 'nod', () => setTimeout(her, 350)); else her();
+    }, sc ? 500 : 900);
+  }
+  function closeShow(silent) { if (!SHOW) return; SHOW = null; hush(); if (!silent) closeVeil(); if (!inScene()) { popOut('marcus', 0); popOut('aurelia', 0); } }
+  function shower() { for (let i = 0; i < 28; i++) { const l = document.createElement('i'); l.className = 'leaffall' + (i % 2 ? ' gl' : ''); l.style.left = Math.random() * 100 + '%'; l.style.animationDuration = (2.4 + Math.random() * 2.2) + 's'; l.style.animationDelay = (Math.random() * 1.2) + 's'; $('stage').appendChild(l); setTimeout(() => l.remove(), 5500); } }
   function progressCard() {
     const rooms = SCH.categories.map(c => ({ c, n: c.tracks.reduce((s, tr) => s + trackDone(tr), 0), N: c.tracks.reduce((s, tr) => s + tr.steps.length, 0) })).filter(r => r.n > 0).sort((x, y) => y.n - x.n).slice(0, 6);
-    const aw = awards(), got = aw.filter(x => x.earned), next = aw.filter(x => !x.earned && x.tier !== 'special').sort((x, y) => (x.at - x.n) - (y.at - y.n)).slice(0, 3);
-    return `<div class="acard prog"><span class="eyebrow">${C.room.progressTitle}</span>${standCard()}` +
-      (rooms.length ? `<div class="rooms">${rooms.map(r => `<div class="rr" style="--c:${r.c.accent};--c2:${r.c.accent2}"><span>${r.c.name}</span><i><b style="width:${Math.round(r.n / r.N * 100)}%"></b></i><small>${r.n} of ${r.N}</small></div>`).join('')}</div>` : `<p class="lede">No room climbed yet. The first step in any of them starts the count.</p>`) + `</div>` +
-      `<div class="acard shelf"><span class="eyebrow">${C.school.awards.title}</span><p class="lede">${C.school.awards.lede}</p>` +
-      (got.length ? `<div class="medals">${got.map(x => `<div class="medal ${x.tier}" style="--c:${x.accent || '#C9A227'}"><i></i><span>${x.name}</span></div>`).join('')}</div>` : '') +
-      (next.length ? `<div class="nextaw">${next.map(x => `<div class="na"><span>${x.name}</span><small>${x.at - x.n} more step${x.at - x.n === 1 ? '' : 's'}</small></div>`).join('')}</div>` : '') + `</div>`;
+    return `<div class="acard prog"><span class="eyebrow">${C.room.progressTitle}</span>${standCard()}<p class="punch">${standLine()}</p>` +
+      (rooms.length ? `<div class="rooms">${rooms.map(r => `<div class="rr" style="--c:${r.c.accent};--c2:${r.c.accent2}"><span>${r.c.name}</span><i><b style="width:${Math.round(r.n / r.N * 100)}%"></b></i><small>${r.n} of ${r.N}</small></div>`).join('')}</div>` : `<p class="lede">No room climbed yet. The first step in any of them starts the count.</p>`) + `</div>`;
   }
   /* every so often one of them says something, in turn, unprompted */
   function idleRoom(delay) {
@@ -669,7 +742,7 @@
       else { const all = Object.keys(LINES).filter(k => k.startsWith('m-')); marcusSay(fresh(all.slice(ROOMI % all.length).concat(all)), 'nod', () => idleRoom(35000 + Math.random() * 20000)); }
     }, delay || 30000);
   }
-  function leaveRoom() { hush(); clearTimeout(ROOMT); $('stage').classList.remove('portico'); RIG.show(false); ARIG.show(false); $('afig').classList.remove('walk-in-l'); dock('pop'); musicStop(); renderSchool(); }
+  function leaveRoom() { hush(); clearTimeout(ROOMT); $('stage').classList.remove('portico'); RIG.show(false); ARIG.show(false); $('afig').classList.remove('walk-in-l'); dock('pop'); musicStop(); if (ROOM_FROM) { TAB = ROOM_FROM.tab; CAT = ROOM_FROM.cat; ROOM_FROM = null; } renderSchool(); }
   /* ---- the tour: Aurelia shows the school round, one thing lit at a time ---- */
   function offerTour() {
     const T = C.tour; if (!T) return;
@@ -758,9 +831,9 @@
     const v = veil(`<div class="panel sheet" style="--c:${c.accent};--c2:${c.accent2}">
       <div class="eyebrow"><i></i>${c.name}</div><h2>${tr.name}</h2><p class="lede">${tr.line || ''}</p>
       <div class="steps">${tr.steps.map(s => { const k = skey(tr, s), d = sdone(k), act = next && next.n === s.n; return `<button class="step ${d ? 'done' : ''} ${act ? 'act' : ''}" data-step="${k}"><b>${s.n}</b><span>${s.test}</span></button>`; }).join('')}</div>
-      <button class="what dark" id="sheetback">Back</button></div>`, 'light');
+      </div>`, 'light');
+    backBtn(v, () => closeVeil());
     v.querySelectorAll('.step').forEach(el => el.addEventListener('click', () => { sfx('tap'); const r = findStep(el.dataset.step); closeVeil(() => stepSheet(r[0], r[1], tr)); }));
-    v.querySelector('#sheetback').addEventListener('click', () => { sfx('tap'); closeVeil(); });
   }
   function stepSheet(tr, st, from, where) {
     const c = catOf(tr), k = skey(tr, st), d = sdone(k);
@@ -768,11 +841,11 @@
     const v = veil(`<div class="panel sheet" style="--c:${c.accent};--c2:${c.accent2}">
       <div class="eyebrow"><i></i>${c.name} · ${tr.name} · step ${st.n} of ${tr.steps.length}</div>
       <div class="stestbig">${st.test}</div>${how}
-      <div class="row"><button class="btn btn-ghost" id="sback">${from ? 'Back' : 'Not now'}</button><button class="btn btn-gold" id="sdone" ${d ? 'disabled' : ''}>${d ? 'Done already' : 'Done'}</button></div>
+      <div class="row"><button class="btn btn-gold" id="sdone" ${d ? 'disabled' : ''}>${d ? 'Done already' : 'Done'}</button></div>
     </div>`, 'light');
-    v.querySelector('#sback').addEventListener('click', () => { sfx('tap'); closeVeil(from ? () => trackSheet(from) : null); });
+    backBtn(v, () => closeVeil(from ? () => trackSheet(from) : null));
     v.querySelector('#sdone').addEventListener('click', () => {
-      const before = rankOf(points()).name, awBefore = awards().filter(x => x.earned).length;
+      const before = rankOf(points()).name, awBefore = awards().filter(x => x.earned).length, hadIds = new Set(awards().filter(x => x.earned).map(x => x.id));
       S.school.done[k] = new Date().toISOString(); S.school.points++; const t = today(); S.days[t] = (S.days[t] || 0) + 1; save();
       sfx('done'); sparks(); RIG.smile(1.8); if (ARIG && !ARIG.hidden) ARIG.smile(1.8); paintSchoolCount();
       const inScene = inSceneNow();
@@ -781,6 +854,8 @@
       const n = Object.keys(S.school.done).length;
       const hers = !up && where !== 'arrival' && n % 3 === 2 && C.aurelia.affirm && C.aurelia.affirm.length;
       const both = n % 5 === 0;
+      const won = awards().find(x => x.earned && !hadIds.has(x.id));
+      if (won) { closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); setTimeout(() => trophyShow(won), 450); }); return; }
       if (hers) {
         const al = C.aurelia.affirm[Math.floor(n / 3) % C.aurelia.affirm.length];
         if (!inScene) { popIn('aurelia'); if (both) popIn('marcus'); }
@@ -798,10 +873,10 @@
     const v = veil(`<div class="panel sharecard"><div class="eyebrow"><i></i>${H.title}</div><h2>${H.btn}</h2><p class="lede">${H.lede}</p>
       <div class="qr"><img src="images/qr.svg" alt="QR code for ${H.url}"></div><p class="url">${H.url.replace('https://', '')}</p>
       <div class="row">${navigator.share ? `<button class="btn btn-gold" id="sharego" style="flex:1.3">Share</button>` : ''}<button class="btn btn-ghost" id="sharecopy" style="flex:1">${H.copy}</button></div>
-      <button class="what dark" id="shareback">Back</button></div>`, 'light');
+      </div>`, 'light');
+    backBtn(v, () => closeVeil());
     const go = v.querySelector('#sharego'); if (go) go.addEventListener('click', async () => { sfx('tap'); try { await navigator.share({ url: H.url }); } catch (e) {} });
     v.querySelector('#sharecopy').addEventListener('click', async () => { sfx('tap'); try { await navigator.clipboard.writeText(H.url); v.querySelector('#sharecopy').textContent = H.copied; } catch (e) { prompt('Copy this link', H.url); } });
-    v.querySelector('#shareback').addEventListener('click', () => { sfx('tap'); closeVeil(); });
   }
   function help() {
     const v = veil(`<div class="help"><div class="panel">
@@ -813,10 +888,9 @@
         <li><b>No excuses</b> is the line under each one: what to use when you don't have the thing.</li>
         <li>The flame lights on your first Done. The sun climbs as you go.</li>
       </ul>
-      <button class="btn btn-gold close" id="helpok">Back to the portico</button>
     </div></div>`, 'light');
     S.seenHelp = true; save();
-    v.querySelector('#helpok').addEventListener('click', () => { sfx('tap'); closeVeil(); });
+    backBtn(v, () => closeVeil());
   }
 
   /* ---------- boot ---------- */
@@ -831,10 +905,12 @@
     buildScene();
     $('donebtn').addEventListener('click', onDone); $('skipbtn').addEventListener('click', onSkip); $('readbtn').addEventListener('click', readTablet);
     $('soundbtn').addEventListener('click', () => { S.sound = !S.sound; save(); paintSound(); if (!S.sound) { hush(); musicStop(); ambStop(); } else { sfx('tap'); ambStart(); if (S.done.length) ambFire(true); } });
+    capSwipe($('popcap')); capSwipe($('capband'));
+    $('homebtn').addEventListener('click', () => { sfx('tap'); goHome(); });
     $('helpbtn').addEventListener('click', () => { sfx('tap'); if (MODE === 'school' && C.tour && !$('stage').classList.contains('arrive')) { if ($('stage').classList.contains('portico')) leaveRoom(); tour(); } else help(); });
     cover();
     if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
-    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool };
+    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool, show: id => trophyShow(awards().find(a => a.id === id)), awards };
   }
   /* iOS standalone computes the new viewport unit as if a toolbar were there; measure instead */
   document.addEventListener('DOMContentLoaded', boot);

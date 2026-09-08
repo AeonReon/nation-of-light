@@ -1,5 +1,5 @@
 {
- "version": 19,
+ "version": 20,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -358,12 +358,28 @@
     "t": "Back again. That is the whole thing: coming back. Keep it going."
    },
    {
-    "id": "c-ret2",
-    "t": "You came back. Most people do not. Look at where you stand."
-   },
-   {
     "id": "c-award",
     "t": "That is an award. Not for a passion. For the cold, hard start of a thing. Well earned."
+   },
+   {
+    "id": "c-ret3",
+    "t": "You came back. Most people never take action twice. You did, and here you are. Look at where you stand."
+   },
+   {
+    "id": "c-tr1",
+    "t": "Every piece on that shelf is a thing you did. Most people go a whole life without earning one, because most people never start. You started."
+   },
+   {
+    "id": "c-tr2",
+    "t": "Look at where you stand. This is not what most people do with a day. It is what you do. Keep going."
+   },
+   {
+    "id": "c-tr3",
+    "t": "Not yet. A few more steps and it is yours. Even reaching for it puts you ahead of nearly everyone."
+   },
+   {
+    "id": "c-tr4",
+    "t": "A shelf like this is rare. Not because it is hard. Because most people will not take the first step. You take them every day."
    }
   ]
  },
@@ -764,7 +780,12 @@
   "t-4": "A flame for every day you show up. It never resets, and nobody scolds you. One light a day is the whole habit.",
   "t-5": "And this is the portico. Nothing is asked of you there. Come and sit with us whenever you like.",
   "ret1": "Welcome back. The flame is still lit, and so are you.",
-  "ret2": "Good. Coming back is the whole habit. Here is where you are."
+  "ret2": "Good. Coming back is the whole habit. Here is where you are.",
+  "tr1": "Here is everything you have earned so far. Tap one and we will tell you what it took.",
+  "tr2": "Well done. You are in a small group now: the people who actually do the thing.",
+  "tr3": "Every step on that shelf is real, and it stays yours. Nothing here is ever taken away.",
+  "tr4": "Most people wait for the right moment. You made one. That is what this is for.",
+  "tr-no": "Not yet, but it is near. Every step you take now counts toward it."
  },
  "cover": {
   "em": "Nation of",
@@ -1266,8 +1287,8 @@
    "lede": "Ladders you have started. The next step is ready."
   },
   "awards": {
-   "title": "Your awards",
-   "lede": "Earned for the cold, hard start of things, never for a passion. A room's bronze at five steps, silver at fifteen, gold when every ladder in it is climbed.",
+   "title": "Your trophies",
+   "lede": "Earned for the cold, hard start of things. Tap one.",
    "tiers": [
     [
      "bronze",
@@ -1291,7 +1312,19 @@
      "name": "The twenty-five",
      "line": "Every one of the first twenty-five, done."
     }
-   ]
+   ],
+   "show": {
+    "earned": "Earned",
+    "notyet": "Not yet",
+    "more": "{n} more step{s}",
+    "rankAt": "Reached at {n} done",
+    "rankHave": "{n} done. This one is yours.",
+    "rankLine": "A rank is where you stand. It only ever goes up.",
+    "twentyfive": "The first twenty-five, every one, in a sitting.",
+    "room": "{n} of {N} steps in {room}.",
+    "roomNeed": "{n} of {need} steps in {room}.",
+    "first": "The first flame. Lit the moment you did one real thing."
+   }
   }
  },
  "arrival": {
@@ -1322,13 +1355,23 @@
   "another": "c-a3",
   "after": "c-a4",
   "go": "Into the school",
-  "skip": "Skip to the school",
   "notThis": "Not this one",
   "do": "Do it",
   "stand": {
    "days": "days lit",
    "steps": "done",
-   "rank": "rank"
+   "rank": "rank",
+   "lines": [
+    "You are here. Most people never are.",
+    "Showing up is the rare part, and you are doing it.",
+    "One small thing today and the flame stays lit.",
+    "Most people wait. You act. That is the whole difference.",
+    "Every step on this page is one most people never take.",
+    "You are in a small group now: the ones who do the thing.",
+    "Good to have you here. Now, one thing.",
+    "Momentum is yours to keep. One today keeps it."
+   ],
+   "next": "Next: do one of the three below."
   },
   "post": null,
   "again": [
@@ -1347,8 +1390,8 @@
    [
     {
      "who": "marcus",
-     "id": "c-ret2",
-     "t": "You came back. Most people do not. Look at where you stand."
+     "id": "c-ret3",
+     "t": "You came back. Most people never take action twice. You did, and here you are. Look at where you stand."
     },
     {
      "who": "aurelia",
@@ -1357,7 +1400,9 @@
     }
    ]
   ],
-  "storyLede": "Something from us"
+  "storyLede": "Something from us",
+  "todayTitle": "Do one of these today",
+  "todayLede": "About thirty seconds each. Pick the one that pulls you."
  },
  "room": {
   "title": "The portico",
@@ -1704,7 +1749,8 @@
    "beauty": "On beauty",
    "figure": "One of ours"
   },
-  "progressTitle": "Where you stand"
+  "progressTitle": "Where you stand",
+  "shelfTitle": "The shelf"
  },
  "tour": {
   "steps": [

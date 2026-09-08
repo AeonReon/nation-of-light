@@ -590,3 +590,107 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .na{display:flex;justify-content:space-between;font-size:12.5px;color:var(--ink-soft);padding:6px 0;border-top:1px solid var(--line)}
 .na small{color:var(--ink-faint);font-weight:700}
 .pickp .ladder em{white-space:normal;font-weight:600;color:var(--ink)}
+
+/* ---- v20: the back button, home, captions that move out of the way, the shelf, the room ---- */
+.backbtn{position:absolute;left:12px;top:max(12px,env(safe-area-inset-top));z-index:8;width:36px;height:36px;border-radius:50%;background:rgba(250,245,234,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 4px 14px rgba(40,28,10,.18),inset 0 0 0 1px rgba(201,162,39,.45);display:grid;place-items:center;color:var(--gold-deep);transition:transform .2s var(--spring);animation:panelin .4s var(--spring) both}
+.backbtn:active{transform:scale(.88)}
+.backbtn svg{width:20px;height:20px;margin-left:-2px}
+.veil .backbtn{z-index:3}
+.homebtn{display:inline-flex;align-items:center;gap:7px;height:32px;padding:0 12px 0 6px;border-radius:16px;background:rgba(250,245,234,.92);box-shadow:0 4px 14px rgba(40,28,10,.12),inset 0 0 0 1px rgba(201,162,39,.4);color:var(--gold-deep);min-width:0;transition:transform .2s var(--spring)}
+.homebtn:active{transform:scale(.95)}
+.homebtn svg{width:18px;height:18px;flex:0 0 auto}
+.homebtn .stitle{font-size:16px;color:var(--ink)}
+.shead .roombtn svg{width:15px;height:18px}
+/* the caption band: under the scene, in the flow, so it never covers anything */
+.capband{flex:0 0 auto;position:relative;z-index:3;margin:8px 12px 0;background:var(--card);border-radius:14px;padding:12px 12px 8px;font-family:var(--display);font-weight:500;font-size:14.5px;line-height:1.36;color:var(--ink);box-shadow:var(--shadow);animation:panelin .4s var(--spring) both;touch-action:none;cursor:pointer;user-select:none;-webkit-user-select:none}
+.capband::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.6px;background:linear-gradient(135deg,var(--gold-lt),var(--gold));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.capband::after,.popcap::after{content:"";position:absolute;top:4px;left:50%;width:26px;height:3px;margin-left:-13px;border-radius:2px;background:var(--line)}
+.capband b,.popcap b{display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:3px}
+.capband i{display:block;font-family:var(--sans);font-size:11px;font-style:italic;color:var(--ink-faint);margin-top:4px}
+.capband span{display:inline-block}
+.capband.say span{animation:wordin .4s var(--spring) both;animation-delay:calc(var(--i) * 45ms)}
+.popcap{pointer-events:auto;touch-action:none;cursor:pointer;user-select:none;-webkit-user-select:none;padding:12px 13px 9px;font-size:14.5px}
+.capband.away,.popcap.away{animation:capaway .25s var(--ease) both}
+@keyframes capaway{to{opacity:0;transform:translateY(12px) scale(.96)}}
+.stage.school.arrive .capband,.stage.school.portico .capband,.stage.school.room .capband{display:block}
+.stage.school .capband[hidden]{display:none!important}
+/* the arrival: punchy, and one row at the bottom */
+.standcard .punch,.prog .punch{margin:2px 0 0;font-family:var(--display);font-weight:500;font-size:16.5px;line-height:1.3;color:var(--ink);text-align:center}
+.standcard .nextp{margin:0;font-size:12.5px;font-weight:700;letter-spacing:.02em;color:var(--gold-deep);text-align:center}
+.todaycard .lede{margin-bottom:0}
+.gorow{display:flex;gap:10px;margin-top:4px;align-items:center}
+.gorow .btn-gold{flex:1}
+.iconbtn{width:52px;height:52px;border-radius:26px;background:var(--ivory-2);box-shadow:inset 0 0 0 1px var(--line);display:grid;place-items:center;color:var(--gold-deep);flex:0 0 auto;transition:transform .18s var(--spring)}
+.iconbtn:active{transform:scale(.92)}
+.iconbtn svg,.gorow .btn-ghost svg{width:20px;height:20px}
+.gorow .btn-ghost{height:48px;gap:8px}
+/* the shelf */
+.shelfcard{--g1:#F3E3A8;--g2:var(--gold);gap:4px}
+.shtop{display:flex;justify-content:space-between;align-items:baseline}
+.shtop small{font-size:11px;font-weight:700;color:var(--ink-faint);letter-spacing:.02em}
+.shelfcard .lede{margin:0 0 2px}
+.shelf{position:relative;margin:0 -6px}
+.shrow{display:flex;gap:2px;overflow-x:auto;padding:6px 6px 12px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.shrow::-webkit-scrollbar{display:none}
+.tro{flex:0 0 auto;width:82px;display:flex;flex-direction:column;align-items:center;gap:1px;scroll-snap-align:start;transition:transform .2s var(--spring);padding:2px 2px 0}
+.tro:active{transform:scale(.93)}
+.tsvg{display:block;overflow:visible}
+.tro .tsvg{width:54px;height:68px;filter:drop-shadow(0 5px 6px rgba(40,28,10,.24))}
+.tro span{font-size:11px;font-weight:700;color:var(--ink);text-align:center;line-height:1.15;max-width:80px;margin-top:3px}
+.tro small{font-size:10px;color:var(--gold-deep);font-weight:700;text-transform:capitalize}
+.tro.off .tsvg{filter:grayscale(1) opacity(.32)}
+.tro.off span{color:var(--ink-faint)}
+.tro.off small{color:var(--ink-faint);text-transform:none}
+.plank{display:block;height:9px;border-radius:3px;background:linear-gradient(180deg,#DCC9A2 0%,#C1A46E 55%,#A88752 100%);box-shadow:0 3px 7px rgba(40,28,10,.22),inset 0 1px 0 rgba(255,255,255,.5);margin:-12px 6px 0;position:relative;z-index:0}
+/* the show */
+.veil.trophyveil{z-index:14;justify-content:flex-start;padding:max(58px,calc(env(safe-area-inset-top) + 50px)) 18px 30%}
+.stage.school.arrive .veil.trophyveil,.stage.school.portico .veil.trophyveil,.stage.school.room .veil.trophyveil{padding:14px 16px 16px;justify-content:flex-start;overflow-y:auto}
+.showcard{text-align:center;padding:12px 18px 16px}
+.showcard .bigt{height:150px;display:grid;place-items:center;margin-bottom:4px}
+.showcard .bigt .tsvg{width:118px;height:148px;filter:drop-shadow(0 12px 16px rgba(40,28,10,.3));animation:tropop .9s var(--spring) both}
+.showcard .bigt.off .tsvg{filter:grayscale(1) opacity(.38)}
+@keyframes tropop{0%{transform:scale(.25) rotate(-14deg);opacity:0}100%{transform:none;opacity:1}}
+.showcard .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--gold-deep);display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:4px}
+.showcard .eyebrow i{width:22px;height:1.5px;background:var(--gold)}
+.showcard h2{font-size:24px;margin-bottom:4px}
+.showcard .lede{margin-bottom:10px}
+.showcard .stand{margin-bottom:6px}
+.showcard .lvl{margin-bottom:4px}
+.showcap{margin-top:10px;position:relative;background:var(--ivory);border-radius:14px;padding:10px 12px 9px;text-align:left;font-family:var(--display);font-weight:500;font-size:15px;line-height:1.36;color:var(--ink);animation:panelin .4s var(--spring) both}
+.showcap b{display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:3px}
+.showcap i{display:block;font-family:var(--sans);font-size:11px;font-style:italic;color:var(--ink-faint);margin-top:4px}
+.showcap span{display:inline-block}
+.showcap.say span{animation:wordin .4s var(--spring) both;animation-delay:calc(var(--i) * 45ms)}
+.leaffall.gl{background:linear-gradient(135deg,#FFE9A0,#C9A227);border-radius:2px;width:8px;height:14px}
+/* the portico room: each part its own thing */
+.roomtitle{text-align:center;padding:10px 6px 2px}
+.roomtitle h2{font-size:26px;line-height:1.1}
+.roomtitle p{margin:4px auto 0;font-size:13.5px;color:var(--ink-soft);max-width:30ch;line-height:1.4}
+.orn{display:flex;align-items:center;justify-content:center;gap:10px;padding:6px 0 2px}
+.orn i{width:44px;height:1.5px;background:linear-gradient(90deg,transparent,var(--gold));display:block}
+.orn i:last-child{background:linear-gradient(90deg,var(--gold),transparent)}
+.orn b{width:8px;height:8px;background:var(--gold);transform:rotate(45deg);display:block;box-shadow:0 0 0 3px var(--marble),0 0 0 4.5px var(--gold-lt)}
+.acard.prog{--g1:#B8A5D8;--g2:#6B4E9E}
+.acard.prog .eyebrow{color:#6B4E9E}
+.acard.reading{background:linear-gradient(180deg,#FBF4E2 0%,#F1E4C6 100%);padding:14px 16px 16px}
+.reading .rhead{display:flex;justify-content:space-between;align-items:center}
+.reading h3{font-size:22px;line-height:1.15;margin:2px 0 4px}
+.reading p{font-size:16.5px;line-height:1.5}
+.reading p::first-letter{float:left;font-family:var(--display);font-weight:600;font-size:3.1em;line-height:.8;margin:5px 7px 0 0;color:var(--gold-deep)}
+.playbtn{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#F0D98A 0%,#C9A227 60%,#B08D1E 100%);color:#2B2210;display:grid;place-items:center;box-shadow:0 6px 14px rgba(201,162,39,.35),inset 0 1px 0 rgba(255,255,255,.5);flex:0 0 auto;transition:transform .18s var(--spring)}
+.playbtn:active{transform:scale(.9)}
+.playbtn svg{width:19px;height:19px}
+.acard.lib.quote{padding-top:30px;background:var(--card)}
+.acard.lib.quote::after{content:"\201C";position:absolute;left:12px;top:-4px;font-family:var(--display);font-size:72px;line-height:1;color:var(--gold-lt);pointer-events:none}
+.acard.lib.quote .eyebrow{text-align:right}
+.acard.lib.quote p{font-size:18px;line-height:1.4;font-style:italic;font-variation-settings:"SOFT" 60,"WONK" 1}
+.acard.lib.quote i{text-align:right;font-style:normal;font-weight:700;color:var(--ink-soft)}
+.acard.lib.book{--g1:#A5BB93;--g2:var(--laurel)}
+.acard.lib.book .eyebrow{color:var(--laurel)}
+.acard.lib.beauty{--g1:#B8A5D8;--g2:#6B4E9E}
+.acard.lib.beauty .eyebrow{color:#6B4E9E}
+.feedpost small{display:inline-block;background:#EFE8F7;color:#6B4E9E;padding:2px 9px;border-radius:9px;font-weight:700;font-size:10.5px;letter-spacing:.06em;margin:0 0 5px}
+.feedpost h4{font-size:17px}
+.stage.school.arrive .veil.trophyveil,.stage.school.portico .veil.trophyveil,.stage.school.room .veil.trophyveil{padding-top:54px}
+.tro{width:86px}
+.tro span{max-width:84px;font-size:10.5px}

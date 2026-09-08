@@ -9,13 +9,13 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Light School">
-<link rel="manifest" href="manifest.webmanifest?v=19">
-<link rel="apple-touch-icon" href="images/icon-180.png?v=19">
-<link rel="icon" href="images/icon-192.png?v=19">
+<link rel="manifest" href="manifest.webmanifest?v=20">
+<link rel="apple-touch-icon" href="images/icon-180.png?v=20">
+<link rel="icon" href="images/icon-192.png?v=20">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=19">
+<link rel="stylesheet" href="style.css?v=20">
 </head>
 <body>
 <div class="stage" id="stage">
@@ -33,6 +33,7 @@
     <div class="bubble" id="bubble" hidden></div>
     <div class="bubble abubble" id="abubble" hidden></div>
   </div>
+  <div class="capband" id="capband" hidden></div>
   <div class="deck" id="deck" hidden>
     <div class="laurel"><div class="bar" id="laurelbar"></div></div>
     <div class="tierline" id="tierline"></div>
@@ -48,17 +49,18 @@
     </div>
   </div>
   <div class="school" id="school" hidden>
-    <div class="shead" id="shead"><span class="stitle">Light School</span></div>
+    <div class="shead" id="shead"><button class="homebtn" id="homebtn" aria-label="Home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9h18M4 9v10M9 9v10M15 9v10M20 9v10M2 19h20M12 3l9 6H3z"/></svg><span class="stitle">Light School</span></button></div>
     <div class="stabs" id="stabs"></div>
     <div class="sline" id="sline"></div>
     <div class="slist" id="slist"></div>
   </div>
   <div class="pop" id="pop"><div class="popcap" id="popcap" hidden></div></div>
-  <div class="ver">v19</div>
+  <button class="backbtn" id="stageback" hidden aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <div class="ver">v20</div>
   <div id="overlay"></div>
 </div>
-<script src="rig.js?v=19"></script>
-<script src="scene.js?v=19"></script>
-<script src="app.js?v=19"></script>
+<script src="rig.js?v=20"></script>
+<script src="scene.js?v=20"></script>
+<script src="app.js?v=20"></script>
 </body>
 </html>
