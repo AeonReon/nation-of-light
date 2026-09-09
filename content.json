@@ -1,5 +1,5 @@
 {
- "version": 25,
+ "version": 26,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -2181,5 +2181,26 @@
   "lyre": "The lyre",
   "brazier": "The brazier",
   "olive": "The olive"
+ },
+ "music": {
+  "lede": "The lyre plays",
+  "pieces": [
+   {
+    "id": "nocturne-27-2",
+    "name": "Chopin, Nocturne in D flat, Op. 27 no. 2"
+   },
+   {
+    "id": "raindrop",
+    "name": "Chopin, Prelude Op. 28 no. 15, the Raindrop"
+   },
+   {
+    "id": "berceuse",
+    "name": "Chopin, Berceuse, Op. 57"
+   },
+   {
+    "id": "nocturne-15-2",
+    "name": "Chopin, Nocturne in F sharp, Op. 15 no. 2"
+   }
+  ]
  }
 }

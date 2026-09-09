@@ -100,7 +100,7 @@
     NAR.play().catch(() => { if (after) after(); });
   }
   /* Marcus speaks: only a line from content.json, mouth off the audio clock. */
-  let SPEAKING = null; const MQ = [];
+  let SPEAKING = null; const MQ = []; const QSAID = new Set();
   function marcusSay(ln, pose, after) {
     if (!ln) { if (after) after(); return; }
     if (!RIG || RIG.hidden) { if (after) after(); return; }
@@ -124,11 +124,17 @@
   function onAureliaTap() {
     if (!ARIG || ARIG.hidden || MODE === 'scene' || MODE === 'welcome') return;
     if (MODE === 'school') { /* fine: she answers */ }
-    sfx('tap'); const ids = C.aurelia.lines.map(l => l.id); const pick = ids.find(i => !S.said.includes(i)) || ids[S.taps % ids.length]; S.taps++;
-    if (!S.said.includes(pick)) S.said.push(pick); save();
-    const ln = C.aurelia.lines.find(l => l.id === pick); const b = $('abubble'); const inSchool = MODE === 'school';
+    sfx('tap'); const inSchool = MODE === 'school';
+    const own = C.aurelia.lines.map(l => ({ id: l.id, t: l.t, src: '' }));
+    const qs = inSchool ? LIB.filter(x => x.kind === 'quote' && x.id).map(q => ({ id: 'ui-q-' + q.id, t: q.t, src: q.by ? q.by + (q.src ? ' · ' + q.src : '') : '' })) : [];
+    const start = (daySeed() * 5 + S.taps) % Math.max(1, qs.length);
+    let ln = own.find(l => !S.said.includes(l.id)) || null;
+    if (!ln) { for (let i = 0; i < qs.length; i++) { const c = qs[(start + i) % qs.length]; if (!QSAID.has(c.id)) { ln = c; break; } } }
+    if (!ln) { if (qs.length) { QSAID.clear(); ln = qs[start]; } else ln = own[S.taps % own.length]; }
+    S.taps++; if (ln.src) QSAID.add(ln.id); else if (!S.said.includes(ln.id)) S.said.push(ln.id); save();
+    const pick = ln.id, b = $('abubble');
     hush(); clearTimeout(onAureliaTap._t); ARIG.nod();
-    if (inSchool) { const sc = inScene(); cap('aurelia', ln.t); if (!sc) popIn('aurelia'); aureliaSay(pick, () => { capHide(1600); if (!sc) popOut('aurelia', 1500); }); return; }
+    if (inSchool) { const sc = inScene(); cap('aurelia', ln.t, ln.src); if (!sc) popIn('aurelia'); aureliaSay(pick, () => { capHide(ln.src ? 2600 : 1600); if (!sc) popOut('aurelia', 1500); }); return; }
     b.hidden = false; b.innerHTML = wordSpans(ln.t) + '<span class="who">Aurelia</span>'; b.classList.remove('say'); void b.offsetWidth; b.classList.add('say');
     aureliaSay(pick, () => { onAureliaTap._t = setTimeout(() => { b.hidden = true; }, 1800); });
   }
@@ -168,7 +174,6 @@
     ac(); sfx('flame'); PORTICO.flare(); sparks(); S.taps++; save();
     if (PORTICO.flame.classList.contains('out')) { PORTICO.setFlame('lit'); ambFire(true); clearTimeout(tapBrazier._t); tapBrazier._t = setTimeout(() => { if (!S.done.length) { PORTICO.setFlame('out'); ambFire(false); } }, 9000); }
   }
-  const QSAID = new Set();
   function tapOlive(el) {
     ac(); el.classList.remove('rustle'); void el.getBoundingClientRect(); el.classList.add('rustle'); sfx('tap'); chirpOnce();
     if (!atHome()) return;
@@ -195,35 +200,28 @@
     const src = ctx.createBufferSource(); src.buffer = lyreBuf(ctx, f); const g = ctx.createGain(); g.gain.setValueAtTime(vol, t0); g.gain.exponentialRampToValueAtTime(.0005, t0 + 2.2);
     const lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 2800; src.connect(lp); lp.connect(g); g.connect(LYRE.out); src.start(t0); src.stop(t0 + 2.4);
   }
+  /* the lyre plays a real piece: a strum on the tap, then about a minute of Chopin (Musopen, CC0), one after another day by day */
+  const LYR = new Audio(); LYR.preload = 'none';
+  function vol(el, v, ms) { clearInterval(el._vt); const from = el.volume, t0 = performance.now(); el._vt = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / ms); el.volume = from + (v - from) * k; if (k >= 1) clearInterval(el._vt); }, 50); }
   function lyreStart() {
     const ctx = ac(); if (!ctx || !S.sound) return; if (LYRE.on) return; LYRE.on = true;
-    const out = ctx.createGain(); out.gain.value = 0; out.connect(ctx.destination); LYRE.out = out; LYRE.master = out;
-    const dl = ctx.createDelay(1); dl.delayTime.value = .31; const fb = ctx.createGain(); fb.gain.value = .28; const dlp = ctx.createBiquadFilter(); dlp.type = 'lowpass'; dlp.frequency.value = 1800;
-    out.connect(dl); dl.connect(dlp); dlp.connect(fb); fb.connect(dl); fb.connect(ctx.destination); LYRE.nodes = [dl, fb, dlp];
-    out.gain.linearRampToValueAtTime(.6, ctx.currentTime + .4);
-    const N = LYRE.notes; let t = ctx.currentTime + .05;
-    for (let i = 0; i < N.length; i++) pluck(ctx, N[i], t + i * .045, .22);      // the strum on the tap
-    t += .9; const started = performance.now(); LYRE.last = 4;
-    const step = () => {
-      if (!LYRE.on) return;
-      const gone = (performance.now() - started) / 1000; if (gone > 78) { lyreStop(4000); return; }
-      const now = ctx.currentTime; if (t < now) t = now + .05;
-      const r = Math.random(); let n = LYRE.last + (r < .3 ? -2 : r < .55 ? -1 : r < .8 ? 1 : 2); if (n < 0 || n >= N.length) n = 4; LYRE.last = n;
-      pluck(ctx, N[n], t, .16 + Math.random() * .06);
-      if (Math.random() < .22) pluck(ctx, N[(n + 2) % N.length], t + .03, .1);
-      t += Math.random() < .18 ? 1.1 : .42 + Math.random() * .3;
-      LYRE.timer = setTimeout(step, Math.max(60, (t - ctx.currentTime) * 1000 - 60));
-    };
-    LYRE.timer = setTimeout(step, 900);
-    PORTICO.props.lyre.classList.add('play'); if (!MUS.paused) musicTo(.06, 800);
+    const out = ctx.createGain(); out.gain.value = .5; out.connect(ctx.destination); LYRE.out = out;
+    const N = LYRE.notes, t = ctx.currentTime + .05; for (let i = 0; i < N.length; i++) pluck(ctx, N[i], t + i * .045, .2);
+    const P = (C.music && C.music.pieces) || []; if (!P.length) { LYRE.on = false; return; }
+    const pc = P[(daySeed() + (S.lyreN || 0)) % P.length]; S.lyreN = (S.lyreN || 0) + 1; save();
+    LYR.src = 'audio/music/' + pc.id + '.mp3'; LYR.volume = 0; LYR.onended = () => lyreStop(0);
+    LYRE.timer = setTimeout(() => { if (!LYRE.on) return; LYR.play().then(() => vol(LYR, .75, 2200)).catch(() => { LYRE.on = false; PORTICO.props.lyre.classList.remove('play'); }); }, 700);
+    PORTICO.props.lyre.classList.add('play'); if (!MUS.paused) musicTo(.05, 900);
+    toast(pc.name);
   }
   function lyreStop(ms) {
-    if (!LYRE.on) return; LYRE.on = false; clearTimeout(LYRE.timer); const ctx = ac(); const out = LYRE.out;
-    try { out.gain.setValueAtTime(out.gain.value, ctx.currentTime); out.gain.linearRampToValueAtTime(0, ctx.currentTime + (ms || 1000) / 1000); } catch (e) {}
-    setTimeout(() => { try { out.disconnect(); (LYRE.nodes || []).forEach(n => n.disconnect()); } catch (e) {} }, (ms || 1000) + 2600);
-    PORTICO.props.lyre.classList.remove('play'); if (!MUS.paused) musicTo(MUSV, 2000);
+    if (!LYRE.on) return; LYRE.on = false; clearTimeout(LYRE.timer);
+    vol(LYR, 0, ms || 800); setTimeout(() => { LYR.pause(); }, (ms || 800) + 60);
+    try { LYRE.out.gain.linearRampToValueAtTime(0, ac().currentTime + 1); } catch (e) {}
+    PORTICO.props.lyre.classList.remove('play'); if (!MUS.paused) musicTo(MUSV, 2500);
   }
-  function lyreDuck(on) { if (!LYRE.on || !LYRE.out) return; try { const ctx = ac(); LYRE.out.gain.setValueAtTime(LYRE.out.gain.value, ctx.currentTime); LYRE.out.gain.linearRampToValueAtTime(on ? .18 : .6, ctx.currentTime + (on ? .3 : 1.2)); } catch (e) {} }
+  function lyreDuck(on) { if (!LYRE.on || LYR.paused) return; vol(LYR, on ? .2 : .75, on ? 300 : 1200); }
+  function toast(text) { const old = document.querySelector('.toast'); if (old) old.remove(); const t = document.createElement('div'); t.className = 'toast'; t.textContent = text; $('stage').appendChild(t); setTimeout(() => { t.classList.add('gone'); setTimeout(() => t.remove(), 500); }, 3400); }
   function tapLyre(el) { ac(); sfx('tap'); el.classList.remove('hint'); if (LYRE.on) lyreStop(1000); else lyreStart(); }
   /* dawn at the first tablet, full morning by the middle, gold at the twenty-fifth */
   const skyFor = () => Math.min(1, S.done.length / C.moves.length);
@@ -1039,7 +1037,7 @@
     $('helpbtn').addEventListener('click', () => { sfx('tap'); if (MODE === 'school' && C.tour) { if ($('stage').classList.contains('arrive')) leaveArrival(); tour(); } else help(); });
     cover();
     if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
-    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool, show: id => trophyShow(awards().find(a => a.id === id)), awards, quiet: quietProject, check: id => checkIn(trackById(id)), entry: entryWord, home: goHome, prac: id => logPractice(trackById(id)) };
+    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool, show: id => trophyShow(awards().find(a => a.id === id)), awards, quiet: quietProject, check: id => checkIn(trackById(id)), entry: entryWord, home: goHome, lyr: () => ({ on: LYRE.on, paused: LYR.paused, src: LYR.src.split('/').pop(), vol: +LYR.volume.toFixed(2) }), prac: id => logPractice(trackById(id)) };
   }
   /* iOS standalone computes the new viewport unit as if a toolbar were there; measure instead */
   document.addEventListener('DOMContentLoaded', boot);

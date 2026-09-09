@@ -93,3 +93,10 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   first visits. Keep it to these three; his rule is a little interaction, not a toy box.
 - Quotes read by Aurelia always show the source in the caption (`cap(who, text, src)`). New quotes
   go in library.json (kind quote, plain modern English) and content.json voice `q-<id>`.
+- **v26:** taps land only on what is painted (`.afig,.mfig{pointer-events:none}` + `svg *
+  {visiblePainted}`), so the olive behind Aurelia can be tapped; hollow props need an invisible
+  painted rect as a hit area (the lyre has one). Aurelia's tap rotates through her four own lines
+  then all 52 quotes with the source in the caption. The lyre plays REAL music: four ~70 s Chopin
+  excerpts in `audio/music/` (Musopen CC0, see CREDIT.txt; `music.pieces` in content.json), one
+  per tap in turn, a toast names the piece; the nocturne at home ducks under it. Add pieces by
+  trimming with ffmpeg (`-nostdin` inside loops) and appending to CREDIT.txt.

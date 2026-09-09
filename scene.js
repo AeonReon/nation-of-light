@@ -168,6 +168,7 @@
   function lyre() {
     const strings = []; for (let i = 0; i < 7; i++) { const x = 361 + i * 3.4; strings.push(`<path class="str" d="M${x} 296 L${(x - 361) * .55 + 363} 325" stroke="#FFF3C4" stroke-width=".8" opacity=".9"/>`); }
     return `<g class="lyre">
+      <rect x="350" y="278" width="44" height="58" rx="8" fill="#000" opacity="0"/>
       <circle cx="372" cy="283" r="1.8" fill="${BRONZE_D}"/>
       <path d="M372 285 L372 289" stroke="${BRONZE_D}" stroke-width="1.2"/>
       <path d="M358 326 Q350 300 360 289 Q364 300 362 312" fill="none" stroke="${GOLD}" stroke-width="3" stroke-linecap="round"/>

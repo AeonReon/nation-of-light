@@ -764,3 +764,9 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 @keyframes strum{from{opacity:.55}to{opacity:1}}
 .lyre.hint{animation:hint 1.5s ease-in-out 6}
 @keyframes hint{0%,100%{transform:rotate(0) scale(1);filter:none}50%{transform:rotate(-5deg) scale(1.12);filter:drop-shadow(0 0 6px #FFE9A0)}}
+/* v26: a tap lands on what is painted, so the olive behind Aurelia can be reached */
+.afig,.mfig{pointer-events:none}
+.afig svg,.mfig svg{pointer-events:none}
+.afig svg *,.mfig svg *{pointer-events:visiblePainted}
+.toast{bottom:auto;top:calc(40vh + 10px);top:calc(40dvh + 10px);font-family:var(--display);font-weight:500;font-size:13.5px;background:rgba(30,23,15,.86);white-space:normal;max-width:80%;text-align:center;z-index:9}
+.toast.gone{animation:capaway .45s var(--ease) both}
