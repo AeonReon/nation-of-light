@@ -84,7 +84,7 @@
   function ambStop() { if (!AMB.on) return; AMB.on = false; AMB.timers.forEach(clearTimeout); AMB.timers = []; try { AMB.master.gain.linearRampToValueAtTime(0, ac().currentTime + .8); } catch (e) {} setTimeout(() => { AMB.nodes.forEach(n => { try { n.stop(); } catch (e) {} }); AMB.nodes = []; }, 900); }
   const voiceOn = () => S.sound;
   function paintSound() { $('soundbtn').classList.toggle('off', !S.sound); }
-  function hush() { NAR.pause(); MAR.pause(); if (RIG) RIG.hush(); if (ARIG) ARIG.hush(); $('readbtn').classList.remove('on'); musicDuck(false); clearTimeout(marcusSay._t); $('bubble').hidden = true; $('abubble').hidden = true; if ($('popcap')) capHide(0); SPEAKING = null; MQ.length = 0; }
+  function hush() { SPK++; NAR.pause(); MAR.pause(); if (RIG) RIG.hush(); if (ARIG) ARIG.hush(); $('readbtn').classList.remove('on'); musicDuck(false); clearTimeout(marcusSay._t); $('bubble').hidden = true; $('abubble').hidden = true; if ($('popcap')) capHide(0); SPEAKING = null; MQ.length = 0; }
   /* the music: one nocturne, in on Begin, under every voice, out on its own */
   let MUSV = 0, MUST = null;
   function musicTo(v, ms) { clearInterval(MUST); const from = MUS.volume, t0 = performance.now(); MUST = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / ms); MUS.volume = from + (v - from) * k; if (k >= 1) clearInterval(MUST); }, 50); }
@@ -565,7 +565,8 @@
   function enterSchool() {
     $('stage').classList.add('school'); $('deck').hidden = true; $('school').hidden = false; $('hud').hidden = false;
     $('shead').appendChild($('hud')); paintSchoolCount();
-    if (!$('roombtn')) { $('hud').insertAdjacentHTML('afterbegin', '<button class="roombtn" id="roombtn" aria-label="The portico: sit a while"><svg viewBox="0 0 16 20"><path d="M8 19c-3.6 0-6-2.5-6-5.8 0-2.6 1.6-4.3 2.7-5.6.6-.7 1-1.3 1.2-2 .6 1.1 1.2 2 2 2.7C9.7 10 11 11.4 11 13.6c0 1.2-.5 2.3-1.2 3 .9-.2 4.2-1.6 4.2-5.7 0-3.2-2.2-5-3.5-6.6C9.4 3 8.9 1.8 9 0c-3 1.4-3.4 4.3-3.6 5.8C4.6 4.7 4.2 3.4 4.2 2 1.7 3.8 0 7.2 0 10.6 0 15.6 3.7 19 8 19z" fill="#E0812A"/><path d="M8 19c-1.9 0-3.2-1.4-3.2-3.2 0-1.5 1-2.4 1.6-3.2.4-.5.6-.9.7-1.4.5.8.9 1.3 1.4 1.8.7.7 1.6 1.6 1.6 2.8C10.1 17.6 9.2 19 8 19z" fill="#FFD36B"/></svg></button>'); $('roombtn').addEventListener('click', () => { sfx('tap'); roomView(); }); }
+    if (!$('roombtn')) { $('hud').insertAdjacentHTML('afterbegin', '<button class="roombtn" id="roombtn" aria-label="The portico: sit a while"><svg viewBox="0 0 24 24" fill="none" stroke="#8F6F12" stroke-width="2" stroke-linecap="round"><path d="M3 9h18M4 9v10M9 9v10M15 9v10M20 9v10M2 19h20M12 3l9 6H3z"/></svg></button>'); $('roombtn').addEventListener('click', () => { sfx('tap'); roomView(); }); $('homebtn').querySelector('svg').outerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 18h18M5 18a7 7 0 0114 0M12 5v2M5.6 8.6l1.4 1.4M18.4 8.6L17 10M2 13h2M20 13h2"/></svg>'; }
+    $('roombtn').classList.toggle('glow', (S.school.roomVisits || 0) < 2 && (S.school.visits || 0) <= 6);
     plates(false); MODE = 'school'; CUR = null; $('mfig').classList.remove('walk-in');
     const d = today(), fresh0 = !S.school.arrivedEver;
     const again = S.school.arrived === d; S.school.arrived = d; S.school.visits = (S.school.visits || 0) + 1; save(); arrival(fresh0, again);
@@ -614,20 +615,24 @@
   /* going in: one of them pops up with a word for the day ahead. Never the same one twice in a sitting, a different start each day, loosely his and hers in turn. */
   const ENTRYSAID = new Set();
   function entryWord() {
-    const E = C.school.entry || []; if (!E.length || !$('stage').classList.contains('school') || inScene()) return;
+    if (!$('stage').classList.contains('school') || inScene()) return;
+    const q = quietProject(); if (q) { hush(); prac(q).asked = today(); save(); speakSchool([{ who: 'aurelia', id: 'ui-lg-check', t: C.voice['lg-check'] }], () => checkIn(q)); return; }
+    const E = C.school.entry || []; if (!E.length) return;
     const start = (daySeed() * 7 + (S.school.visits || 0) + HOMEN) % E.length;
     let ln = null; for (let i = 0; i < E.length; i++) { const c = E[(start + i) % E.length]; if (!ENTRYSAID.has(c.id)) { ln = c; break; } }
     if (!ln) { ENTRYSAID.clear(); ln = E[start]; }
     ENTRYSAID.add(ln.id); hush(); speakSchool([ln]);
   }
   /* a line from either of them: from the portico when it is showing, popped in at the edge when not */
-  function speakSchool(lines) {
-    const sc = inScene(); let i = 0;
+  let SPK = 0;   /* a running chain dies when hush() moves this on */
+  function speakSchool(lines, after) {
+    const sc = inScene(); let i = 0; const my = ++SPK;
     const who = new Set(lines.map(l => l.who));
     if (!sc) who.forEach(w => popIn(w));
     const step = () => {
+      if (my !== SPK) return;
       const ln = lines[i++];
-      if (!ln) { if (!sc) who.forEach(w => popOut(w, 1500)); return; }
+      if (!ln) { if (!sc) who.forEach(w => popOut(w, 1500)); if (after) setTimeout(after, 500); return; }
       if (ln.who === 'marcus') { if (!ARIG.hidden) ARIG.smile(3); marcusSay(line(ln.id) || { id: ln.id, t: ln.t }, 'nod', () => setTimeout(step, 400)); }
       else { if (!RIG.hidden) RIG.smile(3); ARIG.nod(); cap('aurelia', ln.t); aureliaSay(ln.id, () => { capHide(1600); setTimeout(step, 400); }); }
     };
@@ -659,17 +664,21 @@
   let ROOMT = null, ROOMI = 0;
   const orn = () => '<div class="orn"><i></i><b></b><i></i></div>';
   const SPK_IC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z" fill="currentColor" stroke="none"/><path d="M15.5 8.5a5 5 0 010 7M19 5.5a9 9 0 010 13"/></svg>';
-  function roomView() {
-    hush(); ROOM_FROM = { tab: TAB, cat: CAT }; CAT = null; const st = $('stage'); st.classList.add('portico'); st.classList.remove('room', 'arrive');
-    unpop(); dock('scene'); RIG.show(true); ARIG.show(true); $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout', 'walk-out-l');
-    $('afig').classList.remove('walk-in-l'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l'); RIG.enter();
-    MODE = 'school'; if (MUS.paused) musicStart(.4); ambStart(); if (points()) ambFire(true);
-    stageBack(leaveRoom); $('sline').textContent = '';
-    const R = C.room, list = $('slist'); list.scrollTop = 0;
+  function roomView(refreshOnly) {
+    const R = C.room, list = $('slist'), keep = refreshOnly ? list.scrollTop : 0;
+    if (!refreshOnly) {
+      hush(); ROOM_FROM = { tab: TAB, cat: CAT }; CAT = null; const st = $('stage'); st.classList.add('portico'); st.classList.remove('room', 'arrive');
+      S.school.roomVisits = (S.school.roomVisits || 0) + 1; save(); $('roombtn').classList.remove('glow');
+      unpop(); dock('scene'); RIG.show(true); ARIG.show(true); $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout', 'walk-out-l');
+      $('afig').classList.remove('walk-in-l'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l'); RIG.enter();
+      MODE = 'school'; if (MUS.paused) musicStart(.4); ambStart(); if (points()) ambFire(true);
+      stageBack(leaveRoom); $('sline').textContent = '';
+    }
     const rd = R.readings[daySeed() % R.readings.length];
     const lib = ['quote', 'book', 'beauty', 'figure'].map(k => { const pool = LIB.filter(x => x.kind === k); if (!pool.length) return ''; const it = pool[(daySeed() + k.length) % pool.length]; return `<div class="acard lib ${k}"><span class="eyebrow">${R.libraryLede[k]}</span>${it.title ? `<h3>${it.title}</h3>` : ''}<p>${it.t}</p>${it.by ? `<i>${it.by}${it.src ? ' · ' + it.src : ''}</i>` : ''}</div>`; }).join('');
     list.innerHTML = `<div class="roomtitle"><h2>${R.title}</h2><p>${R.lede}</p></div>
       ${progressCard()}
+      ${longCard()}
       ${shelfCard(false)}
       ${orn()}
       <div class="acard reading"><div class="rhead"><span class="eyebrow">${R.readingsLede}</span><button class="playbtn" id="readit" aria-label="Aurelia reads it">${SPK_IC}</button></div><h3>${rd.title}</h3><p>${rd.text}</p></div>
@@ -679,10 +688,12 @@
       <div class="gorow"><button class="btn btn-ghost" id="roomshare" style="flex:1">${SHARE_IC}<span>${C.share.btn}</span></button></div>`;
     list.querySelector('#roomshare').addEventListener('click', () => { sfx('tap'); sharePanel(); });
     list.querySelector('#readit').addEventListener('click', () => { sfx('tap'); hush(); clearTimeout(ROOMT); cap('aurelia', rd.title); ARIG.nod(); aureliaSay('ui-read-' + rd.id, () => { capHide(1500); idleRoom(); }); });
-    wireShelf(list);
+    wireShelf(list); wireLong(list);
+    if (refreshOnly) { list.scrollTop = keep; return; }
     setTimeout(() => speakSchool(R.enter), 1400);
     idleRoom(40000);
   }
+  roomView.refresh = () => roomView(true);
   /* ---- trophies: ranks, the twenty-five, and a medal per room. Drawn, never emoji. ---- */
   function awards() {
     const AW = C.school.awards, K = AW.show || {}, out = [], p = points();
@@ -813,6 +824,7 @@
         <div class="rung end"><b>${tr.steps.length}</b><span><em>Ends with</em>${last.test}</span></div>
       </div>
       <div class="pdots">${tr.steps.map(s => `<i class="${sdone(skey(tr, s)) ? 'on' : ''}"></i>`).join('')}</div>
+      ${pracLine(tr)}
       <div class="row"><button class="btn btn-ghost sm" data-track="${tr.id}">The whole ladder</button><button class="btn btn-gold sm" data-step="${skey(tr, st)}" style="flex:1.3">Do a bit today</button></div></div>`;
   }
   function renderLong(list) {
@@ -822,10 +834,65 @@
       (room > 0 ? `<div class="acard"><span class="eyebrow">${mine.length ? 'Take on another one' : 'Pick something that takes a month'}</span><p class="lede">${L.pickLine}</p>` +
         sug.map(tr => { const c = catOf(tr), st = nextStep(tr), last = tr.steps[tr.steps.length - 1]; return `<button class="pickp" style="--c:${c.accent};--c2:${c.accent2}" data-take="${tr.id}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${c.name} · ${tr.steps.length} steps</small><small class="ladder">From <em>${st.test}</em> to <em>${last.test}</em></small></span><b class="take">Take it on</b></button>`; }).join('') +
         `<button class="what dark" id="rollp">Show me three others</button></div>` : '');
-    list.querySelectorAll('[data-take]').forEach(b => b.addEventListener('click', () => { sfx('tap'); S.school.projects = (S.school.projects || []).concat(b.dataset.take); save(); renderSchool(); }));
+    wireLong(list);
+    list.querySelectorAll('[data-take]').forEach(b => b.addEventListener('click', () => { sfx('tap'); S.school.projects = (S.school.projects || []).concat(b.dataset.take); S.school.taken = S.school.taken || {}; S.school.taken[b.dataset.take] = today(); save(); renderSchool(); }));
     list.querySelectorAll('[data-drop]').forEach(b => b.addEventListener('click', () => { sfx('tap'); S.school.projects = (S.school.projects || []).filter(id => id !== b.dataset.drop); save(); renderSchool(); }));
     const roll = list.querySelector('#rollp'); if (roll) roll.addEventListener('click', () => { sfx('tap'); S.school.roll = (S.school.roll || 0) + 1; save(); renderSchool(); });
     if (!LONGSAID && line('c-long')) { LONGSAID = true; hush(); popIn('marcus'); setTimeout(() => marcusSay(line('c-long'), 'point', () => popOut('marcus', 1400)), 700); }
+  }
+  /* ---- the long skills: a day counted each time you practise, and the two of them asking how it goes ---- */
+  const K_LG = () => C.school.long.check;
+  function prac(tr) { S.school.practice = S.school.practice || {}; const id = typeof tr === 'string' ? tr : tr.id; return S.school.practice[id] = S.school.practice[id] || { days: {} }; }
+  const pracDays = tr => Object.keys(prac(tr).days).length;
+  const lastPrac = tr => Object.keys(prac(tr).days).sort().pop() || null;
+  function daysAgo(d) { if (!d) return null; const a = new Date(d + 'T12:00:00'), b = new Date(today() + 'T12:00:00'); return Math.round((b - a) / 864e5); }
+  const agoText = n => n === 0 ? 'today' : n === 1 ? 'yesterday' : n + ' days ago';
+  function quietProject() {
+    const K = K_LG(), q = K.quiet || 3, t = today(); S.school.taken = S.school.taken || {};
+    return projects().find(tr => { const p = prac(tr); if (p.asked === t) return false; const since = daysAgo(lastPrac(tr) || S.school.taken[tr.id] || (S.school.taken[tr.id] = t)); return since !== null && since >= q; }) || null;
+  }
+  function pracLine(tr) {
+    const K = K_LG(), n = pracDays(tr), l = lastPrac(tr), done = l === today();
+    const fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
+    return `<div class="prac"><span>${n ? fmt(K.days, { n, s: n === 1 ? '' : 's' }) + (l ? ' · ' + fmt(K.last, { d: agoText(daysAgo(l)) }) : '') : K.never}</span><span class="pbtn"><button class="btn btn-ghost sm ${done ? 'did' : ''}" data-prac="${tr.id}" ${done ? 'disabled' : ''}>${done ? K.practisedDone : K.practised}</button><button class="what dark sm" data-check="${tr.id}">${K.how}</button></span></div>`;
+  }
+  function longCard() {
+    const K = K_LG(), mine = projects();
+    return `<div class="acard longcard"><span class="eyebrow">${K.roomTitle}</span><p class="lede">${K.roomLede}</p>` +
+      (mine.length ? mine.map(tr => { const c = catOf(tr), st = nextStep(tr), n = trackDone(tr); return `<div class="lgrow" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${st.test}</small></span>${pracLine(tr)}</div>`; }).join('')
+        : `<p class="lede">${K.none}</p><button class="btn btn-ghost sm" id="pickLong">${K.pick}</button>`) + `</div>`;
+  }
+  function wireLong(root) {
+    root.querySelectorAll('[data-prac]').forEach(b => b.addEventListener('click', () => { sfx('tap'); logPractice(trackById(b.dataset.prac)); }));
+    root.querySelectorAll('[data-check]').forEach(b => b.addEventListener('click', () => { sfx('tap'); checkIn(trackById(b.dataset.check)); }));
+    const pk = root.querySelector('#pickLong'); if (pk) pk.addEventListener('click', () => { sfx('tap'); ROOM_FROM = { tab: 'long', cat: null }; leaveRoom(); });
+  }
+  const rerender = () => { if ($('stage').classList.contains('portico')) roomView.refresh(); else if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); };
+  function logPractice(tr) {
+    const t = today(), p = prac(tr); if (p.days[t]) return;
+    p.days[t] = 1; S.days[t] = (S.days[t] || 0) + 1; save();
+    const n = pracDays(tr), K = K_LG(), sc = inScene();
+    sfx('done'); if (sc) { sparks(); RIG.smile(1.8); ARIG.smile(1.8); }
+    document.querySelectorAll(`[data-prac="${tr.id}"]`).forEach(b => { b.disabled = true; b.classList.add('did'); b.textContent = K.practisedDone; });
+    document.querySelectorAll('.prac > span:first-child').forEach(() => {}); setTimeout(() => { document.querySelectorAll(`[data-prac="${tr.id}"]`).forEach(b => { const row = b.closest('.prac'); if (row) row.outerHTML = pracLine(tr); }); wireLong($('slist')); }, 50);
+    const ms = (K.milestones || []).includes(n) ? 'ui-lg-m' + n : null;
+    hush();
+    if (ms) speakSchool([{ who: 'aurelia', id: ms, t: C.voice[ms.slice(3)] }]);
+    else if (n % 2) speakSchool([{ who: 'aurelia', id: 'ui-lg-prac', t: C.voice['lg-prac'] }]);
+    else speakSchool([{ who: 'marcus', id: 'c-lg-prac' }]);
+  }
+  function checkIn(tr) {
+    const K = K_LG(), c = catOf(tr), n = pracDays(tr), st = nextStep(tr), done = trackDone(tr);
+    const fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
+    const v = veil(`<div class="panel sheet checkcard" style="--c:${c.accent};--c2:${c.accent2}">
+      <div class="eyebrow"><i></i>${K.eyebrow} · ${tr.name}</div><h2>${K.title}</h2>
+      <p class="lede">${n ? fmt(K.days, { n, s: n === 1 ? '' : 's' }) : K.never} · step ${done + 1} of ${tr.steps.length}${st ? ': ' + st.test : ''}</p>
+      <div class="moods"><button class="btn btn-gold" data-mood="well">${K.well}</button><button class="btn btn-ghost" data-mood="struggle">${K.struggle}</button><button class="btn btn-ghost" data-mood="hard">${K.hard}</button></div>
+      <button class="what dark" id="putdown">${K.down}</button></div>`, 'light');
+    backBtn(v, () => closeVeil());
+    const say = (mood) => { const L = (K.lines || {})[mood] || []; const lines = L.map(([who, id]) => who === 'aurelia' ? { who, id, t: C.voice[id.replace(/^ui-/, '')] || '' } : { who, id }); closeVeil(() => { rerender(); hush(); setTimeout(() => speakSchool(lines), 300); }); };
+    v.querySelectorAll('[data-mood]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const p = prac(tr); p.mood = p.mood || {}; p.mood[today()] = b.dataset.mood; p.asked = today(); save(); say(b.dataset.mood); }));
+    v.querySelector('#putdown').addEventListener('click', () => { sfx('tap'); S.school.projects = (S.school.projects || []).filter(id => id !== tr.id); save(); say('down'); });
   }
   /* Everything: families, then rooms, then ladders */
   function renderAll(list) {
@@ -919,7 +986,7 @@
     $('helpbtn').addEventListener('click', () => { sfx('tap'); if (MODE === 'school' && C.tour && !$('stage').classList.contains('arrive')) { if ($('stage').classList.contains('portico')) leaveRoom(); tour(); } else help(); });
     cover();
     if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
-    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool, show: id => trophyShow(awards().find(a => a.id === id)), awards };
+    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool, show: id => trophyShow(awards().find(a => a.id === id)), awards, quiet: quietProject, check: id => checkIn(trackById(id)), entry: entryWord, room: roomView, prac: id => logPractice(trackById(id)) };
   }
   /* iOS standalone computes the new viewport unit as if a toolbar were there; measure instead */
   document.addEventListener('DOMContentLoaded', boot);

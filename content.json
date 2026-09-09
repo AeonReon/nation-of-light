@@ -1,5 +1,5 @@
 {
- "version": 22,
+ "version": 23,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -420,6 +420,22 @@
    {
     "id": "c-en10",
     "t": "Whatever you choose, do it properly. Then it is yours."
+   },
+   {
+    "id": "c-lg-well",
+    "t": "Good. The work is the reward. Same again tomorrow."
+   },
+   {
+    "id": "c-lg-struggle",
+    "t": "Struggling is what practice feels like from the inside. Stay with it."
+   },
+   {
+    "id": "c-lg-hard",
+    "t": "Too hard means the step is too big. Make it smaller, not later."
+   },
+   {
+    "id": "c-lg-prac",
+    "t": "Another day on it. That is how it is done."
    }
   ]
  },
@@ -839,7 +855,17 @@
   "en11": "Knowing which way is north, how to light a fire, how to ask for a better price: these make a person who is at home anywhere.",
   "en12": "Nobody has to know what you did today. You will know. That is the part that counts.",
   "en13": "The days you least feel like it are the days that count double. Let us do one thing.",
-  "en14": "A little every day is how great things are built. This is one of the little every days."
+  "en14": "A little every day is how great things are built. This is one of the little every days.",
+  "lg-well": "Good. Days like this are how it is built. Same time tomorrow.",
+  "lg-struggle": "That is the part where it turns into a skill. Nobody skips it. Make tomorrow's go smaller than today's, and go anyway.",
+  "lg-hard": "Then step back one rung and stay there a week. The rung you can do, done every day, is the fastest way up.",
+  "lg-down": "Put it down. It waits exactly where you left it, and nothing is lost.",
+  "lg-check": "One of your long skills has had a few quiet days. Tell us how it is going.",
+  "lg-prac": "Practised. That is a day in the count. See you tomorrow.",
+  "lg-m5": "Five days on one skill. Most people never give anything five days.",
+  "lg-m10": "Ten days. It is becoming part of you now.",
+  "lg-m20": "Twenty days on one thing. That is rare, and it shows.",
+  "lg-m30": "Thirty days. You have made a habit, and a habit carries you."
  },
  "cover": {
   "em": "Nation of",
@@ -1296,7 +1322,70 @@
     "body.upside"
    ],
    "intro": "These are skills, not a sitting. Some take an afternoon, some a week, some a month of a little most days. Each one is a ladder: it starts small and ends somewhere you cannot do yet.",
-   "pickLine": "The quick wins keep you moving. A skill gives them somewhere to go. Take on up to three, do a little most days, and put one down whenever you like."
+   "pickLine": "The quick wins keep you moving. A skill gives them somewhere to go. Take on up to three, do a little most days, and put one down whenever you like.",
+   "check": {
+    "title": "How is it going?",
+    "eyebrow": "A long skill",
+    "well": "Going well",
+    "struggle": "Struggling a bit",
+    "hard": "Too hard right now",
+    "down": "Put it down for now",
+    "practised": "Practised today",
+    "practisedDone": "Practised today ✓",
+    "how": "How is it going?",
+    "days": "{n} day{s} practised",
+    "last": "last {d}",
+    "never": "not yet practised",
+    "roomTitle": "Your long skills",
+    "roomLede": "A little most days. Tell us each day you practise, and we will keep the count.",
+    "none": "No long skill taken on yet. Pick one in The long game and it will live here too.",
+    "pick": "Pick a long skill",
+    "quiet": 3,
+    "milestones": [
+     5,
+     10,
+     20,
+     30
+    ],
+    "lines": {
+     "well": [
+      [
+       "aurelia",
+       "ui-lg-well"
+      ],
+      [
+       "marcus",
+       "c-lg-well"
+      ]
+     ],
+     "struggle": [
+      [
+       "aurelia",
+       "ui-lg-struggle"
+      ],
+      [
+       "marcus",
+       "m-d2"
+      ]
+     ],
+     "hard": [
+      [
+       "aurelia",
+       "ui-lg-hard"
+      ],
+      [
+       "marcus",
+       "m-x4"
+      ]
+     ],
+     "down": [
+      [
+       "aurelia",
+       "ui-lg-down"
+      ]
+     ]
+    }
+   }
   },
   "ranks": [
    [

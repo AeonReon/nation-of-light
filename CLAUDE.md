@@ -64,3 +64,15 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   a sitting (`entryWord`). His brief: not "welcome back" again; encouragement, "let us do something
   good today", or a reason why (poetic language brings magic, buildings bring beauty). Add lines
   here first when the pool needs to grow; keep them under fifteen words.
+- **Long skills (v23):** a practice log per project (`S.school.practice[trackId].days`, one per
+  day; `taken[trackId]` = the day it was taken on). "Practised today" on every project row (long
+  tab) and in the portico's "Your long skills" card; milestones 5/10/20/30 days get their own
+  Aurelia line, otherwise the two of them alternate. `checkIn(tr)` = How is it going? (well /
+  struggling / too hard / put it down) → lines in `school.long.check.lines` (struggling and too
+  hard get his real quotes m-d2 and m-x4). Going in after a skill has had `quiet` (3) days with
+  nothing logged, Aurelia asks and the card opens, once a day. His brief: flip the reinforcement
+  tools to the good, then wean people off needing them; three short + three long is the adult rhythm.
+- The header: Home pill = sunrise icon, the portico room = the columns icon (he could not read a
+  flame), and it glows for six pulses on the first few visits until the room has been opened twice.
+- `speakSchool` chains carry a generation token; `hush()` kills a running chain (they used to
+  keep going into the next screen).
