@@ -390,217 +390,365 @@
    "kind": "quote",
    "by": "Benjamin Franklin",
    "t": "What good shall I do this day?",
-   "src": "Autobiography, 1791. The question at the top of his daily plan."
+   "src": "Autobiography, 1791. The question at the top of his daily plan.",
+   "id": "q1"
   },
   {
    "kind": "quote",
    "by": "Benjamin Franklin",
    "t": "Well done is better than well said.",
-   "src": "Poor Richard's Almanack, 1737"
+   "src": "Poor Richard's Almanack, 1737",
+   "id": "q2"
   },
   {
    "kind": "quote",
    "by": "Benjamin Franklin",
    "t": "Have you something to do tomorrow? Do it today.",
-   "src": "Poor Richard's Almanack, 1742"
+   "src": "Poor Richard's Almanack, 1742",
+   "id": "q3"
   },
   {
    "kind": "quote",
    "by": "Benjamin Franklin",
    "t": "Do you love life? Then do not squander time, for that is the stuff life is made of.",
-   "src": "Poor Richard's Almanack, 1746"
+   "src": "Poor Richard's Almanack, 1746",
+   "id": "q4"
   },
   {
    "kind": "quote",
    "by": "Benjamin Franklin",
    "t": "Lost time is never found again.",
-   "src": "Poor Richard's Almanack, 1747"
+   "src": "Poor Richard's Almanack, 1747",
+   "id": "q5"
   },
   {
    "kind": "quote",
    "by": "Benjamin Franklin",
    "t": "Little strokes fell great oaks.",
-   "src": "Poor Richard's Almanack, 1750"
+   "src": "Poor Richard's Almanack, 1750",
+   "id": "q6"
   },
   {
    "kind": "quote",
    "by": "Benjamin Franklin",
    "t": "Diligence is the mother of good luck.",
-   "src": "Poor Richard's Almanack, 1736"
+   "src": "Poor Richard's Almanack, 1736",
+   "id": "q7"
   },
   {
    "kind": "quote",
    "by": "Benjamin Franklin",
    "t": "The sleeping fox catches no poultry.",
-   "src": "Poor Richard's Almanack, 1743"
+   "src": "Poor Richard's Almanack, 1743",
+   "id": "q8"
   },
   {
    "kind": "quote",
    "by": "Benjamin Franklin",
    "t": "Never leave that till tomorrow which you can do today.",
-   "src": "Poor Richard's Almanack, 1757"
+   "src": "Poor Richard's Almanack, 1757",
+   "id": "q9"
   },
   {
    "kind": "quote",
    "by": "Benjamin Franklin",
    "t": "What good have I done today?",
-   "src": "Autobiography, 1791. The question at the foot of his daily plan."
+   "src": "Autobiography, 1791. The question at the foot of his daily plan.",
+   "id": "q10"
   },
   {
    "kind": "quote",
    "by": "Benjamin Franklin",
    "t": "Early to bed and early to rise makes a man healthy, wealthy and wise.",
-   "src": "Poor Richard's Almanack, 1735"
+   "src": "Poor Richard's Almanack, 1735",
+   "id": "q11"
   },
   {
    "kind": "quote",
    "by": "Epictetus",
    "t": "First say to yourself what you would be. Then do what you have to do.",
-   "src": "Discourses, book 3, chapter 23"
+   "src": "Discourses, book 3, chapter 23",
+   "id": "q12"
   },
   {
    "kind": "quote",
    "by": "Epictetus",
    "t": "Some things are up to us, and some things are not.",
-   "src": "Enchiridion, chapter 1"
+   "src": "Enchiridion, chapter 1",
+   "id": "q13"
   },
   {
    "kind": "quote",
    "by": "Epictetus",
    "t": "No great thing is created all at once, any more than a bunch of grapes or a fig. Let it first blossom, then bear fruit, then ripen.",
-   "src": "Discourses, book 1, chapter 15"
+   "src": "Discourses, book 1, chapter 15",
+   "id": "q14"
   },
   {
    "kind": "quote",
    "by": "Epictetus",
    "t": "It is impossible to learn what you think you already know.",
-   "src": "Discourses, book 2, chapter 17"
+   "src": "Discourses, book 2, chapter 17",
+   "id": "q15"
   },
   {
    "kind": "quote",
    "by": "Epictetus",
    "t": "Every habit and every ability is kept and grown by the matching action. Walking, by walking. Running, by running.",
-   "src": "Discourses, book 2, chapter 18"
+   "src": "Discourses, book 2, chapter 18",
+   "id": "q16"
   },
   {
    "kind": "quote",
    "by": "Epictetus",
    "t": "Sheep do not bring their grass to the shepherd to show how much they have eaten. They digest it, and make wool and milk.",
-   "src": "Enchiridion, chapter 46"
+   "src": "Enchiridion, chapter 46",
+   "id": "q17"
   },
   {
    "kind": "quote",
    "by": "Epictetus",
    "t": "It is not things that trouble us, but our judgements about things.",
-   "src": "Enchiridion, chapter 5"
+   "src": "Enchiridion, chapter 5",
+   "id": "q18"
   },
   {
    "kind": "quote",
    "by": "Epictetus",
    "t": "If you want to improve, be content to look foolish about things that do not matter.",
-   "src": "Enchiridion, chapter 13"
+   "src": "Enchiridion, chapter 13",
+   "id": "q19"
   },
   {
    "kind": "quote",
    "by": "Thomas Jefferson",
    "t": "It is wonderful how much may be done, if we are always doing.",
-   "src": "Letter to his daughter Martha, 5 May 1787"
+   "src": "Letter to his daughter Martha, 5 May 1787",
+   "id": "q20"
   },
   {
    "kind": "quote",
    "by": "Thomas Jefferson",
    "t": "Give about two hours every day to exercise, for health must not be sacrificed to learning. A strong body makes the mind strong.",
-   "src": "Letter to his nephew Peter Carr, 19 August 1785"
+   "src": "Letter to his nephew Peter Carr, 19 August 1785",
+   "id": "q21"
   },
   {
    "kind": "quote",
    "by": "Thomas Jefferson",
    "t": "Never put off till tomorrow what you can do today.",
-   "src": "Canons of Conduct, 1825"
+   "src": "Canons of Conduct, 1825",
+   "id": "q22"
   },
   {
    "kind": "quote",
    "by": "Thomas Jefferson",
    "t": "Determine never to be idle. No person will have occasion to complain of the want of time who never loses any.",
-   "src": "Letter to his daughter Martha, 5 May 1787"
+   "src": "Letter to his daughter Martha, 5 May 1787",
+   "id": "q23"
   },
   {
    "kind": "quote",
    "by": "Thomas Jefferson",
    "t": "Never trouble another for what you can do yourself.",
-   "src": "Canons of Conduct, 1825"
+   "src": "Canons of Conduct, 1825",
+   "id": "q24"
   },
   {
    "kind": "quote",
    "by": "Thomas Jefferson",
    "t": "Take things always by their smooth handle.",
-   "src": "Canons of Conduct, 1825"
+   "src": "Canons of Conduct, 1825",
+   "id": "q25"
   },
   {
    "kind": "quote",
    "by": "Thomas Jefferson",
    "t": "A strong body makes the mind strong.",
-   "src": "Letter to Peter Carr, 19 August 1785"
+   "src": "Letter to Peter Carr, 19 August 1785",
+   "id": "q26"
   },
   {
    "kind": "quote",
    "by": "Thomas Jefferson",
    "t": "An honest heart being the first blessing, a knowing head is the second.",
-   "src": "Letter to Peter Carr, 19 August 1785"
+   "src": "Letter to Peter Carr, 19 August 1785",
+   "id": "q27"
   },
   {
    "kind": "quote",
    "by": "Thomas Jefferson",
    "t": "When angry, count ten before you speak. If very angry, a hundred.",
-   "src": "Canons of Conduct, 1825"
+   "src": "Canons of Conduct, 1825",
+   "id": "q28"
   },
   {
    "kind": "quote",
    "by": "Abigail Adams",
    "t": "Learning is not attained by chance. It must be sought for with ardour, and attended to with diligence.",
-   "src": "Letter to her son John Quincy, 8 May 1780"
+   "src": "Letter to her son John Quincy, 8 May 1780",
+   "id": "q29"
   },
   {
    "kind": "quote",
    "by": "Abigail Adams",
    "t": "These are the times in which a genius would wish to live.",
-   "src": "Letter to John Quincy, January 1780"
+   "src": "Letter to John Quincy, January 1780",
+   "id": "q30"
   },
   {
    "kind": "quote",
    "by": "Abigail Adams",
    "t": "The habits of a vigorous mind are formed in contending with difficulties.",
-   "src": "Letter to John Quincy, January 1780"
+   "src": "Letter to John Quincy, January 1780",
+   "id": "q31"
   },
   {
    "kind": "quote",
    "by": "Abigail Adams",
    "t": "Improve your understanding by acquiring useful knowledge and virtue, such as will make you an ornament to society, an honour to your country, and a blessing to your parents.",
-   "src": "Letter to John Quincy, June 1778"
+   "src": "Letter to John Quincy, June 1778",
+   "id": "q32"
   },
   {
    "kind": "quote",
    "by": "Abigail Adams",
    "t": "Great necessities call out great virtues.",
-   "src": "Letter to John Quincy, January 1780"
+   "src": "Letter to John Quincy, January 1780",
+   "id": "q33"
   },
   {
    "kind": "quote",
    "by": "Abigail Adams",
    "t": "It is not in the still calm of life that great characters are formed.",
-   "src": "Letter to John Quincy, January 1780"
+   "src": "Letter to John Quincy, January 1780",
+   "id": "q34"
   },
   {
    "kind": "quote",
    "by": "Abigail Adams",
    "t": "If we mean to have heroes, statesmen and philosophers, we should have learned women.",
-   "src": "Letter to John Adams, 14 August 1776"
+   "src": "Letter to John Adams, 14 August 1776",
+   "id": "q35"
   },
   {
    "kind": "quote",
    "by": "Abigail Adams",
    "t": "Great learning and superior abilities will be of little value unless virtue, honour, truth and integrity are added to them.",
-   "src": "Letter to John Quincy, 1780"
+   "src": "Letter to John Quincy, 1780",
+   "id": "q36"
+  },
+  {
+   "kind": "quote",
+   "t": "It is not that we have a short time to live, but that we waste a great deal of it.",
+   "by": "Seneca",
+   "src": "On the Shortness of Life, chapter 1",
+   "id": "q37"
+  },
+  {
+   "kind": "quote",
+   "t": "Begin at once to live, and count each separate day as a separate life.",
+   "by": "Seneca",
+   "src": "Letters to Lucilius, letter 101",
+   "id": "q38"
+  },
+  {
+   "kind": "quote",
+   "t": "It is not because things are difficult that we do not dare. It is because we do not dare that they are difficult.",
+   "by": "Seneca",
+   "src": "Letters to Lucilius, letter 104",
+   "id": "q39"
+  },
+  {
+   "kind": "quote",
+   "t": "Luck is what happens when preparation meets opportunity.",
+   "by": "Seneca",
+   "src": "attributed; the thought is in Letters to Lucilius, letter 76",
+   "id": "q40"
+  },
+  {
+   "kind": "quote",
+   "t": "A room without books is like a body without a soul.",
+   "by": "Cicero",
+   "src": "attributed, from a letter to Atticus",
+   "id": "q41"
+  },
+  {
+   "kind": "quote",
+   "t": "The higher we are placed, the more humbly we should walk.",
+   "by": "Cicero",
+   "src": "On Duties, book 1",
+   "id": "q42"
+  },
+  {
+   "kind": "quote",
+   "t": "Character is simply habit long continued.",
+   "by": "Plutarch",
+   "src": "On the Education of Children",
+   "id": "q43"
+  },
+  {
+   "kind": "quote",
+   "t": "The mind is not a vessel to be filled but a fire to be kindled.",
+   "by": "Plutarch",
+   "src": "On Listening to Lectures",
+   "id": "q44"
+  },
+  {
+   "kind": "quote",
+   "t": "We are what we repeatedly do. Excellence, then, is not an act but a habit.",
+   "by": "Aristotle",
+   "src": "Nicomachean Ethics, book 2, as summarised by Will Durant",
+   "id": "q45"
+  },
+  {
+   "kind": "quote",
+   "t": "Fortune favours the bold.",
+   "by": "Virgil",
+   "src": "Aeneid, book 10",
+   "id": "q46"
+  },
+  {
+   "kind": "quote",
+   "t": "They can because they think they can.",
+   "by": "Virgil",
+   "src": "Aeneid, book 5",
+   "id": "q47"
+  },
+  {
+   "kind": "quote",
+   "t": "Seize the day, and trust as little as you can to tomorrow.",
+   "by": "Horace",
+   "src": "Odes, book 1, ode 11",
+   "id": "q48"
+  },
+  {
+   "kind": "quote",
+   "t": "Dripping water hollows out stone, not by force but by falling often.",
+   "by": "Ovid",
+   "src": "Letters from Pontus, book 4",
+   "id": "q49"
+  },
+  {
+   "kind": "quote",
+   "t": "The beginning is the most important part of the work.",
+   "by": "Plato",
+   "src": "The Republic, book 2",
+   "id": "q50"
+  },
+  {
+   "kind": "quote",
+   "t": "Nothing endures but change.",
+   "by": "Heraclitus",
+   "src": "fragment, as reported by Plato in the Cratylus",
+   "id": "q51"
+  },
+  {
+   "kind": "quote",
+   "t": "Big results come from small, steady work. That is the only kind of work there is.",
+   "by": "Aurelia",
+   "src": "the school's words",
+   "id": "q52"
   }
  ]
 }

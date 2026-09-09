@@ -750,3 +750,17 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .acard.post small{font-size:10.5px;letter-spacing:.06em;color:#6B4E9E;font-weight:700}
 .acard.post .eyebrow{display:flex;align-items:center;gap:8px}
 .acard.post .dot{font-size:9.5px;letter-spacing:.08em;background:#6B4E9E;color:#fff;padding:2px 7px;border-radius:8px}
+/* v25: things to touch in the portico */
+.brazier,.olive,.lyre{cursor:pointer}
+.olive{transform-origin:48px 452px;transform-box:view-box}
+.olive.rustle{animation:rustle 1s ease-out both}
+@keyframes rustle{0%{transform:rotate(0)}18%{transform:rotate(2.2deg)}40%{transform:rotate(-1.8deg)}62%{transform:rotate(1.1deg)}82%{transform:rotate(-.5deg)}100%{transform:rotate(0)}}
+.lyre{transform-origin:372px 285px;transform-box:view-box;transition:transform .2s var(--spring)}
+.lyre:active{transform:rotate(-4deg)}
+.lyre.play{animation:sway 2.6s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+.lyre.play .str{animation:strum .22s ease-in-out infinite alternate}
+.lyre.play .str:nth-child(odd){animation-delay:.08s}
+@keyframes strum{from{opacity:.55}to{opacity:1}}
+.lyre.hint{animation:hint 1.5s ease-in-out 6}
+@keyframes hint{0%,100%{transform:rotate(0) scale(1);filter:none}50%{transform:rotate(-5deg) scale(1.12);filter:drop-shadow(0 0 6px #FFE9A0)}}

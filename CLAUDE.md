@@ -85,3 +85,11 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
 - **The feed** (`feed.json`, newest first) is kept in `S.feed.posts` so it shows offline; fetched
   fresh on every open when online; a post not yet seen carries a New dot. To post: add to
   feed.json and push (auto-deploys). No community needed for the app to make sense.
+- **Things to touch (v25):** `PORTICO.onTap(name, fn)` over `props` {brazier, olive, lyre}. Brazier
+  = flare + sparks (lights for 9 s if out). Olive = rustle, a chirp, and Aurelia reads one sourced
+  line from library.json quotes (52, all voiced `ui-q-*`, never twice in a sitting). Lyre (drawn on
+  the right column) = a strum, then ~78 s of Karplus-Strong plucks over a D pentatonic made in
+  code, ducked under voices, stopped by a second tap or by leaving home; it hints (wobbles) on the
+  first visits. Keep it to these three; his rule is a little interaction, not a toy box.
+- Quotes read by Aurelia always show the source in the caption (`cap(who, text, src)`). New quotes
+  go in library.json (kind quote, plain modern English) and content.json voice `q-<id>`.

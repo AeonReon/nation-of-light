@@ -89,7 +89,7 @@
   let MUSV = 0, MUST = null;
   function musicTo(v, ms) { clearInterval(MUST); const from = MUS.volume, t0 = performance.now(); MUST = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / ms); MUS.volume = from + (v - from) * k; if (k >= 1) clearInterval(MUST); }, 50); }
   function musicStart(v) { if (!S.sound) return; MUSV = v || .55; MUS.volume = 0; MUS.currentTime = 0; MUS.play().then(() => musicTo(MUSV, 2600)).catch(() => {}); }
-  function musicDuck(on) { if (MUS.paused) return; musicTo(on ? .14 : MUSV, on ? 350 : 1400); }
+  function musicDuck(on) { lyreDuck(on); if (MUS.paused) return; musicTo(on ? .14 : MUSV, on ? 350 : 1400); }
   function musicStop() { if (MUS.paused) return; musicTo(0, 1200); setTimeout(() => MUS.pause(), 1300); }
   [NAR, MAR].forEach(el => { el.addEventListener('play', () => musicDuck(true)); const back = () => { if (NAR.paused && MAR.paused) musicDuck(false); }; el.addEventListener('ended', back); el.addEventListener('pause', back); });
 
@@ -157,10 +157,74 @@
       return best < 0 ? 'X' : c[best][1];
     };
     PORTICO.setWreaths(tiersDone()); PORTICO.setFlame(S.done.length ? 'lit' : 'out'); PORTICO.setPhase(skyFor());
+    PORTICO.onTap('brazier', tapBrazier); PORTICO.onTap('olive', tapOlive); PORTICO.onTap('lyre', tapLyre);
     if (S.done.length) setTimeout(() => ambFire(true), 3000);
     $('mfig').addEventListener('click', onMarcusTap); $('afig').addEventListener('click', onAureliaTap);
     $('stage').addEventListener('pointerdown', e => { if (RIG && !RIG.hidden) RIG.lookAt(e.clientX, e.clientY); if (ARIG && !ARIG.hidden) ARIG.lookAt(e.clientX, e.clientY); }, { passive: true });
   }
+  /* ---- things to touch in the portico: the brazier flares, the olive rustles and Aurelia reads a line, the lyre plays a while ---- */
+  const atHome = () => $('stage').classList.contains('arrive');
+  function tapBrazier(el) {
+    ac(); sfx('flame'); PORTICO.flare(); sparks(); S.taps++; save();
+    if (PORTICO.flame.classList.contains('out')) { PORTICO.setFlame('lit'); ambFire(true); clearTimeout(tapBrazier._t); tapBrazier._t = setTimeout(() => { if (!S.done.length) { PORTICO.setFlame('out'); ambFire(false); } }, 9000); }
+  }
+  const QSAID = new Set();
+  function tapOlive(el) {
+    ac(); el.classList.remove('rustle'); void el.getBoundingClientRect(); el.classList.add('rustle'); sfx('tap'); chirpOnce();
+    if (!atHome()) return;
+    const qs = LIB.filter(x => x.kind === 'quote' && x.id); if (!qs.length) return;
+    const start = (daySeed() * 3 + S.taps) % qs.length; let q = null;
+    for (let i = 0; i < qs.length; i++) { const c = qs[(start + i) % qs.length]; if (!QSAID.has(c.id)) { q = c; break; } }
+    if (!q) { QSAID.clear(); q = qs[start]; } QSAID.add(q.id); S.taps++; save();
+    hush(); clearTimeout(ROOMT); if (!RIG.hidden) RIG.smile(3); ARIG.point();
+    cap('aurelia', q.t, q.by ? q.by + (q.src ? ' · ' + q.src : '') : ''); aureliaSay('ui-q-' + q.id, () => { capHide(2600); idleRoom(); });
+  }
+  function chirpOnce() { const ctx = ac(); if (!ctx || !S.sound) return; const t = ctx.currentTime, n = 3 + Math.floor(Math.random() * 3), base = 2400 + Math.random() * 1200;
+    for (let i = 0; i < n; i++) { const t0 = t + i * .1, o = ctx.createOscillator(), g = ctx.createGain(); o.type = 'sine'; o.frequency.setValueAtTime(base, t0); o.frequency.exponentialRampToValueAtTime(base * 1.3, t0 + .05); o.frequency.exponentialRampToValueAtTime(base * .9, t0 + .1);
+      g.gain.setValueAtTime(0, t0); g.gain.linearRampToValueAtTime(.05, t0 + .015); g.gain.exponentialRampToValueAtTime(.0005, t0 + .12); o.connect(g); g.connect(ctx.destination); o.start(t0); o.stop(t0 + .14); } }
+  /* the lyre: plucked strings made in code (Karplus-Strong), a slow wander over a bright scale, about a minute, then it fades */
+  const LYRE = { on: false, out: null, timer: null, bufs: new Map(), notes: [293.66, 329.63, 369.99, 440, 493.88, 587.33, 659.25, 739.99, 880], last: 4 };
+  function lyreBuf(ctx, f) {
+    if (LYRE.bufs.has(f)) return LYRE.bufs.get(f);
+    const N = Math.round(ctx.sampleRate / f), len = Math.round(ctx.sampleRate * 2.4), b = ctx.createBuffer(1, len, ctx.sampleRate), d = b.getChannelData(0), ring = new Float32Array(N);
+    for (let i = 0; i < N; i++) ring[i] = Math.random() * 2 - 1;
+    let idx = 0; for (let i = 0; i < len; i++) { const cur = ring[idx], nxt = ring[(idx + 1) % N]; ring[idx] = .995 * .5 * (cur + nxt); d[i] = cur; idx = (idx + 1) % N; }
+    LYRE.bufs.set(f, b); return b;
+  }
+  function pluck(ctx, f, t0, vol) {
+    const src = ctx.createBufferSource(); src.buffer = lyreBuf(ctx, f); const g = ctx.createGain(); g.gain.setValueAtTime(vol, t0); g.gain.exponentialRampToValueAtTime(.0005, t0 + 2.2);
+    const lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 2800; src.connect(lp); lp.connect(g); g.connect(LYRE.out); src.start(t0); src.stop(t0 + 2.4);
+  }
+  function lyreStart() {
+    const ctx = ac(); if (!ctx || !S.sound) return; if (LYRE.on) return; LYRE.on = true;
+    const out = ctx.createGain(); out.gain.value = 0; out.connect(ctx.destination); LYRE.out = out; LYRE.master = out;
+    const dl = ctx.createDelay(1); dl.delayTime.value = .31; const fb = ctx.createGain(); fb.gain.value = .28; const dlp = ctx.createBiquadFilter(); dlp.type = 'lowpass'; dlp.frequency.value = 1800;
+    out.connect(dl); dl.connect(dlp); dlp.connect(fb); fb.connect(dl); fb.connect(ctx.destination); LYRE.nodes = [dl, fb, dlp];
+    out.gain.linearRampToValueAtTime(.6, ctx.currentTime + .4);
+    const N = LYRE.notes; let t = ctx.currentTime + .05;
+    for (let i = 0; i < N.length; i++) pluck(ctx, N[i], t + i * .045, .22);      // the strum on the tap
+    t += .9; const started = performance.now(); LYRE.last = 4;
+    const step = () => {
+      if (!LYRE.on) return;
+      const gone = (performance.now() - started) / 1000; if (gone > 78) { lyreStop(4000); return; }
+      const now = ctx.currentTime; if (t < now) t = now + .05;
+      const r = Math.random(); let n = LYRE.last + (r < .3 ? -2 : r < .55 ? -1 : r < .8 ? 1 : 2); if (n < 0 || n >= N.length) n = 4; LYRE.last = n;
+      pluck(ctx, N[n], t, .16 + Math.random() * .06);
+      if (Math.random() < .22) pluck(ctx, N[(n + 2) % N.length], t + .03, .1);
+      t += Math.random() < .18 ? 1.1 : .42 + Math.random() * .3;
+      LYRE.timer = setTimeout(step, Math.max(60, (t - ctx.currentTime) * 1000 - 60));
+    };
+    LYRE.timer = setTimeout(step, 900);
+    PORTICO.props.lyre.classList.add('play'); if (!MUS.paused) musicTo(.06, 800);
+  }
+  function lyreStop(ms) {
+    if (!LYRE.on) return; LYRE.on = false; clearTimeout(LYRE.timer); const ctx = ac(); const out = LYRE.out;
+    try { out.gain.setValueAtTime(out.gain.value, ctx.currentTime); out.gain.linearRampToValueAtTime(0, ctx.currentTime + (ms || 1000) / 1000); } catch (e) {}
+    setTimeout(() => { try { out.disconnect(); (LYRE.nodes || []).forEach(n => n.disconnect()); } catch (e) {} }, (ms || 1000) + 2600);
+    PORTICO.props.lyre.classList.remove('play'); if (!MUS.paused) musicTo(MUSV, 2000);
+  }
+  function lyreDuck(on) { if (!LYRE.on || !LYRE.out) return; try { const ctx = ac(); LYRE.out.gain.setValueAtTime(LYRE.out.gain.value, ctx.currentTime); LYRE.out.gain.linearRampToValueAtTime(on ? .18 : .6, ctx.currentTime + (on ? .3 : 1.2)); } catch (e) {} }
+  function tapLyre(el) { ac(); sfx('tap'); el.classList.remove('hint'); if (LYRE.on) lyreStop(1000); else lyreStart(); }
   /* dawn at the first tablet, full morning by the middle, gold at the twenty-fifth */
   const skyFor = () => Math.min(1, S.done.length / C.moves.length);
 
@@ -584,6 +648,7 @@
     $('stabs').hidden = true; $('sline').textContent = ''; MODE = 'school';
     if (MUS.paused) musicStart(.4); ambStart(); if (points()) ambFire(true);
     renderArrival(); idleRoom(50000);
+    if ((S.school.visits || 0) <= 4 && S.taps < 3) setTimeout(() => PORTICO.props.lyre.classList.add('hint'), 2500);
     const vn = (S.school.visits || 0) + HOMEN;
     let lines = quiet ? [] : (first ? C.arrival.first : (again && C.arrival.again ? C.arrival.again[vn % C.arrival.again.length] : C.arrival.lines)); S.school.arrivedEver = true; save();
     // and something from them: one of her true lines, or one of his, in turn
@@ -635,7 +700,7 @@
     list.querySelector('#intoschool').addEventListener('click', () => { sfx('tap'); leaveArrival(); });
     list.scrollTop = keep;
   }
-  function leaveArrival() { clearTimeout(arrival._t); clearTimeout(ROOMT); hush(); musicStop(); $('stage').classList.remove('arrive'); RIG.show(false); ARIG.show(false); $('afig').classList.remove('walk-in-l'); dock('pop'); renderSchool(); if (!S.school.toured) setTimeout(offerTour, 600); else setTimeout(entryWord, 650); }
+  function leaveArrival() { clearTimeout(arrival._t); clearTimeout(ROOMT); hush(); musicStop(); lyreStop(800); $('stage').classList.remove('arrive'); RIG.show(false); ARIG.show(false); $('afig').classList.remove('walk-in-l'); dock('pop'); renderSchool(); if (!S.school.toured) setTimeout(offerTour, 600); else setTimeout(entryWord, 650); }
   /* going in: one of them pops up with a word for the day ahead. Never the same one twice in a sitting, a different start each day, loosely his and hers in turn. */
   const ENTRYSAID = new Set();
   function entryWord() {

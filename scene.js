@@ -121,7 +121,7 @@
       <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${LAUREL_D}" stroke-width="2.2"/>${leaves.join('')}
       <path d="M${cx - 3} ${cy + r - 1} l3 5 l3 -5 M${cx} ${cy + r + 4} l-4 8 M${cx} ${cy + r + 4} l4 8" fill="none" stroke="${GOLD_RIBBON}" stroke-width="1.6" stroke-linecap="round"/></g>`;
   }
-  const GOLD_RIBBON = '#C9A227';
+  const GOLD_RIBBON = '#C9A227', GOLD = '#C9A227', GOLD_D = '#8F6F12';
 
   function olive() {
     const leaf = (x, y, r) => `<ellipse cx="${x}" cy="${y}" rx="1.6" ry="4.2" fill="${OLIVE_L}" transform="rotate(${r} ${x} ${y})" opacity=".9"/>`;
@@ -164,6 +164,20 @@
     </g>`;
   }
 
+  /* a lyre on a peg on the right column; tap it and it plays a while */
+  function lyre() {
+    const strings = []; for (let i = 0; i < 7; i++) { const x = 361 + i * 3.4; strings.push(`<path class="str" d="M${x} 296 L${(x - 361) * .55 + 363} 325" stroke="#FFF3C4" stroke-width=".8" opacity=".9"/>`); }
+    return `<g class="lyre">
+      <circle cx="372" cy="283" r="1.8" fill="${BRONZE_D}"/>
+      <path d="M372 285 L372 289" stroke="${BRONZE_D}" stroke-width="1.2"/>
+      <path d="M358 326 Q350 300 360 289 Q364 300 362 312" fill="none" stroke="${GOLD}" stroke-width="3" stroke-linecap="round"/>
+      <path d="M386 326 Q394 300 384 289 Q380 300 382 312" fill="none" stroke="${GOLD}" stroke-width="3" stroke-linecap="round"/>
+      <path d="M359 296 L385 296" stroke="${GOLD_D}" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M356 326 Q372 344 388 326 Q372 318 356 326 Z" fill="${GOLD}" stroke="${GOLD_D}" stroke-width="1"/>
+      <ellipse cx="372" cy="328" rx="6" ry="2.6" fill="${GOLD_D}" opacity=".7"/>
+      ${strings.join('')}
+    </g>`;
+  }
   function build() {
     const cols = column(44, 40, 76, 366, 'var(--col)') + column(346, 40, 76, 366, 'var(--col)');
     const floorLines = [];
@@ -238,6 +252,7 @@
     <g class="motes">${motes.join('')}</g>
     ${olive()}
     ${brazier()}
+    ${lyre()}
   </g>
 </svg>`;
   }
@@ -247,6 +262,7 @@
       host.innerHTML = build(); this.el = host; this.svg = host.querySelector('svg');
       this.sun = this.svg.querySelector('.sun'); this.wreaths = this.svg.querySelector('.wreaths'); this.flame = this.svg.querySelector('.brazier');
       this.layers = [...this.svg.querySelectorAll('.lyr')];
+      this.props = { brazier: this.svg.querySelector('.brazier'), olive: this.svg.querySelector('.olive'), lyre: this.svg.querySelector('.lyre') };
       this.px = 0; this.py = 0; this.tx = 0; this.ty = 0; this.setPhase(0);
       const move = (x, y) => { this.tx = Math.max(-1, Math.min(1, x)); this.ty = Math.max(-1, Math.min(1, y)); };
       window.addEventListener('pointermove', e => move((e.clientX / innerWidth - .5) * 2, (e.clientY / innerHeight - .5) * 2), { passive: true });
@@ -256,6 +272,7 @@
         requestAnimationFrame(step); };
       requestAnimationFrame(step);
     }
+    onTap(name, fn) { const el = this.props[name]; if (el) el.addEventListener('click', e => { e.stopPropagation(); fn(el); }); }
     setPhase(p) {
       const c = at(p), s = this.svg.style;
       for (const k of ['top', 'mid', 'hz', 'sun', 'far', 'mid2', 'near', 'water', 'pine', 'warm', 'ground', 'col']) s.setProperty('--' + k, c[k]);
