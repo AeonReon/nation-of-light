@@ -89,7 +89,7 @@
   let MUSV = 0, MUST = null;
   function musicTo(v, ms) { clearInterval(MUST); const from = MUS.volume, t0 = performance.now(); MUST = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / ms); MUS.volume = from + (v - from) * k; if (k >= 1) clearInterval(MUST); }, 50); }
   function musicStart(v) { if (!S.sound) return; MUSV = v || .55; MUS.volume = 0; MUS.currentTime = 0; MUS.play().then(() => musicTo(MUSV, 2600)).catch(() => {}); }
-  function musicDuck(on) { lyreDuck(on); if (MUS.paused) return; musicTo(on ? .14 : MUSV, on ? 350 : 1400); }
+  function musicDuck(on) { lyreDuck(on); if (MUS.paused) return; musicTo(on ? (atHome() ? .26 : .14) : MUSV, on ? 350 : 1400); }
   function musicStop() { if (MUS.paused) return; musicTo(0, 1200); setTimeout(() => MUS.pause(), 1300); }
   [NAR, MAR].forEach(el => { el.addEventListener('play', () => musicDuck(true)); const back = () => { if (NAR.paused && MAR.paused) musicDuck(false); }; el.addEventListener('ended', back); el.addEventListener('pause', back); });
 
@@ -553,14 +553,14 @@
     if (where === 'pop') { pop.appendChild($('afig')); pop.appendChild($('abubble')); pop.appendChild($('mfig')); pop.appendChild($('bubble')); $('stage').classList.add('popmode'); }
     else { scene.appendChild($('afig')); scene.appendChild($('abubble')); scene.appendChild($('mfig')); scene.appendChild($('bubble')); $('stage').classList.remove('popmode'); }
   }
-  let POPT = {}, CAPT = null;
+  let POPT = {}, CAPT = null, CAPLITE = null;
   const capAll = () => [$('popcap'), $('capband'), SHOW && SHOW.querySelector('#showcap')].filter(Boolean);
   const capTarget = () => SHOW ? SHOW.querySelector('#showcap') : (inScene() ? $('capband') : $('popcap'));
   function cap(who, text, src) {
     const c = capTarget(); if (!c) return; clearTimeout(CAPT);
     capAll().forEach(x => { if (x !== c) { x.hidden = true; x.classList.remove('away'); } });
     c.hidden = false; c.classList.remove('away');
-    c.innerHTML = `<b>${who === 'marcus' ? (src ? C.names.marcus : 'Marcus') : 'Aurelia'}</b>${wordSpans(text)}${src ? `<i>${src}</i>` : ''}`;
+    c.innerHTML = `<b>${who === 'marcus' ? (src ? C.names.marcus : 'Marcus') : 'Aurelia'}</b>${wordSpans(CAPLITE || text)}${src && !CAPLITE ? `<i>${src}</i>` : ''}`;
     c.classList.remove('say'); void c.offsetWidth; c.classList.add('say');
   }
   function capHide(delay) { clearTimeout(CAPT); CAPT = setTimeout(() => { capAll().forEach(x => { x.hidden = true; x.classList.remove('away'); }); }, delay || 0); }
@@ -661,6 +661,22 @@
       <div class="lvl"><i style="width:${pct}%"></i></div>`;
   }
   const SHARE_IC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 001 1h14a1 1 0 001-1v-7M12 3v13M7 8l5-5 5 5"/></svg>';
+  let VISREAD = false;
+  function readVision(root) {
+    const V = C.vision, seq = V.read || [], ps = [...root.querySelectorAll('.visioncard p')]; if (!seq.length) return;
+    hush(); clearTimeout(ROOMT); VISREAD = true; const my = ++SPK; CAPLITE = V.title;
+    if (MUS.paused) musicStart(.4);
+    let i = 0; const done = () => { VISREAD = false; CAPLITE = null; ps.forEach(p => p.classList.remove('now')); capHide(1200); idleRoom(); };
+    const step = () => {
+      if (my !== SPK) { VISREAD = false; CAPLITE = null; ps.forEach(p => p.classList.remove('now')); return; }
+      const ln = seq[i]; if (!ln) { done(); return; }
+      ps.forEach((p, k) => p.classList.toggle('now', k === i)); if (ps[i]) ps[i].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      i++;
+      if (ln.who === 'marcus') { if (!ARIG.hidden) ARIG.smile(4); marcusSay(line(ln.id), i % 2 ? 'point' : 'nod', () => setTimeout(step, 500)); }
+      else { if (!RIG.hidden) RIG.smile(4); ARIG[i === 1 ? 'point' : 'nod'](); cap('aurelia', V.title); aureliaSay(ln.id, () => setTimeout(step, 500)); }
+    };
+    step();
+  }
   function foldCard(key, title, inner, open) { return `<details class="fold" data-fold="${key}" ${open ? 'open' : ''}><summary>${title}</summary><div class="fbody">${inner}</div></details>`; }
   function renderArrival() {
     const list = $('slist'), keep = list.scrollTop; const picks = todayPicks(); const P = C.arrival, R = C.room, F = P.folds || {};
@@ -691,7 +707,7 @@
     if (post && isNew) { S.feed.seen.push(post.id); save(); }
     list.querySelector('#sharearr').addEventListener('click', () => { sfx('tap'); sharePanel(); });
     list.querySelectorAll('.fold').forEach(d => d.addEventListener('toggle', () => { if (d.dataset.fold === 'how' && !d.open) { S.school.howSeen = true; save(); } if (d.dataset.fold === 'vision' && !d.open) { S.school.visionSeen = true; save(); } }));
-    const vr = list.querySelector('#visionread'); if (vr) vr.addEventListener('click', () => { sfx('tap'); if (!NAR.paused && NAR.src.includes('ui-vision')) { hush(); return; } hush(); clearTimeout(ROOMT); cap('aurelia', C.vision.title); ARIG.point(); if (!RIG.hidden) RIG.smile(4); aureliaSay('ui-vision', () => { capHide(1500); idleRoom(); }); });
+    const vr = list.querySelector('#visionread'); if (vr) vr.addEventListener('click', () => { sfx('tap'); if (VISREAD) { hush(); return; } readVision(list); });
     const rb = list.querySelector('#readit'); if (rb) rb.addEventListener('click', () => { sfx('tap'); hush(); clearTimeout(ROOMT); cap('aurelia', rd.title); ARIG.nod(); aureliaSay('ui-read-' + rd.id, () => { capHide(1500); idleRoom(); }); });
     wireShelf(list); wireLong(list);
     list.querySelectorAll('[data-do]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.do); if (r) stepSheet(r[0], r[1], null, 'arrival'); }));

@@ -673,7 +673,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .acard.prog{--g1:#B8A5D8;--g2:#6B4E9E}
 .acard.prog .eyebrow{color:#6B4E9E}
 .acard.reading{background:linear-gradient(180deg,#FBF4E2 0%,#F1E4C6 100%);padding:14px 16px 16px}
-.reading .rhead{display:flex;justify-content:space-between;align-items:center}
+.reading .rhead,.visioncard .rhead{display:flex;justify-content:space-between;align-items:center;gap:10px}
 .reading h3{font-size:22px;line-height:1.15;margin:2px 0 4px}
 .reading p{font-size:16.5px;line-height:1.5}
 .reading p::first-letter{float:left;font-family:var(--display);font-weight:600;font-size:3.1em;line-height:.8;margin:5px 7px 0 0;color:var(--gold-deep)}
@@ -783,3 +783,6 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .poly b{font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)}
 .poly span{font-size:13.5px;line-height:1.4;color:var(--ink-soft)}
 .polycard .close{margin:8px 0 0;font-family:var(--display);font-weight:500;font-size:15.5px;color:var(--gold-deep);text-align:center}
+/* v29: the paragraph being read is lit */
+.visioncard p{transition:background .4s,box-shadow .4s;border-radius:8px;padding:2px 4px;margin-left:-4px;margin-right:-4px}
+.visioncard p.now{background:rgba(255,236,170,.75);box-shadow:0 0 0 1.5px var(--gold-lt)}

@@ -1,5 +1,5 @@
 {
- "version": 28,
+ "version": 29,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -452,6 +452,14 @@
    {
     "id": "c-env4",
     "t": "You will surprise people. Then you will surprise yourself. Keep going."
+   },
+   {
+    "id": "c-vis2",
+    "t": "None of it is memorising. Anyone with a phone can look up in thirty seconds what once took a lifetime to remember, so remembering is no longer the difference between people. Doing is. Most schooling rewards remembering what you were told. This is a school for competence: hundreds of things you can actually do, each one learned by doing it badly first."
+   },
+   {
+    "id": "c-vis4",
+    "t": "That is the person you are becoming, one small thing at a time. People will be amazed at how much you can do. Then you will be. And once you understand how things work, you stop looking for an expert. You become the authority in your own life."
    }
   ]
  },
@@ -936,12 +944,13 @@
   "q-q52": "Big results come from small, steady work. That is the only kind of work there is.",
   "cat-order": "Creating order. Clear it, mend it, give it away, and clean the forgotten places. A life starts to flow when the place is in order.",
   "read-order": "The Greeks had one word, kosmos, for the ordered world and for a thing beautifully arranged. The opposite was chaos. A tidy room is a small kosmos, and that is not fussiness. Every cluttered surface and every broken thing charges the mind a small tax each time it is seen, and the taxes add up to a life lived with a lower ceiling. Clear the surface, mend the thing or let it go, wash what has not been washed, and the tax stops. What is left is attention, and attention is what a good life is made of. Start with one room. Order spreads.",
-  "vision": "Picture yourself a year from now, in a room full of people. Somebody hands you three balls and you juggle. Somebody has a cube and you solve it. You know which way is north. You can swim a long way, run a long way, hold your breath, light a fire without matches. You know poems by heart and can say them well. You can order a meal in another language and cook one worth serving. You can tell a story that holds a table, stand up and speak without notes, put on an event, mend the thing that broke, and walk into a room that is a mess and leave it in order. None of it is memorising. Anyone with a phone can look up in thirty seconds what once took a lifetime to remember, so remembering is no longer the difference between people. Doing is. Most schooling rewards remembering what you were told. This is a school for competence: hundreds of things you can actually do, each one learned by doing it badly first. The people history calls great were mostly like this. Leonardo painted, studied the body, designed machines and played the lyre. Franklin printed, wrote, worked out lightning, invented, swam, and helped found a nation. They were not specialists or generalists. They were competent at a great many things, because they gave their lives to understanding how things work. That is the person you are becoming, one small thing at a time. People will be amazed at how much you can do. Then you will be. And once you understand how things work, you stop looking for an expert. You become the authority in your own life.",
   "env1": "A year from now you are the one in the room who can juggle, find north, and tell the story. Not by memory. By doing.",
   "env2": "Anyone can look a thing up in thirty seconds. Nobody can look up how to do it. That is what you are building.",
   "env3": "Every small thing you do here is one more thing you can actually do. They add up into a person people are amazed by.",
   "env4": "The greats were competent at a great many things. That is the road you are on.",
-  "env5": "Once you understand how things work, you stop looking for an expert. You become your own."
+  "env5": "Once you understand how things work, you stop looking for an expert. You become your own.",
+  "vis1": "Picture yourself a year from now, in a room full of people. Somebody hands you three balls and you juggle. Somebody has a cube and you solve it. You know which way is north. You can swim a long way, run a long way, hold your breath, light a fire without matches. You know poems by heart and can say them well. You can order a meal in another language and cook one worth serving. You can tell a story that holds a table, stand up and speak without notes, put on an event, mend the thing that broke, and walk into a room that is a mess and leave it in order.",
+  "vis3": "The people history calls great were mostly like this. Leonardo painted, studied the body, designed machines and played the lyre. Franklin printed, wrote, worked out lightning, invented, swam, and helped found a nation. They were not specialists or generalists. They were competent at a great many things, because they gave their lives to understanding how things work."
  },
  "cover": {
   "em": "Nation of",
@@ -1852,7 +1861,7 @@
    "reading": "A reading from Aurelia",
    "library": "From the library",
    "earlier": "Earlier from Light School",
-   "vision": "Who you become"
+   "vision": "Who you can become"
   }
  },
  "room": {
@@ -2283,7 +2292,7 @@
   ]
  },
  "vision": {
-  "title": "Who you become",
+  "title": "Who you can become",
   "lede": "The point of all of it.",
   "paras": [
    "Picture yourself a year from now, in a room full of people. Somebody hands you three balls and you juggle. Somebody has a cube and you solve it. You know which way is north. You can swim a long way, run a long way, hold your breath, light a fire without matches. You know poems by heart and can say them well. You can order a meal in another language and cook one worth serving. You can tell a story that holds a table, stand up and speak without notes, put on an event, mend the thing that broke, and walk into a room that is a mess and leave it in order.",
@@ -2307,14 +2316,6 @@
     "line": "Lawyer, architect of his own house, farmer, inventor, reader of several languages, and a founder."
    },
    {
-    "name": "Hildegard of Bingen",
-    "line": "Composer, writer on medicine and the natural world, and the head of her abbey."
-   },
-   {
-    "name": "Ibn Sina",
-    "line": "Physician whose Canon of Medicine was taught for six hundred years; also philosopher, astronomer and poet."
-   },
-   {
     "name": "Michelangelo",
     "line": "Sculptor, painter, architect of the dome of St Peter's, and a poet."
    },
@@ -2323,6 +2324,24 @@
     "line": "Emperor, soldier, and the philosopher whose private notebook the world still reads."
    }
   ],
-  "close": "Every one of them started at level one in everything. So did you, today."
+  "close": "Every one of them started at level one in everything. So did you, today.",
+  "read": [
+   {
+    "who": "aurelia",
+    "id": "ui-vis1"
+   },
+   {
+    "who": "marcus",
+    "id": "c-vis2"
+   },
+   {
+    "who": "aurelia",
+    "id": "ui-vis3"
+   },
+   {
+    "who": "marcus",
+    "id": "c-vis4"
+   }
+  ]
  }
 }

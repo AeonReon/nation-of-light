@@ -116,3 +116,9 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   with verifiable lines), open on the first two visits; and nine short vision lines woven into
   the entry pool every third slot (ui-env*, c-env*). The twenty-five's ending was left as he
   approved it. Claims stay checkable: no "30 seconds less smart", no digs at schools by name.
+- **v29:** the vision is read in TURN (`vision.read`: Aurelia 1 and 3, Marcus 2 and 4 as
+  companion lines c-vis2/c-vis4), the paragraph being read lit on the page, the caption carrying
+  only the title (`CAPLITE`); at home the nocturne ducks to .26 not .14 so the music stays in
+  the room under the voices. Named "Who you can become". Polymath list = only names he knows
+  and has checked (Leonardo, Franklin, Jefferson, Michelangelo, Marcus); add others only after
+  he has vetted them.
