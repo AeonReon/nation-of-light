@@ -76,3 +76,12 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   flame), and it glows for six pulses on the first few visits until the room has been opened twice.
 - `speakSchool` chains carry a generation token; `hush()` kills a running chain (they used to
   keep going into the next screen).
+- **One room (v24).** The portico room and the arrival were the same idea twice, so the room is
+  gone: HOME is the arrival, and the sit-a-while parts (a reading, the library, rooms climbed,
+  earlier news) are `<details class="fold">` drop-downs beneath the day. Music plays at home and
+  fades on going in; the two of them speak unprompted at home (`idleRoom` now checks `arrive`).
+  A Today row of ticks (one quick thing / a long skill practised) and a "Next:" line say what a
+  finished day looks like; "How this works" is open for the first three visits.
+- **The feed** (`feed.json`, newest first) is kept in `S.feed.posts` so it shows offline; fetched
+  fresh on every open when online; a post not yet seen carries a New dot. To post: add to
+  feed.json and push (auto-deploys). No community needed for the app to make sense.

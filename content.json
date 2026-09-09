@@ -1,5 +1,5 @@
 {
- "version": 23,
+ "version": 24,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -834,7 +834,7 @@
   "t-2": "Where you stand: the days you have shown up, the things you have done, and your rank. The bar fills toward the next one.",
   "t-3": "This is your next thing. Do it and tap Done. If it is not the one, tap Not this one and we find another. That is all there is to it.",
   "t-4": "A flame for every day you show up. It never resets, and nobody scolds you. One light a day is the whole habit.",
-  "t-5": "And this is the portico. Nothing is asked of you there. Come and sit with us whenever you like.",
+  "t-5": "And this is home: the portico, the two of us, where you stand and what today asks. Come back to it whenever you like.",
   "ret1": "Welcome back. The flame is still lit, and so are you.",
   "ret2": "Good. Coming back is the whole habit. Here is where you are.",
   "tr1": "Here is everything you have earned so far. Tap one and we will tell you what it took.",
@@ -1675,7 +1675,9 @@
     "Good to have you here. Now, one thing.",
     "Momentum is yours to keep. One today keeps it."
    ],
-   "next": "Next: do one of the three below."
+   "next": "Next: do one of the three below.",
+   "nextLong": "Next: ten minutes on a long skill.",
+   "done": "That is today. Anything more is a gift."
   },
   "post": null,
   "again": [
@@ -1706,7 +1708,26 @@
   ],
   "storyLede": "Something from us",
   "todayTitle": "Do one of these today",
-  "todayLede": "About thirty seconds each. Pick the one that pulls you."
+  "todayLede": "About thirty seconds each. Pick the one that pulls you.",
+  "ticks": {
+   "quick": "One quick thing",
+   "long": "A long skill practised"
+  },
+  "how": {
+   "title": "How this works",
+   "lines": [
+    "Come here each day. This is home: the two of us, and where you stand.",
+    "Do one of the three quick things. Thirty seconds, from where you are.",
+    "Give ten minutes to a long skill, and tap Practised today.",
+    "That is a day. Everything else in the school is extra, and it is all yours."
+   ]
+  },
+  "folds": {
+   "rooms": "Rooms climbed",
+   "reading": "A reading from Aurelia",
+   "library": "From the library",
+   "earlier": "Earlier from Light School"
+  }
  },
  "room": {
   "title": "The portico",
@@ -2079,9 +2100,9 @@
     "t": "A flame for every day you show up. It never resets, and nobody scolds you. One light a day is the whole habit."
    },
    {
-    "sel": "#roombtn",
+    "sel": "#homebtn",
     "id": "ui-t-5",
-    "t": "And this is the portico. Nothing is asked of you there. Come and sit with us whenever you like."
+    "t": "And this is home: the portico, the two of us, where you stand and what today asks. Come back to it whenever you like."
    }
   ],
   "done": "c-tour",
@@ -2090,9 +2111,10 @@
   "skip": "I will find my way"
  },
  "feed": {
-  "title": "From the group",
-  "lede": "Announcements from Light School, for those who are in.",
-  "empty": "Nothing new. The group is quiet today."
+  "title": "From Light School",
+  "lede": "News and a word from the school, kept here so you can read it later, even offline.",
+  "empty": "Nothing new today. When there is news it appears here.",
+  "earlier": "Earlier from Light School"
  },
  "share": {
   "url": "https://nation-of-light.vercel.app",

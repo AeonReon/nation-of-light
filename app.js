@@ -565,8 +565,7 @@
   function enterSchool() {
     $('stage').classList.add('school'); $('deck').hidden = true; $('school').hidden = false; $('hud').hidden = false;
     $('shead').appendChild($('hud')); paintSchoolCount();
-    if (!$('roombtn')) { $('hud').insertAdjacentHTML('afterbegin', '<button class="roombtn" id="roombtn" aria-label="The portico: sit a while"><svg viewBox="0 0 24 24" fill="none" stroke="#8F6F12" stroke-width="2" stroke-linecap="round"><path d="M3 9h18M4 9v10M9 9v10M15 9v10M20 9v10M2 19h20M12 3l9 6H3z"/></svg></button>'); $('roombtn').addEventListener('click', () => { sfx('tap'); roomView(); }); $('homebtn').querySelector('svg').outerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 18h18M5 18a7 7 0 0114 0M12 5v2M5.6 8.6l1.4 1.4M18.4 8.6L17 10M2 13h2M20 13h2"/></svg>'; }
-    $('roombtn').classList.toggle('glow', (S.school.roomVisits || 0) < 2 && (S.school.visits || 0) <= 6);
+    if (!$('homebtn').dataset.sun) { $('homebtn').dataset.sun = '1'; $('homebtn').querySelector('svg').outerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9h18M4 9v10M9 9v10M15 9v10M20 9v10M2 19h20M12 3l9 6H3z"/></svg>'; }
     plates(false); MODE = 'school'; CUR = null; $('mfig').classList.remove('walk-in');
     const d = today(), fresh0 = !S.school.arrivedEver;
     const again = S.school.arrived === d; S.school.arrived = d; S.school.visits = (S.school.visits || 0) + 1; save(); arrival(fresh0, again);
@@ -575,13 +574,16 @@
   /* ---- the arrival: the portico, the two of them, where you stand, three for today ---- */
   let HOMEN = 0;
   function goHome() { if ($('stage').classList.contains('arrive')) return; hush(); clearTimeout(ROOMT); HOMEN++; CAT = null; arrival(false, true, true); }
+  const todayQuick = () => { const t = today(); return Object.values(S.school.done).some(v => typeof v === 'string' && v.startsWith(t)); };
+  const todayLong = () => projects().some(tr => !!prac(tr).days[today()]);
   const unpop = () => { clearTimeout(POPT.marcus); clearTimeout(POPT.aurelia); };
   function arrival(first, again, quiet) {
     const st = $('stage'); st.classList.add('arrive'); st.classList.remove('room', 'portico'); clearTimeout(ROOMT); stageBack(null); capHide(0); unpop(); dock('scene');
     $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout');
     RIG.enter(); setTimeout(() => { ARIG.show(true); $('afig').classList.remove('walk-out-l', 'walk-in-l', 'popin', 'popout'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l'); }, 350);
-    $('stabs').hidden = true; $('sline').textContent = '';
-    renderArrival();
+    $('stabs').hidden = true; $('sline').textContent = ''; MODE = 'school';
+    if (MUS.paused) musicStart(.4); ambStart(); if (points()) ambFire(true);
+    renderArrival(); idleRoom(50000);
     const vn = (S.school.visits || 0) + HOMEN;
     let lines = quiet ? [] : (first ? C.arrival.first : (again && C.arrival.again ? C.arrival.again[vn % C.arrival.again.length] : C.arrival.lines)); S.school.arrivedEver = true; save();
     // and something from them: one of her true lines, or one of his, in turn
@@ -596,22 +598,44 @@
       <div class="lvl"><i style="width:${pct}%"></i></div>`;
   }
   const SHARE_IC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 001 1h14a1 1 0 001-1v-7M12 3v13M7 8l5-5 5 5"/></svg>';
+  function foldCard(key, title, inner, open) { return `<details class="fold" data-fold="${key}" ${open ? 'open' : ''}><summary>${title}</summary><div class="fbody">${inner}</div></details>`; }
   function renderArrival() {
-    const list = $('slist'); const picks = todayPicks(); const P = C.arrival, post = P.post;
-    list.innerHTML = `<div class="acard standcard">${standCard()}<p class="punch">${standLine()}</p>${picks.length ? `<p class="nextp">${P.stand.next || ''}</p>` : ''}</div>` +
-      (post ? `<div class="acard post"><span class="eyebrow">From the group</span><h3>${post.title}</h3><p>${post.text}</p></div>` : '') +
+    const list = $('slist'), keep = list.scrollTop; const picks = todayPicks(); const P = C.arrival, R = C.room, F = P.folds || {};
+    // the feed: newest post, and whether it has been seen
+    S.feed = S.feed || { posts: [], seen: [] }; const post = FEED[0] || null; const isNew = post && !S.feed.seen.includes(post.id);
+    // today's ticks
+    const q = todayQuick(), l = todayLong(), hasLong = projects().length > 0;
+    const nextLine = (q && (l || !hasLong)) ? P.stand.done : (q ? P.stand.nextLong : P.stand.next);
+    const ticks = `<div class="ticks"><span class="${q ? 'on' : ''}"><i></i>${P.ticks.quick}</span>${hasLong ? `<span class="${l ? 'on' : ''}"><i></i>${P.ticks.long}</span>` : ''}</div>`;
+    const visits = (S.school.visits || 0);
+    const rd = R.readings[daySeed() % R.readings.length];
+    const lib = ['quote', 'book', 'beauty', 'figure'].map(k => { const pool = LIB.filter(x => x.kind === k); if (!pool.length) return ''; const it = pool[(daySeed() + k.length) % pool.length]; return `<div class="acard lib ${k}"><span class="eyebrow">${R.libraryLede[k]}</span>${it.title ? `<h3>${it.title}</h3>` : ''}<p>${it.t}</p>${it.by ? `<i>${it.by}${it.src ? ' · ' + it.src : ''}</i>` : ''}</div>`; }).join('');
+    const rooms = SCH.categories.map(c => ({ c, n: c.tracks.reduce((s, tr) => s + trackDone(tr), 0), N: c.tracks.reduce((s, tr) => s + tr.steps.length, 0) })).filter(r => r.n > 0).sort((x, y) => y.n - x.n).slice(0, 8);
+    const earlier = FEED.slice(1, 6);
+    list.innerHTML = `<div class="acard standcard">${standCard()}<p class="punch">${standLine()}</p>${ticks}<p class="nextp ${q && (l || !hasLong) ? 'done' : ''}">${nextLine}</p></div>` +
+      (P.how ? foldCard('how', P.how.title, `<ol class="howlist">${P.how.lines.map(x => `<li>${x}</li>`).join('')}</ol>`, visits <= 3 && !S.school.howSeen) : '') +
+      (post ? `<div class="acard post ${isNew ? 'new' : ''}"><span class="eyebrow">${C.feed.title}${isNew ? '<b class="dot">New</b>' : ''}</span><h3>${post.title}</h3><small>${post.date}</small><p>${post.text}</p></div>` : '') +
       `<div class="acard todaycard"><span class="eyebrow">${P.todayTitle || 'Three for today'}</span>${P.todayLede ? `<p class="lede">${P.todayLede}</p>` : ''}` +
       (picks.length ? picks.map(([tr, st]) => { const c = catOf(tr); return `<div class="pick" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span class="ptxt"><span class="scat">${c.name} · ${tr.name}</span><span class="stest">${st.test}</span></span><span class="pbtns"><button class="btn btn-gold sm" data-do="${skey(tr, st)}">${P.do}</button><button class="btn btn-ghost sm" data-not="${skey(tr, st)}">${P.notThis}</button></span></div>`; }).join('')
         : `<p class="lede">Every quick one is done. The long game is where the rest of you lives.</p>`) +
-      `</div>` + shelfCard(true) + carryCard(3) + `<div class="gorow"><button class="btn btn-gold" id="intoschool">${P.go}</button><button class="iconbtn" id="sharearr" aria-label="${C.share.btn}">${SHARE_IC}</button></div>`;
+      `</div>` + longCard() + shelfCard(true) + carryCard(3) +
+      foldCard('reading', F.reading || 'A reading from Aurelia', `<div class="acard reading"><div class="rhead"><span class="eyebrow">${R.readingsLede}</span><button class="playbtn" id="readit" aria-label="Aurelia reads it">${SPK_IC}</button></div><h3>${rd.title}</h3><p>${rd.text}</p></div>`) +
+      (lib ? foldCard('library', F.library || 'From the library', lib) : '') +
+      (rooms.length ? foldCard('rooms', F.rooms || 'Rooms climbed', `<div class="acard prog"><div class="rooms">${rooms.map(r => `<div class="rr" style="--c:${r.c.accent};--c2:${r.c.accent2}"><span>${r.c.name}</span><i><b style="width:${Math.round(r.n / r.N * 100)}%"></b></i><small>${r.n} of ${r.N}</small></div>`).join('')}</div></div>`) : '') +
+      (earlier.length ? foldCard('earlier', C.feed.earlier || 'Earlier', `<div class="acard feedcard">${earlier.map(p => `<div class="feedpost"><small>${p.date}</small><h4>${p.title}</h4><p>${p.text}</p></div>`).join('')}</div>`) : '') +
+      `<div class="gorow"><button class="btn btn-gold" id="intoschool">${P.go}</button><button class="iconbtn" id="sharearr" aria-label="${C.share.btn}">${SHARE_IC}</button></div>`;
+    if (post && isNew) { S.feed.seen.push(post.id); save(); }
     list.querySelector('#sharearr').addEventListener('click', () => { sfx('tap'); sharePanel(); });
-    wireShelf(list);
+    list.querySelectorAll('.fold').forEach(d => d.addEventListener('toggle', () => { if (d.dataset.fold === 'how' && !d.open) { S.school.howSeen = true; save(); } }));
+    const rb = list.querySelector('#readit'); if (rb) rb.addEventListener('click', () => { sfx('tap'); hush(); clearTimeout(ROOMT); cap('aurelia', rd.title); ARIG.nod(); aureliaSay('ui-read-' + rd.id, () => { capHide(1500); idleRoom(); }); });
+    wireShelf(list); wireLong(list);
     list.querySelectorAll('[data-do]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.do); if (r) stepSheet(r[0], r[1], null, 'arrival'); }));
     list.querySelectorAll('.crow[data-step]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.step); if (r) stepSheet(r[0], r[1], null, 'arrival'); }));
     list.querySelectorAll('[data-not]').forEach(b => b.addEventListener('click', () => { sfx('tap'); notThis(b.dataset.not); renderArrival(); if (line(C.arrival.another)) { hush(); marcusSay(line(C.arrival.another), 'nod'); } }));
     list.querySelector('#intoschool').addEventListener('click', () => { sfx('tap'); leaveArrival(); });
+    list.scrollTop = keep;
   }
-  function leaveArrival() { clearTimeout(arrival._t); hush(); $('stage').classList.remove('arrive'); RIG.show(false); ARIG.show(false); $('afig').classList.remove('walk-in-l'); dock('pop'); renderSchool(); if (!S.school.toured) setTimeout(offerTour, 600); else setTimeout(entryWord, 650); }
+  function leaveArrival() { clearTimeout(arrival._t); clearTimeout(ROOMT); hush(); musicStop(); $('stage').classList.remove('arrive'); RIG.show(false); ARIG.show(false); $('afig').classList.remove('walk-in-l'); dock('pop'); renderSchool(); if (!S.school.toured) setTimeout(offerTour, 600); else setTimeout(entryWord, 650); }
   /* going in: one of them pops up with a word for the day ahead. Never the same one twice in a sitting, a different start each day, loosely his and hers in turn. */
   const ENTRYSAID = new Set();
   function entryWord() {
@@ -660,40 +684,9 @@
     list.querySelectorAll('[data-step]').forEach(el => el.addEventListener('click', () => { sfx('tap'); const r = findStep(el.dataset.step); if (r) stepSheet(r[0], r[1]); }));
     list.querySelectorAll('[data-track]').forEach(el => el.addEventListener('click', () => { sfx('tap'); trackSheet(trackById(el.dataset.track)); }));
   }
-  /* ---- the portico: nowhere to be, nothing asked. The two of them, the fire, the music, a thought a day, the group's news ---- */
   let ROOMT = null, ROOMI = 0;
   const orn = () => '<div class="orn"><i></i><b></b><i></i></div>';
   const SPK_IC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z" fill="currentColor" stroke="none"/><path d="M15.5 8.5a5 5 0 010 7M19 5.5a9 9 0 010 13"/></svg>';
-  function roomView(refreshOnly) {
-    const R = C.room, list = $('slist'), keep = refreshOnly ? list.scrollTop : 0;
-    if (!refreshOnly) {
-      hush(); ROOM_FROM = { tab: TAB, cat: CAT }; CAT = null; const st = $('stage'); st.classList.add('portico'); st.classList.remove('room', 'arrive');
-      S.school.roomVisits = (S.school.roomVisits || 0) + 1; save(); $('roombtn').classList.remove('glow');
-      unpop(); dock('scene'); RIG.show(true); ARIG.show(true); $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout', 'walk-out-l');
-      $('afig').classList.remove('walk-in-l'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l'); RIG.enter();
-      MODE = 'school'; if (MUS.paused) musicStart(.4); ambStart(); if (points()) ambFire(true);
-      stageBack(leaveRoom); $('sline').textContent = '';
-    }
-    const rd = R.readings[daySeed() % R.readings.length];
-    const lib = ['quote', 'book', 'beauty', 'figure'].map(k => { const pool = LIB.filter(x => x.kind === k); if (!pool.length) return ''; const it = pool[(daySeed() + k.length) % pool.length]; return `<div class="acard lib ${k}"><span class="eyebrow">${R.libraryLede[k]}</span>${it.title ? `<h3>${it.title}</h3>` : ''}<p>${it.t}</p>${it.by ? `<i>${it.by}${it.src ? ' · ' + it.src : ''}</i>` : ''}</div>`; }).join('');
-    list.innerHTML = `<div class="roomtitle"><h2>${R.title}</h2><p>${R.lede}</p></div>
-      ${progressCard()}
-      ${longCard()}
-      ${shelfCard(false)}
-      ${orn()}
-      <div class="acard reading"><div class="rhead"><span class="eyebrow">${R.readingsLede}</span><button class="playbtn" id="readit" aria-label="Aurelia reads it">${SPK_IC}</button></div><h3>${rd.title}</h3><p>${rd.text}</p></div>
-      ${lib}
-      ${orn()}
-      <div class="acard feedcard"><span class="eyebrow">${C.feed.title}</span>${FEED.length ? FEED.slice(0, 5).map(p => `<div class="feedpost"><small>${p.date}</small><h4>${p.title}</h4><p>${p.text}</p></div>`).join('') : `<p class="lede">${C.feed.empty}</p>`}</div>
-      <div class="gorow"><button class="btn btn-ghost" id="roomshare" style="flex:1">${SHARE_IC}<span>${C.share.btn}</span></button></div>`;
-    list.querySelector('#roomshare').addEventListener('click', () => { sfx('tap'); sharePanel(); });
-    list.querySelector('#readit').addEventListener('click', () => { sfx('tap'); hush(); clearTimeout(ROOMT); cap('aurelia', rd.title); ARIG.nod(); aureliaSay('ui-read-' + rd.id, () => { capHide(1500); idleRoom(); }); });
-    wireShelf(list); wireLong(list);
-    if (refreshOnly) { list.scrollTop = keep; return; }
-    setTimeout(() => speakSchool(R.enter), 1400);
-    idleRoom(40000);
-  }
-  roomView.refresh = () => roomView(true);
   /* ---- trophies: ranks, the twenty-five, and a medal per room. Drawn, never emoji. ---- */
   function awards() {
     const AW = C.school.awards, K = AW.show || {}, out = [], p = points();
@@ -748,21 +741,15 @@
   }
   function closeShow(silent) { if (!SHOW) return; SHOW = null; hush(); if (!silent) closeVeil(); if (!inScene()) { popOut('marcus', 0); popOut('aurelia', 0); } }
   function shower() { for (let i = 0; i < 28; i++) { const l = document.createElement('i'); l.className = 'leaffall' + (i % 2 ? ' gl' : ''); l.style.left = Math.random() * 100 + '%'; l.style.animationDuration = (2.4 + Math.random() * 2.2) + 's'; l.style.animationDelay = (Math.random() * 1.2) + 's'; $('stage').appendChild(l); setTimeout(() => l.remove(), 5500); } }
-  function progressCard() {
-    const rooms = SCH.categories.map(c => ({ c, n: c.tracks.reduce((s, tr) => s + trackDone(tr), 0), N: c.tracks.reduce((s, tr) => s + tr.steps.length, 0) })).filter(r => r.n > 0).sort((x, y) => y.n - x.n).slice(0, 6);
-    return `<div class="acard prog"><span class="eyebrow">${C.room.progressTitle}</span>${standCard()}<p class="punch">${standLine()}</p>` +
-      (rooms.length ? `<div class="rooms">${rooms.map(r => `<div class="rr" style="--c:${r.c.accent};--c2:${r.c.accent2}"><span>${r.c.name}</span><i><b style="width:${Math.round(r.n / r.N * 100)}%"></b></i><small>${r.n} of ${r.N}</small></div>`).join('')}</div>` : `<p class="lede">No room climbed yet. The first step in any of them starts the count.</p>`) + `</div>`;
-  }
   /* every so often one of them says something, in turn, unprompted */
   function idleRoom(delay) {
     clearTimeout(ROOMT); ROOMT = setTimeout(() => {
-      if (!$('stage').classList.contains('portico')) return;
+      if (!$('stage').classList.contains('arrive')) return;
       if (SPEAKING || !NAR.paused) { idleRoom(15000); return; }
       if (ROOMI++ % 2 === 0) { const ids = C.aurelia.lines.map(l => l.id); const id = ids.find(i => !S.said.includes(i)) || ids[ROOMI % ids.length]; const ln = C.aurelia.lines.find(l => l.id === id); if (!S.said.includes(id)) { S.said.push(id); save(); } cap('aurelia', ln.t); ARIG.nod(); aureliaSay(id, () => { capHide(1500); idleRoom(35000 + Math.random() * 20000); }); }
       else { const all = Object.keys(LINES).filter(k => k.startsWith('m-')); marcusSay(fresh(all.slice(ROOMI % all.length).concat(all)), 'nod', () => idleRoom(35000 + Math.random() * 20000)); }
     }, delay || 30000);
   }
-  function leaveRoom() { hush(); clearTimeout(ROOMT); $('stage').classList.remove('portico'); RIG.show(false); ARIG.show(false); $('afig').classList.remove('walk-in-l'); dock('pop'); musicStop(); if (ROOM_FROM) { TAB = ROOM_FROM.tab; CAT = ROOM_FROM.cat; ROOM_FROM = null; } renderSchool(); }
   /* ---- the tour: Aurelia shows the school round, one thing lit at a time ---- */
   function offerTour() {
     const T = C.tour; if (!T) return;
@@ -865,9 +852,9 @@
   function wireLong(root) {
     root.querySelectorAll('[data-prac]').forEach(b => b.addEventListener('click', () => { sfx('tap'); logPractice(trackById(b.dataset.prac)); }));
     root.querySelectorAll('[data-check]').forEach(b => b.addEventListener('click', () => { sfx('tap'); checkIn(trackById(b.dataset.check)); }));
-    const pk = root.querySelector('#pickLong'); if (pk) pk.addEventListener('click', () => { sfx('tap'); ROOM_FROM = { tab: 'long', cat: null }; leaveRoom(); });
+    const pk = root.querySelector('#pickLong'); if (pk) pk.addEventListener('click', () => { sfx('tap'); TAB = 'long'; leaveArrival(); });
   }
-  const rerender = () => { if ($('stage').classList.contains('portico')) roomView.refresh(); else if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); };
+  const rerender = () => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); };
   function logPractice(tr) {
     const t = today(), p = prac(tr); if (p.days[t]) return;
     p.days[t] = 1; S.days[t] = (S.days[t] || 0) + 1; save();
@@ -973,7 +960,8 @@
   async function boot() {
     const [c, v, av, sch] = await Promise.all([fetch('content.json').then(r => r.json()), fetch('audio/marcus/visemes.json').then(r => r.json()).catch(() => null), fetch('audio/voice/visemes.json').then(r => r.json()).catch(() => null), fetch('school.json').then(r => r.json()).catch(() => null)]);
     C = c; VIS = v; AVIS = av; SCH = sch;
-    fetch('feed.json?x=' + Date.now()).then(r => r.json()).then(f => { FEED = (f && f.posts) || []; if (FEED.length && C.arrival) C.arrival.post = FEED[0]; }).catch(() => {});
+    S.feed = S.feed || { posts: [], seen: [] }; FEED = S.feed.posts || [];
+    fetch('feed.json?x=' + Date.now()).then(r => r.json()).then(f => { FEED = (f && f.posts) || []; S.feed.posts = FEED; save(); if ($('stage').classList.contains('arrive')) renderArrival(); }).catch(() => {});
     fetch('library.json').then(r => r.json()).then(l => { LIB = (l && l.items) || []; }).catch(() => {});
     const ids = new Set(C.moves.map(m => m.id)); S.done = S.done.filter(id => ids.has(id)); S.skipped = S.skipped.filter(id => ids.has(id)); save();
     for (const k in C.marcus.lines) for (const l of C.marcus.lines[k]) LINES[l.id] = l;
@@ -983,10 +971,10 @@
     $('soundbtn').addEventListener('click', () => { S.sound = !S.sound; save(); paintSound(); if (!S.sound) { hush(); musicStop(); ambStop(); } else { sfx('tap'); ambStart(); if (S.done.length) ambFire(true); } });
     capSwipe($('popcap')); capSwipe($('capband'));
     $('homebtn').addEventListener('click', () => { sfx('tap'); goHome(); });
-    $('helpbtn').addEventListener('click', () => { sfx('tap'); if (MODE === 'school' && C.tour && !$('stage').classList.contains('arrive')) { if ($('stage').classList.contains('portico')) leaveRoom(); tour(); } else help(); });
+    $('helpbtn').addEventListener('click', () => { sfx('tap'); if (MODE === 'school' && C.tour) { if ($('stage').classList.contains('arrive')) leaveArrival(); tour(); } else help(); });
     cover();
     if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
-    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool, show: id => trophyShow(awards().find(a => a.id === id)), awards, quiet: quietProject, check: id => checkIn(trackById(id)), entry: entryWord, room: roomView, prac: id => logPractice(trackById(id)) };
+    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool, show: id => trophyShow(awards().find(a => a.id === id)), awards, quiet: quietProject, check: id => checkIn(trackById(id)), entry: entryWord, home: goHome, prac: id => logPractice(trackById(id)) };
   }
   /* iOS standalone computes the new viewport unit as if a toolbar were there; measure instead */
   document.addEventListener('DOMContentLoaded', boot);
