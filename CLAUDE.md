@@ -111,3 +111,8 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
 - **Share from the cover or the door** must pass the way back (`sharePanel(cover)`); a veil
   replaces the overlay, so anything opened from another veil needs its way home or the screen
   is left empty and looks frozen.
+- **Who you become (v28):** the vision, sold in three doses: a fold at home (`C.vision`: four
+  paragraphs Aurelia reads, `ui-vision`, ~84 s; then "They did many things", seven real polymaths
+  with verifiable lines), open on the first two visits; and nine short vision lines woven into
+  the entry pool every third slot (ui-env*, c-env*). The twenty-five's ending was left as he
+  approved it. Claims stay checkable: no "30 seconds less smart", no digs at schools by name.

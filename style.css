@@ -770,3 +770,16 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .afig svg *,.mfig svg *{pointer-events:visiblePainted}
 .toast{bottom:auto;top:calc(40vh + 10px);top:calc(40dvh + 10px);font-family:var(--display);font-weight:500;font-size:13.5px;background:rgba(30,23,15,.86);white-space:normal;max-width:80%;text-align:center;z-index:9}
 .toast.gone{animation:capaway .45s var(--ease) both}
+/* v28: who you become */
+.fold[data-fold="vision"]{--g1:#F0D98A;--g2:#B08D1E}
+.visioncard{background:linear-gradient(180deg,#FBF4E2 0%,#F1E4C6 100%)}
+.visioncard p{margin:0 0 10px;font-family:var(--display);font-weight:500;font-size:16.5px;line-height:1.5;color:var(--ink)}
+.visioncard p:first-of-type::first-letter{float:left;font-family:var(--display);font-weight:600;font-size:3.1em;line-height:.8;margin:5px 7px 0 0;color:var(--gold-deep)}
+.visioncard p:last-of-type{margin-bottom:2px}
+.polycard{--g1:#B8A5D8;--g2:#6B4E9E}
+.polycard .eyebrow{color:#6B4E9E}
+.poly{display:grid;grid-template-columns:1fr;gap:1px;padding:8px 0;border-top:1px solid var(--line)}
+.poly:first-of-type{border-top:0}
+.poly b{font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink)}
+.poly span{font-size:13.5px;line-height:1.4;color:var(--ink-soft)}
+.polycard .close{margin:8px 0 0;font-family:var(--display);font-weight:500;font-size:15.5px;color:var(--gold-deep);text-align:center}

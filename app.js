@@ -677,6 +677,7 @@
     const earlier = FEED.slice(1, 6);
     list.innerHTML = `<div class="acard standcard">${standCard()}<p class="punch">${standLine()}</p>${ticks}<p class="nextp ${q && (l || !hasLong) ? 'done' : ''}">${nextLine}</p></div>` +
       (P.how ? foldCard('how', P.how.title, `<ol class="howlist">${P.how.lines.map(x => `<li>${x}</li>`).join('')}</ol>`, visits <= 3 && !S.school.howSeen) : '') +
+      (C.vision ? foldCard('vision', C.vision.title, `<div class="acard visioncard"><div class="rhead"><span class="eyebrow">${C.vision.lede}</span><button class="playbtn" id="visionread" aria-label="Aurelia reads it">${SPK_IC}</button></div>${C.vision.paras.map(x => `<p>${x}</p>`).join('')}</div><div class="acard polycard"><span class="eyebrow">${C.vision.polyTitle}</span><p class="lede">${C.vision.polyLede}</p>${C.vision.polymaths.map(x => `<div class="poly"><b>${x.name}</b><span>${x.line}</span></div>`).join('')}<p class="close">${C.vision.close}</p></div>`, visits <= 2 && !S.school.visionSeen) : '') +
       (post ? `<div class="acard post ${isNew ? 'new' : ''}"><span class="eyebrow">${C.feed.title}${isNew ? '<b class="dot">New</b>' : ''}</span><h3>${post.title}</h3><small>${post.date}</small><p>${post.text}</p></div>` : '') +
       `<div class="acard todaycard"><span class="eyebrow">${P.todayTitle || 'Three for today'}</span>${P.todayLede ? `<p class="lede">${P.todayLede}</p>` : ''}` +
       (picks.length ? picks.map(([tr, st]) => { const c = catOf(tr); return `<div class="pick" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span class="ptxt"><span class="scat">${c.name} · ${tr.name}</span><span class="stest">${st.test}</span></span><span class="pbtns"><button class="btn btn-gold sm" data-do="${skey(tr, st)}">${P.do}</button><button class="btn btn-ghost sm" data-not="${skey(tr, st)}">${P.notThis}</button></span></div>`; }).join('')
@@ -689,7 +690,8 @@
       `<div class="gorow"><button class="btn btn-gold" id="intoschool">${P.go}</button><button class="iconbtn" id="sharearr" aria-label="${C.share.btn}">${SHARE_IC}</button></div>`;
     if (post && isNew) { S.feed.seen.push(post.id); save(); }
     list.querySelector('#sharearr').addEventListener('click', () => { sfx('tap'); sharePanel(); });
-    list.querySelectorAll('.fold').forEach(d => d.addEventListener('toggle', () => { if (d.dataset.fold === 'how' && !d.open) { S.school.howSeen = true; save(); } }));
+    list.querySelectorAll('.fold').forEach(d => d.addEventListener('toggle', () => { if (d.dataset.fold === 'how' && !d.open) { S.school.howSeen = true; save(); } if (d.dataset.fold === 'vision' && !d.open) { S.school.visionSeen = true; save(); } }));
+    const vr = list.querySelector('#visionread'); if (vr) vr.addEventListener('click', () => { sfx('tap'); if (!NAR.paused && NAR.src.includes('ui-vision')) { hush(); return; } hush(); clearTimeout(ROOMT); cap('aurelia', C.vision.title); ARIG.point(); if (!RIG.hidden) RIG.smile(4); aureliaSay('ui-vision', () => { capHide(1500); idleRoom(); }); });
     const rb = list.querySelector('#readit'); if (rb) rb.addEventListener('click', () => { sfx('tap'); hush(); clearTimeout(ROOMT); cap('aurelia', rd.title); ARIG.nod(); aureliaSay('ui-read-' + rd.id, () => { capHide(1500); idleRoom(); }); });
     wireShelf(list); wireLong(list);
     list.querySelectorAll('[data-do]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.do); if (r) stepSheet(r[0], r[1], null, 'arrival'); }));
