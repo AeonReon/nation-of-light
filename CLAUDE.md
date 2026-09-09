@@ -100,3 +100,14 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   excerpts in `audio/music/` (Musopen CC0, see CREDIT.txt; `music.pieces` in content.json), one
   per tap in turn, a toast names the piece; the nocturne at home ducks under it. Add pieces by
   trimming with ffmpeg (`-nostdin` inside loops) and appending to CREDIT.txt.
+- **Creating order (v27):** a ROOM (`order`, family "Everyday life"), not one long ladder: eight
+  ladders of 6–7 steps (bedroom, desk, wardrobe, broken things, giving away, the phone and the
+  inbox, the forgotten places, keeping it), 50 steps. His brief: orderliness is central to the
+  classical world view; clear, mend, give away, digital too, the forgotten places, then keep it.
+  Long ladders stay 6–8 rungs because the long game draws a ladder as start / here / end and a
+  medal comes at 5, 15 and all; a big undertaking is a room of ladders. Tiles drawn with Draw
+  Things via `tools/order-draw.mjs` (same recipe as school-of-light/tools/track-draw.mjs).
+  Data files are fetched with `cache: 'no-cache'` so an edited school.json shows on next open.
+- **Share from the cover or the door** must pass the way back (`sharePanel(cover)`); a veil
+  replaces the overlay, so anything opened from another veil needs its way home or the screen
+  is left empty and looks frozen.

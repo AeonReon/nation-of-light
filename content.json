@@ -1,5 +1,5 @@
 {
- "version": 26,
+ "version": 27,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -917,7 +917,9 @@
   "q-q49": "Dripping water hollows out stone, not by force but by falling often.",
   "q-q50": "The beginning is the most important part of the work.",
   "q-q51": "Nothing endures but change.",
-  "q-q52": "Big results come from small, steady work. That is the only kind of work there is."
+  "q-q52": "Big results come from small, steady work. That is the only kind of work there is.",
+  "cat-order": "Creating order. Clear it, mend it, give it away, and clean the forgotten places. A life starts to flow when the place is in order.",
+  "read-order": "The Greeks had one word, kosmos, for the ordered world and for a thing beautifully arranged. The opposite was chaos. A tidy room is a small kosmos, and that is not fussiness. Every cluttered surface and every broken thing charges the mind a small tax each time it is seen, and the taxes add up to a life lived with a lower ceiling. Clear the surface, mend the thing or let it go, wash what has not been washed, and the tax stops. What is left is attention, and attention is what a good life is made of. Start with one room. Order spreads."
  },
  "cover": {
   "em": "Nation of",
@@ -1346,7 +1348,8 @@
    "belong": "ui-cat-belong",
    "home": "ui-cat-home",
    "care": "ui-cat-care",
-   "calm": "ui-cat-calm"
+   "calm": "ui-cat-calm",
+   "order": "ui-cat-order"
   },
   "affirm": [
    "c-sy1",
@@ -1371,7 +1374,10 @@
     "body.breath",
     "make.wood",
     "words.poems",
-    "body.upside"
+    "body.upside",
+    "order.bedroom",
+    "order.digital",
+    "order.wardrobe"
    ],
    "intro": "These are skills, not a sitting. Some take an afternoon, some a week, some a month of a little most days. Each one is a ladder: it starts small and ends somewhere you cannot do yet.",
    "pickLine": "The quick wins keep you moving. A skill gives them somewhere to go. Take on up to three, do a little most days, and put one down whenever you like.",
@@ -2116,6 +2122,11 @@
     "id": "hundredthings",
     "title": "A hundred small skills",
     "text": "Juggling, and a card trick, and holding your breath, and lighting a fire from sticks, and a paper aeroplane that really flies. Any one of them is a novelty. Put a hundred of them together in one person and something different has happened: they see the world as a set of things that can be done rather than a set of things that are provided. That is what all of this is adding up to."
+   },
+   {
+    "id": "order",
+    "title": "A small kosmos",
+    "text": "The Greeks had one word, kosmos, for the ordered world and for a thing beautifully arranged. The opposite was chaos. A tidy room is a small kosmos, and that is not fussiness. Every cluttered surface and every broken thing charges the mind a small tax each time it is seen, and the taxes add up to a life lived with a lower ceiling. Clear the surface, mend the thing or let it go, wash what has not been washed, and the tax stops. What is left is attention, and attention is what a good life is made of. Start with one room. Order spreads."
    }
   ],
   "readingsLede": "One thought a day. Aurelia reads it.",

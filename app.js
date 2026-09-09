@@ -425,7 +425,7 @@
       <div class="small">Sound on is the whole point. Headphones are lovely.</div>
     </div>`);
     v.querySelector('#codelink').addEventListener('click', () => { sfx('tap'); codePanel(true); });
-    v.querySelector('#sharelink').addEventListener('click', () => { sfx('tap'); sharePanel(); });
+    v.querySelector('#sharelink').addEventListener('click', () => { sfx('tap'); sharePanel(cover); });
     v.querySelector('#begin').addEventListener('click', () => {
       ac(); MAR.muted = true; MAR.src = 'audio/marcus/m-g1.mp3'; MAR.play().then(() => { MAR.pause(); MAR.muted = false; MAR.currentTime = 0; }).catch(() => { MAR.muted = false; });
       musicStart(); ambStart();
@@ -530,7 +530,7 @@
       p.querySelector('#doorback2').addEventListener('click', () => { sfx('tap'); closeVeil(() => { ARIG.show(false); restTablet(); }); });
     });
     v.querySelector('#codebtn').addEventListener('click', () => { sfx('tap'); codePanel(); });
-    v.querySelector('#doorshare').addEventListener('click', () => { sfx('tap'); sharePanel(); });
+    v.querySelector('#doorshare').addEventListener('click', () => { sfx('tap'); sharePanel(doorPanel); });
   }
   function codePanel(fromCover) {
     const D = C.door;
@@ -994,13 +994,13 @@
     });
   }
   /* ---- share: the link only, and a QR for the room ---- */
-  function sharePanel() {
+  function sharePanel(back) {
     const H = C.share;
     const v = veil(`<div class="panel sharecard"><div class="eyebrow"><i></i>${H.title}</div><h2>${H.btn}</h2><p class="lede">${H.lede}</p>
       <div class="qr"><img src="images/qr.svg" alt="QR code for ${H.url}"></div><p class="url">${H.url.replace('https://', '')}</p>
       <div class="row">${navigator.share ? `<button class="btn btn-gold" id="sharego" style="flex:1.3">Share</button>` : ''}<button class="btn btn-ghost" id="sharecopy" style="flex:1">${H.copy}</button></div>
       </div>`, 'light');
-    backBtn(v, () => closeVeil());
+    backBtn(v, () => closeVeil(back || null));
     const go = v.querySelector('#sharego'); if (go) go.addEventListener('click', async () => { sfx('tap'); try { await navigator.share({ url: H.url }); } catch (e) {} });
     v.querySelector('#sharecopy').addEventListener('click', async () => { sfx('tap'); try { await navigator.clipboard.writeText(H.url); v.querySelector('#sharecopy').textContent = H.copied; } catch (e) { prompt('Copy this link', H.url); } });
   }
@@ -1021,11 +1021,11 @@
 
   /* ---------- boot ---------- */
   async function boot() {
-    const [c, v, av, sch] = await Promise.all([fetch('content.json').then(r => r.json()), fetch('audio/marcus/visemes.json').then(r => r.json()).catch(() => null), fetch('audio/voice/visemes.json').then(r => r.json()).catch(() => null), fetch('school.json').then(r => r.json()).catch(() => null)]);
+    const [c, v, av, sch] = await Promise.all([fetch('content.json', { cache: 'no-cache' }).then(r => r.json()), fetch('audio/marcus/visemes.json', { cache: 'no-cache' }).then(r => r.json()).catch(() => null), fetch('audio/voice/visemes.json', { cache: 'no-cache' }).then(r => r.json()).catch(() => null), fetch('school.json', { cache: 'no-cache' }).then(r => r.json()).catch(() => null)]);
     C = c; VIS = v; AVIS = av; SCH = sch;
     S.feed = S.feed || { posts: [], seen: [] }; FEED = S.feed.posts || [];
     fetch('feed.json?x=' + Date.now()).then(r => r.json()).then(f => { FEED = (f && f.posts) || []; S.feed.posts = FEED; save(); if ($('stage').classList.contains('arrive')) renderArrival(); }).catch(() => {});
-    fetch('library.json').then(r => r.json()).then(l => { LIB = (l && l.items) || []; }).catch(() => {});
+    fetch('library.json', { cache: 'no-cache' }).then(r => r.json()).then(l => { LIB = (l && l.items) || []; }).catch(() => {});
     const ids = new Set(C.moves.map(m => m.id)); S.done = S.done.filter(id => ids.has(id)); S.skipped = S.skipped.filter(id => ids.has(id)); save();
     for (const k in C.marcus.lines) for (const l of C.marcus.lines[k]) LINES[l.id] = l;
     for (const l of (C.marcus.spoken || [])) LINES[l.id] = l;
