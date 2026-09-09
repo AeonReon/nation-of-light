@@ -59,3 +59,8 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
 - **Banned phrasing (his, 2026-09-08):** never "wide first, then deep", "go wide then deep", "taste
   wide", "width"/"go deep" as the method line. It invites jokes and this is also for children. Say
   it plainly: try many things, then give real time to the ones that light you up.
+- **Entry word (v22):** going Into the school, one of them pops up with one line from `school.entry`
+  (24: 14 hers `ui-en*`, 10 his `c-en*`, loosely in turn), chosen by day + visit, never repeated in
+  a sitting (`entryWord`). His brief: not "welcome back" again; encouragement, "let us do something
+  good today", or a reason why (poetic language brings magic, buildings bring beauty). Add lines
+  here first when the pool needs to grow; keep them under fifteen words.

@@ -610,7 +610,16 @@
     list.querySelectorAll('[data-not]').forEach(b => b.addEventListener('click', () => { sfx('tap'); notThis(b.dataset.not); renderArrival(); if (line(C.arrival.another)) { hush(); marcusSay(line(C.arrival.another), 'nod'); } }));
     list.querySelector('#intoschool').addEventListener('click', () => { sfx('tap'); leaveArrival(); });
   }
-  function leaveArrival() { clearTimeout(arrival._t); hush(); $('stage').classList.remove('arrive'); RIG.show(false); ARIG.show(false); $('afig').classList.remove('walk-in-l'); dock('pop'); renderSchool(); if (!S.school.toured) setTimeout(offerTour, 600); }
+  function leaveArrival() { clearTimeout(arrival._t); hush(); $('stage').classList.remove('arrive'); RIG.show(false); ARIG.show(false); $('afig').classList.remove('walk-in-l'); dock('pop'); renderSchool(); if (!S.school.toured) setTimeout(offerTour, 600); else setTimeout(entryWord, 650); }
+  /* going in: one of them pops up with a word for the day ahead. Never the same one twice in a sitting, a different start each day, loosely his and hers in turn. */
+  const ENTRYSAID = new Set();
+  function entryWord() {
+    const E = C.school.entry || []; if (!E.length || !$('stage').classList.contains('school') || inScene()) return;
+    const start = (daySeed() * 7 + (S.school.visits || 0) + HOMEN) % E.length;
+    let ln = null; for (let i = 0; i < E.length; i++) { const c = E[(start + i) % E.length]; if (!ENTRYSAID.has(c.id)) { ln = c; break; } }
+    if (!ln) { ENTRYSAID.clear(); ln = E[start]; }
+    ENTRYSAID.add(ln.id); hush(); speakSchool([ln]);
+  }
   /* a line from either of them: from the portico when it is showing, popped in at the edge when not */
   function speakSchool(lines) {
     const sc = inScene(); let i = 0;

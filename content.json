@@ -1,5 +1,5 @@
 {
- "version": 21,
+ "version": 22,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -380,6 +380,46 @@
    {
     "id": "c-tr4",
     "t": "A shelf like this is rare. Not because it is hard. Because most people will not take the first step. You take them every day."
+   },
+   {
+    "id": "c-en1",
+    "t": "Good. You are in. Let us keep the momentum going."
+   },
+   {
+    "id": "c-en2",
+    "t": "I am glad to see you. Let us make something of today."
+   },
+   {
+    "id": "c-en3",
+    "t": "The hard part was opening the door. You have done it. Now one small thing."
+   },
+   {
+    "id": "c-en4",
+    "t": "Momentum does not care how you feel. It cares whether you move. Move."
+   },
+   {
+    "id": "c-en5",
+    "t": "A day with one thing done in it is a good day. Let us have one."
+   },
+   {
+    "id": "c-en6",
+    "t": "Nobody is watching. That is why it counts. Pick something."
+   },
+   {
+    "id": "c-en7",
+    "t": "You have shown up more than most people ever will. Keep going."
+   },
+   {
+    "id": "c-en8",
+    "t": "Small, done, and on to the next. That is the whole art."
+   },
+   {
+    "id": "c-en9",
+    "t": "Let us see what you can do today. I am curious."
+   },
+   {
+    "id": "c-en10",
+    "t": "Whatever you choose, do it properly. Then it is yours."
    }
   ]
  },
@@ -785,7 +825,21 @@
   "tr2": "Well done. You are in a small group now: the people who actually do the thing.",
   "tr3": "Every step on that shelf is real, and it stays yours. Nothing here is ever taken away.",
   "tr4": "Most people wait for the right moment. You made one. That is what this is for.",
-  "tr-no": "Not yet, but it is near. Every step you take now counts toward it."
+  "tr-no": "Not yet, but it is near. Every step you take now counts toward it.",
+  "en1": "I am glad you are here. Let us do something good today.",
+  "en2": "One small thing now, and the day is already better than most.",
+  "en3": "Poetic language puts magic into ordinary days. That is why the words are in here.",
+  "en4": "Learning to see a beautiful building means you will never walk down an ordinary street again.",
+  "en5": "A person who can cook one good meal feeds everyone they love. That is what these steps are for.",
+  "en6": "Every step in here is a small piece of a bigger life. Pick one and we will do it together.",
+  "en7": "You do not have to feel ready. Nobody does. Do the next thing and the feeling follows.",
+  "en8": "Whatever you do today, we are here for it.",
+  "en9": "Standing on one leg, folding a paper bird, saying hello first. Little things, and the person who does them is not little.",
+  "en10": "A few words in another language open a door that stays open for life.",
+  "en11": "Knowing which way is north, how to light a fire, how to ask for a better price: these make a person who is at home anywhere.",
+  "en12": "Nobody has to know what you did today. You will know. That is the part that counts.",
+  "en13": "The days you least feel like it are the days that count double. Let us do one thing.",
+  "en14": "A little every day is how great things are built. This is one of the little every days."
  },
  "cover": {
   "em": "Nation of",
@@ -1364,7 +1418,129 @@
    "Blaze": "Nothing half-done. You are doing more of this than almost anyone alive.",
    "Sun": "Everything around you grows in it.",
    "Radiant": "Every step in the school, every one. Light coming off you."
-  }
+  },
+  "entry": [
+   {
+    "who": "aurelia",
+    "id": "ui-en1",
+    "t": "I am glad you are here. Let us do something good today."
+   },
+   {
+    "who": "marcus",
+    "id": "c-en1",
+    "t": "Good. You are in. Let us keep the momentum going."
+   },
+   {
+    "who": "aurelia",
+    "id": "ui-en2",
+    "t": "One small thing now, and the day is already better than most."
+   },
+   {
+    "who": "marcus",
+    "id": "c-en2",
+    "t": "I am glad to see you. Let us make something of today."
+   },
+   {
+    "who": "aurelia",
+    "id": "ui-en3",
+    "t": "Poetic language puts magic into ordinary days. That is why the words are in here."
+   },
+   {
+    "who": "marcus",
+    "id": "c-en3",
+    "t": "The hard part was opening the door. You have done it. Now one small thing."
+   },
+   {
+    "who": "aurelia",
+    "id": "ui-en4",
+    "t": "Learning to see a beautiful building means you will never walk down an ordinary street again."
+   },
+   {
+    "who": "marcus",
+    "id": "c-en4",
+    "t": "Momentum does not care how you feel. It cares whether you move. Move."
+   },
+   {
+    "who": "aurelia",
+    "id": "ui-en5",
+    "t": "A person who can cook one good meal feeds everyone they love. That is what these steps are for."
+   },
+   {
+    "who": "marcus",
+    "id": "c-en5",
+    "t": "A day with one thing done in it is a good day. Let us have one."
+   },
+   {
+    "who": "aurelia",
+    "id": "ui-en6",
+    "t": "Every step in here is a small piece of a bigger life. Pick one and we will do it together."
+   },
+   {
+    "who": "marcus",
+    "id": "c-en6",
+    "t": "Nobody is watching. That is why it counts. Pick something."
+   },
+   {
+    "who": "aurelia",
+    "id": "ui-en7",
+    "t": "You do not have to feel ready. Nobody does. Do the next thing and the feeling follows."
+   },
+   {
+    "who": "marcus",
+    "id": "c-en7",
+    "t": "You have shown up more than most people ever will. Keep going."
+   },
+   {
+    "who": "aurelia",
+    "id": "ui-en8",
+    "t": "Whatever you do today, we are here for it."
+   },
+   {
+    "who": "marcus",
+    "id": "c-en8",
+    "t": "Small, done, and on to the next. That is the whole art."
+   },
+   {
+    "who": "aurelia",
+    "id": "ui-en9",
+    "t": "Standing on one leg, folding a paper bird, saying hello first. Little things, and the person who does them is not little."
+   },
+   {
+    "who": "marcus",
+    "id": "c-en9",
+    "t": "Let us see what you can do today. I am curious."
+   },
+   {
+    "who": "aurelia",
+    "id": "ui-en10",
+    "t": "A few words in another language open a door that stays open for life."
+   },
+   {
+    "who": "marcus",
+    "id": "c-en10",
+    "t": "Whatever you choose, do it properly. Then it is yours."
+   },
+   {
+    "who": "aurelia",
+    "id": "ui-en11",
+    "t": "Knowing which way is north, how to light a fire, how to ask for a better price: these make a person who is at home anywhere."
+   },
+   {
+    "who": "aurelia",
+    "id": "ui-en12",
+    "t": "Nobody has to know what you did today. You will know. That is the part that counts."
+   },
+   {
+    "who": "aurelia",
+    "id": "ui-en13",
+    "t": "The days you least feel like it are the days that count double. Let us do one thing."
+   },
+   {
+    "who": "aurelia",
+    "id": "ui-en14",
+    "t": "A little every day is how great things are built. This is one of the little every days."
+   }
+  ]
  },
  "arrival": {
   "lines": [
