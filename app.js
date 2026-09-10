@@ -1338,6 +1338,7 @@
     if (st) h += `<div class="acard one tk-next"><span class="eyebrow">${fmt1(K.nextTitle, { n: st.n, N })}</span>
       <div class="stestbig">${st.test}</div>
       ${st.how ? `<p class="lede">${st.how[0]}</p>` : (st.note ? `<p class="lede">${st.note}</p>` : '')}
+      ${st.twist ? `<p class="twist"><b>${K.twist || 'Already easy?'}</b> ${st.twist}</p>` : ''}
       <div class="row"><button class="btn btn-gold" data-step="${skey(tr, st)}" style="flex:1">${K.doIt}</button></div></div>`;
 
     const sh = sharpOf(tr);
@@ -1468,6 +1469,10 @@
     const c = catOf(tr), k = skey(tr, st), d = sdone(k), K = trackCopy();
     const rusty = d && isFaded(k);
     const how = st.how ? `<ul class="how">${st.how.map(h => `<li>${h}</li>`).join('')}</ul>` : (st.note ? `<p class="note">${st.note}</p>` : '');
+    /* The other-hand twist (his, 2026-09-10): the same rung for a child and a
+       grown-up, and the grown-up who finds it easy does it with the hand or
+       foot they would never choose, so they feel what the child is feeling. */
+    const twist = st.twist ? `<p class="twist"><b>${K.twist || 'Already easy?'}</b> ${st.twist}</p>` : '';
     /* "Done already" used to be a dead grey button, which said the step was
        finished with. Nothing here is finished with — you can always do it
        again, and once it has gone rusty doing it again is worth a point, the
@@ -1480,7 +1485,7 @@
       : fmt1(K.doneOn || 'Done {d}.', { d: whenText(k) })}</p>`;
     const v = veil(`<div class="panel sheet" style="--c:${c.accent};--c2:${c.accent2}">
       <div class="eyebrow"><i></i>${c.name} · ${tr.name} · step ${st.n} of ${tr.steps.length}</div>
-      <div class="stestbig">${st.test}</div>${how}${againLine}
+      <div class="stestbig">${st.test}</div>${how}${twist}${againLine}
       <div class="row"><button class="btn ${(!d || rusty) ? 'btn-gold' : 'btn-ghost'}" id="sdone">${
         d ? ((K.again || 'Done it again') + (rusty ? ' · +1' : '')) : 'Done'}</button></div>
     </div>`, 'light');

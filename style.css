@@ -347,6 +347,10 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .sheet .stestbig{font-family:var(--display);font-weight:500;font-size:clamp(19px,5.4vw,23px);line-height:1.3;color:var(--ink);margin:4px 0 12px}
 .sheet .how{margin:0 0 14px;padding-left:18px;font-size:14px;line-height:1.5;color:var(--ink-soft)}
 .sheet .how li+li{margin-top:4px}
+/* the other-hand twist: one small gold line under a rung */
+.twist{font-size:13.5px;line-height:1.45;color:var(--ink-soft);margin:0 0 14px;padding:7px 12px;border-radius:12px;background:linear-gradient(90deg,rgba(212,175,55,.14),transparent)}
+.twist b{color:var(--gold-deep,#8A6B14);font-weight:800;margin-right:4px}
+.acard .twist{margin:8px 0 0}
 .sheet .note{font-size:14px;line-height:1.5;color:var(--ink-soft);margin:0 0 14px;padding:9px 12px;background:var(--ivory);border-radius:12px;border-left:3px solid var(--c)}
 .sheet .row{display:flex;gap:10px}
 .sheet .row .btn-gold{flex:1}

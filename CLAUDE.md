@@ -174,3 +174,14 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   rungs first; if the words hold, next is a second small profile (the child's own leaf and flame
   on the parent's phone) and a `from` chip on the row and page. No track tiles drawn yet
   (category image fallback).
+- **v45 (2026-09-10, the other-hand twist):** his idea on reading the little ladders: the same rung
+  serves a child and a grown-up, and a grown-up who finds it easy does it with the hand or foot
+  they would never choose, so they feel what the child is feeling (and most adults cannot cut
+  along a line either). `twist` on a step in school.json (25 so far, on the little ladders: hand
+  for scissors/crayons/kitchen, foot/eyes/backwards for hopping, a new song, a stranger, no ums);
+  label `school.track.twist` ("Already easy?"); drawn as `.twist` under the note on the ladder
+  page's next-step card and in the step sheet. Adults keep seeing the little ladders in the rooms
+  on purpose (everybody starts at one); the twist is what keeps them honest. Still parked: the
+  child profile (a door at home that gathers the from-four ladders, own leaf and flame), and
+  the other direction, adult rungs a child cannot do yet (a phone call at ~six), which the
+  profile would hide by `from`.

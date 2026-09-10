@@ -744,7 +744,8 @@
        "how": null,
        "note": null,
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "The foot you would never choose."
       },
       {
        "n": 3,
@@ -753,7 +754,8 @@
        "how": null,
        "note": "A skipping rope on the floor, a crack in the path, a line of tape. Any line.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Eyes shut."
       },
       {
        "n": 4,
@@ -762,7 +764,8 @@
        "how": null,
        "note": "A low wall counts if a grown-up is holding your hand.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Backwards."
       },
       {
        "n": 5,
@@ -780,7 +783,8 @@
        "how": null,
        "note": null,
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Start on the foot you would never choose."
       }
      ]
     }
@@ -4863,7 +4867,8 @@
        "how": null,
        "note": null,
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "twist": "Somebody you have never spoken to."
       },
       {
        "n": 3,
@@ -4899,7 +4904,8 @@
        "how": null,
        "note": null,
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "twist": "In under a minute, without one um."
       }
      ]
     }
@@ -5581,7 +5587,8 @@
        "how": null,
        "note": "Thumb in the small hole, fingers in the big one. Child scissors, and a grown-up beside you.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 2,
@@ -5590,7 +5597,8 @@
        "how": null,
        "note": null,
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 3,
@@ -5599,7 +5607,8 @@
        "how": null,
        "note": "Little cuts, and turn the paper, not the scissors.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand, same line."
       },
       {
        "n": 4,
@@ -5608,7 +5617,8 @@
        "how": null,
        "note": null,
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand, same curve."
       },
       {
        "n": 5,
@@ -5617,7 +5627,8 @@
        "how": null,
        "note": null,
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 6,
@@ -5626,7 +5637,8 @@
        "how": null,
        "note": null,
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Every cut with the other hand."
       }
      ]
     },
@@ -5645,7 +5657,8 @@
        "how": null,
        "note": "Slow near the edges, fast in the middle.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 2,
@@ -5654,7 +5667,8 @@
        "how": null,
        "note": null,
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 3,
@@ -5663,7 +5677,8 @@
        "how": null,
        "note": null,
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 4,
@@ -5672,7 +5687,8 @@
        "how": null,
        "note": null,
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 5,
@@ -5681,7 +5697,8 @@
        "how": null,
        "note": null,
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 6,
@@ -5690,7 +5707,8 @@
        "how": null,
        "note": null,
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "twist": "Other hand."
       }
      ]
     }
@@ -6320,7 +6338,8 @@
        "how": null,
        "note": null,
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "A song you do not know yet."
       },
       {
        "n": 3,
@@ -6329,7 +6348,8 @@
        "how": null,
        "note": "The beat is the steady part, like footsteps. Not the words.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Clap the beat with the other hand on your knee."
       },
       {
        "n": 4,
@@ -7244,7 +7264,8 @@
        "how": null,
        "note": null,
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 3,
@@ -7253,7 +7274,8 @@
        "how": null,
        "note": null,
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 4,
@@ -7262,7 +7284,8 @@
        "how": null,
        "note": null,
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 5,
@@ -7271,7 +7294,8 @@
        "how": null,
        "note": "Tap it on the edge once, thumbs in the crack, pull it apart over the bowl. Bits of shell can be fished out. Everybody's first one has shell in it.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 6,
@@ -7280,7 +7304,8 @@
        "how": null,
        "note": null,
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Every part of it with the other hand."
       }
      ]
     }
