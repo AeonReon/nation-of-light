@@ -614,9 +614,9 @@
   const doneAt = k => { const v = S.school.done[k], ms = v ? Date.parse(v) : NaN; return isNaN(ms) ? null : ms; };
   const isFaded = k => { const t = doneAt(k); return t !== null && (Date.now() - t) / 864e5 >= FADE_DAYS; };
   const sharpOf = tr => { const done = tr.steps.filter(st => sdone(skey(tr, st)));
-    const fresh = done.filter(st => !isFaded(skey(tr, st))).length;
-    return { done: done.length, fresh, faded: done.length - fresh,
-      pct: done.length ? Math.round(fresh / done.length * 100) : 100 }; };
+    const keen = done.filter(st => !isFaded(skey(tr, st))).length;   // not `fresh` — that is a global
+    return { done: done.length, fresh: keen, faded: done.length - keen,
+      pct: done.length ? Math.round(keen / done.length * 100) : 100 }; };
   const whenText = k => { const t = doneAt(k); return t === null ? ''
     : new Date(t).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }); };
   function rankOf(p) { const R = C.school.ranks; let r = R[0], nx = null; for (let i = 0; i < R.length; i++) { if (p >= R[i][0]) { r = R[i]; nx = R[i + 1] || null; } } return { name: r[1], at: r[0], next: nx }; }
@@ -655,7 +655,7 @@
   function enterSchool() {
     $('stage').classList.add('school'); $('deck').hidden = true; $('school').hidden = false; $('hud').hidden = false;
     $('shead').appendChild($('hud')); paintSchoolCount();
-    if (!$('daybar')) { $('countpill').hidden = true; $('hud').insertAdjacentHTML('afterbegin', `<div id="daybar" class="daywrap">${dayBar()}</div><button class="facebtn ${S.popins === false ? 'off' : ''}" id="facebtn" aria-label="${C.help ? C.help.popins : 'Pop-ups'}"><img src="images/mentors/marcus.jpg" alt=""><i></i></button>`);
+    if (!$('rankbar')) { $('countpill').hidden = true; $('hud').insertAdjacentHTML('afterbegin', `<div id="rankbar" class="daywrap">${rankBar()}</div><button class="facebtn ${S.popins === false ? 'off' : ''}" id="facebtn" aria-label="${C.help ? C.help.popins : 'Pop-ups'}"><img src="images/mentors/marcus.jpg" alt=""><i></i></button>`);
       $('facebtn').addEventListener('click', () => { S.popins = S.popins === false; save(); sfx('tap'); $('facebtn').classList.toggle('off', S.popins === false); if (S.popins === false) { hush(); popOut('marcus', 0); popOut('aurelia', 0); } }); }
     if (!$('homebtn').dataset.sun) { $('homebtn').dataset.sun = '1'; $('homebtn').querySelector('svg').outerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9h18M4 9v10M9 9v10M15 9v10M20 9v10M2 19h20M12 3l9 6H3z"/></svg>'; }
     plates(false); MODE = 'school'; CUR = null; $('mfig').classList.remove('walk-in');
@@ -663,7 +663,7 @@
     const again = S.school.arrived === d; S.school.arrived = d; S.school.visits = (S.school.visits || 0) + 1; save(); arrival(fresh0, again);
   }
   const paintSearchBtn = () => { const b = $('searchbtn'); if (b) b.classList.toggle('on', SEARCH !== null); };
-  function paintSchoolCount() { const p = points(), r = rankOf(p); $('countn').textContent = p; const of = $('countn').nextElementSibling; of.hidden = false; of.textContent = r.name; paintDay(); }
+  function paintSchoolCount() { const p = points(), r = rankOf(p); $('countn').textContent = p; const of = $('countn').nextElementSibling; of.hidden = false; of.textContent = r.name; paintRank(); paintDay(); }
   /* ---- the arrival: the portico, the two of them, where you stand, three for today ---- */
   let HOMEN = 0;
   function goHome() { if ($('stage').classList.contains('arrive')) return; hush(); clearTimeout(ROOMT); HOMEN++; CAT = null; TRK = null; SEARCH = null; paintSearchBtn(); arrival(false, true, true); }
@@ -671,6 +671,32 @@
   function dayCount() { const t = today(); const q = Object.values(S.school.done).filter(v => typeof v === 'string' && v.startsWith(t)).length; const pr = Object.values(S.school.practice || {}).filter(p => p.days && p.days[t]).length; return q + pr; }
   function dayBar() { const G = C.school.goal || { n: 3 }, n = dayCount(), pct = Math.min(100, Math.round(n / G.n * 100)), over = G.overAt && n >= G.overAt; return `<div class="daybar ${n >= G.n ? 'full' : ''} ${over ? 'over' : ''}" title="${G.lede || ''}"><i style="width:${pct}%"></i><span>${over ? (G.over + ' · ' + n) : n >= G.n ? G.done : (n + ' of ' + G.n + ' ' + (G.label || 'today'))}</span></div>`; }
   function paintDay() { const b = $('daybar'); if (b) b.outerHTML = `<div id="daybar" class="daywrap">${dayBar()}</div>`; }
+  /* ---- days in a row ----
+     Turning up every day is its own thing and it gets its own trophies, but it
+     is NOT allowed to gate the bar. Earned on your LONGEST run ever, so a
+     missed day never takes one back — the old rule holds: it dims, it never
+     resets, it never scolds. */
+  const dayNum = k => Math.round(Date.parse(k + 'T12:00:00') / 864e5);
+  function runInfo() {
+    const days = [...daysLit()].map(dayNum).filter(n => !isNaN(n)).sort((a, b) => a - b);
+    let best = 0, run = 0, prev = null;
+    days.forEach(d => { run = (prev !== null && d === prev + 1) ? run + 1 : 1; prev = d; if (run > best) best = run; });
+    const t = dayNum(today());
+    const cur = days.length && (prev === t || prev === t - 1) ? run : 0;
+    return { cur, best, total: days.length };
+  }
+  /* The bar at the top is the RANK bar, and it moves on every single thing you
+     do. His argument, and it is the right one: "when I can just keep going with
+     activity and see the bar racing up, it's very fun... if I have to do it by
+     day it slows down the progress — it's like somebody paid by the hour versus
+     a business owner who can go full speed." Nothing here caps at a day. */
+  function rankBar() {
+    const p = points(), r = rankOf(p);
+    const pct = r.next ? Math.max(2, Math.round((p - r.at) / (r.next[0] - r.at) * 100)) : 100;
+    return `<div class="daybar rankbar ${r.next ? '' : 'full'}"><i style="width:${pct}%"></i>
+      <span><b>${p}</b> · ${r.name}${r.next ? ' · ' + (r.next[0] - p) + ' to ' + r.next[1] : ''}</span></div>`;
+  }
+  function paintRank() { const b = $('rankbar'); if (b) b.outerHTML = `<div id="rankbar" class="daywrap">${rankBar()}</div>`; }
   function checkDay() {
     const G = C.school.goal || { n: 3 }, t = today(); if (dayCount() < G.n || S.school.celebrated === t) { paintDay(); return; }
     S.school.celebrated = t; save(); paintDay();
@@ -694,10 +720,18 @@
   }
   function standLine() { const L = C.arrival.stand.lines || []; return L.length ? L[(daySeed() + (S.school.visits || 0) + HOMEN) % L.length] : ''; }
   function standCard() {
-    const p = points(), r = rankOf(p), lit = daysLit().size, A = C.arrival.stand;
-    const pct = r.next ? Math.round((p - r.at) / (r.next[0] - r.at) * 100) : 100;
-    return `<div class="stand"><div><b>${lit}</b><small>${A.days}</small></div><div><b>${p}</b><small>${A.steps}</small></div><div><b>${r.name}</b><small>${r.next ? (r.next[0] - p) + ' to ' + r.next[1] : A.rank}</small></div></div>
-      <div class="lvl"><i style="width:${pct}%"></i></div>`;
+    const p = points(), r = rankOf(p), A = C.arrival.stand, run = runInfo();
+    const pct = r.next ? Math.max(2, Math.round((p - r.at) / (r.next[0] - r.at) * 100)) : 100;
+    /* Things done comes FIRST and the bar is labelled with what moves it,
+       because the old order put DAYS on the left and the bar underneath read
+       as though time was what filled it. Nothing on this card is gated by a
+       day: do twenty things this afternoon and it moves twenty times. */
+    return `<div class="stand"><div><b>${p}</b><small>${A.steps}</small></div>
+      <div><b>${r.name}</b><small>${r.next ? (r.next[0] - p) + ' to ' + r.next[1] : A.rank}</small></div>
+      <div><b>${run.cur}</b><small>${A.run || 'days in a row'}</small></div></div>
+      <div class="lvl"><i style="width:${pct}%"></i></div>
+      <p class="lvlcap">${r.next ? fmt1(A.lvlcap || 'Every single thing you do moves this. {n} more to {name}.',
+        { n: r.next[0] - p, name: r.next[1] }) : (A.lvlcapTop || 'The top of the list, and the school keeps growing.')}</p>`;
   }
   const SHARE_IC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 001 1h14a1 1 0 001-1v-7M12 3v13M7 8l5-5 5 5"/></svg>';
   let VISREAD = false;
@@ -838,6 +872,16 @@
     const AW = C.school.awards, K = AW.show || {}, out = [], p = points();
     const fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
     C.school.ranks.forEach((r, i) => { const need = Math.max(1, r[0]), earned = p >= need; out.push({ id: 'rank.' + r[1].toLowerCase(), kind: 'flame', level: i, tier: 'rank', name: r[1], short: r[1], earned, n: p, need, left: Math.max(0, need - p), line: ((C.school.rankLines || {})[r[1]] || '') + ' ' + (earned ? fmt(K.rankHave, { n: need }) : fmt(K.rankAt, { n: need })), accent: '#E0812A' }); });
+    /* consistency, on its own shelf and its own metaphor — the flame is taken
+       by rank, so turning up every day builds something in stone instead. */
+    const R = C.school.runs, ri = runInfo();
+    if (R && R.levels) R.levels.forEach(([need, name, why], i) => {
+      out.push({ id: 'run.' + need, kind: 'stone', level: i, tier: 'run', name,
+        short: name.replace(/^The /, ''), earned: ri.best >= need, n: ri.best, need,
+        left: Math.max(0, need - ri.best), accent: '#8E7A50',
+        line: why + ' ' + (ri.best >= need ? fmt(R.have, { n: ri.best, s: ri.best === 1 ? '' : 's' })
+                                           : fmt(R.need, { n: need, s: need === 1 ? '' : 's' })) });
+    });
     (AW.special || []).forEach(sp => { if (sp.id === 'twentyfive') { const n = S.done.length, N = C.moves.length; out.push({ id: sp.id, kind: 'wreath', tier: 'special', name: sp.name, short: 'The 25', earned: n >= N, n, need: N, left: Math.max(0, N - n), line: K.twentyfive || sp.line, accent: '#C9A227' }); } });
     SCH.categories.forEach(c => { const n = c.tracks.reduce((s, tr) => s + trackDone(tr), 0), N = c.tracks.reduce((s, tr) => s + tr.steps.length, 0);
       AW.tiers.forEach(([id, tname, at]) => { const need = at === null ? N : at, earned = n >= need; out.push({ id: c.id + '.' + id, kind: 'medal', metal: id, tier: id, room: c.name, name: c.name + ' ' + tname.toLowerCase(), short: c.name, earned, n, need, left: Math.max(0, need - n), line: earned ? fmt(K.room, { n, N, room: c.name }) : fmt(K.roomNeed, { n, need, room: c.name }), accent: c.accent, accent2: c.accent2 || c.accent }); }); });
@@ -855,6 +899,24 @@
       let leaves = ''; for (let i = 0; i < 15; i++) { const th = (300 + i * 20) * Math.PI / 180, x = 32 + 22 * Math.cos(th), y = 44 + 22 * Math.sin(th); leaves += `<ellipse rx="3.4" ry="7.6" transform="translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${(300 + i * 20 + 115).toFixed(0)})" fill="url(#tg-gold)" stroke="#8F6F12" stroke-width=".5"/>`; }
       return `<svg class="tsvg" viewBox="0 0 64 80">${grad('tg-gold', METALS.gold[0], METALS.gold[1])}${leaves}<path d="M22 66l-4 12h8l2-8zM42 66l4 12h-8l-2-8z" fill="#93313D"/><text x="32" y="50" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="600" font-size="17" fill="#8F6F12">25</text></svg>`;
     }
+    if (a.kind === 'stone') {
+      /* An arch of seven voussoirs on two piers, filling one stone per level.
+         The reason it is an arch and not another flame: an arch is nothing at
+         all until the last stone is in, which is exactly what a run of days is. */
+      const N = 7, on = Math.min(N, a.level + 1);
+      let arch = '';
+      for (let i = 0; i < N; i++) {
+        const th = 180 - (i + 0.5) * (180 / N), rad = th * Math.PI / 180, r = 21;
+        const x = 32 + r * Math.cos(rad), y = 46 - r * Math.sin(rad), lit = i < on;
+        arch += `<rect x="-4.6" y="-5.4" width="9.2" height="10.8" rx="1.1"
+          transform="translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${(90 - th).toFixed(0)})"
+          fill="${lit ? 'url(#tg-stone)' : '#EAE3D4'}" stroke="${lit ? '#8E7A50' : '#D8D0BE'}" stroke-width=".7"/>`;
+      }
+      return `<svg class="tsvg" viewBox="0 0 64 80">${grad('tg-stone', '#F4E9CE', '#A8873C')}
+        <rect x="7" y="45" width="12" height="28" rx="1.4" fill="url(#tg-stone)" stroke="#8E7A50" stroke-width=".7"/>
+        <rect x="45" y="45" width="12" height="28" rx="1.4" fill="url(#tg-stone)" stroke="#8E7A50" stroke-width=".7"/>
+        ${arch}<rect x="4" y="73" width="56" height="5" rx="1.6" fill="#D6CBB4"/></svg>`;
+    }
     const m = METALS[a.metal] || METALS.gold;
     return `<svg class="tsvg" viewBox="0 0 64 80">${grad('tg-' + a.metal, m[0], m[1])}<path d="M18 0h13l4 32-11 6z" fill="${a.accent}"/><path d="M46 0H33l-4 32 11 6z" fill="${a.accent}" opacity=".7"/><circle cx="32" cy="55" r="23" fill="url(#tg-${a.metal})" stroke="${m[1]}" stroke-width="1"/><circle cx="32" cy="55" r="17.5" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="1.6"/><path d="M32 43.5l3.5 7.2 7.9 1-5.8 5.5 1.5 7.9L32 61.3l-7.1 3.8 1.5-7.9-5.8-5.5 7.9-1z" fill="rgba(255,255,255,.9)"/></svg>`;
   }
@@ -863,7 +925,8 @@
     const items = got.concat(next), AW = C.school.awards, K = AW.show || {};
     const fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
     return `<div class="acard shelfcard"><div class="shtop"><span class="eyebrow">${AW.title}</span><small>${got.length} earned</small></div>${compact ? '' : `<p class="lede">${AW.lede}</p>`}
-      <div class="shelf"><div class="shrow">${items.map(a => `<button class="tro ${a.earned ? 'on' : 'off'}" data-tro="${a.id}">${trophySVG(a)}<span>${a.short}</span><small>${a.earned ? (a.kind === 'medal' ? a.tier : K.earned || 'Earned') : fmt(K.more, { n: a.left, s: a.left === 1 ? '' : 's' })}</small></button>`).join('')}</div><i class="plank"></i></div></div>`;
+      <div class="shelf"><div class="shrow">${items.map(a => `<button class="tro ${a.earned ? 'on' : 'off'}" data-tro="${a.id}">${trophySVG(a)}<span>${a.short}</span><small>${a.earned ? (a.kind === 'medal' ? a.tier : (a.kind === 'stone' ? a.need + ' days' : (K.earned || 'Earned')))
+        : (a.kind === 'stone' ? a.left + ' more day' + (a.left === 1 ? '' : 's') : fmt(K.more, { n: a.left, s: a.left === 1 ? '' : 's' }))}</small></button>`).join('')}</div><i class="plank"></i></div></div>`;
   }
   function wireShelf(root) { root.querySelectorAll('[data-tro]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const a = awards().find(x => x.id === b.dataset.tro); if (a) trophyShow(a); })); }
   /* the show: the trophy large, gold falling, the stand, and the two of them with a word each */
@@ -1305,12 +1368,15 @@
        finished with. Nothing here is finished with — you can always do it
        again, and once it has gone rusty doing it again is worth a point, the
        same as getting it the first time. */
-    const line = !d ? '' : `<p class="againline ${rusty ? 'rusty' : ''}">${rusty
+    /* NOT `line` — that is the app's global lookup for a spoken line, and
+       shadowing it here threw "line is not a function" the moment the Done
+       handler reached for one, which left the sheet open and the list stale. */
+    const againLine = !d ? '' : `<p class="againline ${rusty ? 'rusty' : ''}">${rusty
       ? fmt1(K.doneLong || 'Done {d} — over six months ago. Can you still?', { d: whenText(k) })
       : fmt1(K.doneOn || 'Done {d}.', { d: whenText(k) })}</p>`;
     const v = veil(`<div class="panel sheet" style="--c:${c.accent};--c2:${c.accent2}">
       <div class="eyebrow"><i></i>${c.name} · ${tr.name} · step ${st.n} of ${tr.steps.length}</div>
-      <div class="stestbig">${st.test}</div>${how}${line}
+      <div class="stestbig">${st.test}</div>${how}${againLine}
       <div class="row"><button class="btn ${(!d || rusty) ? 'btn-gold' : 'btn-ghost'}" id="sdone">${
         d ? ((K.again || 'Done it again') + (rusty ? ' · +1' : '')) : 'Done'}</button></div>
     </div>`, 'light');
@@ -1321,7 +1387,7 @@
       if (d && !rusty) {
         S.school.done[k] = new Date().toISOString();
         const t0 = today(); S.days[t0] = (S.days[t0] || 0) + 1; save();
-        sfx('done'); if (!inSceneNow()) {} else sparks();
+        sfx('done'); if (inSceneNow()) sparks();
         closeVeil(() => { rerender(); toast(K.againFresh || 'Marked again for today. Still yours.'); });
         return;
       }

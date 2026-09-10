@@ -1039,3 +1039,8 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 .tk-steps .step.faded span em{color:#A8801C}
 .againline{margin:8px 0 2px;font-size:13.5px;line-height:1.45;color:var(--ink-soft)}
 .againline.rusty{color:var(--gold-deep);font-weight:600}
+
+/* ---- the bar races on activity, never on the clock (v41) ---- */
+.rankbar i{background:linear-gradient(90deg,var(--gold-lt),var(--gold))}
+.rankbar span b{font-variant-numeric:tabular-nums}
+.lvlcap{margin:5px 2px 0;font-size:12px;line-height:1.45;color:var(--ink-faint);text-align:center}

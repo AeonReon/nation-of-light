@@ -1,5 +1,5 @@
 {
- "version": 40,
+ "version": 41,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -1869,6 +1869,55 @@
    "ladders": "Ladders",
    "steps": "Single steps",
    "more": "Showing the first {n} of {N}. Add another word to narrow it."
+  },
+  "runs": {
+   "title": "Days in a row",
+   "lede": "Earned on your longest run ever. Once you have one it is yours; a missed day never takes it back.",
+   "note": "Turning up is its own reward and it has its own shelf. It never holds the bar back — that moves on what you do, not on what day it is.",
+   "have": "Your longest run so far is {n} day{s}.",
+   "need": "{n} day{s} in a row.",
+   "levels": [
+    [
+     3,
+     "Footing",
+     "Three days running. That is where a thing stops being a whim and starts being a habit."
+    ],
+    [
+     7,
+     "Cornerstone",
+     "A week without missing one. Everything after this is set against it."
+    ],
+    [
+     14,
+     "The Column",
+     "A fortnight. Drum on drum on drum, and it holds a roof up."
+    ],
+    [
+     30,
+     "The Arch",
+     "A month. An arch holds nothing at all until the last stone goes in — and then it holds for ever."
+    ],
+    [
+     60,
+     "The Bridge",
+     "Two months. It has stopped being about you: it is something other people can cross on now."
+    ],
+    [
+     100,
+     "The Aqueduct",
+     "A hundred days. Theirs carried water into cities for five hundred years."
+    ],
+    [
+     200,
+     "The Road",
+     "Two hundred days. Roman roads are still being walked on this morning."
+    ],
+    [
+     365,
+     "The Temple",
+     "A year. Every day of it. Built once, and standing two thousand years later."
+    ]
+   ]
   }
  },
  "arrival": {
@@ -1917,7 +1966,10 @@
    ],
    "next": "Next: do one of the three below.",
    "nextLong": "Next: ten minutes on a long skill.",
-   "done": "That is today. Anything more is a gift."
+   "done": "That is today. Anything more is a gift.",
+   "run": "days in a row",
+   "lvlcap": "Every single thing you do moves this. {n} more to {name}.",
+   "lvlcapTop": "The top of the list — and the school keeps growing, so there is always more."
   },
   "post": null,
   "again": [
