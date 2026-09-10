@@ -846,3 +846,72 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 .help .toggle{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;align-items:center;margin-top:12px;padding:10px 12px;border-radius:12px;background:var(--ivory);font-size:14px;font-weight:600;color:var(--ink);cursor:pointer}
 .help .toggle input{width:20px;height:20px;accent-color:var(--gold-deep);margin:0;grid-row:1/3}
 .help .toggle small{font-size:12px;font-weight:500;color:var(--ink-faint);line-height:1.35}
+
+/* ================ one ladder, its own page (v35) ================
+   The ladder used to be a veil with a column of little buttons. Everything
+   here exists to make a long skill read as the large thing it is: the picture,
+   the ring, the medals, the days you turned up. Nothing here is a streak and
+   nothing here can be lost. Class prefix tk- so nothing collides with the
+   layout classes (the v32 lesson). */
+.tk{display:flex;flex-direction:column;gap:11px}
+.tk-hero{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);--g1:var(--c2);--g2:var(--c)}
+.tk-hero::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.6px;
+  background:linear-gradient(135deg,var(--g1),var(--g2));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;z-index:3}
+.tk-hero img{width:100%;height:176px;object-fit:cover;display:block}
+.tk-hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(20,14,8,0) 26%,rgba(20,14,8,.3) 54%,rgba(20,14,8,.86) 100%);z-index:1}
+.tk-heroin{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:12px 14px 13px}
+.tk-heroin h2{font-size:24px;line-height:1.16;color:#fff;margin:6px 0 2px;text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.tk-heroin p{margin:0;font-size:13px;line-height:1.4;color:rgba(255,255,255,.9)}
+.tk-chip{display:inline-block;padding:4px 10px;border-radius:999px;background:var(--c);color:#fff;
+  font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;box-shadow:0 3px 12px rgba(0,0,0,.3)}
+.tk-crown{position:absolute;top:10px;right:10px;z-index:3;width:40px;height:40px;border-radius:50%;
+  background:linear-gradient(140deg,var(--gold-lt),var(--gold));box-shadow:0 6px 18px rgba(201,162,39,.55)}
+.tk-crown::after{content:"";position:absolute;inset:9px;border-radius:50%;border:2.4px solid rgba(255,255,255,.85)}
+
+.tk-card{gap:10px}
+.tk-top{display:flex;align-items:center;gap:13px}
+.tk-ring{width:96px;height:96px;flex:none}
+.tk-ring-n{font-family:var(--display);font-weight:600;font-size:25px;fill:var(--ink)}
+.tk-ring-s{font-size:11px;fill:var(--ink-faint);font-family:var(--sans);font-weight:600}
+.tk-topt{min-width:0}
+.tk-topt strong{display:block;font-family:var(--display);font-weight:600;font-size:20px;line-height:1.2}
+.tk-topt small{display:block;font-size:13.5px;color:var(--ink-soft);line-height:1.42;margin-top:3px}
+.tk-topt small b{color:var(--c)}
+.tk-topt em{display:block;font-style:normal;font-size:12px;color:var(--ink-faint);margin-top:5px}
+.tk-stats{display:flex;gap:6px}
+.tk-stats span{flex:1;min-width:0;background:var(--ivory-2);border-radius:12px;padding:8px 4px;text-align:center;
+  font-size:10.5px;color:var(--ink-faint);line-height:1.25}
+.tk-stats b{display:block;font-family:var(--display);font-weight:600;font-size:17px;color:var(--gold-deep);margin-bottom:1px}
+.tk-takel{margin:2px 0 0}
+
+.tk-cuprow{display:flex;gap:7px}
+.tk-cuprow .tro{flex:1;min-width:0}
+.tk-cups .lede{margin:2px 0 0;font-size:12.5px;color:var(--ink-faint)}
+.tk-next .stestbig{margin:2px 0 0}
+.tk-note{margin:2px 2px 0;font-size:12.5px;line-height:1.5;color:var(--ink-soft);
+  background:var(--gold-pale);border-radius:12px;padding:10px 12px}
+.tk-note b{color:var(--ink)}
+.tk-steps{display:flex;flex-direction:column;gap:7px;margin:2px 0 0}
+/* the step rows: the sheet's look, which was scoped to .sheet and so never
+   reached the page. Same shape, a little roomier because there is room here. */
+.tk-steps .step{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start;text-align:left;
+  font-size:14.5px;line-height:1.38;color:var(--ink);background:var(--card);border-radius:13px;
+  padding:11px 12px;box-shadow:inset 0 0 0 1px var(--line);transition:transform .18s var(--spring)}
+.tk-steps .step:active{transform:scale(.985)}
+.tk-steps .step b{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:12.5px;
+  font-weight:700;background:var(--ivory-2);color:var(--ink-soft);box-shadow:inset 0 0 0 1.3px var(--line)}
+.tk-steps .step.done{color:var(--ink-faint);background:var(--ivory)}
+.tk-steps .step.done b{background:var(--laurel);color:#fff;box-shadow:none}
+.tk-steps .step.act{box-shadow:inset 0 0 0 1.9px var(--c);background:var(--card)}
+.tk-steps .step.act b{background:var(--c);color:#fff;box-shadow:none}
+.tk-step span em{display:block;font-style:normal;font-size:11px;color:var(--gold-deep);font-weight:600;margin-top:3px}
+.tk-band{display:flex;align-items:baseline;gap:9px;margin:11px 2px 2px;font-family:var(--sans);
+  font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint)}
+.tk-band span{flex:none}
+.tk-band::after{content:"";flex:1;height:1px;background:var(--line)}
+.tk-band em{flex:none;font-style:normal;letter-spacing:0;font-size:11.5px;text-transform:none}
+.tk-band.full,.tk-band.full em{color:var(--c)}
+.tk-band.full::after{background:linear-gradient(90deg,var(--c2),transparent)}
+.tk-feeds{margin:6px 0 0;text-align:center;font-size:12px;color:var(--ink-faint)}

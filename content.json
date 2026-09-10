@@ -1,5 +1,5 @@
 {
- "version": 34,
+ "version": 35,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -1790,7 +1790,38 @@
     "t": "A little every day is how great things are built. This is one of the little every days."
    }
   ],
-  "nextMore": "Three more easy ones"
+  "nextMore": "Three more easy ones",
+  "track": {
+   "eyebrow": "The whole ladder",
+   "ringSub": "{n}/{N}",
+   "notStarted": "Not started yet",
+   "finished": "Finished",
+   "finishedLine": "Every step of this one, done. It is yours now.",
+   "toNext": "{n} more step{s} to <b>{name}</b>",
+   "started": "Started {d}",
+   "statSteps": "steps",
+   "statDays": "days practised",
+   "statPoints": "points",
+   "statCups": "trophies",
+   "cupsTitle": "The trophies on this ladder",
+   "cupsNone": "The first one is {n} step{s} away. Everybody starts at step one, whatever age they are.",
+   "cupsSome": "{n} of {N} earned. Nothing here expires and nothing here can be taken off you.",
+   "cupAt": "at step {n}",
+   "cupGot": "earned",
+   "nextTitle": "Your next step · {n} of {N}",
+   "doIt": "Do it",
+   "takeLede": "A ladder of {n} steps. Take it on and it lives on your home page, and every day you practise is counted.",
+   "takeBtn": "Take it on",
+   "tickNote": "<b>Already able to do some of these?</b> Tick them and carry on. Working through the early ones in one sitting is exactly how this is meant to be used, not a shortcut.",
+   "bands": [
+    "Spark",
+    "Flame",
+    "Lantern",
+    "Beacon",
+    "Lighthouse"
+   ],
+   "feeds": "{room} · a ladder of {n} steps"
+  }
  },
  "arrival": {
   "lines": [

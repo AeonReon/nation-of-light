@@ -756,9 +756,16 @@
     const tabs = $('stabs'); tabs.hidden = false; tabs.innerHTML = C.school.tabs.map(([k, l]) => `<button class="stab ${TAB === k ? 'on' : ''}" data-t="${k}">${l}</button>`).join('');
     tabs.querySelectorAll('.stab').forEach(b => b.addEventListener('click', () => { sfx('tap'); TAB = b.dataset.t; CAT = null; renderSchool(); }));
     const list = $('slist'); list.scrollTop = 0; paintSchoolCount();
-    const cat = SCH.categories.find(c => c.id === CAT);
-    $('stage').classList.toggle('room', !!cat);
-    if (cat) {
+    const trk = TRK ? trackById(TRK) : null;
+    const cat = trk ? null : SCH.categories.find(c => c.id === CAT);
+    $('stage').classList.toggle('room', !!cat || !!trk);
+    if (trk) {
+      dock('scene'); RIG.show(true); ARIG.show(true);
+      $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout');
+      tabs.hidden = true; $('sline').textContent = '';
+      trackPage(list, trk);
+      stageBack(closeTrack); list.scrollTop = 0;
+    } else if (cat) {
       dock('scene'); RIG.show(true); ARIG.show(true); $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout');
       tabs.hidden = true; $('sline').textContent = '';
       list.innerHTML = `<div class="roomhead" style="--c:${cat.accent};--c2:${cat.accent2}"><img src="images/cat/${cat.id}.jpg" alt=""><div><h2>${cat.name}</h2><p>${cat.line}</p></div></div>` + cat.tracks.map(trackRow).join('');
@@ -770,8 +777,10 @@
       else renderAll(list);
       list.querySelectorAll('[data-room]').forEach(el => el.addEventListener('click', () => { sfx('tap'); CAT = el.dataset.room; renderSchool(); const id = C.school.catLines[CAT]; if (id && !SAIDCAT.has(CAT)) { SAIDCAT.add(CAT); hush(); speakSchool([{ who: 'aurelia', id, t: SCH.categories.find(c => c.id === CAT).name }]); } }));
     }
-    list.querySelectorAll('[data-step]').forEach(el => el.addEventListener('click', () => { sfx('tap'); const r = findStep(el.dataset.step); if (r) stepSheet(r[0], r[1]); }));
-    list.querySelectorAll('[data-track]').forEach(el => el.addEventListener('click', () => { sfx('tap'); trackSheet(trackById(el.dataset.track)); }));
+    list.querySelectorAll('[data-step]').forEach(el => el.addEventListener('click', () => { sfx('tap'); const r = findStep(el.dataset.step); if (r) stepSheet(r[0], r[1], null, TRK ? 'track' : undefined); }));
+    list.querySelectorAll('[data-track]').forEach(el => el.addEventListener('click', () => { sfx('tap'); openTrack(trackById(el.dataset.track)); }));
+    list.querySelectorAll('[data-commit]').forEach(el => el.addEventListener('click', () => { sfx('tap'); commitCard(trackById(el.dataset.commit), TRK ? 'track' : 'long'); }));
+    wireLong(list);
   }
   let ROOMT = null, ROOMI = 0;
   const orn = () => '<div class="orn"><i></i><b></b><i></i></div>';
@@ -987,18 +996,135 @@
       return `<div class="ghead"><h3>${g.name}</h3><p>${g.line}</p></div><div class="tiles">` + cats.map(c => { const n = c.tracks.reduce((s, tr) => s + trackDone(tr), 0), N = c.tracks.reduce((s, tr) => s + tr.steps.length, 0);
         return `<button class="tile" data-room="${c.id}" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/cat/${c.id}.jpg" alt="" loading="lazy"><span class="tname">${c.name}</span><span class="tnum">${n ? n + ' of ' + N : c.tracks.length + ' tracks'}</span></button>`; }).join('') + '</div>'; }).join('');
   }
-  function trackRow(tr) { const c = catOf(tr), n = trackDone(tr), N = tr.steps.length; return `<button class="srow track pic" style="--c:${c.accent};--c2:${c.accent2}" data-track="${tr.id}"><img src="images/track/${tr.id}.jpg" alt="" loading="lazy" onerror="this.src='images/cat/${c.id}.jpg'"><span class="stxt"><span class="stest">${tr.name}</span><span class="sline2">${tr.line || ''}</span><span class="sprog"><i style="width:${Math.round(n / N * 100)}%"></i></span></span><span class="snum">${n} of ${N}</span></button>`; }
-  function trackSheet(tr) {
-    const c = catOf(tr); const next = nextStep(tr);
-    const v = veil(`<div class="panel sheet" style="--c:${c.accent};--c2:${c.accent2}">
-      <div class="eyebrow"><i></i>${c.name}</div><h2>${tr.name}</h2><p class="lede">${tr.line || ''}</p>
-      <div class="steps">${tr.steps.map(s => { const k = skey(tr, s), d = sdone(k), act = next && next.n === s.n; return `<button class="step ${d ? 'done' : ''} ${act ? 'act' : ''}" data-step="${k}"><b>${s.n}</b><span>${s.test}</span></button>`; }).join('')}</div>
-      ${!(S.school.projects || []).includes(tr.id) && next && MODE === 'school' ? `<button class="btn btn-gold" id="sheettake" style="width:100%">${C.school.long.page.take}</button>` : ''}
-      </div>`, 'light');
-    backBtn(v, () => closeVeil());
-    const tk = v.querySelector('#sheettake'); if (tk) tk.addEventListener('click', () => { sfx('tap'); closeVeil(() => commitCard(tr, 'sheet')); });
-    v.querySelectorAll('.step').forEach(el => el.addEventListener('click', () => { sfx('tap'); const r = findStep(el.dataset.step); closeVeil(() => stepSheet(r[0], r[1], tr)); }));
+  /* ---- one ladder, its own page (v35) ----
+     It used to be a veil: a name and a column of little step buttons. Honest
+     for six steps and a lie for twenty, because learning to juggle or a
+     language is one of the larger things a person does in a year and it was
+     being shown at the weight of a checklist. So the ladder gets a page — the
+     picture, the percentage, the medals, the days you turned up — and the
+     steps sit under all of it instead of being all of it. Everything reads off
+     steps.length, so a ladder can be six or twenty with no code change. */
+  let TRK = null, TRK_FROM = null;
+  const trackCopy = () => (C.school.track || {});
+  const fmt1 = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
+  /* Bronze a third of the way, silver two thirds, gold the lot — the same three
+     the rooms use, so a person meets one vocabulary and not two. These live on
+     the ladder's own page; they are not on the trophy shelf, because a hundred
+     and fifty ladders times three would bury the shelf that matters. */
+  function ladderAwards(tr) {
+    const N = tr.steps.length, n = trackDone(tr), c = catOf(tr), K = trackCopy();
+    const AW = C.school.awards, tiers = AW.tiers || [['bronze','Bronze',5],['silver','Silver',15],['gold','Gold',null]];
+    const at = [Math.max(1, Math.ceil(N / 3)), Math.max(2, Math.ceil(N * 2 / 3)), N];
+    const out = [];
+    tiers.forEach(([id, tname], i) => {
+      const need = at[i];
+      if (i && need <= at[i - 1]) return;             // a two-step ladder must not hand out the same medal twice
+      out.push({ id: 'lad.' + tr.id + '.' + id, kind: 'medal', metal: id, tier: id,
+        name: tr.name + ' ' + tname.toLowerCase(), short: tname, earned: n >= need, n, need,
+        left: Math.max(0, need - n), accent: c.accent, accent2: c.accent2 || c.accent,
+        line: n >= need ? fmt1(AW.show.room, { n, N, room: tr.name })
+                        : fmt1(AW.show.roomNeed, { n, need, room: tr.name }) });
+    });
+    return out;
   }
+  /* Long ladders get chapters. Twenty steps in one unbroken column reads as a
+     wall and you cannot see where you stand in it; the same twenty under five
+     headings reads as "most of the way through the third part". Short ladders
+     stay a plain list — a heading over two rows is noise. */
+  const CHAPTER_FROM = 10;
+  function stepBands(tr) {
+    const names = trackCopy().bands || ['Spark', 'Flame', 'Lantern', 'Beacon', 'Lighthouse'];
+    const N = tr.steps.length, out = []; let from = 1;
+    names.forEach((name, i) => {
+      const at = Math.max(from, Math.round(N * (i + 1) / names.length));
+      if (at > N || from > N) return;
+      out.push({ name, steps: tr.steps.filter(s => s.n >= from && s.n <= at) });
+      from = at + 1;
+    });
+    return out.filter(b => b.steps.length);
+  }
+  /* A ring, not a bar. A bar at 30% looks like a thing that failed to fill;
+     a ring at 30% looks like a thing that is under way. */
+  function pctRing(pct, accent, sub) {
+    const r = 42, L = 2 * Math.PI * r;
+    return `<svg class="tk-ring" viewBox="0 0 100 100" role="img" aria-label="${pct} per cent done">
+      <circle cx="50" cy="50" r="${r}" fill="none" stroke="var(--line)" stroke-width="9"/>
+      <circle cx="50" cy="50" r="${r}" fill="none" stroke="${accent}" stroke-width="9" stroke-linecap="round"
+        stroke-dasharray="${L.toFixed(1)}" stroke-dashoffset="${(L * (1 - pct / 100)).toFixed(1)}"
+        transform="rotate(-90 50 50)"/>
+      <text x="50" y="${sub ? 48 : 57}" text-anchor="middle" class="tk-ring-n">${pct}%</text>
+      ${sub ? `<text x="50" y="65" text-anchor="middle" class="tk-ring-s">${sub}</text>` : ''}
+    </svg>`;
+  }
+  const firstDone = tr => { let best = null; tr.steps.forEach(s => { const v = S.school.done[skey(tr, s)];
+    if (typeof v === 'string' && (best === null || v < best)) best = v; }); return best; };
+  function openTrack(tr, from) {
+    if (!tr) return;
+    TRK = tr.id; TRK_FROM = from || (CAT ? { cat: CAT } : { tab: TAB });
+    hush(); renderSchool(); $('slist').scrollTop = 0;
+  }
+  function closeTrack() {
+    const f = TRK_FROM || {}; TRK = null; TRK_FROM = null;
+    if (f.cat) CAT = f.cat; else { CAT = null; if (f.tab) TAB = f.tab; }
+    hush(); renderSchool();
+  }
+  function trackPage(list, tr) {
+    const c = catOf(tr), K = trackCopy(), N = tr.steps.length, n = trackDone(tr), st = nextStep(tr);
+    const pct = N ? Math.round(n / N * 100) : 0;
+    const pts = n, maxPts = N;                       // one point a step in this app
+    const taken = (S.school.projects || []).includes(tr.id);
+    const days = Object.keys((((S.school.practice || {})[tr.id]) || {}).days || {}).length;
+    const cups = ladderAwards(tr), got = cups.filter(a => a.earned), up = cups.find(a => !a.earned);
+    const since = firstDone(tr);
+    const long = N >= CHAPTER_FROM;
+    const s = k => k === 1 ? '' : 's';
+
+    let h = `<div class="tk" style="--c:${c.accent};--c2:${c.accent2}">`;
+    h += `<div class="tk-hero"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'">
+      ${n === N ? '<span class="tk-crown"></span>' : ''}
+      <div class="tk-heroin"><span class="tk-chip">${c.name}</span><h2>${tr.name}</h2><p>${tr.line || ''}</p></div></div>`;
+
+    h += `<div class="acard tk-card"><div class="tk-top">${pctRing(pct, c.accent, fmt1(K.ringSub, { n, N }))}
+      <div class="tk-topt"><strong>${n === N ? K.finished : (got.length ? got[got.length - 1].short : K.notStarted)}</strong>
+        <small>${n === N ? K.finishedLine : (up ? fmt1(K.toNext, { n: up.left, s: s(up.left), name: up.short }) : '')}</small>
+        ${since ? `<em>${fmt1(K.started, { d: new Date(since).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) })}</em>` : ''}</div></div>
+      <div class="tk-stats"><span><b>${n}/${N}</b>${K.statSteps}</span><span><b>${days}</b>${K.statDays}</span>
+        <span><b>${pts}/${maxPts}</b>${K.statPoints}</span><span><b>${got.length}/${cups.length}</b>${K.statCups}</span></div>
+      ${taken ? pracLine(tr) : (st ? `<p class="lede tk-takel">${fmt1(K.takeLede, { n: N })}</p>
+        <button class="btn btn-gold sm" data-commit="${tr.id}">${K.takeBtn}</button>` : '')}
+    </div>`;
+
+    h += `<div class="acard tk-cups"><span class="eyebrow">${K.cupsTitle}</span>
+      <div class="tk-cuprow">${cups.map(a => `<button class="tro ${a.earned ? 'on' : 'off'}" data-lad="${a.id}">
+        ${trophySVG(a)}<span>${a.short}</span><small>${a.earned ? K.cupGot : fmt1(K.cupAt, { n: a.need })}</small></button>`).join('')}</div>
+      <p class="lede">${got.length ? fmt1(K.cupsSome, { n: got.length, N: cups.length })
+        : fmt1(K.cupsNone, { n: cups[0].need, s: s(cups[0].need) })}</p></div>`;
+
+    if (st) h += `<div class="acard one tk-next"><span class="eyebrow">${fmt1(K.nextTitle, { n: st.n, N })}</span>
+      <div class="stestbig">${st.test}</div>
+      ${st.how ? `<p class="lede">${st.how[0]}</p>` : (st.note ? `<p class="lede">${st.note}</p>` : '')}
+      <div class="row"><button class="btn btn-gold" data-step="${skey(tr, st)}" style="flex:1">${K.doIt}</button></div></div>`;
+
+    h += `<p class="tk-note">${K.tickNote}</p>`;
+    const row = x => { const k = skey(tr, x), d = sdone(k), act = st && st.n === x.n;
+      const when = d && typeof S.school.done[k] === 'string' ? new Date(S.school.done[k]).toLocaleDateString('en-GB') : null;
+      return `<button class="step tk-step ${d ? 'done' : ''} ${act ? 'act' : ''}" data-step="${k}">
+        <b>${d ? '&#10003;' : x.n}</b><span>${x.test}${when ? `<em>${when}</em>` : ''}</span></button>`; };
+    h += `<div class="steps tk-steps">${long
+      ? stepBands(tr).map(b => { const dn = b.steps.filter(x => sdone(skey(tr, x))).length;
+          return `<h4 class="tk-band ${dn === b.steps.length ? 'full' : ''}"><span>${b.name}</span><em>${dn}/${b.steps.length}</em></h4>`
+            + b.steps.map(row).join(''); }).join('')
+      : tr.steps.map(row).join('')}</div>`;
+    h += `<p class="tk-feeds">${fmt1(K.feeds, { room: c.name, n: N })}</p></div>`;
+    list.innerHTML = h;
+    list.querySelectorAll('[data-lad]').forEach(b => b.addEventListener('click', () => { sfx('tap');
+      const a = ladderAwards(tr).find(x => x.id === b.dataset.lad); if (a) trophyShow(a); }));
+  }
+
+  function trackRow(tr) { const c = catOf(tr), n = trackDone(tr), N = tr.steps.length; return `<button class="srow track pic" style="--c:${c.accent};--c2:${c.accent2}" data-track="${tr.id}"><img src="images/track/${tr.id}.jpg" alt="" loading="lazy" onerror="this.src='images/cat/${c.id}.jpg'"><span class="stxt"><span class="stest">${tr.name}</span><span class="sline2">${tr.line || ''}</span><span class="sprog"><i style="width:${Math.round(n / N * 100)}%"></i></span></span><span class="snum">${n} of ${N}</span></button>`; }
+  /* The old veil. Kept as a name only, so any caller left anywhere lands on
+     the page instead of a dead end. */
+  const trackSheet = tr => openTrack(tr);
   function stepSheet(tr, st, from, where) {
     const c = catOf(tr), k = skey(tr, st), d = sdone(k);
     const how = st.how ? `<ul class="how">${st.how.map(h => `<li>${h}</li>`).join('')}</ul>` : (st.note ? `<p class="note">${st.note}</p>` : '');
@@ -1007,7 +1133,7 @@
       <div class="stestbig">${st.test}</div>${how}
       <div class="row"><button class="btn btn-gold" id="sdone" ${d ? 'disabled' : ''}>${d ? 'Done already' : 'Done'}</button></div>
     </div>`, 'light');
-    backBtn(v, () => closeVeil(from ? () => trackSheet(from) : null));
+    backBtn(v, () => closeVeil());
     v.querySelector('#sdone').addEventListener('click', () => {
       const before = rankOf(points()).name, awBefore = awards().filter(x => x.earned).length, hadIds = new Set(awards().filter(x => x.earned).map(x => x.id));
       S.school.done[k] = new Date().toISOString(); S.school.points++; const t = today(); S.days[t] = (S.days[t] || 0) + 1; save();
@@ -1028,7 +1154,7 @@
         const y = gotAward && line('c-award') ? 'c-award' : (where === 'arrival' ? C.arrival.after : (up ? 'c-rank' : C.school.affirm[(n - 1) % C.school.affirm.length]));
         if (line(y)) { if (!inScene) { popIn('marcus'); if (both) popIn('aurelia'); } setTimeout(() => { if (!ARIG.hidden) ARIG.smile(3); marcusSay(line(y), up ? 'cheer' : (n % 2 ? 'cheer' : 'nod'), () => { if (!inScene) { popOut('marcus', 1400); if (both) popOut('aurelia', 1400); } }); }, inScene ? 400 : 900); }
       }
-      closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); if (from) trackSheet(from); else setTimeout(() => offerLong(tr), 700); });
+      closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); if (where !== 'track') setTimeout(() => offerLong(tr), 700); });
     });
   }
   /* after a step on a ladder you have not taken on: the question, once per ladder, only while there is room */
@@ -1111,7 +1237,7 @@
     $('helpbtn').addEventListener('click', () => { sfx('tap'); if (MODE === 'school' && C.tour && !S.school.toured2) { S.school.toured2 = true; save(); if ($('stage').classList.contains('arrive')) leaveArrival(); tour(); } else help(); });
     cover();
     if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
-    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool, show: id => trophyShow(awards().find(a => a.id === id)), awards, quiet: quietProject, check: id => checkIn(trackById(id)), entry: entryWord, home: goHome, lyr: () => ({ on: LYRE.on, paused: LYR.paused, src: LYR.src.split('/').pop(), vol: +LYR.volume.toFixed(2) }), prac: id => logPractice(trackById(id)) };
+    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool, show: id => trophyShow(awards().find(a => a.id === id)), awards, quiet: quietProject, check: id => checkIn(trackById(id)), entry: entryWord, home: goHome, lyr: () => ({ on: LYRE.on, paused: LYR.paused, src: LYR.src.split('/').pop(), vol: +LYR.volume.toFixed(2) }), prac: id => logPractice(trackById(id)), track: id => openTrack(trackById(id)), tracks: () => allTracks().map(t => t.id) };
   }
   /* a phone held sideways: the stage turns back by ninety degrees and stays upright, which reads as "this app is this way up" */
   const rot = () => {
