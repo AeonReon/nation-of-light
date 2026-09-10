@@ -874,9 +874,7 @@
     list.querySelectorAll('[data-not]').forEach(b => b.addEventListener('click', () => { sfx('tap'); notThis(b.dataset.not); renderSchool(); if (line(C.arrival.another)) { hush(); popIn('marcus'); marcusSay(line(C.arrival.another), 'nod', () => popOut('marcus', 1200)); } }));
   }
   /* The long game: up to three, taken on deliberately */
-  const projects = () => { const on = (S.school.projects || []), dropped = new Set(S.school.dropped || []); const ex = on.map(trackById).filter(tr => tr && nextStep(tr));
-    const st = allTracks().filter(tr => !on.includes(tr.id) && !dropped.has(tr.id) && trackDone(tr) >= 1 && nextStep(tr)).sort((x, y) => (S.school.done[skey(y, y.steps[trackDone(y) - 1])] || '').localeCompare(S.school.done[skey(x, x.steps[trackDone(x) - 1])] || ''));
-    return ex.concat(st); };
+  const projects = () => (S.school.projects || []).map(trackById).filter(tr => tr && nextStep(tr)).slice(0, C.school.long.max || 3);
   function longSuggest() {
     const on = new Set(S.school.projects || []);
     const started = allTracks().filter(tr => trackDone(tr) >= 1 && nextStep(tr)).sort((x, y) => trackDone(y) - trackDone(x));
@@ -901,7 +899,7 @@
   function renderLong(list) {
     $('sline').textContent = C.school.longLine; const L = C.school.long; const mine = projects();
     const room = L.max - mine.length; const sug = room > 0 ? longSuggest() : [];
-    list.innerHTML = carryCard(4) + (mine.length ? `<div class="acard"><span class="eyebrow">What you are working on</span><p class="lede">${L.intro}</p>${mine.map(projectRow).join('')}</div>` : '') +
+    list.innerHTML = (mine.length ? `<div class="acard"><span class="eyebrow">What you are working on</span><p class="lede">${L.intro}</p>${mine.map(projectRow).join('')}</div>` : '') +
       (room > 0 ? `<div class="acard"><span class="eyebrow">${mine.length ? 'Take on another one' : 'Pick something that takes a month'}</span><p class="lede">${L.pickLine}</p>` +
         sug.map(tr => { const c = catOf(tr), st = nextStep(tr), last = tr.steps[tr.steps.length - 1]; return `<button class="pickp" style="--c:${c.accent};--c2:${c.accent2}" data-take="${tr.id}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${c.name} · ${tr.steps.length} steps</small><small class="ladder">From <em>${st.test}</em> to <em>${last.test}</em></small></span><b class="take">Take it on</b></button>`; }).join('') +
         `<button class="what dark" id="rollp">Show me three others</button></div>` : '');
@@ -929,9 +927,9 @@
   }
   function longCard() {
     const K = K_LG(), mine = projects();
-    return `<div class="acard longcard"><span class="eyebrow">${K.roomTitle}</span><p class="lede">${K.roomLede}</p>` +
-      (mine.length ? mine.map(tr => { const c = catOf(tr), st = nextStep(tr), n = trackDone(tr); return `<div class="lgrow" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${st.test}</small></span>${pracLine(tr)}</div>`; }).join('')
-        : `<p class="lede">${K.none}</p><button class="btn btn-ghost sm" id="pickLong">${K.pick}</button>`) + `</div>`;
+    return `<div class="acard longcard"><span class="eyebrow">${K.roomTitle}</span><p class="lede">${mine.length ? K.roomLede : K.none}</p>` +
+      (mine.length ? mine.map(tr => { const c = catOf(tr), st = nextStep(tr), n = trackDone(tr); return `<div class="lgrow" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${st.test}</small></span>${pracLine(tr)}</div>`; }).join('') + `<p class="rule">${K.capLine || ''}</p>`
+        : `<button class="btn btn-ghost sm" id="pickLong">${K.pick}</button><p class="rule">${K.capLine || ''}</p>`) + `</div>`;
   }
   function wireLong(root) {
     root.querySelectorAll('[data-prac]').forEach(b => b.addEventListener('click', () => { sfx('tap'); logPractice(trackById(b.dataset.prac)); }));
@@ -1011,8 +1009,22 @@
         const y = gotAward && line('c-award') ? 'c-award' : (where === 'arrival' ? C.arrival.after : (up ? 'c-rank' : C.school.affirm[(n - 1) % C.school.affirm.length]));
         if (line(y)) { if (!inScene) { popIn('marcus'); if (both) popIn('aurelia'); } setTimeout(() => { if (!ARIG.hidden) ARIG.smile(3); marcusSay(line(y), up ? 'cheer' : (n % 2 ? 'cheer' : 'nod'), () => { if (!inScene) { popOut('marcus', 1400); if (both) popOut('aurelia', 1400); } }); }, inScene ? 400 : 900); }
       }
-      closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); if (from) trackSheet(from); });
+      closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); if (from) trackSheet(from); else setTimeout(() => offerLong(tr), 700); });
     });
+  }
+  /* after a step on a ladder: is this one you want to take on? Asked once per ladder, only while there is room, never for a ladder already yours. */
+  function offerLong(tr) {
+    const O = C.school.long.offer; if (!O || SHOW) return;
+    S.school.noAsk = S.school.noAsk || [];
+    if ((S.school.projects || []).includes(tr.id) || S.school.noAsk.includes(tr.id) || !nextStep(tr) || tr.steps.length < 4 || projects().length >= (C.school.long.max || 3)) return;
+    const c = catOf(tr), fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
+    const v = veil(`<div class="panel sheet offercard" style="--c:${c.accent};--c2:${c.accent2}"><div class="eyebrow"><i></i>${c.name}</div><h2>${fmt(O.title, { name: tr.name })}</h2><p class="lede">${fmt(O.lede, { n: tr.steps.length, have: projects().length, max: C.school.long.max || 3 })}</p>
+      <div class="row"><button class="btn btn-ghost" id="offno">${O.no}</button><button class="btn btn-gold" id="offyes" style="flex:1.3">${O.yes}</button></div></div>`, 'light');
+    const no = () => { S.school.noAsk.push(tr.id); save(); closeVeil(); };
+    backBtn(v, no);
+    v.querySelector('#offno').addEventListener('click', () => { sfx('tap'); no(); });
+    v.querySelector('#offyes').addEventListener('click', () => { sfx('tap'); S.school.projects = (S.school.projects || []).concat(tr.id); S.school.dropped = (S.school.dropped || []).filter(id => id !== tr.id); S.school.taken = S.school.taken || {}; S.school.taken[tr.id] = today(); save();
+      closeVeil(() => { rerender(); hush(); if (line('c-sy2')) speakSchool([{ who: 'marcus', id: 'c-sy2' }]); }); });
   }
   /* ---- share: the link only, and a QR for the room ---- */
   function sharePanel(back) {

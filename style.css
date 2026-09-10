@@ -802,3 +802,7 @@ html[data-rot] .scene{max-height:54vw}
 html[data-rot] .stage.school.arrive .scene{max-height:40vw}
 html[data-rot] .stage.school.room .scene{max-height:30vw}
 html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.school.room .veil.trophyveil{padding-top:54px}
+/* v31: the choosing card; the rule under the long skills */
+.offercard{--g1:var(--c2);--g2:var(--c)}
+.offercard h2{font-size:23px;line-height:1.2}
+.longcard .rule{margin:4px 0 0;font-size:12px;color:var(--ink-faint);text-align:center;font-weight:600}

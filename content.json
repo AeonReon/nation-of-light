@@ -1,5 +1,5 @@
 {
- "version": 30,
+ "version": 31,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -1426,8 +1426,8 @@
     "last": "last {d}",
     "never": "not yet practised",
     "roomTitle": "Your long skills",
-    "roomLede": "A little most days. Tell us each day you practise, and we will keep the count.",
-    "none": "No long skill taken on yet. Pick one in The long game and it will live here too.",
+    "roomLede": "The one or two things you chose to see through. A little most days.",
+    "none": "Nothing taken on yet. Quick things are for fun and momentum; a long skill is a choice, and you will be asked when you do a step in one.",
     "pick": "Pick a long skill",
     "quiet": 3,
     "milestones": [
@@ -1473,7 +1473,14 @@
        "ui-lg-down"
       ]
      ]
-    }
+    },
+    "capLine": "Up to three at once. Quick things never count as unfinished."
+   },
+   "offer": {
+    "title": "Take {name} on as a long skill?",
+    "lede": "A ladder of {n} steps, a little most days, and we will keep the count and ask how it goes. You can put it down any time. {have} of {max} taken on.",
+    "yes": "Take it on",
+    "no": "Just the quick one"
    }
   },
   "ranks": [

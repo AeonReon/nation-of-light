@@ -128,3 +128,9 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   Six quick things a day (three shown, three in a "Three more" fold). A long skill at home is
   anything taken on OR started (a step done), so it shows from the first step; "put it down"
   adds to `S.school.dropped`; the carry-on card left home (still in the long tab).
+- **v31 (open loops):** a long skill is ONLY what was chosen (`S.school.projects`, max 3; v30's
+  "started = long skill" was wrong and felt like eight open loops). The choosing moment is
+  `offerLong(tr)`: after a step on a ladder not yet taken on, one small card, once per ladder
+  (`S.school.noAsk`), only while there is room. Quick things are play and never shown as
+  unfinished; the carry-on card is gone from the long tab too. His psychology rule: very few
+  open loops, chosen on purpose, visible daily; everything else is a menu, not a debt.
