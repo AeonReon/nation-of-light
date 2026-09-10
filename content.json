@@ -1,5 +1,5 @@
 {
- "version": 33,
+ "version": 34,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -1361,7 +1361,7 @@
     "t": "Pick anything. The next thing keeps you moving. The long game is where you become somebody. Nothing here is out of reach."
    }
   ],
-  "nextLine": "Small, quick, doable now. Keep the momentum and try many things.",
+  "nextLine": "One clear thing, nothing needed but you. Keep the momentum.",
   "longLine": "Skills with a ladder: an afternoon, a week, or a month. One step at a time, the next one always ready.",
   "allLine": "Every room in the school, laid out to be seen.",
   "catLines": {
@@ -1789,7 +1789,8 @@
     "id": "ui-en14",
     "t": "A little every day is how great things are built. This is one of the little every days."
    }
-  ]
+  ],
+  "nextMore": "Three more easy ones"
  },
  "arrival": {
   "lines": [
@@ -1868,7 +1869,7 @@
   ],
   "storyLede": "Something from us",
   "todayTitle": "Do one of these today",
-  "todayLede": "About thirty seconds each. Pick the one that pulls you; there are more underneath.",
+  "todayLede": "Nothing needed but you and about thirty seconds. More underneath.",
   "ticks": {
    "quick": "One quick thing",
    "long": "A long skill practised"
@@ -1889,7 +1890,14 @@
    "earlier": "Earlier from Light School",
    "vision": "Who you can become"
   },
-  "more": "Three more"
+  "more": "Three more",
+  "laterTitle": "When you are with people, outside, or have the thing",
+  "laterLede": "Good ones that need somebody else, a place, or a bit of kit. Not for right now, and nothing is owed.",
+  "needs": {
+   "with": "with somebody",
+   "out": "outside",
+   "kit": "needs a thing"
+  }
  },
  "room": {
   "title": "The portico",
@@ -2370,5 +2378,9 @@
     "id": "c-vis4"
    }
   ]
+ },
+ "help": {
+  "popins": "Marcus and Aurelia pop up in the school",
+  "popinsHint": "They always stay at home. Swipe down on either of them to send them off for now."
  }
 }

@@ -574,6 +574,7 @@
   }
   function popIn(who) {
     const el = $(who === 'marcus' ? 'mfig' : 'afig'), rig = who === 'marcus' ? RIG : ARIG;
+    if (S.popins === false && !inScene()) return;
     clearTimeout(POPT[who]); el.classList.remove('popout'); rig.show(true); el.classList.add('popin');
   }
   function popOut(who, delay) {
@@ -609,20 +610,26 @@
     return `<div class="acard carry"><span class="eyebrow">${K.title}</span>` + st.map(tr => { const c = catOf(tr), s = nextStep(tr), n = trackDone(tr); return `<button class="crow" style="--c:${c.accent};--c2:${c.accent2}" data-step="${skey(tr, s)}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${s.test}</small></span><i class="cprog"><b style="width:${Math.round(n / tr.steps.length * 100)}%"></b></i></button>`; }).join('') + '</div>';
   }
   /* the quick ones: the journey's easy wins, then any track's first step, not yet done */
-  function quickCandidates() {
-    const easy = (SCH.journey.find(j => j.id === 'easy') || { steps: [] }).steps.map(findStep).filter(Boolean).filter(([tr, st]) => !sdone(skey(tr, st)));
-    const firsts = allTracks().map(tr => [tr, nextStep(tr)]).filter(([tr, st]) => st && st.n === 1 && !easy.some(([t2]) => t2 === tr));
-    return seededShuffle(easy, daySeed()).concat(seededShuffle(firsts, daySeed() + 7));
+  const NOW = new Set(['room', 'home']), LATER = new Set(['kit', 'with', 'out']);
+  const needsOf = st => LATER.has(st.ctx) ? st.ctx : null;
+  function quickCandidates(which) {
+    const ok = ([tr, st]) => which === 'later' ? LATER.has(st.ctx) : NOW.has(st.ctx);
+    const easy = (SCH.journey.find(j => j.id === 'easy') || { steps: [] }).steps.map(findStep).filter(Boolean).filter(([tr, st]) => !sdone(skey(tr, st))).filter(ok);
+    const firsts = allTracks().map(tr => [tr, nextStep(tr)]).filter(([tr, st]) => st && st.n === 1 && !easy.some(([t2]) => t2 === tr)).filter(ok);
+    const room = firsts.filter(([tr, st]) => st.ctx === 'room'), rest = firsts.filter(([tr, st]) => st.ctx !== 'room');
+    return seededShuffle(easy, daySeed()).concat(seededShuffle(room, daySeed() + 7), seededShuffle(rest, daySeed() + 11));
   }
-  function todayPicks() {
+  function todayPicks(which) {
     const T = S.school.today; const d = today();
-    if (!T || T.date !== d) S.school.today = { date: d, picks: [], skip: [] };
-    const t = S.school.today; const cand = quickCandidates().map(([tr, st]) => skey(tr, st));
-    t.picks = t.picks.filter(k => !sdone(k) && findStep(k));
-    for (const k of cand) { if (t.picks.length >= 6) break; if (!t.picks.includes(k) && !t.skip.includes(k)) t.picks.push(k); }
-    save(); return t.picks.map(findStep).filter(Boolean);
+    if (!T || T.date !== d) S.school.today = { date: d, picks: [], later: [], skip: [] };
+    const t = S.school.today; t.later = t.later || [];
+    const key = which === 'later' ? 'later' : 'picks', limit = which === 'later' ? 4 : 6;
+    const cand = quickCandidates(which).map(([tr, st]) => skey(tr, st));
+    t[key] = t[key].filter(k => !sdone(k) && findStep(k));
+    for (const k of cand) { if (t[key].length >= limit) break; if (!t[key].includes(k) && !t.skip.includes(k)) t[key].push(k); }
+    save(); return t[key].map(findStep).filter(Boolean);
   }
-  function notThis(key) { const t = S.school.today; t.skip.push(key); t.picks = t.picks.filter(k => k !== key); save(); }
+  function notThis(key) { const t = S.school.today; t.skip.push(key); t.picks = t.picks.filter(k => k !== key); t.later = (t.later || []).filter(k => k !== key); save(); }
 
   function enterSchool() {
     $('stage').classList.add('school'); $('deck').hidden = true; $('school').hidden = false; $('hud').hidden = false;
@@ -678,9 +685,9 @@
     step();
   }
   function foldCard(key, title, inner, open) { return `<details class="fold" data-fold="${key}" ${open ? 'open' : ''}><summary>${title}</summary><div class="fbody">${inner}</div></details>`; }
-  const pickRow = ([tr, st]) => { const c = catOf(tr), P = C.arrival; return `<div class="pick" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span class="ptxt"><span class="scat">${c.name} · ${tr.name}</span><span class="stest">${st.test}</span></span><span class="pbtns"><button class="btn btn-gold sm" data-do="${skey(tr, st)}">${P.do}</button><button class="btn btn-ghost sm" data-not="${skey(tr, st)}">${P.notThis}</button></span></div>`; };
+  const pickRow = ([tr, st]) => { const c = catOf(tr), P = C.arrival, nd = needsOf(st); return `<div class="pick" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span class="ptxt"><span class="scat">${c.name} · ${tr.name}${nd ? ` <b class="need ${nd}">${(P.needs || {})[nd] || nd}</b>` : ''}</span><span class="stest">${st.test}</span></span><span class="pbtns"><button class="btn btn-gold sm" data-do="${skey(tr, st)}">${P.do}</button><button class="btn btn-ghost sm" data-not="${skey(tr, st)}">${P.notThis}</button></span></div>`; };
   function renderArrival() {
-    const list = $('slist'), keep = list.scrollTop; const picks = todayPicks(); const P = C.arrival, R = C.room, F = P.folds || {};
+    const list = $('slist'), keep = list.scrollTop; const picks = todayPicks(), later = todayPicks('later'); const P = C.arrival, R = C.room, F = P.folds || {};
     // the feed: newest post, and whether it has been seen
     S.feed = S.feed || { posts: [], seen: [] }; const post = FEED[0] || null; const isNew = post && !S.feed.seen.includes(post.id);
     // today's ticks
@@ -699,7 +706,7 @@
       `<div class="acard todaycard"><span class="eyebrow">${P.todayTitle || 'Three for today'}</span>${P.todayLede ? `<p class="lede">${P.todayLede}</p>` : ''}` +
       (picks.length ? picks.slice(0, 3).map(pickRow).join('') + (picks.length > 3 ? `<details class="more"><summary>${P.more || 'Three more'}</summary>${picks.slice(3).map(pickRow).join('')}</details>` : '')
         : `<p class="lede">Every quick one is done. The long game is where the rest of you lives.</p>`) +
-      `</div>` + longCard() + shelfCard(true) +
+      `</div>` + (later.length ? foldCard('later', P.laterTitle || 'With people, outside, or with a thing', `<p class="lede" style="padding:0 6px">${P.laterLede || ''}</p><div class="acard" style="padding-top:4px">${later.map(pickRow).join('')}</div>`) : '') + longCard() + shelfCard(true) +
       foldCard('reading', F.reading || 'A reading from Aurelia', `<div class="acard reading"><div class="rhead"><span class="eyebrow">${R.readingsLede}</span><button class="playbtn" id="readit" aria-label="Aurelia reads it">${SPK_IC}</button></div><h3>${rd.title}</h3><p>${rd.text}</p></div>`) +
       (lib ? foldCard('library', F.library || 'From the library', lib) : '') +
       (rooms.length ? foldCard('rooms', F.rooms || 'Rooms climbed', `<div class="acard prog"><div class="rooms">${rooms.map(r => `<div class="rr" style="--c:${r.c.accent};--c2:${r.c.accent2}"><span>${r.c.name}</span><i><b style="width:${Math.round(r.n / r.N * 100)}%"></b></i><small>${r.n} of ${r.N}</small></div>`).join('')}</div></div>`) : '') +
@@ -861,13 +868,15 @@
   /* Next thing: the bar, ONE card, the week, a thought folded shut. Nothing else. */
   function renderNext(list) {
     $('sline').textContent = C.school.nextLine;
-    const picks = todayPicks(); const pick = picks[0]; const P = C.arrival;
+    const picks = todayPicks(), later = todayPicks('later'); const pick = picks[0]; const P = C.arrival;
     const lit = daysLit(), t = today(); const days = []; for (let i = 6; i >= 0; i--) { const d = new Date(); d.setDate(d.getDate() - i); days.push(d); }
     const dk = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
     const th = line(C.school.thoughts[daySeed() % C.school.thoughts.length]);
     list.innerHTML = `<div class="acard">${standCard()}</div>` +
       (pick ? (([tr, st]) => { const c = catOf(tr); return `<div class="acard one" style="--c:${c.accent};--c2:${c.accent2}"><span class="eyebrow" style="color:var(--c)">${c.name} · ${tr.name}</span><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><div class="stestbig">${st.test}</div>${st.how ? `<p class="lede">${st.how[0]}</p>` : (st.note ? `<p class="lede">${st.note}</p>` : '')}<div class="row"><button class="btn btn-ghost" data-not="${skey(tr, st)}">${P.notThis}</button><button class="btn btn-gold" data-do="${skey(tr, st)}" style="flex:1.4">${P.do}</button></div></div>`; })(pick)
         : `<div class="acard"><p class="lede">Every quick one is done. The long game is where the rest of you lives.</p></div>`) +
+      (picks.length > 1 ? foldCard('more', C.school.nextMore || 'Three more easy ones', `<div class="acard" style="padding-top:4px">${picks.slice(1, 4).map(pickRow).join('')}</div>`) : '') +
+      (later.length ? foldCard('later', P.laterTitle || 'With people, outside, or with a thing', `<p class="lede" style="padding:0 6px">${P.laterLede || ''}</p><div class="acard" style="padding-top:4px">${later.map(pickRow).join('')}</div>`) : '') +
       `<div class="acard week"><div class="wrow">${days.map(d => `<span class="wk ${lit.has(dk(d)) ? 'on' : ''} ${dk(d) === t ? 'td' : ''}"><i></i><b>${d.toLocaleDateString('en-GB', { weekday: 'narrow' })}</b></span>`).join('')}</div><p>${lit.size ? `<b>${lit.size}</b> day${lit.size === 1 ? '' : 's'} lit altogether` : 'One light a day is the whole habit'}${lit.has(t) ? ' · today is lit' : ''}</p></div>` +
       (th ? `<details class="thought"><summary>A thought from Marcus</summary><p>${th.t}</p><i>${C.names.marcus} · ${th.src}</i></details>` : '');
     list.querySelectorAll('[data-do]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.do); if (r) stepSheet(r[0], r[1]); }));
@@ -1075,9 +1084,11 @@
         <li><b>No excuses</b> is the line under each one: what to use when you don't have the thing.</li>
         <li>The flame lights on your first Done. The sun climbs as you go.</li>
       </ul>
+      ${C.help ? `<label class="toggle"><input type="checkbox" id="popins" ${S.popins === false ? '' : 'checked'}><span>${C.help.popins}</span><small>${C.help.popinsHint}</small></label>` : ''}
     </div></div>`, 'light');
     S.seenHelp = true; save();
     backBtn(v, () => closeVeil());
+    const pi = v.querySelector('#popins'); if (pi) pi.addEventListener('change', () => { S.popins = pi.checked; save(); sfx('tap'); if (!pi.checked) { popOut('marcus', 0); popOut('aurelia', 0); } });
   }
 
   /* ---------- boot ---------- */
@@ -1094,8 +1105,10 @@
     $('donebtn').addEventListener('click', onDone); $('skipbtn').addEventListener('click', onSkip); $('readbtn').addEventListener('click', readTablet);
     $('soundbtn').addEventListener('click', () => { S.sound = !S.sound; save(); paintSound(); if (!S.sound) { hush(); musicStop(); ambStop(); } else { sfx('tap'); ambStart(); if (S.done.length) ambFire(true); } });
     capSwipe($('popcap')); capSwipe($('capband'));
+    /* swipe down on either of them while they are popped up: both go, and the words with them */
+    ['mfig', 'afig'].forEach(id => { const el = $(id); let y0 = null; el.addEventListener('pointerdown', e => { y0 = $('stage').classList.contains('popmode') ? e.clientY : null; }, { passive: true }); el.addEventListener('pointermove', e => { if (y0 !== null && e.clientY - y0 > 36) { y0 = null; hush(); popOut('marcus', 0); popOut('aurelia', 0); capHide(0); } }, { passive: true }); el.addEventListener('pointerup', () => { y0 = null; }); });
     $('homebtn').addEventListener('click', () => { sfx('tap'); goHome(); });
-    $('helpbtn').addEventListener('click', () => { sfx('tap'); if (MODE === 'school' && C.tour) { if ($('stage').classList.contains('arrive')) leaveArrival(); tour(); } else help(); });
+    $('helpbtn').addEventListener('click', () => { sfx('tap'); if (MODE === 'school' && C.tour && !S.school.toured2) { S.school.toured2 = true; save(); if ($('stage').classList.contains('arrive')) leaveArrival(); tour(); } else help(); });
     cover();
     if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
     window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool, show: id => trophyShow(awards().find(a => a.id === id)), awards, quiet: quietProject, check: id => checkIn(trackById(id)), entry: entryWord, home: goHome, lyr: () => ({ on: LYRE.on, paused: LYR.paused, src: LYR.src.split('/').pop(), vol: +LYR.volume.toFixed(2) }), prac: id => logPractice(trackById(id)) };

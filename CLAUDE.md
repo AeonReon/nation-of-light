@@ -146,3 +146,12 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   it on, or a ladder sheet. The long page = intro line, "Taken on · n of 3" (sealed cards),
   then "Choose a long skill": ladders you have tried, then good ones to start with, Look / Take
   it on, and "Every room in the school". No accidental commitments, and no list of open loops.
+- **v34:** quick things are split by `ctx` in school.json: `room`/`home` = doable now with
+  nothing but you (the picks, 6 a day, room first); `kit`/`with`/`out` = need a thing, somebody
+  or a place, offered in a separate fold with a label, never as the headline; `long` never as a
+  quick thing. His reason: one "I can't do that right now" is enough to end a journey. Next
+  thing = one clear card + "Three more easy ones" fold + the needs fold. Long-page section
+  headings are 19px display with a gold rule. Characters: swipe down on a popped-up figure
+  sends both off; `S.popins=false` (help panel toggle) stops pop-ins in the tabs; home is
+  always the full scene. Parked, an architecture call: longer ladders (more, smaller rungs)
+  per track by learning method, starting with the most-tried skills.
