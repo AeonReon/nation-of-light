@@ -1021,3 +1021,21 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
   background:var(--gold-pale);box-shadow:inset 0 0 0 1.3px rgba(201,162,39,.4)}
 .tk-after b{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-deep)}
 .tk-after span{font-size:13px;line-height:1.5;color:var(--ink-soft)}
+
+/* ---- going rusty (v40) ----
+   His rule: you do not get to tick a step because you could do it once. A step
+   counts from the day you do it, and six months on it is worth doing again.
+   What fades is a LADDER'S SHARPNESS — its own bar. Completion never falls,
+   points never fall, the flame never dims for this. */
+.tk-sharp{gap:7px}
+.shbar{height:8px;border-radius:999px;background:var(--ivory-2);overflow:hidden;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.04)}
+.shbar i{display:block;height:100%;border-radius:999px;
+  background:linear-gradient(90deg,var(--gold-lt),var(--gold));transition:width .6s var(--ease)}
+.tk-sharp.dull{--g1:#E3C79A;--g2:#C08A2E}
+.tk-sharp.dull .shbar i{background:linear-gradient(90deg,#D9C9A6,#C08A2E)}
+.tk-steps .step.faded{box-shadow:inset 0 0 0 1.4px #E0CFA4;background:#FDFBF3}
+.tk-steps .step.faded b{background:#E6D9B4;color:#8F6F12;box-shadow:none}
+.tk-steps .step.faded span em{color:#A8801C}
+.againline{margin:8px 0 2px;font-size:13.5px;line-height:1.45;color:var(--ink-soft)}
+.againline.rusty{color:var(--gold-deep);font-weight:600}

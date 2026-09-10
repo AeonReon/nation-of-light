@@ -1,5 +1,5 @@
 {
- "version": 39,
+ "version": 40,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -1816,14 +1816,14 @@
    "statCups": "trophies",
    "cupsTitle": "The trophies on this ladder",
    "cupsNone": "The first one is {n} step{s} away. Everybody starts at step one, whatever age they are.",
-   "cupsSome": "{n} of {N} earned. Nothing here expires and nothing here can be taken off you.",
+   "cupsSome": "{n} of {N} earned. Trophies never expire — they are counted on what you have ever done, and nothing there can be taken off you.",
    "cupAt": "at step {n}",
    "cupGot": "earned",
    "nextTitle": "Your next step · {n} of {N}",
    "doIt": "Do it",
    "takeLede": "A ladder of {n} steps — {how}. Take it on and it lives on your home page, and every day you practise is counted.",
    "takeBtn": "Take it on",
-   "tickNote": "<b>Already able to do some of these?</b> Tick them and carry on. Working through the early ones in one sitting is exactly how this is meant to be used, not a shortcut.",
+   "tickNote": "<b>Do it now, not from memory.</b> If you could do this a year ago, do it again today — it only counts from the day you actually do it. Everybody goes rusty, and the whole point of a ladder is what you can do <i>now</i>.",
    "bands": [
     "Spark",
     "Flame",
@@ -1832,7 +1832,15 @@
     "Lighthouse"
    ],
    "feeds": "{room} · a ladder of {n} steps",
-   "afterTitle": "And after that"
+   "afterTitle": "And after that",
+   "sharpTitle": "Keeping it sharp",
+   "sharpAll": "Everything you have done on this ladder is still fresh.",
+   "sharpSome": "{n} of the {m} you have done {is} more than six months old. Do one again and it counts again — a re-earned point is worth the same as a new one.",
+   "fadedTag": "worth doing again",
+   "doneOn": "Done {d}.",
+   "doneLong": "Done {d} — over six months ago. Can you still?",
+   "again": "Done it again",
+   "againFresh": "Marked again for today. Still yours."
   },
   "goal": {
    "n": 3,

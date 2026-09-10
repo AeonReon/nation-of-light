@@ -21,8 +21,8 @@
 
   /* ---------- state ---------- */
   function load() {
-    try { const s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s && s.v === 1) { s.said = s.said || []; s.skipped = s.skipped || []; s.school = s.school || { done: {}, points: 0 }; return s; } } catch (e) {}
-    return { v: 1, start: null, done: [], skipped: [], days: {}, sound: true, taps: 0, visits: 0, said: [], seenHelp: false, member: false, school: { done: {}, points: 0 } };
+    try { const s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s && s.v === 1) { s.said = s.said || []; s.skipped = s.skipped || []; s.school = s.school || { done: {}, points: 0 }; s.school.refresh = s.school.refresh || 0; return s; } } catch (e) {}
+    return { v: 1, start: null, done: [], skipped: [], days: {}, sound: true, taps: 0, visits: 0, said: [], seenHelp: false, member: false, school: { done: {}, points: 0, refresh: 0 } };
   }
   function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
   const today = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
@@ -598,7 +598,27 @@
   const allTracks = () => SCH.categories.flatMap(c => c.tracks);
   const trackById = id => allTracks().find(t => t.id === id);
   const findStep = key => { for (const tr of allTracks()) for (const st of tr.steps) if (skey(tr, st) === key) return [tr, st]; return null; };
-  const points = () => Object.keys(S.school.done).length + S.done.length;
+  const points = () => Object.keys(S.school.done).length + S.done.length + (S.school.refresh || 0);
+  /* ---- going rusty ----
+     His rule, and it replaced the opposite one: you do NOT get to tick a step
+     because you could do it once. "A lot of people might have fasted a year or
+     two ago and they lost their ability to do it, or you might be able to hold
+     your breath for two minutes a few years ago but now you can't." So a step
+     counts from the day you actually do it, and six months later it fades and
+     is worth doing again.
+     What must NEVER happen here: points going down, completion going down, or
+     the flame dimming for it. What falls is a ladder's SHARPNESS, which is its
+     own bar. Re-earning a faded step is worth a fresh point, so keeping a skill
+     pays the same as getting it and the number still only ever climbs. */
+  const FADE_DAYS = 180;
+  const doneAt = k => { const v = S.school.done[k], ms = v ? Date.parse(v) : NaN; return isNaN(ms) ? null : ms; };
+  const isFaded = k => { const t = doneAt(k); return t !== null && (Date.now() - t) / 864e5 >= FADE_DAYS; };
+  const sharpOf = tr => { const done = tr.steps.filter(st => sdone(skey(tr, st)));
+    const fresh = done.filter(st => !isFaded(skey(tr, st))).length;
+    return { done: done.length, fresh, faded: done.length - fresh,
+      pct: done.length ? Math.round(fresh / done.length * 100) : 100 }; };
+  const whenText = k => { const t = doneAt(k); return t === null ? ''
+    : new Date(t).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }); };
   function rankOf(p) { const R = C.school.ranks; let r = R[0], nx = null; for (let i = 0; i < R.length; i++) { if (p >= R[i][0]) { r = R[i]; nx = R[i + 1] || null; } } return { name: r[1], at: r[0], next: nx }; }
   function daysLit() { const s = new Set(Object.keys(S.days).filter(k => S.days[k] > 0)); for (const k in S.school.done) { const v = S.school.done[k]; if (typeof v === 'string') s.add(v.slice(0, 10)); } return s; }
   function seededShuffle(arr, seed) { const out = arr.slice(); let x = seed; for (let i = out.length - 1; i > 0; i--) { x = (x * 9301 + 49297) % 233280; const j = Math.floor(x / 233280 * (i + 1)); [out[i], out[j]] = [out[j], out[i]]; } return out; }
@@ -1153,11 +1173,19 @@
       ${st.how ? `<p class="lede">${st.how[0]}</p>` : (st.note ? `<p class="lede">${st.note}</p>` : '')}
       <div class="row"><button class="btn btn-gold" data-step="${skey(tr, st)}" style="flex:1">${K.doIt}</button></div></div>`;
 
+    const sh = sharpOf(tr);
+    if (sh.done) h += `<div class="acard tk-sharp ${sh.faded ? 'dull' : ''}">
+      <span class="eyebrow">${K.sharpTitle || 'Keeping it sharp'}</span>
+      <div class="shbar"><i style="width:${sh.pct}%"></i></div>
+      <p class="lede">${sh.faded
+        ? fmt1(K.sharpSome, { n: sh.faded, m: sh.done, s: sh.faded === 1 ? '' : 's', is: sh.faded === 1 ? 'is' : 'are' })
+        : (K.sharpAll || 'Everything you have done here is still fresh.')}</p></div>`;
     h += `<p class="tk-note">${K.tickNote}</p>`;
-    const row = x => { const k = skey(tr, x), d = sdone(k), act = st && st.n === x.n;
+    const row = x => { const k = skey(tr, x), d = sdone(k), act = st && st.n === x.n, old = d && isFaded(k);
       const when = d && typeof S.school.done[k] === 'string' ? new Date(S.school.done[k]).toLocaleDateString('en-GB') : null;
-      return `<button class="step tk-step ${d ? 'done' : ''} ${act ? 'act' : ''}" data-step="${k}">
-        <b>${d ? '&#10003;' : x.n}</b><span>${x.test}${when ? `<em>${when}</em>` : ''}</span></button>`; };
+      return `<button class="step tk-step ${d ? 'done' : ''} ${old ? 'faded' : ''} ${act ? 'act' : ''}" data-step="${k}">
+        <b>${d ? '&#10003;' : x.n}</b><span>${x.test}${when
+          ? `<em>${when}${old ? ` · ${K.fadedTag || 'worth doing again'}` : ''}</em>` : ''}</span></button>`; };
     h += `<div class="steps tk-steps">${long
       ? stepBands(tr).map(b => { const dn = b.steps.filter(x => sdone(skey(tr, x))).length;
           return `<h4 class="tk-band ${dn === b.steps.length ? 'full' : ''}"><span>${b.name}</span><em>${dn}/${b.steps.length}</em></h4>`
@@ -1270,17 +1298,37 @@
      the page instead of a dead end. */
   const trackSheet = tr => openTrack(tr);
   function stepSheet(tr, st, from, where) {
-    const c = catOf(tr), k = skey(tr, st), d = sdone(k);
+    const c = catOf(tr), k = skey(tr, st), d = sdone(k), K = trackCopy();
+    const rusty = d && isFaded(k);
     const how = st.how ? `<ul class="how">${st.how.map(h => `<li>${h}</li>`).join('')}</ul>` : (st.note ? `<p class="note">${st.note}</p>` : '');
+    /* "Done already" used to be a dead grey button, which said the step was
+       finished with. Nothing here is finished with — you can always do it
+       again, and once it has gone rusty doing it again is worth a point, the
+       same as getting it the first time. */
+    const line = !d ? '' : `<p class="againline ${rusty ? 'rusty' : ''}">${rusty
+      ? fmt1(K.doneLong || 'Done {d} — over six months ago. Can you still?', { d: whenText(k) })
+      : fmt1(K.doneOn || 'Done {d}.', { d: whenText(k) })}</p>`;
     const v = veil(`<div class="panel sheet" style="--c:${c.accent};--c2:${c.accent2}">
       <div class="eyebrow"><i></i>${c.name} · ${tr.name} · step ${st.n} of ${tr.steps.length}</div>
-      <div class="stestbig">${st.test}</div>${how}
-      <div class="row"><button class="btn btn-gold" id="sdone" ${d ? 'disabled' : ''}>${d ? 'Done already' : 'Done'}</button></div>
+      <div class="stestbig">${st.test}</div>${how}${line}
+      <div class="row"><button class="btn ${(!d || rusty) ? 'btn-gold' : 'btn-ghost'}" id="sdone">${
+        d ? ((K.again || 'Done it again') + (rusty ? ' · +1' : '')) : 'Done'}</button></div>
     </div>`, 'light');
     backBtn(v, () => closeVeil());
     v.querySelector('#sdone').addEventListener('click', () => {
+      /* already done and still fresh: re-date it and say so. No second point —
+         the point is already yours and it has not gone anywhere. */
+      if (d && !rusty) {
+        S.school.done[k] = new Date().toISOString();
+        const t0 = today(); S.days[t0] = (S.days[t0] || 0) + 1; save();
+        sfx('done'); if (!inSceneNow()) {} else sparks();
+        closeVeil(() => { rerender(); toast(K.againFresh || 'Marked again for today. Still yours.'); });
+        return;
+      }
       const before = rankOf(points()).name, awBefore = awards().filter(x => x.earned).length, hadIds = new Set(awards().filter(x => x.earned).map(x => x.id));
-      S.school.done[k] = new Date().toISOString(); S.school.points++; const t = today(); S.days[t] = (S.days[t] || 0) + 1; save();
+      S.school.done[k] = new Date().toISOString(); S.school.points++;
+      if (rusty) S.school.refresh = (S.school.refresh || 0) + 1;   // a re-earned point; the total only ever climbs
+      const t = today(); S.days[t] = (S.days[t] || 0) + 1; save();
       sfx('done'); sparks(); RIG.smile(1.8); if (ARIG && !ARIG.hidden) ARIG.smile(1.8); paintSchoolCount(); checkDay();
       const inScene = inSceneNow();
       const up = rankOf(points()).name !== before || awards().filter(x => x.earned).length > awBefore;
