@@ -6120,62 +6120,123 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Say hello and your name to a child you have never met.",
-       "how": [
-        "Find somebody you have not met — at a day out, in a park, anywhere.",
-        "Walk up, look at their face, and say hello and your name.",
-        "That is it. You do not have to say anything after it.",
-        "If your voice goes odd, that is normal and it goes away by the fourth time."
-       ],
-       "note": null,
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Ask somebody behind a counter a question, out loud, on your own.",
-       "how": null,
-       "note": null,
+       "test": "Say good morning to somebody passing, and mean it.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Walk into a café, ask for a table and order your own food.",
-       "how": null,
-       "note": null,
+       "test": "Ask somebody behind a counter a question, out loud, on your own.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Interview an adult with ten questions you wrote yourself.",
-       "how": null,
-       "note": "Questions you wrote yourself, not ones somebody handed you. Write ten and use all ten.",
+       "test": "Ask a stranger for the time or for directions.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Interview somebody you have never met and get a real answer.",
-       "how": null,
-       "note": null,
+       "test": "Pay for something yourself and say thank you at the end.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Teach another child to order their own meal, and stand back.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
+       "test": "Ask a shop assistant to find you something.",
+       "ctx": "out",
        "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Walk into a cafe, ask for a table and order your own food.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Ask somebody a second question, because you were actually interested.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Learn one thing about somebody you did not know before, in a queue.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Start a conversation with somebody your own age you have never met.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Ask somebody at work what their job is actually like.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
+       "test": "Write ten questions you would ask anybody.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 13,
+       "test": "Interview an adult with those ten questions.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 14,
+       "test": "Interview somebody you have never met and get a real answer.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 15,
+       "test": "Ask somebody about the thing they know most about, and keep them talking ten minutes.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 16,
+       "test": "Introduce two people who do not know each other.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 17,
+       "test": "Ring somewhere and ask a question on the telephone.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 18,
+       "test": "Go somewhere on your own and come back knowing one person's name.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 19,
+       "test": "Bring somebody standing on their own into a conversation.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 20,
+       "test": "Teach another child to order their own meal, and stand back.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -6188,61 +6249,124 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Say your name and one thing you like, at the welcome circle.",
-       "how": [
-        "Wait until the circle is quiet.",
-        "Say your name, then one thing you like. Two sentences, that is all.",
-        "Look up at people rather than at the floor."
-       ],
-       "note": null,
        "ctx": "with",
        "kind": "kindness"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Tell a story standing up, with your voice reaching the back.",
-       "how": null,
-       "note": null,
+       "test": "Answer a question out loud in front of the group.",
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Talk for two minutes about something you know, no notes.",
-       "how": null,
-       "note": "No notes at all. Two minutes is about three hundred words, which is less than it feels.",
+       "test": "Read something out loud to a room, from the page.",
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Give a five-minute talk and take questions afterwards.",
-       "how": null,
-       "note": null,
+       "test": "Read it slowly enough that the back of the room hears every word.",
+       "note": "Everybody speeds up when they are nervous. Slower feels wrong and sounds right.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Speak to a room of fifty people.",
-       "how": null,
-       "note": null,
+       "test": "Stand still while you speak, with your hands doing nothing.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Talk for one minute about something you know, with no notes.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Look at three different people while you talk.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Talk for two minutes with no notes.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Start with a question instead of an introduction.",
        "ctx": "with",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Run the welcome circle at a day out.",
-       "how": null,
-       "note": null,
+       "n": 10,
+       "test": "Leave a silence on purpose, and let it sit.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Tell a story standing up, with your voice reaching the back.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
+       "test": "Talk for five minutes with three notes on a card.",
        "ctx": "with",
        "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Take a question afterwards and answer it honestly.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 14,
+       "test": "Say \"I do not know\" to a question, in front of everybody.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 15,
+       "test": "Give a five-minute talk and take questions afterwards.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Speak with something going wrong and carry on anyway.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 17,
+       "test": "Speak to a room of thirty people.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 18,
+       "test": "Speak to a room of fifty people.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 19,
+       "test": "Introduce somebody else to a room, and make them look good.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 20,
+       "test": "Run the welcome circle at a day out.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -6255,56 +6379,75 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Listen to a whole story without needing to be the one talking.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Say back what somebody told you, in your own words, correctly.",
-       "how": null,
-       "note": "In your own words, not theirs. If they say 'yes, that is it', you did it.",
+       "test": "Let somebody finish a sentence you already knew the end of.",
        "ctx": "with",
        "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Ask three good follow-up questions and get somebody talking.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Say back what somebody told you, in your own words, correctly.",
+       "ctx": "with",
        "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Listen to somebody much older for an hour, then tell somebody what you learned.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
+       "test": "Ask one follow-up question instead of telling your own story.",
+       "note": "The commonest thing people do instead of listening is wait to say their version.",
+       "ctx": "with",
        "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Help two people who are arguing sort it out, without taking a side.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "kindness"
+       "test": "Ask three good follow-up questions and get somebody talking.",
+       "ctx": "with",
+       "kind": "attention"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Notice when somebody has stopped listening to you, and stop.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Listen to somebody you disagree with, all the way through.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Say back their side well enough that they agree that is what they meant.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Listen to somebody much older for an hour, then tell somebody what you learned.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 10,
+       "test": "Sit with somebody who is upset without trying to fix it.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 11,
+       "test": "Help two people who are arguing sort it out, without taking a side.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 12,
        "test": "Coach somebody through a problem without solving it for them.",
-       "how": null,
-       "note": "Coaching means asking questions until they see it. If you tell them the answer, it does not count.",
-       "ctx": "room",
+       "ctx": "with",
        "kind": "kindness"
       }
      ]
@@ -6318,56 +6461,122 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Say sorry properly, and say what you will do instead.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Say no, out loud and kindly, when you mean no.",
-       "how": null,
-       "note": null,
+       "test": "Say sorry without adding the word but.",
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Disagree with somebody without either of you getting upset.",
-       "how": null,
-       "note": "Nobody upset means nobody raised their voice and nobody walked off. You can still disagree at the end.",
+       "test": "Say no, out loud and kindly, when you mean no.",
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Tell a friend a hard truth, kindly, and stay friends.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Say no without inventing an excuse for it.",
+       "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 5,
-       "sid": "s5",
+       "test": "Ask for something you have been putting off asking for.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 6,
+       "test": "Say you do not understand, in front of people who seem to.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Admit you were wrong about something, out loud, to the person.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Disagree with somebody without either of you getting upset.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Disagree with somebody older than you, respectfully.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Say the thing everybody in the room is thinking and nobody is saying.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Tell a friend a hard truth, kindly, and stay friends.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
+       "test": "Take a piece of criticism without defending yourself.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 13,
+       "test": "Ask somebody what you are getting wrong, and listen to the answer.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 14,
+       "test": "Give somebody hard feedback and leave them able to act on it.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 15,
+       "test": "Have the conversation you have been avoiding for a week.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 16,
        "test": "Argue a case you personally disagree with, well.",
-       "how": null,
-       "note": null,
        "ctx": "room",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
+       "n": 17,
+       "test": "Change your own mind out loud, in the middle of an argument.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 18,
+       "test": "Repair something with somebody after a row.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 19,
+       "test": "Say something kind to somebody that would be easier not to say.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 20,
        "test": "Speak up for somebody who could not speak up for themselves.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "ctx": "with",
        "kind": "courage"
       }
      ]
@@ -6381,61 +6590,124 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Tell what happened today in the order it happened.",
-       "how": [
-        "Think of one thing that actually happened today.",
-        "Tell it in the order it happened — first, then, then, and in the end.",
-        "Do not jump about. Order is the whole skill here."
-       ],
-       "note": null,
        "ctx": "with",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
+       "test": "Tell it in under a minute, with nothing left out that mattered.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 3,
        "test": "Tell a made-up story with a beginning, a middle and an end.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "skill"
       },
       {
-       "n": 3,
-       "sid": "s3",
-       "test": "Tell a story that makes somebody laugh on purpose.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "skill"
-      },
-      {
        "n": 4,
-       "sid": "s4",
-       "test": "Tell one round a fire, from memory, that holds everybody.",
-       "how": null,
-       "note": "From memory, round a fire, holding everybody. If people talk over you, tell it again another night.",
-       "ctx": "room",
+       "test": "Tell one where somebody wants something and cannot have it.",
+       "note": "That is the whole engine of every story ever told. Somebody wants something, something is in the way.",
+       "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Tell a story with different voices for each character.",
-       "how": null,
-       "note": null,
-       "ctx": "home",
+       "test": "Tell a story that makes somebody laugh on purpose.",
+       "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Tell one to a room of thirty and hold them the whole way.",
-       "how": null,
-       "note": null,
-       "ctx": "home",
+       "test": "Tell one that makes somebody go quiet.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Learn a story properly and tell it from memory.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Tell it with a pause in the right place.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Tell one round a fire, from memory, that holds everybody.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Tell a story with different voices for each character.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Tell one to younger children and keep them still.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 12,
+       "test": "Tell the same story twice and make the second one better.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 13,
+       "test": "Tell a true story from your own family.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 14,
+       "test": "Get somebody older to tell you theirs, and write it down.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 15,
+       "test": "Tell a story with no ending and let the room finish it.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Tell one for five minutes with nobody interrupting.",
+       "ctx": "with",
        "kind": "courage"
+      },
+      {
+       "n": 17,
+       "test": "Tell one to a room of ten.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 18,
+       "test": "Tell one to a room of thirty and hold them the whole way.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 19,
+       "test": "Tell a story in the dark, with no props and no book.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 20,
+       "test": "Teach a younger one to tell theirs, and sit down while they do.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -6448,55 +6720,122 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Tell a joke well enough that somebody laughs.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Learn five jokes and land all five.",
-       "how": null,
-       "note": null,
+       "test": "Tell it again to somebody else and get the same laugh.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Make somebody laugh with something you thought of yourself.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "courage"
+       "test": "Learn five jokes and land all five.",
+       "ctx": "with",
+       "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Do two minutes of your own material to the group.",
-       "how": null,
-       "note": "Your own material means you wrote it. Two minutes is about six or seven attempts at a laugh.",
-       "ctx": "room",
+       "test": "Tell one that dies, and carry on cheerfully.",
+       "note": "Everybody who is funny has died in front of people. It is the entry fee, not the failure.",
+       "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Do a sketch or an improv scene with somebody else.",
-       "how": null,
-       "note": null,
+       "test": "Make somebody laugh with something you thought of yourself.",
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Notice what actually made people laugh today, and write it down.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Say the funny thing you thought of instead of keeping it in.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Make a joke about yourself, not about somebody else.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 9,
+       "test": "Get a laugh out of a room of five.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Write down ten things you find funny and find what they share.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Write a joke of your own with a proper ending.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Tell three of your own and land two.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 13,
+       "test": "Do a funny voice or an impression somebody recognises.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 14,
+       "test": "Do two minutes of your own material to a group.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 15,
+       "test": "Handle somebody heckling you without losing the room.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 16,
+       "test": "Do a sketch or an improv scene with somebody else.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 17,
+       "test": "Make somebody laugh who was having a rotten day.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 18,
+       "test": "Do five minutes and keep it going.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 19,
+       "test": "Get a laugh without saying anything at all.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
        "test": "Run a comedy night and keep it going.",
-       "how": null,
-       "note": null,
        "ctx": "out",
        "kind": "courage"
       }
@@ -6511,55 +6850,74 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Teach one person one thing you can do.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "kindness"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Teach it well enough that they can still do it a week later.",
-       "how": null,
-       "note": "A week later is the test, not on the day. Anybody can copy you while you are standing there.",
-       "ctx": "long",
+       "test": "Watch them do it, and say nothing while they get it wrong.",
+       "note": "Taking it off them to show them again is the commonest mistake in teaching.",
+       "ctx": "with",
        "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Teach three people at once.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "courage"
+       "test": "Teach it well enough that they can still do it a week later.",
+       "ctx": "long",
+       "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Break something hard into steps and teach it in order.",
-       "how": null,
-       "note": null,
-       "ctx": "home",
+       "test": "Break something hard into steps and write the steps down.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Run a whole session for the younger children.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "courage"
+       "test": "Teach it in that order and see where they got stuck.",
+       "ctx": "with",
+       "kind": "attention"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Change the order because of where they got stuck.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Teach two people at once.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Teach three people at once.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Answer a question you did not know the answer to, honestly.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Teach somebody who did not want to learn it.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 11,
+       "test": "Run a whole session for younger children.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
        "test": "Teach an adult something they could not do before.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "courage"
       }
@@ -6575,59 +6933,75 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
-       "test": "Say your name and how old you are to somebody you have not met before, looking at them.",
-       "how": null,
-       "note": null,
+       "test": "Say your name and how old you are to somebody you have not met, looking at them.",
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Say hello first to somebody you know, before they say it to you.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
-       "kind": "courage",
-       "twist": "Somebody you have never spoken to."
-      },
-      {
-       "n": 3,
-       "sid": "s3",
-       "test": "Ask for something in a whole sentence with a please in it, instead of pointing.",
-       "how": null,
-       "note": "\"Can I have the red one, please.\" The whole thing, out loud.",
-       "ctx": "with",
-       "kind": "skill"
-      },
-      {
-       "n": 4,
-       "sid": "s4",
-       "test": "Say thank you to the person at the shop, loud enough that they hear it.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "courage"
       },
       {
-       "n": 5,
-       "sid": "s5",
-       "test": "Ask a grown-up a question you really want the answer to, and listen to the whole answer.",
-       "how": null,
-       "note": null,
+       "n": 3,
+       "test": "Say goodbye and their name when you leave.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 4,
+       "test": "Ask for something in a whole sentence with a please in it, instead of pointing.",
        "ctx": "with",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Tell somebody something that happened today, with a beginning, a middle and an end.",
-       "how": null,
-       "note": null,
+       "n": 5,
+       "test": "Say thank you to the person at the shop, loud enough that they hear it.",
        "ctx": "with",
-       "kind": "courage",
-       "twist": "In under a minute, without one um."
+       "kind": "courage"
+      },
+      {
+       "n": 6,
+       "test": "Answer a grown-up who asks you a question, without hiding behind anybody.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Ask a grown-up a question you really want the answer to, and listen to all of it.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Tell somebody you do not want to, in words, instead of crying.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Say sorry to somebody yourself, in your own words.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Order your own food or drink while somebody stands beside you.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Tell somebody something that happened today, with a beginning, a middle and an end.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
+       "test": "Tell it to somebody who was not there, so that they understand it.",
+       "ctx": "with",
+       "kind": "courage"
       }
      ]
     }
@@ -6650,61 +7024,124 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Sand a piece of wood properly smooth.",
-       "how": [
-        "Always sand along the grain, never across it.",
-        "Start with rough paper, then finish with fine.",
-        "Run your hand over it with your eyes shut. Smooth is what you are after."
-       ],
-       "note": null,
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Saw a straight cut you would be happy to show somebody.",
-       "how": null,
-       "note": "Straight means a pencil line drawn first and the cut following it. Let the saw do the work.",
+       "test": "Sand it again with a finer paper and feel the difference.",
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Make something from two pieces joined together.",
-       "how": null,
-       "note": "Joined means glued, screwed or nailed and still together when you pick it up by one end.",
+       "test": "Measure a length twice and mark it once.",
+       "note": "Every ruined piece of wood was measured once.",
        "ctx": "kit",
-       "kind": "courage"
+       "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Draw a plan first, then build exactly that.",
-       "how": null,
-       "note": null,
+       "test": "Saw a cut roughly where you marked it.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Build a piece of furniture somebody uses every day.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
+       "test": "Saw a straight cut you would be happy to show somebody.",
+       "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Teach a younger child to saw safely.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
+       "test": "Saw a cut square, checked with a set square.",
+       "ctx": "kit",
        "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Drill a hole where you meant it, right through, without splitting the wood.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Drive a screw in flush, without the head chewing up.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Make something from two pieces joined together.",
+       "ctx": "kit",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Glue and clamp a joint that holds when it is dry.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Cut a piece to fit a gap you measured, first go.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Draw a plan first, with the sizes on it.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Build exactly what the plan said.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Cut and fit a proper joint — a halving or a housing.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Sharpen a blade and cut with it before and after.",
+       "ctx": "kit",
+       "kind": "attention"
+      },
+      {
+       "n": 16,
+       "test": "Finish something with oil or wax so it looks finished.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Build something that has to bear weight, and stand on it.",
+       "ctx": "kit",
+       "kind": "courage"
+      },
+      {
+       "n": 18,
+       "test": "Fix a mistake instead of starting again.",
+       "ctx": "kit",
+       "kind": "attention"
+      },
+      {
+       "n": 19,
+       "test": "Build a piece of furniture somebody uses every day.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Teach a younger child to saw safely.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -6717,64 +7154,123 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Thread a needle on your own.",
-       "how": [
-        "Cut the end of the thread clean at an angle — a fluffy end never goes in.",
-        "Wet the end between your lips and squash it flat.",
-        "Hold the needle against something light so you can see the hole.",
-        "Push the thread through and pull about ten centimetres out the other side."
-       ],
-       "note": null,
        "ctx": "kit",
-       "kind": "skill",
-       "twist": "Other hand."
+       "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Sew a running stitch along a drawn line.",
-       "how": null,
-       "note": "In and out along a drawn line, stitches about the same size. Neat beats fast.",
+       "test": "Tie a knot in the end that will not pull through.",
        "ctx": "kit",
-       "kind": "skill",
-       "twist": "Other hand."
+       "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Sew on a button that holds when it is pulled.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Sew a running stitch along a drawn line.",
+       "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Mend a rip in something you would still wear out.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "skill"
+       "test": "Sew a line of even stitches, all the same length.",
+       "ctx": "kit",
+       "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Sew a bag you would actually use.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Sew on a button that holds when it is pulled.",
+       "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Make a piece of clothing you would wear out of the house.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Sew a seam joining two pieces of cloth.",
+       "ctx": "kit",
        "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Mend a rip in something you would still wear out.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Take up a hem and have it stay up.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Darn a hole in a sock or a jumper.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Sew a straight seam on a machine.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Cut cloth to a paper pattern.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Sew a bag you would actually use.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Put in a zip or a drawstring that works.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Press a seam flat and see how much better it looks.",
+       "ctx": "kit",
+       "kind": "attention"
+      },
+      {
+       "n": 15,
+       "test": "Make a cushion cover or an apron somebody uses.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Fix somebody else's clothes for them.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 17,
+       "test": "Alter something that did not fit until it does.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Make something from a pattern, all the way through.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Make a piece of clothing you would wear out of the house.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Teach somebody to sew a button on, and watch them do it.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -6787,63 +7283,75 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Tie a knot that does not come undone when pulled.",
-       "how": [
-        "Take any rope or lace.",
-        "Tie a knot, then pull both ends as hard as you can.",
-        "If it holds and does not slip, that is the level."
-       ],
-       "note": null,
        "ctx": "room",
-       "kind": "skill",
-       "twist": "Eyes shut."
+       "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Tie a reef knot, a bowline and a clove hitch from memory.",
-       "how": null,
-       "note": "Reef for tying two ends together, bowline for a loop that will not slip, clove hitch for tying to a post.",
+       "test": "Tie a reef knot, and say how it differs from a granny.",
        "ctx": "room",
-       "kind": "skill",
-       "twist": "Behind your back."
+       "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Lash two poles together so they hold your weight.",
-       "how": null,
-       "note": null,
+       "test": "Tie a bowline.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Whip or splice the end of a rope properly.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
+       "test": "Tie a bowline round your own waist.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Build a structure from poles and lashings that holds a person.",
-       "how": null,
-       "note": null,
+       "test": "Tie a clove hitch onto a post.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Teach three knots to somebody until they can do them blind.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
+       "test": "Tie all three from memory with nobody prompting you.",
+       "ctx": "room",
        "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Tie a figure of eight and a taut-line hitch.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Undo a knot that has been loaded hard, without cutting it.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Lash two poles together so they hold your weight.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Whip or tape the end of a rope so it stops fraying.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Build a structure from poles and lashings that holds a person.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
+       "test": "Teach three knots to somebody until they can do them blind.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -6856,57 +7364,125 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Make a pinch pot that holds water.",
-       "how": null,
-       "note": "Push your thumb into a ball of clay and pinch the walls even. It has to hold water without leaking.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Make something recognisable out of clay.",
-       "how": null,
-       "note": null,
+       "test": "Make one with even walls all the way round.",
+       "ctx": "kit",
+       "kind": "attention"
+      },
+      {
+       "n": 3,
+       "test": "Roll a coil and build a pot from coils.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
-       "n": 3,
-       "sid": "s3",
-       "test": "Carve a stick into a useful shape with a knife, safely.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "skill"
-      },
-      {
        "n": 4,
-       "sid": "s4",
-       "test": "Carve a spoon you would eat with.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Join two pieces of clay so they do not crack apart.",
+       "note": "Score both faces and wet them. Clay that is only pressed together always comes apart.",
+       "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Make a set of three things that match.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Make something recognisable out of clay.",
+       "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Make something somebody puts on a shelf and keeps.",
-       "how": null,
-       "note": null,
+       "test": "Make the same thing twice and make the second one better.",
+       "ctx": "kit",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Let something dry slowly without it cracking.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Carve a stick into a useful shape with a knife, safely.",
+       "note": "Always cut away from yourself, and know where the blade goes if it slips.",
        "ctx": "room",
        "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Whittle a point, a notch and a flat face.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Carve a butter knife you would put on a table.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Carve a spoon you would eat with.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Sand and oil something you carved.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Make a set of three things that match.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Make something with a lid that fits.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Decorate a piece so it looks decided rather than accidental.",
+       "ctx": "kit",
+       "kind": "attention"
+      },
+      {
+       "n": 16,
+       "test": "Fire or bake something so it lasts.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Repair something you broke, visibly and on purpose.",
+       "ctx": "kit",
+       "kind": "attention"
+      },
+      {
+       "n": 18,
+       "test": "Make something to a size somebody asked for.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Make something somebody puts on a shelf and keeps.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 20,
+       "test": "Teach somebody a pinch pot, hands off, all the way through.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -7057,57 +7633,123 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Light one bulb with a battery and two wires.",
-       "how": null,
-       "note": "Battery, wire to one side of the bulb, wire from the other side back to the battery. A complete loop.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Build a circuit with a switch that works.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
-       "kind": "skill"
+       "test": "Draw the circuit you just made, as a diagram.",
+       "ctx": "room",
+       "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Build one where two things happen at once and explain why.",
-       "how": null,
-       "note": null,
+       "test": "Build a circuit with a switch that works.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Solder a joint that holds and conducts.",
-       "how": null,
-       "note": "Soldering needs an adult beside you the first few times. Heat the joint, not the solder.",
+       "test": "Make one where the bulb is dimmer, and say why.",
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Build something with a microcontroller that does a job.",
-       "how": null,
-       "note": null,
+       "test": "Build one where two things happen at once and explain why.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Build something the group actually uses, and fix it when it breaks.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
+       "test": "Wire two bulbs in series, then in parallel, and say what changed.",
+       "ctx": "kit",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Use a meter to measure volts across something.",
+       "ctx": "kit",
        "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Find a break in a circuit with the meter instead of guessing.",
+       "ctx": "kit",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Say what a resistor is for and pick the right one for an LED.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 10,
+       "test": "Solder a joint that holds and conducts.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Solder five in a row that all work.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Build a circuit on stripboard from a diagram.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Make a light come on when it gets dark.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Get a microcontroller to blink one light.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Get it to read a button and do something different.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Get it to read a sensor and act on what it reads.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Put it in a box with the wires tidy inside.",
+       "ctx": "kit",
+       "kind": "attention"
+      },
+      {
+       "n": 18,
+       "test": "Build something that does a job somebody actually wanted.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Fix it when it breaks, without starting again.",
+       "ctx": "kit",
+       "kind": "attention"
+      },
+      {
+       "n": 20,
+       "test": "Build something other people use, and keep it working.",
+       "ctx": "out",
+       "kind": "kindness"
       }
      ]
     },
@@ -7250,57 +7892,124 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Take a photo where you can tell what it is of.",
-       "how": null,
-       "note": null,
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Take one somebody asks for a copy of.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
-       "kind": "kindness"
+       "test": "Take one where the thing you meant is actually in focus.",
+       "ctx": "room",
+       "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Take a photo of a person that looks like them.",
-       "how": null,
-       "note": null,
+       "test": "Get closer, and take it again.",
+       "note": "Nearly every bad photograph is a photograph taken from too far away.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Take twenty of one thing and pick the best three, and say why.",
-       "how": null,
-       "note": "Twenty of the same thing sounds mad and it is the whole exercise. You only see what is good by comparing.",
-       "ctx": "long",
+       "test": "Take one with the light coming from behind you, not behind the subject.",
+       "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Print and frame one.",
-       "how": null,
-       "note": null,
+       "test": "Take one where nothing is growing out of anybody's head.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Take a photo of a person that looks like them.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Take one somebody asks for a copy of.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 8,
+       "test": "Take twenty of one thing and pick the best three, and say why.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Take one at the hour before sunset and see the difference.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 10,
+       "test": "Put the subject somewhere other than dead centre, on purpose.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Take a photo indoors that is not dark and blurry.",
        "ctx": "home",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Put on a small exhibition of your own photographs.",
-       "how": null,
-       "note": null,
+       "n": 12,
+       "test": "Take one of something moving, sharp.",
        "ctx": "out",
        "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Take one of the same place in two different lights.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 14,
+       "test": "Edit one lightly and keep the original.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 15,
+       "test": "Take a set of five that clearly belong together.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Print one and hold it in your hand.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Print and frame one.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Give a printed photograph to the person in it.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 19,
+       "test": "Photograph an occasion so that the family keeps the pictures.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 20,
+       "test": "Put on a small exhibition of your own photographs.",
+       "ctx": "out",
+       "kind": "courage"
       }
      ]
     },
@@ -7314,63 +8023,75 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Open and shut the scissors ten times with nothing in them.",
-       "how": null,
-       "note": "Thumb in the small hole, fingers in the big one. Child scissors, and a grown-up beside you.",
        "ctx": "with",
-       "kind": "skill",
-       "twist": "Other hand."
+       "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Cut a piece of paper in two, any way you like.",
-       "how": null,
-       "note": null,
+       "test": "Hold them the right way round, thumb on top, and show somebody.",
        "ctx": "with",
-       "kind": "skill",
-       "twist": "Other hand."
+       "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Cut along a straight line somebody drew for you.",
-       "how": null,
-       "note": "Little cuts, and turn the paper, not the scissors.",
+       "test": "Cut a piece of paper in two, any way you like.",
        "ctx": "with",
-       "kind": "skill",
-       "twist": "Other hand, same line."
+       "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Cut along a curvy line, all the way, without leaving it.",
-       "how": null,
-       "note": null,
+       "test": "Snip all along the edge of a piece of paper to make a fringe.",
        "ctx": "with",
-       "kind": "skill",
-       "twist": "Other hand, same curve."
+       "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Cut out a circle and hold it up.",
-       "how": null,
-       "note": null,
+       "test": "Cut along a straight line somebody drew for you.",
        "ctx": "with",
-       "kind": "skill",
-       "twist": "Other hand."
+       "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Cut out three shapes and stick them down to make a picture. Then tell somebody what it is.",
-       "how": null,
-       "note": null,
+       "test": "Cut a square out.",
        "ctx": "with",
-       "kind": "skill",
-       "twist": "Every cut with the other hand."
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Cut along a curvy line, all the way, without leaving it.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Cut out a circle and hold it up.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Cut out a shape and turn the paper instead of the scissors.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Fold paper, cut, and open it out to see what happened.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Cut out three shapes and stick them down to make a picture.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Tell somebody what your picture is, while they look at it.",
+       "ctx": "with",
+       "kind": "courage"
       }
      ]
     },
@@ -7384,63 +8105,75 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Colour one shape in and stay inside the line.",
-       "how": null,
-       "note": "Slow near the edges, fast in the middle.",
        "ctx": "with",
-       "kind": "skill",
-       "twist": "Other hand."
+       "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Colour a whole picture, every part of it, with more than one colour.",
-       "how": null,
-       "note": null,
+       "test": "Colour it all the way in, with no white bits left.",
        "ctx": "with",
-       "kind": "skill",
-       "twist": "Other hand."
+       "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Draw a circle that joins up where it started.",
-       "how": null,
-       "note": null,
+       "test": "Colour a whole picture, every part of it, with more than one colour.",
        "ctx": "with",
-       "kind": "skill",
-       "twist": "Other hand."
+       "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Draw a person with a head, a body, two arms and two legs.",
-       "how": null,
-       "note": null,
+       "test": "Press hard for a dark colour and softly for a pale one.",
        "ctx": "with",
-       "kind": "skill",
-       "twist": "Other hand."
+       "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Draw your house, then draw somebody standing outside it.",
-       "how": null,
-       "note": null,
+       "test": "Draw a circle that joins up where it started.",
        "ctx": "with",
-       "kind": "skill",
-       "twist": "Other hand."
+       "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Draw something that happened today and tell the story of it to somebody while they look.",
-       "how": null,
-       "note": null,
+       "test": "Draw a square and a triangle.",
        "ctx": "with",
-       "kind": "courage",
-       "twist": "Other hand."
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Draw a person with a head, a body, two arms and two legs.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Give the person a face, and say who it is.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Draw your house.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Draw somebody standing outside your house.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Draw something that happened today.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Tell the story of your picture to somebody while they look at it.",
+       "ctx": "with",
+       "kind": "courage"
       }
      ]
     }
@@ -7463,61 +8196,123 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
-       "test": "Do a voice warm-up every morning for one week.",
-       "how": [
-        "Hum quietly up and down, low to high, five times.",
-        "Then sing 'me-may-mah-moh-moo' up a little each time.",
-        "Two minutes. Do it every morning for a week."
-       ],
-       "note": "Quietly is fine. A warm-up is humming and sliding up and down, not performing.",
-       "ctx": "long",
-       "kind": "skill"
+       "test": "Sing one whole song out loud where somebody can hear you.",
+       "ctx": "home",
+       "kind": "courage"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Do a voice warm-up every morning for thirty days.",
-       "how": null,
-       "note": null,
+       "test": "Do a voice warm-up in the morning, three days running.",
        "ctx": "long",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Sing one whole song in tune, on your own, to one person.",
-       "how": null,
-       "note": "In tune means somebody else could name the song. Sing it to one person, not a room.",
+       "test": "Hum a note somebody plays or sings, and match it.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 4,
+       "test": "Match five notes in a row.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 5,
+       "test": "Do a voice warm-up every morning for one week.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 6,
+       "test": "Sing a whole song in tune, on your own, to one person.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Sing standing up, breathing from low down instead of your shoulders.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Sing the same song louder without it going shouty.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Learn a second song properly, words and all.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Do a voice warm-up every morning for thirty days.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Sing a song to a group.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
+       "test": "Sing one round with somebody else.",
        "ctx": "with",
        "kind": "skill"
       },
       {
-       "n": 4,
-       "sid": "s4",
-       "test": "Sing a song to the group.",
-       "how": null,
-       "note": null,
+       "n": 13,
+       "test": "Hold your own line while somebody sings a different one.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "skill"
       },
       {
-       "n": 5,
-       "sid": "s5",
+       "n": 14,
        "test": "Sing a harmony line with somebody else.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "courage"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Lead a song that everybody joins in with.",
-       "how": null,
-       "note": null,
+       "n": 15,
+       "test": "Sing something unaccompanied, with nothing to hide behind.",
        "ctx": "with",
        "kind": "courage"
+      },
+      {
+       "n": 16,
+       "test": "Learn a song in another language.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Sing three songs from memory, back to back.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Sing something to somebody who needed cheering up.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 19,
+       "test": "Lead a song that everybody joins in with.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 20,
+       "test": "Get somebody who says they cannot sing to sing one whole song.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -7665,61 +8460,76 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Clap in time with a song, all the way through.",
-       "how": [
-        "Put on any song with a clear beat.",
-        "Clap on the beat — the bit you would nod your head to.",
-        "All the way to the end without losing it."
-       ],
-       "note": null,
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Keep a steady beat on a drum for two minutes.",
-       "how": null,
-       "note": null,
+       "test": "Keep a steady beat on a drum for one minute.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Clap a rhythm somebody gives you, back at them, correctly.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
-       "kind": "courage"
+       "test": "Keep it for two minutes without speeding up.",
+       "note": "Everybody speeds up. Recording yourself is the fastest way to find out that you do.",
+       "ctx": "kit",
+       "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Play two different rhythms with your two hands.",
-       "how": null,
-       "note": "One hand steady, the other doing something different. It feels impossible for about a week.",
-       "ctx": "room",
-       "kind": "courage"
+       "test": "Clap a rhythm somebody gives you, back at them, correctly.",
+       "ctx": "with",
+       "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Hold the beat while other people play over it.",
-       "how": null,
-       "note": null,
+       "test": "Clap on the offbeat while somebody claps on the beat.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Count a bar of four out loud while you play it.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Play a rhythm in three, and one in four, and hear the difference.",
+       "ctx": "kit",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Play two different rhythms with your two hands.",
        "ctx": "room",
        "kind": "courage"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Lead a drum circle.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
+       "n": 9,
+       "test": "Keep time with a metronome for three minutes.",
+       "ctx": "kit",
        "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Hold the beat while other people play over it.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Stop and come back in on the right beat.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
+       "test": "Lead a drum circle.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -7732,62 +8542,51 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Whistle one clear note.",
-       "how": [
-        "Wet your lips, then pull them into a small round hole.",
-        "Put the tip of your tongue low, behind your bottom teeth.",
-        "Blow gently — gently is the trick, hard never works.",
-        "Move your tongue back and forward until a note appears."
-       ],
-       "note": null,
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Whistle up and down, high to low.",
-       "how": null,
-       "note": null,
+       "test": "Whistle two notes, one after the other.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Whistle a tune somebody can name.",
-       "how": null,
-       "note": null,
+       "test": "Whistle up and down, high to low.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Whistle three tunes properly.",
-       "how": null,
-       "note": null,
+       "test": "Whistle a tune somebody can name.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
+       "test": "Whistle it in tune, checked against the real thing.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Whistle three tunes properly.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
        "test": "Whistle loudly with your fingers.",
-       "how": null,
-       "note": null,
        "ctx": "room",
        "kind": "courage"
       },
       {
-       "n": 6,
-       "sid": "s6",
+       "n": 8,
        "test": "Teach somebody who cannot whistle to whistle.",
-       "how": null,
-       "note": null,
        "ctx": "with",
-       "kind": "skill"
+       "kind": "kindness"
       }
      ]
     },
@@ -7800,57 +8599,123 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Write two lines that rhyme and mean something.",
-       "how": null,
-       "note": null,
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Write a whole verse.",
-       "how": null,
-       "note": null,
+       "test": "Write four lines about one thing that actually happened.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 3,
+       "test": "Say them out loud and cut every word that is not needed.",
        "ctx": "room",
        "kind": "attention"
       },
       {
-       "n": 3,
-       "sid": "s3",
-       "test": "Write a verse and a chorus and sing it to one person.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
-       "kind": "skill"
-      },
-      {
        "n": 4,
-       "sid": "s4",
-       "test": "Write a whole song and perform it.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
+       "test": "Write a whole verse.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Write one for somebody, about them.",
-       "how": null,
-       "note": null,
-       "ctx": "home",
+       "test": "Put a tune to it, even a simple one.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Write one the group sings without you starting it.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
+       "test": "Write a chorus that says the one thing the song is about.",
+       "ctx": "room",
        "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Sing the verse and the chorus to one person.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Change one line because of what they said.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Write a second verse that moves the story on.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Get the whole thing under three minutes.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Play or sing it the same way twice.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Write it down so somebody else could play it.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Record it, however roughly.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Listen back and fix the one thing that is wrong.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 15,
+       "test": "Write a whole song and perform it.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 16,
+       "test": "Write one for somebody, about them.",
+       "ctx": "home",
+       "kind": "kindness"
+      },
+      {
+       "n": 17,
+       "test": "Give it to them.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 18,
+       "test": "Write a second song without waiting to feel like it.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 19,
+       "test": "Write one somebody else asks to hear again.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Write one the group sings without you starting it.",
+       "ctx": "long",
+       "kind": "kindness"
       }
      ]
     },
@@ -7992,55 +8857,121 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Learn one dance step and do it in time.",
-       "how": null,
-       "note": null,
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Learn a whole short dance and do it with somebody.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
-       "kind": "skill"
-      },
-      {
-       "n": 3,
-       "sid": "s3",
-       "test": "Dance a céilí dance properly with a set.",
-       "how": null,
-       "note": "A céilí dance is done in a set with other people. Somebody at any local class will show you.",
-       "ctx": "kit",
-       "kind": "skill"
-      },
-      {
-       "n": 4,
-       "sid": "s4",
-       "test": "Learn a dance from another country.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
-       "kind": "skill"
-      },
-      {
-       "n": 5,
-       "sid": "s5",
-       "test": "Make up a dance and teach it to two people.",
-       "how": null,
-       "note": null,
+       "test": "Do it without counting out loud.",
        "ctx": "room",
        "kind": "skill"
       },
       {
+       "n": 3,
+       "test": "Learn three steps and put them together.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 4,
+       "test": "Dance in front of one other person.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 5,
+       "test": "Learn a whole short dance and do it with somebody.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
        "n": 6,
-       "sid": "s6",
+       "test": "Hold a frame with a partner and move without treading on them.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Lead, or follow, and let the other one do the opposite.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Dance a ceili dance properly with a set.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Learn a second set dance.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Dance at something where other people were watching.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Keep going after a mistake instead of stopping.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
+       "test": "Learn a dance from another country.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Dance to music you have never heard before.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Ask somebody to dance.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 15,
+       "test": "Dance with somebody much older than you.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 16,
+       "test": "Make up a dance of your own.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Teach it to one person.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Teach it to two people and get them dancing it together.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 19,
+       "test": "Get somebody up who said they do not dance.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 20,
        "test": "Lead the dancing at a group evening.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "courage"
       }
@@ -8056,59 +8987,75 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Sing one song all the way through with somebody singing beside you.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Sing it all the way through on your own, with nobody helping.",
-       "how": null,
-       "note": null,
        "ctx": "with",
-       "kind": "skill",
-       "twist": "A song you do not know yet."
+       "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Clap the beat while somebody else sings it.",
-       "how": null,
-       "note": "The beat is the steady part, like footsteps. Not the words.",
+       "test": "Sing it without forgetting any of the words.",
        "ctx": "with",
-       "kind": "skill",
-       "twist": "Clap the beat with the other hand on your knee."
+       "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Sing it as loud as you can, then sing it so quietly only the person next to you can hear.",
-       "how": null,
-       "note": null,
+       "test": "Clap the beat while somebody else sings it.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Sing it to somebody who has never heard you sing it.",
-       "how": null,
-       "note": "Grandparents count. On the phone counts.",
+       "test": "Sing it and clap the beat at the same time.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 6,
+       "test": "Sing it as loud as you can.",
        "ctx": "with",
        "kind": "courage"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Make up a new verse and sing that too.",
-       "how": null,
-       "note": null,
+       "n": 7,
+       "test": "Sing it so quietly that only the person next to you can hear.",
        "ctx": "with",
        "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Sing it fast, then sing it slow.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Sing it to somebody who has never heard you sing it.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Learn a second song all the way through.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Make up a new verse and sing that too.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Sing your song to a whole roomful of people.",
+       "ctx": "with",
+       "kind": "courage"
       }
      ]
     }
@@ -8131,57 +9078,125 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Do one card trick that works, on one person.",
-       "how": null,
-       "note": "One trick, done once, that worked. A self-working one from a book counts.",
+       "note": "A self-working one out of a book counts. Start where it cannot go wrong.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Shuffle a deck properly, twice, without dropping any.",
-       "how": null,
-       "note": null,
+       "test": "Do the same trick three times without fumbling it.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Do a trick that genuinely fools an adult.",
-       "how": null,
-       "note": "Fools an adult means they cannot tell you how, not that they were polite about it.",
-       "ctx": "out",
+       "test": "Shuffle a deck properly, twice, without dropping any.",
+       "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Do three tricks in a row without a mistake.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
+       "test": "Cut the deck one-handed.",
+       "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Do a trick with your own patter, in your own words.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
+       "test": "Learn a false cut that looks like a real one.",
+       "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Perform a five-minute card act for the group.",
-       "how": null,
-       "note": null,
+       "test": "Force a card so the person is sure they chose freely.",
        "ctx": "with",
        "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Control a chosen card to the top of the deck.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Do a trick that genuinely fools an adult.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Do a trick and never say what is about to happen.",
+       "note": "Announcing it gives them somewhere to look. Say nothing and they cannot follow the method.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 10,
+       "test": "Learn a double lift.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Do three tricks in a row without a mistake.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Do a trick with the cards in somebody else's hands.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Do one with a deck that is not yours.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 14,
+       "test": "Do a trick with your own patter, in your own words.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Do one where you never touch the cards at all.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Perform to four people standing around you.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 17,
+       "test": "Have a trick go wrong and finish anyway.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 18,
+       "test": "Build a routine where each trick leads into the next.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Perform a five-minute card act for a group.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 20,
+       "test": "Teach somebody one trick until they can fool a third person with it.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -8194,61 +9209,124 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Make a coin vanish and reappear.",
-       "how": [
-        "Hold a coin flat in your right fingers.",
-        "Pretend to take it with your left hand, but let it drop into your right palm.",
-        "Close the empty left hand and look at it. Everybody looks where you look."
-       ],
-       "note": null,
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Do a French drop so nobody sees it.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
+       "test": "Palm a coin and let somebody look at your hand.",
+       "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Produce a coin from behind somebody's ear convincingly.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
+       "test": "Do a French drop so nobody sees it.",
+       "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Do three coin moves in one routine.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
-       "kind": "skill"
+       "test": "Do it slowly enough that it looks natural.",
+       "note": "Speed hides nothing. What hides it is doing the fake exactly like the real thing.",
+       "ctx": "kit",
+       "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Do it surrounded, with people watching from all sides.",
-       "how": null,
-       "note": null,
+       "test": "Look at your empty hand, not at the hand with the coin.",
+       "ctx": "kit",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Vanish a coin and show both hands empty.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Produce a coin from behind somebody's ear convincingly.",
        "ctx": "out",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Teach somebody the French drop until they can fool you.",
-       "how": null,
-       "note": null,
+       "n": 8,
+       "test": "Make a coin travel from one hand to the other.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Do three coin moves in one routine.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Do a routine with a borrowed coin.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Make a coin go through a table.",
        "ctx": "with",
        "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Do a routine with your own patter.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Do it standing, with people close.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 14,
+       "test": "Do it surrounded, with people watching from all sides.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 15,
+       "test": "Vanish four coins one at a time.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "End on a production of something bigger than a coin.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Perform it twice in a row to the same person without them catching it.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 18,
+       "test": "Do a coin routine for a group.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 19,
+       "test": "Keep the method to yourself when somebody asks.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 20,
+       "test": "Teach somebody the French drop until they can fool you.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -8261,57 +9339,124 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Do a trick where you name a card somebody chose.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Do one that works on two people in a row.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
-       "kind": "skill"
+       "test": "Do it without saying how clever it was.",
+       "ctx": "with",
+       "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Read somebody's body language and guess right three times.",
-       "how": null,
-       "note": "Body language is where they look, what their hands do, and whether they hesitate.",
+       "test": "Do one that works on two people in a row.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Do a full mind reading effect with a story around it.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
-       "kind": "skill"
-      },
-      {
-       "n": 5,
-       "sid": "s5",
-       "test": "Do one where the method is invisible even on a second showing.",
-       "how": null,
-       "note": null,
+       "test": "Learn to force a word or a number.",
        "ctx": "room",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Perform three effects to the group and keep the method secret.",
-       "how": null,
-       "note": null,
+       "n": 5,
+       "test": "Do a prediction you wrote before they chose.",
        "ctx": "with",
        "kind": "skill"
+      },
+      {
+       "n": 6,
+       "test": "Read somebody's body language and guess right three times.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Ask a question that tells you the answer without them noticing.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Do an effect where you never touch anything.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Take longer over it than feels comfortable.",
+       "note": "Mind reading that is instant looks like a trick. Mind reading that seems to cost you something looks real.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 10,
+       "test": "Get one wrong on purpose and then get it right.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Do a full mind reading effect with a story around it.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Do it on somebody who came in wanting to catch you.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 13,
+       "test": "Do one where the method is invisible even on a second showing.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Say plainly that it is a trick, and still have it land.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 15,
+       "test": "Do one that uses something of theirs.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Do a two-person effect with somebody helping you.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Perform three effects to a group and keep the method secret.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 18,
+       "test": "Take a guess with nothing to fall back on, and be wrong gracefully.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 19,
+       "test": "Build a ten-minute set that builds to one big finish.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Never use it to make somebody feel foolish.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -8324,59 +9469,74 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Mime one action so clearly that somebody names it.",
-       "how": [
-        "Pick one everyday action — brushing teeth, opening a jar.",
-        "Do it slowly and make the invisible object the same size the whole way through.",
-        "Somebody has to name it without you saying a word."
-       ],
-       "note": null,
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Do the invisible wall or the rope pull convincingly.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
+       "test": "Mime three in a row and have all three named.",
+       "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Tell a whole tiny story with no words.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Do the invisible wall convincingly.",
+       "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Make somebody laugh without saying anything.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "courage"
+       "test": "Do the rope pull.",
+       "ctx": "kit",
+       "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Perform a two-minute silent piece.",
-       "how": null,
-       "note": null,
+       "test": "Keep the wall in exactly the same place for a whole minute.",
+       "note": "The whole illusion is that the invisible thing does not move. One slip and it is gone.",
+       "ctx": "kit",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Mime carrying something heavy, then something light.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Tell a whole tiny story with no words.",
        "ctx": "room",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Run a mime game for the younger children.",
-       "how": null,
-       "note": null,
+       "n": 8,
+       "test": "Make somebody laugh without saying anything.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Mime a whole conversation with a person who is not there.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Do a walking-on-the-spot walk.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Perform a two-minute silent piece.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
+       "test": "Run a mime game for younger children.",
        "ctx": "with",
        "kind": "kindness"
       }
@@ -8391,57 +9551,76 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Make a puppet out of a sock or a paper bag.",
-       "how": null,
-       "note": null,
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Give it a voice and keep the voice the same for two minutes.",
-       "how": null,
-       "note": "The same voice for two minutes is harder than it sounds. Pick something easy to keep up.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Make a puppet with moving parts.",
-       "how": null,
-       "note": null,
+       "test": "Make it look at things, and at people.",
+       "note": "Where the puppet looks is what makes it alive. Nothing else comes close.",
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Write and perform a short puppet story.",
-       "how": null,
-       "note": null,
+       "test": "Make it breathe while it is not talking.",
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Build a stage and run a proper show.",
-       "how": null,
-       "note": null,
+       "test": "Have it talk to one person and get an answer.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 6,
+       "test": "Make a puppet with moving parts.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Run a puppet show the younger children ask for again.",
-       "how": null,
-       "note": null,
+       "n": 7,
+       "test": "Make a second puppet with a different voice.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Have the two of them talk to each other.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Write a short puppet story with a beginning and an end.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Perform it to two people.",
        "ctx": "with",
        "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Build a stage and run a proper show.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Run a puppet show younger children ask for again.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -8454,57 +9633,123 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
-       "test": "Spin a plate or a hoop and keep it going for thirty seconds.",
-       "how": null,
-       "note": null,
+       "test": "Spin a plate or a hoop and keep it going for ten seconds.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Keep a diabolo or devil sticks going for thirty seconds.",
-       "how": null,
-       "note": null,
+       "test": "Keep it going for thirty seconds.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Do ten keepy-uppies with a football.",
-       "how": null,
-       "note": null,
+       "test": "Keep a hoop spinning round your waist for thirty seconds.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Learn one trick with clubs, poi or a hoop.",
-       "how": null,
-       "note": "Poi are weights on cords, clubs are juggling pins, a hoop is a hula hoop. Any one of them.",
+       "test": "Get a diabolo or devil sticks going at all.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Put three circus tricks into one routine.",
-       "how": null,
-       "note": null,
+       "test": "Keep a diabolo or devil sticks going for thirty seconds.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Keep it going for a whole minute.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Do ten keepy-uppies with a football.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Do twenty-five keepy-uppies.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Spin a hoop on your arm and move it to the other arm.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Learn one trick with clubs, poi or a hoop.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Do that trick five times out of five.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Learn a second trick.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Throw and catch one club.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Learn a trick that goes wrong in front of people and recover from it.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 15,
+       "test": "Put two tricks together without stopping in between.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Put three circus tricks into one routine.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Do the routine to music, in time.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Perform it to five people.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 19,
        "test": "Perform your routine at a day out.",
-       "how": null,
-       "note": null,
        "ctx": "out",
        "kind": "courage"
+      },
+      {
+       "n": 20,
+       "test": "Teach somebody their first trick until they can do it on their own.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     }
