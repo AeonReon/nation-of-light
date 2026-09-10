@@ -94,13 +94,32 @@
   [NAR, MAR].forEach(el => { el.addEventListener('play', () => musicDuck(true)); const back = () => { if (NAR.paused && MAR.paused) musicDuck(false); }; el.addEventListener('ended', back); el.addEventListener('pause', back); });
 
   /* Aurelia reads: the tablets, the breaks, the finish. */
+  /* ---- one voice at a time, and enforced here rather than trusted ----
+     His rule since v3: never two competing things. It was being kept by every
+     caller remembering to hush() first, and the moment one path forgot, Marcus
+     and Aurelia spoke over each other and the app sounded broken. They are two
+     separate audio elements, so nothing stopped them. Now each one silences the
+     other as it starts, whatever route got it here. */
+  let SPEAKING = null; const MQ = [];
+  /* The face at the top used to mean "no pop-ins in the tabs, but they always
+     stay at home", which is why he turned them off, left, came back and found
+     them standing there again. It now means what it looks like it means: the
+     two of them are away, everywhere, until he taps the face again. The portico
+     is simply quiet — nobody appears and nobody speaks unless he asks. */
+  const quietFolk = () => S.popins === false;
+  function soloNar() {
+    if (!MAR.paused) { MAR.pause(); if (RIG) RIG.hush(); }
+    SPEAKING = null; MQ.length = 0;
+  }
+  function soloMar() { if (!NAR.paused) { NAR.pause(); if (ARIG) ARIG.hush(); } }
   function narrate(id, after) {
     if (!voiceOn()) { if (after) setTimeout(after, 300); return; }
+    soloNar();
     NAR.pause(); NAR.src = 'audio/voice/' + id + '.mp3?v=' + C.version; NAR.onended = () => { $('readbtn').classList.remove('on'); if (after) after(); }; NAR.onerror = () => { if (after) after(); };
     NAR.play().catch(() => { if (after) after(); });
   }
   /* Marcus speaks: only a line from content.json, mouth off the audio clock. */
-  let SPEAKING = null; const MQ = []; const QSAID = new Set();
+  const QSAID = new Set();
   function marcusSay(ln, pose, after) {
     if (!ln) { if (after) after(); return; }
     if (!RIG || RIG.hidden) { if (after) after(); return; }
@@ -116,6 +135,7 @@
     const finish = () => { if (SPEAKING !== ln.id) return; SPEAKING = null; RIG.hush(); marcusSay._t = setTimeout(() => { b.hidden = true; }, 1800); if (MODE === 'school') capHide(1600); if (after) after(); const nx = MQ.shift(); if (nx) setTimeout(() => marcusSay(nx[0], nx[1], nx[2]), 350); };
     const est = Math.min(12000, ln.t.length * 70);
     if (voiceOn()) {
+      soloMar();
       MAR.pause(); CUES = (VIS && VIS[ln.id]) || null; MAR.src = 'audio/marcus/' + ln.id + '.mp3?v=' + C.version;
       MAR.onended = finish; MAR.onerror = () => { RIG.talk(est / 1000); setTimeout(finish, est); };
       RIG.talk(20); MAR.play().catch(() => { RIG.talk(est / 1000); setTimeout(finish, est); });
@@ -574,7 +594,7 @@
   }
   function popIn(who) {
     const el = $(who === 'marcus' ? 'mfig' : 'afig'), rig = who === 'marcus' ? RIG : ARIG;
-    if (S.popins === false && !inScene()) return;
+    if (quietFolk()) return;
     clearTimeout(POPT[who]); el.classList.remove('popout'); rig.show(true); el.classList.add('popin');
   }
   function popOut(who, delay) {
@@ -656,7 +676,11 @@
     $('stage').classList.add('school'); $('deck').hidden = true; $('school').hidden = false; $('hud').hidden = false;
     $('shead').appendChild($('hud')); paintSchoolCount();
     if (!$('rankbar')) { $('countpill').hidden = true; $('hud').insertAdjacentHTML('afterbegin', `<div id="rankbar" class="daywrap">${rankBar()}</div><button class="facebtn ${S.popins === false ? 'off' : ''}" id="facebtn" aria-label="${C.help ? C.help.popins : 'Pop-ups'}"><img src="images/mentors/marcus.jpg" alt=""><i></i></button>`);
-      $('facebtn').addEventListener('click', () => { S.popins = S.popins === false; save(); sfx('tap'); $('facebtn').classList.toggle('off', S.popins === false); if (S.popins === false) { hush(); popOut('marcus', 0); popOut('aurelia', 0); } }); }
+      $('facebtn').addEventListener('click', () => { S.popins = S.popins === false; save(); sfx('tap');
+        $('facebtn').classList.toggle('off', quietFolk());
+        if (quietFolk()) { hush(); popOut('marcus', 0); popOut('aurelia', 0); RIG.show(false); ARIG.show(false); }
+        else if ($('stage').classList.contains('arrive')) { RIG.enter(); setTimeout(() => { ARIG.show(true); $('afig').classList.remove('walk-out-l', 'walk-in-l', 'popin', 'popout'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l'); }, 300); idleRoom(40000); }
+      }); }
     if (!$('homebtn').dataset.sun) { $('homebtn').dataset.sun = '1'; $('homebtn').querySelector('svg').outerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9h18M4 9v10M9 9v10M15 9v10M20 9v10M2 19h20M12 3l9 6H3z"/></svg>'; }
     plates(false); MODE = 'school'; CUR = null; $('mfig').classList.remove('walk-in');
     const d = today(), fresh0 = !S.school.arrivedEver;
@@ -708,15 +732,16 @@
   function arrival(first, again, quiet) {
     const st = $('stage'); st.classList.add('arrive'); st.classList.remove('room', 'portico'); clearTimeout(ROOMT); stageBack(null); capHide(0); unpop(); dock('scene');
     $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout');
-    RIG.enter(); setTimeout(() => { ARIG.show(true); $('afig').classList.remove('walk-out-l', 'walk-in-l', 'popin', 'popout'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l'); }, 350);
+    if (quietFolk()) { RIG.show(false); ARIG.show(false); }
+    else { RIG.enter(); setTimeout(() => { ARIG.show(true); $('afig').classList.remove('walk-out-l', 'walk-in-l', 'popin', 'popout'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l'); }, 350); }
     $('stabs').hidden = true; $('sline').textContent = ''; MODE = 'school';
     if (MUS.paused) musicStart(.4); ambStart(); if (points()) ambFire(true);
     renderArrival(); idleRoom(50000);
     if ((S.school.visits || 0) <= 4 && S.taps < 3) setTimeout(() => PORTICO.props.lyre.classList.add('hint'), 2500);
     const vn = (S.school.visits || 0) + HOMEN;
-    let lines = quiet ? [] : (first ? C.arrival.first : (again && C.arrival.again ? C.arrival.again[vn % C.arrival.again.length] : C.arrival.lines)); S.school.arrivedEver = true; save();
+    let lines = (quiet || quietFolk()) ? [] : (first ? C.arrival.first : (again && C.arrival.again ? C.arrival.again[vn % C.arrival.again.length] : C.arrival.lines)); S.school.arrivedEver = true; save();
     // and something from them: one of her true lines, or one of his, in turn
-    if (!first) { const hers = vn % 2 === 0; if (hers) { const ids = C.aurelia.lines.map(l => l.id); const id = ids[(S.school.visits || 0) % ids.length]; const ln = C.aurelia.lines.find(l => l.id === id); lines = lines.concat([{ who: 'aurelia', id, t: ln.t }]); } else { const all = Object.keys(LINES).filter(k => k.startsWith('m-')); const ln = fresh(all.slice((S.school.visits || 0) % all.length).concat(all)); if (ln) lines = lines.concat([{ who: 'marcus', id: ln.id, t: ln.t }]); } }
+    if (!first && !quietFolk()) { const hers = vn % 2 === 0; if (hers) { const ids = C.aurelia.lines.map(l => l.id); const id = ids[(S.school.visits || 0) % ids.length]; const ln = C.aurelia.lines.find(l => l.id === id); lines = lines.concat([{ who: 'aurelia', id, t: ln.t }]); } else { const all = Object.keys(LINES).filter(k => k.startsWith('m-')); const ln = fresh(all.slice((S.school.visits || 0) % all.length).concat(all)); if (ln) lines = lines.concat([{ who: 'marcus', id: ln.id, t: ln.t }]); } }
     clearTimeout(arrival._t); arrival._t = setTimeout(() => { if ($('stage').classList.contains('arrive')) speakSchool(lines); }, 1500);
   }
   function standLine() { const L = C.arrival.stand.lines || []; return L.length ? L[(daySeed() + (S.school.visits || 0) + HOMEN) % L.length] : ''; }
@@ -877,7 +902,7 @@
   /* going in: one of them pops up with a word for the day ahead. Never the same one twice in a sitting, a different start each day, loosely his and hers in turn. */
   const ENTRYSAID = new Set();
   function entryWord() {
-    if (!$('stage').classList.contains('school') || inScene()) return;
+    if (!$('stage').classList.contains('school') || inScene() || quietFolk()) return;
     const q = quietProject(); if (q) { hush(); prac(q).asked = today(); save(); speakSchool([{ who: 'aurelia', id: 'ui-lg-check', t: C.voice['lg-check'] }], () => checkIn(q)); return; }
     const E = C.school.entry || []; if (!E.length) return;
     const start = (daySeed() * 7 + (S.school.visits || 0) + HOMEN) % E.length;
@@ -1035,8 +1060,9 @@
   function shower() { for (let i = 0; i < 28; i++) { const l = document.createElement('i'); l.className = 'leaffall' + (i % 2 ? ' gl' : ''); l.style.left = Math.random() * 100 + '%'; l.style.animationDuration = (2.4 + Math.random() * 2.2) + 's'; l.style.animationDelay = (Math.random() * 1.2) + 's'; $('stage').appendChild(l); setTimeout(() => l.remove(), 5500); } }
   /* every so often one of them says something, in turn, unprompted */
   function idleRoom(delay) {
-    clearTimeout(ROOMT); ROOMT = setTimeout(() => {
-      if (!$('stage').classList.contains('arrive')) return;
+    clearTimeout(ROOMT); if (quietFolk()) return;
+    ROOMT = setTimeout(() => {
+      if (!$('stage').classList.contains('arrive') || quietFolk()) return;
       if (SPEAKING || !NAR.paused) { idleRoom(15000); return; }
       if (ROOMI++ % 2 === 0) { const ids = C.aurelia.lines.map(l => l.id); const id = ids.find(i => !S.said.includes(i)) || ids[ROOMI % ids.length]; const ln = C.aurelia.lines.find(l => l.id === id); if (!S.said.includes(id)) { S.said.push(id); save(); } cap('aurelia', ln.t); ARIG.nod(); aureliaSay(id, () => { capHide(1500); idleRoom(35000 + Math.random() * 20000); }); }
       else { const all = Object.keys(LINES).filter(k => k.startsWith('m-')); marcusSay(fresh(all.slice(ROOMI % all.length).concat(all)), 'nod', () => idleRoom(35000 + Math.random() * 20000)); }
@@ -1592,7 +1618,10 @@
     </div></div>`, 'light');
     S.seenHelp = true; save();
     backBtn(v, () => closeVeil());
-    const pi = v.querySelector('#popins'); if (pi) pi.addEventListener('change', () => { S.popins = pi.checked; save(); sfx('tap'); const fb = $('facebtn'); if (fb) fb.classList.toggle('off', !pi.checked); if (!pi.checked) { popOut('marcus', 0); popOut('aurelia', 0); } });
+    const pi = v.querySelector('#popins'); if (pi) pi.addEventListener('change', () => { S.popins = pi.checked; save(); sfx('tap');
+      const fb = $('facebtn'); if (fb) fb.classList.toggle('off', !pi.checked);
+      if (!pi.checked) { hush(); popOut('marcus', 0); popOut('aurelia', 0); RIG.show(false); ARIG.show(false); }
+      else if ($('stage').classList.contains('arrive')) { RIG.enter(); setTimeout(() => ARIG.show(true), 300); } });
   }
 
   /* ---------- boot ---------- */
