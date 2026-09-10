@@ -70,7 +70,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .bubble span{display:inline-block}
 .bubble.say span{animation:wordin .4s var(--spring) both;animation-delay:calc(var(--i) * 60ms)}
 .bubble .src{display:block;margin-top:6px;font-family:var(--sans);font-size:11px;font-style:italic;color:var(--ink-faint);font-weight:500}
-.bubble.school{font-family:var(--sans);font-weight:500;font-size:14px}
+.bubble.companion{font-family:var(--sans);font-weight:500;font-size:14px}
 @keyframes bubblein{0%{transform:translateY(8px) scale(.94)}100%{transform:none}}
 @keyframes wordin{0%{opacity:.3;transform:translateY(5px)}100%{opacity:1;transform:none}}
 
@@ -96,9 +96,9 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .laurel .leaf{flex:1;height:14px;border-radius:60% 0 60% 0;background:var(--marble-d);transform:rotate(-22deg);transition:background .5s,transform .6s var(--spring),height .4s var(--spring);opacity:.55}
 .laurel .leaf:nth-child(even){border-radius:0 60% 0 60%;transform:rotate(22deg)}
 .laurel .leaf.on{background:linear-gradient(135deg,var(--laurel-lt),var(--laurel));opacity:1;height:20px}
-.laurel .leaf.pop{animation:leafpop .7s var(--spring) both}
+.laurel .leaf.popping{animation:leafpop .7s var(--spring) both}
 @keyframes leafpop{0%{transform:scale(.2) rotate(-90deg)}100%{transform:scale(1) rotate(-22deg)}}
-.laurel .leaf:nth-child(even).pop{animation-name:leafpop2}
+.laurel .leaf:nth-child(even).popping{animation-name:leafpop2}
 @keyframes leafpop2{0%{transform:scale(.2) rotate(90deg)}100%{transform:scale(1) rotate(22deg)}}
 .laurel .count{font-family:var(--display);font-weight:600;font-size:14px;color:var(--ink-soft);min-width:44px;text-align:right}
 .laurel .count b{color:var(--ink);font-size:16px}

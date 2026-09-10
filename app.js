@@ -107,7 +107,7 @@
     if (SPEAKING) { MQ.push([ln, pose, after]); return; }
     SPEAKING = ln.id;
     if (!S.said.includes(ln.id)) { S.said.push(ln.id); save(); }
-    const b = $('bubble'); b.hidden = MODE === 'welcome' || MODE === 'scene' || MODE === 'school'; b.classList.toggle('school', !ln.src);
+    const b = $('bubble'); b.hidden = MODE === 'welcome' || MODE === 'scene' || MODE === 'school'; b.classList.toggle('companion', !ln.src);
     b.innerHTML = wordSpans(ln.t) + (ln.src ? `<span class="who">Marcus Aurelius</span><span class="src">${ln.src}</span>` : `<span class="who">Marcus</span>`);
     if (MODE === 'school') cap('marcus', ln.t, ln.src);
     b.classList.remove('say'); void b.offsetWidth; b.classList.add('say');
@@ -245,7 +245,7 @@
     [...bar.children].forEach((l, i) => l.classList.toggle('on', i < S.done.length));
     paintSound();
   }
-  function popLeaf(i) { const l = $('laurelbar').children[i]; if (!l) return; l.classList.add('on'); l.classList.remove('pop'); void l.offsetWidth; l.classList.add('pop'); }
+  function popLeaf(i) { const l = $('laurelbar').children[i]; if (!l) return; l.classList.add('on'); l.classList.remove('popping'); void l.offsetWidth; l.classList.add('popping'); }
 
   /* ---------- the tablet ---------- */
   let CUR = null, MODE = 'task';
