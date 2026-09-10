@@ -12735,62 +12735,75 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Ask a stranger the time, or for directions you do not really need.",
-       "how": [
-        "Pick somebody who does not look busy.",
-        "Make eye contact first, then ask. Excuse me, do you have the time?",
-        "Say thank you and walk on. That is the whole thing.",
-        "It takes about eight seconds and it is the doorway to all the rest."
-       ],
-       "note": null,
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Ask for something small in a shop — a bag, a glass of water, what they would recommend.",
-       "how": null,
-       "note": null,
+       "test": "Ask a second stranger the same day.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Ask politely for a discount, and take no cheerfully.",
-       "how": null,
-       "note": "Ask once, pleasantly, and mean it. If it is no, say thanks anyway and be genuinely fine about it — that part is the skill.",
+       "test": "Ask for something small in a shop — a bag, a glass of water, what they would recommend.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Ask somebody for a favour you would normally talk yourself out of asking for.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
+       "test": "Ask somebody to repeat something you did not catch.",
+       "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Ask for something you genuinely want, from somebody who could actually say yes.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
+       "test": "Ask for help carrying, reaching or finding something.",
+       "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Take somebody else out and get them to do their first ask.",
-       "how": null,
-       "note": null,
+       "test": "Ask politely for a discount, and take no cheerfully.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Ask somebody for a recommendation and then act on it.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Ask somebody for a favour you would normally talk yourself out of asking for.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Ask, and then say nothing until they answer.",
        "ctx": "with",
        "kind": "attention"
+      },
+      {
+       "n": 10,
+       "test": "Ask somebody for their time — half an hour of it — and say what for.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Ask for something you genuinely want, from somebody who could actually say yes.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
+       "test": "Take somebody else out and get them to do their first ask.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -12803,59 +12816,73 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Walk into a room where you know nobody, and stay.",
-       "how": [
-        "A class, a club, a talk, a group at a day out — anywhere you know nobody.",
-        "Go in and stay at least twenty minutes. Leaving early is the thing to beat.",
-        "You do not have to talk to anybody the first time. Staying is the level."
-       ],
-       "note": null,
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Join a class or a group where everybody already knows each other.",
-       "how": null,
-       "note": null,
+       "test": "Stay for a full twenty minutes before you let yourself leave.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Sit down with people you have never met and start a conversation.",
-       "how": null,
-       "note": "Ask whatever you actually want to know. Looking at things is what a shop is for, and staff are there to be asked.",
+       "test": "Say hello to one person in that room.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Turn up to something on your own, having told nobody you were coming.",
-       "how": null,
-       "note": "You are not obliged to buy anything and you do not owe anybody an explanation. You are deciding whether you like it, which is exactly what a customer does. Behave like one, ask your questions, and leave when you have your answer.",
-       "ctx": "room",
+       "test": "Go somewhere new on your own and buy one thing.",
+       "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Go to something where you are the only one of your kind in the room.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Join a class or a group where everybody already knows each other.",
+       "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Sit down with people you have never met and start a conversation.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Go back a second time, when the first time was awkward.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Turn up to something on your own, having told nobody you were coming.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Eat somewhere on your own without a phone in front of you.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Go to something where you are the only one of your kind in the room.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Learn one person's name and remember it a week later.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
        "test": "Bring somebody who would never have gone on their own.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "kindness"
       }
@@ -12870,59 +12897,74 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Make one phone call you would rather have sent a message about.",
-       "how": [
-        "Pick the one that has been sitting on your list.",
-        "Write down the one sentence you need to say, then dial before you reread it.",
-        "It is nearly always shorter and easier than the version in your head."
-       ],
-       "note": null,
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Phone a shop and ask whether they have something.",
-       "how": null,
-       "note": null,
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Phone somewhere expensive and ask real questions about what they do.",
-       "how": null,
-       "note": "Ask what you want to know the way any caller would. You do not have to hand over your life story or your details to find out what something costs.",
+       "test": "Write down the one sentence you will open with, then ring.",
+       "note": "One sentence, not a script. It is only the first ten seconds that anybody dreads.",
        "ctx": "room",
-       "kind": "courage"
+       "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Phone to sort out something that went wrong, politely, and get it put right.",
-       "how": null,
-       "note": null,
+       "test": "Phone and book something — a table, an appointment, a slot.",
        "ctx": "room",
        "kind": "courage"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Phone a stranger to ask for information, advice or an introduction.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
+       "test": "Phone somebody you have been meaning to ring for weeks.",
+       "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Phone somewhere expensive and ask real questions about what they do.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Leave a voicemail that says who you are and what you want.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Phone to sort out something that went wrong, politely, and get it put right.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Stay pleasant with somebody who was not.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Ask to speak to somebody who can actually decide.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Phone a stranger to ask for information, advice or an introduction.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
        "test": "Make five calls in one day that you had been putting off.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "courage"
       }
@@ -12937,59 +12979,73 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Ask for something you are fairly sure will be refused, and be refused.",
-       "how": [
-        "Ask for something small and unreasonable but harmless — a free coffee, a look behind the counter.",
-        "Be pleasant. You are not trying to trick anybody.",
-        "When they say no, smile, say no problem, and go. The no is the point, not the thing."
-       ],
-       "note": "This is sometimes called rejection practice. The aim is to find out that a no costs you nothing at all.",
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Collect three noes in a week, on purpose.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
-       "kind": "courage"
+       "test": "Notice that nothing at all happened afterwards.",
+       "ctx": "room",
+       "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Collect ten noes, and notice that nothing bad happened.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
+       "test": "Collect three noes in a week, on purpose.",
+       "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Ask one more question after a no, instead of walking off.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
+       "test": "Ask for something silly and get a no with a smile.",
+       "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Turn a no into a yes by asking a different way.",
-       "how": null,
-       "note": "Usually it is asking for something smaller, asking a different person, or simply explaining why you are asking.",
-       "ctx": "with",
+       "test": "Collect ten noes.",
+       "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Ask one more question after a no, instead of walking off.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Ask why not, and get an actual reason.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Turn a no into a yes by asking a different way.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Get a no from somebody whose opinion you care about.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Ask the same person again, later, after something changed.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Count your noes for a month and notice you stopped minding.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
        "test": "Take somebody else out collecting noes.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "kindness"
       }
@@ -13004,60 +13060,74 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Say something out loud in a group of people you do not know.",
-       "how": [
-        "A queue, a class, a waiting room, a group at a day out.",
-        "One sentence out loud that other people can hear. A question is easiest.",
-        "Your heart will go faster than the situation deserves. That is the muscle working."
-       ],
-       "note": null,
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Ask a question at a talk or an event, in front of everybody.",
-       "how": null,
-       "note": null,
+       "test": "Answer a question you were not expecting.",
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Stand up and thank somebody publicly, in a room.",
-       "how": null,
-       "note": null,
+       "test": "Ask a question at a talk or an event, in front of everybody.",
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Speak for two minutes with no warning at all.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Say your name and one sentence about yourself to a room.",
+       "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Speak up when something is wrong and nobody else has.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Start your answer before you have finished working it out.",
+       "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Stand up and thank somebody publicly, in a room.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Speak for one minute with no warning at all.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Speak for two minutes with no warning at all.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Say \"I do not know\" in front of people and carry on.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Speak up when something is wrong and nobody else has.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Disagree with somebody in front of a room.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
        "test": "Take a microphone you were not expecting to be handed.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
+       "ctx": "with",
        "kind": "courage"
       }
      ]
@@ -13071,59 +13141,73 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Wear something you would normally think twice about, for a whole day.",
-       "how": [
-        "A bright coat, an odd hat, colours you would not usually put together.",
-        "Wear it all day, including where people know you.",
-        "Count how many people actually say anything. It is almost always nobody."
-       ],
-       "note": null,
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Hum or sing out loud somewhere people can hear you.",
-       "how": null,
-       "note": null,
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Dance where people can see you.",
-       "how": null,
-       "note": null,
+       "test": "Say hello to three strangers in one walk.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Sit alone in a café for an hour with no phone out.",
-       "how": null,
-       "note": "An hour is longer than it sounds. Bring nothing. Watch the room, think, or do nothing at all.",
+       "test": "Sit alone in a cafe for an hour with no phone out.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Do something harmlessly odd in public and stay for the reaction.",
-       "how": null,
-       "note": "Harmless is the whole rule. Nobody inconvenienced, nobody frightened, nothing damaged, and stop the moment it stops being cheerful.",
+       "test": "Dance where people can see you.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Do something harmlessly odd in public and stay for the reaction.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Ask a question that everybody else thinks is obvious.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Be the first to clap, or the first onto a dance floor.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Say what you actually like, when it is not the fashionable answer.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Do something enthusiastically in front of people too cool for it.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Notice a worry about what people think, and do it anyway.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
        "test": "Do the thing you have been putting off purely because of what people would think.",
-       "how": null,
-       "note": null,
        "ctx": "room",
        "kind": "courage"
       }
@@ -13148,60 +13232,73 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
-       "test": "Ask somebody at home for something you want, and give one good reason why they should say yes.",
-       "how": [
-        "Pick something you actually want — later bedtime, a lift somewhere, a thing you would like.",
-        "Ask plainly, then give ONE reason why it is a good idea for them, not just for you.",
-        "Then stop talking and let them answer. The silence is the hard part.",
-        "That is a negotiation. You have just done one."
-       ],
-       "note": null,
+       "test": "Ask somebody at home for something you want, and give one good reason why.",
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Find out what somebody else pays for something you pay for — a phone, a haircut, a subscription.",
-       "how": null,
-       "note": null,
+       "test": "Find out what somebody else pays for something you pay for.",
        "ctx": "long",
-       "kind": "courage"
+       "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Ask for a discount in a shop or at a market, out loud, once.",
-       "how": null,
-       "note": "Say it plainly and pleasantly: is there any movement on the price? Then stop talking. Markets, independent shops and anything second-hand are the easiest places to start.",
+       "test": "Ask, in a shop or at a market, whether that is the best they can do.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Get three different prices for the same thing before you buy anything.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
+       "test": "Ask a second time somewhere else the same day.",
+       "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Get money off by asking, then write down the exact words that worked.",
-       "how": null,
-       "note": null,
-       "ctx": "home",
-       "kind": "courage"
+       "test": "Get three different prices for the same thing before you buy anything.",
+       "ctx": "long",
+       "kind": "attention"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Ask what it would cost if you bought two.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Ask what it would cost in cash, or today.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Get money off by asking, then write down the exact words that worked.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Ask somebody who does not look like they can move the price.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Ask for the person who can.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Ask about something second-hand and settle in the middle.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
        "test": "Get a better price on something that had a printed price tag on it.",
-       "how": null,
-       "note": "A printed price feels fixed and mostly is not — especially on the last one, a display model, something marked, or when you are buying more than one.",
        "ctx": "out",
        "kind": "courage"
       }
@@ -13216,62 +13313,75 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Ask for something extra that costs them nothing — a bag, more sauce, a longer look.",
-       "how": [
-        "Anywhere that serves you — a café, a shop, a takeaway.",
-        "Ask for something small that costs them nothing at all.",
-        "Ask pleasantly and as if it is completely normal, because it is.",
-        "Notice how often the answer is simply yes."
-       ],
-       "note": null,
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Ask for a free upgrade somewhere, pleasantly, and take no cheerfully.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
+       "test": "Ask twice in one day.",
+       "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Get something added in for nothing — delivery, a case, an extra portion, a longer guarantee.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Ask for a free upgrade somewhere, pleasantly, and take no cheerfully.",
+       "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "When the price will not move, ask what else they can do instead.",
-       "how": null,
-       "note": "This is the most useful question in the whole category. If the price is fixed, the extras usually are not.",
-       "ctx": "room",
-       "kind": "courage"
+       "test": "Ask what comes with it before you ask what it costs.",
+       "ctx": "out",
+       "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Get an upgrade on something that actually mattered — a seat, a room, a service.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Get something added in for nothing — delivery, a case, a longer guarantee.",
+       "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Show somebody else that asking for more is easier than asking for less.",
-       "how": null,
-       "note": null,
+       "test": "When the price will not move, ask what else they can do instead.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Write down three things you would rather have than money off.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Ask for one of those three.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Ask for more of somebody's time rather than more of their money.",
        "ctx": "with",
        "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Get an upgrade on something that actually mattered — a seat, a room, a service.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Say what you would need to make it a yes, and let them find it.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
+       "test": "Show somebody else that asking for more is easier than asking for less.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -13284,59 +13394,49 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Find one thing your household pays every month and work out what it costs in a year.",
-       "how": [
-        "Phone, streaming, insurance, broadband, a gym, a subscription.",
-        "Find the monthly amount and multiply it by twelve.",
-        "Write that yearly number down and look at it. Most people have never seen it."
-       ],
-       "note": null,
        "ctx": "home",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Look up what a brand new customer pays for that same thing.",
-       "how": null,
-       "note": null,
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Phone them and ask, plainly, whether that is the best they can do.",
-       "how": null,
-       "note": "Ask for what any customer would ask for. You do not owe them a reason and you do not have to threaten to leave.",
+       "test": "Write down the number you want before you ring.",
        "ctx": "room",
-       "kind": "courage"
+       "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Ask to be put through to somebody who can actually change it.",
-       "how": null,
-       "note": "The first person you speak to often cannot change anything. Retentions, customer loyalty or a supervisor usually can.",
+       "test": "Phone them and ask, plainly, whether that is the best they can do.",
        "ctx": "room",
        "kind": "courage"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Get a rate, a fee or a bill reduced by asking for it.",
-       "how": null,
-       "note": null,
+       "test": "Ask to be put through to somebody who can actually change it.",
        "ctx": "room",
        "kind": "courage"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Say you are thinking of leaving, and mean it.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Get a rate, a fee or a bill reduced by asking for it.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
        "test": "Go through every regular bill you have in one afternoon.",
-       "how": null,
-       "note": null,
        "ctx": "long",
        "kind": "attention"
       }
@@ -13351,59 +13451,73 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Write down three things about something you are buying that are not the price.",
-       "how": [
-        "Think of anything you are about to buy, big or small.",
-        "Write down three things that matter besides the price — when it arrives, how long it is guaranteed, whether you can send it back.",
-        "Those three are usually easier to move than the price is."
-       ],
-       "note": null,
        "ctx": "room",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Ask when it could arrive, and whether sooner is possible.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Ask for longer to pay, or to pay in parts.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Ask what happens if it goes wrong.",
+       "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Ask for a better guarantee or a longer window to change your mind.",
-       "how": null,
-       "note": null,
+       "test": "Read the part everybody skips, once, all the way through.",
        "ctx": "room",
-       "kind": "courage"
+       "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Improve a deal without the price changing at all.",
-       "how": null,
-       "note": null,
+       "test": "Ask for longer to pay, or to pay in parts.",
        "ctx": "room",
        "kind": "courage"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Ask for a better guarantee or a longer window to change your mind.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Ask who does the work, and when.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Get something written down that had only been said.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Improve a deal without the price changing at all.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Say what matters most to you, and trade the rest.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Spot a term that was worse than the price, and change it.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
        "test": "Explain to somebody why the price is usually the last thing to move.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "kindness"
       }
@@ -13418,60 +13532,75 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Before you go, write down the number you will not go above.",
-       "how": [
-        "Decide the number BEFORE you are standing in front of the thing.",
-        "Write it on your hand or on your phone.",
-        "A number decided in advance is worth ten decided on the spot."
-       ],
-       "note": null,
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
+       "test": "Work out what you will do instead if there is no deal.",
+       "note": "Knowing your other option is what makes walking away possible. Without one you are only pretending.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 3,
        "test": "Leave something in a shop that you wanted, because it was not right.",
-       "how": null,
-       "note": "You have not lost anything. Wanting something is not the same as needing it today.",
        "ctx": "out",
        "kind": "courage"
       },
       {
-       "n": 3,
-       "sid": "s3",
-       "test": "Say out loud 'that is more than I want to spend', and then stop talking.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "courage"
-      },
-      {
        "n": 4,
-       "sid": "s4",
-       "test": "Walk away from a deal, and be glad about it afterwards.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
+       "test": "Say \"that is more than I want to spend\", and then stop talking.",
+       "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Have somebody come back to you with a better offer after you left.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
+       "test": "Sleep on a decision you wanted to make on the spot.",
+       "ctx": "room",
        "kind": "courage"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Say you will think about it, and actually leave.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Walk away from a deal, and be glad about it afterwards.",
+       "ctx": "long",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Have somebody come back to you with a better offer after you left.",
+       "ctx": "long",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Say no to a thing you could afford and did not need.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Walk away from a deal with somebody you liked.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Notice when you are about to buy because you feel rushed, and stop.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
        "test": "Walk away from something you really wanted, because the terms were wrong.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "ctx": "out",
        "kind": "courage"
       }
      ]
@@ -13485,56 +13614,122 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Swap something with somebody so that you are both happy.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "kindness"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Ask somebody what they actually need before you say what you want.",
-       "how": null,
-       "note": "People will tell you what they need if you ask. It is very often not the thing you assumed.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Do a deal where the other person clearly got something they wanted too.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "kindness"
+       "test": "Say back their side before you argue yours.",
+       "ctx": "with",
+       "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Settle a disagreement so both people came away with most of it.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "kindness"
+       "test": "Find one thing that costs you little and is worth a lot to them.",
+       "ctx": "with",
+       "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Do a deal that somebody thanks you for afterwards.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Give that away first, without being asked.",
+       "ctx": "with",
        "kind": "kindness"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Do a deal where the other person clearly got something they wanted too.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 7,
+       "test": "Tell somebody something that weakened your own position, because it was true.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Split a difference instead of winning it.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 9,
+       "test": "Settle a disagreement so both people came away with most of it.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 10,
+       "test": "Let somebody else have the last word on something small.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 11,
+       "test": "Do a deal with somebody you will have to see every week.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
+       "test": "Go back and fix a deal that turned out unfair on them.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 13,
+       "test": "Do a deal that somebody thanks you for afterwards.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 14,
+       "test": "Turn down a better offer because you had already given your word.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 15,
+       "test": "Broker something between two other people.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 16,
+       "test": "Keep a relationship intact through a deal that did not happen.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 17,
+       "test": "Have somebody recommend you to somebody else.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Do a second deal with the same person.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Say what you would not do, out loud, before the talking starts.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 20,
        "test": "Become somebody people want to deal with again.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "ctx": "long",
        "kind": "kindness"
       }
      ]
@@ -13558,60 +13753,73 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Look up a grand building near you that is open to the public, and find its opening times.",
-       "how": [
-        "Try the city hall, the courthouse, a cathedral, a university, a museum, a big old library.",
-        "Search the name plus 'opening times' or 'visitors'.",
-        "Most of them are open to anybody and free, and almost nobody knows it.",
-        "You are not going today. You are just finding out that you could."
-       ],
-       "note": null,
-       "ctx": "out",
+       "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Look up the real price of something you would never normally price — a watch, a car, a suite.",
-       "how": null,
-       "note": null,
+       "test": "Look up the real price of something you would never normally price.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Phone a dealership and ask two questions about a model. Two minutes, then thank them and go.",
-       "how": null,
-       "note": "Ask two real questions — what engine, what it costs, when it is available. Two minutes, thank them, done. You are not committing to anything by asking.",
-       "ctx": "out",
-       "kind": "courage"
+       "test": "Look up what one night somewhere very good actually costs.",
+       "ctx": "room",
+       "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Phone a fine hotel and ask what is included in a room.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
-       "kind": "courage"
+       "test": "Find out that something you assumed was closed to you is not.",
+       "ctx": "room",
+       "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Contact somewhere you assume would never reply, and ask something real.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Phone a dealership and ask two questions about a model.",
+       "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Phone a fine hotel and ask what is included in a room.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Email somewhere you assume would never reply.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Ask a real question in it, not a polite one.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Book a viewing, a tasting or a trial of something.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Put a date in the diary for something you have always put off.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Tell one person you are going.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
        "test": "Book something in advance that you would normally have talked yourself out of.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "courage"
       }
@@ -13626,61 +13834,74 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Walk into an expensive shop and look at three things properly, without hurrying.",
-       "how": [
-        "Somewhere you would normally walk past because of the prices in the window.",
-        "Go in, and look at three things properly — pick them up if they can be picked up.",
-        "Nobody is going to ask you to leave. Looking is what the shop is for.",
-        "Leave when you are finished, not when you start feeling awkward."
-       ],
-       "note": null,
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Let an assistant come over, and tell them what you are looking at.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
+       "test": "Stay long enough that somebody comes over.",
+       "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Ask to try something on — a watch, a coat, a jacket.",
-       "how": null,
-       "note": "Trying something on is normal and expected, and it is what the mirror is there for. Nobody is keeping score.",
-       "ctx": "kit",
+       "test": "Let an assistant come over, and tell them what you are looking at.",
+       "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Try on something far beyond what you would ever spend, and look in the mirror.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
+       "test": "Ask what the difference is between two of them.",
+       "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Spend half an hour somewhere expensive without buying and without apologising.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
+       "test": "Ask to try something on — a watch, a coat, a jacket.",
+       "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Try on something far beyond what you would ever spend, and look in the mirror.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Say thank you and leave without buying, and without apologising.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Go back to the same shop a second time.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Ask somebody who works there what they would choose, and why.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 10,
+       "test": "Spend half an hour somewhere expensive without buying and without apologising.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Learn one real thing about how the good ones are made.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
        "test": "Take somebody who would never have gone in on their own.",
-       "how": null,
-       "note": null,
-       "ctx": "home",
+       "ctx": "with",
        "kind": "kindness"
       }
      ]
@@ -13694,61 +13915,75 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Look up a car you like and read what it actually costs.",
-       "how": [
-        "Pick a car you have always liked the look of.",
-        "Find the real price, and the monthly figure if it is leased.",
-        "Knowing the actual number takes most of the mystery out of it."
-       ],
-       "note": null,
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
+       "test": "Find out what it costs to run, not just to buy.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 3,
        "test": "Walk into a dealership and look at one car, unhurried.",
-       "how": null,
-       "note": null,
        "ctx": "out",
        "kind": "courage"
       },
       {
-       "n": 3,
-       "sid": "s3",
-       "test": "Sit in it, adjust the seat, and stay there a few minutes.",
-       "how": null,
-       "note": "Ask if you may sit in it and they will nearly always say yes. Take your time. Adjust the seat. It is allowed.",
-       "ctx": "room",
-       "kind": "attention"
-      },
-      {
        "n": 4,
-       "sid": "s4",
-       "test": "Ask the questions you actually want answered.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "attention"
+       "test": "Let somebody come and talk to you about it.",
+       "ctx": "with",
+       "kind": "courage"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Take a test drive.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
-       "kind": "attention"
+       "test": "Sit in it, adjust the seat, and stay there a few minutes.",
+       "ctx": "out",
+       "kind": "courage"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Take somebody else for their first look.",
-       "how": null,
-       "note": null,
+       "test": "Ask the questions you actually want answered.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Ask what people usually get wrong about it.",
        "ctx": "with",
        "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Say plainly that you are not buying today, and stay anyway.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Book a test drive.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Take the test drive.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Work out what it would take to be able to buy it, honestly, on paper.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
+       "test": "Take somebody else for their first look.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -13761,57 +13996,75 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Find out which grand buildings near you are open to the public.",
-       "how": null,
-       "note": "City halls, courthouses, cathedrals, university buildings, old libraries and many galleries are open to anybody and free. Almost nobody realises.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Walk into a fine hotel lobby and sit down for ten minutes.",
-       "how": null,
-       "note": null,
+       "test": "Go into one of them.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Visit the city hall, the courthouse, a gallery or a cathedral, and look up.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "attention"
+       "test": "Walk into a fine hotel lobby and sit down for ten minutes.",
+       "ctx": "out",
+       "kind": "courage"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Have a coffee or afternoon tea somewhere far smarter than you would normally.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "attention"
+       "test": "Use the lavatory in a very grand building, and take your time.",
+       "ctx": "out",
+       "kind": "courage"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Go to an event in a building you had assumed was not for you.",
-       "how": null,
-       "note": null,
+       "test": "Visit the city hall, the courthouse, a gallery or a cathedral, and look up.",
        "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Eat alone in a good restaurant, with no phone on the table.",
-       "how": null,
-       "note": "No phone, no book. Just you, the food, and the room. It is far easier than people expect and it changes something.",
+       "test": "Sit through part of a public court hearing or a council meeting.",
        "ctx": "out",
-       "kind": "attention"
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Have a coffee somewhere far smarter than you would normally.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Ask a member of staff a question in one of those places.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Go to a talk, a recital or an opening you were not invited to but could attend.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Go to an event in a building you had assumed was not for you.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Stay to the end, instead of leaving early.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
+       "test": "Eat alone in a good restaurant, with no phone on the table.",
+       "ctx": "out",
+       "kind": "courage"
       }
      ]
     },
@@ -13824,59 +14077,122 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Walk into a room with your head up and make eye contact with one person.",
-       "how": [
-        "Head up, shoulders back, and slow down rather than speed up.",
-        "Find one person and meet their eyes for about a second.",
-        "That is it. It is a physical habit and it rewires surprisingly fast."
-       ],
-       "note": null,
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Take up your full space — do not shrink, and do not hurry through.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
+       "test": "Stand with your shoulders back and your weight even, for one whole conversation.",
+       "ctx": "with",
        "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Let somebody serve you without apologising for the trouble.",
-       "how": null,
-       "note": "Sorry-for-the-trouble is a habit, not manners. Thank you does the same job without shrinking.",
-       "ctx": "room",
+       "test": "Walk slower than you want to across a room.",
+       "note": "Hurrying is what says you do not think you should be here. Nothing else says it as loudly.",
+       "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Take a compliment with a thank you, and nothing after it.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "kindness"
+       "test": "Take up your full space — do not shrink, and do not hurry through.",
+       "ctx": "out",
+       "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Ask for what you want in a room where you feel out of place.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "courage"
+       "test": "Sit down properly instead of perching on the edge.",
+       "ctx": "out",
+       "kind": "attention"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Let somebody serve you without apologising for the trouble.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Say what you want without softening it into a question.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Take a compliment with a thank you, and nothing after it.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 9,
+       "test": "Stop saying sorry for things that are not your fault, for one whole day.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 10,
+       "test": "Hold a silence in a conversation instead of filling it.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Shake hands properly and say your own name clearly.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
+       "test": "Look at the person you are speaking to for the whole sentence.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 13,
+       "test": "Wear something you feel good in, deliberately, to something ordinary.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 14,
+       "test": "Ask for what you want in a room where you feel out of place.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 15,
+       "test": "Introduce yourself to the most senior person in the room.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 16,
+       "test": "Disagree with somebody more important than you, calmly.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 17,
+       "test": "Walk in late, on purpose, and sit down without apologising.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 18,
+       "test": "Make somebody else feel like they belong, in a room where you barely do.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 19,
+       "test": "Notice one place where you no longer feel out of place at all.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 20,
        "test": "Notice that you have stopped feeling out of place, and say when it changed.",
-       "how": null,
-       "note": null,
        "ctx": "room",
        "kind": "attention"
       }
@@ -13891,59 +14207,121 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Write down one place you avoid because you have decided it is not for you.",
-       "how": [
-        "Be honest and be specific. Not 'posh places' but the actual shop, street or building.",
-        "One is enough to start with.",
-        "Keep the paper. You are going to check it against what actually happens."
-       ],
-       "note": null,
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Write down what you assume would happen there. Keep the paper.",
-       "how": null,
-       "note": null,
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Notice one time you talked yourself out of something, and write down the exact thought.",
-       "how": null,
-       "note": null,
+       "test": "Write down who first told you that, if anybody did.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
+       "test": "Notice one time you talked yourself out of something, and write down the exact thought.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 5,
+       "test": "Write the sentence you say to yourself, word for word.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Say that sentence out loud and hear how it sounds.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Ask whether you have any actual evidence for it.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
        "test": "Go to the place, and compare what happened with what you wrote.",
-       "how": null,
-       "note": "Read what you wrote before you went, then write what actually happened. The gap between the two is the whole point of this track.",
        "ctx": "out",
        "kind": "courage"
       },
       {
-       "n": 5,
-       "sid": "s5",
+       "n": 9,
+       "test": "Write down what actually happened, underneath what you predicted.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 10,
+       "test": "Do it again somewhere else.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Find one thing you were right to be wary of, and one you were wrong about.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
        "test": "Go somewhere every week for a month that you used to avoid.",
-       "how": null,
-       "note": null,
        "ctx": "long",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
+       "n": 13,
+       "test": "Notice the old sentence turning up, and carry on anyway.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 14,
+       "test": "Write a new sentence to say instead, and use it once.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 15,
+       "test": "Do something this month that the old story said you could not.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 16,
+       "test": "Find somebody who did the thing you thought was not for people like you.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 17,
+       "test": "Ask them how they started.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 18,
+       "test": "Say out loud what you actually want, to one person.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 19,
+       "test": "Read back your first page, months later.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 20,
        "test": "Tell somebody the story you used to believe, and what actually happened instead.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "kindness"
       }
@@ -13968,61 +14346,75 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Put your own things away without being asked twice.",
-       "how": [
-        "Look round the room for the things that are yours.",
-        "Put each one back where it actually lives, not on a pile.",
-        "Do it without anybody asking you twice."
-       ],
-       "note": null,
        "ctx": "home",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Sweep a floor and get the whole pile into the bin.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
        "test": "Wash up a full sink and put everything back where it lives.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Clean a room properly enough that it passes a close look.",
-       "how": null,
-       "note": "A close look means somebody else checks the corners, the skirting and behind the door.",
+       "test": "Wipe down a whole kitchen surface, moving what is on it.",
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Do a load of washing from the basket to folded and put away.",
-       "how": null,
-       "note": null,
+       "test": "Clean a bathroom properly, including the bits nobody looks at.",
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Look after the house for a whole day — food, tidy, animals, all of it.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
+       "test": "Clean a room properly enough that it passes a close look.",
+       "ctx": "home",
        "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Do a load of washing from the basket to folded and put away.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Change a bed on your own.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Do the bins, all of them, including the recycling, on the right day.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 10,
+       "test": "Notice something that needed doing and do it without being asked.",
+       "ctx": "home",
+       "kind": "kindness"
+      },
+      {
+       "n": 11,
+       "test": "Keep one room right for a fortnight without anybody reminding you.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
+       "test": "Look after the house for a whole day — food, tidy, animals, all of it.",
+       "ctx": "long",
+       "kind": "kindness"
       }
      ]
     },
@@ -14035,61 +14427,121 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Tighten a loose screw with the right screwdriver.",
-       "how": [
-        "Find a screw that is loose — a door handle, a chair, a hinge.",
-        "Match the screwdriver to the screw head. The wrong one chews it up.",
-        "Push in hard while you turn. Most of the work is pushing, not turning.",
-        "Turn clockwise until it is snug, then stop."
-       ],
-       "note": null,
        "ctx": "kit",
-       "kind": "skill",
-       "twist": "Other hand."
+       "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
+       "test": "Know which screwdriver is the right one, and why.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 3,
        "test": "Glue something so it stays fixed a month later.",
-       "how": null,
-       "note": null,
        "ctx": "long",
        "kind": "skill"
       },
       {
-       "n": 3,
-       "sid": "s3",
-       "test": "Sew or patch something back into use.",
-       "how": null,
-       "note": "Take the tube out, find the hole in water, patch it, and it should hold overnight.",
-       "ctx": "room",
-       "kind": "skill"
-      },
-      {
        "n": 4,
-       "sid": "s4",
-       "test": "Fix something rather than replacing it, three times.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Sew or patch something back into use.",
+       "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Put up a shelf that is level and holds weight.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Fix something rather than replacing it.",
+       "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Look up how to fix something and then do it.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Change a fuse, a plug or a battery in something that needed it.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Unblock a sink.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Fill and sand a hole in a wall.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Paint something so the edges are clean.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Fix three things in one day.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Put up a shelf that is level and holds weight.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Find a stud or a joist before you drill into a wall.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 14,
+       "test": "Fix a door that sticks or a drawer that does not run.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Take something apart to fix it, and keep the screws in order.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 16,
+       "test": "Fix something that two people had already given up on.",
+       "ctx": "home",
+       "kind": "courage"
+      },
+      {
+       "n": 17,
+       "test": "Say honestly when something is beyond you, and get the right person.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 18,
+       "test": "Keep a small kit of the things you always end up needing.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 19,
        "test": "Fix something for somebody else who could not.",
-       "how": null,
-       "note": null,
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 20,
+       "test": "Teach somebody to fix one thing themselves, hands off.",
        "ctx": "with",
        "kind": "kindness"
       }
@@ -14104,60 +14556,73 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Name ten tools and say what each one is for.",
-       "how": [
-        "Open the toolbox and take ten things out.",
-        "Name each and say what it does. Guessing is allowed.",
-        "Put them all back where they came from."
-       ],
-       "note": null,
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Use a hammer, a saw and a screwdriver safely.",
-       "how": null,
-       "note": null,
+       "test": "Use a hammer without bending the nail.",
        "ctx": "kit",
-       "kind": "skill",
-       "twist": "The screwdriver and the hammer in your other hand. Not the saw."
+       "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Use a drill safely and put it away properly.",
-       "how": null,
-       "note": null,
+       "test": "Use a saw safely, with the wood held still.",
        "ctx": "kit",
-       "kind": "courage"
+       "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Put every tool back clean and where it lives, all season.",
-       "how": null,
-       "note": "Where it lives means the same place every time, so the next person can find it.",
-       "ctx": "home",
-       "kind": "courage"
+       "test": "Use a screwdriver without chewing up the screw head.",
+       "ctx": "kit",
+       "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Choose the right tool for a job without asking anybody.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Use a tape measure and read it right, twice.",
+       "ctx": "kit",
        "kind": "attention"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Use a spirit level and get something actually level.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Use a drill safely and put it away properly.",
+       "ctx": "kit",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Choose the right drill bit for the job.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Wear the right protection without being told to.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 10,
+       "test": "Choose the right tool for a job without asking anybody.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Put every tool back clean and where it lives, all season.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
        "test": "Teach tool safety to younger children.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "kindness"
       }
@@ -14172,57 +14637,123 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Pump a tyre to the right pressure.",
-       "how": null,
-       "note": null,
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Put a chain back on and clean your hands afterwards.",
-       "how": null,
-       "note": null,
+       "test": "Find the right pressure written on the tyre itself.",
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Mend a puncture so it holds.",
-       "how": null,
-       "note": null,
+       "test": "Put a chain back on and clean your hands afterwards.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Adjust brakes so they bite properly.",
-       "how": null,
-       "note": "The brakes should bite before the lever reaches the handlebar, and the wheel should still spin freely.",
+       "test": "Clean and oil a chain properly.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Take a wheel off and put it back on true.",
-       "how": null,
-       "note": null,
+       "test": "Check the brakes, the tyres and the chain before a ride, every time.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Take a wheel off and put it back on.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Service somebody else's bike so they can ride it safely.",
-       "how": null,
-       "note": null,
+       "n": 7,
+       "test": "Get the tyre off the rim without pinching the tube.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Find the hole in a tube.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Mend a puncture so it holds.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Mend one at the roadside, with what you carry.",
        "ctx": "out",
        "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Adjust brakes so they bite properly.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Change a brake pad or a cable.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Adjust the gears so they change cleanly.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Set the saddle height right for the person riding it.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 15,
+       "test": "True a wheel enough that it runs straight.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Strip, clean and rebuild one part of a bike.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Diagnose a noise and fix what was causing it.",
+       "ctx": "kit",
+       "kind": "attention"
+      },
+      {
+       "n": 18,
+       "test": "Get a bike out of a shed that nobody has ridden for years.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Service somebody else's bike so they can ride it safely.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 20,
+       "test": "Teach somebody to mend their own puncture.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -14235,59 +14766,121 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Know how to call for help and exactly what to say.",
-       "how": [
-        "999 in the UK and Ireland, and ask for ambulance, fire or police.",
-        "Say where you are first — the address before anything else.",
-        "Then what happened, how many people, and stay on the line."
-       ],
-       "note": null,
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Clean and cover a cut properly.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
-       "kind": "skill"
+       "test": "Say your own address out loud, the way you would to an ambulance.",
+       "ctx": "room",
+       "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Treat a burn, a sting and a nosebleed correctly.",
-       "how": null,
-       "note": null,
+       "test": "Know where the first aid kit is, and what is in it.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Put somebody in the recovery position.",
-       "how": null,
-       "note": "The recovery position keeps somebody breathing if they are unconscious. Learn it from a real course or a first aid site.",
+       "test": "Clean and cover a cut properly.",
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Pass a real first aid course.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
+       "test": "Stop a bleed with pressure.",
+       "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Treat a burn correctly — cool water, twenty minutes.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Treat a sting and a nosebleed correctly.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Know what to do for a bump on the head, and when to worry.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Put somebody in the recovery position.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Check whether somebody is breathing, properly.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Know what to do if somebody is choking.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Know the difference between an ambulance and a doctor, and choose right.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 13,
+       "test": "Know the signs of somebody getting too cold or too hot.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 14,
+       "test": "Keep somebody calm while you wait for help.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 15,
+       "test": "Learn CPR from somebody who teaches it.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Practise CPR on a dummy until the rhythm is right.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Pass a real first aid course.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Restock the kit at home, and check the dates.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 19,
+       "test": "Deal with a real injury calmly.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 20,
        "test": "Be the person the group turns to when somebody is hurt.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "kindness"
       }
@@ -14302,57 +14895,124 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Take something broken apart and name five parts inside.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Explain how one everyday machine works, correctly.",
-       "how": null,
-       "note": "A kettle, a bicycle gear, a toilet cistern or a door lock. Say it in order — what happens first, then what.",
-       "ctx": "room",
-       "kind": "skill"
+       "test": "Lay the parts out in the order they came out.",
+       "note": "Photograph it as you go. Everybody thinks they will remember and nobody does.",
+       "ctx": "home",
+       "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Take something apart and put it back so it still works.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
+       "test": "Explain how one everyday machine works, correctly.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Find out why something stopped working and say why.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "skill"
-      },
-      {
-       "n": 5,
-       "sid": "s5",
-       "test": "Repair a small motor or appliance.",
-       "how": null,
-       "note": null,
+       "test": "Take something apart and put it back so it still works.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
+       "n": 5,
+       "test": "Explain what a lever, a pulley and a gear each do.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
        "n": 6,
-       "sid": "s6",
-       "test": "Explain it to somebody else so they could do it.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
+       "test": "Find all three in things around the house.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Explain how a switch, a battery and a bulb make a circuit.",
+       "ctx": "room",
        "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Explain what a motor actually does.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Say why an engine needs air, fuel and a spark.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Find out why something stopped working and say why.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Test one thing at a time instead of changing three at once.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
+       "test": "Repair a small motor or appliance.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Explain how a fridge makes things cold.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Explain what happens when you flush a lavatory or turn a tap.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Look under a car bonnet and name six things.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 16,
+       "test": "Check oil, water and tyre pressure on a car.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Take apart something you were told not to bother with, and fix it.",
+       "ctx": "home",
+       "kind": "courage"
+      },
+      {
+       "n": 18,
+       "test": "Draw how something works, from memory.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Explain it to somebody else so they could do it.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 20,
+       "test": "Fix a machine for somebody who was about to throw it out.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -14365,55 +15025,73 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Say your own address and a phone number from memory.",
-       "how": null,
-       "note": null,
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Know what to do if you get separated in a busy place.",
-       "how": null,
-       "note": null,
+       "test": "Say a second phone number from memory.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
+       "test": "Know what to do if you get separated in a busy place.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 4,
+       "test": "Know who you would go to for help, and who you would not.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 5,
        "test": "Cross a road safely on your own, every time.",
-       "how": null,
-       "note": null,
        "ctx": "out",
        "kind": "courage"
       },
       {
-       "n": 4,
-       "sid": "s4",
+       "n": 6,
        "test": "Know what to do in a fire and where everybody meets.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "kindness"
       },
       {
-       "n": 5,
-       "sid": "s5",
-       "test": "Judge a risk out loud before doing something, and change the plan.",
-       "how": null,
-       "note": "Say it out loud before you do it: what could go wrong, how likely, and what you will change.",
+       "n": 7,
+       "test": "Find the stopcock, the fuse box and the meter in your own house.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Say what you would do if you smelled gas or saw smoke.",
        "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Judge a risk out loud before doing something, and change the plan.",
+       "ctx": "out",
        "kind": "courage"
       },
       {
-       "n": 6,
-       "sid": "s6",
+       "n": 10,
+       "test": "Say no to something that was not safe, when others were doing it.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Tell somebody where you are going and when you will be back.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
        "test": "Be responsible for a younger child's safety for a whole day.",
-       "how": null,
-       "note": null,
        "ctx": "long",
        "kind": "kindness"
       }
@@ -14438,61 +15116,123 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Feed an animal the right amount, every day, for a week.",
-       "how": [
-        "Find out how much this animal should get. Guessing is how animals get ill.",
-        "Feed it at about the same time each day.",
-        "Fresh water every time as well, not just food."
-       ],
-       "note": null,
        "ctx": "long",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
+       "test": "Find out how much the right amount actually is, and why.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 3,
+       "test": "Give it fresh water every day without being reminded.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 4,
        "test": "Do the unpleasant half of caring for one, not just the nice half.",
-       "how": null,
-       "note": null,
        "ctx": "long",
        "kind": "kindness"
       },
       {
-       "n": 3,
-       "sid": "s3",
-       "test": "Look after an animal completely, on your own, for a week.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
-       "kind": "skill"
-      },
-      {
-       "n": 4,
-       "sid": "s4",
-       "test": "Notice an animal is unwell before anybody says, and tell somebody.",
-       "how": null,
-       "note": "Off its food, hiding, breathing oddly, or just not behaving like itself. Say so early rather than waiting.",
-       "ctx": "long",
-       "kind": "courage"
-      },
-      {
        "n": 5,
-       "sid": "s5",
-       "test": "Raise something from young.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
+       "test": "Clean out a hutch, a tank or a litter tray properly.",
+       "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Teach another child to care for an animal properly.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
+       "test": "Learn to handle an animal so it stays calm.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Exercise or walk one, every day for a week.",
+       "ctx": "long",
        "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Look after an animal completely, on your own, for a week.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Notice an animal is unwell before anybody says, and tell somebody.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 10,
+       "test": "Learn what each of five noises or behaviours means.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Look after somebody else's animal while they are away.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 12,
+       "test": "Work out what one costs to keep for a year.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 13,
+       "test": "Train an animal to do one thing on command.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Take one to the vet and ask the questions yourself.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 15,
+       "test": "Look after an animal for a whole season.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Raise something from young.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Sit with an animal that is frightened until it settles.",
+       "ctx": "home",
+       "kind": "kindness"
+      },
+      {
+       "n": 18,
+       "test": "Deal properly with one that dies, or one that has to go.",
+       "ctx": "home",
+       "kind": "courage"
+      },
+      {
+       "n": 19,
+       "test": "Help something wild without making it tame.",
+       "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 20,
+       "test": "Teach another child to care for an animal properly.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -14505,57 +15245,123 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Notice a younger child on their own and bring them into the game.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "kindness"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Teach one younger child one thing you can do.",
-       "how": null,
-       "note": null,
+       "test": "Learn a younger child's name and use it.",
        "ctx": "with",
        "kind": "kindness"
       },
       {
        "n": 3,
-       "sid": "s3",
+       "test": "Get down to their height when you talk to them.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 4,
+       "test": "Let one win, without them knowing you let them.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 5,
+       "test": "Teach one younger child one thing you can do.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 6,
+       "test": "Watch them do it wrong and not take over.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Read to a younger child.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 8,
+       "test": "Sort out an argument between two of them without picking a winner.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 9,
+       "test": "Comfort one who is upset, without saying it does not matter.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 10,
        "test": "Look after a younger child for an hour and everybody is happy at the end.",
-       "how": null,
-       "note": "Happy at the end is the test, for both of you. An hour is enough to count.",
        "ctx": "home",
        "kind": "kindness"
       },
       {
-       "n": 4,
-       "sid": "s4",
+       "n": 11,
+       "test": "Make up a game that keeps three of them going.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Say no to a younger child kindly and stick to it.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 13,
+       "test": "Get one through something they were frightened of.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 14,
        "test": "Get a younger child through their first hard walk, to the end, happy.",
-       "how": null,
-       "note": null,
        "ctx": "out",
        "kind": "courage"
       },
       {
-       "n": 5,
-       "sid": "s5",
+       "n": 15,
+       "test": "Look after one for a whole afternoon on your own.",
+       "ctx": "home",
+       "kind": "kindness"
+      },
+      {
+       "n": 16,
        "test": "Run an activity for a group of younger children.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "ctx": "with",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Look after a family who are new, through their whole first season.",
-       "how": null,
-       "note": null,
+       "n": 17,
+       "test": "Notice one being left out, and fix it without announcing it.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 18,
+       "test": "Be the one a younger child asks for.",
        "ctx": "long",
-       "kind": "skill"
+       "kind": "kindness"
+      },
+      {
+       "n": 19,
+       "test": "Help a family with young children through a difficult week.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 20,
+       "test": "Look after a family who are new, through their whole first season.",
+       "ctx": "long",
+       "kind": "kindness"
       }
      ]
     },
@@ -14568,57 +15374,123 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Say hello to somebody much older and shake their hand properly.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Visit somebody older and listen to them for an hour.",
-       "how": null,
-       "note": null,
+       "test": "Ask them one question about themselves and listen to the whole answer.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 3,
+       "test": "Sit with somebody older for half an hour.",
        "ctx": "out",
        "kind": "kindness"
       },
       {
-       "n": 3,
-       "sid": "s3",
+       "n": 4,
+       "test": "Visit somebody older and listen to them for an hour.",
+       "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 5,
+       "test": "Ask what they did for a living, and what it was actually like.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Ask what this place was like when they were young.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
        "test": "Do a job for a neighbour and take nothing for it.",
-       "how": null,
-       "note": null,
+       "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 8,
+       "test": "Offer before being asked.",
+       "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 9,
+       "test": "Carry something, or fetch something, without making a thing of it.",
+       "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 10,
+       "test": "Visit the same person twice.",
+       "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 11,
+       "test": "Visit every week for a month.",
        "ctx": "long",
        "kind": "kindness"
       },
       {
-       "n": 4,
-       "sid": "s4",
+       "n": 12,
        "test": "Write down somebody's story from their own telling.",
-       "how": null,
-       "note": "Write it down as they said it, not tidied up. Ask when, where and who, and let them talk.",
        "ctx": "home",
        "kind": "attention"
       },
       {
-       "n": 5,
-       "sid": "s5",
-       "test": "Organise something for people who are on their own.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "n": 13,
+       "test": "Ask about somebody who has died, and listen.",
+       "ctx": "with",
        "kind": "kindness"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Keep it up for a year.",
-       "how": null,
-       "note": null,
+       "n": 14,
+       "test": "Show somebody older how to do something on a phone or a computer, patiently.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 15,
+       "test": "Bring something round — food, a plant, a photograph.",
+       "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 16,
+       "test": "Take somebody older out somewhere.",
+       "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 17,
+       "test": "Organise something for people who are on their own.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 18,
+       "test": "Get somebody younger to come with you.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 19,
+       "test": "Keep visiting through a season when it stopped being novel.",
        "ctx": "long",
-       "kind": "skill"
+       "kind": "kindness"
+      },
+      {
+       "n": 20,
+       "test": "Keep it up for a year.",
+       "ctx": "long",
+       "kind": "kindness"
       }
      ]
     },
@@ -14631,55 +15503,121 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Share something you actually wanted, before being asked.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "kindness"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Give away something you liked.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "kindness"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Raise money for something that is not for you.",
-       "how": null,
-       "note": "Not for you means you get nothing out of it, including the credit.",
-       "ctx": "room",
+       "test": "Give somebody the bigger half.",
+       "ctx": "with",
        "kind": "kindness"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Give a share of what you earned away on purpose.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Do something kind that nobody asked you to do.",
+       "ctx": "home",
        "kind": "kindness"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Do something kind that nobody asked you to do.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Do something kind that nobody found out about.",
+       "ctx": "home",
        "kind": "kindness"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Give something to somebody who cannot give anything back.",
+       "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 7,
+       "test": "Give somebody your time when you wanted it for yourself.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 8,
+       "test": "Make something for somebody and give it away.",
+       "ctx": "home",
+       "kind": "kindness"
+      },
+      {
+       "n": 9,
+       "test": "Give away a share of what you earned, on purpose.",
+       "ctx": "room",
+       "kind": "kindness"
+      },
+      {
+       "n": 10,
+       "test": "Raise money for something that is not for you.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Ask other people to give too.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
+       "test": "Give something regularly for three months.",
+       "ctx": "long",
+       "kind": "kindness"
+      },
+      {
+       "n": 13,
+       "test": "Find out where it actually went.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 14,
+       "test": "Give to somebody near you rather than far away.",
+       "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 15,
+       "test": "Give without deciding whether they deserved it.",
+       "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 16,
+       "test": "Let somebody give you something, and take it well.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 17,
+       "test": "Give something up so that somebody else could have it.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 18,
+       "test": "Give somebody a chance rather than a thing.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 19,
+       "test": "Keep it going for a season without being reminded.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 20,
        "test": "Make giving a habit that somebody else starts copying.",
-       "how": null,
-       "note": null,
        "ctx": "long",
        "kind": "kindness"
       }
@@ -14694,57 +15632,123 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Pick up litter you walk past, without being asked.",
-       "how": null,
-       "note": null,
        "ctx": "out",
        "kind": "kindness"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Fill a bag from one beach or one path.",
-       "how": null,
-       "note": null,
+       "test": "Pick up three things on one walk.",
        "ctx": "out",
        "kind": "kindness"
       },
       {
        "n": 3,
-       "sid": "s3",
+       "test": "Carry a bag with you on purpose.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 4,
+       "test": "Fill a bag from one beach or one path.",
+       "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 5,
+       "test": "Sort what you picked up and put it in the right bins.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Find out where your own rubbish actually goes.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
        "test": "Look after one small public place for a month.",
-       "how": null,
-       "note": "One small place means the same place, more than once — a lane, a corner of a beach, a bus shelter.",
        "ctx": "long",
        "kind": "skill"
       },
       {
-       "n": 4,
-       "sid": "s4",
-       "test": "Get three other people to help you.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
-       "kind": "courage"
-      },
-      {
-       "n": 5,
-       "sid": "s5",
-       "test": "Organise a clean-up for the group.",
-       "how": null,
-       "note": null,
+       "n": 8,
+       "test": "Report something broken to whoever can fix it.",
        "ctx": "room",
        "kind": "courage"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Make it happen every season for a year.",
-       "how": null,
-       "note": null,
+       "n": 9,
+       "test": "Plant something in a place that is not yours to keep.",
+       "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 10,
+       "test": "Get one other person to help you.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Get three other people to help you.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
+       "test": "Organise a clean-up for the group.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 13,
+       "test": "Weigh or count what you collected and tell people.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 14,
+       "test": "Do it again in the same place a month later.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 15,
+       "test": "Look after something living — a tree, a verge, a pond.",
+       "ctx": "long",
+       "kind": "kindness"
+      },
+      {
+       "n": 16,
+       "test": "Get permission to do something properly, from whoever owns it.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 17,
+       "test": "Leave every place you go a little better than you found it, for a week.",
+       "ctx": "long",
+       "kind": "kindness"
+      },
+      {
+       "n": 18,
+       "test": "Get younger children doing it with you.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 19,
+       "test": "Keep one place right through a whole season.",
        "ctx": "long",
        "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Make it happen every season for a year.",
+       "ctx": "long",
+       "kind": "kindness"
       }
      ]
     },
@@ -14757,56 +15761,74 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Say hello first to somebody new, before they say it to you.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Show a new person where everything is.",
-       "how": null,
-       "note": null,
+       "test": "Ask their name, and use it in the next sentence.",
        "ctx": "with",
-       "kind": "kindness"
-      },
-      {
-       "n": 3,
-       "sid": "s3",
-       "test": "Learn and use the names of five people you have just met.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
        "kind": "attention"
       },
       {
-       "n": 4,
-       "sid": "s4",
-       "test": "Sit with somebody who came on their own.",
-       "how": null,
-       "note": null,
+       "n": 3,
+       "test": "Show a new person where everything is.",
        "ctx": "with",
        "kind": "kindness"
       },
       {
+       "n": 4,
+       "test": "Learn and use the names of five people you have just met.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
        "n": 5,
-       "sid": "s5",
-       "test": "Introduce two people to each other and get them talking.",
-       "how": null,
-       "note": "Introducing people properly means giving each of them something to say next.",
+       "test": "Sit with somebody who came on their own.",
        "ctx": "with",
        "kind": "kindness"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Introduce two people to each other and get them talking.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 7,
+       "test": "Notice who is standing at the edge, and go over.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 8,
+       "test": "Save somebody a seat.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 9,
+       "test": "Tell a new person the thing nobody thinks to tell them.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 10,
+       "test": "Ask somebody new back a second time.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Remember one thing about them and ask about it next time.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
        "test": "Run the welcome for a new family on their first day.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
+       "ctx": "with",
        "kind": "kindness"
       }
      ]
@@ -14821,55 +15843,73 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Carry one thing to the table before a meal, and one thing back after it.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Put your own plate and cup by the sink when you have finished.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Give a pet its food, or a plant its water.",
-       "how": null,
-       "note": "No pet and no plant? Fill somebody's water glass before they ask for it.",
+       "test": "Put your own shoes and coat away.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Make something for somebody and give it to them. A drawing counts.",
-       "how": null,
-       "note": null,
+       "test": "Give a pet its food, or a plant its water.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
+       "test": "Do that every day for a week.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Fetch something for somebody when they ask.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 7,
+       "test": "Hold a door open for somebody.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 8,
+       "test": "Make something for somebody and give it to them. A drawing counts.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 9,
        "test": "Help a smaller child do something they cannot do yet, without doing it for them.",
-       "how": null,
-       "note": "Shoes, a zip, a puzzle piece. Hands off, words on.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 10,
+       "test": "Help tidy up a whole room with somebody, and stay to the end.",
        "ctx": "with",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
+       "n": 11,
+       "test": "Say thank you to somebody who did something for you today.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 12,
        "test": "Do one helpful thing before anybody asks, and do not tell them it was you.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "courage"
       }
@@ -14894,60 +15934,122 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Sit completely still and quiet for one minute.",
-       "how": [
-        "Sit somewhere comfortable and set a timer for one minute.",
-        "Hands still, feet still, eyes open or shut, whichever.",
-        "Your mind will wander. That is fine and not a failure.",
-        "One minute is longer than you think, and that is the point."
-       ],
-       "note": null,
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Sit still for five minutes without fidgeting.",
-       "how": null,
-       "note": "Fidgeting includes scratching and shifting about. Notice it, stop, carry on.",
+       "test": "Sit still for two minutes.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Sit for ten minutes and notice your own breathing.",
-       "how": null,
-       "note": null,
+       "test": "Sit still for five minutes without fidgeting.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Sit for twenty minutes.",
-       "how": null,
-       "note": null,
+       "test": "Sit for five minutes and count your breaths to ten, over and over.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Do it every morning for thirty days.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
-       "kind": "skill"
+       "test": "Notice your mind wander and bring it back, without minding.",
+       "note": "The wandering is not the failure. Noticing it is the whole exercise.",
+       "ctx": "room",
+       "kind": "attention"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Lead five minutes of stillness for the group.",
-       "how": null,
-       "note": null,
+       "test": "Sit for ten minutes and notice your own breathing.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Sit still three days in one week.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Sit for ten minutes with your eyes open, looking at one thing.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Sit for fifteen minutes.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 10,
+       "test": "Sit still somewhere noisy.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Sit still outdoors for ten minutes.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
+       "test": "Sit for twenty minutes.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 13,
+       "test": "Do it every morning for a week.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 14,
+       "test": "Do it on a day you did not want to.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 15,
+       "test": "Sit still for twenty minutes with somebody else in the room.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 16,
+       "test": "Do it every morning for a fortnight.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 17,
+       "test": "Notice one thing it has changed about an ordinary day.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 18,
+       "test": "Do it every morning for thirty days.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 19,
+       "test": "Sit for half an hour, once.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 20,
+       "test": "Lead five minutes of stillness for a group.",
        "ctx": "with",
        "kind": "courage"
       }
@@ -14962,61 +16064,123 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Do one thing for ten minutes with nothing else going on.",
-       "how": [
-        "Pick one thing and put everything else out of reach.",
-        "Set a timer for ten minutes and start.",
-        "If you drift, come back. Drifting is not failing."
-       ],
-       "note": null,
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
+       "test": "Put the phone in a different room first.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 3,
        "test": "Do one thing for twenty-five minutes without stopping.",
-       "how": null,
-       "note": "Twenty-five minutes is one pomodoro. Phone in another room, not face down beside you.",
        "ctx": "room",
        "kind": "skill"
       },
       {
-       "n": 3,
-       "sid": "s3",
-       "test": "Work for an hour with no screen near you.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "attention"
-      },
-      {
        "n": 4,
-       "sid": "s4",
        "test": "Notice yourself drifting and come back, on purpose, five times.",
-       "how": null,
-       "note": null,
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Do a whole morning of one thing.",
-       "how": null,
-       "note": null,
+       "test": "Write down what you will do before you start, in one line.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Explain to somebody else how you get yourself to concentrate.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
+       "test": "Finish the thing you started before starting another.",
+       "ctx": "room",
        "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Do two twenty-five minute stretches in one morning.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Work for an hour with no screen near you.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Notice the moment you want to check something, and do not.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Do the hardest thing on your list first.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Work with the notifications off, for a whole session.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
+       "test": "Do a whole morning of one thing.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 13,
+       "test": "Read something difficult for forty minutes without stopping.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 14,
+       "test": "Notice what actually pulls you away, and write down the top three.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 15,
+       "test": "Remove one of those three from the room.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 16,
+       "test": "Work at the same time on three days in one week.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 17,
+       "test": "Do a whole morning of one thing, three weeks running.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 18,
+       "test": "Do something boring all the way to the end.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 19,
+       "test": "Notice one thing you can now do that you could not concentrate on before.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 20,
+       "test": "Explain to somebody else how you get yourself to concentrate.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -15029,55 +16193,73 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
-       "test": "Go to bed without a fight, seven nights running.",
-       "how": null,
-       "note": null,
+       "test": "Go to bed without a fight, three nights running.",
        "ctx": "long",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Get up at the same time seven days running.",
-       "how": null,
-       "note": null,
+       "test": "Go to bed without a fight, seven nights running.",
        "ctx": "long",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Notice how you feel after a bad night, and say so.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "courage"
-      },
-      {
-       "n": 4,
-       "sid": "s4",
-       "test": "Keep screens out of the last hour before bed for two weeks.",
-       "how": null,
-       "note": "The last hour means no screens at all. Read, talk, or do something with your hands.",
-       "ctx": "home",
-       "kind": "courage"
-      },
-      {
-       "n": 5,
-       "sid": "s5",
-       "test": "Run your own bedtime with nobody reminding you, for a month.",
-       "how": null,
-       "note": null,
+       "test": "Get up at the same time three days running.",
        "ctx": "long",
        "kind": "skill"
       },
       {
+       "n": 4,
+       "test": "Get up at the same time seven days running.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 5,
+       "test": "Notice how you feel after a bad night, and say so.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
        "n": 6,
-       "sid": "s6",
+       "test": "Keep screens out of the last half hour before bed, for a week.",
+       "ctx": "home",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Keep screens out of the last hour before bed for two weeks.",
+       "ctx": "home",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Get daylight on your face in the first hour of the morning, every day for a week.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Find out how many hours you actually need, by trying it.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 10,
+       "test": "Have the same last twenty minutes every night for a fortnight.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Run your own bedtime with nobody reminding you, for a month.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
        "test": "Explain what sleep does, and help somebody else fix theirs.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "kindness"
       }
@@ -15092,55 +16274,121 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Finish something you wanted to give up on.",
-       "how": null,
-       "note": null,
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Keep going for ten minutes after it stopped being fun.",
-       "how": null,
-       "note": "Ten minutes past the point where you wanted to stop. Notice how it feels afterwards.",
-       "ctx": "long",
+       "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Try something you are bad at, in front of other people.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
-       "kind": "courage"
-      },
-      {
-       "n": 4,
-       "sid": "s4",
-       "test": "Fail at something publicly and go back and do it again.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
-       "kind": "courage"
-      },
-      {
-       "n": 5,
-       "sid": "s5",
-       "test": "Choose the harder of two options on purpose, and say why.",
-       "how": null,
-       "note": null,
+       "test": "Do something you have been putting off for a week.",
        "ctx": "room",
        "kind": "courage"
       },
       {
+       "n": 4,
+       "test": "Do the hard thing first thing in the morning.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 5,
+       "test": "Try something you are bad at, in front of other people.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
        "n": 6,
-       "sid": "s6",
+       "test": "Be the worst in the room and stay.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Ask for help with something you are ashamed of not knowing.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Fail at something publicly and go back and do it again.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Do the same hard thing three days running.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 10,
+       "test": "Finish something on a day you felt like nothing.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Choose the harder of two options on purpose, and say why.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
+       "test": "Do something cold, or early, or uphill, on purpose.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 13,
+       "test": "Say yes to something that frightened you.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 14,
+       "test": "Keep a promise to yourself that nobody else knew about.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 15,
+       "test": "Start again after giving up on something once.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 16,
+       "test": "Do a hard thing for a month without missing more than two days.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 17,
+       "test": "Notice something that used to be hard and is not now.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 18,
+       "test": "Turn down the easy option in front of somebody.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 19,
+       "test": "Sit with something uncomfortable instead of fixing it straight away.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 20,
        "test": "Help somebody else through the moment they want to quit.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "kindness"
       }
@@ -15155,56 +16403,74 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Say one good thing about today, out loud, at tea.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Do it every day for a week.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
-       "kind": "skill"
-      },
-      {
-       "n": 3,
-       "sid": "s3",
-       "test": "Thank somebody properly, to their face, for something specific.",
-       "how": null,
-       "note": "Specific means what they actually did, not 'thanks for everything'.",
-       "ctx": "room",
-       "kind": "courage"
-      },
-      {
-       "n": 4,
-       "sid": "s4",
-       "test": "Write a thank-you letter that somebody keeps.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
-       "kind": "courage"
-      },
-      {
-       "n": 5,
-       "sid": "s5",
-       "test": "Do the daily one for thirty days.",
-       "how": null,
-       "note": null,
+       "test": "Do it three days running.",
        "ctx": "long",
        "kind": "attention"
       },
       {
+       "n": 3,
+       "test": "Do it every day for a week.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 4,
+       "test": "Say one that is about a person, not a thing.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 5,
+       "test": "Thank somebody properly, to their face, for something specific.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
        "n": 6,
-       "sid": "s6",
-       "test": "Start it at a table where nobody was doing it.",
-       "how": null,
-       "note": null,
+       "test": "Thank somebody who is never thanked for it.",
        "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 7,
+       "test": "Find something good on a day that was bad.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Write down three each night for a week.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Write a thank-you letter that somebody keeps.",
+       "ctx": "home",
+       "kind": "kindness"
+      },
+      {
+       "n": 10,
+       "test": "Do the daily one for thirty days.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Read back a month of them.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
+       "test": "Start it at a table where nobody was doing it.",
+       "ctx": "with",
        "kind": "courage"
       }
      ]
@@ -15365,59 +16631,49 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Clear every surface in the bedroom and put back only what you used this week.",
-       "how": [
-        "The bedside, the top of the drawers, the windowsill, the chair.",
-        "Put a thing back only if you used it this week.",
-        "Everything else goes in a box by the door."
-       ],
-       "note": null,
        "ctx": "home",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Make the bed properly every morning for a week.",
-       "how": null,
-       "note": "Straight cover, pillows plumped, sixty seconds. It is the first thing done each day.",
        "ctx": "long",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
        "test": "Empty the box by the door: bin it, give it, or find each thing a real home.",
-       "how": null,
-       "note": "Nothing goes back onto a surface.",
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Clean the bedroom to a close look: under the bed, the skirting, the corners, the light switch.",
-       "how": null,
-       "note": null,
+       "test": "Get everything off the floor.",
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Wash the bedding, the pillow covers, and the curtains or blind.",
-       "how": null,
-       "note": null,
+       "test": "Clean the bedroom to a close look: under the bed, the skirting, the corners, the light switch.",
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Wash the bedding, the pillow covers, and the curtains or blind.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Take out anything that is not for sleeping or dressing.",
+       "ctx": "home",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
        "test": "Sit in the finished room for ten minutes with nothing in your hands and notice how it feels.",
-       "how": null,
-       "note": "This is the test. Order you can feel is the point, not a tidy photo.",
        "ctx": "home",
        "kind": "attention"
       }
@@ -15432,55 +16688,49 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Clear the desk to bare wood, wipe it, and put back the three things you use every day.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Every loose paper into one pile, then through it once: bin, file, or act on it today.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
        "test": "Sort the drawers: one drawer for what you use, everything else out.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
        "test": "Tame the cables: unplug what is not used, coil and label the rest.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Set the desk each evening for the morning: a clear surface and one thing ready to start on. Do it for a week.",
-       "how": null,
-       "note": null,
+       "test": "Put one thing on it that you are glad to look at.",
+       "ctx": "home",
+       "kind": "kindness"
+      },
+      {
+       "n": 6,
+       "test": "Sit down and check the chair and the screen are at the right height.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Set the desk each evening for the morning: a clear surface and one thing ready. Do it for a week.",
        "ctx": "long",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
+       "n": 8,
        "test": "Work a whole session at the clear desk and notice the difference.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "attention"
       }
@@ -15495,55 +16745,49 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Take every piece of clothing out and put it on the bed. All of it.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Try on anything you are unsure about. Keep only what fits now and what you are glad to wear.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "courage"
       },
       {
        "n": 3,
-       "sid": "s3",
        "test": "Bag the rest today: give it, sell it, or bin what is worn out.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
        "test": "Put back what stays so you can see every piece at once.",
-       "how": null,
-       "note": "Hang or fold by kind. If you cannot see it, you will not wear it.",
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
        "test": "Mend, or take to be mended, anything kept with a button, a hem or a zip gone.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Put the out-of-season things somewhere else entirely.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Work out what you are actually missing, and write the list.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
        "test": "Dress for a week from the finished wardrobe and count how many mornings were quicker.",
-       "how": null,
-       "note": null,
        "ctx": "long",
        "kind": "attention"
       }
@@ -15558,59 +16802,73 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Walk the whole house with a notebook and list every broken thing.",
-       "how": [
-        "Doors, handles, drawers, lamps, chairs.",
-        "The dripping tap, the loose shelf, the light that flickers.",
-        "Write every one down, however small."
-       ],
-       "note": null,
        "ctx": "home",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Fix three small things from the list today.",
-       "how": null,
-       "note": "A screw, a battery, a plug, a hinge. Small counts.",
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
        "test": "For each thing you will not fix, decide today: bin it, or take it to be repaired this week.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "courage"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Fix one thing that needs a part or a tool: order the part, get the tool, do it.",
-       "how": null,
-       "note": null,
+       "test": "Take the ones for repair out of the house.",
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Fix or remove the last thing on the list.",
-       "how": null,
-       "note": null,
+       "test": "Fix one thing that needs a part or a tool: order the part, get the tool, do it.",
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Fix something you have walked past for a year.",
+       "ctx": "home",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Replace what has to be replaced, rather than leaving the gap.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Fix or remove the last thing on the list.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Notice one thing that broke because it was never maintained.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 10,
+       "test": "Do the one maintenance job that would stop it happening again.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Fix something for somebody else in the house.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 12,
        "test": "Keep a page for broken things and clear it every Sunday for a month.",
-       "how": null,
-       "note": null,
        "ctx": "long",
        "kind": "skill"
       }
@@ -15625,55 +16883,73 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Fill one bag with things you have not used in a year. Today.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Take it to a charity shop, a friend, or a giving box the same day.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
        "test": "Do the kitchen: gadgets, mugs, tins past their date. One bag out.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
        "test": "Do the books, games and hobby things you have finished with. Pass them on.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
+       "test": "Do the bathroom cupboard and the medicine box.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 6,
+       "test": "Do the shed, the garage or the loft corner you avoid.",
+       "ctx": "home",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
        "test": "Give away one thing that is good and that you like, to somebody who will use it more.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "kindness"
       },
       {
-       "n": 6,
-       "sid": "s6",
+       "n": 8,
+       "test": "Ask each person in the house to fill one bag too.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Sell one thing rather than keeping it \"just in case\".",
+       "ctx": "home",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Let go of one thing you kept only because it cost money.",
+       "ctx": "home",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Keep the bag by the door and add to it for a fortnight.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
        "test": "A month on, count what you missed.",
-       "how": null,
-       "note": "Almost always nothing. That is the finding.",
        "ctx": "long",
        "kind": "attention"
       }
@@ -15688,68 +16964,73 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Delete every app you have not opened in a month.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Delete the screenshots and the junk photos from the last month. Keep the ones that matter.",
-       "how": [
-        "Open the screenshots album and clear it.",
-        "Then the last month of photos: blurred, doubles, receipts already dealt with.",
-        "Keep what you would show somebody."
-       ],
-       "note": null,
+       "test": "Delete the screenshots and the junk photos from the last month.",
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
        "test": "Unsubscribe from twenty emails you never read.",
-       "how": null,
-       "note": "Search your inbox for the word unsubscribe and work down the list.",
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Get the inbox to empty once: archive, delete, or act.",
-       "how": null,
-       "note": "Anything older than a month that nobody is waiting on can be archived without reading it.",
+       "test": "Turn off every notification that is not a person talking to you.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Clear the home screen to one page of what you use. The rest into folders, or gone.",
-       "how": null,
-       "note": null,
+       "test": "Get the inbox to empty once: archive, delete, or act.",
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Turn off every notification that is not a person talking to you.",
-       "how": null,
-       "note": null,
+       "test": "Clear the home screen to one page of what you use.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Put the two apps that eat the most time off the first page.",
+       "ctx": "home",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Back up the photographs you would be sick to lose.",
        "ctx": "home",
        "kind": "attention"
       },
       {
-       "n": 7,
-       "sid": "s7",
+       "n": 9,
+       "test": "Sort one year of photographs and delete the near-duplicates.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Cancel one subscription you had forgotten you pay for.",
+       "ctx": "home",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Check where you are still signed in, and sign out of what you do not use.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
        "test": "Keep the inbox at empty by the end of each day for a week.",
-       "how": null,
-       "note": null,
        "ctx": "long",
        "kind": "skill"
       }
@@ -15764,64 +17045,73 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Clean the windows, inside and out, in one room.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Wash or wipe the blinds and the curtain rail.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
        "test": "Clean behind and under the sink, and the bin itself.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
        "test": "Empty and wipe the fridge, shelf by shelf, and bin what is past.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Wash the curtains, or take them to be cleaned.",
-       "how": null,
-       "note": null,
+       "test": "Clean the oven, or the thing in the kitchen you have been avoiding.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "courage"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "The top of the cupboards, the light shades, and the skirting all the way round: one room.",
-       "how": null,
-       "note": null,
+       "test": "Wash the curtains, or take them to be cleaned.",
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 7,
-       "sid": "s7",
+       "test": "The top of the cupboards, the light shades, and the skirting all the way round: one room.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Move the furniture and clean what was under it.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Clean the front door, the handle and the step.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Do the one place in the house nobody has looked at in years.",
+       "ctx": "home",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Descale, empty or change the filter on something that needed it.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
        "test": "Do one forgotten place every week for a month.",
-       "how": null,
-       "note": null,
        "ctx": "long",
        "kind": "skill"
       }
@@ -15836,55 +17126,121 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Everything you own has a home: choose one for the five things that never get put away.",
-       "how": null,
-       "note": null,
        "ctx": "home",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Ten minutes every evening putting the day back. Do it for a week.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
+       "test": "Put those five things away in their homes tonight.",
+       "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "One in, one out: for a month, nothing new comes in without something going.",
-       "how": null,
-       "note": null,
+       "test": "Ten minutes every evening putting the day back. Do it for three days.",
        "ctx": "long",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "A Sunday reset: half an hour that puts the whole place right. Do four of them.",
-       "how": null,
-       "note": null,
+       "test": "Do it for a week.",
        "ctx": "long",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Walk the whole house with a close look. Where has clutter crept back? Deal with it today.",
-       "how": null,
-       "note": null,
+       "test": "Clear one surface every single evening for a week.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 6,
+       "test": "One in, one out: for a week, nothing new comes in without something going.",
+       "ctx": "long",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "One in, one out for a month.",
+       "ctx": "long",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "A Sunday reset: half an hour that puts the whole place right. Do one.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Do four of them, one a week.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Put things away where they live rather than where they will do.",
        "ctx": "home",
        "kind": "attention"
       },
       {
-       "n": 6,
-       "sid": "s6",
+       "n": 11,
+       "test": "Stop a pile before it starts, three times in one week.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
+       "test": "Walk the whole house with a close look. Where has clutter crept back? Deal with it today.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 13,
+       "test": "Find the one spot that always goes wrong, and change what it is for.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 14,
+       "test": "Get everybody in the house to keep one shared surface clear for a week.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 15,
+       "test": "Deal with the post the day it arrives, for a fortnight.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 16,
+       "test": "Leave a room right when you leave it, every time, for a week.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 17,
+       "test": "Keep the place in a state you are glad to walk into for a month.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Do a reset after something disrupted it — illness, visitors, a bad week.",
+       "ctx": "home",
+       "kind": "courage"
+      },
+      {
+       "n": 19,
+       "test": "Notice that putting things away has stopped needing a decision.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 20,
        "test": "Keep the place in a state you are glad to walk into for three months.",
-       "how": null,
-       "note": "Order you can feel, every day, is the finish line. Then it is simply how you live.",
        "ctx": "long",
        "kind": "skill"
       }
@@ -15900,57 +17256,75 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Put your shoes side by side by the door, the same way round.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Pull the cover up straight on your bed when you get out of it.",
-       "how": null,
-       "note": null,
+       "test": "Hang your coat up on a hook.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Put your clothes in the wash basket at bedtime, without being asked.",
-       "how": null,
-       "note": "Without being asked is the hard part. That is the whole step.",
+       "test": "Pull the cover up straight on your bed when you get out of it.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Put the books back on the shelf the right way up.",
-       "how": null,
-       "note": null,
+       "test": "Put your clothes in the wash basket at bedtime, without being asked.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Empty one box of toys onto the floor and put every single one back in.",
-       "how": null,
-       "note": null,
+       "test": "Put the books back on the shelf the right way up.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Put away what you were playing with before the next thing comes out, for a whole afternoon.",
-       "how": null,
-       "note": null,
+       "test": "Put the lids back on the pens and the tops back on the tubs.",
        "ctx": "with",
        "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Empty one box of toys onto the floor and put every single one back in.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Find a home for one thing that never had one.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Put away what you were playing with before the next thing comes out.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Do that for a whole afternoon.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Tidy your room with somebody, and stay until it is finished.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Do all of it one whole day without anybody reminding you.",
+       "ctx": "with",
+       "kind": "courage"
       }
      ]
     }

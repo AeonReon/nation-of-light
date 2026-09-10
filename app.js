@@ -1328,7 +1328,10 @@
      wall and you cannot see where you stand in it; the same twenty under five
      headings reads as "most of the way through the third part". Short ladders
      stay a plain list — a heading over two rows is noise. */
-  const CHAPTER_FROM = 10;
+  /* 16, not 10. With the tiers settled at 8 / 12 / 20, a twelve-step ladder cut
+     into five chapters is five headings over two rows each, which is exactly
+     the noise this was meant to avoid. Only the three-month ladders get them. */
+  const CHAPTER_FROM = 16;
   function stepBands(tr) {
     const names = trackCopy().bands || ['Spark', 'Flame', 'Lantern', 'Beacon', 'Lighthouse'];
     const N = tr.steps.length, out = []; let from = 1;
