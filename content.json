@@ -1,5 +1,5 @@
 {
- "version": 37,
+ "version": 38,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -1842,7 +1842,25 @@
    "lede": "Three things a day: quick ones, practice, any mix."
   },
   "twoTitle": "Level two: ladders you have started",
-  "twoLede": "You did the first step. The second is here when you want it. Nothing is owed."
+  "twoLede": "You did the first step. The second is here when you want it. Nothing is owed.",
+  "search": {
+   "placeholder": "Search the whole school",
+   "hint": "Every ladder and every single step, by name or by what it asks you to do. Two letters is enough.",
+   "examples": [
+    "Juggling",
+    "Fasting",
+    "Reading books",
+    "An instrument",
+    "Fire",
+    "Knots",
+    "A new language"
+   ],
+   "none": "Nothing with that in it. Try a shorter word, or one word instead of three.",
+   "rooms": "Rooms",
+   "ladders": "Ladders",
+   "steps": "Single steps",
+   "more": "Showing the first {n} of {N}. Add another word to narrow it."
+  }
  },
  "arrival": {
   "lines": [

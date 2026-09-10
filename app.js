@@ -642,10 +642,11 @@
     const d = today(), fresh0 = !S.school.arrivedEver;
     const again = S.school.arrived === d; S.school.arrived = d; S.school.visits = (S.school.visits || 0) + 1; save(); arrival(fresh0, again);
   }
+  const paintSearchBtn = () => { const b = $('searchbtn'); if (b) b.classList.toggle('on', SEARCH !== null); };
   function paintSchoolCount() { const p = points(), r = rankOf(p); $('countn').textContent = p; const of = $('countn').nextElementSibling; of.hidden = false; of.textContent = r.name; paintDay(); }
   /* ---- the arrival: the portico, the two of them, where you stand, three for today ---- */
   let HOMEN = 0;
-  function goHome() { if ($('stage').classList.contains('arrive')) return; hush(); clearTimeout(ROOMT); HOMEN++; CAT = null; arrival(false, true, true); }
+  function goHome() { if ($('stage').classList.contains('arrive')) return; hush(); clearTimeout(ROOMT); HOMEN++; CAT = null; TRK = null; SEARCH = null; paintSearchBtn(); arrival(false, true, true); }
   const todayQuick = () => { const t = today(); return Object.values(S.school.done).some(v => typeof v === 'string' && v.startsWith(t)); };
   function dayCount() { const t = today(); const q = Object.values(S.school.done).filter(v => typeof v === 'string' && v.startsWith(t)).length; const pr = Object.values(S.school.practice || {}).filter(p => p.days && p.days[t]).length; return q + pr; }
   function dayBar() { const G = C.school.goal || { n: 3 }, n = dayCount(), pct = Math.min(100, Math.round(n / G.n * 100)), over = G.overAt && n >= G.overAt; return `<div class="daybar ${n >= G.n ? 'full' : ''} ${over ? 'over' : ''}" title="${G.lede || ''}"><i style="width:${pct}%"></i><span>${over ? (G.over + ' · ' + n) : n >= G.n ? G.done : (n + ' of ' + G.n + ' ' + (G.label || 'today'))}</span></div>`; }
@@ -765,8 +766,15 @@
   /* ---- the three pages ---- */
   function renderSchool() {
     const tabs = $('stabs'); tabs.hidden = false; tabs.innerHTML = C.school.tabs.map(([k, l]) => `<button class="stab ${TAB === k ? 'on' : ''}" data-t="${k}">${l}</button>`).join('');
-    tabs.querySelectorAll('.stab').forEach(b => b.addEventListener('click', () => { sfx('tap'); TAB = b.dataset.t; CAT = null; renderSchool(); }));
+    tabs.querySelectorAll('.stab').forEach(b => b.addEventListener('click', () => { sfx('tap'); TAB = b.dataset.t; CAT = null; SEARCH = null; renderSchool(); }));
     const list = $('slist'); list.scrollTop = 0; paintSchoolCount();
+    if (SEARCH !== null) {
+      dock('pop'); $('stage').classList.remove('room'); $('stage').classList.add('searching');
+      tabs.hidden = true; $('sline').textContent = '';
+      renderSearch(list); stageBack(closeSearch); paintSearchBtn();
+      return;
+    }
+    $('stage').classList.remove('searching');
     const trk = TRK ? trackById(TRK) : null;
     const cat = trk ? null : SCH.categories.find(c => c.id === CAT);
     $('stage').classList.toggle('room', !!cat || !!trk);
@@ -780,7 +788,9 @@
       dock('scene'); RIG.show(true); ARIG.show(true); $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout');
       tabs.hidden = true; $('sline').textContent = '';
       list.innerHTML = `<div class="roomhead" style="--c:${cat.accent};--c2:${cat.accent2}"><img src="images/cat/${cat.id}.jpg" alt=""><div><h2>${cat.name}</h2><p>${cat.line}</p></div></div>` + cat.tracks.map(trackRow).join('');
-      stageBack(() => { hush(); CAT = null; renderSchool(); }); list.scrollTop = 0;
+      stageBack(() => { hush(); CAT = null;
+        if (CAT_FROM && CAT_FROM.search !== undefined) { SEARCH = CAT_FROM.search; CAT_FROM = null; }
+        renderSchool(); }); list.scrollTop = 0;
     } else {
       dock('pop'); stageBack(null);
       if (TAB === 'next') renderNext(list);
@@ -788,9 +798,16 @@
       else renderAll(list);
       list.querySelectorAll('[data-room]').forEach(el => el.addEventListener('click', () => { sfx('tap'); CAT = el.dataset.room; renderSchool(); const id = C.school.catLines[CAT]; if (id && !SAIDCAT.has(CAT)) { SAIDCAT.add(CAT); hush(); speakSchool([{ who: 'aurelia', id, t: SCH.categories.find(c => c.id === CAT).name }]); } }));
     }
+    wireRows(list);
+  }
+  /* the rows that appear in more than one place — a room, a tab, the track
+     page, the search results — all wired once, here */
+  function wireRows(list) {
     list.querySelectorAll('[data-step]').forEach(el => el.addEventListener('click', () => { sfx('tap'); const r = findStep(el.dataset.step); if (r) stepSheet(r[0], r[1], null, TRK ? 'track' : undefined); }));
     list.querySelectorAll('[data-track]').forEach(el => el.addEventListener('click', () => { sfx('tap'); openTrack(trackById(el.dataset.track)); }));
     list.querySelectorAll('[data-commit]').forEach(el => el.addEventListener('click', () => { sfx('tap'); commitCard(trackById(el.dataset.commit), TRK ? 'track' : 'long'); }));
+    list.querySelectorAll('[data-room]').forEach(el => el.addEventListener('click', () => { sfx('tap');
+      CAT_FROM = SEARCH !== null ? { search: SEARCH } : null; SEARCH = null; CAT = el.dataset.room; renderSchool(); }));
     wireLong(list);
   }
   let ROOMT = null, ROOMI = 0;
@@ -1082,12 +1099,16 @@
     if (typeof v === 'string' && (best === null || v < best)) best = v; }); return best; };
   function openTrack(tr, from) {
     if (!tr) return;
-    TRK = tr.id; TRK_FROM = from || (CAT ? { cat: CAT } : { tab: TAB });
+    TRK = tr.id;
+    TRK_FROM = from || (SEARCH !== null ? { search: SEARCH } : (CAT ? { cat: CAT } : { tab: TAB }));
+    SEARCH = null;                       // or renderSchool would show the results again
     hush(); renderSchool(); $('slist').scrollTop = 0;
   }
   function closeTrack() {
     const f = TRK_FROM || {}; TRK = null; TRK_FROM = null;
-    if (f.cat) CAT = f.cat; else { CAT = null; if (f.tab) TAB = f.tab; }
+    if (f.search !== undefined) { SEARCH = f.search; CAT = null; }
+    else if (f.cat) CAT = f.cat;
+    else { CAT = null; if (f.tab) TAB = f.tab; }
     hush(); renderSchool();
   }
   function trackPage(list, tr) {
@@ -1147,6 +1168,97 @@
     list.querySelectorAll('[data-lad]').forEach(b => b.addEventListener('click', () => { sfx('tap');
       const a = ladderAwards(tr).find(x => x.id === b.dataset.lad); if (a) trophyShow(a); }));
   }
+
+  /* ---- search ----
+     A hundred and fifty-two ladders in twenty-two rooms and no way to ask for
+     one by name. He shipped four new ones and could not find them, which is
+     the whole argument. Searching the STEPS as well as the names is the part
+     that matters: "fast" should find the fasting ladder, and "phone number"
+     should find the one step in the school that is about memorising one. */
+  let SEARCH = null, CAT_FROM = null;
+  const esc = t => String(t == null ? '' : t).replace(/[&<>"]/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[m]));
+  const norm = t => String(t || '').toLowerCase().replace(/[‘’]/g, "'");
+  const QMAX = 40;
+  /* "read" must find Reading before it finds Cloth and thREAD. So a match at
+     the start of a word beats a match buried inside one, and both beat a match
+     that was only in the room name or the one-line description. */
+  const atWord = (text, w) => new RegExp('(^|[^a-z0-9])' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).test(norm(text));
+  const score = (text, words) => {
+    const n = norm(text);
+    if (!words.every(w => n.includes(w))) return null;
+    if (n.startsWith(words[0])) return 0;
+    return words.every(w => atWord(n, w)) ? 1 : null;
+  };
+  function searchAll(q) {
+    const t = norm(q).trim();
+    if (t.length < 2) return null;
+    const words = t.split(/\s+/);
+    const hit = x => { const n = norm(x); return words.every(w => n.includes(w)); };
+    const rooms = SCH.categories.filter(c => hit(c.name + ' ' + (c.line || '')));
+    const ladders = [], steps = [];
+    SCH.categories.forEach(c => c.tracks.forEach(tr => {
+      const byName = score(tr.name, words);
+      const byRest = score(tr.name + ' ' + (tr.line || '') + ' ' + c.name + ' ' + (sizeOf(tr).name || ''), words);
+      if (byName !== null || byRest !== null) ladders.push({ tr, rank: byName !== null ? byName : 3 });
+      tr.steps.forEach(st => { const sc = score(st.test + ' ' + (st.note || ''), words);
+        if (sc !== null) steps.push({ tr, st, rank: sc }); });
+    }));
+    ladders.sort((a, b) => a.rank - b.rank || a.tr.name.localeCompare(b.tr.name));
+    steps.sort((a, b) => a.rank - b.rank);
+    return { rooms, ladders: ladders.map(x => x.tr), steps };
+  }
+  function searchBody() {
+    const K = C.school.search || {};
+    if (SEARCH === null || norm(SEARCH).trim().length < 2)
+      return `<p class="qhint">${K.hint || ''}</p><div class="qchips">${(K.examples || []).map(x =>
+        `<button class="qchip" data-q="${esc(x)}">${esc(x)}</button>`).join('')}</div>`;
+    const r = searchAll(SEARCH);
+    const n = r.rooms.length + r.ladders.length + r.steps.length;
+    if (!n) return `<p class="qhint">${(K.none || 'Nothing with that in it. Try a shorter word.')}</p>
+      <div class="qchips">${(K.examples || []).map(x => `<button class="qchip" data-q="${esc(x)}">${esc(x)}</button>`).join('')}</div>`;
+    let h = '';
+    if (r.rooms.length) h += `<h4 class="qh">${K.rooms || 'Rooms'}</h4>` + r.rooms.map(c =>
+      `<button class="qroom" data-room="${c.id}" style="--c:${c.accent};--c2:${c.accent2}">
+        <img src="images/cat/${c.id}.jpg" alt="" loading="lazy"><span><strong>${c.name}</strong><small>${c.line || ''}</small></span></button>`).join('');
+    if (r.ladders.length) h += `<h4 class="qh">${K.ladders || 'Ladders'} <em>${r.ladders.length}</em></h4>`
+      + r.ladders.map(trackRow).join('');
+    if (r.steps.length) {
+      const shown = r.steps.slice(0, QMAX);
+      h += `<h4 class="qh">${K.steps || 'Single steps'} <em>${r.steps.length}</em></h4>`
+        + shown.map(({ tr, st }) => { const c = catOf(tr), d = sdone(skey(tr, st));
+          return `<button class="qstep ${d ? 'done' : ''}" data-step="${skey(tr, st)}" style="--c:${c.accent}">
+            <b>${d ? '&#10003;' : st.n}</b><span><em>${tr.name}</em>${st.test}</span></button>`; }).join('');
+      /* never truncate quietly — a list that stops without saying so reads as
+         "that is all of them" */
+      if (r.steps.length > QMAX) h += `<p class="qmore">${(K.more || 'Showing the first {n} of {N}. Add another word to narrow it.')
+        .replace('{n}', QMAX).replace('{N}', r.steps.length)}</p>`;
+    }
+    return h;
+  }
+  function paintSearch() {
+    const el = $('qres'); if (!el) return;
+    el.innerHTML = searchBody(); wireRows(el);
+    el.querySelectorAll('[data-q]').forEach(b => b.addEventListener('click', () => {
+      sfx('tap'); SEARCH = b.dataset.q; const box = $('qbox'); if (box) box.value = SEARCH; paintSearch(); }));
+    const x = $('qclear'); if (x) x.hidden = !SEARCH;
+  }
+  function renderSearch(list) {
+    const K = C.school.search || {};
+    list.innerHTML = `<div class="qbar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/></svg>
+      <input id="qbox" type="search" enterkeyhint="search" autocomplete="off" autocorrect="off" autocapitalize="none"
+        spellcheck="false" placeholder="${esc(K.placeholder || 'Search the whole school')}" value="${esc(SEARCH || '')}">
+      <button class="qx" id="qclear" aria-label="Clear" hidden>&#215;</button></div>
+    <div id="qres"></div>`;
+    const box = $('qbox');
+    box.addEventListener('input', () => { SEARCH = box.value; paintSearch(); });
+    box.addEventListener('keydown', e => { if (e.key === 'Enter') box.blur(); });
+    $('qclear').addEventListener('click', () => { sfx('tap'); SEARCH = ''; box.value = ''; box.focus(); paintSearch(); });
+    paintSearch();
+    setTimeout(() => { try { box.focus(); } catch (e) {} }, 80);
+  }
+  function openSearch() { SEARCH = SEARCH || ''; TRK = null; CAT = null; hush(); renderSchool(); }
+  function closeSearch() { SEARCH = null; hush(); renderSchool(); }
 
   function trackRow(tr) { const c = catOf(tr), n = trackDone(tr), N = tr.steps.length; return `<button class="srow track pic" style="--c:${c.accent};--c2:${c.accent2}" data-track="${tr.id}"><img src="images/track/${tr.id}.jpg" alt="" loading="lazy" onerror="this.src='images/cat/${c.id}.jpg'"><span class="stxt"><span class="stest">${tr.name}</span><span class="sline2">${tr.line || ''}</span><span class="szr sz-${tr.size || 'months'}">${sizeOf(tr).name}</span><span class="sprog"><i style="width:${Math.round(n / N * 100)}%"></i></span></span><span class="snum">${n} of ${N}</span></button>`; }
   /* The old veil. Kept as a name only, so any caller left anywhere lands on
@@ -1272,6 +1384,7 @@
     /* swipe down on either of them while they are popped up: both go, and the words with them */
     ['mfig', 'afig'].forEach(id => { const el = $(id); let y0 = null; el.addEventListener('pointerdown', e => { y0 = $('stage').classList.contains('popmode') ? e.clientY : null; }, { passive: true }); el.addEventListener('pointermove', e => { if (y0 !== null && e.clientY - y0 > 36) { y0 = null; hush(); popOut('marcus', 0); popOut('aurelia', 0); capHide(0); } }, { passive: true }); el.addEventListener('pointerup', () => { y0 = null; }); });
     $('homebtn').addEventListener('click', () => { sfx('tap'); goHome(); });
+    $('searchbtn').addEventListener('click', () => { sfx('tap'); if (SEARCH === null) openSearch(); else closeSearch(); });
     $('helpbtn').addEventListener('click', () => { sfx('tap'); if (MODE === 'school' && C.tour && !S.school.toured2) { S.school.toured2 = true; save(); if ($('stage').classList.contains('arrive')) leaveArrival(); tour(); } else help(); });
     cover();
     if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});

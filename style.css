@@ -933,7 +933,7 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 .sz-months{--sz:#8F6F12}
 .sz-major{--sz:var(--crimson)}
 /* the same word, small, wherever a ladder is listed */
-.szl,.szr{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+.szl,.szr{display:inline-block;align-self:flex-start;width:max-content;max-width:100%;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
   color:var(--sz,var(--ink-faint));background:var(--ivory-2);border-radius:999px;padding:2px 8px;margin-top:3px;
   box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--sz,var(--line)) 34%,transparent)}
 .szr{margin-top:4px}
@@ -972,3 +972,47 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 .tk-warn b{font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--crimson)}
 .tk-warn span{font-size:12.5px;line-height:1.45;color:var(--ink-soft)}
 .tk-warn.inline{margin:6px 0 2px;text-align:left}
+
+/* ---- search (v38) ----
+   152 ladders in 22 rooms and no way to ask for one by name. The steps are
+   searched as well as the names, because that is where the specific thing a
+   person actually wants usually lives. */
+.shead .searchbtn{margin-right:0;margin-left:auto;color:var(--gold-deep)}
+.stage.school.searching .shead{display:none}
+.stage.school.searching .slist{padding-top:max(10px,env(safe-area-inset-top))}
+.stage.school.searching .qbar{padding-left:52px}
+.shead .searchbtn.on{background:var(--gold);color:#fff;box-shadow:0 4px 14px rgba(201,162,39,.45)}
+.qbar{display:flex;align-items:center;gap:9px;padding:10px 13px;border-radius:16px;background:var(--card);
+  box-shadow:inset 0 0 0 1.5px var(--line),var(--shadow);position:sticky;top:0;z-index:3;flex:0 0 auto}
+.qbar svg{width:19px;height:19px;flex:none;color:var(--gold-deep)}
+.qbar input{flex:1;min-width:0;border:0;background:none;font:inherit;font-size:16px;color:var(--ink);outline:none;
+  -webkit-appearance:none;appearance:none}
+.qbar input::placeholder{color:var(--ink-faint)}
+.qbar input::-webkit-search-cancel-button{display:none}
+.qx{width:26px;height:26px;flex:none;border-radius:50%;background:var(--ivory-2);color:var(--ink-soft);
+  font-size:17px;line-height:1;display:grid;place-items:center}
+.qhint{margin:10px 4px 2px;font-size:13.5px;line-height:1.5;color:var(--ink-soft)}
+.qchips{display:flex;flex-wrap:wrap;gap:7px;margin:4px 2px}
+.qchip{font-size:13px;font-weight:600;padding:7px 13px;border-radius:999px;background:var(--card);
+  color:var(--gold-deep);box-shadow:inset 0 0 0 1.3px var(--line);transition:transform .18s var(--spring)}
+.qchip:active{transform:scale(.94)}
+.qh{margin:14px 4px 2px;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink-faint);display:flex;align-items:baseline;gap:7px}
+.qh em{font-style:normal;letter-spacing:0;font-size:11.5px;color:var(--gold-deep)}
+.qroom{display:flex;align-items:center;gap:11px;width:100%;text-align:left;padding:8px;border-radius:15px;
+  background:var(--card);box-shadow:var(--shadow);--g1:var(--c2);--g2:var(--c);transition:transform .18s var(--spring)}
+.qroom:active{transform:scale(.985)}
+.qroom img{width:52px;height:52px;border-radius:11px;object-fit:cover;flex:none}
+.qroom strong{display:block;font-family:var(--display);font-weight:600;font-size:16px}
+.qroom small{display:block;font-size:12px;color:var(--ink-soft);line-height:1.35;margin-top:1px}
+.qstep{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;width:100%;text-align:left;
+  padding:10px 12px;border-radius:13px;background:var(--card);font-size:14.5px;line-height:1.38;
+  box-shadow:inset 0 0 0 1px var(--line);transition:transform .18s var(--spring)}
+.qstep:active{transform:scale(.985)}
+.qstep b{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;
+  background:var(--ivory-2);color:var(--ink-soft)}
+.qstep.done{color:var(--ink-faint)}
+.qstep.done b{background:var(--laurel);color:#fff}
+.qstep em{display:block;font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--c,var(--gold-deep));margin-bottom:2px}
+.qmore{margin:8px 4px 0;font-size:12.5px;color:var(--ink-faint);line-height:1.45}
