@@ -164,3 +164,13 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   bar in the school header and at home (`dayBar/paintDay/checkDay`); reaching 3 once a day =
   gold falling, wreath sound, one of them (`ui-day` / `c-day`); 7 = "Blazing". The points pill
   left the header; the face button (Marcus) toggles pop-ins with a line through it.
+- **v43 (2026-09-10, the little ones — content only):** the under-sevens are NOT a separate app
+  and never a hand-over app (that contradicts one-journey; Mo & Pip is the hand-over kind). His
+  decision after the Scouts/Guides evidence (Squirrels 4–6, Rainbows 4–7, Brownies from 7): same
+  grammar, smaller rungs, the parent as the interface. Eight ladders in existing rooms, six rungs
+  each, `strand: "little"`, `from: 4`, every step `ctx: "with"` so they never surface as an adult's
+  quick thing: make.scissors, make.crayons, body.hopping, music.song, order.ownthings,
+  speak.sayit, food.kitchen, care.helping. Line on each: "From four, beside you." He reads the
+  rungs first; if the words hold, next is a second small profile (the child's own leaf and flame
+  on the parent's phone) and a `from` chip on the row and page. No track tiles drawn yet
+  (category image fallback).
