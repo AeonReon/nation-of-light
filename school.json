@@ -3,23 +3,21 @@
  "sizes": {
   "afternoon": {
    "name": "An afternoon",
-   "line": "One sitting, or two. Nothing in here needs weeks.",
-   "steps": 6
+   "line": "One sitting, or two. Nothing here needs weeks.",
+   "steps": 8,
+   "after": "Done in a day, and it stays done. The room it lives in has more like it."
   },
   "weeks": {
    "name": "A few weeks",
    "line": "A little most days, and it is yours before the month is out.",
-   "steps": 9
+   "steps": 12,
+   "after": "That is the whole ladder. If it caught you, the room it lives in has more."
   },
   "months": {
    "name": "A few months",
-   "line": "This one does not hurry. A little most days, and one day you notice it turned.",
-   "steps": 14
-  },
-  "major": {
-   "name": "A major undertaking",
-   "line": "A year of it, maybe more. This is the kind that changes what you are.",
-   "steps": 20
+   "line": "About three months of a little most days. Every ladder in the school stops around there.",
+   "steps": 20,
+   "after": "That is where the ladder stops — about three months in, at something real you can actually do. Nothing in the school runs for years, because a chain you cannot finish stops being a chain. Past here it is yours to carry on, on your own or with your facilitator or with the group."
   }
  },
  "ranks": [
@@ -155,75 +153,112 @@
       },
       {
        "n": 4,
-       "test": "Do the two-ball exchange five times, drops allowed.",
-       "note": "One ball in each hand. Throw the right. When it reaches the top, throw the left. Catch what you can. Drops are expected here.",
-       "ctx": "kit",
+       "test": "Throw one ball twenty times starting with your weaker hand.",
+       "note": "Whichever hand you have been avoiding. Both hands have to learn this or three balls never comes.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 5,
-       "test": "Do the two-ball exchange ten times in a row, catching both.",
+       "test": "Do the two-ball exchange five times, drops allowed.",
+       "note": "One ball in each hand. Throw the right; when it reaches the top, throw the left. Catch what you can. Drops are expected here.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 6,
-       "test": "Do the two-ball exchange twenty times, starting with your weaker hand.",
-       "note": "Whichever hand you have been avoiding. Both hands have to learn it or three balls never comes.",
+       "test": "Do the two-ball exchange ten times in a row, catching both.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 7,
+       "test": "Do the two-ball exchange twenty times, starting with your weaker hand.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Do the two-ball exchange twenty times without your feet moving.",
+       "note": "If you are chasing the balls, the throws are going forward. Throw straight up in front of your face instead.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
        "test": "Hold three balls, throw all three once, and catch at least one.",
        "note": "It will go everywhere. That is the step. Everybody looks foolish here and everybody gets through it.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
-       "n": 8,
-       "test": "Do a three-ball cascade for five catches.",
+       "n": 10,
+       "test": "Do a three-ball cascade for three catches.",
        "note": "A cascade means they cross over in the middle, not round in a circle.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
-       "n": 9,
+       "n": 11,
+       "test": "Do a three-ball cascade for five catches.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
        "test": "Do a three-ball cascade for ten catches.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
-       "n": 10,
-       "test": "Juggle three balls for thirty seconds with no drop.",
-       "ctx": "kit",
-       "kind": "skill"
-      },
-      {
-       "n": 11,
-       "test": "Drop one, pick it up and start again without walking away.",
-       "note": "The habit, not the trick. Everybody who can juggle dropped several hundred times first.",
-       "ctx": "kit",
-       "kind": "attention"
-      },
-      {
-       "n": 12,
-       "test": "Juggle three balls for two whole minutes.",
-       "ctx": "kit",
-       "kind": "skill"
-      },
-      {
        "n": 13,
-       "test": "Juggle two balls in one hand, twenty throws.",
-       "note": "Both balls in the SAME hand, going round in a circle. It looks wrong until it suddenly does not. Harder than the cascade — this is a flourish, not a step backwards.",
+       "test": "Do a three-ball cascade for twenty catches.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 14,
-       "test": "Juggle while walking twenty steps, and teach somebody their first ten throws.",
-       "ctx": "with",
+       "test": "Juggle three balls for thirty seconds with no drop.",
+       "ctx": "kit",
        "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Practise for ten minutes without stopping, however many times you drop them.",
+       "note": "Ten minutes on the clock. Pick them up and carry on. Everybody who can juggle dropped several hundred times first.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 16,
+       "test": "Juggle three balls for a full minute.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Juggle three balls for two whole minutes.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Juggle two balls in one hand, twenty throws.",
+       "note": "Both balls in the SAME hand, going round in a circle. Harder than the cascade — a flourish, not a step backwards.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Juggle while walking twenty steps.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Teach somebody their first ten throws, until they can do it without you.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -1226,68 +1261,137 @@
      "id": "water.swim",
      "name": "Swimming",
      "line": "Face in the water to open water.",
-     "size": "major",
+     "size": "months",
      "strand": "get-strong-outside",
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
-       "test": "Put your face in the water and blow bubbles.",
+       "test": "Put your face in the water and blow bubbles, ten times.",
        "how": [
-        "Somewhere shallow, with somebody with you.",
-        "Big breath, face in, and blow out slowly through your nose.",
-        "Bubbles you can see. Come up whenever you like."
+        "Somebody who can already swim stays beside you for every step of this.",
+        "Face in, breathe out through your nose and mouth, come up.",
+        "Ten times. Do not hurry it."
        ],
-       "note": null,
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Float on your back for ten seconds.",
-       "how": null,
-       "note": "On your back, ears in the water, chin up, breathing normally. Somebody stands beside you.",
+       "test": "Hold the side and kick your legs for thirty seconds.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Swim ten metres without stopping.",
-       "how": null,
-       "note": null,
+       "test": "Push off the side and glide with your face in, as far as you can.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Swim twenty-five metres without stopping or touching the bottom.",
-       "how": null,
-       "note": null,
+       "test": "Float on your front for five seconds and stand back up.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Swim one hundred metres, then tread water for two minutes.",
-       "how": null,
-       "note": "Treading water means staying upright with your head out, not swimming. Two minutes is longer than it sounds.",
-       "ctx": "long",
+       "test": "Float on your back for ten seconds.",
+       "note": "This one is worth more than it looks. A person who can float on their back is a person who does not panic.",
+       "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Swim in open water with an adult, with the safety done properly.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
+       "test": "Push off and glide with a leg kick, three metres.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Swim five metres any way you like, without touching the bottom.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Swim ten metres on your front.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Swim ten metres on your back.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Turn your head to the side, take one breath, and keep swimming.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Swim ten metres taking a breath every three or four strokes.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Jump in from the side and swim back to it.",
+       "ctx": "out",
        "kind": "courage"
+      },
+      {
+       "n": 13,
+       "test": "Swim fifteen metres without stopping.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Pick something up off the bottom in water up to your chest.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Tread water for thirty seconds.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Tread water for a full minute.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Swim twenty-five metres on your front without stopping.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Swim twenty-five metres on your back without stopping.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Swim there and back with one rest in the middle.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Swim fifty metres without stopping, and climb out unaided.",
+       "ctx": "out",
+       "kind": "skill"
       }
-     ]
+     ],
+     "warn": "Never on your own, and never in open water on this ladder. Every step happens at a pool or a lifeguarded beach with somebody beside you who can already swim."
     },
     {
      "id": "water.cold",
@@ -1758,64 +1862,129 @@
      "id": "fit.pullup",
      "name": "Pull-ups",
      "line": "Hanging on, up to ten.",
-     "size": "major",
+     "size": "months",
      "strand": "get-strong-outside",
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Hang from a bar with your feet off the ground for ten seconds.",
-       "how": [
-        "Find a bar you can hang from with your feet clear of the ground.",
-        "Grip it with your hands about shoulder width, thumbs round.",
-        "Hang for ten seconds. Shoulders can relax — you are just hanging."
-       ],
-       "note": null,
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Hang for a whole minute.",
-       "how": null,
-       "note": null,
+       "test": "Hang for twenty seconds.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Do one pull-up from a dead hang, chin over the bar.",
-       "how": null,
-       "note": null,
+       "test": "Hang for thirty seconds.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Do five in one go.",
-       "how": null,
-       "note": null,
+       "test": "Hang and pull your shoulders down away from your ears, five times.",
+       "note": "Arms stay straight. Only the shoulders move. This is the muscle that starts a pull-up.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Do ten in one go.",
-       "how": null,
-       "note": null,
+       "test": "Do five rows under a low bar or a table, feet on the floor.",
+       "note": "Lie under it, grab it, pull your chest up to it. Feet on the floor takes most of your weight.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Do fifteen, or help somebody else get their first one.",
-       "how": null,
-       "note": null,
+       "test": "Do ten rows.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Do fifteen rows.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Jump to the top of a pull-up and hold your chin over the bar for five seconds.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Hold your chin over the bar for ten seconds.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Jump to the top and lower yourself as slowly as you can, three times.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Lower yourself over a slow count of five, three times.",
+       "note": "Lowering slowly is where the strength is built. Almost everybody who gets a first pull-up got it from these.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Lower yourself over a count of five, five times, on three days in one week.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Do a pull-up with one foot resting on a chair, five times.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Do a pull-up with a band, or with somebody holding your feet, five times.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Do one pull-up on your own, chin over the bar.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Do one pull-up on three separate days in one week.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Do two in a row.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Do three in a row.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Do five across a day, in singles.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Do four in a row, and show somebody the slow lowering.",
        "ctx": "with",
        "kind": "skill"
       }
@@ -2026,64 +2195,128 @@
      "id": "fit.stretch",
      "name": "Bending and stretching",
      "line": "Past your knees, to the splits.",
-     "size": "major",
+     "size": "months",
      "strand": "look-after-yourself",
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Reach past your knees with your legs straight.",
-       "how": [
-        "Stand with your feet together and your legs straight.",
-        "Fold forward slowly from the hips and let your head hang heavy.",
-        "Get past your knees and hold for twenty seconds. Do not bounce."
-       ],
-       "note": null,
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Touch your toes with your legs straight.",
-       "how": null,
-       "note": "Legs straight, no bouncing, and fingertips count. Warm muscles stretch further, so do it after moving.",
-       "ctx": "room",
-       "kind": "skill"
+       "test": "Stretch for five minutes every morning for five days running.",
+       "ctx": "long",
+       "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Hold your toes for thirty seconds without bending your knees.",
-       "how": null,
-       "note": null,
+       "test": "Reach your shins with your legs straight.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Get your palms flat on the floor.",
-       "how": null,
-       "note": null,
+       "test": "Sit on the floor with your legs straight and reach your ankles.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Sit on the floor with straight legs and hold your toes for a minute.",
-       "how": null,
-       "note": null,
+       "test": "Hold a hamstring stretch for a full minute on each leg.",
+       "note": "A full minute. Thirty seconds is where most people stop and it is where the change starts.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Do the splits, or a full backbridge.",
-       "how": null,
-       "note": null,
+       "test": "Touch your toes with your knees slightly bent.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Hold a deep squat with your heels down for thirty seconds.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Hold the deep squat for a full minute.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Reach one hand over your shoulder and the other up your back, and touch your fingers.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Do the same with the other arm on top.",
+       "note": "One side will be much worse than the other. That side is the point of this step.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Stretch every day for two weeks without missing one.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
+       "test": "Touch your toes with your legs straight.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Hold your toes for thirty seconds with your legs straight.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Put your knuckles on the floor with your legs straight.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Sit with your legs wide and lean forward until your elbows reach the floor.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Lie on your back and pull one straight leg up until it points at the ceiling.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Kneel, lean back and hold your heels for twenty seconds.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Put both palms flat on the floor with your knees a little bent.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Hold a bridge — hands and feet down, hips up — for twenty seconds.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Put both palms flat on the floor with your legs straight, and hold it for ten seconds.",
        "ctx": "room",
        "kind": "skill"
       }
@@ -2636,65 +2869,128 @@
      "id": "mind.cube",
      "name": "The cube",
      "line": "One face to under a minute.",
-     "size": "major",
+     "size": "months",
      "strand": "make-things",
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
-       "test": "Name the pieces and turn the cube twenty times without losing which face is which.",
-       "how": [
-        "A cube has centres, edges and corners. The centres never move.",
-        "Pick one face and keep your eye on its middle colour while you turn.",
-        "Turn it twenty times and still know which face was yours."
-       ],
-       "note": null,
+       "test": "Name the pieces and turn the cube twenty times without losing track of a colour.",
+       "note": "Centres never move. Whatever colour is in the middle is that face, always.",
        "ctx": "kit",
-       "kind": "attention"
+       "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Solve one whole face.",
-       "how": null,
-       "note": "One face means all nine squares the same colour. The layer underneath does not have to match yet.",
+       "test": "Learn what the letters mean — R, L, U, D, F, B — and turn each one.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Solve the first two layers.",
-       "how": null,
-       "note": null,
+       "test": "Follow a written sequence of six turns without a mistake.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Solve the whole cube on your own, start to finish.",
-       "how": null,
-       "note": "There is a method with about seven steps to learn. Everybody looks it up — that is not cheating.",
+       "test": "Make one whole face a single colour, with nobody helping you.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Solve it in under two minutes.",
-       "how": null,
-       "note": null,
+       "test": "Solve the white cross — four white edges round the white centre.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Solve it in under sixty seconds.",
-       "how": null,
-       "note": null,
+       "test": "Solve the white cross with the sides matching their centres too.",
        "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Put one white corner in, on your own.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Solve the whole white layer, corners and all.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Solve the white layer again in under two minutes.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Learn the sequence that puts a middle edge in to the right.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Learn the one that puts it in to the left.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Solve the middle layer.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Solve the first two layers three times in a row.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Learn the sequence for the yellow cross, and get it.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Get the yellow cross from any starting position.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Learn the sequence that puts the last corners in place.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Solve the whole cube with the sheet in front of you.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Solve the whole cube with nothing in front of you.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Solve it from three different scrambles in one sitting, under five minutes each.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Solve it in under three minutes, and teach somebody the white cross.",
+       "ctx": "with",
        "kind": "skill"
       }
      ]
@@ -2770,66 +3066,130 @@
      "id": "mind.memory",
      "name": "Memory",
      "line": "Six digits to a hundred.",
-     "size": "major",
+     "size": "months",
      "strand": "say-what-you-mean",
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Memorise a six-digit number and say it back a minute later.",
-       "how": [
-        "Get somebody to write down any six digits.",
-        "Look for ten seconds. Say them out loud in a rhythm, like a phone number.",
-        "Do something else for a minute, then say them back."
-       ],
-       "note": null,
        "ctx": "room",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Memorise twenty objects in order and say them back an hour later.",
-       "how": null,
-       "note": "Get somebody to lay out twenty things while you look, then cover them. Making a silly story helps.",
+       "test": "Memorise a phone number and say it back an hour later.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Learn a twenty-line poem by heart.",
-       "how": null,
-       "note": null,
+       "test": "Say your own address and two phone numbers from memory, with nothing in your hand.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Recite fifty digits of pi.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Memorise a five-item shopping list and buy it with no list in your hand.",
+       "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Memorise the order of a shuffled deck of cards.",
-       "how": null,
-       "note": "There is a proper method for this, and it is a picture for every card. Look it up.",
+       "test": "Learn the names of five people you met today, and use them tomorrow.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 6,
+       "test": "Turn five words into five daft pictures in your head, and say them back.",
+       "note": "The dafter the picture the better it sticks. That is not a trick, it is how memory actually works.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Walk through your own house in your head and name ten places, in order.",
+       "note": "Front door, hall, kitchen. Always the same ten, always the same order. This is your memory palace.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Put five things in those first five places, and say them back.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Put ten things in ten places, and say them back.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 10,
+       "test": "Say those same ten back the next morning.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Memorise twenty digits of pi.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Memorise a four-line verse, and say it a week later.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Memorise fifteen things in order.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Learn the first ten cards of a shuffled deck, in order.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Recite one hundred digits of pi.",
-       "how": null,
-       "note": null,
+       "n": 15,
+       "test": "Memorise thirty digits of pi.",
        "ctx": "room",
        "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Memorise twenty things in order.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Say that twenty back a full day later.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 18,
+       "test": "Learn twenty cards of a shuffled deck, in order.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Memorise fifty digits of pi.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Have somebody read you twenty things, and say them back in order, in front of them.",
+       "ctx": "with",
+       "kind": "courage"
       }
      ]
     },
@@ -3167,67 +3527,128 @@
      "id": "words.lang",
      "name": "A new language",
      "line": "One sentence to a real conversation.",
-     "size": "major",
+     "size": "months",
      "strand": "say-what-you-mean",
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Learn one usable sentence and say it out loud to another person.",
-       "how": [
-        "Pick any language. Spanish, Irish, Polish, whichever.",
-        "Choose one sentence you would really use — 'where is the bread', 'my name is'.",
-        "Look up how it sounds and say it out loud ten times.",
-        "Say it to another person today. That is the whole level."
-       ],
-       "note": "Useful means you would actually say it. Not 'the cat is on the table'.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "courage"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Learn twenty words and use ten of them in a day.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
+       "test": "Say hello, please, thank you and goodbye, without thinking about it.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Order food or ask directions in it, for real.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
-       "kind": "courage"
+       "test": "Count to ten out loud.",
+       "ctx": "room",
+       "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Hold a two-minute conversation without stopping.",
-       "how": null,
-       "note": "Two minutes without stopping. Getting it wrong and carrying on counts. Silence does not.",
-       "ctx": "out",
+       "test": "Say your own name, your age and where you live.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Read a children's book in it, all the way through.",
-       "how": null,
-       "note": null,
-       "ctx": "home",
-       "kind": "courage"
+       "test": "Learn twenty words you would actually use, and say them to somebody.",
+       "ctx": "with",
+       "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Have a proper conversation with somebody who grew up speaking it.",
-       "how": null,
-       "note": null,
+       "test": "Ask one question, and understand the answer you get.",
        "ctx": "with",
        "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Count to a hundred.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Learn the words for ten things in the room you are sitting in.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Order a drink or a snack entirely in the language.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Learn fifty more words — food, family, the weather, the time.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Say five sentences about your own day.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Understand a whole sentence said to you at normal speed.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 13,
+       "test": "Watch five minutes of something in the language and catch ten words.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 14,
+       "test": "Ask for directions and follow the answer.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 15,
+       "test": "Learn the past tense of five common verbs, and use each one.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Tell somebody what you did yesterday, in three sentences.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Read a page written for children and understand most of it.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Have a two-minute exchange with somebody else who is learning it.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Have a five-minute conversation with somebody who speaks it well.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 20,
+       "test": "Order a meal, ask two questions and answer three about yourself — all with somebody who grew up speaking it.",
+       "ctx": "out",
+       "kind": "courage"
       }
      ]
     },
@@ -3235,62 +3656,129 @@
      "id": "words.irish",
      "name": "Irish",
      "line": "Your own name to a conversation.",
-     "size": "major",
+     "size": "months",
      "strand": "say-what-you-mean",
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Say your own name and where you are from, in Irish.",
-       "how": null,
-       "note": null,
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Count to twenty and name ten everyday things.",
-       "how": null,
-       "note": null,
+       "test": "Say hello, goodbye, please and thank you.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Say five full sentences in a conversation.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
-       "kind": "courage"
+       "test": "Count to ten in Irish.",
+       "ctx": "room",
+       "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Read a road sign or a placename and say what it means.",
-       "how": null,
-       "note": "Nearly every placename here means something — Bally is a town, Knock is a hill, Derry is an oak wood.",
-       "ctx": "out",
-       "kind": "courage"
+       "test": "Learn the Irish for ten things in your house, and put a label on each.",
+       "ctx": "home",
+       "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Hold a two-minute conversation.",
-       "how": null,
-       "note": null,
+       "test": "Ask somebody how they are, and answer when they ask you.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Tell a short story in Irish to the group.",
-       "how": null,
-       "note": null,
+       "test": "Learn the days of the week.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Find out what your own town or townland name means in Irish.",
+       "note": "Almost every place name here is Irish underneath. Yours says something, and it is usually about the land.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Learn what five place names near you mean, and tell somebody.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 9,
+       "test": "Count to a hundred.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Learn twenty words for food, and ask for something in Irish.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Say five sentences about your own day.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Understand a whole sentence said to you at normal speed.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 13,
+       "test": "Listen to five minutes of Irish radio or television and catch ten words.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 14,
+       "test": "Read a short piece written for children and understand most of it.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Learn the past tense of five common verbs, and use each one.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Tell somebody in Irish what you did yesterday.",
        "ctx": "with",
        "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Learn a song or a poem in Irish and say it from memory.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Have a two-minute conversation with somebody else who is learning.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Have a five-minute conversation with a fluent speaker.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 20,
+       "test": "Tell a short story in Irish to the group.",
+       "ctx": "out",
+       "kind": "courage"
       }
      ]
     },
@@ -3298,65 +3786,133 @@
      "id": "words.read",
      "name": "Reading",
      "line": "Letter sounds to reading aloud to the little ones.",
-     "size": "major",
+     "size": "months",
      "strand": "say-what-you-mean",
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Know the sound every letter makes.",
+       "note": "The sound, not the name. B is 'buh'. Say it short — 'buh', not 'buhhh'.",
        "how": [
         "Not the letter names — the sounds. B is 'buh', not 'bee'.",
         "Go through the alphabet making the sound each letter makes.",
         "Do it out loud with somebody who can tell you when it is off."
        ],
-       "note": "The sound, not the name. B is 'buh'. Say it short — 'buh', not 'buhhh'.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Read a short book out loud to somebody.",
-       "how": null,
-       "note": null,
+       "test": "Say the sounds in a three-letter word one at a time — c, a, t.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Read a chapter book on your own.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "attention"
+       "test": "Push three sounds together and say the whole word.",
+       "ctx": "with",
+       "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Read a book you chose yourself, all of it, because you wanted to.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "kindness"
+       "test": "Read ten three-letter words out loud.",
+       "ctx": "with",
+       "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Read something genuinely hard and explain it to somebody else.",
-       "how": null,
-       "note": "Genuinely hard means you had to stop and go back. Explaining it is how you find out if you got it.",
+       "test": "Read a whole sentence made of three-letter words.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Read aloud to the younger children every week for a whole season.",
-       "how": null,
-       "note": null,
+       "test": "Read ten everyday words on sight — the, and, said, was.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Read twenty everyday words on sight.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Read a page of a first reading book out loud.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Learn the two-letter sounds — sh, ch, th, ck.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Read ten words with those sounds in them.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Read a whole first reading book out loud to somebody.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Read a book with a sentence on every page, on your own.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 13,
+       "test": "Read for five minutes with nobody helping.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 14,
+       "test": "Learn the long vowel sounds — ai, ee, igh, oa, oo.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Read twenty words with long vowel sounds in them.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Read a page and tell somebody what happened on it.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Read for ten minutes with nobody helping.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 18,
+       "test": "Read a whole short chapter on your own.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 19,
+       "test": "Read a whole short book on your own, over as many days as it takes.",
        "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 20,
+       "test": "Read a whole short book out loud to somebody younger, with no help.",
+       "ctx": "with",
        "kind": "kindness"
       }
      ]
@@ -3382,29 +3938,29 @@
       },
       {
        "n": 3,
+       "test": "Read on three separate days in one week.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 4,
        "test": "Read for twenty minutes without once picking up your phone.",
        "note": "Phone in another room. Twenty minutes. That is the whole test.",
        "ctx": "room",
        "kind": "attention"
       },
       {
-       "n": 4,
+       "n": 5,
        "test": "Finish a book you chose yourself. Any book, any length.",
        "note": "Chose yourself matters. Nobody set it, nobody recommended it, you are not being examined on it.",
        "ctx": "long",
        "kind": "skill"
       },
       {
-       "n": 5,
+       "n": 6,
        "test": "Read something every day for a week, even if it is one page.",
        "ctx": "long",
        "kind": "attention"
-      },
-      {
-       "n": 6,
-       "test": "Read fifty pages in one day.",
-       "ctx": "long",
-       "kind": "skill"
       },
       {
        "n": 7,
@@ -3415,44 +3971,80 @@
       },
       {
        "n": 8,
-       "test": "Put a book down at page forty because it is not good, and start another one.",
-       "note": "Finishing bad books is the commonest reason people stop reading. You owe an author nothing.",
-       "ctx": "room",
-       "kind": "courage"
+       "test": "Ask somebody what you should read next, and start it that week.",
+       "note": "Not knowing what to read next is the commonest reason people stop. Ask somebody who reads.",
+       "ctx": "with",
+       "kind": "skill"
       },
       {
        "n": 9,
+       "test": "Read twenty-five pages in one sitting.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Read fifty pages in one day.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
        "test": "Read two books inside one month.",
        "ctx": "long",
        "kind": "skill"
       },
       {
-       "n": 10,
+       "n": 12,
        "test": "Read for a whole hour without stopping.",
        "ctx": "room",
        "kind": "attention"
       },
       {
-       "n": 11,
+       "n": 13,
+       "test": "Read in three different places — outside, on a journey, and somewhere you never have.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
        "test": "Read a hundred pages in one day.",
        "ctx": "long",
        "kind": "skill"
       },
       {
-       "n": 12,
+       "n": 15,
        "test": "Finish a book you would have said was too hard for you.",
        "ctx": "long",
        "kind": "courage"
       },
       {
-       "n": 13,
-       "test": "Read a two-hundred-page book inside one day, in under eight hours of reading.",
-       "note": "A whole book, start to finish, between getting up and going to bed. It is an ordinary Saturday and almost nobody believes it until they do it.",
+       "n": 16,
+       "test": "Tell somebody what a book was about, well enough that they want to read it.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 17,
+       "test": "Read a hundred and fifty pages in one day.",
        "ctx": "long",
        "kind": "skill"
       },
       {
-       "n": 14,
+       "n": 18,
+       "test": "Read every day for a month without missing a day.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 19,
+       "test": "Read a two-hundred-page book inside one day, in under eight hours of reading.",
+       "note": "A whole book between getting up and going to bed. It is an ordinary Saturday, and almost nobody believes it until they do it.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
        "test": "Read a book a week for a month, and give one of them to somebody who needs it.",
        "ctx": "long",
        "kind": "kindness"
@@ -4462,65 +5054,129 @@
      "id": "make.draw",
      "name": "Drawing",
      "line": "Recognisable, then good.",
-     "size": "major",
+     "size": "months",
      "strand": "make-things",
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Draw something and have somebody name it without being told.",
-       "how": [
-        "Pick something in front of you — a cup, a shoe, a dog.",
-        "Look at the actual shape of it, not at the idea of it in your head.",
-        "Draw slowly. Nobody good draws fast.",
-        "Show it to somebody without telling them what it is."
-       ],
-       "note": null,
-       "ctx": "with",
-       "kind": "skill"
-      },
-      {
-       "n": 2,
-       "sid": "s2",
-       "test": "Draw from the thing in front of you rather than from your head.",
-       "how": null,
-       "note": "From life means the thing is in front of you while you draw. It always looks different to what is in your head.",
-       "ctx": "home",
-       "kind": "skill"
-      },
-      {
-       "n": 3,
-       "sid": "s3",
-       "test": "Draw the same thing five times and see it get better.",
-       "how": null,
-       "note": null,
        "ctx": "room",
        "kind": "skill"
       },
       {
+       "n": 2,
+       "test": "Draw the same thing three times and pick the best one.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 3,
+       "test": "Draw for ten minutes a day for five days.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
        "n": 4,
-       "sid": "s4",
-       "test": "Draw a person in proportion.",
-       "how": null,
-       "note": "In proportion means the head is about a seventh of the height and the eyes are halfway down the head.",
+       "test": "Draw something in front of you without lifting the pencil off the paper.",
+       "note": "It will look strange. It is about looking, not about the drawing.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Take three rounds of honest criticism and improve it each time.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
+       "test": "Draw an object by starting with the simple shapes underneath it.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Draw a cube, a cylinder and a ball so that they look solid.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Shade a ball so it looks round, with the light coming from one side.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Draw the same object twice, lit from two different sides.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Draw your own hand, from life.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Draw the chair you are sitting on, with the legs going the right way.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Draw the gap around an object instead of the object.",
+       "note": "Draw only the shape of the empty space. Your eye stops guessing and starts looking.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
+       "test": "Fill a whole page with small drawings of one thing.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Draw for ten minutes a day for two weeks without missing a day.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 14,
+       "test": "Copy a drawing you admire, line for line.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Draw a face with the eyes halfway down the head, not near the top.",
+       "note": "Almost everybody puts the eyes too high. Halfway down is right, and it fixes a face on its own.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Draw a face from a photograph.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Draw the same face again and get the eyes level and the right size.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Draw somebody sitting in front of you, in ten minutes.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Draw somebody you know, and have a third person say who it is.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
        "test": "Draw something somebody asks to keep.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "kindness"
       }
@@ -4593,66 +5249,129 @@
      "id": "make.machines",
      "name": "Machines and code",
      "line": "An idea out loud to something strangers use.",
-     "size": "major",
+     "size": "months",
      "strand": "make-things",
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
-       "test": "Describe an idea for an app out loud in three clear sentences.",
-       "how": [
-        "Think of something small you actually want.",
-        "Say it in three sentences: what it does, who uses it, what is on the screen.",
-        "Say it out loud to a person first. If they get it, an AI will."
-       ],
-       "note": null,
-       "ctx": "room",
-       "kind": "attention"
+       "test": "Describe an idea for an app out loud, in three clear sentences.",
+       "ctx": "with",
+       "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Get an AI to build something from your description that actually runs.",
-       "how": null,
-       "note": "Actually runs means you can open it and use it, not that it looked right in the answer.",
-       "ctx": "kit",
+       "test": "Write down what it should do, in five lines, on paper.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Fix what came back until it does what you meant.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
+       "test": "Draw the screens on paper before writing a single word of code.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Make something you genuinely use yourself.",
-       "how": null,
-       "note": null,
-       "ctx": "home",
-       "kind": "kindness"
+       "test": "Make a web page that says your name, and open it in a browser.",
+       "ctx": "kit",
+       "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Make something somebody else uses.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
-       "kind": "kindness"
+       "test": "Add a button that changes the words when you press it.",
+       "ctx": "kit",
+       "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Put something you built out into the world for strangers.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
+       "test": "Change the colours and the type until it looks like something you would show somebody.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Make a page that adds two numbers you type in.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Break it on purpose, read the error message, and fix it.",
+       "note": "Reading errors is the whole job. The message almost always says exactly what is wrong.",
+       "ctx": "kit",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Make it remember what you typed after you close the page.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Ask an AI for a piece you do not understand, then change it to do something else.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Make a list you can add to and delete from.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Put it on the internet with a real address.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Send the address to one person and watch them use it without helping.",
+       "ctx": "with",
        "kind": "courage"
+      },
+      {
+       "n": 14,
+       "test": "Fix the first thing they got stuck on.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Make it work on a phone as well as on a computer.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Add one thing they asked for.",
+       "ctx": "kit",
+       "kind": "kindness"
+      },
+      {
+       "n": 17,
+       "test": "Write down in one sentence what it does, so a stranger would understand.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Let a second person use it with you out of the room.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Change something and put the new version up without breaking the old one.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Have one person use it more than once, because they wanted to.",
+       "ctx": "long",
+       "kind": "skill"
       }
      ]
     },
@@ -4800,7 +5519,7 @@
      "id": "music.instrument",
      "name": "An instrument",
      "line": "One note to playing for people.",
-     "size": "major",
+     "size": "months",
      "strand": "make-things",
      "steps": [
       {
@@ -4818,116 +5537,116 @@
       },
       {
        "n": 3,
-       "test": "Play a five-note tune anybody recognises.",
+       "test": "Play five notes in a row without a squeak or a buzz.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 4,
-       "test": "Play that tune three times in a row without a mistake.",
+       "test": "Play a five-note tune anybody recognises.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 5,
-       "test": "Play a whole tune from beginning to end.",
+       "test": "Play that tune three times in a row without a mistake.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 6,
+       "test": "Play a whole tune from beginning to end.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
        "test": "Play a tune in time with a beat — a metronome, or your own foot.",
        "note": "In time matters more than fast. Slow and steady beats quick and lumpy, every time.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
-       "n": 7,
-       "test": "Learn a second tune from scratch, on your own, with nobody teaching you.",
-       "ctx": "kit",
-       "kind": "skill"
-      },
-      {
        "n": 8,
-       "test": "Play three tunes from memory.",
+       "test": "Learn a second tune from scratch, on your own, with nobody teaching you.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 9,
        "test": "Take the bar you keep getting wrong, play it slowly twenty times, and get it right.",
-       "note": "This is the actual skill. Not playing the tune — fixing the one bar. Slow enough that it is never wrong, twenty times, then speed up.",
+       "note": "This is the actual skill, and almost nobody is taught it. Not playing the tune — fixing the one bar. Slow enough that it is never wrong, twenty times, then speed up.",
        "ctx": "kit",
        "kind": "attention"
       },
       {
        "n": 10,
+       "test": "Play three tunes from memory.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
        "test": "Practise ten minutes a day for two weeks without missing a day.",
        "ctx": "long",
        "kind": "attention"
       },
       {
-       "n": 11,
+       "n": 12,
        "test": "Play a whole tune for one person, in the room with you.",
        "ctx": "with",
        "kind": "courage"
       },
       {
-       "n": 12,
-       "test": "Work a tune out by ear, with nobody showing you the notes.",
+       "n": 13,
+       "test": "Work a short tune out by ear, with nobody showing you the notes.",
        "note": "Something you can hum. Find the first note, then the next. It takes longer than you think and it changes how you hear music.",
        "ctx": "kit",
        "kind": "attention"
       },
       {
-       "n": 13,
+       "n": 14,
        "test": "Learn a tune from written music, or from tab, on your own.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
-       "n": 14,
+       "n": 15,
        "test": "Play with somebody else, in time.",
        "ctx": "with",
        "kind": "skill"
       },
       {
-       "n": 15,
-       "test": "Make a mistake in the middle of a tune and keep going without stopping.",
+       "n": 16,
+       "test": "Play a tune all the way through for somebody without stopping, mistakes and all.",
        "note": "Everybody hears the stop. Almost nobody hears the wrong note.",
-       "ctx": "kit",
+       "ctx": "with",
        "kind": "courage"
       },
       {
-       "n": 16,
-       "test": "Play two things at once — a tune and a rhythm, or play and sing.",
+       "n": 17,
+       "test": "Learn the beginner version of a song you actually like.",
+       "note": "The simple arrangement, not the record. Every song has one and it is not cheating.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
-       "n": 17,
-       "test": "Play from memory in front of three people.",
-       "ctx": "with",
-       "kind": "courage"
-      },
-      {
        "n": 18,
-       "test": "Play a whole song for a room of people.",
-       "note": "A room, not a corner. This is the one people mean when they say they wish they could play.",
-       "ctx": "out",
-       "kind": "courage"
+       "test": "Play that song end to end, three times, without stopping.",
+       "ctx": "kit",
+       "kind": "skill"
       },
       {
        "n": 19,
-       "test": "Play for the group at a day out.",
-       "ctx": "out",
-       "kind": "courage"
+       "test": "Play it from memory, with nothing in front of you.",
+       "ctx": "kit",
+       "kind": "skill"
       },
       {
        "n": 20,
-       "test": "Teach somebody their first tune, and stand back while they play it.",
+       "test": "Play it for two or three people, and show one of them the first line.",
        "ctx": "with",
-       "kind": "kindness"
+       "kind": "courage"
       }
      ]
     },
@@ -5133,62 +5852,128 @@
      "id": "music.readmusic",
      "name": "Reading music",
      "line": "Naming notes to sight-reading.",
-     "size": "major",
+     "size": "months",
      "strand": "say-what-you-mean",
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Name every note on a line of written music.",
-       "how": null,
-       "note": "Every line and space is a letter from A to G. There are rhymes for remembering them.",
-       "ctx": "kit",
-       "kind": "attention"
+       "ctx": "room",
+       "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Clap the rhythm of a written line correctly.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
+       "test": "Name the notes in the spaces and on the lines of the treble clef.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Play a simple piece from the page, slowly.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
+       "test": "Clap a written line of rhythm, in time.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Sight-read something you have never seen, slowly.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
+       "test": "Say the note names of a simple tune out loud, in order.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Write down a tune you heard, correctly.",
-       "how": null,
-       "note": null,
+       "test": "Play a five-note written line on an instrument.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Pass a graded music exam, or play a piece properly for the group.",
-       "how": null,
-       "note": null,
+       "test": "Read and clap crotchets, minims and quavers.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Play a written line in time with a beat.",
        "ctx": "kit",
        "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Find middle C on a keyboard and point to it on the page.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Play a whole eight-bar tune from the page.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Read the time signature and count yourself in.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Play a tune you have never heard, from the page, slowly.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Read sharps and flats, and play them right.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Play a tune in a key with one sharp in it.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Name the notes in the bass clef.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Play a written line with your left hand.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Play a tune with a repeat, and a first and second ending.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Write out a four-bar tune you made up, so somebody else could play it.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Have somebody play what you wrote, and hear that it is right.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Sight-read a simple tune you have never seen, first try, slowly.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Sight-read a simple tune at proper speed, in front of somebody.",
+       "ctx": "with",
+       "kind": "courage"
       }
      ]
     },
@@ -9846,84 +10631,119 @@
       },
       {
        "n": 2,
+       "test": "Do that on three separate days in one week.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 3,
        "test": "Drink a glass of water when you think you are hungry, and wait ten minutes.",
        "note": "Half the time it was thirst. You will be surprised how often.",
        "ctx": "home",
        "kind": "attention"
       },
       {
-       "n": 3,
+       "n": 4,
        "test": "Finish eating by eight in the evening, three nights running.",
        "ctx": "home",
        "kind": "attention"
       },
       {
-       "n": 4,
+       "n": 5,
        "test": "Go twelve hours with nothing but water. Sleep counts for most of it.",
        "note": "Eight in the evening to eight in the morning. Almost everybody has done this by accident.",
        "ctx": "home",
        "kind": "skill"
       },
       {
-       "n": 5,
+       "n": 6,
+       "test": "Do twelve hours on three separate days in one week.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
        "test": "Push your first meal to midday. Fourteen hours, water only.",
        "note": "From here on this ladder is for adults. See the note at the top.",
        "ctx": "home",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "test": "Do sixteen hours, water only, and get through an ordinary day inside it.",
-       "ctx": "home",
-       "kind": "skill"
-      },
-      {
-       "n": 7,
-       "test": "Sit through one wave of hunger without eating, and write down how long it lasted.",
-       "note": "Time it. Hunger comes in waves and goes again, usually inside twenty minutes. Knowing that is most of the skill.",
-       "ctx": "home",
-       "kind": "attention"
-      },
-      {
        "n": 8,
-       "test": "Do sixteen hours on three separate days in one week.",
+       "test": "Do fourteen hours twice in one week.",
        "ctx": "long",
        "kind": "skill"
       },
       {
        "n": 9,
-       "test": "Do eighteen hours, water only.",
+       "test": "Do sixteen hours, water only.",
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 10,
-       "test": "Do twenty hours, and take a walk inside it.",
+       "test": "Do sixteen hours and get through an ordinary day inside it.",
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 11,
+       "test": "Sit through one wave of hunger without eating, and time how long it lasted.",
+       "note": "Time it properly. Hunger comes in waves and goes again, usually inside twenty minutes. Knowing that is most of the skill.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
+       "test": "Do sixteen hours on three separate days in one week.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Do eighteen hours, water only.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Do eighteen hours and take a walk inside it.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Do twenty hours.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
        "test": "Do twenty-four hours — one evening meal to the next evening meal.",
        "note": "Water, and salt in it if you feel light-headed. Stop if you feel genuinely unwell; stopping is not failing.",
        "ctx": "home",
        "kind": "skill"
       },
       {
-       "n": 12,
-       "test": "Do twenty-four hours through a full working day, without telling anybody.",
-       "note": "The point is that it is unremarkable. No performance, no announcement.",
+       "n": 17,
+       "test": "Do twenty-four hours on a normal working day, not a quiet one.",
        "ctx": "long",
        "kind": "courage"
       },
       {
-       "n": 13,
-       "test": "Do thirty hours, and sleep through part of it.",
+       "n": 18,
+       "test": "Do twenty-eight hours.",
        "ctx": "home",
        "kind": "skill"
       },
       {
-       "n": 14,
+       "n": 19,
+       "test": "Do thirty-two hours, and sleep through part of it.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
        "test": "Do thirty-six hours, and break it properly with a real meal.",
        "note": "Break it small and slow — broth, eggs, something cooked. Not a feast. Breaking it badly is the part people get wrong.",
        "ctx": "home",

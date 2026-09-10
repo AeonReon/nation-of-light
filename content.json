@@ -1,5 +1,5 @@
 {
- "version": 38,
+ "version": 39,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -1831,7 +1831,8 @@
     "Beacon",
     "Lighthouse"
    ],
-   "feeds": "{room} · a ladder of {n} steps"
+   "feeds": "{room} · a ladder of {n} steps",
+   "afterTitle": "And after that"
   },
   "goal": {
    "n": 3,

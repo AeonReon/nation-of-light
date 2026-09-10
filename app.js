@@ -1163,6 +1163,11 @@
           return `<h4 class="tk-band ${dn === b.steps.length ? 'full' : ''}"><span>${b.name}</span><em>${dn}/${b.steps.length}</em></h4>`
             + b.steps.map(row).join(''); }).join('')
       : tr.steps.map(row).join('')}</div>`;
+    /* Why it stops here. His rule: nothing in the school runs for years,
+       because a chain you cannot finish stops being a chain — so a ladder ends
+       at something real about three months in and hands you over. Without this
+       line the last step just looks like the place we ran out of ideas. */
+    if (sz.after) h += `<div class="tk-after"><b>${K.afterTitle || 'And after that'}</b><span>${sz.after}</span></div>`;
     h += `<p class="tk-feeds">${fmt1(K.feeds, { room: c.name, n: N })}</p></div>`;
     list.innerHTML = h;
     list.querySelectorAll('[data-lad]').forEach(b => b.addEventListener('click', () => { sfx('tap');
