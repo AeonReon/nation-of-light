@@ -666,7 +666,8 @@
   function paintSchoolCount() { const p = points(), r = rankOf(p); $('countn').textContent = p; const of = $('countn').nextElementSibling; of.hidden = false; of.textContent = r.name; paintRank(); paintDay(); }
   /* ---- the arrival: the portico, the two of them, where you stand, three for today ---- */
   let HOMEN = 0;
-  function goHome() { if ($('stage').classList.contains('arrive')) return; hush(); clearTimeout(ROOMT); HOMEN++; CAT = null; TRK = null; SEARCH = null; paintSearchBtn(); arrival(false, true, true); }
+  function goHome() { ROOMV = null; if ($('stage').classList.contains('arrive')) { hush(); renderArrival(); $('slist').scrollTop = 0; return; }
+    hush(); clearTimeout(ROOMT); HOMEN++; CAT = null; TRK = null; SEARCH = null; paintSearchBtn(); arrival(false, true, true); }
   const todayQuick = () => { const t = today(); return Object.values(S.school.done).some(v => typeof v === 'string' && v.startsWith(t)); };
   function dayCount() { const t = today(); const q = Object.values(S.school.done).filter(v => typeof v === 'string' && v.startsWith(t)).length; const pr = Object.values(S.school.practice || {}).filter(p => p.days && p.days[t]).length; return q + pr; }
   function dayBar() { const G = C.school.goal || { n: 3 }, n = dayCount(), pct = Math.min(100, Math.round(n / G.n * 100)), over = G.overAt && n >= G.overAt; return `<div class="daybar ${n >= G.n ? 'full' : ''} ${over ? 'over' : ''}" title="${G.lede || ''}"><i style="width:${pct}%"></i><span>${over ? (G.over + ' · ' + n) : n >= G.n ? G.done : (n + ' of ' + G.n + ' ' + (G.label || 'today'))}</span></div>`; }
@@ -757,47 +758,58 @@
      both put a character on the screen with a word, because a number on its own
      never made anybody want to do the next thing. */
   const HORN_IC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 001 1h2l5 4V6L6 10H4a1 1 0 00-1 1z"/><path d="M15 9.5a3.5 3.5 0 010 5M18 7a7 7 0 010 10"/></svg>';
-  function progressPanel() {
-    const p = points(), r = rankOf(p), A = C.arrival.stand, RK = C.school.ranks;
-    const rooms = SCH.categories.map(c => ({ c, n: c.tracks.reduce((s, tr) => s + trackDone(tr), 0), N: c.tracks.reduce((s, tr) => s + tr.steps.length, 0) })).filter(x => x.n > 0).sort((x, y) => y.n - x.n);
-    const lvl = RK.findIndex(x => x[1] === r.name);
-    const v = veil(`<div class="panel bigpanel"><div class="eyebrow"><i></i>${A.progressTitle || 'How far you have come'}</div>
-      <div class="acard">${standCard(true)}</div>
-      <div class="acard"><span class="eyebrow">${(C.school.awards.show || {}).ladder || 'The ladder'}</span>
-        <div class="chips">${RK.map((x, i) => `<span class="chip ${i <= lvl ? 'got' : ''} ${i === lvl ? 'this' : ''}">${x[1]}<small>${Math.max(1, x[0])}</small></span>`).join('')}</div></div>
-      ${shelfCard()}
-      ${rooms.length ? `<div class="acard prog"><span class="eyebrow">${(C.arrival.folds || {}).rooms || 'Rooms climbed'}</span>
-        <div class="rooms">${rooms.map(x => `<div class="rr" style="--c:${x.c.accent};--c2:${x.c.accent2}"><span>${x.c.name}</span><i><b style="width:${Math.round(x.n / x.N * 100)}%"></b></i><small>${x.n} of ${x.N}</small></div>`).join('')}</div></div>` : ''}
-      <div class="showcap" id="showcap" hidden></div></div>`, 'light bigveil');
-    backBtn(v, () => closePanel());
-    SHOW = v; wireShelf(v);
-    if (!inScene()) { popIn('marcus'); popIn('aurelia'); }
-    setTimeout(() => { if (SHOW !== v) return; ARIG.nod();
-      cap('aurelia', fmt1(A.progressSay || 'Look at it written down. {n} things you have actually done.', { n: p }));
-      capHide(4200); }, inScene() ? 500 : 900);
-    return v;
-  }
-  function runPanel() {
-    const run = runInfo(), R = C.school.runs || {}, A = C.arrival.stand;
-    const stones = awards().filter(a => a.kind === 'stone');
-    const v = veil(`<div class="panel bigpanel"><div class="eyebrow"><i></i>${R.title || 'Days in a row'}</div>
-      <div class="acard">${runCard(true)}</div>
-      <div class="acard"><span class="eyebrow">${R.shelfTitle || 'What they earn'}</span>
+  /* ONE room, not two veils. The veils ran up under the notch and read as
+     broken, and he is right that they are the same room anyway: "the trophy
+     room and the progress room almost go together in one big progress room —
+     the characters at the top, then underneath much more emphasis on the
+     progress and the trophies with a lot more detail." So it renders into the
+     list under the portico, exactly like a ladder page does, and Back goes
+     home. Both cards on the home page open it; the streak card lands you on
+     the streak. */
+  let ROOMV = null;
+  function openRoom(at) { ROOMV = at || 'top'; hush(); renderArrival();
+    setTimeout(() => { const el = at === 'run' ? $('runsec') : null;
+      $('slist').scrollTop = el ? Math.max(0, el.offsetTop - 8) : 0; }, 30); }
+  function closeRoom() { ROOMV = null; hush(); renderArrival(); $('slist').scrollTop = 0; }
+  const troBtn = a => `<button class="tro ${a.earned ? 'on' : 'off'}" data-tro="${a.id}">${trophySVG(a)}
+    <span>${a.short}</span><small>${a.earned ? (a.kind === 'medal' ? a.tier : (a.kind === 'stone' ? a.need + ' days' : 'Earned'))
+      : (a.kind === 'stone' ? a.left + ' more day' + (a.left === 1 ? '' : 's') : a.left + ' more')}</small></button>`;
+  function progressRoom(list) {
+    const p = points(), r = rankOf(p), A = C.arrival.stand, RK = C.school.ranks, R = C.school.runs || {};
+    const run = runInfo(), aw = awards(), lvl = RK.findIndex(x => x[1] === r.name);
+    const ranks = aw.filter(a => a.kind === 'flame'), stones = aw.filter(a => a.kind === 'stone');
+    const meds = aw.filter(a => a.kind === 'medal'), special = aw.filter(a => a.kind === 'wreath');
+    const gotM = meds.filter(a => a.earned), nextM = meds.filter(a => !a.earned).sort((x, y) => x.left - y.left).slice(0, 6);
+    const rooms = SCH.categories.map(c => ({ c, n: c.tracks.reduce((s2, tr) => s2 + trackDone(tr), 0), N: c.tracks.reduce((s2, tr) => s2 + tr.steps.length, 0) })).sort((x, y) => y.n - x.n);
+    const earned = aw.filter(a => a.earned).length;
+    list.innerHTML =
+      `<div class="acard prheadcard"><span class="eyebrow">${A.progressTitle || 'How far you have come'}</span>
+        ${standCard(true)}</div>` +
+      `<div class="acard"><span class="eyebrow">${(C.school.awards.show || {}).ladder || 'The ladder'}</span>
+        <div class="chips">${RK.map((x, i) => `<span class="chip ${i <= lvl ? 'got' : ''} ${i === lvl ? 'this' : ''}">${x[1]}<small>${Math.max(1, x[0])}</small></span>`).join('')}</div>
+        <p class="rule">${(C.school.rankLines || {})[r.name] || ''}</p></div>` +
+      `<div class="acard" id="runsec"><span class="eyebrow">${R.title || 'Days in a row'}</span>${runCard(true)}</div>` +
+      `<div class="acard"><span class="eyebrow">${R.shelfTitle || 'What days in a row earn'}</span>
         <p class="lede">${R.lede || ''}</p>
         <div class="stonelist">${stones.map(a => `<button class="stonerow ${a.earned ? 'on' : ''}" data-tro="${a.id}">
-          ${trophySVG(a)}<span><strong>${a.name}</strong><small>${a.earned ? (R.got || 'Earned') + ' · ' + a.need + ' days' : fmt1(R.away || '{n} more day{s} in a row', { n: a.left, s: a.left === 1 ? '' : 's' })}</small></span>
-          <i class="stonebar"><b style="width:${Math.min(100, Math.round(run.best / a.need * 100))}%"></b></i></button>`).join('')}</div>
-        <p class="rule">${R.note || ''}</p></div>
-      <div class="showcap" id="showcap" hidden></div></div>`, 'light bigveil');
-    backBtn(v, () => closePanel());
-    SHOW = v; wireShelf(v);
-    if (!inScene()) { popIn('marcus'); popIn('aurelia'); }
-    const lines = R.say || [];
-    const pick = lines.length ? lines[Math.min(lines.length - 1, stones.filter(a => a.earned).length)] : null;
-    if (pick) setTimeout(() => { if (SHOW !== v) return; RIG.nod(); cap('marcus', pick); capHide(4600); }, inScene() ? 500 : 900);
-    return v;
+          ${trophySVG(a)}<span><strong>${a.name}</strong><small>${a.earned ? (R.got || 'Earned') + ' · ' + a.need + ' days'
+            : fmt1(R.away || '{n} more day{s} in a row', { n: a.left, s: a.left === 1 ? '' : 's' })}</small></span>
+          <i class="stonebar"><b style="width:${Math.min(100, Math.round(run.best / a.need * 100))}%"></b></i></button>`).join('')}</div></div>` +
+      `<div class="acard"><div class="shtop"><span class="eyebrow">${C.school.awards.title}</span><small>${earned} earned</small></div>
+        <h4 class="prsub">${A.ranksTitle || 'Ranks'}</h4><div class="trogrid">${ranks.map(troBtn).join('')}</div>
+        ${special.length ? `<h4 class="prsub">${A.specialTitle || 'The twenty-five'}</h4><div class="trogrid">${special.map(troBtn).join('')}</div>` : ''}
+        <h4 class="prsub">${A.medalsTitle || 'Rooms'} <em>${gotM.length} of ${meds.length}</em></h4>
+        <div class="trogrid">${gotM.concat(nextM).map(troBtn).join('')}</div>
+        ${meds.length > gotM.length + nextM.length ? `<p class="rule">${fmt1(A.medalsMore || '{n} more room medals to come. Every room has three.', { n: meds.length - gotM.length - nextM.length })}</p>` : ''}</div>` +
+      `<div class="acard prog"><span class="eyebrow">${(C.arrival.folds || {}).rooms || 'Rooms climbed'}</span>
+        <div class="rooms">${rooms.map(x => `<div class="rr" style="--c:${x.c.accent};--c2:${x.c.accent2}"><span>${x.c.name}</span><i><b style="width:${x.N ? Math.round(x.n / x.N * 100) : 0}%"></b></i><small>${x.n} of ${x.N}</small></div>`).join('')}</div></div>`;
+    wireShelf(list);
+    stageBack(closeRoom);
+    if (!SAIDPR) { SAIDPR = true; setTimeout(() => { ARIG.nod();
+      cap('aurelia', fmt1(A.progressSay || 'Look at it written down. {n} things you have actually done.', { n: p }));
+      capHide(4600); }, 700); }
   }
-  function closePanel() { SHOW = null; hush(); closeVeil(); if (!inScene()) { popOut('marcus', 0); popOut('aurelia', 0); } }
+  let SAIDPR = false;
   const SHARE_IC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 001 1h14a1 1 0 001-1v-7M12 3v13M7 8l5-5 5 5"/></svg>';
   let VISREAD = false;
   function readVision(root) {
@@ -816,9 +828,11 @@
     step();
   }
   function foldCard(key, title, inner, open) { return `<details class="fold" data-fold="${key}" ${open ? 'open' : ''}><summary>${title}</summary><div class="fbody">${inner}</div></details>`; }
-  const pickRow = ([tr, st]) => { const c = catOf(tr), P = C.arrival, nd = needsOf(st); return `<div class="pick" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span class="ptxt"><span class="scat">${c.name} · ${tr.name}${nd ? ` <b class="need ${nd}">${(P.needs || {})[nd] || nd}</b>` : ''}</span><span class="stest">${st.test}</span></span><span class="pbtns"><button class="btn btn-gold sm" data-do="${skey(tr, st)}">${P.do}</button><button class="btn btn-ghost sm" data-not="${skey(tr, st)}">${P.notThis}</button></span></div>`; };
+  const pickRow = ([tr, st]) => { const c = catOf(tr), P = C.arrival, nd = needsOf(st); return `<div class="pick" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span class="ptxt"><span class="scat">${c.name} · ${tr.name}${nd ? ` <b class="need ${nd}">${(P.needs || {})[nd] || nd}</b>` : ''}</span><span class="stest">${st.test}</span></span><span class="pbtns"><button class="btn btn-gold sm wide" data-do="${skey(tr, st)}">${P.do}</button><button class="btn btn-ghost sm" data-not="${skey(tr, st)}">${P.notThis}</button></span></div>`; };
   function renderArrival() {
-    const list = $('slist'), keep = list.scrollTop; const picks = todayPicks(), later = todayPicks('later'); const P = C.arrival, R = C.room, F = P.folds || {};
+    const list = $('slist'), keep = list.scrollTop;
+    if (ROOMV) { progressRoom(list); return; }
+    stageBack(null); const picks = todayPicks(), later = todayPicks('later'); const P = C.arrival, R = C.room, F = P.folds || {};
     // the feed: newest post, and whether it has been seen
     S.feed = S.feed || { posts: [], seen: [] }; const post = FEED[0] || null; const isNew = post && !S.feed.seen.includes(post.id);
     // today's ticks
@@ -852,14 +866,14 @@
     const rb = list.querySelector('#readit'); if (rb) rb.addEventListener('click', () => { sfx('tap'); hush(); clearTimeout(ROOMT); cap('aurelia', rd.title); ARIG.nod(); aureliaSay('ui-read-' + rd.id, () => { capHide(1500); idleRoom(); }); });
     wireShelf(list); wireLong(list);
     list.querySelectorAll('[data-panel]').forEach(b => b.addEventListener('click', () => { sfx('open');
-      hush(); if (b.dataset.panel === 'run') runPanel(); else progressPanel(); }));
+      openRoom(b.dataset.panel === 'run' ? 'run' : 'top'); }));
     list.querySelectorAll('[data-do]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.do); if (r) stepSheet(r[0], r[1], null, 'arrival'); }));
     list.querySelectorAll('.crow[data-step]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.step); if (r) stepSheet(r[0], r[1], null, 'arrival'); }));
     list.querySelectorAll('[data-not]').forEach(b => b.addEventListener('click', () => { sfx('tap'); notThis(b.dataset.not); renderArrival(); if (line(C.arrival.another)) { hush(); marcusSay(line(C.arrival.another), 'nod'); } }));
     list.querySelector('#intoschool').addEventListener('click', () => { sfx('tap'); leaveArrival(); });
     list.scrollTop = keep;
   }
-  function leaveArrival() { clearTimeout(arrival._t); clearTimeout(ROOMT); hush(); musicStop(); lyreStop(800); $('stage').classList.remove('arrive'); RIG.show(false); ARIG.show(false); $('afig').classList.remove('walk-in-l'); dock('pop'); renderSchool(); if (!S.school.toured) setTimeout(offerTour, 600); else setTimeout(entryWord, 650); }
+  function leaveArrival() { ROOMV = null; clearTimeout(arrival._t); clearTimeout(ROOMT); hush(); musicStop(); lyreStop(800); $('stage').classList.remove('arrive'); RIG.show(false); ARIG.show(false); $('afig').classList.remove('walk-in-l'); dock('pop'); renderSchool(); if (!S.school.toured) setTimeout(offerTour, 600); else setTimeout(entryWord, 650); }
   /* going in: one of them pops up with a word for the day ahead. Never the same one twice in a sitting, a different start each day, loosely his and hers in turn. */
   const ENTRYSAID = new Set();
   function entryWord() {
@@ -1002,7 +1016,7 @@
   function trophyShow(a) {
     if (SHOW) closeShow(true);
     const K = C.school.awards.show || {}, sc = inScene(); hush();
-    const v = veil(`<div class="panel showcard"><div class="bigt ${a.earned ? '' : 'off'}">${trophySVG(a)}</div><div class="eyebrow"><i></i>${a.earned ? (K.earned || 'Earned') : (K.notyet || 'Not yet')}<i></i></div><h2>${a.name}</h2><p class="lede">${a.line}</p>${standCard()}${a.kind === 'flame' ? `<div class="ladderchips"><span class="eyebrow">${K.ladder || 'The ladder'}</span><div class="chips">${C.school.ranks.map((r, i) => `<span class="chip ${i < a.level || (i === a.level && a.earned) ? 'got' : ''} ${i === a.level ? 'this' : ''}">${r[1]}<small>${Math.max(1, r[0])}</small></span>`).join('')}</div></div>` : ''}<div class="showcap" id="showcap" hidden></div></div>`, 'light trophyveil');
+    const v = veil(`<div class="panel showcard"><div class="bigt ${a.earned ? '' : 'off'}">${trophySVG(a)}</div><div class="eyebrow"><i></i>${a.earned ? (K.earned || 'Earned') : (K.notyet || 'Not yet')}<i></i></div><h2>${a.name}</h2><p class="lede">${a.line}</p>${standCard(true)}${a.kind === 'flame' ? `<div class="ladderchips"><span class="eyebrow">${K.ladder || 'The ladder'}</span><div class="chips">${C.school.ranks.map((r, i) => `<span class="chip ${i < a.level || (i === a.level && a.earned) ? 'got' : ''} ${i === a.level ? 'this' : ''}">${r[1]}<small>${Math.max(1, r[0])}</small></span>`).join('')}</div></div>` : ''}<div class="showcap" id="showcap" hidden></div></div>`, 'light trophyveil');
     backBtn(v, () => closeShow());
     if (sc) { const scn = $('scene'); v.style.top = (scn.offsetTop + scn.offsetHeight) + 'px'; }
     SHOW = v;
@@ -1061,8 +1075,8 @@
     const lit = daysLit(), t = today(); const days = []; for (let i = 6; i >= 0; i--) { const d = new Date(); d.setDate(d.getDate() - i); days.push(d); }
     const dk = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
     const th = line(C.school.thoughts[daySeed() % C.school.thoughts.length]);
-    list.innerHTML = `<div class="acard">${standCard()}</div>` +
-      (pick ? (([tr, st]) => { const c = catOf(tr); return `<div class="acard one" style="--c:${c.accent};--c2:${c.accent2}"><span class="eyebrow" style="color:var(--c)">${c.name} · ${tr.name}</span><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><div class="stestbig">${st.test}</div>${st.how ? `<p class="lede">${st.how[0]}</p>` : (st.note ? `<p class="lede">${st.note}</p>` : '')}<div class="row"><button class="btn btn-ghost" data-not="${skey(tr, st)}">${P.notThis}</button><button class="btn btn-gold" data-do="${skey(tr, st)}" style="flex:1.4">${P.do}</button></div></div>`; })(pick)
+    list.innerHTML = `<div class="acard">${standCard(true)}</div>` +
+      (pick ? (([tr, st]) => { const c = catOf(tr); return `<div class="acard one" style="--c:${c.accent};--c2:${c.accent2}"><span class="eyebrow" style="color:var(--c)">${c.name} · ${tr.name}</span><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><div class="stestbig">${st.test}</div>${st.how ? `<p class="lede">${st.how[0]}</p>` : (st.note ? `<p class="lede">${st.note}</p>` : '')}<div class="row"><button class="btn btn-gold" data-do="${skey(tr, st)}" style="flex:1.6">${P.do}</button><button class="btn btn-ghost" data-not="${skey(tr, st)}">${P.notThis}</button></div></div>`; })(pick)
         : `<div class="acard"><p class="lede">Every quick one is done. The long game is where the rest of you lives.</p></div>`) +
       (picks.length > 1 ? foldCard('more', C.school.nextMore || 'Three more easy ones', `<div class="acard" style="padding-top:4px">${picks.slice(1, 4).map(pickRow).join('')}</div>`) : '') +
       (later.length ? foldCard('later', P.laterTitle || 'With people, outside, or with a thing', `<p class="lede" style="padding:0 6px">${P.laterLede || ''}</p><div class="acard" style="padding-top:4px">${later.map(pickRow).join('')}</div>`) : '') +

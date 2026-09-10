@@ -1098,3 +1098,19 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 .lgrow .px{position:absolute;top:6px;right:6px;width:26px;height:26px;border-radius:50%;z-index:3;
   background:var(--ivory-2);color:var(--ink-faint);font-size:16px;line-height:1;display:grid;place-items:center}
 .lgrow .px:active{transform:scale(.9)}
+
+/* ---- the progress room (v44) ----
+   One room, not two veils that ran up under the notch. It renders into the
+   list under the portico exactly like a ladder page, so the characters are on
+   top and everything else scrolls properly beneath them. */
+.prheadcard .rankface{margin-top:4px}
+.prsub{margin:14px 2px 6px;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink-faint);display:flex;align-items:baseline;gap:8px}
+.prsub em{font-style:normal;letter-spacing:0;font-size:11.5px;color:var(--gold-deep)}
+.trogrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px 4px}
+.trogrid .tro{width:auto;min-width:0}
+.trogrid .tro span{max-width:100%}
+.acard .chips{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+
+/* the button we want pressed is the one under the thumb (v44) */
+.pick .pbtns .btn.sm.wide{flex:1 1 auto}

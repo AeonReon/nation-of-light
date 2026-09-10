@@ -1,5 +1,5 @@
 {
- "version": 42,
+ "version": 44,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -1973,7 +1973,7 @@
   "another": "c-a3",
   "after": "c-a4",
   "go": "Into the school",
-  "notThis": "Not this one",
+  "notThis": "Another one",
   "do": "Do it",
   "stand": {
    "days": "days lit",
@@ -1997,7 +1997,11 @@
    "lvlcapTop": "The top of the list — and the school keeps growing, so there is always more.",
    "seeProgress": "See how far you have come",
    "progressTitle": "How far you have come",
-   "progressSay": "Look at it written down. {n} things you have actually done."
+   "progressSay": "Look at it written down. {n} things you have actually done.",
+   "ranksTitle": "Ranks",
+   "specialTitle": "The twenty-five",
+   "medalsTitle": "Rooms",
+   "medalsMore": "{n} more room medals waiting. Every room has three: bronze, silver, and all of it."
   },
   "post": null,
   "again": [
