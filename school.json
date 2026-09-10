@@ -719,6 +719,70 @@
        "kind": "skill"
       }
      ]
+    },
+    {
+     "id": "body.hopping",
+     "name": "Hopping and balancing",
+     "line": "From four, beside you. One foot, two feet, a straight line and a roll.",
+     "size": "weeks",
+     "strand": "little",
+     "from": 4,
+     "steps": [
+      {
+       "n": 1,
+       "sid": "s1",
+       "test": "Stand on one foot while somebody counts to five. Then the other foot.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 2,
+       "sid": "s2",
+       "test": "Hop five times on one foot without putting the other one down.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 3,
+       "sid": "s3",
+       "test": "Jump over a line with both feet together, ten times.",
+       "how": null,
+       "note": "A skipping rope on the floor, a crack in the path, a line of tape. Any line.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 4,
+       "sid": "s4",
+       "test": "Walk along a line without stepping off, heel to toe.",
+       "how": null,
+       "note": "A low wall counts if a grown-up is holding your hand.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 5,
+       "sid": "s5",
+       "test": "Do a forward roll on something soft.",
+       "how": null,
+       "note": "Chin tucked in, and a grown-up beside you. A bed or the grass is fine.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 6,
+       "sid": "s6",
+       "test": "Hop all the way across the room, swap feet halfway, and land the last one still.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      }
+     ]
     }
    ]
   },
@@ -4774,6 +4838,70 @@
        "kind": "courage"
       }
      ]
+    },
+    {
+     "id": "speak.sayit",
+     "name": "Saying it yourself",
+     "line": "From four, beside you. Your name, a hello, a please, a thank you, a question, a story.",
+     "size": "weeks",
+     "strand": "little",
+     "from": 4,
+     "steps": [
+      {
+       "n": 1,
+       "sid": "s1",
+       "test": "Say your name and how old you are to somebody you have not met before, looking at them.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 2,
+       "sid": "s2",
+       "test": "Say hello first to somebody you know, before they say it to you.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 3,
+       "sid": "s3",
+       "test": "Ask for something in a whole sentence with a please in it, instead of pointing.",
+       "how": null,
+       "note": "\"Can I have the red one, please.\" The whole thing, out loud.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 4,
+       "sid": "s4",
+       "test": "Say thank you to the person at the shop, loud enough that they hear it.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 5,
+       "sid": "s5",
+       "test": "Ask a grown-up a question you really want the answer to, and listen to the whole answer.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 6,
+       "sid": "s6",
+       "test": "Tell somebody something that happened today, with a beginning, a middle and an end.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "courage"
+      }
+     ]
     }
    ]
   },
@@ -5437,6 +5565,134 @@
        "kind": "skill"
       }
      ]
+    },
+    {
+     "id": "make.scissors",
+     "name": "Scissors",
+     "line": "From four, beside you. Cutting, and cutting where you meant to.",
+     "size": "weeks",
+     "strand": "little",
+     "from": 4,
+     "steps": [
+      {
+       "n": 1,
+       "sid": "s1",
+       "test": "Open and shut the scissors ten times with nothing in them.",
+       "how": null,
+       "note": "Thumb in the small hole, fingers in the big one. Child scissors, and a grown-up beside you.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 2,
+       "sid": "s2",
+       "test": "Cut a piece of paper in two, any way you like.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 3,
+       "sid": "s3",
+       "test": "Cut along a straight line somebody drew for you.",
+       "how": null,
+       "note": "Little cuts, and turn the paper, not the scissors.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 4,
+       "sid": "s4",
+       "test": "Cut along a curvy line, all the way, without leaving it.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 5,
+       "sid": "s5",
+       "test": "Cut out a circle and hold it up.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 6,
+       "sid": "s6",
+       "test": "Cut out three shapes and stick them down to make a picture. Then tell somebody what it is.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      }
+     ]
+    },
+    {
+     "id": "make.crayons",
+     "name": "Crayons",
+     "line": "From four, beside you. Colouring in, then drawing what you see.",
+     "size": "weeks",
+     "strand": "little",
+     "from": 4,
+     "steps": [
+      {
+       "n": 1,
+       "sid": "s1",
+       "test": "Colour one shape in and stay inside the line.",
+       "how": null,
+       "note": "Slow near the edges, fast in the middle.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 2,
+       "sid": "s2",
+       "test": "Colour a whole picture, every part of it, with more than one colour.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 3,
+       "sid": "s3",
+       "test": "Draw a circle that joins up where it started.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 4,
+       "sid": "s4",
+       "test": "Draw a person with a head, a body, two arms and two legs.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 5,
+       "sid": "s5",
+       "test": "Draw your house, then draw somebody standing outside it.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 6,
+       "sid": "s6",
+       "test": "Draw something that happened today and tell the story of it to somebody while they look.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "courage"
+      }
+     ]
     }
    ]
   },
@@ -6037,6 +6293,70 @@
        "note": null,
        "ctx": "with",
        "kind": "courage"
+      }
+     ]
+    },
+    {
+     "id": "music.song",
+     "name": "A song all the way through",
+     "line": "From four, beside you. One song, sung whole, then sung to somebody.",
+     "size": "weeks",
+     "strand": "little",
+     "from": 4,
+     "steps": [
+      {
+       "n": 1,
+       "sid": "s1",
+       "test": "Sing one song all the way through with somebody singing beside you.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 2,
+       "sid": "s2",
+       "test": "Sing it all the way through on your own, with nobody helping.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 3,
+       "sid": "s3",
+       "test": "Clap the beat while somebody else sings it.",
+       "how": null,
+       "note": "The beat is the steady part, like footsteps. Not the words.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 4,
+       "sid": "s4",
+       "test": "Sing it as loud as you can, then sing it so quietly only the person next to you can hear.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 5,
+       "sid": "s5",
+       "test": "Sing it to somebody who has never heard you sing it.",
+       "how": null,
+       "note": "Grandparents count. On the phone counts.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 6,
+       "sid": "s6",
+       "test": "Make up a new verse and sing that too.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
       }
      ]
     }
@@ -6896,6 +7216,70 @@
        "how": null,
        "note": null,
        "ctx": "long",
+       "kind": "skill"
+      }
+     ]
+    },
+    {
+     "id": "food.kitchen",
+     "name": "In the kitchen",
+     "line": "From four, beside you. Hands washed, then stirring, spreading, cracking and making.",
+     "size": "weeks",
+     "strand": "little",
+     "from": 4,
+     "steps": [
+      {
+       "n": 1,
+       "sid": "s1",
+       "test": "Wash your hands properly before you touch any food.",
+       "how": null,
+       "note": "Both sides, between the fingers, for as long as a short song.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 2,
+       "sid": "s2",
+       "test": "Stir something in a bowl until it is all mixed and nothing is left at the bottom.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 3,
+       "sid": "s3",
+       "test": "Spread butter on a slice of bread, right to the edges, without tearing it.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 4,
+       "sid": "s4",
+       "test": "Peel a banana or a satsuma all by yourself.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 5,
+       "sid": "s5",
+       "test": "Crack an egg into a bowl.",
+       "how": null,
+       "note": "Tap it on the edge once, thumbs in the crack, pull it apart over the bowl. Bits of shell can be fished out. Everybody's first one has shell in it.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 6,
+       "sid": "s6",
+       "test": "Make a sandwich and give it to somebody to eat.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
        "kind": "skill"
       }
      ]
@@ -10279,6 +10663,70 @@
        "kind": "kindness"
       }
      ]
+    },
+    {
+     "id": "care.helping",
+     "name": "Helping",
+     "line": "From four, beside you. One thing carried, one thing given, one thing done before anybody asked.",
+     "size": "weeks",
+     "strand": "little",
+     "from": 4,
+     "steps": [
+      {
+       "n": 1,
+       "sid": "s1",
+       "test": "Carry one thing to the table before a meal, and one thing back after it.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 2,
+       "sid": "s2",
+       "test": "Put your own plate and cup by the sink when you have finished.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 3,
+       "sid": "s3",
+       "test": "Give a pet its food, or a plant its water.",
+       "how": null,
+       "note": "No pet and no plant? Fill somebody's water glass before they ask for it.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 4,
+       "sid": "s4",
+       "test": "Make something for somebody and give it to them. A drawing counts.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 5,
+       "sid": "s5",
+       "test": "Help a smaller child do something they cannot do yet, without doing it for them.",
+       "how": null,
+       "note": "Shoes, a zip, a puzzle piece. Hands off, words on.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 6,
+       "sid": "s6",
+       "test": "Do one helpful thing before anybody asks, and do not tell them it was you.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "courage"
+      }
+     ]
     }
    ]
   },
@@ -11291,6 +11739,70 @@
        "how": null,
        "note": "Order you can feel, every day, is the finish line. Then it is simply how you live.",
        "ctx": "long",
+       "kind": "skill"
+      }
+     ]
+    },
+    {
+     "id": "order.ownthings",
+     "name": "Your own things",
+     "line": "From four, beside you. Shoes, cover, clothes, books, and one box put right.",
+     "size": "weeks",
+     "strand": "little",
+     "from": 4,
+     "steps": [
+      {
+       "n": 1,
+       "sid": "s1",
+       "test": "Put your shoes side by side by the door, the same way round.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 2,
+       "sid": "s2",
+       "test": "Pull the cover up straight on your bed when you get out of it.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 3,
+       "sid": "s3",
+       "test": "Put your clothes in the wash basket at bedtime, without being asked.",
+       "how": null,
+       "note": "Without being asked is the hard part. That is the whole step.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 4,
+       "sid": "s4",
+       "test": "Put the books back on the shelf the right way up.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 5,
+       "sid": "s5",
+       "test": "Empty one box of toys onto the floor and put every single one back in.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 6,
+       "sid": "s6",
+       "test": "Put away what you were playing with before the next thing comes out, for a whole afternoon.",
+       "how": null,
+       "note": null,
+       "ctx": "with",
        "kind": "skill"
       }
      ]
