@@ -21,7 +21,7 @@
 
   /* ---------- state ---------- */
   function load() {
-    try { const s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s && s.v === 1) { s.said = s.said || []; s.skipped = s.skipped || []; s.school = s.school || { done: {}, points: 0 }; s.school.refresh = s.school.refresh || 0; return s; } } catch (e) {}
+    try { const s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s && s.v === 1) { s.said = s.said || []; s.skipped = s.skipped || []; s.school = s.school || { done: {}, points: 0 }; s.school.refresh = s.school.refresh || 0; s.who = s.who || 'me'; return s; } } catch (e) {}
     return { v: 1, start: null, done: [], skipped: [], days: {}, sound: true, taps: 0, visits: 0, said: [], seenHelp: false, member: false, school: { done: {}, points: 0, refresh: 0 } };
   }
   function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
@@ -618,7 +618,19 @@
   const allTracks = () => SCH.categories.flatMap(c => c.tracks);
   const trackById = id => allTracks().find(t => t.id === id);
   const findStep = key => { for (const tr of allTracks()) for (const st of tr.steps) if (skey(tr, st) === key) return [tr, st]; return null; };
-  const points = () => Object.keys(S.school.done).length + S.done.length + (S.school.refresh || 0);
+  /* ---- the little one (v47) ----
+     His decision: the under-sevens share the parent's phone and the parent's
+     account, and never get a hand-over app. So a child is a second `school`
+     object, and switching SWAPS it into S.school: every tick, rank, project and
+     practice log below reads S.school and needs no idea who is holding the
+     phone. S.days (the flame) is shared on purpose: it is the family's flame.
+     The twenty-five are the parent's and do not count on the child's page. */
+  const isKid = () => S.who === 'kid';
+  const kidName = () => (S.kid && S.kid.name) || (C.school.kid || {}).fallbackName || 'the little one';
+  const isLittle = tr => tr.strand === 'little';
+  const littleTracks = () => allTracks().filter(isLittle);
+  function switchTo(who) { if (S.who === who || (who === 'kid' && !S.kid)) return; const mine = S.school; S.school = S.kid.school; S.kid.school = mine; S.who = who; save(); }
+  const points = () => Object.keys(S.school.done).length + (isKid() ? 0 : S.done.length) + (S.school.refresh || 0);
   /* ---- going rusty ----
      His rule, and it replaced the opposite one: you do NOT get to tick a step
      because you could do it once. "A lot of people might have fasted a year or
@@ -651,13 +663,15 @@
   }
   /* the quick ones: the journey's easy wins, then any track's first step, not yet done */
   const NOW = new Set(['room']), LATER = new Set(['kit', 'with', 'out', 'home']);
+  const fits = (tr, st, which) => (isKid() && isLittle(tr)) ? which !== 'later' : (which === 'later' ? LATER.has(st.ctx) : NOW.has(st.ctx));
   const needsOf = st => LATER.has(st.ctx) ? st.ctx : null;
   function quickCandidates(which) {
-    const ok = ([tr, st]) => which === 'later' ? LATER.has(st.ctx) : NOW.has(st.ctx);
+    const ok = ([tr, st]) => fits(tr, st, which);
     const easy = (SCH.journey.find(j => j.id === 'easy') || { steps: [] }).steps.map(findStep).filter(Boolean).filter(([tr, st]) => !sdone(skey(tr, st))).filter(ok);
     const firsts = allTracks().map(tr => [tr, nextStep(tr)]).filter(([tr, st]) => st && st.n === 1 && !easy.some(([t2]) => t2 === tr)).filter(ok);
-    const room = firsts.filter(([tr, st]) => st.ctx === 'room'), rest = firsts.filter(([tr, st]) => st.ctx !== 'room');
-    return seededShuffle(easy, daySeed()).concat(seededShuffle(room, daySeed() + 7), seededShuffle(rest, daySeed() + 11));
+    const little = isKid() ? firsts.filter(([tr]) => isLittle(tr)) : [];
+    const room = firsts.filter(([tr, st]) => st.ctx === 'room' && !little.includes(tr)), rest = firsts.filter(([tr, st]) => st.ctx !== 'room' && !isLittle(tr));
+    return seededShuffle(little, daySeed() + 3).concat(seededShuffle(easy, daySeed()), seededShuffle(room, daySeed() + 7), seededShuffle(rest, daySeed() + 11));
   }
   function todayPicks(which) {
     const T = S.school.today; const d = today();
@@ -665,7 +679,7 @@
     const t = S.school.today; t.later = t.later || [];
     const key = which === 'later' ? 'later' : 'picks', limit = which === 'later' ? 4 : 6;
     const cand = quickCandidates(which).map(([tr, st]) => skey(tr, st));
-    t[key] = t[key].filter(k => { const r = findStep(k); return r && !sdone(k) && (which === 'later' ? LATER.has(r[1].ctx) : NOW.has(r[1].ctx)); });
+    t[key] = t[key].filter(k => { const r = findStep(k); return r && !sdone(k) && fits(r[0], r[1], which); });
     for (const k of cand) { if (t[key].length >= limit) break; if (!t[key].includes(k) && !t.skip.includes(k)) t[key].push(k); }
     save(); return t[key].map(findStep).filter(Boolean);
   }
@@ -687,7 +701,12 @@
     const again = S.school.arrived === d; S.school.arrived = d; S.school.visits = (S.school.visits || 0) + 1; save(); arrival(fresh0, again);
   }
   const paintSearchBtn = () => { const b = $('searchbtn'); if (b) b.classList.toggle('on', SEARCH !== null); };
-  function paintSchoolCount() { const p = points(), r = rankOf(p); $('countn').textContent = p; const of = $('countn').nextElementSibling; of.hidden = false; of.textContent = r.name; paintRank(); paintDay(); }
+  function paintSchoolCount() { const p = points(), r = rankOf(p); $('countn').textContent = p; const of = $('countn').nextElementSibling; of.hidden = false; of.textContent = r.name; paintRank(); paintDay(); paintWho(); }
+  function paintWho() { let w = $('whopill');
+    if (!isKid()) { if (w) w.remove(); return; }
+    if (!w) { w = document.createElement('button'); w.id = 'whopill'; w.className = 'whopill'; w.title = (C.school.kid || {}).pillHint || '';
+      $('shead').insertBefore(w, $('searchbtn')); w.addEventListener('click', () => { sfx('tap'); goHome(); }); }
+    w.textContent = kidName(); }
   /* ---- the arrival: the portico, the two of them, where you stand, three for today ---- */
   let HOMEN = 0;
   function goHome() { ROOMV = null; if ($('stage').classList.contains('arrive')) { hush(); renderArrival(); $('slist').scrollTop = 0; return; }
@@ -869,8 +888,14 @@
     const lib = ['quote', 'book', 'beauty', 'figure'].map(k => { const pool = LIB.filter(x => x.kind === k); if (!pool.length) return ''; const it = pool[(daySeed() + k.length) % pool.length]; return `<div class="acard lib ${k}"><span class="eyebrow">${R.libraryLede[k]}</span>${it.title ? `<h3>${it.title}</h3>` : ''}<p>${it.t}</p>${it.by ? `<i>${it.by}${it.src ? ' · ' + it.src : ''}</i>` : ''}</div>`; }).join('');
     const rooms = SCH.categories.map(c => ({ c, n: c.tracks.reduce((s, tr) => s + trackDone(tr), 0), N: c.tracks.reduce((s, tr) => s + tr.steps.length, 0) })).filter(r => r.n > 0).sort((x, y) => y.n - x.n).slice(0, 8);
     const earlier = FEED.slice(1, 6);
-    list.innerHTML = `<div class="acard standcard">${standCard()}<p class="punch">${standLine()}</p>${ticks}<div class="daywrap home">${dayBar()}</div><p class="nextp ${q && (l || !hasLong) ? 'done' : ''}">${nextLine}</p></div>` +
-      `<div class="acard runcard">${runCard()}</div>` +
+    const KID = C.school.kid || {};
+    const whoStrip = `<div class="whostrip"><button class="wpill ${isKid() ? '' : 'on'}" data-who="me">${KID.you || 'You'}</button>${S.kid
+      ? `<button class="wpill ${isKid() ? 'on' : ''}" data-who="kid">${kidName()}</button>` : `<button class="wpill add" data-who="new">+ ${KID.add || 'With a little one'}</button>`}</div>`;
+    const kidCard = isKid() ? `<div class="acard kidcard"><span class="eyebrow">${fmt1(KID.forTitle || 'For {name}, from four', { name: kidName() })}</span><p class="lede">${KID.forLede || ''}</p>` +
+      littleTracks().map(tr => { const c = catOf(tr), s = nextStep(tr), n = trackDone(tr); return s ? `<button class="crow" style="--c:${c.accent};--c2:${c.accent2}" data-step="${skey(tr, s)}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${s.test}</small></span><i class="cprog"><b style="width:${Math.round(n / tr.steps.length * 100)}%"></b></i></button>`
+        : `<div class="crow done" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${(C.school.track || {}).finished || 'Finished'}</small></span></div>`; }).join('') + '</div>' : '';
+    list.innerHTML = whoStrip + `<div class="acard standcard">${isKid() ? `<span class="eyebrow kidname">${fmt1(KID.homeTitle || "{name}'s day", { name: kidName() })}</span>` : ''}${standCard()}<p class="punch">${standLine()}</p>${ticks}<div class="daywrap home">${dayBar()}</div><p class="nextp ${q && (l || !hasLong) ? 'done' : ''}">${nextLine}</p></div>` +
+      kidCard + `<div class="acard runcard">${runCard()}</div>` +
       (P.how ? foldCard('how', P.how.title, `<ol class="howlist">${P.how.lines.map(x => `<li>${x}</li>`).join('')}</ol>`, visits <= 3 && !S.school.howSeen) : '') +
       (C.vision ? foldCard('vision', C.vision.title, `<div class="acard visioncard"><div class="rhead"><span class="eyebrow">${C.vision.lede}</span><button class="playbtn" id="visionread" aria-label="Aurelia reads it">${SPK_IC}</button></div>${C.vision.paras.map(x => `<p>${x}</p>`).join('')}</div><div class="acard polycard"><span class="eyebrow">${C.vision.polyTitle}</span><p class="lede">${C.vision.polyLede}</p>${C.vision.polymaths.map(x => `<div class="poly"><b>${x.name}</b><span>${x.line}</span></div>`).join('')}<p class="close">${C.vision.close}</p></div>`, visits <= 2 && !S.school.visionSeen) : '') +
       (post ? foldCard('post', `<span class="foldic">${HORN_IC}</span>${C.feed.title}${isNew ? '<b class="dot">New</b>' : ''}`,
@@ -896,7 +921,25 @@
     list.querySelectorAll('.crow[data-step]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.step); if (r) stepSheet(r[0], r[1], null, 'arrival'); }));
     list.querySelectorAll('[data-not]').forEach(b => b.addEventListener('click', () => { sfx('tap'); notThis(b.dataset.not); renderArrival(); if (line(C.arrival.another)) { hush(); marcusSay(line(C.arrival.another), 'nod'); } }));
     list.querySelector('#intoschool').addEventListener('click', () => { sfx('tap'); leaveArrival(); });
+    list.querySelectorAll('[data-who]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const w = b.dataset.who;
+      if (w === 'new') { kidPanel(); return; }
+      if (w === S.who) return;
+      switchTo(w); hush(); paintSchoolCount(); renderArrival(); $('slist').scrollTop = 0;
+      if (w === 'me') { cap('aurelia', line('kid-back') || ''); aureliaSay('ui-kid-back', () => capHide(1200)); } }));
     list.scrollTop = keep;
+  }
+  function kidPanel() {
+    const K = C.school.kid || {};
+    const v = veil(`<div class="panel sheet kidpanel"><div class="eyebrow"><i></i>${K.add || 'With a little one'}</div><h2>${K.title || "A little one's page"}</h2><p class="lede">${K.lede || ''}</p>
+      <label class="field"><span>${K.nameLabel || 'Their name'}</span><input id="kidname" type="text" maxlength="24" autocomplete="off" placeholder="${K.namePh || ''}"></label>
+      <div class="row"><button class="btn btn-gold" id="kidgo" style="flex:1">${K.begin || 'Begin'}</button></div></div>`, 'light');
+    backBtn(v, () => closeVeil());
+    setTimeout(() => { const i = v.querySelector('#kidname'); if (i) i.focus(); }, 350);
+    v.querySelector('#kidgo').addEventListener('click', () => { sfx('done');
+      const name = (v.querySelector('#kidname').value || '').trim().slice(0, 24);
+      S.kid = { name: name || null, made: today(), school: { done: {}, points: 0, refresh: 0 } }; save();
+      switchTo('kid'); paintSchoolCount();
+      closeVeil(() => { renderArrival(); $('slist').scrollTop = 0; shower(); cap('aurelia', K.title || ''); aureliaSay('ui-kid-made', () => capHide(1500)); }); });
   }
   function leaveArrival() { ROOMV = null; clearTimeout(arrival._t); clearTimeout(ROOMT); hush(); musicStop(); lyreStop(800); $('stage').classList.remove('arrive'); RIG.show(false); ARIG.show(false); $('afig').classList.remove('walk-in-l'); dock('pop'); renderSchool(); if (!S.school.toured) setTimeout(offerTour, 600); else setTimeout(entryWord, 650); }
   /* going in: one of them pops up with a word for the day ahead. Never the same one twice in a sitting, a different start each day, loosely his and hers in turn. */
@@ -1234,7 +1277,9 @@
   /* Everything: families, then rooms, then ladders */
   function renderAll(list) {
     $('sline').textContent = C.school.allLine;
-    list.innerHTML = SCH.groups.map(g => { const cats = g.categories.map(id => SCH.categories.find(c => c.id === id)).filter(Boolean);
+    const K = C.school.kid || {};
+    const little = isKid() ? `<div class="ghead"><h3>${fmt1(K.forTitle || 'For {name}, from four', { name: kidName() })}</h3><p>${K.forLede || ''}</p></div>` + littleTracks().map(trackRow).join('') + `<div class="ghead"><h3>${K.everyRoom || 'Every room'}</h3></div>` : '';
+    list.innerHTML = little + SCH.groups.map(g => { const cats = g.categories.map(id => SCH.categories.find(c => c.id === id)).filter(Boolean);
       return `<div class="ghead"><h3>${g.name}</h3><p>${g.line}</p></div><div class="tiles">` + cats.map(c => { const n = c.tracks.reduce((s, tr) => s + trackDone(tr), 0), N = c.tracks.reduce((s, tr) => s + tr.steps.length, 0);
         return `<button class="tile" data-room="${c.id}" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/cat/${c.id}.jpg" alt="" loading="lazy"><span class="tname">${c.name}</span><span class="tnum">${n ? n + ' of ' + N : c.tracks.length + ' tracks'}</span></button>`; }).join('') + '</div>'; }).join('');
   }

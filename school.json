@@ -271,61 +271,76 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Step over a rope lying still on the ground, ten times.",
-       "how": [
-        "Lay the rope flat on the ground in a straight line.",
-        "Step over it and back, ten times, getting quicker.",
-        "This teaches your feet where the rope is before it starts moving."
-       ],
-       "note": null,
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Skip ten times in a row without stopping.",
-       "how": null,
-       "note": "The rope goes right round and under your feet each time. Little jumps, not big ones.",
+       "test": "Swing the rope over your head and let it land in front of your feet, ten times.",
+       "note": "No jumping yet. Just get the rope round and stop it there.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Skip fifty times in a row.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Swing it over and step across it, ten times.",
+       "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Skip one hundred times in a row.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Skip three times in a row.",
+       "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Skip one hundred with the rope crossed over at least once.",
-       "how": null,
-       "note": null,
+       "test": "Skip ten times in a row without stopping.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Run a skipping game for the whole group.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
+       "test": "Skip twenty-five in a row.",
+       "ctx": "kit",
        "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Skip for one whole minute, however many times you trip.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Skip fifty in a row.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Skip one hundred in a row.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Skip ten times on one foot, then ten on the other.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Skip one hundred with the rope crossed over at least once.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Run a skipping game for other people.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -338,61 +353,125 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Do a forward roll and come back up on your feet.",
-       "how": [
-        "Do this on grass or something soft.",
-        "Tuck your chin to your chest — that is the whole safety of it.",
-        "Push with your legs, roll over the back of your shoulders, and stand up."
-       ],
-       "note": null,
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Do a cartwheel and land on your feet.",
-       "how": null,
-       "note": "Sideways, hands down one after the other, legs over. On grass first.",
-       "ctx": "out",
+       "test": "Do three forward rolls in a row, in a straight line.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Hold a handstand against a wall for thirty seconds.",
-       "how": null,
-       "note": null,
+       "test": "Do a backward roll.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Cartwheel cleanly in both directions.",
-       "how": null,
-       "note": null,
+       "test": "Kick your legs up against a wall and hold for five seconds.",
+       "note": "Hands a little way from the wall, arms straight, look at the floor between them.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Hold a free handstand for ten seconds.",
-       "how": null,
-       "note": "Free means nothing to lean on and nobody holding you.",
+       "test": "Hold a wall handstand for fifteen seconds.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Walk five steps on your hands.",
-       "how": null,
-       "note": null,
+       "test": "Hold a wall handstand for thirty seconds.",
        "ctx": "room",
        "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Do a cartwheel, any shape at all, and land on your feet.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Do a cartwheel with your legs straight.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Cartwheel cleanly in both directions.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Walk your feet up a wall until your chest touches it, and hold for ten seconds.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Come out of a handstand into a roll, on purpose.",
+       "note": "Learn the way out before you need it. This is the step that makes the rest safe.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Kick up away from the wall and hold for one second.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Hold a free handstand for three seconds.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Hold a free handstand for five seconds.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Hold a free handstand for ten seconds.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Hold ten seconds three separate times in one go.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Take one step on your hands.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Walk three steps on your hands.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Walk five steps on your hands.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Show somebody how to kick up safely, and hold their legs while they try.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -405,7 +484,6 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Hold your breath for thirty seconds, sitting still.",
        "how": [
         "Sit down first. Never do this in water.",
@@ -413,54 +491,75 @@
         "Hold, and stay still — moving uses it up.",
         "Somebody counts to thirty out loud. Let it go whenever you want to."
        ],
-       "note": null,
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Breathe in for four, hold four, out for four, ten rounds.",
-       "how": null,
-       "note": "In for a count of four, hold four, out for four. Ten times round.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Hold your breath for one minute.",
-       "how": null,
-       "note": null,
+       "test": "Breathe out for twice as long as you breathe in, twenty times.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Slow your own heart down on purpose and notice it happen.",
-       "how": null,
-       "note": "Sit still, breathe slowly out for longer than you breathe in, and feel your pulse at your wrist. It slows.",
+       "test": "Hold your breath for forty-five seconds.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Hold your breath for ninety seconds.",
-       "how": null,
-       "note": null,
+       "test": "Take ten slow breaths through your nose only, with your mouth shut.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Hold your breath for one minute.",
        "ctx": "room",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Hold for two minutes, and teach somebody the slow breathing.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
+       "n": 7,
+       "test": "Slow your own heart down on purpose and notice it happen.",
+       "note": "Sit still, breathe out for longer than you breathe in, and feel your pulse at your wrist. It slows.",
+       "ctx": "room",
        "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Hold your breath for seventy-five seconds.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Breathe yourself calm before something you are nervous about.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Hold your breath for ninety seconds.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Hold your breath for two minutes.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Teach somebody the slow breathing until they can do it without you.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -473,57 +572,124 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Do one press-up properly, all the way down and up.",
-       "how": null,
-       "note": null,
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Do ten press-ups without stopping.",
-       "how": null,
-       "note": null,
+       "test": "Do five press-ups without stopping.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Hang from a bar for sixty seconds.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
+       "test": "Do ten press-ups without stopping.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Do one pull-up from a dead hang.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
+       "test": "Carry a full bag in each hand the length of the street.",
+       "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Do five pull-ups.",
-       "how": null,
-       "note": null,
+       "test": "Hang from a bar for thirty seconds.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Carry somebody your own size fifty metres.",
-       "how": null,
-       "note": null,
+       "test": "Pick something heavy up off the floor with a straight back, ten times.",
+       "note": "Legs, not back. Get this habit before the weights get real.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Hang from a bar for sixty seconds.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Carry something heavy and awkward up a full flight of stairs.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Do twenty press-ups without stopping.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Hold a plank for two minutes.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Carry something heavy in each hand for a hundred metres without setting it down.",
        "ctx": "out",
        "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Do one pull-up from a dead hang.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Do thirty press-ups without stopping.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Carry a younger child on your back across a field.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 15,
+       "test": "Do five pull-ups.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Do forty press-ups without stopping.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Carry somebody your own size ten metres.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Carry somebody your own size twenty-five metres.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Carry somebody your own size fifty metres.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Help somebody move house for a whole day, and still be useful at the end of it.",
+       "ctx": "out",
+       "kind": "kindness"
       }
      ]
     },
@@ -536,57 +702,123 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Run one hundred metres flat out.",
-       "how": null,
-       "note": null,
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Run for five minutes without stopping.",
-       "how": null,
-       "note": null,
+       "test": "Run for one minute without stopping.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Run a mile without walking.",
-       "how": null,
-       "note": "A mile is about four times round a running track, or fifteen minutes of walking done as running instead.",
+       "test": "Run for three minutes without stopping.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Run for thirty minutes without stopping.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Run for five minutes without stopping.",
+       "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Run five kilometres.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "skill"
+       "test": "Go running three times in one week.",
+       "ctx": "long",
+       "kind": "attention"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Run ten kilometres, or run beside somebody doing their first mile.",
-       "how": null,
-       "note": null,
+       "test": "Run for eight minutes without stopping.",
        "ctx": "out",
        "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Run for ten minutes without stopping.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Run a mile without walking any of it.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Go out and run in the rain, on purpose, and finish.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Run for fifteen minutes without stopping.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Run three times a week for a fortnight.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
+       "test": "Run for twenty minutes without stopping.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Run two miles without walking.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Run up a hill without walking any of it.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Run for twenty-five minutes without stopping.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Run for thirty minutes without stopping.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Run four miles.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Run five kilometres without stopping.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Run five kilometres faster than the first time you did it.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Run beside somebody doing their first mile, and finish at their pace.",
+       "ctx": "out",
+       "kind": "kindness"
       }
      ]
     },
@@ -599,61 +831,124 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Walk the length of a log or a low wall without falling off.",
-       "how": [
-        "Find a log, a kerb or a low wall.",
-        "Look at where you are going, not at your feet. That is the whole trick.",
-        "Walk the length of it. Arms out is allowed."
-       ],
-       "note": null,
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Stand on one foot for a minute with your eyes closed.",
-       "how": null,
-       "note": null,
+       "test": "Stand on one foot for thirty seconds.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Walk heel to toe along a straight line for twenty steps, eyes closed.",
-       "how": null,
-       "note": null,
+       "test": "Stand on one foot for a full minute.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Stand up on a slackline or a beam and stay there ten seconds.",
-       "how": null,
-       "note": "A slackline is a flat webbing strap between two trees. A gymnastics beam or a fallen tree counts.",
-       "ctx": "kit",
+       "test": "Stand on one foot for thirty seconds with your eyes closed.",
+       "note": "Much harder than it sounds. Balance is mostly your eyes until you train the rest.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Walk five metres on a slackline.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
+       "test": "Stand on one foot for a minute with your eyes closed.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Turn round on a slackline and come back.",
-       "how": null,
-       "note": null,
+       "test": "Walk heel to toe along a straight line for twenty steps.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Walk heel to toe for twenty steps with your eyes closed.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Walk a kerb the length of a street without stepping off.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Stand on one foot and pick something up off the floor.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Go down on one leg holding something, and stand back up.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Stand up on a slackline or a beam and stay there for ten seconds.",
        "ctx": "kit",
        "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Stand on it for thirty seconds.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Take three steps along it.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Walk two metres along it.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Walk five metres along it.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Stop halfway, stand still for five seconds, and carry on.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Kneel down on it and stand back up.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Turn round on it.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Turn round on it and come back.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Hold somebody steady while they cross theirs for the first time.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -666,56 +961,75 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Sit on a bike and push yourself along with your feet.",
-       "how": null,
-       "note": null,
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Ride ten metres without stabilisers or feet down.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
+       "test": "Push off and freewheel with both feet up for three seconds.",
+       "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Start, stop and steer around things safely.",
-       "how": null,
-       "note": "Stopping means using the brakes and putting a foot down where you meant to, not falling off.",
+       "test": "Freewheel for ten seconds, steering as you go.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Ride five miles without stopping.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
-       "kind": "skill"
-      },
-      {
-       "n": 5,
-       "sid": "s5",
-       "test": "Ride safely on a road, with the signals and the road sense.",
-       "how": null,
-       "note": "Road sense means looking behind, signalling with your arm, and knowing where cars cannot see you.",
+       "test": "Ride ten metres pedalling, with nobody holding on.",
        "ctx": "out",
        "kind": "skill"
       },
       {
+       "n": 5,
+       "test": "Start off on your own from standing still.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
        "n": 6,
-       "sid": "s6",
-       "test": "Ride twenty miles in a day.",
-       "how": null,
-       "note": null,
-       "ctx": "home",
+       "test": "Stop exactly where you meant to stop, three times.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Steer around three things without putting a foot down.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Ride up a hill without getting off.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Look over your shoulder and keep riding straight.",
+       "note": "This is the one that keeps you alive on a road. Practise it somewhere with no traffic.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Signal with one hand and keep riding straight.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Ride two miles without stopping.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Ride on a road with the signals and the road sense, with an adult beside you.",
+       "ctx": "out",
        "kind": "skill"
       }
      ]
@@ -730,61 +1044,75 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Stand on one foot while somebody counts to five. Then the other foot.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Hop five times on one foot without putting the other one down.",
-       "how": null,
-       "note": null,
+       "test": "Stand on one foot while they count to ten.",
        "ctx": "with",
-       "kind": "skill",
-       "twist": "The foot you would never choose."
+       "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Jump over a line with both feet together, ten times.",
-       "how": null,
-       "note": "A skipping rope on the floor, a crack in the path, a line of tape. Any line.",
+       "test": "Hop three times on one foot.",
        "ctx": "with",
-       "kind": "skill",
-       "twist": "Eyes shut."
+       "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Walk along a line without stepping off, heel to toe.",
-       "how": null,
-       "note": "A low wall counts if a grown-up is holding your hand.",
+       "test": "Hop five times on one foot without putting the other one down.",
        "ctx": "with",
-       "kind": "skill",
-       "twist": "Backwards."
+       "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Do a forward roll on something soft.",
-       "how": null,
-       "note": "Chin tucked in, and a grown-up beside you. A bed or the grass is fine.",
+       "test": "Jump with both feet together, ten times.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Hop all the way across the room, swap feet halfway, and land the last one still.",
-       "how": null,
-       "note": null,
+       "test": "Jump over a line with both feet together, ten times.",
        "ctx": "with",
-       "kind": "skill",
-       "twist": "Start on the foot you would never choose."
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Jump off a low step and land on two feet without wobbling.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Walk along a line without stepping off it.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Walk along the line heel to toe.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Do a forward roll on something soft.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Hop all the way across the room on one foot.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Hop across the room, swap feet halfway, and land the last one still.",
+       "ctx": "with",
+       "kind": "skill"
       }
      ]
     }
@@ -1470,59 +1798,76 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Stand in the sea up to your ankles for one minute.",
-       "how": [
-        "Ankles only. Nothing brave required.",
-        "Breathe out slowly the whole first minute — that stops the gasp.",
-        "Dry feet and warm socks straight afterwards."
-       ],
-       "note": null,
+       "note": "Never on your own, and never where you cannot get straight back out.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Get in up to your waist and stay calm.",
-       "how": null,
-       "note": null,
+       "test": "Stand in up to your knees for a minute.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Get in up to your shoulders and control your breathing.",
-       "how": null,
-       "note": "The gasp is normal and passes in about ninety seconds. Breathe out long and slow and it goes.",
+       "test": "Get in up to your waist and stay calm.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Stay in for two minutes and get warm again properly afterwards.",
-       "how": null,
-       "note": "Getting warm properly means dry clothes, something warm to drink and moving about — not a hot shower straight away.",
-       "ctx": "out",
+       "test": "Finish a shower with thirty seconds of cold.",
+       "ctx": "home",
        "kind": "courage"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Do it once a week for a month, whatever the weather.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
-       "kind": "skill"
+       "test": "Get in up to your shoulders and control your breathing.",
+       "note": "The gasp is normal and it passes in about a minute. Long slow breaths out.",
+       "ctx": "out",
+       "kind": "courage"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Finish a shower with a full minute of cold, three days running.",
+       "ctx": "home",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Stay in up to your shoulders for one minute.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Stay in for two minutes and get warm again properly afterwards.",
+       "note": "Warm clothes and a hot drink ready before you go in. Getting warm again is half the skill.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Go in on a day you did not feel like it.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Do it once a week for a month, whatever the weather.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Stay in for four minutes.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
        "test": "Take somebody else through their first cold dip safely.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "kindness"
       }
@@ -1537,55 +1882,73 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Get into a boat and sit safely without wobbling it.",
-       "how": null,
-       "note": null,
        "ctx": "kit",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
+       "test": "Put a buoyancy aid on properly and check somebody else's.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 3,
        "test": "Move a boat twenty metres under your own power.",
-       "how": null,
-       "note": "Under your own power means you moved it, not the wind or the current or somebody pushing.",
        "ctx": "out",
        "kind": "skill"
       },
       {
-       "n": 3,
-       "sid": "s3",
-       "test": "Steer around a marker and come back.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
-       "kind": "skill"
-      },
-      {
        "n": 4,
-       "sid": "s4",
-       "test": "Paddle one kilometre.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
+       "test": "Move it in a straight line for a hundred metres.",
+       "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Paddle five kilometres with a group.",
-       "how": null,
-       "note": null,
+       "test": "Steer around a marker and come back.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Stop the boat where you meant to stop it.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Turn it round on the spot.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Come alongside a jetty and get out without help.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Paddle one kilometre.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Paddle into the wind for ten minutes and keep your line.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Paddle five kilometres with a group.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
        "test": "Take a beginner out and bring them back confident.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "kindness"
       }
@@ -1600,57 +1963,124 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
-       "test": "Name the parts of a small boat and what each does.",
-       "how": null,
-       "note": null,
+       "test": "Name the parts of a small boat and what each one does.",
        "ctx": "kit",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Say which way the wind is coming from, without being told.",
-       "how": null,
-       "note": "Look at flags, smoke, or ripples on the water. The wind comes FROM the direction you name.",
-       "ctx": "out",
+       "test": "Put a buoyancy aid on properly and say what you would do if you went in.",
+       "ctx": "with",
        "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Sail a straight line across the wind.",
-       "how": null,
-       "note": null,
+       "test": "Say which way the wind is coming from, without being told.",
        "ctx": "out",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Tack, turn and come back to where you started.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
+       "test": "Rig a small boat and check it over before it goes in.",
+       "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Sail a full course with buoys.",
-       "how": null,
-       "note": null,
+       "test": "Sit in the right place and hold the tiller and the rope at once.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Sail a straight line across the wind.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Sail out and come back to where you started.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Let the sail out and pull it in to change your speed on purpose.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Tack — turn through the wind — without stopping.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Tack three times in a row and keep going.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Gybe safely, with your head down.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Sail a triangle around three marks.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Sail in a stronger wind and stay in control.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 14,
+       "test": "Right a capsized dinghy and get back in.",
+       "note": "Everybody capsizes. Doing it on purpose, with somebody watching, is how it stops being frightening.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 15,
+       "test": "Sail a full course with buoys.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Come alongside and stop the boat exactly where you wanted.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Take somebody out as your crew and tell them what to do.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
        "test": "Crew properly for somebody else and be useful.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "courage"
+      },
+      {
+       "n": 19,
+       "test": "Sail a race, wherever you finish.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 20,
+       "test": "Take somebody on their first ever sail and hand them the tiller.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -1663,57 +2093,76 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Catch something in a rock pool with a net and put it back.",
-       "how": null,
-       "note": null,
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Set up a rod with a line and a hook, on your own.",
-       "how": null,
-       "note": "Rod, reel, line through the rings, then the hook. Barbless hooks are kinder and easier to get out.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Cast and land the line where you meant it to go.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Tie the knot that holds the hook on, three times, until it holds.",
+       "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Catch a fish.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Cast and land the line roughly where you meant it to go.",
+       "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Catch, prepare and cook a fish you caught.",
-       "how": null,
-       "note": null,
-       "ctx": "home",
+       "test": "Cast ten times and land eight of them where you aimed.",
+       "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Teach somebody else to cast and land one.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
+       "test": "Sit and fish for a whole hour without needing anything to happen.",
+       "note": "This is the part of fishing that is actually fishing.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Find out what is legal to catch where you are, and when.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Catch a fish.",
+       "ctx": "out",
        "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Get the hook out and put a fish back unharmed.",
+       "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 10,
+       "test": "Catch three in one outing.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Catch, prepare and cook a fish you caught.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Teach somebody else to cast and land one.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -1726,55 +2175,49 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Find five different creatures in a rock pool.",
-       "how": null,
-       "note": "Look under the seaweed and on the underside of stones. Put every stone back the way it was.",
        "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Name five of them correctly.",
-       "how": null,
-       "note": null,
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
+       "test": "Turn a stone over, look under it, and put it back the way it was.",
+       "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 4,
        "test": "Explain what the tide does to everything living there.",
-       "how": null,
-       "note": null,
        "ctx": "room",
        "kind": "attention"
       },
       {
-       "n": 4,
-       "sid": "s4",
-       "test": "Find and name ten seashore species.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "skill"
-      },
-      {
        "n": 5,
-       "sid": "s5",
-       "test": "Do a proper shore survey and write down what you found.",
-       "how": null,
-       "note": null,
+       "test": "Find the high tide line and say how you know.",
        "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Lead a rock pool hunt for the younger children.",
-       "how": null,
-       "note": null,
+       "test": "Find and name ten seashore species.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Do a proper shore survey and write down what you found.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Lead a rock pool hunt for younger children.",
        "ctx": "out",
        "kind": "kindness"
       }
@@ -1799,62 +2242,124 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Do two proper press-ups. Knees on the floor is fine.",
-       "how": [
-        "Hands flat on the floor, a bit wider than your shoulders.",
-        "Knees down is completely fine — it is still a press-up.",
-        "Lower until your chest is a fist off the floor, then push back up.",
-        "Two of those. Slowly is easier than fast."
-       ],
-       "note": null,
+       "note": "Proper means chest to the floor and arms straight at the top. Two good ones beat ten bad ones.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Do five with your knees off the floor.",
-       "how": null,
-       "note": "Knees off the floor now. Chest to a fist above the ground and all the way back up, five times.",
+       "test": "Do five with your knees on the floor.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Do ten in one go.",
-       "how": null,
-       "note": null,
+       "test": "Do ten with your knees on the floor.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Do twenty-five in one go.",
-       "how": null,
-       "note": null,
+       "test": "Do one with your knees off the floor.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Do fifty in one go.",
-       "how": null,
-       "note": null,
+       "test": "Do five with your knees off the floor.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Do a hundred across one day, or get somebody else to their first one.",
-       "how": null,
-       "note": null,
+       "test": "Do eight in one go.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Do ten in one go.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Do press-ups on three separate days in one week.",
        "ctx": "long",
-       "kind": "courage"
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Do fifteen in one go.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Do twenty in one go.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Do fifty across one day, in as many sets as you like.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Do twenty-five in one go.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Do five slowly, three seconds down and three seconds up.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Do thirty in one go.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Do press-ups every other day for a fortnight.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 16,
+       "test": "Do thirty-five in one go.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Do forty in one go.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Do a hundred across one day.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Do fifty in one go.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Get somebody else from none to their first proper one.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -1867,60 +2372,121 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Do five sit-ups.",
-       "how": [
-        "Lie on your back, knees bent, feet flat on the floor.",
-        "Hands crossed on your chest so you cannot pull your own neck.",
-        "Curl up until your shoulders leave the floor, then lower back down.",
-        "Five of those."
-       ],
-       "note": null,
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Do fifteen without stopping.",
-       "how": null,
-       "note": null,
+       "test": "Do ten without stopping.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Do thirty without stopping.",
-       "how": null,
-       "note": null,
+       "test": "Do fifteen without stopping.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Do fifty without stopping.",
-       "how": null,
-       "note": null,
+       "test": "Hold yourself halfway up for twenty seconds.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Do a hundred without stopping.",
-       "how": null,
-       "note": null,
+       "test": "Do twenty without stopping.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Do sit-ups on three separate days in one week.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Do thirty without stopping.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Do ten slowly, three seconds up and three seconds down.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Do forty without stopping.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Do fifty without stopping.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Lie down and lift both straight legs to vertical, ten times.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Do sixty without stopping.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Do a hundred across one day, in as many sets as you like.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Do seventy without stopping.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Hang from a bar and lift your knees to your chest, ten times.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Do eighty without stopping.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Do sit-ups every other day for a fortnight.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 18,
+       "test": "Do a hundred without stopping.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Do a hundred in under four minutes.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
        "test": "Do a hundred in under three minutes.",
-       "how": null,
-       "note": null,
        "ctx": "room",
        "kind": "skill"
       }
@@ -2067,59 +2633,74 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Hold a plank for twenty seconds without your hips dropping.",
-       "how": [
-        "Elbows under your shoulders, forearms flat on the floor.",
-        "Straight line from your head to your heels — no hips in the air, none sagging.",
-        "Twenty seconds. Squeeze your tummy the whole time."
-       ],
-       "note": "On your elbows, not your hands. A straight line from head to heels — a mirror or a photo will tell you.",
+       "note": "A straight line from your head to your heels. If your hips sag it is not a plank, it is a rest.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Hold it for one minute.",
-       "how": null,
-       "note": null,
+       "test": "Hold it for thirty seconds.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Hold it for two minutes.",
-       "how": null,
-       "note": null,
+       "test": "Hold it for forty-five seconds.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Hold it for three minutes.",
-       "how": null,
-       "note": null,
+       "test": "Hold it for one minute.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Hold it for five minutes.",
-       "how": null,
-       "note": null,
+       "test": "Hold it three separate times in one go, a minute each.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Hold a side plank on each side for two minutes.",
-       "how": null,
-       "note": null,
+       "test": "Hold a side plank for twenty seconds on each side.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Hold it for ninety seconds.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Hold it for two minutes.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Hold a side plank for a minute on each side.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Hold it for three minutes.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Hold a side plank for two minutes on each side.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Hold a plank for five minutes.",
        "ctx": "room",
        "kind": "skill"
       }
@@ -2134,60 +2715,123 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Do ten squats with your heels staying flat on the floor.",
-       "how": [
-        "Feet about shoulder width, toes pointing slightly out.",
-        "Sit back as if there is a chair behind you, keeping your heels down.",
-        "Down until your thighs are level, then stand up. Ten of them."
-       ],
-       "note": "Heels flat is the whole thing. If they lift, you are not going as deep as you think.",
+       "note": "Heels down is the whole thing. If they lift, go less deep until they stay.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Do twenty-five in one go.",
-       "how": null,
-       "note": null,
+       "test": "Do twenty in one go.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Do fifty in one go.",
-       "how": null,
-       "note": null,
+       "test": "Sit at the bottom of a squat for thirty seconds.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Do a hundred in one go.",
-       "how": null,
-       "note": null,
+       "test": "Do thirty in one go.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
+       "test": "Do squats on three separate days in one week.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Do fifty in one go.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Sit at the bottom of a squat for a full minute.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Do ten slowly, four seconds down and four seconds up.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Do seventy in one go.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
        "test": "Do twenty holding something heavy.",
-       "how": null,
-       "note": null,
        "ctx": "kit",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Do one squat on one leg, all the way down and back up.",
-       "how": null,
-       "note": null,
+       "n": 11,
+       "test": "Do a hundred in one go.",
        "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Do a hundred across one day, split however you like.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Do ten jump squats, landing quietly.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Do thirty holding something heavy.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Stand on one leg and go down as far as you can, holding a chair.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Go halfway down on one leg without holding anything.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Go down on one leg to a low seat and stand back up.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Do one squat on one leg, all the way down and back up.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Do three on one leg, on both legs.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Do a hundred and fifty across one day, and still walk properly the next.",
+       "ctx": "long",
        "kind": "skill"
       }
      ]
@@ -2201,59 +2845,74 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Pick something heavy up with your legs, back straight, and put it down again.",
-       "how": [
-        "Stand close to it. Distance is what hurts backs.",
-        "Bend your knees, keep your back straight, and hold it against your body.",
-        "Push up with your legs. Put it down the same way."
-       ],
-       "note": null,
+       "note": "Feet under it, back flat, knees bend, chest up. Get the shape right while it is light.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Carry something heavy fifty metres without putting it down.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
-       "kind": "skill"
-      },
-      {
-       "n": 3,
-       "sid": "s3",
-       "test": "Lift something as heavy as your own head off the ground overhead.",
-       "how": null,
-       "note": "Something about the weight of your own head is roughly four to five kilos — a bag of potatoes.",
+       "test": "Do that ten times without your back rounding once.",
        "ctx": "room",
        "kind": "skill"
       },
       {
-       "n": 4,
-       "sid": "s4",
-       "test": "Carry something half your own weight two hundred metres.",
-       "how": null,
-       "note": null,
+       "n": 3,
+       "test": "Carry something heavy fifty metres without putting it down.",
        "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 4,
+       "test": "Lift something the weight of your own head straight overhead.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Carry your own bodyweight fifty metres.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
+       "test": "Carry something awkward — a box, a bag of sand — up a flight of stairs.",
+       "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Carry something heavy in each hand for a hundred metres.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Lift something and put it on a high shelf without wobbling.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Carry something half your own weight two hundred metres.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Move ten heavy things with somebody, taking the awkward end each time.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 10,
+       "test": "Lift something heavy from the floor to your shoulder in one go.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Carry your own bodyweight fifty metres.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
        "test": "Help somebody move house for a whole day and still be useful at the end.",
-       "how": null,
-       "note": null,
        "ctx": "long",
        "kind": "kindness"
       }
@@ -2399,60 +3058,75 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Sprint flat out for ten seconds.",
-       "how": [
-        "Find twenty metres of clear grass or path.",
-        "Go absolutely flat out for ten seconds — properly, not jogging.",
-        "Walk back. Notice how you breathe afterwards."
-       ],
-       "note": null,
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Run a hundred metres without slowing down at the end.",
-       "how": null,
-       "note": null,
+       "test": "Sprint ten seconds, walk a minute, and do it five times.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Time your hundred metres, then beat it.",
-       "how": null,
-       "note": "Get somebody to time you with a phone. Write it down, or you will not remember what you beat.",
+       "test": "Run a hundred metres without slowing down at the end.",
+       "note": "Almost everybody eases off in the last twenty. Do not.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Run a hundred metres in under twenty seconds.",
-       "how": null,
-       "note": null,
+       "test": "Time your hundred metres and write the number down.",
        "ctx": "out",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Run a hundred metres in under sixteen seconds.",
-       "how": null,
-       "note": null,
+       "test": "Beat that time.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Win a race against somebody who beat you last time.",
-       "how": null,
-       "note": null,
+       "test": "Sprint uphill five times.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Run a hundred metres in under twenty seconds.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Sprint from a standing start ten times, resting properly between.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Run a hundred metres in under eighteen seconds.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Sprint three separate days in one week.",
        "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Run a hundred metres in under sixteen seconds.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Race somebody who beat you before, and beat your own old time doing it.",
+       "ctx": "out",
        "kind": "courage"
       }
      ]
@@ -2476,55 +3150,49 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Get a kite into the air and keep it there for a minute.",
-       "how": null,
-       "note": "Steady wind, back to it, and let the line out slowly. Running with it usually makes things worse.",
        "ctx": "kit",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Launch and land it on your own, with no help.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
-       "kind": "skill"
+       "test": "Work out which way the wind is going before you launch.",
+       "ctx": "out",
+       "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Fly it for ten minutes without it coming down.",
-       "how": null,
-       "note": null,
+       "test": "Launch it on your own, with nobody holding it.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Make a kite from scratch that actually flies.",
-       "how": null,
-       "note": null,
+       "test": "Land it on your own without it crashing.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Make one that flies higher than a shop-bought one.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
+       "test": "Fly it for ten minutes without it coming down.",
+       "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Make a kite from scratch that actually flies.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Change one thing about it — the tail, the bridle — and fly it better.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
        "test": "Teach two younger children to launch and land.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "kindness"
       }
@@ -2539,55 +3207,74 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Make a paper rocket and launch it off a straw.",
-       "how": null,
-       "note": null,
        "ctx": "kit",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Make a water bottle rocket that leaves the ground.",
-       "how": null,
-       "note": "A two litre bottle, about a third full of water, pumped with a bike pump through a cork.",
-       "ctx": "out",
-       "kind": "skill"
+       "test": "Make three with different fins and see which goes furthest.",
+       "ctx": "room",
+       "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Get one twenty metres up, measured.",
-       "how": null,
-       "note": null,
+       "test": "Make a water bottle rocket that leaves the ground.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Change one thing, test it, and say whether it helped.",
-       "how": null,
-       "note": "Change ONE thing — more water, less water, bigger fins — or you will not know what helped.",
-       "ctx": "room",
+       "test": "Launch it safely — everybody back, nobody over it.",
+       "note": "A pressurised bottle is a real thing. Set the rules before the first launch, every time.",
+       "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Build one with a parachute that comes back down safely.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
+       "test": "Get one ten metres up, measured.",
+       "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Run a rocket launch afternoon for the group.",
-       "how": null,
-       "note": null,
+       "test": "Change one thing, test it, and say whether it helped.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Get one twenty metres up, measured.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Work out how much water gives the best flight, by trying it.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Build one with a nose cone that stays on.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Build one with a parachute that comes back down safely.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Launch three in a row that all work.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Run a rocket launch afternoon for other people.",
        "ctx": "with",
        "kind": "kindness"
       }
@@ -2602,55 +3289,122 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Find the Plough and the North Star.",
-       "how": null,
-       "note": "The Plough is seven bright stars like a saucepan. The two at the end of the pan point at the North Star.",
        "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Name three constellations and find them on your own.",
-       "how": null,
-       "note": null,
+       "test": "Use the Plough to find north, and check it against a compass.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Find a planet with your own eyes and know which it is.",
-       "how": null,
-       "note": "Planets do not twinkle, stars do. Venus is the very bright one near sunrise or sunset.",
-       "ctx": "room",
+       "test": "Name three constellations and find them on your own.",
+       "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Know what the moon will look like tomorrow, and be right.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
+       "test": "Go out on a clear night and just look up for ten minutes.",
+       "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
+       "test": "Find Orion, and the three stars of his belt.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 6,
+       "test": "Find Cassiopeia.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Tell the difference between a star and a planet by eye.",
+       "note": "Stars twinkle. Planets hold steady. Once you have seen it you cannot unsee it.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Find a planet with your own eyes and know which one it is.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Watch the moon on five nights and draw what it looked like.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 10,
+       "test": "Know what the moon will look like tomorrow, and be right.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Spot a satellite crossing the sky.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
+       "test": "Find the Milky Way from somewhere dark.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
        "test": "Watch a meteor shower and count what you see.",
-       "how": null,
-       "note": null,
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 14,
+       "test": "Find five constellations without help.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Look at the moon through binoculars and find one crater.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Find the Andromeda galaxy.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Know which constellations belong to which season, and say why they move.",
        "ctx": "room",
        "kind": "attention"
       },
       {
-       "n": 6,
-       "sid": "s6",
+       "n": 18,
+       "test": "Find eight constellations without help.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Take somebody out and show them three things in the sky.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 20,
        "test": "Run a stargazing night and show people what is up there.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "kindness"
       }
@@ -2665,62 +3419,124 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Fold a paper aeroplane that flies across the room.",
-       "how": [
-        "Fold an A4 sheet in half the long way, then open it out.",
-        "Fold the two top corners into the middle crease so you get a point.",
-        "Fold those long edges into the middle again, then fold the whole thing in half.",
-        "Fold a wing down on each side, and throw it level — not upwards."
-       ],
-       "note": null,
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
+       "test": "Fold three different ones and see which flies furthest.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 3,
        "test": "Fold one that flies ten metres, measured.",
-       "how": null,
-       "note": null,
        "ctx": "out",
        "kind": "skill"
       },
       {
-       "n": 3,
-       "sid": "s3",
-       "test": "Fold one that flies thirty feet, measured, with witnesses.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
-       "kind": "skill"
-      },
-      {
        "n": 4,
-       "sid": "s4",
-       "test": "Build a glider from balsa or card that flies properly.",
-       "how": null,
-       "note": "Balsa is light wood from a model shop. Card and a paper clip for weight at the nose also works.",
-       "ctx": "kit",
-       "kind": "skill"
+       "test": "Bend the back edge of the wings up a little and see what it does.",
+       "note": "Those are elevators. You have just found out how a real aeroplane is steered.",
+       "ctx": "room",
+       "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Build something with a motor or elastic that flies.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
+       "test": "Make one that turns in a circle on purpose.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Build a small helicopter or drone that lifts and lands where you meant.",
-       "how": null,
-       "note": null,
+       "test": "Fold one that flies thirty feet, measured, with somebody watching.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Make one that glides slowly instead of fast, and say why it does.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Explain what keeps an aeroplane up, in your own words.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Build a card or balsa glider from a plan.",
        "ctx": "kit",
        "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Get it to fly level instead of diving, by moving the weight.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Make it fly twenty metres.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Build a glider of your own design that flies.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Make a paper helicopter and time how long it takes to fall.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 14,
+       "test": "Change the blades and make it fall slower.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 15,
+       "test": "Build something with elastic or a motor that leaves the ground.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Get it to fly the same way twice.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Fly something with a controller and land it on purpose.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Fly it round a marker and back.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Build or fly a small helicopter or drone that lifts and lands where you meant.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Run a flying afternoon and get everybody something in the air.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -2733,57 +3549,123 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Say which way the wind is blowing without looking at anything.",
-       "how": null,
-       "note": null,
        "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Make something that shows wind direction and put it up.",
-       "how": null,
-       "note": null,
+       "test": "Say roughly how hard it is blowing, and check it against a forecast.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 3,
+       "test": "Make something that shows wind direction and put it up outside.",
        "ctx": "out",
        "kind": "skill"
       },
       {
-       "n": 3,
-       "sid": "s3",
-       "test": "Name five cloud types on sight.",
-       "how": null,
-       "note": "Cumulus, stratus, cirrus, cumulonimbus and a plain grey sheet will cover nearly every day here.",
-       "ctx": "long",
-       "kind": "skill"
-      },
-      {
        "n": 4,
-       "sid": "s4",
-       "test": "Predict tomorrow from the sky alone and check if you were right.",
-       "how": null,
-       "note": null,
+       "test": "Watch it for a week and write down which way the wind came from each day.",
        "ctx": "long",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Keep a weather record every day for a month.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
+       "test": "Name three cloud types on sight.",
+       "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Get five forecasts right in a row and explain how.",
-       "how": null,
-       "note": null,
+       "test": "Name five cloud types on sight.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Say what each of those five usually means for the next few hours.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Spot rain coming before anybody else does, and be right.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Predict tomorrow from the sky alone, and check whether you were right.",
        "ctx": "long",
        "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Do that on five days and count how many you got.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Explain what a front is, and spot one arriving.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
+       "test": "Read a pressure reading and say what it means.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 13,
+       "test": "Keep a weather record every day for a fortnight.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 14,
+       "test": "Keep it every day for a month.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 15,
+       "test": "Work out from your own record which wind brings the rain here.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 16,
+       "test": "Get three forecasts right in a row and explain how.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Know when the sun sets today without looking it up, to within ten minutes.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 18,
+       "test": "Call the weather for a day out, and be right enough that nobody got caught.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Get five forecasts right in a row and explain how.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Teach somebody to read the sky well enough that they get one right.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -2796,62 +3678,75 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Scrunch a sheet of paper into a ball and throw it into a bin from five paces.",
-       "how": [
-        "Take any sheet of paper and scrunch it into a tight ball.",
-        "Stand five big paces back from a bin.",
-        "Throw underarm, not overarm — aim to drop it in from above rather than fire it.",
-        "Keep going until one goes in. It always does."
-       ],
-       "note": null,
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Hit a target the size of a bin lid from ten paces.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
+       "test": "Do that five times out of five.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Hit it five times out of five.",
-       "how": null,
-       "note": null,
+       "test": "Hit a target the size of a bin lid from ten paces.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Skim a stone three bounces.",
-       "how": null,
-       "note": "Flat stone, low and hard, almost parallel to the water. Spin matters more than strength.",
+       "test": "Hit it five times out of five.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Skim a stone six bounces.",
-       "how": null,
-       "note": null,
+       "test": "Hit it from twenty paces.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Teach somebody else to skim one properly.",
-       "how": null,
-       "note": null,
+       "test": "Throw with your other hand and hit it from five paces.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Throw something as far as you can, then beat it by five metres.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Catch ten in a row thrown at you.",
        "ctx": "with",
        "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Skim a stone three bounces.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Skim a stone six bounces.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Skim one ten bounces.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Teach somebody else to skim one properly.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     }
