@@ -1,5 +1,5 @@
 {
- "version": 35,
+ "version": 36,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -1810,7 +1810,7 @@
    "cupGot": "earned",
    "nextTitle": "Your next step · {n} of {N}",
    "doIt": "Do it",
-   "takeLede": "A ladder of {n} steps. Take it on and it lives on your home page, and every day you practise is counted.",
+   "takeLede": "A ladder of {n} steps — {how}. Take it on and it lives on your home page, and every day you practise is counted.",
    "takeBtn": "Take it on",
    "tickNote": "<b>Already able to do some of these?</b> Tick them and carry on. Working through the early ones in one sitting is exactly how this is meant to be used, not a shortcut.",
    "bands": [

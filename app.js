@@ -904,7 +904,7 @@
   function projectRow(tr) {
     const c = catOf(tr), st = nextStep(tr), n = trackDone(tr);
     const last = tr.steps[tr.steps.length - 1], first = tr.steps[0];
-    return `<div class="proj taken" style="--c:${c.accent};--c2:${c.accent2}"><div class="seal"><i></i>${C.school.long.page.taken}</div><div class="ptop"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${c.name} · a ladder of ${tr.steps.length} steps</small></span><button class="px" data-drop="${tr.id}" aria-label="Put this one down">×</button></div>
+    return `<div class="proj taken" style="--c:${c.accent};--c2:${c.accent2}"><div class="seal"><i></i>${C.school.long.page.taken}</div><div class="ptop"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${c.name} · ${tr.steps.length} steps</small><small class="szl sz-${tr.size || 'months'}">${sizeOf(tr).name}</small></span><button class="px" data-drop="${tr.id}" aria-label="Put this one down">×</button></div>
       <div class="ladder">
         <div class="rung ${n === 0 ? 'here' : 'done'}"><b>1</b><span><em>${n === 0 ? 'Start here' : 'Started'}</em>${first.test}</span></div>
         ${n > 0 ? `<div class="rung here"><b>${n + 1}</b><span><em>You are here</em>${st.test}</span></div>` : ''}
@@ -916,7 +916,7 @@
   }
   function candRow(tr) {
     const c = catOf(tr), st = nextStep(tr), last = tr.steps[tr.steps.length - 1], n = trackDone(tr), K = C.school.long.page;
-    return `<div class="cand" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${c.name} · ${tr.steps.length} steps${n ? ` · ${n} done` : ''}</small><small class="ladder">From <em>${tr.steps[0].test}</em> to <em>${last.test}</em></small></span><span class="cbtns"><button class="btn btn-ghost sm" data-track="${tr.id}">${K.look}</button><button class="btn btn-gold sm" data-commit="${tr.id}">${K.take}</button></span></div>`;
+    return `<div class="cand" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${c.name} · ${tr.steps.length} steps${n ? ` · ${n} done` : ''}</small><small class="szl sz-${tr.size || 'months'}">${sizeOf(tr).name}</small><small class="ladder">From <em>${tr.steps[0].test}</em> to <em>${last.test}</em></small></span><span class="cbtns"><button class="btn btn-ghost sm" data-track="${tr.id}">${K.look}</button><button class="btn btn-gold sm" data-commit="${tr.id}">${K.take}</button></span></div>`;
   }
   function renderLong(list) {
     const L = C.school.long, K = L.page, mine = projects(), on = new Set(mine.map(t => t.id));
@@ -1006,6 +1006,16 @@
      steps.length, so a ladder can be six or twenty with no code change. */
   let TRK = null, TRK_FROM = null;
   const trackCopy = () => (C.school.track || {});
+  /* How long this one really takes, said out loud at the top of the ladder.
+     His words: "playing a song on a guitar in front of a group is a major
+     undertaking whereas juggling might be a medium" — so the scale is time,
+     not difficulty, and the honest answer goes where you cannot miss it.
+     A person who knows a thing is a year long does not quit it in week two
+     thinking they are slow. Defined in school.json `sizes`; every ladder
+     carries a `size`. */
+  const SIZES = () => (SCH && SCH.sizes) || {};
+  const sizeOf = tr => (SIZES()[tr && tr.size] || SIZES().months
+    || { name: '', line: '', steps: 6 });
   const fmt1 = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
   /* Bronze a third of the way, silver two thirds, gold the lot — the same three
      the rooms use, so a person meets one vocabulary and not two. These live on
@@ -1080,9 +1090,11 @@
     const s = k => k === 1 ? '' : 's';
 
     let h = `<div class="tk" style="--c:${c.accent};--c2:${c.accent2}">`;
+    const sz = sizeOf(tr);
     h += `<div class="tk-hero"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'">
       ${n === N ? '<span class="tk-crown"></span>' : ''}
       <div class="tk-heroin"><span class="tk-chip">${c.name}</span><h2>${tr.name}</h2><p>${tr.line || ''}</p></div></div>`;
+    h += `<div class="tk-size sz-${tr.size || 'months'}"><b>${sz.name}</b><span>${sz.line}</span></div>`;
 
     h += `<div class="acard tk-card"><div class="tk-top">${pctRing(pct, c.accent, fmt1(K.ringSub, { n, N }))}
       <div class="tk-topt"><strong>${n === N ? K.finished : (got.length ? got[got.length - 1].short : K.notStarted)}</strong>
@@ -1090,7 +1102,7 @@
         ${since ? `<em>${fmt1(K.started, { d: new Date(since).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) })}</em>` : ''}</div></div>
       <div class="tk-stats"><span><b>${n}/${N}</b>${K.statSteps}</span><span><b>${days}</b>${K.statDays}</span>
         <span><b>${pts}/${maxPts}</b>${K.statPoints}</span><span><b>${got.length}/${cups.length}</b>${K.statCups}</span></div>
-      ${taken ? pracLine(tr) : (st ? `<p class="lede tk-takel">${fmt1(K.takeLede, { n: N })}</p>
+      ${taken ? pracLine(tr) : (st ? `<p class="lede tk-takel">${fmt1(K.takeLede, { n: N, how: sz.name.toLowerCase() })}</p>
         <button class="btn btn-gold sm" data-commit="${tr.id}">${K.takeBtn}</button>` : '')}
     </div>`;
 
@@ -1121,7 +1133,7 @@
       const a = ladderAwards(tr).find(x => x.id === b.dataset.lad); if (a) trophyShow(a); }));
   }
 
-  function trackRow(tr) { const c = catOf(tr), n = trackDone(tr), N = tr.steps.length; return `<button class="srow track pic" style="--c:${c.accent};--c2:${c.accent2}" data-track="${tr.id}"><img src="images/track/${tr.id}.jpg" alt="" loading="lazy" onerror="this.src='images/cat/${c.id}.jpg'"><span class="stxt"><span class="stest">${tr.name}</span><span class="sline2">${tr.line || ''}</span><span class="sprog"><i style="width:${Math.round(n / N * 100)}%"></i></span></span><span class="snum">${n} of ${N}</span></button>`; }
+  function trackRow(tr) { const c = catOf(tr), n = trackDone(tr), N = tr.steps.length; return `<button class="srow track pic" style="--c:${c.accent};--c2:${c.accent2}" data-track="${tr.id}"><img src="images/track/${tr.id}.jpg" alt="" loading="lazy" onerror="this.src='images/cat/${c.id}.jpg'"><span class="stxt"><span class="stest">${tr.name}</span><span class="sline2">${tr.line || ''}</span><span class="szr sz-${tr.size || 'months'}">${sizeOf(tr).name}</span><span class="sprog"><i style="width:${Math.round(n / N * 100)}%"></i></span></span><span class="snum">${n} of ${N}</span></button>`; }
   /* The old veil. Kept as a name only, so any caller left anywhere lands on
      the page instead of a dead end. */
   const trackSheet = tr => openTrack(tr);
@@ -1169,7 +1181,7 @@
     const fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
     const first = tr.steps[0], last = tr.steps[tr.steps.length - 1], n = trackDone(tr), st = nextStep(tr);
     if (SHOW) closeShow(true); hush();
-    const v = veil(`<div class="panel sheet commitcard" style="--c:${c.accent};--c2:${c.accent2}"><div class="eyebrow"><i></i>${c.name}</div><h2>${tr.name}</h2><p class="lede">${fmt(K.lede, { n: tr.steps.length })}</p>
+    const v = veil(`<div class="panel sheet commitcard" style="--c:${c.accent};--c2:${c.accent2}"><div class="eyebrow"><i></i>${c.name}</div><h2>${tr.name}</h2><div class="tk-size sz-${tr.size || 'months'} inline"><b>${sizeOf(tr).name}</b><span>${sizeOf(tr).line}</span></div><p class="lede">${fmt(K.lede, { n: tr.steps.length })}</p>
       <div class="ladder"><div class="rung ${n === 0 ? 'here' : 'done'}"><b>1</b><span><em>${n === 0 ? 'Start here' : 'Started'}</em>${first.test}</span></div>${n > 0 && st ? `<div class="rung here"><b>${n + 1}</b><span><em>You are here</em>${st.test}</span></div>` : ''}<div class="rung end"><b>${tr.steps.length}</b><span><em>Ends with</em>${last.test}</span></div></div>
       <div class="showcap" id="showcap" hidden></div>
       ${full ? `<p class="lede full">${K.full}</p><div class="row"><button class="btn btn-ghost" id="cno" style="flex:1">${K.no}</button></div>` : `<div class="row"><button class="btn btn-ghost" id="cno">${K.no}</button><button class="btn btn-gold" id="cyes" style="flex:1.4">${K.yes}</button></div><p class="have">${fmt(K.have, { have, max })}</p>`}
