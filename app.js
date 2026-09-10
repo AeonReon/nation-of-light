@@ -821,7 +821,7 @@
       if (line(mid)) marcusSay(line(mid), a.earned ? 'cheer' : 'nod', () => setTimeout(her, 350)); else her();
     }, sc ? 500 : 900);
   }
-  function closeShow(silent) { if (!SHOW) return; SHOW = null; hush(); if (!silent) closeVeil(); if (!inScene()) { popOut('marcus', 0); popOut('aurelia', 0); } }
+  function closeShow(silent) { if (!SHOW) return; const wasCommit = !!SHOW.querySelector('.commitcard'); SHOW = null; hush(); if (!silent) closeVeil(wasCommit ? rerender : null); if (!inScene()) { popOut('marcus', 0); popOut('aurelia', 0); } }
   function shower() { for (let i = 0; i < 28; i++) { const l = document.createElement('i'); l.className = 'leaffall' + (i % 2 ? ' gl' : ''); l.style.left = Math.random() * 100 + '%'; l.style.animationDuration = (2.4 + Math.random() * 2.2) + 's'; l.style.animationDelay = (Math.random() * 1.2) + 's'; $('stage').appendChild(l); setTimeout(() => l.remove(), 5500); } }
   /* every so often one of them says something, in turn, unprompted */
   function idleRoom(delay) {
@@ -886,7 +886,7 @@
   function projectRow(tr) {
     const c = catOf(tr), st = nextStep(tr), n = trackDone(tr);
     const last = tr.steps[tr.steps.length - 1], first = tr.steps[0];
-    return `<div class="proj" style="--c:${c.accent};--c2:${c.accent2}"><div class="ptop"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${c.name} · a ladder of ${tr.steps.length} steps</small></span><button class="px" data-drop="${tr.id}" aria-label="Put this one down">×</button></div>
+    return `<div class="proj taken" style="--c:${c.accent};--c2:${c.accent2}"><div class="seal"><i></i>${C.school.long.page.taken}</div><div class="ptop"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${c.name} · a ladder of ${tr.steps.length} steps</small></span><button class="px" data-drop="${tr.id}" aria-label="Put this one down">×</button></div>
       <div class="ladder">
         <div class="rung ${n === 0 ? 'here' : 'done'}"><b>1</b><span><em>${n === 0 ? 'Start here' : 'Started'}</em>${first.test}</span></div>
         ${n > 0 ? `<div class="rung here"><b>${n + 1}</b><span><em>You are here</em>${st.test}</span></div>` : ''}
@@ -896,17 +896,24 @@
       ${pracLine(tr)}
       <div class="row"><button class="btn btn-ghost sm" data-track="${tr.id}">The whole ladder</button><button class="btn btn-gold sm" data-step="${skey(tr, st)}" style="flex:1.3">Do a bit today</button></div></div>`;
   }
+  function candRow(tr) {
+    const c = catOf(tr), st = nextStep(tr), last = tr.steps[tr.steps.length - 1], n = trackDone(tr), K = C.school.long.page;
+    return `<div class="cand" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${c.name} · ${tr.steps.length} steps${n ? ` · ${n} done` : ''}</small><small class="ladder">From <em>${tr.steps[0].test}</em> to <em>${last.test}</em></small></span><span class="cbtns"><button class="btn btn-ghost sm" data-track="${tr.id}">${K.look}</button><button class="btn btn-gold sm" data-commit="${tr.id}">${K.take}</button></span></div>`;
+  }
   function renderLong(list) {
-    $('sline').textContent = C.school.longLine; const L = C.school.long; const mine = projects();
-    const room = L.max - mine.length; const sug = room > 0 ? longSuggest() : [];
-    list.innerHTML = (mine.length ? `<div class="acard"><span class="eyebrow">What you are working on</span><p class="lede">${L.intro}</p>${mine.map(projectRow).join('')}</div>` : '') +
-      (room > 0 ? `<div class="acard"><span class="eyebrow">${mine.length ? 'Take on another one' : 'Pick something that takes a month'}</span><p class="lede">${L.pickLine}</p>` +
-        sug.map(tr => { const c = catOf(tr), st = nextStep(tr), last = tr.steps[tr.steps.length - 1]; return `<button class="pickp" style="--c:${c.accent};--c2:${c.accent2}" data-take="${tr.id}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${c.name} · ${tr.steps.length} steps</small><small class="ladder">From <em>${st.test}</em> to <em>${last.test}</em></small></span><b class="take">Take it on</b></button>`; }).join('') +
-        `<button class="what dark" id="rollp">Show me three others</button></div>` : '');
+    const L = C.school.long, K = L.page, mine = projects(), on = new Set(mine.map(t => t.id));
+    $('sline').textContent = '';
+    const started = allTracks().filter(tr => !on.has(tr.id) && trackDone(tr) >= 1 && nextStep(tr)).sort((x, y) => trackDone(y) - trackDone(x)).slice(0, 6);
+    const sug = L.list.map(trackById).filter(tr => tr && nextStep(tr) && !on.has(tr.id) && !started.includes(tr)).slice(0, 6);
+    list.innerHTML = `<p class="intro">${K.intro}</p>` +
+      `<div class="acard takencard"><span class="eyebrow">${K.takenTitle} · ${mine.length} of ${L.max}</span>` + (mine.length ? mine.map(projectRow).join('') : `<p class="lede">${K.takenNone}</p>`) + `</div>` +
+      `<div class="acard"><span class="eyebrow">${K.chooseTitle}</span>` +
+      (started.length ? `<h4 class="sub">${K.startedTitle}</h4>` + started.map(candRow).join('') : '') +
+      `<h4 class="sub">${K.suggestedTitle}</h4>` + sug.map(candRow).join('') +
+      `<button class="what dark" id="seeall">${K.seeAll}</button></div>`;
+    list.querySelectorAll('[data-commit]').forEach(b => b.addEventListener('click', () => { sfx('tap'); commitCard(trackById(b.dataset.commit), 'long'); }));
+    list.querySelector('#seeall').addEventListener('click', () => { sfx('tap'); TAB = 'all'; CAT = null; renderSchool(); });
     wireLong(list);
-    list.querySelectorAll('[data-take]').forEach(b => b.addEventListener('click', () => { sfx('tap'); S.school.projects = (S.school.projects || []).concat(b.dataset.take); S.school.dropped = (S.school.dropped || []).filter(id => id !== b.dataset.take); S.school.taken = S.school.taken || {}; S.school.taken[b.dataset.take] = today(); save(); renderSchool(); }));
-    list.querySelectorAll('[data-drop]').forEach(b => b.addEventListener('click', () => { sfx('tap'); S.school.projects = (S.school.projects || []).filter(id => id !== b.dataset.drop); S.school.dropped = (S.school.dropped || []).concat(b.dataset.drop); save(); renderSchool(); }));
-    const roll = list.querySelector('#rollp'); if (roll) roll.addEventListener('click', () => { sfx('tap'); S.school.roll = (S.school.roll || 0) + 1; save(); renderSchool(); });
     if (!LONGSAID && line('c-long')) { LONGSAID = true; hush(); popIn('marcus'); setTimeout(() => marcusSay(line('c-long'), 'point', () => popOut('marcus', 1400)), 700); }
   }
   /* ---- the long skills: a day counted each time you practise, and the two of them asking how it goes ---- */
@@ -928,13 +935,14 @@
   function longCard() {
     const K = K_LG(), mine = projects();
     return `<div class="acard longcard"><span class="eyebrow">${K.roomTitle}</span><p class="lede">${mine.length ? K.roomLede : K.none}</p>` +
-      (mine.length ? mine.map(tr => { const c = catOf(tr), st = nextStep(tr), n = trackDone(tr); return `<div class="lgrow" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${st.test}</small></span>${pracLine(tr)}</div>`; }).join('') + `<p class="rule">${K.capLine || ''}</p>`
+      (mine.length ? mine.map(tr => { const c = catOf(tr), st = nextStep(tr), n = trackDone(tr); return `<div class="lgrow taken" style="--c:${c.accent};--c2:${c.accent2}"><div class="seal"><i></i>${C.school.long.page.taken}</div><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${st.test}</small></span>${pracLine(tr)}</div>`; }).join('') + `<p class="rule">${K.capLine || ''}</p>`
         : `<button class="btn btn-ghost sm" id="pickLong">${K.pick}</button><p class="rule">${K.capLine || ''}</p>`) + `</div>`;
   }
   function wireLong(root) {
     root.querySelectorAll('[data-prac]').forEach(b => b.addEventListener('click', () => { sfx('tap'); logPractice(trackById(b.dataset.prac)); }));
     root.querySelectorAll('[data-check]').forEach(b => b.addEventListener('click', () => { sfx('tap'); checkIn(trackById(b.dataset.check)); }));
     const pk = root.querySelector('#pickLong'); if (pk) pk.addEventListener('click', () => { sfx('tap'); TAB = 'long'; leaveArrival(); });
+    root.querySelectorAll('[data-commit]').forEach(b => b.addEventListener('click', () => { sfx('tap'); commitCard(trackById(b.dataset.commit), 'long'); }));
   }
   const rerender = () => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); };
   function logPractice(tr) {
@@ -976,8 +984,10 @@
     const v = veil(`<div class="panel sheet" style="--c:${c.accent};--c2:${c.accent2}">
       <div class="eyebrow"><i></i>${c.name}</div><h2>${tr.name}</h2><p class="lede">${tr.line || ''}</p>
       <div class="steps">${tr.steps.map(s => { const k = skey(tr, s), d = sdone(k), act = next && next.n === s.n; return `<button class="step ${d ? 'done' : ''} ${act ? 'act' : ''}" data-step="${k}"><b>${s.n}</b><span>${s.test}</span></button>`; }).join('')}</div>
+      ${!(S.school.projects || []).includes(tr.id) && next && MODE === 'school' ? `<button class="btn btn-gold" id="sheettake" style="width:100%">${C.school.long.page.take}</button>` : ''}
       </div>`, 'light');
     backBtn(v, () => closeVeil());
+    const tk = v.querySelector('#sheettake'); if (tk) tk.addEventListener('click', () => { sfx('tap'); closeVeil(() => commitCard(tr, 'sheet')); });
     v.querySelectorAll('.step').forEach(el => el.addEventListener('click', () => { sfx('tap'); const r = findStep(el.dataset.step); closeVeil(() => stepSheet(r[0], r[1], tr)); }));
   }
   function stepSheet(tr, st, from, where) {
@@ -1012,19 +1022,37 @@
       closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); if (from) trackSheet(from); else setTimeout(() => offerLong(tr), 700); });
     });
   }
-  /* after a step on a ladder: is this one you want to take on? Asked once per ladder, only while there is room, never for a ladder already yours. */
+  /* after a step on a ladder you have not taken on: the question, once per ladder, only while there is room */
   function offerLong(tr) {
-    const O = C.school.long.offer; if (!O || SHOW) return;
-    S.school.noAsk = S.school.noAsk || [];
+    if (SHOW) return; S.school.noAsk = S.school.noAsk || [];
     if ((S.school.projects || []).includes(tr.id) || S.school.noAsk.includes(tr.id) || !nextStep(tr) || tr.steps.length < 4 || projects().length >= (C.school.long.max || 3)) return;
-    const c = catOf(tr), fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
-    const v = veil(`<div class="panel sheet offercard" style="--c:${c.accent};--c2:${c.accent2}"><div class="eyebrow"><i></i>${c.name}</div><h2>${fmt(O.title, { name: tr.name })}</h2><p class="lede">${fmt(O.lede, { n: tr.steps.length, have: projects().length, max: C.school.long.max || 3 })}</p>
-      <div class="row"><button class="btn btn-ghost" id="offno">${O.no}</button><button class="btn btn-gold" id="offyes" style="flex:1.3">${O.yes}</button></div></div>`, 'light');
-    const no = () => { S.school.noAsk.push(tr.id); save(); closeVeil(); };
-    backBtn(v, no);
-    v.querySelector('#offno').addEventListener('click', () => { sfx('tap'); no(); });
-    v.querySelector('#offyes').addEventListener('click', () => { sfx('tap'); S.school.projects = (S.school.projects || []).concat(tr.id); S.school.dropped = (S.school.dropped || []).filter(id => id !== tr.id); S.school.taken = S.school.taken || {}; S.school.taken[tr.id] = today(); save();
-      closeVeil(() => { rerender(); hush(); if (line('c-sy2')) speakSchool([{ who: 'marcus', id: 'c-sy2' }]); }); });
+    commitCard(tr, 'offer');
+  }
+  /* taking a long skill on is a moment: the two of them, the question out loud, the ladder in front of you, and a real yes */
+  function commitCard(tr, from) {
+    const K = C.school.long.commit, max = C.school.long.max || 3, c = catOf(tr), sc = inScene(), have = projects().length, full = have >= max;
+    const fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
+    const first = tr.steps[0], last = tr.steps[tr.steps.length - 1], n = trackDone(tr), st = nextStep(tr);
+    if (SHOW) closeShow(true); hush();
+    const v = veil(`<div class="panel sheet commitcard" style="--c:${c.accent};--c2:${c.accent2}"><div class="eyebrow"><i></i>${c.name}</div><h2>${tr.name}</h2><p class="lede">${fmt(K.lede, { n: tr.steps.length })}</p>
+      <div class="ladder"><div class="rung ${n === 0 ? 'here' : 'done'}"><b>1</b><span><em>${n === 0 ? 'Start here' : 'Started'}</em>${first.test}</span></div>${n > 0 && st ? `<div class="rung here"><b>${n + 1}</b><span><em>You are here</em>${st.test}</span></div>` : ''}<div class="rung end"><b>${tr.steps.length}</b><span><em>Ends with</em>${last.test}</span></div></div>
+      <div class="showcap" id="showcap" hidden></div>
+      ${full ? `<p class="lede full">${K.full}</p><div class="row"><button class="btn btn-ghost" id="cno" style="flex:1">${K.no}</button></div>` : `<div class="row"><button class="btn btn-ghost" id="cno">${K.no}</button><button class="btn btn-gold" id="cyes" style="flex:1.4">${K.yes}</button></div><p class="have">${fmt(K.have, { have, max })}</p>`}
+    </div>`, 'light trophyveil');
+    if (sc) { const scn = $('scene'); v.style.top = (scn.offsetTop + scn.offsetHeight) + 'px'; }
+    SHOW = v;
+    const no = () => { if (from === 'offer') { S.school.noAsk = S.school.noAsk || []; if (!S.school.noAsk.includes(tr.id)) S.school.noAsk.push(tr.id); save(); } closeShow(); };
+    backBtn(v, no); v.querySelector('#cno').addEventListener('click', () => { sfx('tap'); no(); });
+    if (!sc) { popIn('marcus'); popIn('aurelia'); }
+    if (!full) setTimeout(() => { if (SHOW !== v) return; ARIG.point(); if (!RIG.hidden) RIG.think(); cap('aurelia', C.voice['lg-ask']); aureliaSay('ui-lg-ask', () => capHide(1800)); }, sc ? 500 : 900);
+    const yes = v.querySelector('#cyes'); if (yes) yes.addEventListener('click', () => {
+      sfx('tap'); yes.disabled = true; v.querySelector('#cno').disabled = true;
+      S.school.projects = (S.school.projects || []).concat(tr.id); S.school.dropped = (S.school.dropped || []).filter(id => id !== tr.id); S.school.noAsk = (S.school.noAsk || []).filter(id => id !== tr.id);
+      S.school.taken = S.school.taken || {}; S.school.taken[tr.id] = today(); save();
+      hush(); sfx('wreath'); shower(); if (sc) { sparks(); PORTICO.flare(); } RIG.cheer(); ARIG.cheer();
+      v.querySelector('.commitcard').classList.add('sealed'); v.querySelector('h2').insertAdjacentHTML('beforebegin', `<div class="seal big"><i></i>${C.school.long.page.taken}</div>`);
+      setTimeout(() => { if (SHOW !== v) return; marcusSay(line('c-lg-take'), 'cheer', () => { if (SHOW !== v) return; cap('aurelia', C.voice['lg-took']); ARIG.nod(); aureliaSay('ui-lg-took', () => { capHide(1200); setTimeout(() => { if (SHOW === v) closeShow(); }, 600); }); }); }, 700);
+    });
   }
   /* ---- share: the link only, and a QR for the room ---- */
   function sharePanel(back) {

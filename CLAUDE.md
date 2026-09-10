@@ -134,3 +134,15 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   (`S.school.noAsk`), only while there is room. Quick things are play and never shown as
   unfinished; the carry-on card is gone from the long tab too. His psychology rule: very few
   open loops, chosen on purpose, visible daily; everything else is a menu, not a debt.
+- **v32 traps:** never reuse a layout class name as a state class. `.pop` (the pop layer) vs a
+  leaf's `pop` animation state → a screen-wide green X; `.school` (the container, a flex column)
+  vs the bubble's `school` kind → words stacked one per line. State classes are now `popping`
+  and `companion`. When a screenshot shows something huge and green, suspect a class collision.
+- **v33 commitment:** taking a long skill on is a scene (`commitCard(tr, from)`): the ladder in
+  front of you, Aurelia asks out loud (`lg-ask`), "I am taking this on" / "Not yet"; yes seals
+  the card (gold seal), gold and laurel fall, Marcus (`c-lg-take`) then Aurelia (`lg-took`),
+  then it closes and the skill wears a gold frame + "Taken on" seal on the long page and at
+  home. Reached from: after a step on an untaken ladder (once, `noAsk`), the long page's Take
+  it on, or a ladder sheet. The long page = intro line, "Taken on · n of 3" (sealed cards),
+  then "Choose a long skill": ladders you have tried, then good ones to start with, Look / Take
+  it on, and "Every room in the school". No accidental commitments, and no list of open loops.

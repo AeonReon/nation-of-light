@@ -806,3 +806,30 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 .offercard{--g1:var(--c2);--g2:var(--c)}
 .offercard h2{font-size:23px;line-height:1.2}
 .longcard .rule{margin:4px 0 0;font-size:12px;color:var(--ink-faint);text-align:center;font-weight:600}
+/* v33: the commitment, and the long game page made plain */
+.slist .intro{margin:2px 4px 2px;font-size:13.5px;line-height:1.45;color:var(--ink-soft)}
+.acard .sub{margin:6px 0 0;font-family:var(--display);font-weight:600;font-size:15px;color:var(--ink)}
+.cand{display:grid;grid-template-columns:52px 1fr;gap:6px 10px;align-items:center;padding:9px 0;border-top:1px solid var(--line)}
+.cand img{width:52px;height:40px;object-fit:cover;border-radius:9px;box-shadow:0 0 0 1.2px var(--c2)}
+.cand strong{display:block;font-family:var(--display);font-weight:600;font-size:15.5px;color:var(--ink)}
+.cand small{display:block;font-size:12px;color:var(--ink-soft);line-height:1.3}
+.cand .ladder{margin-top:2px;font-size:12px;color:var(--ink-faint)}
+.cand .ladder em{font-style:normal;font-weight:600;color:var(--ink)}
+.cand .cbtns{grid-column:2;display:flex;gap:8px}
+.cand .cbtns .btn-gold{flex:1}
+.takencard{--g1:#F0D98A;--g2:#B08D1E}
+.proj.taken,.lgrow.taken{position:relative;padding:14px 12px 10px;margin:6px 0 2px;border-radius:16px;background:var(--card);border-top:0}
+.proj.taken::before,.lgrow.taken::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:3px;background:linear-gradient(135deg,#F3E3A8,#C9A227 55%,#8F6F12);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.lgrow.taken{grid-template-columns:52px 1fr;padding-top:18px}
+.seal{position:absolute;top:-10px;right:12px;display:inline-flex;align-items:center;gap:5px;padding:3px 9px 3px 6px;border-radius:10px;background:linear-gradient(135deg,#F0D98A,#C9A227);color:#2B2210;font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 4px 10px rgba(201,162,39,.4);z-index:1}
+.seal i{width:12px;height:12px;background:#2B2210;clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.seal.big{position:static;align-self:center;font-size:12px;padding:5px 12px 5px 8px;margin:0 auto 8px;animation:tropop .8s var(--spring) both}
+.seal.big i{width:15px;height:15px}
+.commitcard{text-align:left}
+.commitcard h2{font-size:26px}
+.commitcard .ladder{margin:4px 0 8px}
+.commitcard .have{margin:8px 0 0;text-align:center;font-size:12px;font-weight:700;color:var(--ink-faint)}
+.commitcard .full{color:var(--crimson)}
+.commitcard.sealed{--g1:#F3E3A8;--g2:#B08D1E}
+.commitcard .showcap{margin:0 0 10px}
+.commitcard.sealed .have,.commitcard.sealed .row{display:none}

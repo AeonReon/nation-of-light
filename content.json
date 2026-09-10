@@ -1,5 +1,5 @@
 {
- "version": 32,
+ "version": 33,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -460,6 +460,10 @@
    {
     "id": "c-vis4",
     "t": "That is the person you are becoming, one small thing at a time. People will be amazed at how much you can do. Then you will be. And once you understand how things work, you stop looking for an expert. You become the authority in your own life."
+   },
+   {
+    "id": "c-lg-take",
+    "t": "Good. That is a decision, and most people never make one. It is yours now. Do a little most days, and one day you will simply be able to do it."
    }
   ]
  },
@@ -950,7 +954,9 @@
   "env4": "The greats were competent at a great many things. That is the road you are on.",
   "env5": "Once you understand how things work, you stop looking for an expert. You become your own.",
   "vis1": "Picture yourself a year from now, in a room full of people. Somebody hands you three balls and you juggle. Somebody has a cube and you solve it. You know which way is north. You can swim a long way, run a long way, hold your breath, light a fire without matches. You know poems by heart and can say them well. You can order a meal in another language and cook one worth serving. You can tell a story that holds a table, stand up and speak without notes, put on an event, mend the thing that broke, and walk into a room that is a mess and leave it in order.",
-  "vis3": "The people history calls great were mostly like this. Leonardo painted, studied the body, designed machines and played the lyre. Franklin printed, wrote, worked out lightning, invented, swam, and helped found a nation. They were not specialists or generalists. They were competent at a great many things, because they gave their lives to understanding how things work."
+  "vis3": "The people history calls great were mostly like this. Leonardo painted, studied the body, designed machines and played the lyre. Franklin printed, wrote, worked out lightning, invented, swam, and helped found a nation. They were not specialists or generalists. They were competent at a great many things, because they gave their lives to understanding how things work.",
+  "lg-ask": "This is a real commitment: a ladder of many steps, a little most days, until it is yours. Are you taking it on?",
+  "lg-took": "Well done for taking something on. It is part of who you are now. It will be here every morning, and we will keep the count."
  },
  "cover": {
   "em": "Nation of",
@@ -1476,11 +1482,24 @@
     },
     "capLine": "Up to three at once. Quick things never count as unfinished."
    },
-   "offer": {
-    "title": "Take {name} on as a long skill?",
-    "lede": "A ladder of {n} steps, a little most days, and we will keep the count and ask how it goes. You can put it down any time. {have} of {max} taken on.",
-    "yes": "Take it on",
-    "no": "Just the quick one"
+   "commit": {
+    "lede": "A ladder of {n} steps. A little most days. A skill for life.",
+    "yes": "I am taking this on",
+    "no": "Not yet",
+    "have": "{have} of {max} taken on",
+    "full": "Three taken on already. Finish one, or put one down, before taking on another."
+   },
+   "page": {
+    "intro": "Quick things are play. A long skill is a promise: a ladder of steps, a little most days, up to three at once. Take one on and it lives on your home page until it is yours.",
+    "takenTitle": "Taken on",
+    "takenNone": "Nothing taken on yet. Choose one below, or wait until a quick thing pulls you and we will ask.",
+    "chooseTitle": "Choose a long skill",
+    "startedTitle": "Ladders you have tried",
+    "suggestedTitle": "Good ones to start with",
+    "look": "Look",
+    "take": "Take it on",
+    "seeAll": "Every room in the school",
+    "taken": "Taken on"
    }
   },
   "ranks": [
