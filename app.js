@@ -610,7 +610,7 @@
     return `<div class="acard carry"><span class="eyebrow">${K.title}</span>` + st.map(tr => { const c = catOf(tr), s = nextStep(tr), n = trackDone(tr); return `<button class="crow" style="--c:${c.accent};--c2:${c.accent2}" data-step="${skey(tr, s)}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${s.test}</small></span><i class="cprog"><b style="width:${Math.round(n / tr.steps.length * 100)}%"></b></i></button>`; }).join('') + '</div>';
   }
   /* the quick ones: the journey's easy wins, then any track's first step, not yet done */
-  const NOW = new Set(['room', 'home']), LATER = new Set(['kit', 'with', 'out']);
+  const NOW = new Set(['room']), LATER = new Set(['kit', 'with', 'out', 'home']);
   const needsOf = st => LATER.has(st.ctx) ? st.ctx : null;
   function quickCandidates(which) {
     const ok = ([tr, st]) => which === 'later' ? LATER.has(st.ctx) : NOW.has(st.ctx);
@@ -625,25 +625,36 @@
     const t = S.school.today; t.later = t.later || [];
     const key = which === 'later' ? 'later' : 'picks', limit = which === 'later' ? 4 : 6;
     const cand = quickCandidates(which).map(([tr, st]) => skey(tr, st));
-    t[key] = t[key].filter(k => !sdone(k) && findStep(k));
+    t[key] = t[key].filter(k => { const r = findStep(k); return r && !sdone(k) && (which === 'later' ? LATER.has(r[1].ctx) : NOW.has(r[1].ctx)); });
     for (const k of cand) { if (t[key].length >= limit) break; if (!t[key].includes(k) && !t.skip.includes(k)) t[key].push(k); }
     save(); return t[key].map(findStep).filter(Boolean);
   }
+  const levelTwo = () => allTracks().filter(tr => trackDone(tr) === 1 && !(S.school.projects || []).includes(tr.id)).map(tr => [tr, nextStep(tr)]).filter(([tr, st]) => st && NOW.has(st.ctx)).slice(0, 4);
   function notThis(key) { const t = S.school.today; t.skip.push(key); t.picks = t.picks.filter(k => k !== key); t.later = (t.later || []).filter(k => k !== key); save(); }
 
   function enterSchool() {
     $('stage').classList.add('school'); $('deck').hidden = true; $('school').hidden = false; $('hud').hidden = false;
     $('shead').appendChild($('hud')); paintSchoolCount();
+    if (!$('daybar')) { $('countpill').hidden = true; $('hud').insertAdjacentHTML('afterbegin', `<div id="daybar" class="daywrap">${dayBar()}</div><button class="facebtn ${S.popins === false ? 'off' : ''}" id="facebtn" aria-label="${C.help ? C.help.popins : 'Pop-ups'}"><img src="images/mentors/marcus.jpg" alt=""><i></i></button>`);
+      $('facebtn').addEventListener('click', () => { S.popins = S.popins === false; save(); sfx('tap'); $('facebtn').classList.toggle('off', S.popins === false); if (S.popins === false) { hush(); popOut('marcus', 0); popOut('aurelia', 0); } }); }
     if (!$('homebtn').dataset.sun) { $('homebtn').dataset.sun = '1'; $('homebtn').querySelector('svg').outerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9h18M4 9v10M9 9v10M15 9v10M20 9v10M2 19h20M12 3l9 6H3z"/></svg>'; }
     plates(false); MODE = 'school'; CUR = null; $('mfig').classList.remove('walk-in');
     const d = today(), fresh0 = !S.school.arrivedEver;
     const again = S.school.arrived === d; S.school.arrived = d; S.school.visits = (S.school.visits || 0) + 1; save(); arrival(fresh0, again);
   }
-  function paintSchoolCount() { const p = points(), r = rankOf(p); $('countn').textContent = p; const of = $('countn').nextElementSibling; of.hidden = false; of.textContent = r.name; }
+  function paintSchoolCount() { const p = points(), r = rankOf(p); $('countn').textContent = p; const of = $('countn').nextElementSibling; of.hidden = false; of.textContent = r.name; paintDay(); }
   /* ---- the arrival: the portico, the two of them, where you stand, three for today ---- */
   let HOMEN = 0;
   function goHome() { if ($('stage').classList.contains('arrive')) return; hush(); clearTimeout(ROOMT); HOMEN++; CAT = null; arrival(false, true, true); }
   const todayQuick = () => { const t = today(); return Object.values(S.school.done).some(v => typeof v === 'string' && v.startsWith(t)); };
+  function dayCount() { const t = today(); const q = Object.values(S.school.done).filter(v => typeof v === 'string' && v.startsWith(t)).length; const pr = Object.values(S.school.practice || {}).filter(p => p.days && p.days[t]).length; return q + pr; }
+  function dayBar() { const G = C.school.goal || { n: 3 }, n = dayCount(), pct = Math.min(100, Math.round(n / G.n * 100)), over = G.overAt && n >= G.overAt; return `<div class="daybar ${n >= G.n ? 'full' : ''} ${over ? 'over' : ''}" title="${G.lede || ''}"><i style="width:${pct}%"></i><span>${over ? (G.over + ' · ' + n) : n >= G.n ? G.done : (n + ' of ' + G.n + ' ' + (G.label || 'today'))}</span></div>`; }
+  function paintDay() { const b = $('daybar'); if (b) b.outerHTML = `<div id="daybar" class="daywrap">${dayBar()}</div>`; }
+  function checkDay() {
+    const G = C.school.goal || { n: 3 }, t = today(); if (dayCount() < G.n || S.school.celebrated === t) { paintDay(); return; }
+    S.school.celebrated = t; save(); paintDay();
+    setTimeout(() => { hush(); sfx('wreath'); shower(); if (inScene()) { sparks(); PORTICO.flare(); } const hers = (S.school.visits || 0) % 2 === 0; speakSchool(hers ? [{ who: 'aurelia', id: 'ui-day', t: C.voice['day'] }] : [{ who: 'marcus', id: 'c-day' }]); }, 1800);
+  }
   const todayLong = () => projects().some(tr => !!prac(tr).days[today()]);
   const unpop = () => { clearTimeout(POPT.marcus); clearTimeout(POPT.aurelia); };
   function arrival(first, again, quiet) {
@@ -699,7 +710,7 @@
     const lib = ['quote', 'book', 'beauty', 'figure'].map(k => { const pool = LIB.filter(x => x.kind === k); if (!pool.length) return ''; const it = pool[(daySeed() + k.length) % pool.length]; return `<div class="acard lib ${k}"><span class="eyebrow">${R.libraryLede[k]}</span>${it.title ? `<h3>${it.title}</h3>` : ''}<p>${it.t}</p>${it.by ? `<i>${it.by}${it.src ? ' · ' + it.src : ''}</i>` : ''}</div>`; }).join('');
     const rooms = SCH.categories.map(c => ({ c, n: c.tracks.reduce((s, tr) => s + trackDone(tr), 0), N: c.tracks.reduce((s, tr) => s + tr.steps.length, 0) })).filter(r => r.n > 0).sort((x, y) => y.n - x.n).slice(0, 8);
     const earlier = FEED.slice(1, 6);
-    list.innerHTML = `<div class="acard standcard">${standCard()}<p class="punch">${standLine()}</p>${ticks}<p class="nextp ${q && (l || !hasLong) ? 'done' : ''}">${nextLine}</p></div>` +
+    list.innerHTML = `<div class="acard standcard">${standCard()}<p class="punch">${standLine()}</p>${ticks}<div class="daywrap home">${dayBar()}</div><p class="nextp ${q && (l || !hasLong) ? 'done' : ''}">${nextLine}</p></div>` +
       (P.how ? foldCard('how', P.how.title, `<ol class="howlist">${P.how.lines.map(x => `<li>${x}</li>`).join('')}</ol>`, visits <= 3 && !S.school.howSeen) : '') +
       (C.vision ? foldCard('vision', C.vision.title, `<div class="acard visioncard"><div class="rhead"><span class="eyebrow">${C.vision.lede}</span><button class="playbtn" id="visionread" aria-label="Aurelia reads it">${SPK_IC}</button></div>${C.vision.paras.map(x => `<p>${x}</p>`).join('')}</div><div class="acard polycard"><span class="eyebrow">${C.vision.polyTitle}</span><p class="lede">${C.vision.polyLede}</p>${C.vision.polymaths.map(x => `<div class="poly"><b>${x.name}</b><span>${x.line}</span></div>`).join('')}<p class="close">${C.vision.close}</p></div>`, visits <= 2 && !S.school.visionSeen) : '') +
       (post ? `<div class="acard post ${isNew ? 'new' : ''}"><span class="eyebrow">${C.feed.title}${isNew ? '<b class="dot">New</b>' : ''}</span><h3>${post.title}</h3><small>${post.date}</small><p>${post.text}</p></div>` : '') +
@@ -886,6 +897,7 @@
         : `<div class="acard"><p class="lede">Every quick one is done. The long game is where the rest of you lives.</p></div>`) +
       (picks.length > 1 ? foldCard('more', C.school.nextMore || 'Three more easy ones', `<div class="acard" style="padding-top:4px">${picks.slice(1, 4).map(pickRow).join('')}</div>`) : '') +
       (later.length ? foldCard('later', P.laterTitle || 'With people, outside, or with a thing', `<p class="lede" style="padding:0 6px">${P.laterLede || ''}</p><div class="acard" style="padding-top:4px">${later.map(pickRow).join('')}</div>`) : '') +
+      (levelTwo().length ? foldCard('two', C.school.twoTitle || 'Level two', `<p class="lede" style="padding:0 6px">${C.school.twoLede || ''}</p><div class="acard" style="padding-top:4px">${levelTwo().map(pickRow).join('')}</div>`) : '') +
       `<div class="acard week"><div class="wrow">${days.map(d => `<span class="wk ${lit.has(dk(d)) ? 'on' : ''} ${dk(d) === t ? 'td' : ''}"><i></i><b>${d.toLocaleDateString('en-GB', { weekday: 'narrow' })}</b></span>`).join('')}</div><p>${lit.size ? `<b>${lit.size}</b> day${lit.size === 1 ? '' : 's'} lit altogether` : 'One light a day is the whole habit'}${lit.has(t) ? ' · today is lit' : ''}</p></div>` +
       (th ? `<details class="thought"><summary>A thought from Marcus</summary><p>${th.t}</p><i>${C.names.marcus} · ${th.src}</i></details>` : '');
     list.querySelectorAll('[data-do]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.do); if (r) stepSheet(r[0], r[1]); }));
@@ -971,7 +983,7 @@
     document.querySelectorAll(`[data-prac="${tr.id}"]`).forEach(b => { b.disabled = true; b.classList.add('did'); b.textContent = K.practisedDone; });
     document.querySelectorAll('.prac > span:first-child').forEach(() => {}); setTimeout(() => { document.querySelectorAll(`[data-prac="${tr.id}"]`).forEach(b => { const row = b.closest('.prac'); if (row) row.outerHTML = pracLine(tr); }); wireLong($('slist')); }, 50);
     const ms = (K.milestones || []).includes(n) ? 'ui-lg-m' + n : null;
-    hush();
+    hush(); checkDay();
     if (ms) speakSchool([{ who: 'aurelia', id: ms, t: C.voice[ms.slice(3)] }]);
     else if (n % 2) speakSchool([{ who: 'aurelia', id: 'ui-lg-prac', t: C.voice['lg-prac'] }]);
     else speakSchool([{ who: 'marcus', id: 'c-lg-prac' }]);
@@ -1149,7 +1161,7 @@
     v.querySelector('#sdone').addEventListener('click', () => {
       const before = rankOf(points()).name, awBefore = awards().filter(x => x.earned).length, hadIds = new Set(awards().filter(x => x.earned).map(x => x.id));
       S.school.done[k] = new Date().toISOString(); S.school.points++; const t = today(); S.days[t] = (S.days[t] || 0) + 1; save();
-      sfx('done'); sparks(); RIG.smile(1.8); if (ARIG && !ARIG.hidden) ARIG.smile(1.8); paintSchoolCount();
+      sfx('done'); sparks(); RIG.smile(1.8); if (ARIG && !ARIG.hidden) ARIG.smile(1.8); paintSchoolCount(); checkDay();
       const inScene = inSceneNow();
       const up = rankOf(points()).name !== before || awards().filter(x => x.earned).length > awBefore;
       const gotAward = awards().filter(x => x.earned).length > awBefore;
@@ -1166,14 +1178,25 @@
         const y = gotAward && line('c-award') ? 'c-award' : (where === 'arrival' ? C.arrival.after : (up ? 'c-rank' : C.school.affirm[(n - 1) % C.school.affirm.length]));
         if (line(y)) { if (!inScene) { popIn('marcus'); if (both) popIn('aurelia'); } setTimeout(() => { if (!ARIG.hidden) ARIG.smile(3); marcusSay(line(y), up ? 'cheer' : (n % 2 ? 'cheer' : 'nod'), () => { if (!inScene) { popOut('marcus', 1400); if (both) popOut('aurelia', 1400); } }); }, inScene ? 400 : 900); }
       }
-      closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); if (where !== 'track') setTimeout(() => offerLong(tr), 700); });
+      closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); if (where !== 'track') setTimeout(() => afterStep(tr), 700); });
     });
   }
-  /* after a step on a ladder you have not taken on: the question, once per ladder, only while there is room */
-  function offerLong(tr) {
-    if (SHOW) return; S.school.noAsk = S.school.noAsk || [];
+  /* the ask, timed to interest: nothing after one step; after the second, a soft yes or no, one tap out; after the third, the proper moment, once */
+  function afterStep(tr) {
+    if (SHOW) return; S.school.noAsk = S.school.noAsk || []; S.school.soft = S.school.soft || {};
     if ((S.school.projects || []).includes(tr.id) || S.school.noAsk.includes(tr.id) || !nextStep(tr) || tr.steps.length < 4 || projects().length >= (C.school.long.max || 3)) return;
-    commitCard(tr, 'offer');
+    const n = trackDone(tr);
+    if (n === 2 && !S.school.soft[tr.id]) softOffer(tr);
+    else if (n === 3) commitCard(tr, 'offer');
+  }
+  function softOffer(tr) {
+    const O = C.school.long.soft; if (!O) return; const c = catOf(tr);
+    const fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
+    const v = veil(`<div class="panel sheet softcard" style="--c:${c.accent};--c2:${c.accent2}"><div class="eyebrow"><i></i>${c.name} · ${tr.name}</div><h2>${fmt(O.title, { name: tr.name })}</h2><p class="lede">${O.lede}</p>
+      <div class="row"><button class="btn btn-ghost" id="softno">${O.no}</button><button class="btn btn-gold" id="softyes" style="flex:1.2">${O.yes}</button></div></div>`, 'light');
+    const no = () => { S.school.soft[tr.id] = 'no'; save(); closeVeil(); };
+    backBtn(v, no); v.querySelector('#softno').addEventListener('click', () => { sfx('tap'); no(); });
+    v.querySelector('#softyes').addEventListener('click', () => { sfx('tap'); S.school.soft[tr.id] = 'yes'; save(); closeVeil(() => commitCard(tr, 'soft')); });
   }
   /* taking a long skill on is a moment: the two of them, the question out loud, the ladder in front of you, and a real yes */
   function commitCard(tr, from) {
@@ -1226,7 +1249,7 @@
     </div></div>`, 'light');
     S.seenHelp = true; save();
     backBtn(v, () => closeVeil());
-    const pi = v.querySelector('#popins'); if (pi) pi.addEventListener('change', () => { S.popins = pi.checked; save(); sfx('tap'); if (!pi.checked) { popOut('marcus', 0); popOut('aurelia', 0); } });
+    const pi = v.querySelector('#popins'); if (pi) pi.addEventListener('change', () => { S.popins = pi.checked; save(); sfx('tap'); const fb = $('facebtn'); if (fb) fb.classList.toggle('off', !pi.checked); if (!pi.checked) { popOut('marcus', 0); popOut('aurelia', 0); } });
   }
 
   /* ---------- boot ---------- */

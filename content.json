@@ -1,5 +1,5 @@
 {
- "version": 36,
+ "version": 37,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -464,6 +464,10 @@
    {
     "id": "c-lg-take",
     "t": "Good. That is a decision, and most people never make one. It is yours now. Do a little most days, and one day you will simply be able to do it."
+   },
+   {
+    "id": "c-day",
+    "t": "Three done. That is a day well used. Anything more now is yours to enjoy."
    }
   ]
  },
@@ -956,7 +960,8 @@
   "vis1": "Picture yourself a year from now, in a room full of people. Somebody hands you three balls and you juggle. Somebody has a cube and you solve it. You know which way is north. You can swim a long way, run a long way, hold your breath, light a fire without matches. You know poems by heart and can say them well. You can order a meal in another language and cook one worth serving. You can tell a story that holds a table, stand up and speak without notes, put on an event, mend the thing that broke, and walk into a room that is a mess and leave it in order.",
   "vis3": "The people history calls great were mostly like this. Leonardo painted, studied the body, designed machines and played the lyre. Franklin printed, wrote, worked out lightning, invented, swam, and helped found a nation. They were not specialists or generalists. They were competent at a great many things, because they gave their lives to understanding how things work.",
   "lg-ask": "This is a real commitment: a ladder of many steps, a little most days, until it is yours. Are you taking it on?",
-  "lg-took": "Well done for taking something on. It is part of who you are now. It will be here every morning, and we will keep the count."
+  "lg-took": "Well done for taking something on. It is part of who you are now. It will be here every morning, and we will keep the count.",
+  "day": "That is today, done. Three things, and most people will not do one. Anything more now is a gift."
  },
  "cover": {
   "em": "Nation of",
@@ -1500,6 +1505,12 @@
     "take": "Take it on",
     "seeAll": "Every room in the school",
     "taken": "Taken on"
+   },
+   "soft": {
+    "title": "Enjoying {name}?",
+    "lede": "Two steps in. Take it on as a long skill and it lives on your home page, or just carry on whenever you feel like it.",
+    "yes": "Take it on",
+    "no": "Just when I feel like it"
    }
   },
   "ranks": [
@@ -1821,7 +1832,17 @@
     "Lighthouse"
    ],
    "feeds": "{room} · a ladder of {n} steps"
-  }
+  },
+  "goal": {
+   "n": 3,
+   "label": "today",
+   "done": "Today done",
+   "over": "Blazing",
+   "overAt": 7,
+   "lede": "Three things a day: quick ones, practice, any mix."
+  },
+  "twoTitle": "Level two: ladders you have started",
+  "twoLede": "You did the first step. The second is here when you want it. Nothing is owed."
  },
  "arrival": {
   "lines": [
@@ -1900,7 +1921,7 @@
   ],
   "storyLede": "Something from us",
   "todayTitle": "Do one of these today",
-  "todayLede": "Nothing needed but you and about thirty seconds. More underneath.",
+  "todayLede": "Nothing needed but you, right where you are. More underneath.",
   "ticks": {
    "quick": "One quick thing",
    "long": "A long skill practised"
@@ -1922,12 +1943,13 @@
    "vision": "Who you can become"
   },
   "more": "Three more",
-  "laterTitle": "When you are with people, outside, or have the thing",
+  "laterTitle": "With people, outside, at home, or with a thing",
   "laterLede": "Good ones that need somebody else, a place, or a bit of kit. Not for right now, and nothing is owed.",
   "needs": {
    "with": "with somebody",
    "out": "outside",
-   "kit": "needs a thing"
+   "kit": "needs a thing",
+   "home": "at home"
   }
  },
  "room": {
@@ -2412,6 +2434,6 @@
  },
  "help": {
   "popins": "Marcus and Aurelia pop up in the school",
-  "popinsHint": "They always stay at home. Swipe down on either of them to send them off for now."
+  "popinsHint": "Tap the face at the top to switch this any time. They always stay at home."
  }
 }

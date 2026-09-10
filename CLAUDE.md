@@ -155,3 +155,12 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   sends both off; `S.popins=false` (help panel toggle) stops pop-ins in the tabs; home is
   always the full scene. Parked, an architecture call: longer ladders (more, smaller rungs)
   per track by learning method, starting with the most-tried skills.
+- **v37 (another session shipped v35–v36 in this tree meanwhile: the ladder page `.tk`, twenty-
+  step ladders; check `git log` before editing app.js).** The ask is timed to interest:
+  nothing after one step; after the second step of an untaken ladder a SOFT card (one tap out,
+  `S.school.soft`); after the third, the ceremony once (`afterStep`). Quick things are `room`
+  only; `home` joined the needs fold. "Level two" fold in Next thing = ladders with one step
+  done whose next step needs nothing. **The day**: goal 3 (quick steps + practices today), a gold
+  bar in the school header and at home (`dayBar/paintDay/checkDay`); reaching 3 once a day =
+  gold falling, wreath sound, one of them (`ui-day` / `c-day`); 7 = "Blazing". The points pill
+  left the header; the face button (Marcus) toggles pop-ins with a line through it.
