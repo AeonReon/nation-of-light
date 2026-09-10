@@ -202,4 +202,11 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   where a hand or foot is the skill: Throwing, Drawing, Balance, Cloth and thread, Knots
   (eyes shut / behind your back), Mending, Tools (never the saw), Shapes, the one-leg squats,
   and Hopping restored after the other session's twenty-step rewrite dropped them. Not on knives.
-  ~70 twists in all. Add more by hand, never by regex: a twist has to be safe and real.
+  ~60 twists in all. Add more by hand, never by regex: a twist has to be safe and real.
+- **v48 (2026-09-10, one journey, one tap):** on the child's page the step sheet carries a
+  second button, "Done, me too" ("Me too, with the twist" when the rung has one): it stamps
+  the rung on the PARENT's page as well (`S.kid.school` holds the parent's page while the
+  child's is active) and then runs the normal Done. Copy `school.track.both/bothTwist`.
+  Parked ideas, in order: a "beside them" credit on the parent's own day bar for a session
+  done on the child's page; an optional age in `kidPanel` so `from` can hide the adult-only
+  rungs (the phone call at about six) on the child's Everything tab; a second child (`S.kids`).

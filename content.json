@@ -1850,7 +1850,9 @@
       "doneLong": "Done {d} — over six months ago. Can you still?",
       "again": "Done it again",
       "againFresh": "Marked again for today. Still yours.",
-      "twist": "Already easy?"
+      "twist": "Already easy?",
+      "both": "Done, me too",
+      "bothTwist": "Me too, with the twist"
     },
     "goal": {
       "n": 3,

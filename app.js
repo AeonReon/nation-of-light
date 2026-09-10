@@ -1544,6 +1544,7 @@
        grown-up, and the grown-up who finds it easy does it with the hand or
        foot they would never choose, so they feel what the child is feeling. */
     const twist = st.twist ? `<p class="twist"><b>${K.twist || 'Already easy?'}</b> ${st.twist}</p>` : '';
+    const bothBtn = (isKid() && S.kid && !d && !S.kid.school.done[k]) ? `<button class="btn btn-ghost" id="sboth" style="flex:1">${st.twist ? (K.bothTwist || 'Done, and me with the other hand') : (K.both || 'Done, both of us')}</button>` : '';
     /* "Done already" used to be a dead grey button, which said the step was
        finished with. Nothing here is finished with — you can always do it
        again, and once it has gone rusty doing it again is worth a point, the
@@ -1557,9 +1558,15 @@
     const v = veil(`<div class="panel sheet" style="--c:${c.accent};--c2:${c.accent2}">
       <div class="eyebrow"><i></i>${c.name} · ${tr.name} · step ${st.n} of ${tr.steps.length}</div>
       <div class="stestbig">${st.test}</div>${how}${twist}${againLine}
-      <div class="row"><button class="btn ${(!d || rusty) ? 'btn-gold' : 'btn-ghost'}" id="sdone">${
+      <div class="row">${bothBtn}<button class="btn ${(!d || rusty) ? 'btn-gold' : 'btn-ghost'}" id="sdone" style="flex:1.3">${
         d ? ((K.again || 'Done it again') + (rusty ? ' · +1' : '')) : 'Done'}</button></div>
     </div>`, 'light');
+    /* one journey, one tap: on the child's page the parent can tick the same
+       rung for themselves at the same time (with the twist, if it has one).
+       In kid mode S.kid.school holds the PARENT's page (they were swapped). */
+    const bb = v.querySelector('#sboth'); if (bb) bb.addEventListener('click', () => {
+      const mine = S.kid.school; mine.done[k] = new Date().toISOString(); mine.points = (mine.points || 0) + 1; save();
+      v.querySelector('#sdone').click(); });
     backBtn(v, () => closeVeil());
     v.querySelector('#sdone').addEventListener('click', () => {
       /* already done and still fresh: re-date it and say so. No second point —
