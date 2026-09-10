@@ -1107,6 +1107,9 @@
       ${n === N ? '<span class="tk-crown"></span>' : ''}
       <div class="tk-heroin"><span class="tk-chip">${c.name}</span><h2>${tr.name}</h2><p>${tr.line || ''}</p></div></div>`;
     h += `<div class="tk-size sz-${tr.size || 'months'}"><b>${sz.name}</b><span>${sz.line}</span></div>`;
+    /* One ladder in the school needs a guard, and a guard nobody reads is not
+       one — so it sits above the trophies and the next step, not under them. */
+    if (tr.warn) h += `<div class="tk-warn"><b>Read this first</b><span>${tr.warn}</span></div>`;
 
     h += `<div class="acard tk-card"><div class="tk-top">${pctRing(pct, c.accent, fmt1(K.ringSub, { n, N }))}
       <div class="tk-topt"><strong>${n === N ? K.finished : (got.length ? got[got.length - 1].short : K.notStarted)}</strong>
@@ -1204,7 +1207,7 @@
     const fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
     const first = tr.steps[0], last = tr.steps[tr.steps.length - 1], n = trackDone(tr), st = nextStep(tr);
     if (SHOW) closeShow(true); hush();
-    const v = veil(`<div class="panel sheet commitcard" style="--c:${c.accent};--c2:${c.accent2}"><div class="eyebrow"><i></i>${c.name}</div><h2>${tr.name}</h2><div class="tk-size sz-${tr.size || 'months'} inline"><b>${sizeOf(tr).name}</b><span>${sizeOf(tr).line}</span></div><p class="lede">${fmt(K.lede, { n: tr.steps.length })}</p>
+    const v = veil(`<div class="panel sheet commitcard" style="--c:${c.accent};--c2:${c.accent2}"><div class="eyebrow"><i></i>${c.name}</div><h2>${tr.name}</h2><div class="tk-size sz-${tr.size || 'months'} inline"><b>${sizeOf(tr).name}</b><span>${sizeOf(tr).line}</span></div>${tr.warn ? `<div class="tk-warn inline"><b>Read this first</b><span>${tr.warn}</span></div>` : ''}<p class="lede">${fmt(K.lede, { n: tr.steps.length })}</p>
       <div class="ladder"><div class="rung ${n === 0 ? 'here' : 'done'}"><b>1</b><span><em>${n === 0 ? 'Start here' : 'Started'}</em>${first.test}</span></div>${n > 0 && st ? `<div class="rung here"><b>${n + 1}</b><span><em>You are here</em>${st.test}</span></div>` : ''}<div class="rung end"><b>${tr.steps.length}</b><span><em>Ends with</em>${last.test}</span></div></div>
       <div class="showcap" id="showcap" hidden></div>
       ${full ? `<p class="lede full">${K.full}</p><div class="row"><button class="btn btn-ghost" id="cno" style="flex:1">${K.no}</button></div>` : `<div class="row"><button class="btn btn-ghost" id="cno">${K.no}</button><button class="btn btn-gold" id="cyes" style="flex:1.4">${K.yes}</button></div><p class="have">${fmt(K.have, { have, max })}</p>`}

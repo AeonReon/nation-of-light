@@ -129,7 +129,6 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Throw one ball from hand to hand ten times without dropping it.",
        "how": [
         "One ball only. A rolled sock works.",
@@ -137,52 +136,92 @@
         "Aim for the same arc every time rather than for speed.",
         "Ten throws without dropping it."
        ],
-       "note": null,
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Juggle two balls in one hand, twenty throws.",
-       "how": null,
-       "note": "Both balls in the SAME hand, going round in a circle. It looks wrong until it suddenly does not.",
-       "ctx": "kit",
+       "test": "Throw one ball twenty times, and have every throw peak at the same height.",
+       "note": "Pick a spot on the wall at eye height. Every throw should touch it. Boring, and it is the whole thing.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Do a three-ball cascade for ten catches.",
-       "how": null,
-       "note": "A cascade means they cross over in the middle, not round in a circle. Ten catches, drops allowed before that.",
-       "ctx": "kit",
-       "kind": "skill"
+       "test": "Throw one ball twenty times with your eyes on the top of the arc, not on your hands.",
+       "note": "You catch by feel, not by looking. This is the step that makes three balls possible later.",
+       "ctx": "room",
+       "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Juggle three balls for thirty seconds with no drop.",
-       "how": null,
-       "note": null,
+       "test": "Do the two-ball exchange five times, drops allowed.",
+       "note": "One ball in each hand. Throw the right. When it reaches the top, throw the left. Catch what you can. Drops are expected here.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Juggle three balls for two whole minutes.",
-       "how": null,
-       "note": null,
+       "test": "Do the two-ball exchange ten times in a row, catching both.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Juggle while walking twenty steps, and teach somebody the first throw.",
-       "how": null,
-       "note": null,
+       "test": "Do the two-ball exchange twenty times, starting with your weaker hand.",
+       "note": "Whichever hand you have been avoiding. Both hands have to learn it or three balls never comes.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Hold three balls, throw all three once, and catch at least one.",
+       "note": "It will go everywhere. That is the step. Everybody looks foolish here and everybody gets through it.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Do a three-ball cascade for five catches.",
+       "note": "A cascade means they cross over in the middle, not round in a circle.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Do a three-ball cascade for ten catches.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Juggle three balls for thirty seconds with no drop.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Drop one, pick it up and start again without walking away.",
+       "note": "The habit, not the trick. Everybody who can juggle dropped several hundred times first.",
+       "ctx": "kit",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
+       "test": "Juggle three balls for two whole minutes.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Juggle two balls in one hand, twenty throws.",
+       "note": "Both balls in the SAME hand, going round in a circle. It looks wrong until it suddenly does not. Harder than the cascade — this is a flourish, not a step backwards.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Juggle while walking twenty steps, and teach somebody their first ten throws.",
        "ctx": "with",
        "kind": "skill"
       }
@@ -3122,7 +3161,7 @@
    "icon": "words",
    "accent": "#9C3A47",
    "accent2": "#DFA6AE",
-   "line": "A new language, reading, handwriting, poems, stories, signing.",
+   "line": "A new language, reading, books, handwriting, poems, stories, signing.",
    "tracks": [
     {
      "id": "words.lang",
@@ -3317,6 +3356,104 @@
        "test": "Read aloud to the younger children every week for a whole season.",
        "how": null,
        "note": null,
+       "ctx": "long",
+       "kind": "kindness"
+      }
+     ]
+    },
+    {
+     "id": "words.books",
+     "name": "Reading books",
+     "strand": "say-what-you-mean",
+     "line": "One page tonight to a whole book in a day.",
+     "size": "months",
+     "steps": [
+      {
+       "n": 1,
+       "test": "Read one page of a book tonight before you sleep.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 2,
+       "test": "Read ten pages in one sitting.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 3,
+       "test": "Read for twenty minutes without once picking up your phone.",
+       "note": "Phone in another room. Twenty minutes. That is the whole test.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 4,
+       "test": "Finish a book you chose yourself. Any book, any length.",
+       "note": "Chose yourself matters. Nobody set it, nobody recommended it, you are not being examined on it.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 5,
+       "test": "Read something every day for a week, even if it is one page.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Read fifty pages in one day.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Read for thirty minutes, count the pages, and write the number down.",
+       "note": "That number is your speed. Everything after this is measured against it.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Put a book down at page forty because it is not good, and start another one.",
+       "note": "Finishing bad books is the commonest reason people stop reading. You owe an author nothing.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Read two books inside one month.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Read for a whole hour without stopping.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Read a hundred pages in one day.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Finish a book you would have said was too hard for you.",
+       "ctx": "long",
+       "kind": "courage"
+      },
+      {
+       "n": 13,
+       "test": "Read a two-hundred-page book inside one day, in under eight hours of reading.",
+       "note": "A whole book, start to finish, between getting up and going to bed. It is an ordinary Saturday and almost nobody believes it until they do it.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Read a book a week for a month, and give one of them to somebody who needs it.",
        "ctx": "long",
        "kind": "kindness"
       }
@@ -4668,57 +4805,129 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Get one clear note out of an instrument.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
-       "kind": "skill"
-      },
-      {
-       "n": 2,
-       "sid": "s2",
-       "test": "Play a five-note tune anybody recognises.",
-       "how": null,
        "note": "Any instrument. A tin whistle costs less than a takeaway and five notes gets you a tune.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
+       "n": 2,
+       "test": "Play three different notes cleanly, one after another.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
        "n": 3,
-       "sid": "s3",
-       "test": "Play a whole tune from beginning to end.",
-       "how": null,
-       "note": null,
+       "test": "Play a five-note tune anybody recognises.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Play three tunes from memory.",
-       "how": null,
-       "note": null,
+       "test": "Play that tune three times in a row without a mistake.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Play with somebody else, in time.",
-       "how": null,
-       "note": null,
+       "test": "Play a whole tune from beginning to end.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 6,
+       "test": "Play a tune in time with a beat — a metronome, or your own foot.",
+       "note": "In time matters more than fast. Slow and steady beats quick and lumpy, every time.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Learn a second tune from scratch, on your own, with nobody teaching you.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Play three tunes from memory.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Take the bar you keep getting wrong, play it slowly twenty times, and get it right.",
+       "note": "This is the actual skill. Not playing the tune — fixing the one bar. Slow enough that it is never wrong, twenty times, then speed up.",
+       "ctx": "kit",
+       "kind": "attention"
+      },
+      {
+       "n": 10,
+       "test": "Practise ten minutes a day for two weeks without missing a day.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Play a whole tune for one person, in the room with you.",
        "ctx": "with",
        "kind": "courage"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Play for the group at a day out.",
-       "how": null,
-       "note": null,
+       "n": 12,
+       "test": "Work a tune out by ear, with nobody showing you the notes.",
+       "note": "Something you can hum. Find the first note, then the next. It takes longer than you think and it changes how you hear music.",
+       "ctx": "kit",
+       "kind": "attention"
+      },
+      {
+       "n": 13,
+       "test": "Learn a tune from written music, or from tab, on your own.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Play with somebody else, in time.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Make a mistake in the middle of a tune and keep going without stopping.",
+       "note": "Everybody hears the stop. Almost nobody hears the wrong note.",
+       "ctx": "kit",
+       "kind": "courage"
+      },
+      {
+       "n": 16,
+       "test": "Play two things at once — a tune and a rhythm, or play and sing.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Play from memory in front of three people.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 18,
+       "test": "Play a whole song for a room of people.",
+       "note": "A room, not a corner. This is the one people mean when they say they wish they could play.",
        "ctx": "out",
        "kind": "courage"
+      },
+      {
+       "n": 19,
+       "test": "Play for the group at a day out.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 20,
+       "test": "Teach somebody their first tune, and stand back while they play it.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -9294,7 +9503,7 @@
    "icon": "calm",
    "accent": "#3F6B7A",
    "accent2": "#A9CBD6",
-   "line": "Stillness, attention, sleep, cold, gratitude, doing hard things.",
+   "line": "Stillness, attention, sleep, fasting, gratitude, doing hard things.",
    "tracks": [
     {
      "id": "calm.still",
@@ -9617,6 +9826,108 @@
        "note": null,
        "ctx": "out",
        "kind": "courage"
+      }
+     ]
+    },
+    {
+     "id": "calm.fast",
+     "name": "Fasting",
+     "strand": "look-after-yourself",
+     "line": "Twelve hours to thirty-six, without drama.",
+     "size": "months",
+     "warn": "Adults only past step five. Not if you are pregnant, diabetic, underweight, still growing, on medication that needs food, or have ever had trouble with eating. Children stop at step four — going without snacks is theirs; going without meals is not.",
+     "steps": [
+      {
+       "n": 1,
+       "test": "Eat nothing between your meals for one whole day.",
+       "note": "Meals only. No picking, no snacks. Most people have never once done this.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 2,
+       "test": "Drink a glass of water when you think you are hungry, and wait ten minutes.",
+       "note": "Half the time it was thirst. You will be surprised how often.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 3,
+       "test": "Finish eating by eight in the evening, three nights running.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 4,
+       "test": "Go twelve hours with nothing but water. Sleep counts for most of it.",
+       "note": "Eight in the evening to eight in the morning. Almost everybody has done this by accident.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 5,
+       "test": "Push your first meal to midday. Fourteen hours, water only.",
+       "note": "From here on this ladder is for adults. See the note at the top.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 6,
+       "test": "Do sixteen hours, water only, and get through an ordinary day inside it.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Sit through one wave of hunger without eating, and write down how long it lasted.",
+       "note": "Time it. Hunger comes in waves and goes again, usually inside twenty minutes. Knowing that is most of the skill.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Do sixteen hours on three separate days in one week.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Do eighteen hours, water only.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Do twenty hours, and take a walk inside it.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Do twenty-four hours — one evening meal to the next evening meal.",
+       "note": "Water, and salt in it if you feel light-headed. Stop if you feel genuinely unwell; stopping is not failing.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Do twenty-four hours through a full working day, without telling anybody.",
+       "note": "The point is that it is unremarkable. No performance, no announcement.",
+       "ctx": "long",
+       "kind": "courage"
+      },
+      {
+       "n": 13,
+       "test": "Do thirty hours, and sleep through part of it.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Do thirty-six hours, and break it properly with a real meal.",
+       "note": "Break it small and slow — broth, eggs, something cooked. Not a feast. Breaking it badly is the part people get wrong.",
+       "ctx": "home",
+       "kind": "skill"
       }
      ]
     }
