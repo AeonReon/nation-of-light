@@ -1135,61 +1135,77 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Gather a bundle of dry sticks that would actually burn.",
-       "how": [
-        "Look for dead sticks off the ground, never green ones off a tree.",
-        "Snap one — if it cracks it is dry, if it bends it is no use.",
-        "Gather a bundle as thick as your wrist, in three sizes: matchstick, pencil, thumb."
-       ],
-       "note": null,
+       "note": "Snap them. If they bend instead of snapping they are wet and they will not light.",
        "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Lay a fire properly so it would light.",
-       "how": null,
-       "note": "Laid properly means smallest at the bottom, air gaps all through it, and nothing packed tight.",
+       "test": "Gather three sizes: tinder, kindling, and wood, in three piles.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 3,
+       "test": "Lay a fire properly so that it would light.",
        "ctx": "out",
        "kind": "skill"
       },
       {
-       "n": 3,
-       "sid": "s3",
-       "test": "Light it with matches and put it out so nobody could tell.",
-       "how": null,
-       "note": "Out properly means cold enough to put your hand in the ashes. Water, then stir, then water again.",
-       "ctx": "room",
-       "kind": "skill"
-      },
-      {
        "n": 4,
-       "sid": "s4",
-       "test": "Cook something on a fire you laid and lit.",
-       "how": null,
-       "note": null,
-       "ctx": "home",
+       "test": "Light it with matches, first go.",
+       "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Light a fire with no matches and no lighter.",
-       "how": null,
-       "note": null,
+       "test": "Put it out so completely that nobody could tell it was there.",
+       "note": "Water, stir, water again, and feel it with your hand. Warm is not out.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Keep one going for half an hour without it needing rescuing.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Light one in the wind.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Cook something on a fire you laid and lit.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Light one with a single match.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Light one with a spark and no flame — a striker or a flint.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Teach two other people to lay and light one safely.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
+       "n": 11,
+       "test": "Light one when everything around you is damp.",
+       "ctx": "out",
        "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Teach two other people to lay and light one safely.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -1202,62 +1218,124 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Point which way is north, and be right.",
-       "how": [
-        "In the morning the sun is roughly east, in the evening roughly west.",
-        "Stand with your right hand pointing at the morning sun — you are now facing north.",
-        "Say out loud which way north is, then check with a phone compass.",
-        "Being right is the level. Being close is a good start."
-       ],
-       "note": null,
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Name three landmarks you can see and say which way home is.",
-       "how": null,
-       "note": "A landmark is anything you would recognise again — a mast, a church, a big tree on its own, a hill with a shape, a bend in the road, the sea. In the countryside it is often the hill line or which way the ground slopes.",
        "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Follow a marked path on a map for a mile without being told.",
-       "how": null,
-       "note": "A marked path is one drawn on the map — a dotted line, a track, a road. Following it means you always know which bit of the line you are standing on.",
+       "test": "Find north from the sun, and check it against a compass.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Navigate a mile with a map and a compass.",
-       "how": null,
-       "note": "Set the map so north on the map points at north in real life. Everything gets easier after that.",
+       "test": "Hold a map the right way round for where you are standing.",
+       "note": "Turn the map, not your head. Almost everybody gets lost because they never do this.",
        "ctx": "out",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Plan a route yourself and lead the group along it.",
-       "how": null,
-       "note": null,
+       "test": "Point out three things on the map that you can see in front of you.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Follow a marked path on a map for a mile without being told.",
        "ctx": "out",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Lead a route that takes two days.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
+       "n": 7,
+       "test": "Read the contours and say which way the ground rises.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Walk to a spot you picked on the map and arrive at it.",
+       "ctx": "out",
        "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Take a bearing with a compass and walk it for two hundred metres.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Walk a bearing to something you cannot see from the start.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Navigate a mile with a map and a compass.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Work out how long a walk will take before you set off, and be close.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 13,
+       "test": "Navigate three miles across country.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Find your way in poor visibility, slowly and safely.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 15,
+       "test": "Say where you are on the map at any moment, all the way round a walk.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 16,
+       "test": "Plan a route yourself, on paper, with the timings.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Lead the group along it and get everybody there.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Change the route halfway because of the weather, and say why.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 19,
+       "test": "Leave a route plan with somebody at home before you go.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 20,
+       "test": "Lead a route that takes a whole day, and bring everybody back on time.",
+       "ctx": "out",
+       "kind": "kindness"
       }
      ]
     },
@@ -1270,57 +1348,76 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Build a den big enough to sit inside.",
-       "how": null,
-       "note": null,
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Build one that two people fit in.",
-       "how": null,
-       "note": null,
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Build one that keeps you dry through ten minutes of rain.",
-       "how": null,
-       "note": null,
+       "test": "Choose a spot properly — not in a dip, not under a dead branch.",
        "ctx": "out",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Build one you would be warm in overnight, and prove it with a thermometer.",
-       "how": null,
-       "note": "Warmer inside than outside is the test. A cheap thermometer inside and one outside settles it.",
+       "test": "Build one with a frame that stands up on its own.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Sleep a whole night in a shelter you built.",
-       "how": null,
-       "note": null,
+       "test": "Thatch it so that daylight barely gets through.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Build one with a group and get everybody through the night dry.",
-       "how": null,
-       "note": null,
+       "test": "Build one that keeps you dry through ten minutes of rain.",
        "ctx": "out",
        "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Get the door out of the wind, and say how you knew where the wind was.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Insulate the floor so the ground does not take your heat.",
+       "note": "The ground steals more warmth than the air does. This one step is the difference between a night and a miserable night.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Build one you would be warm in overnight, and prove it with a thermometer.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Sit in your own shelter for two hours in bad weather.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Sleep a whole night in a shelter you built.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
+       "test": "Build one with a group and get everybody through the night dry.",
+       "ctx": "out",
+       "kind": "kindness"
       }
      ]
     },
@@ -1333,56 +1430,123 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Dress yourself right for the weather that is actually outside.",
-       "how": null,
-       "note": null,
        "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Read a forecast and say what everybody should bring.",
-       "how": null,
-       "note": "Wind and rain matter more than temperature. Say what to bring, not just what the weather is.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Read a tide table and say when the beach will be gone.",
-       "how": null,
-       "note": "A tide table tells you the times of high and low water. Low water is when the beach is biggest.",
+       "test": "Look at the sky and say whether the forecast looks right.",
        "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Plan a beach walk around the tide and get it right.",
-       "how": null,
-       "note": null,
+       "test": "Know what wind chill is and dress for it, not for the number.",
        "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
+       "test": "Pack a bag for a day out where the weather might turn.",
+       "ctx": "home",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Read a tide table and say when the beach will be gone.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Know which way the tide is going right now, by looking.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Plan a beach walk around the tide and get it right.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Say what time it gets dark today, without looking it up.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 10,
+       "test": "Plan a walk that finishes before dark, and finish before dark.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Spot weather coming in and say how long you have.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
+       "test": "Turn back early, on purpose, and be glad you did.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 13,
        "test": "Change or call off a plan because of the weather, and explain why.",
-       "how": null,
-       "note": null,
+       "note": "Calling it off is the hardest and most useful of these. Anybody can go anyway.",
        "ctx": "room",
        "kind": "courage"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Keep a group safe and cheerful through genuinely bad weather.",
-       "how": null,
-       "note": null,
+       "n": 14,
+       "test": "Get somebody warm and dry again who got cold and wet.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 15,
+       "test": "Know the signs of somebody getting too cold, and what to do first.",
        "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 16,
+       "test": "Carry the right kit for the day without carrying everything.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 17,
+       "test": "Lead a short walk in weather that was not ideal, and keep it cheerful.",
+       "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 18,
+       "test": "Read a shipping or mountain forecast and say what it means for tomorrow.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 19,
+       "test": "Make the call on a day out for other people, and be right.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Keep a group safe and cheerful through genuinely bad weather.",
+       "ctx": "out",
        "kind": "kindness"
       }
      ]
@@ -1396,61 +1560,123 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Find five different kinds of leaf and lay them out.",
-       "how": [
-        "Walk anywhere with trees or hedges.",
-        "Pick five leaves that all look different from each other.",
-        "Lay them out in a row and look at what makes each one different."
-       ],
-       "note": null,
        "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Name five trees from their leaves alone.",
-       "how": null,
-       "note": "Ash, oak, beech, sycamore and hawthorn will cover most hedges here. Shape, edge and stalk are the clues.",
+       "test": "Name three trees from their leaves alone.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Name five birds on sight, outdoors, not from a book.",
-       "how": null,
-       "note": "Robin, blackbird, magpie, wood pigeon and a gull is an easy first five almost anywhere here.",
+       "test": "Name five trees from their leaves alone.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Name ten birds from their call with your eyes shut.",
-       "how": null,
-       "note": null,
+       "test": "Name three trees in winter, with no leaves on them at all.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Name twenty wild plants and say which are useful.",
-       "how": null,
-       "note": null,
+       "test": "Find the oldest tree near you and say how you can tell.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Name three birds on sight, outdoors, not from a book.",
        "ctx": "out",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Lead a walk and name what you pass as you go.",
-       "how": null,
-       "note": null,
+       "n": 7,
+       "test": "Sit still outside for ten minutes and count how many birds come.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Name five birds on sight.",
        "ctx": "out",
        "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Name three birds from their call with your eyes shut.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Name ten birds on sight.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Name ten birds from their call with your eyes shut.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Name ten wild plants where you walk.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Say which month each of five plants flowers, and be there when one does.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 14,
+       "test": "Name twenty wild plants and say which are useful.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Find a nest, a burrow or a den without disturbing it.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 16,
+       "test": "Keep a list of everything you name for a whole month.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 17,
+       "test": "Notice one thing changing with the season and follow it for a month.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 18,
+       "test": "Name what lives in one hedge, top to bottom.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Take one person out and name ten things for them.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 20,
+       "test": "Lead a walk and name what you pass as you go.",
+       "ctx": "out",
+       "kind": "kindness"
       }
      ]
     },
@@ -1463,55 +1689,122 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Pick and eat one wild food with somebody who knows it.",
-       "how": null,
-       "note": "Blackberries in autumn are the safe start. Never eat anything an adult who genuinely knows has not seen.",
+       "note": "Never eat anything on this ladder without a person who is certain. Certain, not fairly sure.",
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Identify three safe wild foods without being told.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
-       "kind": "skill"
-      },
-      {
-       "n": 3,
-       "sid": "s3",
-       "test": "Pick enough of something to bring home and cook.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
-       "kind": "skill"
-      },
-      {
-       "n": 4,
-       "sid": "s4",
-       "test": "Name five things that would poison you, and why.",
-       "how": null,
-       "note": "The ones that matter here: hemlock, foxglove, yew berries, lords and ladies, and any mushroom you are unsure of.",
+       "test": "Learn the rule: if you are not certain, you do not eat it.",
        "ctx": "room",
        "kind": "attention"
       },
       {
+       "n": 3,
+       "test": "Identify one safe wild food on your own and have it checked.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 4,
+       "test": "Identify three safe wild foods without being told.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
        "n": 5,
-       "sid": "s5",
-       "test": "Make a meal where three ingredients came from the wild.",
-       "how": null,
-       "note": null,
+       "test": "Name three things near you that would poison you, and how to know them.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Learn which of them has a lookalike, and what tells them apart.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Pick enough of something to bring home.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Wash it, prepare it and cook it.",
        "ctx": "home",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
+       "n": 9,
+       "test": "Pick only what you need and leave the rest standing.",
+       "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 10,
+       "test": "Find out whose land you are on and whether you may pick there.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Identify six safe wild foods without being told.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Name five things that would poison you, and why.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 13,
+       "test": "Follow one plant through a season until it is ready.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 14,
+       "test": "Pick something in each of three different months.",
+       "ctx": "long",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Make a meal where one ingredient came from the wild.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Make a meal where three ingredients came from the wild.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Preserve something you picked so it keeps.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Give some of what you picked to somebody else.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 19,
+       "test": "Say no to something you were not sure about, out loud.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 20,
        "test": "Take somebody else foraging and keep them safe.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "kindness"
       }
@@ -1526,57 +1819,123 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Find an animal footprint and say what made it.",
-       "how": null,
-       "note": "Mud at the edge of a puddle, wet sand, or snow. Look for the shape and count the toes.",
        "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Follow your own tracks backwards for fifty metres.",
-       "how": null,
-       "note": null,
+       "test": "Find your own footprint and say which way you were going.",
        "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Name five animals from their prints or droppings.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "skill"
+       "test": "Follow your own tracks backwards for fifty metres.",
+       "ctx": "out",
+       "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Follow an animal trail for two hundred metres.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
-       "kind": "skill"
+       "test": "Find three different sets of prints in one place.",
+       "ctx": "out",
+       "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Read a trail and say what the animal was doing and when.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
+       "test": "Name three animals from their prints.",
+       "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Find a run or a path an animal uses regularly.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Name three animals from their droppings.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Find where something has been eating, and say what it was.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Name five animals from their prints or droppings.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Say whether a track is fresh or old, and why you think so.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Follow an animal trail for a hundred metres.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Follow one for two hundred metres.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Read a trail and say what the animal was doing.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Read one and say roughly when it passed.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Find a print, make a cast of it, and keep it.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Sit still outdoors for twenty minutes without moving.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 17,
+       "test": "Sit still for forty minutes and write down everything that happened.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 18,
+       "test": "Move through woodland without being heard for fifty metres.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
        "test": "Sit still long enough that a wild animal comes close on its own.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
+       "ctx": "out",
        "kind": "courage"
+      },
+      {
+       "n": 20,
+       "test": "Take somebody out and find them a track they can read themselves.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -1589,55 +1948,73 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Sleep a whole night in a tent in the garden.",
-       "how": null,
-       "note": null,
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Put a tent up on your own.",
-       "how": null,
-       "note": null,
-       "ctx": "kit",
+       "test": "Put a tent up with somebody helping.",
+       "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Pack for a night away from a list and forget nothing.",
-       "how": null,
-       "note": "A list means written down before you start, not remembered. Sleeping, warm, dry, food, torch, toothbrush.",
+       "test": "Put a tent up on your own.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 4,
+       "test": "Take it down, dry it and pack it properly.",
        "ctx": "home",
        "kind": "attention"
       },
       {
-       "n": 4,
-       "sid": "s4",
-       "test": "Camp a night away from the house and cook your own tea.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
-       "kind": "skill"
-      },
-      {
        "n": 5,
-       "sid": "s5",
-       "test": "Camp two nights carrying everything you need.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
-       "kind": "skill"
+       "test": "Pack for a night away from a list and forget nothing.",
+       "ctx": "home",
+       "kind": "attention"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Choose a pitch — flat, dry, out of the wind — and say why.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Camp a night away from the house and cook your own tea.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Keep everything you own dry through a wet night.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Leave a pitch so that nobody could tell you were there.",
+       "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 10,
+       "test": "Camp a night carrying everything you need on your back.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Camp two nights carrying everything you need.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
        "test": "Take a younger child on their first night out and get them home happy.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "kindness"
       }
@@ -3769,62 +4146,124 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Count in twos up to twenty.",
-       "how": [
-        "Two, four, six, eight, ten.",
-        "Keep going, adding two each time, all the way to twenty.",
-        "Say it out loud, not in your head.",
-        "Do it three times and it sticks."
-       ],
-       "note": null,
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Say the two, five and ten times tables with no mistakes.",
-       "how": null,
-       "note": null,
+       "test": "Count in fives up to fifty, and in tens up to a hundred.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Say every table up to twelve correctly, no time limit.",
-       "how": null,
-       "note": "All of them means two up to twelve, in order, out loud, with nobody helping.",
+       "test": "Say the two times table with no mistakes.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Say every table up to twelve in under three minutes.",
-       "how": null,
-       "note": null,
+       "test": "Say the five and ten times tables with no mistakes.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Say every table up to twelve in under ninety seconds.",
-       "how": null,
-       "note": null,
-       "ctx": "home",
+       "test": "Say the three times table.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Say every table up to twelve in under sixty seconds, and teach somebody theirs.",
-       "how": null,
-       "note": null,
+       "test": "Say the four times table.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Answer twenty mixed questions from the tables you know, all correct.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Say the six times table.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Say the seven times table.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Say the eight times table.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Say the nine times table, and spot the trick in it.",
+       "note": "Add the two digits of any answer in the nine times table. They come to nine every time.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
+       "test": "Say the eleven and twelve times tables.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Say every table up to twelve correctly, with no time limit.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Answer thirty mixed questions in a row, all correct.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Say every table up to twelve in under three minutes.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Answer any single table question in under two seconds.",
        "ctx": "with",
        "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Say every table up to twelve in under two minutes.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Say every table up to twelve in under ninety seconds.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Say every table up to twelve in under sixty seconds.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 20,
+       "test": "Teach somebody else one whole table until they have it.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -3967,61 +4406,124 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Set the board up correctly and name every piece.",
-       "how": [
-        "Board goes down with a white square in your bottom right corner.",
-        "Back row from the corner: rook, knight, bishop, then queen on her own colour, king beside her.",
-        "Pawns all along the row in front."
-       ],
-       "note": null,
+       "note": "White square on the right, and the queen goes on her own colour.",
        "ctx": "kit",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Know how every piece moves, and play one full game to the end.",
-       "how": null,
-       "note": null,
+       "test": "Know how every piece moves.",
        "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Win a game against somebody who is genuinely trying.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
+       "test": "Play one full game to the end.",
+       "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Checkmate with only a king and a rook.",
-       "how": null,
-       "note": "King and rook against a lone king. It is the ending everybody learns first and it always works.",
-       "ctx": "room",
+       "test": "Castle, and say why you did it.",
+       "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Beat an adult who plays properly.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
+       "test": "Take a piece with a pawn the way pawns actually take.",
+       "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Teach a complete beginner until they can play a full game.",
-       "how": null,
-       "note": null,
+       "test": "Say the value of each piece and stop giving them away for nothing.",
+       "ctx": "kit",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Play five whole games in one week.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Checkmate with a queen and a king against a lone king.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Checkmate with only a king and a rook.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Spot a fork before you play into one.",
+       "ctx": "kit",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Win a game against somebody who is genuinely trying.",
        "ctx": "with",
        "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Open the same way three games running and notice what changes.",
+       "ctx": "kit",
+       "kind": "attention"
+      },
+      {
+       "n": 13,
+       "test": "Get your pieces out and your king safe in the first ten moves, every time.",
+       "ctx": "kit",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Solve ten mate-in-one puzzles.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Solve ten mate-in-two puzzles.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Play a whole game without losing a piece for nothing.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Win a game by a plan you had before it started.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Lose a game and say afterwards where it actually went wrong.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 19,
+       "test": "Beat an adult who plays properly.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 20,
+       "test": "Teach a complete beginner until they can play a full game.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -4165,57 +4667,125 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Add two single-digit numbers in your head, twenty in a row, correct.",
-       "how": null,
-       "note": null,
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Add two two-digit numbers in your head, five in a row.",
-       "how": null,
-       "note": null,
+       "test": "Add and take away inside twenty, twenty in a row.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Multiply a two-digit number by a single digit in your head.",
-       "how": null,
-       "note": "Break it up. Twenty-three times four is twenty times four, then three times four, added.",
+       "test": "Add a two-digit number and a single digit, ten in a row.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Multiply two two-digit numbers in your head.",
-       "how": null,
-       "note": null,
+       "test": "Add two two-digit numbers in your head, five in a row.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 5,
+       "test": "Take one two-digit number from another, five in a row.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Round to the nearest ten and correct it afterwards.",
+       "note": "47 + 38 is 47 + 40 minus 2. This one trick does most of the work for the rest of the ladder.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Add three two-digit numbers in your head.",
        "ctx": "room",
        "kind": "skill"
       },
       {
-       "n": 5,
-       "sid": "s5",
-       "test": "Work out a restaurant bill and the split, in your head, before anybody else.",
-       "how": null,
-       "note": null,
+       "n": 8,
+       "test": "Double any two-digit number instantly.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Halve any two-digit number instantly.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Multiply a two-digit number by a single digit in your head.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Work out ten per cent of anything instantly.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Work out any percentage of a price in your head.",
        "ctx": "out",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Beat a calculator user on ten easy sums.",
-       "how": null,
-       "note": null,
+       "n": 13,
+       "test": "Multiply two two-digit numbers in your head.",
        "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Work out change from a note before the till tells you.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Add up a shopping basket as you go, and be within a pound at the till.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 16,
+       "test": "Work out a restaurant bill and the split, in your head, before anybody else.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Square any two-digit number ending in five.",
+       "note": "35 squared: 3 times 4 is 12, then stick 25 on the end. 1225. It always works.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Do ten mixed sums in your head in under a minute.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Beat a calculator user on ten easy sums.",
+       "ctx": "with",
        "kind": "courage"
+      },
+      {
+       "n": 20,
+       "test": "Teach somebody one of these tricks until they can use it.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -4228,57 +4798,76 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Write a message in a shift cipher and have somebody read it.",
-       "how": null,
-       "note": "A shift cipher moves every letter the same number along. A becomes D if you shift by three.",
        "ctx": "with",
        "kind": "kindness"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Crack a shift cipher you were not given the key to.",
-       "how": null,
-       "note": null,
+       "test": "Read one written for you, given the key.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Invent your own cipher that a friend cannot break in ten minutes.",
-       "how": null,
-       "note": null,
-       "ctx": "with",
-       "kind": "skill"
-      },
-      {
-       "n": 4,
-       "sid": "s4",
-       "test": "Use a book cipher or a keyword cipher properly.",
-       "how": null,
-       "note": null,
-       "ctx": "home",
-       "kind": "skill"
-      },
-      {
-       "n": 5,
-       "sid": "s5",
-       "test": "Break a cipher using letter frequency.",
-       "how": null,
-       "note": "In English, E is the commonest letter, then T and A. Count the letters and the commonest is usually E.",
+       "test": "Crack a shift cipher you were not given the key to.",
        "ctx": "room",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Run a treasure hunt for the group using codes.",
-       "how": null,
-       "note": null,
-       "ctx": "out",
+       "n": 4,
+       "test": "Write a message backwards, and one in a simple substitution.",
+       "ctx": "room",
        "kind": "skill"
+      },
+      {
+       "n": 5,
+       "test": "Count how often each letter appears in a page of English.",
+       "note": "E, then T, then A. That count is the crowbar for everything after this.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Break a substitution cipher using letter frequency.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Use a keyword cipher properly.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Use a book cipher with somebody who has the same book.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Invent your own cipher that a friend cannot break in ten minutes.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Hide a message in plain sight so nobody notices it is a message.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Send and receive three messages nobody else read.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
+       "test": "Run a treasure hunt for other people using codes.",
+       "ctx": "out",
+       "kind": "kindness"
       }
      ]
     },
@@ -4291,55 +4880,74 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Finish a twenty-four piece jigsaw on your own.",
-       "how": null,
-       "note": null,
        "ctx": "kit",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
        "test": "Finish a hundred-piece jigsaw on your own.",
-       "how": null,
-       "note": null,
        "ctx": "kit",
        "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
        "test": "Finish an easy sudoku with no help.",
-       "how": null,
-       "note": null,
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Solve a wolf, goat and cabbage style riddle without being told.",
-       "how": null,
-       "note": "The classic: a wolf, a goat and a cabbage, one small boat, and you can only take one at a time.",
+       "test": "Sit with a puzzle for twenty minutes without looking up the answer.",
+       "note": "Being stuck is not failing. It is the part where the thinking happens.",
        "ctx": "room",
-       "kind": "courage"
+       "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Finish a hard sudoku or a logic grid.",
-       "how": null,
-       "note": null,
+       "test": "Solve a wolf, goat and cabbage style riddle without being told.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
+       "test": "Finish a medium sudoku.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Solve a lateral thinking puzzle by asking questions.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Finish a crossword, with help if you need it.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Finish a hard sudoku or a logic grid.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Solve a puzzle you had given up on the day before.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 11,
+       "test": "Solve a puzzle by working backwards from the answer.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 12,
        "test": "Write a puzzle of your own that stumps three people.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "skill"
       }
@@ -4354,62 +4962,76 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Ask somebody a question you do not know the answer to, and get an answer you understand.",
-       "how": [
-        "Think of something you genuinely do not know. Not a test question — a real one.",
-        "Find a person who might know and ask them out loud.",
-        "If the answer does not make sense, say so and ask again. That bit is the skill.",
-        "You should be able to say it back in your own words afterwards."
-       ],
-       "note": null,
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 2,
-       "sid": "s2",
+       "test": "Ask a second question because the first answer was not enough.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 3,
        "test": "Look something up on your own and explain it back to another person.",
-       "how": null,
-       "note": null,
        "ctx": "with",
        "kind": "attention"
       },
       {
-       "n": 3,
-       "sid": "s3",
+       "n": 4,
        "test": "Find out how to do something you have never done, then do it the same day.",
-       "how": null,
-       "note": null,
        "ctx": "room",
        "kind": "attention"
       },
       {
-       "n": 4,
-       "sid": "s4",
-       "test": "Ask an AI a question so clear that the first answer it gives is actually useful.",
-       "how": null,
-       "note": "A good question says what you already know, what you want, and what a useful answer looks like.",
-       "ctx": "room",
-       "kind": "kindness"
-      },
-      {
        "n": 5,
-       "sid": "s5",
-       "test": "Check one fact in two different places and say which you trust more, and why.",
-       "how": null,
-       "note": "Two different places means two that did not copy each other. Say which you trust and why.",
+       "test": "Ask an AI a question so clear that the first answer is actually useful.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Teach somebody else how you go about finding things out.",
-       "how": null,
-       "note": null,
+       "test": "Catch an answer that was wrong, and find out that it was.",
+       "note": "Everything answers confidently. Confident and right are different things.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Check one fact in two different places and say which you trust more, and why.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Find who first said a thing everybody repeats.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Find the original of something, not somebody talking about it.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 10,
+       "test": "Ask the person who would actually know, rather than looking it up.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Change your mind about something because of what you found.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
+       "test": "Teach somebody else how you go about finding things out.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -4422,57 +5044,75 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Find where you are standing on a paper map.",
-       "how": null,
-       "note": null,
        "ctx": "kit",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Point out three things on the map that you can see in real life.",
-       "how": null,
-       "note": null,
+       "test": "Turn the map so it matches the ground in front of you.",
        "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Work out how far away something is using the map scale.",
-       "how": null,
-       "note": "The scale line at the edge tells you how far a centimetre is. Most walking maps are two and a half inches to the mile.",
-       "ctx": "kit",
+       "test": "Point out three things on the map that you can see in real life.",
+       "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Draw a map of your own area that somebody else can follow.",
-       "how": null,
-       "note": null,
+       "test": "Work out how far away something is using the map scale.",
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Read a timetable and plan a journey with a change in it.",
-       "how": null,
-       "note": null,
+       "test": "Say how long that would take to walk.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Read the symbols and say what six of them mean.",
        "ctx": "room",
        "kind": "skill"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Plan a whole day out for the group on paper, and then run it.",
-       "how": null,
-       "note": null,
-       "ctx": "long",
+       "n": 7,
+       "test": "Read the contours and pick the flattest way between two points.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Draw a map of your own street that somebody else can follow.",
+       "ctx": "room",
        "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Draw a map of your area with a scale and a north arrow.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Read a timetable and plan a journey with a change in it.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Get yourself somewhere new using only a map and a timetable.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
+       "test": "Plan a whole day out for other people on paper, and then run it.",
+       "ctx": "long",
+       "kind": "kindness"
       }
      ]
     }
@@ -5023,59 +5663,73 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Write your own name so anybody could read it.",
-       "how": [
-        "Capital letter first, then small ones.",
-        "Sit the letters on a line so they do not float.",
-        "Slowly. Neat beats fast every time."
-       ],
-       "note": null,
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Write a sentence anybody can read.",
-       "how": null,
-       "note": null,
+       "test": "Write the whole alphabet, upper and lower case, readably.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
+       "test": "Write a sentence anybody can read.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 4,
+       "test": "Write ten lines and keep every letter the same height.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 5,
+       "test": "Write a full page that stays readable to the last line.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 6,
+       "test": "Write a thank-you note to somebody by hand.",
+       "ctx": "kit",
+       "kind": "kindness"
+      },
+      {
+       "n": 7,
        "test": "Write a letter to a real person and post it.",
-       "how": null,
-       "note": null,
        "ctx": "kit",
        "kind": "courage"
       },
       {
-       "n": 4,
-       "sid": "s4",
-       "test": "Write a full page that stays readable to the last line.",
-       "how": null,
-       "note": "Readable to the last line is the test. Most people start neat and give up halfway down.",
+       "n": 8,
+       "test": "Fill a page a day for a week.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Write two hundred words that somebody reads all the way through.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Write five hundred words in one sitting.",
        "ctx": "room",
        "kind": "courage"
       },
       {
-       "n": 5,
-       "sid": "s5",
-       "test": "Write a story of a thousand words that somebody finishes.",
-       "how": null,
-       "note": null,
+       "n": 11,
+       "test": "Write a thousand words that somebody finishes.",
        "ctx": "room",
        "kind": "courage"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Write something that changes somebody's mind.",
-       "how": null,
-       "note": null,
+       "n": 12,
+       "test": "Write something by hand that changes somebody's mind.",
        "ctx": "room",
        "kind": "courage"
       }
@@ -5090,57 +5744,124 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Write the alphabet neatly, all the same size.",
-       "how": null,
-       "note": null,
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Copy a line of italic or copperplate that looks like the example.",
-       "how": null,
-       "note": "Italic and copperplate are two styles you can print off a page and trace until it looks right.",
+       "test": "Rule guide lines and write on them without wandering off.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 3,
+       "test": "Hold a broad pen at one angle and keep it there for a whole line.",
+       "note": "The pen does the beauty. Your only job is not to twist it.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 4,
+       "test": "Write ten letters that all lean the same way.",
        "ctx": "room",
        "kind": "skill"
       },
       {
-       "n": 3,
-       "sid": "s3",
-       "test": "Write a whole quotation beautifully enough to put on a wall.",
-       "how": null,
-       "note": null,
+       "n": 5,
+       "test": "Copy a line of italic or copperplate that looks like the example.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 6,
+       "test": "Write the whole alphabet in one hand, evenly.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Write the capitals of that hand.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Space a word so that it looks even, and say what you changed.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 9,
+       "test": "Write a whole sentence with even spacing.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Write out a short quotation with no mistakes.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 11,
+       "test": "Write it again better, having seen what was wrong the first time.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
+       "test": "Write a quotation beautifully enough to put on a wall.",
        "ctx": "room",
        "kind": "courage"
       },
       {
-       "n": 4,
-       "sid": "s4",
+       "n": 13,
+       "test": "Learn a second hand and write the alphabet in it.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Draw one large decorated letter.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Lay a page out — where the words sit, how much white is left.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 16,
        "test": "Write somebody's name as a gift.",
-       "how": null,
-       "note": null,
        "ctx": "home",
-       "kind": "courage"
+       "kind": "kindness"
       },
       {
-       "n": 5,
-       "sid": "s5",
+       "n": 17,
        "test": "Address and decorate an envelope somebody keeps.",
-       "how": null,
-       "note": null,
        "ctx": "home",
-       "kind": "courage"
+       "kind": "kindness"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Letter a sign or a poster the group actually uses.",
-       "how": null,
-       "note": null,
+       "n": 18,
+       "test": "Write a card for an occasion that mattered.",
+       "ctx": "home",
+       "kind": "kindness"
+      },
+      {
+       "n": 19,
+       "test": "Letter a sign or a poster other people actually use.",
        "ctx": "out",
        "kind": "courage"
+      },
+      {
+       "n": 20,
+       "test": "Show somebody how to hold the pen, and get them one good line.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -5153,61 +5874,76 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Learn a four-line rhyme and say it from memory.",
-       "how": [
-        "Pick any four lines you like the sound of.",
-        "Say them out loud five times looking at the page.",
-        "Then cover it and say them again. Fill the gaps and repeat."
-       ],
-       "note": null,
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Say eight lines from memory without a prompt.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "skill"
-      },
-      {
-       "n": 3,
-       "sid": "s3",
-       "test": "Say twenty lines to the group, standing up.",
-       "how": null,
-       "note": "Standing up, from memory, loud enough for the back. Twenty lines is about a page.",
+       "test": "Say it out loud to one other person.",
        "ctx": "with",
        "kind": "courage"
       },
       {
-       "n": 4,
-       "sid": "s4",
-       "test": "Learn a whole poem, forty lines or more.",
-       "how": null,
-       "note": null,
-       "ctx": "home",
+       "n": 3,
+       "test": "Say eight lines from memory without a prompt.",
+       "ctx": "room",
        "kind": "skill"
       },
       {
+       "n": 4,
+       "test": "Find a poem you actually like, on your own.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
        "n": 5,
-       "sid": "s5",
-       "test": "Write your own and perform it.",
-       "how": null,
-       "note": null,
+       "test": "Learn sixteen lines.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 6,
-       "sid": "s6",
-       "test": "Run a poetry evening for the group.",
-       "how": null,
-       "note": null,
+       "test": "Say twenty lines to a room, standing up.",
        "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 7,
+       "test": "Say it slowly enough that people hear the words.",
+       "note": "Everybody rushes. Half a second at the end of each line is the whole difference.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "Learn a whole poem, forty lines or more.",
+       "ctx": "room",
        "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Write four lines of your own that mean something.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Write eight lines and read them to one person.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Perform your own to a room.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
+       "test": "Run a poetry evening for other people.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     },
@@ -5220,57 +5956,124 @@
      "steps": [
       {
        "n": 1,
-       "sid": "s1",
        "test": "Finger-spell your own name.",
-       "how": null,
-       "note": "Irish Sign Language and British Sign Language have different alphabets. Pick one and stay with it.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 2,
-       "sid": "s2",
-       "test": "Learn twenty everyday signs.",
-       "how": null,
-       "note": null,
+       "test": "Finger-spell the whole alphabet.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 3,
-       "sid": "s3",
-       "test": "Hold a one-minute conversation in signs.",
-       "how": null,
-       "note": null,
-       "ctx": "room",
-       "kind": "courage"
+       "test": "Finger-spell somebody else's name and have them read it.",
+       "ctx": "with",
+       "kind": "skill"
       },
       {
        "n": 4,
-       "sid": "s4",
-       "test": "Sign a whole song or a poem.",
-       "how": null,
-       "note": null,
+       "test": "Learn ten everyday signs.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 5,
-       "sid": "s5",
-       "test": "Have a real conversation with somebody who signs.",
-       "how": null,
-       "note": null,
+       "test": "Learn twenty everyday signs.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 6,
+       "test": "Sign hello, please, thank you and sorry without thinking.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 7,
+       "test": "Ask a question in signs and understand the answer.",
+       "ctx": "with",
+       "kind": "skill"
+      },
+      {
+       "n": 8,
+       "test": "Learn the signs for your own family.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "Learn forty signs.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Hold a one-minute conversation in signs.",
        "ctx": "with",
        "kind": "courage"
       },
       {
-       "n": 6,
-       "sid": "s6",
-       "test": "Teach the group ten signs they remember a week later.",
-       "how": null,
-       "note": null,
+       "n": 11,
+       "test": "Learn what your face and your body do in a signed sentence.",
+       "note": "The grammar is on your face. Signing with a blank face is like speaking in a flat monotone.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
+       "test": "Sign a whole verse of a song.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 13,
+       "test": "Learn sixty signs.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 14,
+       "test": "Hold a three-minute conversation.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 15,
+       "test": "Understand somebody signing at their own speed, not slowed down for you.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 16,
+       "test": "Sign a whole song or a poem.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Have a real conversation with somebody who signs.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 18,
+       "test": "Get through a whole conversation without needing to spell anything out.",
        "ctx": "with",
        "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Teach the group ten signs they remember a week later.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 20,
+       "test": "Be the one who includes somebody who signs, without being asked.",
+       "ctx": "with",
+       "kind": "kindness"
       }
      ]
     }
