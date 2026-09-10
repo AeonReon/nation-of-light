@@ -619,7 +619,7 @@
     if (!T || T.date !== d) S.school.today = { date: d, picks: [], skip: [] };
     const t = S.school.today; const cand = quickCandidates().map(([tr, st]) => skey(tr, st));
     t.picks = t.picks.filter(k => !sdone(k) && findStep(k));
-    for (const k of cand) { if (t.picks.length >= 3) break; if (!t.picks.includes(k) && !t.skip.includes(k)) t.picks.push(k); }
+    for (const k of cand) { if (t.picks.length >= 6) break; if (!t.picks.includes(k) && !t.skip.includes(k)) t.picks.push(k); }
     save(); return t.picks.map(findStep).filter(Boolean);
   }
   function notThis(key) { const t = S.school.today; t.skip.push(key); t.picks = t.picks.filter(k => k !== key); save(); }
@@ -678,6 +678,7 @@
     step();
   }
   function foldCard(key, title, inner, open) { return `<details class="fold" data-fold="${key}" ${open ? 'open' : ''}><summary>${title}</summary><div class="fbody">${inner}</div></details>`; }
+  const pickRow = ([tr, st]) => { const c = catOf(tr), P = C.arrival; return `<div class="pick" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span class="ptxt"><span class="scat">${c.name} · ${tr.name}</span><span class="stest">${st.test}</span></span><span class="pbtns"><button class="btn btn-gold sm" data-do="${skey(tr, st)}">${P.do}</button><button class="btn btn-ghost sm" data-not="${skey(tr, st)}">${P.notThis}</button></span></div>`; };
   function renderArrival() {
     const list = $('slist'), keep = list.scrollTop; const picks = todayPicks(); const P = C.arrival, R = C.room, F = P.folds || {};
     // the feed: newest post, and whether it has been seen
@@ -696,9 +697,9 @@
       (C.vision ? foldCard('vision', C.vision.title, `<div class="acard visioncard"><div class="rhead"><span class="eyebrow">${C.vision.lede}</span><button class="playbtn" id="visionread" aria-label="Aurelia reads it">${SPK_IC}</button></div>${C.vision.paras.map(x => `<p>${x}</p>`).join('')}</div><div class="acard polycard"><span class="eyebrow">${C.vision.polyTitle}</span><p class="lede">${C.vision.polyLede}</p>${C.vision.polymaths.map(x => `<div class="poly"><b>${x.name}</b><span>${x.line}</span></div>`).join('')}<p class="close">${C.vision.close}</p></div>`, visits <= 2 && !S.school.visionSeen) : '') +
       (post ? `<div class="acard post ${isNew ? 'new' : ''}"><span class="eyebrow">${C.feed.title}${isNew ? '<b class="dot">New</b>' : ''}</span><h3>${post.title}</h3><small>${post.date}</small><p>${post.text}</p></div>` : '') +
       `<div class="acard todaycard"><span class="eyebrow">${P.todayTitle || 'Three for today'}</span>${P.todayLede ? `<p class="lede">${P.todayLede}</p>` : ''}` +
-      (picks.length ? picks.map(([tr, st]) => { const c = catOf(tr); return `<div class="pick" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span class="ptxt"><span class="scat">${c.name} · ${tr.name}</span><span class="stest">${st.test}</span></span><span class="pbtns"><button class="btn btn-gold sm" data-do="${skey(tr, st)}">${P.do}</button><button class="btn btn-ghost sm" data-not="${skey(tr, st)}">${P.notThis}</button></span></div>`; }).join('')
+      (picks.length ? picks.slice(0, 3).map(pickRow).join('') + (picks.length > 3 ? `<details class="more"><summary>${P.more || 'Three more'}</summary>${picks.slice(3).map(pickRow).join('')}</details>` : '')
         : `<p class="lede">Every quick one is done. The long game is where the rest of you lives.</p>`) +
-      `</div>` + longCard() + shelfCard(true) + carryCard(3) +
+      `</div>` + longCard() + shelfCard(true) +
       foldCard('reading', F.reading || 'A reading from Aurelia', `<div class="acard reading"><div class="rhead"><span class="eyebrow">${R.readingsLede}</span><button class="playbtn" id="readit" aria-label="Aurelia reads it">${SPK_IC}</button></div><h3>${rd.title}</h3><p>${rd.text}</p></div>`) +
       (lib ? foldCard('library', F.library || 'From the library', lib) : '') +
       (rooms.length ? foldCard('rooms', F.rooms || 'Rooms climbed', `<div class="acard prog"><div class="rooms">${rooms.map(r => `<div class="rr" style="--c:${r.c.accent};--c2:${r.c.accent2}"><span>${r.c.name}</span><i><b style="width:${Math.round(r.n / r.N * 100)}%"></b></i><small>${r.n} of ${r.N}</small></div>`).join('')}</div></div>`) : '') +
@@ -873,7 +874,9 @@
     list.querySelectorAll('[data-not]').forEach(b => b.addEventListener('click', () => { sfx('tap'); notThis(b.dataset.not); renderSchool(); if (line(C.arrival.another)) { hush(); popIn('marcus'); marcusSay(line(C.arrival.another), 'nod', () => popOut('marcus', 1200)); } }));
   }
   /* The long game: up to three, taken on deliberately */
-  const projects = () => (S.school.projects || []).map(trackById).filter(tr => tr && nextStep(tr));
+  const projects = () => { const on = (S.school.projects || []), dropped = new Set(S.school.dropped || []); const ex = on.map(trackById).filter(tr => tr && nextStep(tr));
+    const st = allTracks().filter(tr => !on.includes(tr.id) && !dropped.has(tr.id) && trackDone(tr) >= 1 && nextStep(tr)).sort((x, y) => (S.school.done[skey(y, y.steps[trackDone(y) - 1])] || '').localeCompare(S.school.done[skey(x, x.steps[trackDone(x) - 1])] || ''));
+    return ex.concat(st); };
   function longSuggest() {
     const on = new Set(S.school.projects || []);
     const started = allTracks().filter(tr => trackDone(tr) >= 1 && nextStep(tr)).sort((x, y) => trackDone(y) - trackDone(x));
@@ -903,8 +906,8 @@
         sug.map(tr => { const c = catOf(tr), st = nextStep(tr), last = tr.steps[tr.steps.length - 1]; return `<button class="pickp" style="--c:${c.accent};--c2:${c.accent2}" data-take="${tr.id}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${c.name} · ${tr.steps.length} steps</small><small class="ladder">From <em>${st.test}</em> to <em>${last.test}</em></small></span><b class="take">Take it on</b></button>`; }).join('') +
         `<button class="what dark" id="rollp">Show me three others</button></div>` : '');
     wireLong(list);
-    list.querySelectorAll('[data-take]').forEach(b => b.addEventListener('click', () => { sfx('tap'); S.school.projects = (S.school.projects || []).concat(b.dataset.take); S.school.taken = S.school.taken || {}; S.school.taken[b.dataset.take] = today(); save(); renderSchool(); }));
-    list.querySelectorAll('[data-drop]').forEach(b => b.addEventListener('click', () => { sfx('tap'); S.school.projects = (S.school.projects || []).filter(id => id !== b.dataset.drop); save(); renderSchool(); }));
+    list.querySelectorAll('[data-take]').forEach(b => b.addEventListener('click', () => { sfx('tap'); S.school.projects = (S.school.projects || []).concat(b.dataset.take); S.school.dropped = (S.school.dropped || []).filter(id => id !== b.dataset.take); S.school.taken = S.school.taken || {}; S.school.taken[b.dataset.take] = today(); save(); renderSchool(); }));
+    list.querySelectorAll('[data-drop]').forEach(b => b.addEventListener('click', () => { sfx('tap'); S.school.projects = (S.school.projects || []).filter(id => id !== b.dataset.drop); S.school.dropped = (S.school.dropped || []).concat(b.dataset.drop); save(); renderSchool(); }));
     const roll = list.querySelector('#rollp'); if (roll) roll.addEventListener('click', () => { sfx('tap'); S.school.roll = (S.school.roll || 0) + 1; save(); renderSchool(); });
     if (!LONGSAID && line('c-long')) { LONGSAID = true; hush(); popIn('marcus'); setTimeout(() => marcusSay(line('c-long'), 'point', () => popOut('marcus', 1400)), 700); }
   }
@@ -960,7 +963,7 @@
     backBtn(v, () => closeVeil());
     const say = (mood) => { const L = (K.lines || {})[mood] || []; const lines = L.map(([who, id]) => who === 'aurelia' ? { who, id, t: C.voice[id.replace(/^ui-/, '')] || '' } : { who, id }); closeVeil(() => { rerender(); hush(); setTimeout(() => speakSchool(lines), 300); }); };
     v.querySelectorAll('[data-mood]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const p = prac(tr); p.mood = p.mood || {}; p.mood[today()] = b.dataset.mood; p.asked = today(); save(); say(b.dataset.mood); }));
-    v.querySelector('#putdown').addEventListener('click', () => { sfx('tap'); S.school.projects = (S.school.projects || []).filter(id => id !== tr.id); save(); say('down'); });
+    v.querySelector('#putdown').addEventListener('click', () => { sfx('tap'); S.school.projects = (S.school.projects || []).filter(id => id !== tr.id); S.school.dropped = (S.school.dropped || []).concat(tr.id); save(); say('down'); });
   }
   /* Everything: families, then rooms, then ladders */
   function renderAll(list) {
@@ -1057,6 +1060,15 @@
     if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
     window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool, show: id => trophyShow(awards().find(a => a.id === id)), awards, quiet: quietProject, check: id => checkIn(trackById(id)), entry: entryWord, home: goHome, lyr: () => ({ on: LYRE.on, paused: LYR.paused, src: LYR.src.split('/').pop(), vol: +LYR.volume.toFixed(2) }), prac: id => logPractice(trackById(id)) };
   }
+  /* a phone held sideways: the stage turns back by ninety degrees and stays upright, which reads as "this app is this way up" */
+  const rot = () => {
+    const mq = window.matchMedia && window.matchMedia('(pointer: coarse)'); const held = mq ? mq.matches : Math.min(innerWidth, innerHeight) < 600;
+    if (!(innerWidth > innerHeight && held)) { delete document.documentElement.dataset.rot; return; }
+    const a = (screen.orientation && typeof screen.orientation.angle === 'number') ? screen.orientation.angle : (window.orientation || 0);
+    document.documentElement.dataset.rot = (a === 90) ? 'l' : 'r';
+  };
+  rot(); window.addEventListener('resize', rot); window.addEventListener('orientationchange', () => setTimeout(rot, 60));
+  if (screen.orientation && screen.orientation.addEventListener) screen.orientation.addEventListener('change', () => setTimeout(rot, 60));
   /* iOS standalone computes the new viewport unit as if a toolbar were there; measure instead */
   document.addEventListener('DOMContentLoaded', boot);
 })();

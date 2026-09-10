@@ -122,3 +122,9 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   the room under the voices. Named "Who you can become". Polymath list = only names he knows
   and has checked (Leonardo, Franklin, Jefferson, Michelangelo, Marcus); add others only after
   he has vetted them.
+- **v30:** a phone held sideways turns the stage back upright (`html[data-rot]`, the Mo & Pip
+  lock: coarse pointer + landscape → rotate the stage about its top-left; `vh` heights get `vw`
+  twins under `[data-rot]`); `-webkit-text-size-adjust:100%` stops text growing after a turn.
+  Six quick things a day (three shown, three in a "Three more" fold). A long skill at home is
+  anything taken on OR started (a step done), so it shows from the first step; "put it down"
+  adds to `S.school.dropped`; the carry-on card left home (still in the long tab).

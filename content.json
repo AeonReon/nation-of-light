@@ -1,5 +1,5 @@
 {
- "version": 29,
+ "version": 30,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -1842,7 +1842,7 @@
   ],
   "storyLede": "Something from us",
   "todayTitle": "Do one of these today",
-  "todayLede": "About thirty seconds each. Pick the one that pulls you.",
+  "todayLede": "About thirty seconds each. Pick the one that pulls you; there are more underneath.",
   "ticks": {
    "quick": "One quick thing",
    "long": "A long skill practised"
@@ -1862,7 +1862,8 @@
    "library": "From the library",
    "earlier": "Earlier from Light School",
    "vision": "Who you can become"
-  }
+  },
+  "more": "Three more"
  },
  "room": {
   "title": "The portico",
