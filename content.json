@@ -1,5 +1,5 @@
 {
- "version": 41,
+ "version": 42,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -1511,6 +1511,13 @@
     "lede": "Two steps in. Take it on as a long skill and it lives on your home page, or just carry on whenever you feel like it.",
     "yes": "Take it on",
     "no": "Just when I feel like it"
+   },
+   "drop": {
+    "title": "Put this one down?",
+    "lede": "Everything you have done on it stays done — {n} step{s} — and you can take it on again any day you like. It just stops sitting on your home page.",
+    "no": "Keep it",
+    "yes": "Put it down",
+    "done": "{name} put down. Nothing lost."
    }
   },
   "ranks": [
@@ -1917,6 +1924,24 @@
      "The Temple",
      "A year. Every day of it. Built once, and standing two thousand years later."
     ]
+   ],
+   "bestLabel": "your longest",
+   "shelfTitle": "What days in a row earn",
+   "see": "Days in a row, and what they earn",
+   "lit": "{n} day{s} lit altogether.",
+   "none": "One light a day is the whole habit.",
+   "toNext": "{n} more in a row for {name}.",
+   "got": "Earned",
+   "away": "{n} more day{s} in a row",
+   "say": [
+    "Turning up is the part almost nobody manages. Start the count today and it starts today.",
+    "Three days. That is no longer an accident — that is a decision you keep making.",
+    "A week of it. You have already outlasted most of the people who ever begin.",
+    "A fortnight. Notice that it is getting easier to start, not harder.",
+    "A month. Whatever this is doing to you, it is doing it whether you can feel it yet or not.",
+    "Two months. Other people can lean on somebody like this. That is worth more than the count.",
+    "A hundred days. Ours built things that outlasted us by two thousand years, one day at a time.",
+    "You have made a habit into a character. There is nothing further to say about it than that."
    ]
   }
  },
@@ -1969,7 +1994,10 @@
    "done": "That is today. Anything more is a gift.",
    "run": "days in a row",
    "lvlcap": "Every single thing you do moves this. {n} more to {name}.",
-   "lvlcapTop": "The top of the list — and the school keeps growing, so there is always more."
+   "lvlcapTop": "The top of the list — and the school keeps growing, so there is always more.",
+   "seeProgress": "See how far you have come",
+   "progressTitle": "How far you have come",
+   "progressSay": "Look at it written down. {n} things you have actually done."
   },
   "post": null,
   "again": [
@@ -2418,7 +2446,7 @@
   "skip": "I will find my way"
  },
  "feed": {
-  "title": "From Light School",
+  "title": "Announcement",
   "lede": "News and a word from the school, kept here so you can read it later, even offline.",
   "empty": "Nothing new today. When there is news it appears here.",
   "earlier": "Earlier from Light School"

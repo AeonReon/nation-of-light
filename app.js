@@ -719,20 +719,85 @@
     clearTimeout(arrival._t); arrival._t = setTimeout(() => { if ($('stage').classList.contains('arrive')) speakSchool(lines); }, 1500);
   }
   function standLine() { const L = C.arrival.stand.lines || []; return L.length ? L[(daySeed() + (S.school.visits || 0) + HOMEN) % L.length] : ''; }
-  function standCard() {
-    const p = points(), r = rankOf(p), A = C.arrival.stand, run = runInfo();
+  /* Two things, not three numbers in a row. He could not tell what the bar was
+     measuring because DAYS sat on the left of it — so how far you have come is
+     its own block now, and turning up every day is its own block under it, and
+     both of them open. "I'd like that's just its own thing that looks really
+     exciting... and even if it has its own page so if you tap on it you can see
+     progress. Right now you can't tap on it." */
+  function standCard(inPanel) {
+    const p = points(), r = rankOf(p), A = C.arrival.stand;
     const pct = r.next ? Math.max(2, Math.round((p - r.at) / (r.next[0] - r.at) * 100)) : 100;
-    /* Things done comes FIRST and the bar is labelled with what moves it,
-       because the old order put DAYS on the left and the bar underneath read
-       as though time was what filled it. Nothing on this card is gated by a
-       day: do twenty things this afternoon and it moves twenty times. */
-    return `<div class="stand"><div><b>${p}</b><small>${A.steps}</small></div>
-      <div><b>${r.name}</b><small>${r.next ? (r.next[0] - p) + ' to ' + r.next[1] : A.rank}</small></div>
-      <div><b>${run.cur}</b><small>${A.run || 'days in a row'}</small></div></div>
+    const body = `<div class="rankface"><span class="rf-n"><b>${p}</b><small>${A.steps}</small></span>
+        <span class="rf-r"><strong>${r.name}</strong>${r.next
+          ? `<small><b>${r.next[0] - p}</b> to ${r.next[1]}</small>` : `<small>${A.rank}</small>`}</span></div>
       <div class="lvl"><i style="width:${pct}%"></i></div>
       <p class="lvlcap">${r.next ? fmt1(A.lvlcap || 'Every single thing you do moves this. {n} more to {name}.',
         { n: r.next[0] - p, name: r.next[1] }) : (A.lvlcapTop || 'The top of the list, and the school keeps growing.')}</p>`;
+    return inPanel ? body : `<button class="standtap" data-panel="progress">${body}<span class="tapmore">${A.seeProgress || 'See how far you have come'} ›</span></button>`;
   }
+  /* the run, in the shape he already likes from the Next thing tab */
+  function weekStrip() {
+    const lit = daysLit(), t = today(), days = [];
+    for (let i = 6; i >= 0; i--) { const d = new Date(); d.setDate(d.getDate() - i); days.push(d); }
+    const dk = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+    return `<div class="wrow">${days.map(d => `<span class="wk ${lit.has(dk(d)) ? 'on' : ''} ${dk(d) === t ? 'td' : ''}"><i></i><b>${d.toLocaleDateString('en-GB', { weekday: 'narrow' })}</b></span>`).join('')}</div>`;
+  }
+  function runCard(inPanel) {
+    const run = runInfo(), A = C.arrival.stand, R = C.school.runs || {}, lit = daysLit();
+    const nx = (R.levels || []).find(l => run.best < l[0]);
+    const body = `<div class="runtop"><span class="rt-n"><b>${run.cur}</b><small>${A.run || 'days in a row'}</small></span>
+        <span class="rt-t">${run.best ? `<strong>${run.best}</strong><small>${R.bestLabel || 'your longest'}</small>` : ''}</span></div>
+      ${weekStrip()}
+      <p class="runcap">${lit.size ? fmt1(R.lit || '{n} day{s} lit altogether.', { n: lit.size, s: lit.size === 1 ? '' : 's' }) : (R.none || 'One light a day is the whole habit.')}${
+        nx ? ' ' + fmt1(R.toNext || '{n} more in a row for {name}.', { n: nx[0] - run.best, name: nx[1] }) : ''}</p>`;
+    return inPanel ? body : `<button class="standtap runtap" data-panel="run">${body}<span class="tapmore">${R.see || 'Days in a row, and what they earn'} ›</span></button>`;
+  }
+  /* Two doors off the home page. Both are read-only, both close on Back, and
+     both put a character on the screen with a word, because a number on its own
+     never made anybody want to do the next thing. */
+  const HORN_IC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 001 1h2l5 4V6L6 10H4a1 1 0 00-1 1z"/><path d="M15 9.5a3.5 3.5 0 010 5M18 7a7 7 0 010 10"/></svg>';
+  function progressPanel() {
+    const p = points(), r = rankOf(p), A = C.arrival.stand, RK = C.school.ranks;
+    const rooms = SCH.categories.map(c => ({ c, n: c.tracks.reduce((s, tr) => s + trackDone(tr), 0), N: c.tracks.reduce((s, tr) => s + tr.steps.length, 0) })).filter(x => x.n > 0).sort((x, y) => y.n - x.n);
+    const lvl = RK.findIndex(x => x[1] === r.name);
+    const v = veil(`<div class="panel bigpanel"><div class="eyebrow"><i></i>${A.progressTitle || 'How far you have come'}</div>
+      <div class="acard">${standCard(true)}</div>
+      <div class="acard"><span class="eyebrow">${(C.school.awards.show || {}).ladder || 'The ladder'}</span>
+        <div class="chips">${RK.map((x, i) => `<span class="chip ${i <= lvl ? 'got' : ''} ${i === lvl ? 'this' : ''}">${x[1]}<small>${Math.max(1, x[0])}</small></span>`).join('')}</div></div>
+      ${shelfCard()}
+      ${rooms.length ? `<div class="acard prog"><span class="eyebrow">${(C.arrival.folds || {}).rooms || 'Rooms climbed'}</span>
+        <div class="rooms">${rooms.map(x => `<div class="rr" style="--c:${x.c.accent};--c2:${x.c.accent2}"><span>${x.c.name}</span><i><b style="width:${Math.round(x.n / x.N * 100)}%"></b></i><small>${x.n} of ${x.N}</small></div>`).join('')}</div></div>` : ''}
+      <div class="showcap" id="showcap" hidden></div></div>`, 'light bigveil');
+    backBtn(v, () => closePanel());
+    SHOW = v; wireShelf(v);
+    if (!inScene()) { popIn('marcus'); popIn('aurelia'); }
+    setTimeout(() => { if (SHOW !== v) return; ARIG.nod();
+      cap('aurelia', fmt1(A.progressSay || 'Look at it written down. {n} things you have actually done.', { n: p }));
+      capHide(4200); }, inScene() ? 500 : 900);
+    return v;
+  }
+  function runPanel() {
+    const run = runInfo(), R = C.school.runs || {}, A = C.arrival.stand;
+    const stones = awards().filter(a => a.kind === 'stone');
+    const v = veil(`<div class="panel bigpanel"><div class="eyebrow"><i></i>${R.title || 'Days in a row'}</div>
+      <div class="acard">${runCard(true)}</div>
+      <div class="acard"><span class="eyebrow">${R.shelfTitle || 'What they earn'}</span>
+        <p class="lede">${R.lede || ''}</p>
+        <div class="stonelist">${stones.map(a => `<button class="stonerow ${a.earned ? 'on' : ''}" data-tro="${a.id}">
+          ${trophySVG(a)}<span><strong>${a.name}</strong><small>${a.earned ? (R.got || 'Earned') + ' · ' + a.need + ' days' : fmt1(R.away || '{n} more day{s} in a row', { n: a.left, s: a.left === 1 ? '' : 's' })}</small></span>
+          <i class="stonebar"><b style="width:${Math.min(100, Math.round(run.best / a.need * 100))}%"></b></i></button>`).join('')}</div>
+        <p class="rule">${R.note || ''}</p></div>
+      <div class="showcap" id="showcap" hidden></div></div>`, 'light bigveil');
+    backBtn(v, () => closePanel());
+    SHOW = v; wireShelf(v);
+    if (!inScene()) { popIn('marcus'); popIn('aurelia'); }
+    const lines = R.say || [];
+    const pick = lines.length ? lines[Math.min(lines.length - 1, stones.filter(a => a.earned).length)] : null;
+    if (pick) setTimeout(() => { if (SHOW !== v) return; RIG.nod(); cap('marcus', pick); capHide(4600); }, inScene() ? 500 : 900);
+    return v;
+  }
+  function closePanel() { SHOW = null; hush(); closeVeil(); if (!inScene()) { popOut('marcus', 0); popOut('aurelia', 0); } }
   const SHARE_IC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 001 1h14a1 1 0 001-1v-7M12 3v13M7 8l5-5 5 5"/></svg>';
   let VISREAD = false;
   function readVision(root) {
@@ -766,9 +831,11 @@
     const rooms = SCH.categories.map(c => ({ c, n: c.tracks.reduce((s, tr) => s + trackDone(tr), 0), N: c.tracks.reduce((s, tr) => s + tr.steps.length, 0) })).filter(r => r.n > 0).sort((x, y) => y.n - x.n).slice(0, 8);
     const earlier = FEED.slice(1, 6);
     list.innerHTML = `<div class="acard standcard">${standCard()}<p class="punch">${standLine()}</p>${ticks}<div class="daywrap home">${dayBar()}</div><p class="nextp ${q && (l || !hasLong) ? 'done' : ''}">${nextLine}</p></div>` +
+      `<div class="acard runcard">${runCard()}</div>` +
       (P.how ? foldCard('how', P.how.title, `<ol class="howlist">${P.how.lines.map(x => `<li>${x}</li>`).join('')}</ol>`, visits <= 3 && !S.school.howSeen) : '') +
       (C.vision ? foldCard('vision', C.vision.title, `<div class="acard visioncard"><div class="rhead"><span class="eyebrow">${C.vision.lede}</span><button class="playbtn" id="visionread" aria-label="Aurelia reads it">${SPK_IC}</button></div>${C.vision.paras.map(x => `<p>${x}</p>`).join('')}</div><div class="acard polycard"><span class="eyebrow">${C.vision.polyTitle}</span><p class="lede">${C.vision.polyLede}</p>${C.vision.polymaths.map(x => `<div class="poly"><b>${x.name}</b><span>${x.line}</span></div>`).join('')}<p class="close">${C.vision.close}</p></div>`, visits <= 2 && !S.school.visionSeen) : '') +
-      (post ? `<div class="acard post ${isNew ? 'new' : ''}"><span class="eyebrow">${C.feed.title}${isNew ? '<b class="dot">New</b>' : ''}</span><h3>${post.title}</h3><small>${post.date}</small><p>${post.text}</p></div>` : '') +
+      (post ? foldCard('post', `<span class="foldic">${HORN_IC}</span>${C.feed.title}${isNew ? '<b class="dot">New</b>' : ''}`,
+        `<div class="acard post ${isNew ? 'new' : ''}"><h3>${post.title}</h3><small>${post.date}</small><p>${post.text}</p></div>`, isNew) : '') +
       `<div class="acard todaycard"><span class="eyebrow">${P.todayTitle || 'Three for today'}</span>${P.todayLede ? `<p class="lede">${P.todayLede}</p>` : ''}` +
       (picks.length ? picks.slice(0, 3).map(pickRow).join('') + (picks.length > 3 ? `<details class="more"><summary>${P.more || 'Three more'}</summary>${picks.slice(3).map(pickRow).join('')}</details>` : '')
         : `<p class="lede">Every quick one is done. The long game is where the rest of you lives.</p>`) +
@@ -784,6 +851,8 @@
     const vr = list.querySelector('#visionread'); if (vr) vr.addEventListener('click', () => { sfx('tap'); if (VISREAD) { hush(); return; } readVision(list); });
     const rb = list.querySelector('#readit'); if (rb) rb.addEventListener('click', () => { sfx('tap'); hush(); clearTimeout(ROOMT); cap('aurelia', rd.title); ARIG.nod(); aureliaSay('ui-read-' + rd.id, () => { capHide(1500); idleRoom(); }); });
     wireShelf(list); wireLong(list);
+    list.querySelectorAll('[data-panel]').forEach(b => b.addEventListener('click', () => { sfx('open');
+      hush(); if (b.dataset.panel === 'run') runPanel(); else progressPanel(); }));
     list.querySelectorAll('[data-do]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.do); if (r) stepSheet(r[0], r[1], null, 'arrival'); }));
     list.querySelectorAll('.crow[data-step]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.step); if (r) stepSheet(r[0], r[1], null, 'arrival'); }));
     list.querySelectorAll('[data-not]').forEach(b => b.addEventListener('click', () => { sfx('tap'); notThis(b.dataset.not); renderArrival(); if (line(C.arrival.another)) { hush(); marcusSay(line(C.arrival.another), 'nod'); } }));
@@ -1065,10 +1134,15 @@
   function longCard() {
     const K = K_LG(), mine = projects();
     return `<div class="acard longcard"><span class="eyebrow">${K.roomTitle}</span><p class="lede">${mine.length ? K.roomLede : K.none}</p>` +
-      (mine.length ? mine.map(tr => { const c = catOf(tr), st = nextStep(tr), n = trackDone(tr); return `<div class="lgrow taken" style="--c:${c.accent};--c2:${c.accent2}"><div class="seal"><i></i>${C.school.long.page.taken}</div><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${st.test}</small></span>${pracLine(tr)}</div>`; }).join('') + `<p class="rule">${K.capLine || ''}</p>`
+      (mine.length ? mine.map(tr => { const c = catOf(tr), st = nextStep(tr), n = trackDone(tr); return `<div class="lgrow taken" style="--c:${c.accent};--c2:${c.accent2}"><div class="seal"><i></i>${C.school.long.page.taken}</div><button class="px" data-drop="${tr.id}" aria-label="Put this one down">&#215;</button><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${st.test}</small></span>${pracLine(tr)}</div>`; }).join('') + `<p class="rule">${K.capLine || ''}</p>`
         : `<button class="btn btn-ghost sm" id="pickLong">${K.pick}</button><p class="rule">${K.capLine || ''}</p>`) + `</div>`;
   }
   function wireLong(root) {
+    /* The × on a taken-on skill was drawn from the start and never wired to
+       anything, so there was no way out of a commitment except a "Put it down"
+       hidden inside How is it going. Taking one on is a ceremony, so putting
+       one down asks once — but it does ask, and then it goes. */
+    root.querySelectorAll('[data-drop]').forEach(b => b.addEventListener('click', e => { e.stopPropagation(); sfx('tap'); dropAsk(trackById(b.dataset.drop)); }));
     root.querySelectorAll('[data-prac]').forEach(b => b.addEventListener('click', () => { sfx('tap'); logPractice(trackById(b.dataset.prac)); }));
     root.querySelectorAll('[data-check]').forEach(b => b.addEventListener('click', () => { sfx('tap'); checkIn(trackById(b.dataset.check)); }));
     const pk = root.querySelector('#pickLong'); if (pk) pk.addEventListener('click', () => { sfx('tap'); TAB = 'long'; leaveArrival(); });
@@ -1087,6 +1161,22 @@
     if (ms) speakSchool([{ who: 'aurelia', id: ms, t: C.voice[ms.slice(3)] }]);
     else if (n % 2) speakSchool([{ who: 'aurelia', id: 'ui-lg-prac', t: C.voice['lg-prac'] }]);
     else speakSchool([{ who: 'marcus', id: 'c-lg-prac' }]);
+  }
+  function dropAsk(tr) {
+    if (!tr) return;
+    const D = (C.school.long.drop || {}), c = catOf(tr), n = trackDone(tr);
+    const v = veil(`<div class="panel sheet" style="--c:${c.accent};--c2:${c.accent2}">
+      <div class="eyebrow"><i></i>${tr.name}</div><h2>${D.title || 'Put this one down?'}</h2>
+      <p class="lede">${fmt1(D.lede || 'Everything you have done on it stays done — {n} step{s} — and you can take it on again any day you like. It just stops sitting on your home page.', { n, s: n === 1 ? '' : 's' })}</p>
+      <div class="row"><button class="btn btn-ghost" id="dno" style="flex:1">${D.no || 'Keep it'}</button>
+        <button class="btn btn-gold" id="dyes" style="flex:1">${D.yes || 'Put it down'}</button></div></div>`, 'light');
+    backBtn(v, () => closeVeil());
+    v.querySelector('#dno').addEventListener('click', () => { sfx('tap'); closeVeil(); });
+    v.querySelector('#dyes').addEventListener('click', () => { sfx('tap');
+      S.school.projects = (S.school.projects || []).filter(id => id !== tr.id);
+      S.school.dropped = (S.school.dropped || []).concat(tr.id); save();
+      closeVeil(() => { rerender(); toast(fmt1(D.done || '{name} put down. Nothing lost.', { name: tr.name })); });
+    });
   }
   function checkIn(tr) {
     const K = K_LG(), c = catOf(tr), n = pracDays(tr), st = nextStep(tr), done = trackDone(tr);
