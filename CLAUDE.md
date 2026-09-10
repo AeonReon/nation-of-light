@@ -198,3 +198,8 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   the parent is there by definition) with no "with somebody" label. Aurelia: `ui-kid-made`,
   `ui-kid-back` (Kokoro, no visemes). A new child's school starts `toured/howSeen/visionSeen`
   true. One child for now; more is a `S.kids` array later if asked.
+- **Twist pass (2026-09-10, after v47):** the other-hand twist went onto the adult ladders
+  where a hand or foot is the skill: Throwing, Drawing, Balance, Cloth and thread, Knots
+  (eyes shut / behind your back), Mending, Tools (never the saw), Shapes, the one-leg squats,
+  and Hopping restored after the other session's twenty-step rewrite dropped them. Not on knives.
+  ~70 twists in all. Add more by hand, never by regex: a twist has to be safe and real.

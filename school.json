@@ -839,13 +839,15 @@
        "n": 2,
        "test": "Stand on one foot for thirty seconds.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "The foot you would never choose."
       },
       {
        "n": 3,
        "test": "Stand on one foot for a full minute.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "The foot you would never choose."
       },
       {
        "n": 4,
@@ -882,13 +884,15 @@
        "n": 9,
        "test": "Stand on one foot and pick something up off the floor.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "The foot you would never choose."
       },
       {
        "n": 10,
        "test": "Go down on one leg holding something, and stand back up.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "The other leg."
       },
       {
        "n": 11,
@@ -1046,25 +1050,29 @@
        "n": 1,
        "test": "Stand on one foot while somebody counts to five. Then the other foot.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Eyes shut."
       },
       {
        "n": 2,
        "test": "Stand on one foot while they count to ten.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Eyes shut."
       },
       {
        "n": 3,
        "test": "Hop three times on one foot.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "The foot you would never choose."
       },
       {
        "n": 4,
        "test": "Hop five times on one foot without putting the other one down.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "The foot you would never choose."
       },
       {
        "n": 5,
@@ -1076,7 +1084,8 @@
        "n": 6,
        "test": "Jump over a line with both feet together, ten times.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Eyes shut."
       },
       {
        "n": 7,
@@ -1088,13 +1097,15 @@
        "n": 8,
        "test": "Walk along a line without stepping off it.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Backwards."
       },
       {
        "n": 9,
        "test": "Walk along the line heel to toe.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Backwards."
       },
       {
        "n": 10,
@@ -1106,13 +1117,15 @@
        "n": 11,
        "test": "Hop all the way across the room on one foot.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "The foot you would never choose."
       },
       {
        "n": 12,
        "test": "Hop across the room, swap feet halfway, and land the last one still.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Start on the foot you would never choose."
       }
      ]
     }
@@ -3179,13 +3192,15 @@
        "n": 15,
        "test": "Stand on one leg and go down as far as you can, holding a chair.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "The leg you would never choose first."
       },
       {
        "n": 16,
        "test": "Go halfway down on one leg without holding anything.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "The leg you would never choose first."
       },
       {
        "n": 17,
@@ -3197,7 +3212,8 @@
        "n": 18,
        "test": "Do one squat on one leg, all the way down and back up.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "The other leg first."
       },
       {
        "n": 19,
@@ -4057,31 +4073,36 @@
        "n": 1,
        "test": "Scrunch a sheet of paper into a ball and throw it into a bin from five paces.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 2,
        "test": "Do that five times out of five.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 3,
        "test": "Hit a target the size of a bin lid from ten paces.",
        "ctx": "out",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 4,
        "test": "Hit it five times out of five.",
        "ctx": "out",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 5,
        "test": "Hit it from twenty paces.",
        "ctx": "out",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 6,
@@ -4093,19 +4114,22 @@
        "n": 7,
        "test": "Throw something as far as you can, then beat it by five metres.",
        "ctx": "out",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand, then beat that too."
       },
       {
        "n": 8,
        "test": "Catch ten in a row thrown at you.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "One hand, the other one."
       },
       {
        "n": 9,
        "test": "Skim a stone three bounces.",
        "ctx": "out",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 10,
@@ -6703,7 +6727,8 @@
        ],
        "note": null,
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 2,
@@ -6712,7 +6737,8 @@
        "how": null,
        "note": "In and out along a drawn line, stitches about the same size. Neat beats fast.",
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 3,
@@ -6770,7 +6796,8 @@
        ],
        "note": null,
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Eyes shut."
       },
       {
        "n": 2,
@@ -6779,7 +6806,8 @@
        "how": null,
        "note": "Reef for tying two ends together, bowline for a loop that will not slip, clove hitch for tying to a post.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Behind your back."
       },
       {
        "n": 3,
@@ -6893,13 +6921,15 @@
        "n": 1,
        "test": "Draw something and have somebody name it without being told.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 2,
        "test": "Draw the same thing three times and pick the best one.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand, all three."
       },
       {
        "n": 3,
@@ -6912,13 +6942,15 @@
        "test": "Draw something in front of you without lifting the pencil off the paper.",
        "note": "It will look strange. It is about looking, not about the drawing.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 5,
        "test": "Draw an object by starting with the simple shapes underneath it.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 6,
@@ -6942,7 +6974,8 @@
        "n": 9,
        "test": "Draw your own hand, from life.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Draw the hand you draw with, using the other one."
       },
       {
        "n": 10,
@@ -6961,7 +6994,8 @@
        "n": 12,
        "test": "Fill a whole page with small drawings of one thing.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Half of them with the other hand."
       },
       {
        "n": 13,
@@ -9573,7 +9607,8 @@
        "how": null,
        "note": null,
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 3,
@@ -9582,7 +9617,8 @@
        "how": null,
        "note": null,
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 4,
@@ -11623,7 +11659,8 @@
        ],
        "note": null,
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Other hand."
       },
       {
        "n": 2,
@@ -11699,7 +11736,8 @@
        "how": null,
        "note": null,
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "The screwdriver and the hammer in your other hand. Not the saw."
       },
       {
        "n": 3,
