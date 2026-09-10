@@ -702,11 +702,11 @@
   }
   const paintSearchBtn = () => { const b = $('searchbtn'); if (b) b.classList.toggle('on', SEARCH !== null); };
   function paintSchoolCount() { const p = points(), r = rankOf(p); $('countn').textContent = p; const of = $('countn').nextElementSibling; of.hidden = false; of.textContent = r.name; paintRank(); paintDay(); paintWho(); }
-  function paintWho() { let w = $('whopill');
-    if (!isKid()) { if (w) w.remove(); return; }
-    if (!w) { w = document.createElement('button'); w.id = 'whopill'; w.className = 'whopill'; w.title = (C.school.kid || {}).pillHint || '';
-      $('shead').insertBefore(w, $('searchbtn')); w.addEventListener('click', () => { sfx('tap'); goHome(); }); }
-    w.textContent = kidName(); }
+  /* the home button carries the child's name while it is their page: no room
+     in that header for one more pill, and the name IS the way home */
+  function paintWho() { const t = $('homebtn').querySelector('.stitle'); if (!t) return;
+    if (!t.dataset.own) t.dataset.own = t.textContent;
+    t.textContent = isKid() ? kidName() : t.dataset.own; $('homebtn').classList.toggle('kid', isKid()); }
   /* ---- the arrival: the portico, the two of them, where you stand, three for today ---- */
   let HOMEN = 0;
   function goHome() { ROOMV = null; if ($('stage').classList.contains('arrive')) { hush(); renderArrival(); $('slist').scrollTop = 0; return; }
@@ -872,7 +872,7 @@
     step();
   }
   function foldCard(key, title, inner, open) { return `<details class="fold" data-fold="${key}" ${open ? 'open' : ''}><summary>${title}</summary><div class="fbody">${inner}</div></details>`; }
-  const pickRow = ([tr, st]) => { const c = catOf(tr), P = C.arrival, nd = needsOf(st); return `<div class="pick" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span class="ptxt"><span class="scat">${c.name} · ${tr.name}${nd ? ` <b class="need ${nd}">${(P.needs || {})[nd] || nd}</b>` : ''}</span><span class="stest">${st.test}</span></span><span class="pbtns"><button class="btn btn-gold sm wide" data-do="${skey(tr, st)}">${P.do}</button><button class="btn btn-ghost sm" data-not="${skey(tr, st)}">${P.notThis}</button></span></div>`; };
+  const pickRow = ([tr, st]) => { const c = catOf(tr), P = C.arrival, nd = (isKid() && isLittle(tr)) ? null : needsOf(st); return `<div class="pick" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span class="ptxt"><span class="scat">${c.name} · ${tr.name}${nd ? ` <b class="need ${nd}">${(P.needs || {})[nd] || nd}</b>` : ''}</span><span class="stest">${st.test}</span></span><span class="pbtns"><button class="btn btn-gold sm wide" data-do="${skey(tr, st)}">${P.do}</button><button class="btn btn-ghost sm" data-not="${skey(tr, st)}">${P.notThis}</button></span></div>`; };
   function renderArrival() {
     const list = $('slist'), keep = list.scrollTop;
     if (ROOMV) { progressRoom(list); return; }
@@ -937,7 +937,7 @@
     setTimeout(() => { const i = v.querySelector('#kidname'); if (i) i.focus(); }, 350);
     v.querySelector('#kidgo').addEventListener('click', () => { sfx('done');
       const name = (v.querySelector('#kidname').value || '').trim().slice(0, 24);
-      S.kid = { name: name || null, made: today(), school: { done: {}, points: 0, refresh: 0 } }; save();
+      S.kid = { name: name || null, made: today(), school: { done: {}, points: 0, refresh: 0, toured: true, howSeen: true, visionSeen: true } }; save();
       switchTo('kid'); paintSchoolCount();
       closeVeil(() => { renderArrival(); $('slist').scrollTop = 0; shower(); cap('aurelia', K.title || ''); aureliaSay('ui-kid-made', () => capHide(1500)); }); });
   }

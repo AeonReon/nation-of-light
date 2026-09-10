@@ -185,3 +185,16 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   child profile (a door at home that gathers the from-four ladders, own leaf and flame), and
   the other direction, adult rungs a child cannot do yet (a phone call at ~six), which the
   profile would hide by `from`.
+- **v47 (2026-09-10, the little one's page):** a child SHARES the parent's phone and account
+  (his call: never a hand-over app). `S.kid = {name, made, school}` and `S.who`; `switchTo(who)`
+  SWAPS `S.kid.school` into `S.school`, so every tick, rank, project, practice log and today's
+  picks below read the active page with no idea who holds the phone. `S.days` (the flame) is
+  shared on purpose: the family's flame. The twenty-five do not count on the child's page
+  (`points()`). Home: a who strip (You / name, or "+ With a little one" → `kidPanel`, name
+  optional), "{name}'s day" on the stand card, a "For {name}, from four" card of the little
+  ladders as `.crow` rows. School: the home button carries the child's name in gold
+  (`paintWho`, no room for another pill), Everything tab lists the little ladders first
+  (`littleTracks()`), and quick picks put little ladders first whatever their ctx (`fits()`,
+  the parent is there by definition) with no "with somebody" label. Aurelia: `ui-kid-made`,
+  `ui-kid-back` (Kokoro, no visemes). A new child's school starts `toured/howSeen/visionSeen`
+  true. One child for now; more is a `S.kids` array later if asked.
