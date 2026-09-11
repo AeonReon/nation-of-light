@@ -770,6 +770,23 @@
      both of them open. "I'd like that's just its own thing that looks really
      exciting... and even if it has its own page so if you tap on it you can see
      progress. Right now you can't tap on it." */
+  /* THE THIN BAR. The home page had drifted: a fat stat card, a line, today's
+     ticks, a day bar and a "next" line, all standing between arriving and
+     doing something. His words: "this homepage is starting to get pushed away
+     from its purpose, which is to inspire to action immediately." So the top of
+     the page is one thin bar you can read in a second — how many, what rank,
+     how far to the next — and the three things to do sit directly under it.
+     Everything else moved down or into a fold. */
+  function thinBar() {
+    const p = points(), r = rankOf(p), A = C.arrival.stand;
+    const pct = r.next ? Math.max(3, Math.round((p - r.at) / (r.next[0] - r.at) * 100)) : 100;
+    return `<button class="thinbar" data-panel="progress">
+      <span class="tb-top"><b>${p}</b><span class="tb-lbl">${A.steps}</span>
+        <span class="tb-rank">${r.name}</span>
+        ${r.next ? `<em><b>${r.next[0] - p}</b> to ${r.next[1]}</em>` : `<em>${A.rank}</em>`}
+        <i class="tb-chev">&#8250;</i></span>
+      <span class="tb-track"><i style="width:${pct}%"></i></span></button>`;
+  }
   function standCard(inPanel) {
     const p = points(), r = rankOf(p), A = C.arrival.stand;
     const pct = r.next ? Math.max(2, Math.round((p - r.at) / (r.next[0] - r.at) * 100)) : 100;
@@ -787,6 +804,24 @@
     for (let i = 6; i >= 0; i--) { const d = new Date(); d.setDate(d.getDate() - i); days.push(d); }
     const dk = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
     return `<div class="wrow">${days.map(d => `<span class="wk ${lit.has(dk(d)) ? 'on' : ''} ${dk(d) === t ? 'td' : ''}"><i></i><b>${d.toLocaleDateString('en-GB', { weekday: 'narrow' })}</b></span>`).join('')}</div>`;
+  }
+  /* Today and the run, together, at the BOTTOM. "The most important thing is
+     the little bar which looks cool and is small... and then right underneath
+     that should be the next easy actions." So this is the last thing you pass,
+     not the first. */
+  function dayCard(ticks, nextLine, done) {
+    const run = runInfo(), A = C.arrival.stand, R = C.school.runs || {}, lit = daysLit();
+    const nx = (R.levels || []).find(l => run.best < l[0]);
+    return `<button class="acard daycard" data-panel="run">
+      <div class="dc-top"><span class="dc-n"><b>${run.cur}</b><small>${A.run || 'days in a row'}</small></span>
+        <span class="dc-t">${run.best ? `<strong>${run.best}</strong><small>${R.bestLabel || 'your longest'}</small>` : ''}</span></div>
+      ${weekStrip()}
+      <div class="daywrap home">${dayBar()}</div>
+      ${ticks}
+      <p class="nextp ${done ? 'done' : ''}">${nextLine}</p>
+      <p class="runcap">${lit.size ? fmt1(R.lit || '{n} day{s} lit altogether.', { n: lit.size, s: lit.size === 1 ? '' : 's' }) : (R.none || 'One light a day is the whole habit.')}${
+        nx ? ' ' + fmt1(R.toNext || '{n} more in a row for {name}.', { n: nx[0] - run.best, name: nx[1] }) : ''}</p>
+      <span class="tapmore">${R.see || 'Days in a row, and what they earn'} &#8250;</span></button>`;
   }
   function runCard(inPanel) {
     const run = runInfo(), A = C.arrival.stand, R = C.school.runs || {}, lit = daysLit();
@@ -894,20 +929,25 @@
     const kidCard = isKid() ? `<div class="acard kidcard"><span class="eyebrow">${fmt1(KID.forTitle || 'For {name}, from four', { name: kidName() })}</span><p class="lede">${KID.forLede || ''}</p>` +
       littleTracks().map(tr => { const c = catOf(tr), s = nextStep(tr), n = trackDone(tr); return s ? `<button class="crow" style="--c:${c.accent};--c2:${c.accent2}" data-step="${skey(tr, s)}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${s.test}</small></span><i class="cprog"><b style="width:${Math.round(n / tr.steps.length * 100)}%"></b></i></button>`
         : `<div class="crow done" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${(C.school.track || {}).finished || 'Finished'}</small></span></div>`; }).join('') + '</div>' : '';
-    list.innerHTML = whoStrip + `<div class="acard standcard">${isKid() ? `<span class="eyebrow kidname">${fmt1(KID.homeTitle || "{name}'s day", { name: kidName() })}</span>` : ''}${standCard()}<p class="punch">${standLine()}</p>${ticks}<div class="daywrap home">${dayBar()}</div><p class="nextp ${q && (l || !hasLong) ? 'done' : ''}">${nextLine}</p></div>` +
-      kidCard + `<div class="acard runcard">${runCard()}</div>` +
+    list.innerHTML = whoStrip + thinBar() +
+      (isKid() ? `<p class="kidname">${fmt1(KID.homeTitle || "{name}'s day", { name: kidName() })}</p>` : '') +
+      `<div class="acard todaycard"><span class="eyebrow">${P.todayTitle || 'Three for today'}</span>${P.todayLede ? `<p class="lede">${P.todayLede}</p>` : ''}` +
+      (picks.length ? picks.slice(0, 3).map(pickRow).join('') + (picks.length > 3 ? `<details class="more"><summary>${P.more || 'Three more'}</summary>${picks.slice(3).map(pickRow).join('')}</details>` : '')
+        : `<p class="lede">Every quick one is done. The long game is where the rest of you lives.</p>`) +
+      `</div>` +
+      (later.length ? foldCard('later', P.laterTitle || 'With people, outside, or with a thing', `<p class="lede" style="padding:0 6px">${P.laterLede || ''}</p><div class="acard" style="padding-top:4px">${later.map(pickRow).join('')}</div>`) : '') +
+      kidCard + longCard() +
+      `<p class="punch homepunch">${standLine()}</p>` +
       (P.how ? foldCard('how', P.how.title, `<ol class="howlist">${P.how.lines.map(x => `<li>${x}</li>`).join('')}</ol>`, visits <= 3 && !S.school.howSeen) : '') +
       (C.vision ? foldCard('vision', C.vision.title, `<div class="acard visioncard"><div class="rhead"><span class="eyebrow">${C.vision.lede}</span><button class="playbtn" id="visionread" aria-label="Aurelia reads it">${SPK_IC}</button></div>${C.vision.paras.map(x => `<p>${x}</p>`).join('')}</div><div class="acard polycard"><span class="eyebrow">${C.vision.polyTitle}</span><p class="lede">${C.vision.polyLede}</p>${C.vision.polymaths.map(x => `<div class="poly"><b>${x.name}</b><span>${x.line}</span></div>`).join('')}<p class="close">${C.vision.close}</p></div>`, visits <= 2 && !S.school.visionSeen) : '') +
       (post ? foldCard('post', `<span class="foldic">${HORN_IC}</span>${C.feed.title}${isNew ? '<b class="dot">New</b>' : ''}`,
         `<div class="acard post ${isNew ? 'new' : ''}"><h3>${post.title}</h3><small>${post.date}</small><p>${post.text}</p></div>`, isNew) : '') +
-      `<div class="acard todaycard"><span class="eyebrow">${P.todayTitle || 'Three for today'}</span>${P.todayLede ? `<p class="lede">${P.todayLede}</p>` : ''}` +
-      (picks.length ? picks.slice(0, 3).map(pickRow).join('') + (picks.length > 3 ? `<details class="more"><summary>${P.more || 'Three more'}</summary>${picks.slice(3).map(pickRow).join('')}</details>` : '')
-        : `<p class="lede">Every quick one is done. The long game is where the rest of you lives.</p>`) +
-      `</div>` + (later.length ? foldCard('later', P.laterTitle || 'With people, outside, or with a thing', `<p class="lede" style="padding:0 6px">${P.laterLede || ''}</p><div class="acard" style="padding-top:4px">${later.map(pickRow).join('')}</div>`) : '') + longCard() + shelfCard(true) +
+      shelfCard(true) +
       foldCard('reading', F.reading || 'A reading from Aurelia', `<div class="acard reading"><div class="rhead"><span class="eyebrow">${R.readingsLede}</span><button class="playbtn" id="readit" aria-label="Aurelia reads it">${SPK_IC}</button></div><h3>${rd.title}</h3><p>${rd.text}</p></div>`) +
       (lib ? foldCard('library', F.library || 'From the library', lib) : '') +
       (rooms.length ? foldCard('rooms', F.rooms || 'Rooms climbed', `<div class="acard prog"><div class="rooms">${rooms.map(r => `<div class="rr" style="--c:${r.c.accent};--c2:${r.c.accent2}"><span>${r.c.name}</span><i><b style="width:${Math.round(r.n / r.N * 100)}%"></b></i><small>${r.n} of ${r.N}</small></div>`).join('')}</div></div>`) : '') +
       (earlier.length ? foldCard('earlier', C.feed.earlier || 'Earlier', `<div class="acard feedcard">${earlier.map(p => `<div class="feedpost"><small>${p.date}</small><h4>${p.title}</h4><p>${p.text}</p></div>`).join('')}</div>`) : '') +
+      dayCard(ticks, nextLine, q && (l || !hasLong)) +
       `<div class="gorow"><button class="btn btn-gold" id="intoschool">${P.go}</button><button class="iconbtn" id="sharearr" aria-label="${C.share.btn}">${SHARE_IC}</button></div>`;
     if (post && isNew) { S.feed.seen.push(post.id); save(); }
     list.querySelector('#sharearr').addEventListener('click', () => { sfx('tap'); sharePanel(); });

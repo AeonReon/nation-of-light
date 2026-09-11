@@ -1,5 +1,5 @@
 {
- "version": 47,
+ "version": 48,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -1524,7 +1524,7 @@
   },
   "ranks": [
    [
-    0,
+    1,
     "Spark"
    ],
    [
@@ -1532,7 +1532,7 @@
     "Ember"
    ],
    [
-    60,
+    50,
     "Flame"
    ],
    [
@@ -1540,51 +1540,51 @@
     "Torch"
    ],
    [
-    150,
+    200,
     "Lantern"
    ],
    [
-    220,
+    300,
     "Hearth"
    ],
    [
-    300,
+    450,
     "Beacon"
    ],
    [
-    400,
+    600,
     "Bonfire"
    ],
    [
-    520,
+    800,
     "Lighthouse"
    ],
    [
-    650,
+    1000,
     "Blaze"
    ],
    [
-    780,
+    1300,
     "Sun"
    ],
    [
-    877,
+    1600,
     "Radiant"
    ],
    [
-    1100,
+    2000,
     "Aurora"
    ],
    [
-    1500,
+    2400,
     "Meridian"
    ],
    [
-    2000,
+    2800,
     "Empyrean"
    ],
    [
-    2500,
+    3200,
     "Daylight"
    ]
   ],
@@ -1611,12 +1611,12 @@
     [
      "bronze",
      "Bronze",
-     5
+     10
     ],
     [
      "silver",
      "Silver",
-     15
+     50
     ],
     [
      "gold",
@@ -2029,7 +2029,7 @@
     "Good to have you here. Now, one thing.",
     "Momentum is yours to keep. One today keeps it."
    ],
-   "next": "Next: do one of the three below.",
+   "next": "Next: one of the three at the top of this page.",
    "nextLong": "Next: ten minutes on a long skill.",
    "done": "That is today. Anything more is a gift.",
    "run": "days in a row",

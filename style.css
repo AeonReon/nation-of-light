@@ -1133,3 +1133,40 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 
 /* the button we want pressed is the one under the thumb (v44) */
 .pick .pbtns .btn.sm.wide{flex:1 1 auto}
+
+/* ---- the thin bar, and the day card at the foot (v48) ----
+   His note: the home page had drifted from its purpose, which is to get you
+   doing something immediately. So the top is one thin bar you read in a second,
+   the three things to do sit straight under it, and everything about days and
+   streaks moved to the bottom. */
+.thinbar{display:block;width:100%;text-align:left;background:var(--card);border-radius:16px;
+  padding:11px 14px 12px;box-shadow:var(--shadow),inset 0 0 0 1.4px rgba(201,162,39,.42);
+  transition:transform .18s var(--spring)}
+.thinbar:active{transform:scale(.99)}
+.tb-top{display:flex;align-items:baseline;gap:7px;margin-bottom:8px}
+.tb-top b{font-family:var(--display);font-weight:600;font-size:23px;line-height:1;color:var(--ink)}
+.tb-lbl{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+.tb-rank{font-family:var(--display);font-weight:600;font-size:17px;color:var(--gold-deep);margin-left:auto}
+.tb-top em{font-style:normal;font-size:12px;color:var(--ink-soft);white-space:nowrap}
+.tb-top em b{font-size:12px;font-family:var(--sans);font-weight:700;color:var(--ink)}
+.tb-chev{font-style:normal;font-size:17px;line-height:1;color:var(--gold-deep);flex:none}
+.tb-track{display:block;height:6px;border-radius:3px;background:var(--ivory-2);overflow:hidden}
+.tb-track i{display:block;height:100%;border-radius:3px;
+  background:linear-gradient(90deg,var(--gold-lt),var(--gold));transition:width .8s var(--spring)}
+
+.daycard{display:block;width:100%;text-align:left;gap:0;transition:transform .18s var(--spring)}
+.daycard:active{transform:scale(.99)}
+.dc-top{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:10px}
+.dc-n b{display:block;font-family:var(--display);font-size:30px;font-weight:600;line-height:.95;color:var(--ink)}
+.dc-n small,.dc-t small{display:block;font-size:10px;letter-spacing:.09em;text-transform:uppercase;
+  font-weight:700;color:var(--ink-faint);margin-top:4px}
+.dc-t{text-align:right}
+.dc-t strong{display:block;font-family:var(--display);font-size:20px;font-weight:600;line-height:1;color:var(--gold-deep)}
+.daycard .daywrap.home{margin-top:11px}
+.daycard .ticks{margin-top:9px}
+.daycard .nextp{margin:8px 0 0}
+.daycard .runcap{margin-top:8px}
+.homepunch{margin:4px 6px 2px;font-family:var(--display);font-weight:500;font-size:16.5px;
+  line-height:1.35;color:var(--ink);text-align:center}
+.kidname{margin:2px 6px -2px;font-size:11px;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--gold-deep)}
