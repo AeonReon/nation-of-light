@@ -745,7 +745,7 @@
     const G = C.school.goal || { n: 3 }, t = today(); if (dayCount() < G.n || S.school.celebrated === t) { paintDay(); return; }
     S.school.celebrated = t; save(); paintDay();
     setTimeout(() => { hush(); sfx('wreath'); shower(); if (inScene()) { sparks(); PORTICO.flare(); }
-      const ask = () => { if (!S.school.promise || S.school.promise.made !== t) setTimeout(askPromise, 800); };
+      const ask = () => { const tm = S.school.tomorrow; if (!tm || tm.on !== t) setTimeout(askPromise, 800); };
       if (saySlot('dayDone', ask)) return;
       const hers = (S.school.visits || 0) % 2 === 0;
       speakSchool(hers ? [{ who: 'aurelia', id: 'ui-day', t: C.voice['day'] }] : [{ who: 'marcus', id: 'c-day' }], ask);
@@ -770,7 +770,6 @@
       if (!$('stage').classList.contains('arrive')) return;
       /* an open promise outranks anything else either of them could say */
       if (quiet) { speakSchool(lines); return; }
-      if (promiseStep() && saySlot('promiseOpen')) return;
       if (!saySlot('arrive')) speakSchool(lines);
     }, 1500);
     if (S.school.lastVisit !== today()) S.school.prevVisit = S.school.lastVisit || null;
@@ -969,11 +968,6 @@
     const kidCard = isKid() ? `<div class="acard kidcard"><span class="eyebrow">${fmt1(KID.forTitle || 'For {name}, from four', { name: kidName() })}</span><p class="lede">${KID.forLede || ''}</p>` +
       littleTracks().map(tr => { const c = catOf(tr), s = nextStep(tr), n = trackDone(tr); return s ? `<button class="crow" style="--c:${c.accent};--c2:${c.accent2}" data-step="${skey(tr, s)}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${s.test}</small></span><i class="cprog"><b style="width:${Math.round(n / tr.steps.length * 100)}%"></b></i></button>`
         : `<div class="crow done" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${(C.school.track || {}).finished || 'Finished'}</small></span></div>`; }).join('') + '</div>' : '';
-    /* the promise, first — he named it himself last night */
-    const prs = promiseStep();
-    if (prs) { const pk = skey(prs[0], prs[1]);
-      for (let i = picks.length - 1; i >= 0; i--) if (picks[i] && skey(picks[i][0], picks[i][1]) === pk) picks.splice(i, 1);
-      picks.unshift(prs); }
     list.innerHTML = whoStrip + thinBar() +
       (isKid() ? `<p class="kidname">${fmt1(KID.homeTitle || "{name}'s day", { name: kidName() })}</p>` : '') +
       `<div class="acard todaycard"><span class="eyebrow">${P.todayTitle || 'Three for today'}</span>${P.todayLede ? `<p class="lede">${P.todayLede}</p>` : ''}` +
@@ -1060,10 +1054,15 @@
     toNextMax: (v, s) => s.next && s.toNext <= v,
     doneTodayMin: (v, s) => s.doneToday >= v, doneTodayMax: (v, s) => s.doneToday <= v,
     hasLong: (v, s) => !!s.hasLong === v, hourMin: (v, s) => s.hour >= v, hourMax: (v, s) => s.hour < v,
-    first: (v, s) => !!s.first === v, hasPromise: (v, s) => !!s.promise === v,
+    first: (v, s) => !!s.first === v, saidYes: (v, s) => !!s.saidYes === v,
+    /* what he just did — so they can talk about the SKILL rather than about
+       him. "They can talk about the skill they're building right now, even if
+       it's cooking: something praising how nice it is to be around people who
+       can make good food." */
+    room: (v, s) => s.room === v, size: (v, s) => s.size === v, kind: (v, s) => s.kind === v,
   };
   const dayGap = (a, b) => Math.round((Date.parse(b + 'T12:00:00') - Date.parse(a + 'T12:00:00')) / 864e5);
-  function sayState() {
+  function sayState(ctx) {
     /* prevVisit, not lastVisit: arriving stamps today the moment you get here,
        so reading lastVisit when the line is chosen 1500ms later would always
        say the gap was nothing and "there you are, it has been a while" could
@@ -1073,43 +1072,62 @@
       visits: S.school.visits || 0, gap: lv ? dayGap(lv, today()) : 999,
       run: run.cur, best: run.best, doneToday: dayCount(), hasLong: projects().length > 0,
       hour: new Date().getHours(), first: (S.school.visits || 0) <= 1,
-      promise: promiseText(), name: isKid() ? kidName() : '' };
+      saidYes: saidYesterday(), name: isKid() ? kidName() : '',
+      room: (ctx && ctx.room) || null, size: (ctx && ctx.size) || null, kind: (ctx && ctx.kind) || null,
+      track: (ctx && ctx.track) || '', roomName: (ctx && ctx.roomName) || '' };
   }
   const fillSay = (t, s) => String(t).replace(/\{(\w+)\}/g, (m0, k) =>
     k === 'n' ? (s.toNext || s.p) : (s[k] !== undefined && s[k] !== null ? s[k] : m0));
-  function pickSay(slot, who) {
-    const all = (C.school.says || []).filter(l => l.slot === slot && (!who || l.who === who));
+  function pickSay(slot, ctx) {
+    const all = (C.school.says || []).filter(l => l.slot === slot);
     if (!all.length) return null;
-    const st = sayState(); S.school.said2 = S.school.said2 || {};
+    const st = sayState(ctx); S.school.said2 = S.school.said2 || {};
     const said = S.school.said2;
-    const fit = all.filter(l => {
+    let fit = all.filter(l => {
       if (l.once && said[l.id]) return false;
       const w = l.when || {};
       return Object.keys(w).every(k => !CONDS[k] || CONDS[k](w[k], st));
     });
     if (!fit.length) return null;
+    /* Weighting alone is not enough. When only one line sits at the top weight
+       — "you have already done three today", say — it wins every single time
+       and you hear it six arrivals running, which is exactly the scripted-robot
+       feeling. So anything said in the last four turns of this slot steps
+       aside, unless stepping aside would leave nothing. */
+    S.school.recent = S.school.recent || {};
+    const recent = S.school.recent[slot] || [];
+    const fresh = fit.filter(l => recent.indexOf(l.id) < 0);
+    if (fresh.length) fit = fresh;
     /* Count of conditions is not specificity. "You have visited ten times" is
        true almost always; "you have been away three weeks" is true almost
        never, and it is the one worth saying. So each condition is weighted by
        how rarely it holds, and a once-ever line beats everything. */
-    const W = { first: 9, gapMin: 6, gapMax: 4, toNextMax: 6, runMin: 4, hasPromise: 5,
+    const W = { first: 9, gapMin: 6, gapMax: 4, toNextMax: 6, runMin: 4, saidYes: 5,
+      room: 5, size: 3, kind: 3,
       doneTodayMin: 3, doneTodayMax: 3, hourMin: 3, hourMax: 3, hasLong: 2,
       visitsMin: 1, visitsMax: 1, pointsMin: 1, pointsMax: 1 };
     const spec = l => Object.keys(l.when || {}).reduce((n, k) => n + (W[k] || 1), 0) + (l.once ? 20 : 0);
     const top = Math.max.apply(null, fit.map(spec));
     const best = fit.filter(l => spec(l) === top).sort((a, b) => (said[a.id] || 0) - (said[b.id] || 0));
     const pick = best[0];
-    said[pick.id] = Date.now(); save();
-    return { id: pick.id, who: pick.who, t: fillSay(pick.t, st) };
+    said[pick.id] = Date.now();
+    S.school.recent[slot] = [pick.id].concat(recent).slice(0, 4);
+    save();
+    const out = { id: pick.id, who: pick.who, t: fillSay(pick.t, st) };
+    /* a line can carry the other one's answer. Two of them talking is worth
+       more than either of them announcing. */
+    if (pick.reply) out.reply = { id: pick.reply.id, who: pick.reply.who, t: fillSay(pick.reply.t, st) };
+    return out;
   }
   /* one of them speaks for this moment, whichever of the two has the better
      line for it. Falls through to whatever the caller had before if neither. */
-  function saySlot(slot, after) {
+  const asLine = l => l.who === 'marcus' ? { who: 'marcus', id: l.id, t: l.t }
+    : { who: 'aurelia', id: 'ui-' + l.id, t: l.t };
+  function saySlot(slot, after, ctx) {
     if (quietFolk()) { if (after) after(); return false; }
-    const ln = pickSay(slot);
+    const ln = pickSay(slot, ctx);
     if (!ln) { if (after) after(); return false; }
-    speakSchool([ln.who === 'marcus' ? { who: 'marcus', id: ln.id, t: ln.t }
-      : { who: 'aurelia', id: 'ui-' + ln.id, t: ln.t }], after);
+    speakSchool(ln.reply ? [asLine(ln), asLine(ln.reply)] : [asLine(ln)], after);
     return true;
   }
 
@@ -1118,36 +1136,22 @@
      asks what you will do tomorrow. You name it, it is pinned at the top of
      tomorrow's list, and when you do it they say so. An open loop with a person
      in it is worth more than any number of encouraging lines. */
-  const promiseOf = () => S.school.promise || null;
-  function promiseStep() {
-    const pr = promiseOf(); if (!pr || !pr.key) return null;
-    if (pr.made === today()) return null;        // made this evening; it is for tomorrow
-    const r = findStep(pr.key); if (!r) return null;
-    return sdone(pr.key) ? null : r;
-  }
-  function promiseText() {
-    const r = promiseStep(); if (!r) return null;
-    return r[0].name.toLowerCase();
-  }
+  /* He said he would come back, yesterday. That is the only thing carried
+     forward — not a plan, not a chosen activity. The surprise of what is
+     waiting is half of why he opens it. */
+  const saidYesterday = () => { const t = S.school.tomorrow;
+    return !!(t && t.said === 'yes' && t.on && dayGap(t.on, today()) === 1); };
   function askPromise() {
-    const K = C.school.ask || {}; if (!K.title) return;
-    const opts = todayPicks('later').concat(todayPicks()).filter(x => x).slice(0, 3);
-    if (!opts.length) return;
+    const K = C.school.ask || {}; if (!K.say) return;
     const v = veil(`<div class="panel sheet askcard">
-      <div class="eyebrow"><i></i>${K.title}</div><h2>${K.say}</h2>
+      <div class="eyebrow"><i></i>${K.title || ''}</div><h2>${K.say}</h2>
       <p class="lede">${K.lede || ''}</p>
-      <div class="asklist">${opts.map(([tr, st]) => { const c = catOf(tr);
-        return `<button class="askrow" style="--c:${c.accent}" data-pr="${skey(tr, st)}">
-          <img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'">
-          <span><strong>${tr.name}</strong><small>${st.test}</small></span></button>`; }).join('')}
-        <button class="askrow surprise" data-pr="*"><i>&#10022;</i><span><strong>${K.surprise || 'Surprise me'}</strong></span></button></div>
-      <button class="what dark" id="asknot">${K.skip || 'Not tonight'}</button></div>`, 'light');
+      <div class="row"><button class="btn btn-gold" data-tm="yes" style="flex:1.3">${K.yes || 'I will be back'}</button>
+        <button class="btn btn-ghost" data-tm="maybe">${K.maybe || 'We will see'}</button></div></div>`, 'light');
     backBtn(v, () => closeVeil());
-    v.querySelector('#asknot').addEventListener('click', () => { sfx('tap'); closeVeil(); });
-    v.querySelectorAll('[data-pr]').forEach(b => b.addEventListener('click', () => { sfx('tap');
-      const k = b.dataset.pr;
-      S.school.promise = { key: k === '*' ? null : k, made: today(), surprise: k === '*' }; save();
-      closeVeil(() => { rerender(); toast(k === '*' ? (K.madeSurprise || '') : (K.made || '')); });
+    v.querySelectorAll('[data-tm]').forEach(b => b.addEventListener('click', () => { sfx('tap');
+      S.school.tomorrow = { said: b.dataset.tm, on: today() }; save();
+      closeVeil(() => toast(b.dataset.tm === 'yes' ? (K.gotYes || '') : (K.gotMaybe || '')));
     }));
   }
   function speakSchool(lines, after) {
@@ -1796,11 +1800,9 @@
       const before = rankOf(points()).name, awBefore = awards().filter(x => x.earned).length, hadIds = new Set(awards().filter(x => x.earned).map(x => x.id));
       S.school.done[k] = new Date().toISOString(); S.school.points++;
       if (rusty) S.school.refresh = (S.school.refresh || 0) + 1;   // a re-earned point; the total only ever climbs
-      /* The promise is settled HERE, at the write — not down in one of the
-         celebration branches, because a tick that also wins a trophy returns
-         early and the promise would have been left hanging. */
-      const keptPromise = !!(S.school.promise && S.school.promise.key === k);
-      if (keptPromise) S.school.promise = null;
+      const rc = catOf(tr) || {};
+      const sayCtx = { room: rc.id, roomName: rc.name, track: tr.name,
+        size: tr.size, kind: (st && st.kind) || 'skill' };
       const t = today(); S.days[t] = (S.days[t] || 0) + 1; save();
       sfx('done'); sparks(); RIG.smile(1.8); if (ARIG && !ARIG.hidden) ARIG.smile(1.8); paintSchoolCount(); checkDay();
       const inScene = inSceneNow();
@@ -1811,7 +1813,7 @@
       const both = n % 5 === 0;
       const won = awards().find(x => x.earned && !hadIds.has(x.id));
       if (won) { closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); setTimeout(() => trophyShow(won), 450); }); return; }
-      if (saySlot(keptPromise ? 'promiseKept' : (up ? 'rank' : 'done'))) {
+      if (saySlot(up ? 'rank' : 'done', null, sayCtx)) {
         closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool();
           if (where !== 'track') setTimeout(() => afterStep(tr), 900); });
         return;

@@ -1,5 +1,5 @@
 {
- "version": 52,
+ "version": 53,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -568,6 +568,194 @@
    {
     "id": "s-m-po1",
     "t": "{promise}. You named it yourself. Nobody else is going to do it for you."
+   },
+   {
+    "id": "s-v1",
+    "t": "The body is the one instrument you cannot put down and pick up again later. Tune it while you have it."
+   },
+   {
+    "id": "s-v3",
+    "t": "Strength is not vanity. It is the difference between needing help and being the one who gives it."
+   },
+   {
+    "id": "s-v7",
+    "t": "Cold water asks you a question every single time, and you have to answer it with your body, not your opinion."
+   },
+   {
+    "id": "s-v10",
+    "t": "A man who can make fire, find north and stay dry is not frightened of an evening outdoors. Very few things buy that much calm."
+   },
+   {
+    "id": "s-v13",
+    "t": "Everything above you has been there a long while and will be there after. There is a proper size to feel, standing under it."
+   },
+   {
+    "id": "s-v14",
+    "t": "A sharp mind is not a gift. It is a habit, and habits are built by people who bother."
+   },
+   {
+    "id": "s-v18",
+    "t": "A man who says exactly what he means is trusted more than a man who says it beautifully."
+   },
+   {
+    "id": "s-v21",
+    "t": "The room does not belong to the loudest. It belongs to whoever was willing to speak when it was awkward."
+   },
+   {
+    "id": "s-v24",
+    "t": "To make something with your hands is to find out whether you actually understood it."
+   },
+   {
+    "id": "s-v27",
+    "t": "Play badly in front of people early. It costs you nothing and it buys you years."
+   },
+   {
+    "id": "s-v30",
+    "t": "To fool a man kindly is to give him back a little wonder. That is not a small gift."
+   },
+   {
+    "id": "s-v32",
+    "t": "Feeding people well is one of the oldest ways there is of saying you are glad they came."
+   },
+   {
+    "id": "s-v34",
+    "t": "Money is a tool and most people never learn the handle from the blade."
+   },
+   {
+    "id": "s-v38",
+    "t": "We shape our buildings and then live inside the shape. It is worth knowing what you are asking for."
+   },
+   {
+    "id": "s-v40",
+    "t": "A man who can tell a good argument from a loud one is very hard to push around."
+   },
+   {
+    "id": "s-v42",
+    "t": "Courage is the only one of these that costs nothing and is available this afternoon."
+   },
+   {
+    "id": "s-v45",
+    "t": "Almost everything is negotiable. The people who know that live differently from the people who do not."
+   },
+   {
+    "id": "s-v48",
+    "t": "A man carries himself as he believes he is entitled to. Change the walk and the belief follows it, oddly enough."
+   },
+   {
+    "id": "s-v50",
+    "t": "A house is a machine that needs a keeper. Be the keeper and it costs you a tenth of what it costs everybody else."
+   },
+   {
+    "id": "s-v52",
+    "t": "You will be remembered for this room and almost nothing else."
+   },
+   {
+    "id": "s-v54",
+    "t": "A man who can sit still with himself is not at anybody else's mercy."
+   },
+   {
+    "id": "s-v58",
+    "t": "Order is not tidiness. It is knowing where everything is so that nothing is quietly costing you."
+   },
+   {
+    "id": "s-f1",
+    "t": "A year is going to pass whatever you do with it. The only question is what you are holding at the end of it."
+   },
+   {
+    "id": "s-f3",
+    "t": "Small things done daily outlast large things done once. That is not encouragement. It is arithmetic."
+   },
+   {
+    "id": "s-f6",
+    "t": "Most men wait for a season that never arrives. You have stopped waiting. That is already the rare part."
+   },
+   {
+    "id": "s-f8",
+    "t": "You are not collecting abilities. You are becoming somebody for whom these things are ordinary."
+   },
+   {
+    "id": "s-f11",
+    "t": "Nothing here is urgent, and that is exactly why it is the thing that changes everything."
+   },
+   {
+    "id": "s-i1",
+    "t": "Anyone can intend. You have gone past intending, which is where nearly everybody stops."
+   },
+   {
+    "id": "s-i3",
+    "t": "You did not need managing today. Remember that the next time you doubt yourself."
+   },
+   {
+    "id": "s-i6",
+    "t": "You are building the habit of being the kind of man who does what he said. Everything else is downstream of that one."
+   },
+   {
+    "id": "s-i8",
+    "t": "The people who go furthest are rarely the cleverest. They are the ones still here in month three."
+   },
+   {
+    "id": "s-h1",
+    "t": "You will sleep better for this. Nobody quite believes that until it happens to them."
+   },
+   {
+    "id": "s-h4",
+    "t": "Restlessness usually means unused capacity. You have just used some."
+   },
+   {
+    "id": "s-x0b",
+    "t": "I have had two thousand years of practice at turning up. Let us see how you get on."
+   },
+   {
+    "id": "s-x1a",
+    "t": "Somebody is back."
+   },
+   {
+    "id": "s-x2b",
+    "t": "I saw it. Say nothing and let them do another."
+   },
+   {
+    "id": "s-x3a",
+    "t": "That is the third today."
+   },
+   {
+    "id": "s-x4b",
+    "t": "Three again. It has stopped being news, which is the best thing about it."
+   },
+   {
+    "id": "s-x5a",
+    "t": "The day is answered for."
+   },
+   {
+    "id": "s-x6b",
+    "t": "It usually is, with this one."
+   },
+   {
+    "id": "s-x7b",
+    "t": "Yesterday is gone. Today is the only one that was ever available."
+   },
+   {
+    "id": "s-x8a",
+    "t": "You look like somebody with ten minutes."
+   },
+   {
+    "id": "s-x9b",
+    "t": "I make of them that they came back. I do not need to make anything else of anybody."
+   },
+   {
+    "id": "s-b1",
+    "t": "Back. Good. Nothing needs explaining."
+   },
+   {
+    "id": "s-b3",
+    "t": "You are here. That is the only fact that matters and it is a good one."
+   },
+   {
+    "id": "s-b5",
+    "t": "Welcome back. We keep no ledger of days here, only of things done."
+   },
+   {
+    "id": "s-b7",
+    "t": "You said you would come. You came. That is a small thing that most people cannot manage."
    }
   ]
  },
@@ -1099,7 +1287,77 @@
   "s-a-pk2": "That is the one you promised. Keeping your word to yourself is the rarest of all of these.",
   "s-a-po1": "You said you would do {promise}. It is still there, first on your list.",
   "s-a-po2": "I kept {promise} at the top for you.",
-  "s-ask": "Before you go — what will you do tomorrow?"
+  "s-ask": "Will you be back tomorrow?",
+  "s-v0": "A body that does what you ask it to is a quiet kind of freedom. Most people lose it by degrees and never notice the day it went.",
+  "s-v2": "There is a particular pleasure in moving well. You will feel it long before anybody else can see it.",
+  "s-v4": "Every year after this one, this will matter more than it did. Almost nothing else in the school is like that.",
+  "s-v5": "You will feel this within a fortnight — stairs, shopping, getting up off the floor. Small things that stop being small.",
+  "s-v6": "Water is half the world. People who are easy in it get a whole extra country to live in.",
+  "s-v8": "There is nobody who regrets learning to swim. Not one person, ever.",
+  "s-v9": "Knowing what is around you turns a walk into a conversation. The same field, completely different afternoon.",
+  "s-v11": "Children who grow up able to be outside stay able to be outside. It is one of the few things that keeps.",
+  "s-v12": "Look up often enough and the sky stops being weather and starts being a clock, a map and a calendar.",
+  "s-v15": "The pleasure of working something out yourself does not wear off. It is the same at fifty as at nine.",
+  "s-v16": "You are training the one thing nobody can take off you and nobody can lend you.",
+  "s-v17": "Language is the door into another whole way of seeing. Nobody comes back from that unchanged.",
+  "s-v19": "Reading well is the cheapest advantage there is, and almost nobody takes it up.",
+  "s-v20": "People who can speak up get asked. That is most of what opportunity actually is.",
+  "s-v22": "This one changes your life faster than any other room here, and it needs nothing but nerve.",
+  "s-v23": "Somebody who can make one real thing looks at everything differently afterwards. They see decisions where other people see furniture.",
+  "s-v25": "Things you made are the ones still in the house in twenty years.",
+  "s-v26": "Music is the one skill people ask you to use at every gathering for the rest of your life.",
+  "s-v28": "Nobody has ever been sorry they learned. A great many people are sorry they stopped.",
+  "s-v29": "One good trick and you are never stuck for something to do with a child again.",
+  "s-v31": "It is a genuinely lovely thing to be around somebody who can cook. People come back to those houses.",
+  "s-v33": "Three meals a day for the rest of your life. There is no skill in this whole school you will use more often.",
+  "s-v35": "Understanding money early is worth more than earning a lot of it later. It compounds, which is the whole joke.",
+  "s-v36": "You are learning the thing most adults quietly wish somebody had taught them.",
+  "s-v37": "Once you can see why a street feels good, every walk you take is a different walk.",
+  "s-v39": "These are the questions people have been chewing on for two and a half thousand years. You are now in that conversation.",
+  "s-v41": "Thinking on your own is becoming rare. Rare things are valuable — that is not a coincidence.",
+  "s-v43": "Almost everything people call luck is somebody having asked.",
+  "s-v44": "Each one of these makes the next one smaller. That is the whole mechanism, and it is reliable.",
+  "s-v46": "One conversation can be worth a month of work. You are learning which conversation.",
+  "s-v47": "Nobody is going to give you permission. You walk in, and after a while you stop noticing that you did.",
+  "s-v49": "Somebody who can fix things is welcome everywhere and never quite stuck.",
+  "s-v51": "This is the room that makes the others worth having. Skills are only worth what they are pointed at.",
+  "s-v53": "People can feel who is paying attention to them. It is not subtle and it is not forgotten.",
+  "s-v55": "Attention is the thing being taken from everybody, all day. Taking it back is close to a superpower now.",
+  "s-v56": "Sleep, stillness and doing hard things. Get these three and everything else in here gets easier.",
+  "s-v57": "A clear room is a clear hour. It is a strange trade and it works every time.",
+  "s-f0": "Picture yourself a year from now with twenty of these done. Not one of them is dramatic. Together they are a different person.",
+  "s-f2": "In six months somebody will ask how you can do that, and you will have to think back to remember when you could not.",
+  "s-f4": "There will be an evening, not far from now, where you do something without thinking that you cannot do today.",
+  "s-f5": "The person you will be in two years is being built this week, out of things this small.",
+  "s-f7": "One day you will be the one somebody asks to teach them. That is closer than you think.",
+  "s-f9": "Imagine the version of you who can cook, swim, speak up and fix things. That is not a fantasy. It is a list, and you are on it.",
+  "s-f10": "The good part is not the finished skill. It is the year of afternoons you will have enjoyed getting there.",
+  "s-i0": "You are in a very small group of people who actually do the thing instead of reading about it.",
+  "s-i2": "Ambitious people are not the ones with the biggest plans. They are the ones with the shortest gap between deciding and starting.",
+  "s-i4": "Somebody who keeps choosing the harder version becomes somebody who finds most things easy. It works out backwards like that.",
+  "s-i5": "This is what a serious person looks like from the inside. Unremarkable, and then suddenly not.",
+  "s-i7": "You are not doing this because somebody is watching. That is the whole difference and you should know it about yourself.",
+  "s-i9": "Notice that you did that without needing to feel like it. That is a skill and you are getting good at it.",
+  "s-i10": "A person who takes action changes what they think is possible. It goes in that order, not the other way round.",
+  "s-h0": "A fortnight in, most people notice they feel different before they can point at why. Watch for that.",
+  "s-h2": "There is a lightness that comes from having done something before lunch. You are carrying it now whether you have noticed or not.",
+  "s-h3": "The good mood you are in is not a coincidence. Doing things does that, reliably, and almost nobody uses it.",
+  "s-h5": "Notice how you feel now against how you felt before you opened this. That gap is the whole argument.",
+  "s-h6": "Weeks of this and the change stops being a feeling and starts being your ordinary life.",
+  "s-x0a": "He was here before you, you know. He is always here before you.",
+  "s-x1b": "I did say they would be.",
+  "s-x2a": "Did you see that one?",
+  "s-x3b": "And not one of them was owed to us. Good.",
+  "s-x4a": "Three again.",
+  "s-x5b": "Then let it go. There is another one tomorrow and it will keep.",
+  "s-x6a": "I was wondering whether today would be the day.",
+  "s-x7a": "That is one more than yesterday.",
+  "s-x8b": "He means that kindly. Ten minutes is all it takes.",
+  "s-x9a": "What do you make of them?",
+  "s-b0": "There you are! I was hoping.",
+  "s-b2": "Oh good, you are back. Straight in, then.",
+  "s-b4": "There you are. I am genuinely glad. Everything is exactly where you left it.",
+  "s-b6": "You said you would be back, and here you are. I like that about you."
  },
  "cover": {
   "em": "Nation of",
@@ -2562,53 +2820,1025 @@
     "t": "Repetition is not glamorous. Neither is anybody who is any good."
    },
    {
-    "id": "s-a-pk1",
+    "id": "s-v0",
     "who": "aurelia",
-    "slot": "promiseKept",
-    "t": "You said you would, and you did. I was watching for it."
+    "slot": "done",
+    "t": "A body that does what you ask it to is a quiet kind of freedom. Most people lose it by degrees and never notice the day it went.",
+    "when": {
+     "room": "body"
+    }
    },
    {
-    "id": "s-a-pk2",
-    "who": "aurelia",
-    "slot": "promiseKept",
-    "t": "That is the one you promised. Keeping your word to yourself is the rarest of all of these."
-   },
-   {
-    "id": "s-m-pk1",
+    "id": "s-v1",
     "who": "marcus",
-    "slot": "promiseKept",
-    "t": "You said it and then you did it. Very few people are the same on both days."
+    "slot": "done",
+    "t": "The body is the one instrument you cannot put down and pick up again later. Tune it while you have it.",
+    "when": {
+     "room": "body"
+    }
    },
    {
-    "id": "s-a-po1",
+    "id": "s-v2",
     "who": "aurelia",
-    "slot": "promiseOpen",
-    "t": "You said you would do {promise}. It is still there, first on your list."
+    "slot": "done",
+    "t": "There is a particular pleasure in moving well. You will feel it long before anybody else can see it.",
+    "when": {
+     "room": "body"
+    }
    },
    {
-    "id": "s-m-po1",
+    "id": "s-v3",
     "who": "marcus",
-    "slot": "promiseOpen",
-    "t": "{promise}. You named it yourself. Nobody else is going to do it for you."
+    "slot": "done",
+    "t": "Strength is not vanity. It is the difference between needing help and being the one who gives it.",
+    "when": {
+     "room": "fit"
+    }
    },
    {
-    "id": "s-a-po2",
+    "id": "s-v4",
     "who": "aurelia",
-    "slot": "promiseOpen",
-    "t": "I kept {promise} at the top for you."
+    "slot": "done",
+    "t": "Every year after this one, this will matter more than it did. Almost nothing else in the school is like that.",
+    "when": {
+     "room": "fit"
+    }
+   },
+   {
+    "id": "s-v5",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "You will feel this within a fortnight — stairs, shopping, getting up off the floor. Small things that stop being small.",
+    "when": {
+     "room": "fit"
+    }
+   },
+   {
+    "id": "s-v6",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Water is half the world. People who are easy in it get a whole extra country to live in.",
+    "when": {
+     "room": "water"
+    }
+   },
+   {
+    "id": "s-v7",
+    "who": "marcus",
+    "slot": "done",
+    "t": "Cold water asks you a question every single time, and you have to answer it with your body, not your opinion.",
+    "when": {
+     "room": "water"
+    }
+   },
+   {
+    "id": "s-v8",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "There is nobody who regrets learning to swim. Not one person, ever.",
+    "when": {
+     "room": "water"
+    }
+   },
+   {
+    "id": "s-v9",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Knowing what is around you turns a walk into a conversation. The same field, completely different afternoon.",
+    "when": {
+     "room": "wild"
+    }
+   },
+   {
+    "id": "s-v10",
+    "who": "marcus",
+    "slot": "done",
+    "t": "A man who can make fire, find north and stay dry is not frightened of an evening outdoors. Very few things buy that much calm.",
+    "when": {
+     "room": "wild"
+    }
+   },
+   {
+    "id": "s-v11",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Children who grow up able to be outside stay able to be outside. It is one of the few things that keeps.",
+    "when": {
+     "room": "wild"
+    }
+   },
+   {
+    "id": "s-v12",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Look up often enough and the sky stops being weather and starts being a clock, a map and a calendar.",
+    "when": {
+     "room": "sky"
+    }
+   },
+   {
+    "id": "s-v13",
+    "who": "marcus",
+    "slot": "done",
+    "t": "Everything above you has been there a long while and will be there after. There is a proper size to feel, standing under it.",
+    "when": {
+     "room": "sky"
+    }
+   },
+   {
+    "id": "s-v14",
+    "who": "marcus",
+    "slot": "done",
+    "t": "A sharp mind is not a gift. It is a habit, and habits are built by people who bother.",
+    "when": {
+     "room": "mind"
+    }
+   },
+   {
+    "id": "s-v15",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "The pleasure of working something out yourself does not wear off. It is the same at fifty as at nine.",
+    "when": {
+     "room": "mind"
+    }
+   },
+   {
+    "id": "s-v16",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "You are training the one thing nobody can take off you and nobody can lend you.",
+    "when": {
+     "room": "mind"
+    }
+   },
+   {
+    "id": "s-v17",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Language is the door into another whole way of seeing. Nobody comes back from that unchanged.",
+    "when": {
+     "room": "words"
+    }
+   },
+   {
+    "id": "s-v18",
+    "who": "marcus",
+    "slot": "done",
+    "t": "A man who says exactly what he means is trusted more than a man who says it beautifully.",
+    "when": {
+     "room": "words"
+    }
+   },
+   {
+    "id": "s-v19",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Reading well is the cheapest advantage there is, and almost nobody takes it up.",
+    "when": {
+     "room": "words"
+    }
+   },
+   {
+    "id": "s-v20",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "People who can speak up get asked. That is most of what opportunity actually is.",
+    "when": {
+     "room": "speak"
+    }
+   },
+   {
+    "id": "s-v21",
+    "who": "marcus",
+    "slot": "done",
+    "t": "The room does not belong to the loudest. It belongs to whoever was willing to speak when it was awkward.",
+    "when": {
+     "room": "speak"
+    }
+   },
+   {
+    "id": "s-v22",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "This one changes your life faster than any other room here, and it needs nothing but nerve.",
+    "when": {
+     "room": "speak"
+    }
+   },
+   {
+    "id": "s-v23",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Somebody who can make one real thing looks at everything differently afterwards. They see decisions where other people see furniture.",
+    "when": {
+     "room": "make"
+    }
+   },
+   {
+    "id": "s-v24",
+    "who": "marcus",
+    "slot": "done",
+    "t": "To make something with your hands is to find out whether you actually understood it.",
+    "when": {
+     "room": "make"
+    }
+   },
+   {
+    "id": "s-v25",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Things you made are the ones still in the house in twenty years.",
+    "when": {
+     "room": "make"
+    }
+   },
+   {
+    "id": "s-v26",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Music is the one skill people ask you to use at every gathering for the rest of your life.",
+    "when": {
+     "room": "music"
+    }
+   },
+   {
+    "id": "s-v27",
+    "who": "marcus",
+    "slot": "done",
+    "t": "Play badly in front of people early. It costs you nothing and it buys you years.",
+    "when": {
+     "room": "music"
+    }
+   },
+   {
+    "id": "s-v28",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Nobody has ever been sorry they learned. A great many people are sorry they stopped.",
+    "when": {
+     "room": "music"
+    }
+   },
+   {
+    "id": "s-v29",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "One good trick and you are never stuck for something to do with a child again.",
+    "when": {
+     "room": "magic"
+    }
+   },
+   {
+    "id": "s-v30",
+    "who": "marcus",
+    "slot": "done",
+    "t": "To fool a man kindly is to give him back a little wonder. That is not a small gift.",
+    "when": {
+     "room": "magic"
+    }
+   },
+   {
+    "id": "s-v31",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "It is a genuinely lovely thing to be around somebody who can cook. People come back to those houses.",
+    "when": {
+     "room": "food"
+    }
+   },
+   {
+    "id": "s-v32",
+    "who": "marcus",
+    "slot": "done",
+    "t": "Feeding people well is one of the oldest ways there is of saying you are glad they came.",
+    "when": {
+     "room": "food"
+    }
+   },
+   {
+    "id": "s-v33",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Three meals a day for the rest of your life. There is no skill in this whole school you will use more often.",
+    "when": {
+     "room": "food"
+    }
+   },
+   {
+    "id": "s-v34",
+    "who": "marcus",
+    "slot": "done",
+    "t": "Money is a tool and most people never learn the handle from the blade.",
+    "when": {
+     "room": "money"
+    }
+   },
+   {
+    "id": "s-v35",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Understanding money early is worth more than earning a lot of it later. It compounds, which is the whole joke.",
+    "when": {
+     "room": "money"
+    }
+   },
+   {
+    "id": "s-v36",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "You are learning the thing most adults quietly wish somebody had taught them.",
+    "when": {
+     "room": "money"
+    }
+   },
+   {
+    "id": "s-v37",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Once you can see why a street feels good, every walk you take is a different walk.",
+    "when": {
+     "room": "beauty"
+    }
+   },
+   {
+    "id": "s-v38",
+    "who": "marcus",
+    "slot": "done",
+    "t": "We shape our buildings and then live inside the shape. It is worth knowing what you are asking for.",
+    "when": {
+     "room": "beauty"
+    }
+   },
+   {
+    "id": "s-v39",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "These are the questions people have been chewing on for two and a half thousand years. You are now in that conversation.",
+    "when": {
+     "room": "classic"
+    }
+   },
+   {
+    "id": "s-v40",
+    "who": "marcus",
+    "slot": "done",
+    "t": "A man who can tell a good argument from a loud one is very hard to push around.",
+    "when": {
+     "room": "classic"
+    }
+   },
+   {
+    "id": "s-v41",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Thinking on your own is becoming rare. Rare things are valuable — that is not a coincidence.",
+    "when": {
+     "room": "classic"
+    }
+   },
+   {
+    "id": "s-v42",
+    "who": "marcus",
+    "slot": "done",
+    "t": "Courage is the only one of these that costs nothing and is available this afternoon.",
+    "when": {
+     "room": "nerve"
+    }
+   },
+   {
+    "id": "s-v43",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Almost everything people call luck is somebody having asked.",
+    "when": {
+     "room": "nerve"
+    }
+   },
+   {
+    "id": "s-v44",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Each one of these makes the next one smaller. That is the whole mechanism, and it is reliable.",
+    "when": {
+     "room": "nerve"
+    }
+   },
+   {
+    "id": "s-v45",
+    "who": "marcus",
+    "slot": "done",
+    "t": "Almost everything is negotiable. The people who know that live differently from the people who do not.",
+    "when": {
+     "room": "deal"
+    }
+   },
+   {
+    "id": "s-v46",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "One conversation can be worth a month of work. You are learning which conversation.",
+    "when": {
+     "room": "deal"
+    }
+   },
+   {
+    "id": "s-v47",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Nobody is going to give you permission. You walk in, and after a while you stop noticing that you did.",
+    "when": {
+     "room": "belong"
+    }
+   },
+   {
+    "id": "s-v48",
+    "who": "marcus",
+    "slot": "done",
+    "t": "A man carries himself as he believes he is entitled to. Change the walk and the belief follows it, oddly enough.",
+    "when": {
+     "room": "belong"
+    }
+   },
+   {
+    "id": "s-v49",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Somebody who can fix things is welcome everywhere and never quite stuck.",
+    "when": {
+     "room": "home"
+    }
+   },
+   {
+    "id": "s-v50",
+    "who": "marcus",
+    "slot": "done",
+    "t": "A house is a machine that needs a keeper. Be the keeper and it costs you a tenth of what it costs everybody else.",
+    "when": {
+     "room": "home"
+    }
+   },
+   {
+    "id": "s-v51",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "This is the room that makes the others worth having. Skills are only worth what they are pointed at.",
+    "when": {
+     "room": "care"
+    }
+   },
+   {
+    "id": "s-v52",
+    "who": "marcus",
+    "slot": "done",
+    "t": "You will be remembered for this room and almost nothing else.",
+    "when": {
+     "room": "care"
+    }
+   },
+   {
+    "id": "s-v53",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "People can feel who is paying attention to them. It is not subtle and it is not forgotten.",
+    "when": {
+     "room": "care"
+    }
+   },
+   {
+    "id": "s-v54",
+    "who": "marcus",
+    "slot": "done",
+    "t": "A man who can sit still with himself is not at anybody else's mercy.",
+    "when": {
+     "room": "calm"
+    }
+   },
+   {
+    "id": "s-v55",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Attention is the thing being taken from everybody, all day. Taking it back is close to a superpower now.",
+    "when": {
+     "room": "calm"
+    }
+   },
+   {
+    "id": "s-v56",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Sleep, stillness and doing hard things. Get these three and everything else in here gets easier.",
+    "when": {
+     "room": "calm"
+    }
+   },
+   {
+    "id": "s-v57",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "A clear room is a clear hour. It is a strange trade and it works every time.",
+    "when": {
+     "room": "order"
+    }
+   },
+   {
+    "id": "s-v58",
+    "who": "marcus",
+    "slot": "done",
+    "t": "Order is not tidiness. It is knowing where everything is so that nothing is quietly costing you.",
+    "when": {
+     "room": "order"
+    }
+   },
+   {
+    "id": "s-f0",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Picture yourself a year from now with twenty of these done. Not one of them is dramatic. Together they are a different person.",
+    "when": {
+     "pointsMin": 8
+    }
+   },
+   {
+    "id": "s-f1",
+    "who": "marcus",
+    "slot": "done",
+    "t": "A year is going to pass whatever you do with it. The only question is what you are holding at the end of it.",
+    "when": {
+     "pointsMin": 8
+    }
+   },
+   {
+    "id": "s-f2",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "In six months somebody will ask how you can do that, and you will have to think back to remember when you could not.",
+    "when": {
+     "pointsMin": 8
+    }
+   },
+   {
+    "id": "s-f3",
+    "who": "marcus",
+    "slot": "done",
+    "t": "Small things done daily outlast large things done once. That is not encouragement. It is arithmetic.",
+    "when": {
+     "pointsMin": 8
+    }
+   },
+   {
+    "id": "s-f4",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "There will be an evening, not far from now, where you do something without thinking that you cannot do today.",
+    "when": {
+     "pointsMin": 8
+    }
+   },
+   {
+    "id": "s-f5",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "The person you will be in two years is being built this week, out of things this small.",
+    "when": {
+     "pointsMin": 8
+    }
+   },
+   {
+    "id": "s-f6",
+    "who": "marcus",
+    "slot": "done",
+    "t": "Most men wait for a season that never arrives. You have stopped waiting. That is already the rare part.",
+    "when": {
+     "pointsMin": 8
+    }
+   },
+   {
+    "id": "s-f7",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "One day you will be the one somebody asks to teach them. That is closer than you think.",
+    "when": {
+     "pointsMin": 8
+    }
+   },
+   {
+    "id": "s-f8",
+    "who": "marcus",
+    "slot": "done",
+    "t": "You are not collecting abilities. You are becoming somebody for whom these things are ordinary.",
+    "when": {
+     "pointsMin": 8
+    }
+   },
+   {
+    "id": "s-f9",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Imagine the version of you who can cook, swim, speak up and fix things. That is not a fantasy. It is a list, and you are on it.",
+    "when": {
+     "pointsMin": 8
+    }
+   },
+   {
+    "id": "s-f10",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "The good part is not the finished skill. It is the year of afternoons you will have enjoyed getting there.",
+    "when": {
+     "pointsMin": 8
+    }
+   },
+   {
+    "id": "s-f11",
+    "who": "marcus",
+    "slot": "done",
+    "t": "Nothing here is urgent, and that is exactly why it is the thing that changes everything.",
+    "when": {
+     "pointsMin": 8
+    }
+   },
+   {
+    "id": "s-i0",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "You are in a very small group of people who actually do the thing instead of reading about it.",
+    "when": {
+     "pointsMin": 5
+    }
+   },
+   {
+    "id": "s-i1",
+    "who": "marcus",
+    "slot": "done",
+    "t": "Anyone can intend. You have gone past intending, which is where nearly everybody stops.",
+    "when": {
+     "pointsMin": 5
+    }
+   },
+   {
+    "id": "s-i2",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Ambitious people are not the ones with the biggest plans. They are the ones with the shortest gap between deciding and starting.",
+    "when": {
+     "pointsMin": 5
+    }
+   },
+   {
+    "id": "s-i3",
+    "who": "marcus",
+    "slot": "done",
+    "t": "You did not need managing today. Remember that the next time you doubt yourself.",
+    "when": {
+     "pointsMin": 5
+    }
+   },
+   {
+    "id": "s-i4",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Somebody who keeps choosing the harder version becomes somebody who finds most things easy. It works out backwards like that.",
+    "when": {
+     "pointsMin": 5
+    }
+   },
+   {
+    "id": "s-i5",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "This is what a serious person looks like from the inside. Unremarkable, and then suddenly not.",
+    "when": {
+     "pointsMin": 5
+    }
+   },
+   {
+    "id": "s-i6",
+    "who": "marcus",
+    "slot": "done",
+    "t": "You are building the habit of being the kind of man who does what he said. Everything else is downstream of that one.",
+    "when": {
+     "pointsMin": 5
+    }
+   },
+   {
+    "id": "s-i7",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "You are not doing this because somebody is watching. That is the whole difference and you should know it about yourself.",
+    "when": {
+     "pointsMin": 5
+    }
+   },
+   {
+    "id": "s-i8",
+    "who": "marcus",
+    "slot": "done",
+    "t": "The people who go furthest are rarely the cleverest. They are the ones still here in month three.",
+    "when": {
+     "pointsMin": 5
+    }
+   },
+   {
+    "id": "s-i9",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Notice that you did that without needing to feel like it. That is a skill and you are getting good at it.",
+    "when": {
+     "pointsMin": 5
+    }
+   },
+   {
+    "id": "s-i10",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "A person who takes action changes what they think is possible. It goes in that order, not the other way round.",
+    "when": {
+     "pointsMin": 5
+    }
+   },
+   {
+    "id": "s-h0",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "A fortnight in, most people notice they feel different before they can point at why. Watch for that.",
+    "when": {
+     "visitsMin": 10
+    }
+   },
+   {
+    "id": "s-h1",
+    "who": "marcus",
+    "slot": "done",
+    "t": "You will sleep better for this. Nobody quite believes that until it happens to them.",
+    "when": {
+     "visitsMin": 8
+    }
+   },
+   {
+    "id": "s-h2",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "There is a lightness that comes from having done something before lunch. You are carrying it now whether you have noticed or not.",
+    "when": {
+     "doneTodayMin": 2
+    }
+   },
+   {
+    "id": "s-h3",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "The good mood you are in is not a coincidence. Doing things does that, reliably, and almost nobody uses it.",
+    "when": {
+     "doneTodayMin": 3
+    }
+   },
+   {
+    "id": "s-h4",
+    "who": "marcus",
+    "slot": "done",
+    "t": "Restlessness usually means unused capacity. You have just used some."
+   },
+   {
+    "id": "s-h5",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Notice how you feel now against how you felt before you opened this. That gap is the whole argument."
+   },
+   {
+    "id": "s-h6",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Weeks of this and the change stops being a feeling and starts being your ordinary life.",
+    "when": {
+     "visitsMin": 20
+    }
+   },
+   {
+    "id": "s-x0a",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "He was here before you, you know. He is always here before you.",
+    "when": {
+     "visitsMin": 4
+    },
+    "reply": {
+     "id": "s-x0b",
+     "who": "marcus",
+     "t": "I have had two thousand years of practice at turning up. Let us see how you get on."
+    }
+   },
+   {
+    "id": "s-x1a",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "Somebody is back.",
+    "when": {
+     "visitsMin": 4
+    },
+    "reply": {
+     "id": "s-x1b",
+     "who": "aurelia",
+     "t": "I did say they would be."
+    }
+   },
+   {
+    "id": "s-x2a",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Did you see that one?",
+    "when": {
+     "visitsMin": 4
+    },
+    "reply": {
+     "id": "s-x2b",
+     "who": "marcus",
+     "t": "I saw it. Say nothing and let them do another."
+    }
+   },
+   {
+    "id": "s-x3a",
+    "who": "marcus",
+    "slot": "done",
+    "t": "That is the third today.",
+    "when": {
+     "visitsMin": 4
+    },
+    "reply": {
+     "id": "s-x3b",
+     "who": "aurelia",
+     "t": "And not one of them was owed to us. Good."
+    }
+   },
+   {
+    "id": "s-x4a",
+    "who": "aurelia",
+    "slot": "dayDone",
+    "t": "Three again.",
+    "when": {
+     "visitsMin": 4
+    },
+    "reply": {
+     "id": "s-x4b",
+     "who": "marcus",
+     "t": "Three again. It has stopped being news, which is the best thing about it."
+    }
+   },
+   {
+    "id": "s-x5a",
+    "who": "marcus",
+    "slot": "dayDone",
+    "t": "The day is answered for.",
+    "when": {
+     "visitsMin": 4
+    },
+    "reply": {
+     "id": "s-x5b",
+     "who": "aurelia",
+     "t": "Then let it go. There is another one tomorrow and it will keep."
+    }
+   },
+   {
+    "id": "s-x6a",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "I was wondering whether today would be the day.",
+    "when": {
+     "visitsMin": 4
+    },
+    "reply": {
+     "id": "s-x6b",
+     "who": "marcus",
+     "t": "It usually is, with this one."
+    }
+   },
+   {
+    "id": "s-x7a",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "That is one more than yesterday.",
+    "when": {
+     "visitsMin": 4
+    },
+    "reply": {
+     "id": "s-x7b",
+     "who": "marcus",
+     "t": "Yesterday is gone. Today is the only one that was ever available."
+    }
+   },
+   {
+    "id": "s-x8a",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "You look like somebody with ten minutes.",
+    "when": {
+     "visitsMin": 4
+    },
+    "reply": {
+     "id": "s-x8b",
+     "who": "aurelia",
+     "t": "He means that kindly. Ten minutes is all it takes."
+    }
+   },
+   {
+    "id": "s-x9a",
+    "who": "aurelia",
+    "slot": "dayDone",
+    "t": "What do you make of them?",
+    "when": {
+     "visitsMin": 4
+    },
+    "reply": {
+     "id": "s-x9b",
+     "who": "marcus",
+     "t": "I make of them that they came back. I do not need to make anything else of anybody."
+    }
+   },
+   {
+    "id": "s-b0",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "There you are! I was hoping.",
+    "when": {
+     "gapMin": 2,
+     "gapMax": 6
+    }
+   },
+   {
+    "id": "s-b1",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "Back. Good. Nothing needs explaining.",
+    "when": {
+     "gapMin": 2,
+     "gapMax": 6
+    }
+   },
+   {
+    "id": "s-b2",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "Oh good, you are back. Straight in, then.",
+    "when": {
+     "gapMin": 7,
+     "gapMax": 20
+    }
+   },
+   {
+    "id": "s-b3",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "You are here. That is the only fact that matters and it is a good one.",
+    "when": {
+     "gapMin": 7,
+     "gapMax": 20
+    }
+   },
+   {
+    "id": "s-b4",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "There you are. I am genuinely glad. Everything is exactly where you left it.",
+    "when": {
+     "gapMin": 21
+    }
+   },
+   {
+    "id": "s-b5",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "Welcome back. We keep no ledger of days here, only of things done.",
+    "when": {
+     "gapMin": 21
+    }
+   },
+   {
+    "id": "s-b6",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "You said you would be back, and here you are. I like that about you.",
+    "when": {
+     "saidYes": true
+    }
+   },
+   {
+    "id": "s-b7",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "You said you would come. You came. That is a small thing that most people cannot manage.",
+    "when": {
+     "saidYes": true
+    }
    }
   ],
   "ask": {
-   "title": "One thing for tomorrow",
-   "lede": "Say it out loud now and it is much harder to slide past. I will keep it at the top of your list.",
-   "who": "aurelia",
-   "say": "Before you go — what will you do tomorrow?",
-   "sayId": "ui-s-ask",
-   "surprise": "Surprise me",
-   "skip": "Not tonight",
-   "made": "Good. It will be waiting at the top.",
-   "madeSurprise": "Then I will choose, and it will be waiting.",
-   "pin": "You said you would do this one"
+   "title": "Before you go",
+   "say": "Will you be back tomorrow?",
+   "lede": "No need to decide what. Half the pleasure is not knowing what will be waiting.",
+   "yes": "I will be back",
+   "maybe": "We will see",
+   "gotYes": "Good. I will leave the fire lit.",
+   "gotMaybe": "Either way, it will be here."
   },
   "traits": {
    "title": "Who you are becoming",
