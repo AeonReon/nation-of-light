@@ -17,6 +17,17 @@
   const KEY = 'nol.v1';
   let C = null, SCH = null, FEED = [], VIS = null, AVIS = null, PORTICO = null, RIG = null, ARIG = null, CUES = null, ACUES = null, LINES = {};
   const NAR = new Audio(), MAR = new Audio(), MUS = new Audio(); NAR.preload = 'auto'; MAR.preload = 'auto'; MUS.preload = 'auto'; MUS.src = 'audio/music/dawn.mp3';
+  /* iOS will not let an audio element play unless it has been started inside a
+     real tap. The old primer did that by playing an actual line muted and
+     unmuting it a tick later — and on the phone that leaks, so the way in from
+     the cover had Marcus and Aurelia both saying half a sentence at once. That
+     is the "they talk over each other when the app starts" he heard. Prime with
+     silence instead: nothing to leak. */
+  const SILENT = 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAgD4AAAB9AAACABAAZGF0YQAAAAA=';
+  function unlockAudio() {
+    [NAR, MAR].forEach(el => { try { el.muted = false; el.src = SILENT;
+      const pr = el.play(); if (pr && pr.catch) pr.catch(() => {}); } catch (e) {} });
+  }
   let S = load();
 
   /* ---------- state ---------- */
@@ -447,10 +458,10 @@
     v.querySelector('#codelink').addEventListener('click', () => { sfx('tap'); codePanel(true); });
     v.querySelector('#sharelink').addEventListener('click', () => { sfx('tap'); sharePanel(cover); });
     v.querySelector('#begin').addEventListener('click', () => {
-      ac(); MAR.muted = true; MAR.src = 'audio/marcus/m-g1.mp3'; MAR.play().then(() => { MAR.pause(); MAR.muted = false; MAR.currentTime = 0; }).catch(() => { MAR.muted = false; });
+      ac(); unlockAudio();
       musicStart(); ambStart();
-      if (S.member && SCH) { sfx('tap'); NAR.muted = true; NAR.src = 'audio/voice/ui-first.mp3'; NAR.play().then(() => { NAR.pause(); NAR.muted = false; }).catch(() => { NAR.muted = false; }); closeVeil(enterSchool); }
-      else if (back) { sfx('tap'); NAR.muted = true; NAR.src = 'audio/voice/ui-first.mp3'; NAR.play().then(() => { NAR.pause(); NAR.muted = false; }).catch(() => { NAR.muted = false; }); closeVeil(enter); }
+      if (S.member && SCH) { sfx('tap'); unlockAudio(); closeVeil(enterSchool); }
+      else if (back) { sfx('tap'); unlockAudio(); closeVeil(enter); }
       else { sfx('begin'); closeVeil(welcome); }
     });
     v.querySelector('#what').addEventListener('click', () => { sfx('tap'); whatIsThis(); });
@@ -737,8 +748,13 @@
   function rankBar() {
     const p = points(), r = rankOf(p);
     const pct = r.next ? Math.max(2, Math.round((p - r.at) / (r.next[0] - r.at) * 100)) : 100;
+    /* The header has a search, two faces and a help button beside this, so
+       there was never room for "17 · Spark · 8 to Ember" and it truncated to
+       "8 to ...", which is worse than not saying it. The count and the rank
+       always fit; how far to the next is on the home card and on the ladder
+       page, both a tap away. */
     return `<div class="daybar rankbar ${r.next ? '' : 'full'}"><i style="width:${pct}%"></i>
-      <span><b>${p}</b> · ${r.name}${r.next ? ' · ' + (r.next[0] - p) + ' to ' + r.next[1] : ''}</span></div>`;
+      <span><b>${p}</b> · ${r.name}</span></div>`;
   }
   function paintRank() { const b = $('rankbar'); if (b) b.outerHTML = `<div id="rankbar" class="daywrap">${rankBar()}</div>`; }
   function checkDay() {
@@ -1296,6 +1312,35 @@
   }
   function wireShelf(root) { root.querySelectorAll('[data-tro]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const a = awards().find(x => x.id === b.dataset.tro); if (a) trophyShow(a); })); }
   /* the show: the trophy large, gold falling, the stand, and the two of them with a word each */
+  /* THE END OF A LADDER. Twenty steps and three months, and until now it just
+     ticked like any other box. It gets the whole screen: the gold medal at
+     size, what it took, both of them, and the line about where the school
+     stops and you carry on. */
+  function finishCard(tr) {
+    const c = catOf(tr), F = C.school.finish || {}, sz = sizeOf(tr);
+    const med = ladderAwards(tr).slice(-1)[0] || { kind: 'medal', metal: 'gold', accent: c.accent };
+    const first = firstDone(tr), days = first ? Math.max(1, Math.round((Date.now() - Date.parse(first)) / 864e5)) : null;
+    const prac = Object.keys((((S.school.practice || {})[tr.id]) || {}).days || {}).length;
+    if (SHOW) closeShow(true); hush();
+    const v = veil(`<div class="panel showcard finishcard" style="--c:${c.accent};--c2:${c.accent2}">
+      <div class="bigt">${trophySVG(med)}</div>
+      <div class="eyebrow"><i></i>${F.eyebrow || 'Finished'}<i></i></div>
+      <h2>${tr.name}</h2>
+      <p class="lede">${fmt1(F.lede || 'Every step of it. All {n} of them.', { n: tr.steps.length })}</p>
+      <div class="finstats"><span><b>${tr.steps.length}</b>${F.steps || 'steps'}</span>
+        ${days ? `<span><b>${days}</b>${F.days || 'days'}</span>` : ''}
+        ${prac ? `<span><b>${prac}</b>${F.practised || 'days practised'}</span>` : ''}
+        <span><b>${tr.steps.length}</b>${F.points || 'points'}</span></div>
+      <p class="finafter">${sz.after || ''}</p>
+      <div class="showcap" id="showcap" hidden></div></div>`, 'light trophyveil');
+    backBtn(v, () => closeShow()); SHOW = v;
+    if (inScene()) { const scn = $('scene'); v.style.top = (scn.offsetTop + scn.offsetHeight) + 'px'; }
+    sfx('wreath'); shower(); shower(); if (inScene()) { sparks(); PORTICO.flare(); }
+    if (!inScene()) { popIn('marcus'); popIn('aurelia'); }
+    setTimeout(() => { if (SHOW !== v) return; RIG.cheer(); ARIG.cheer();
+      saySlot('ladderDone', null, { room: c.id, roomName: c.name, track: tr.name, size: tr.size });
+    }, inScene() ? 600 : 1000);
+  }
   function trophyShow(a) {
     if (SHOW) closeShow(true);
     const K = C.school.awards.show || {}, sc = inScene(); hush();
@@ -1813,6 +1858,12 @@
       const both = n % 5 === 0;
       const won = awards().find(x => x.earned && !hadIds.has(x.id));
       if (won) { closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); setTimeout(() => trophyShow(won), 450); }); return; }
+      /* the last rung. Nothing else that happens today outranks this. */
+      if (!nextStep(tr)) {
+        closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool();
+          setTimeout(() => finishCard(tr), 420); });
+        return;
+      }
       if (saySlot(up ? 'rank' : 'done', null, sayCtx)) {
         closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool();
           if (where !== 'track') setTimeout(() => afterStep(tr), 900); });

@@ -1,5 +1,5 @@
 {
- "version": 53,
+ "version": 54,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -756,6 +756,138 @@
    {
     "id": "s-b7",
     "t": "You said you would come. You came. That is a small thing that most people cannot manage."
+   },
+   {
+    "id": "s-hm0",
+    "t": "You are here. Begin."
+   },
+   {
+    "id": "s-hm1",
+    "t": "No speech from me. Pick one."
+   },
+   {
+    "id": "s-hm2",
+    "t": "The day asks the same question every morning. You are about to answer it."
+   },
+   {
+    "id": "s-hm3",
+    "t": "Waiting for the mood to arrive is how most lives are spent. You are not doing that."
+   },
+   {
+    "id": "s-hm4",
+    "t": "A small thing, now, badly, beats a large thing later, perfectly, that never happens."
+   },
+   {
+    "id": "s-hm5",
+    "t": "You will not remember this particular morning. You will be made of it."
+   },
+   {
+    "id": "s-hm6",
+    "t": "Do not look at the whole ladder. Look at the rung."
+   },
+   {
+    "id": "s-hm7",
+    "t": "Nobody is coming to make you. That is the good news, once you understand it."
+   },
+   {
+    "id": "s-hm8",
+    "t": "The work is the same whether you are in the mood or not. Only the story changes."
+   },
+   {
+    "id": "s-hm9",
+    "t": "You have less time than you think and more than you fear. Use some of it."
+   },
+   {
+    "id": "s-hm10",
+    "t": "What you do repeatedly is what you are. Everything else is talk."
+   },
+   {
+    "id": "s-hm11",
+    "t": "Ten minutes. Then go and live the rest of it."
+   },
+   {
+    "id": "s-hm12",
+    "t": "I have no wisdom for you today. Go and do one thing."
+   },
+   {
+    "id": "s-hm13",
+    "t": "There is no secret. There is a list, and there is you."
+   },
+   {
+    "id": "s-hm14",
+    "t": "A difficult day is still a day. Take the smallest one and take it now."
+   },
+   {
+    "id": "s-hx0b",
+    "t": "I find it settles the mind. You should try it."
+   },
+   {
+    "id": "s-hx1b",
+    "t": "Occasionally. Not before the first one is done."
+   },
+   {
+    "id": "s-hx2a",
+    "t": "They are back."
+   },
+   {
+    "id": "s-hx3b",
+    "t": "Whatever is nearest. The choosing is where people lose the morning."
+   },
+   {
+    "id": "s-hx4a",
+    "t": "Say something encouraging."
+   },
+   {
+    "id": "s-hx5b",
+    "t": "It is never too early. It is sometimes too late."
+   },
+   {
+    "id": "s-hx6a",
+    "t": "One thing."
+   },
+   {
+    "id": "s-hx7b",
+    "t": "Do not tell them. Let them find out on a Tuesday."
+   },
+   {
+    "id": "s-hx8b",
+    "t": "She is right, and I will deny it later."
+   },
+   {
+    "id": "s-hx9a",
+    "t": "What did they do yesterday?"
+   },
+   {
+    "id": "s-hx10b",
+    "t": "Then they should start with one, and find out."
+   },
+   {
+    "id": "s-hx11a",
+    "t": "Still here, then."
+   },
+   {
+    "id": "s-fin1",
+    "t": "Finished. Not started, not attempted — finished. Very few things you begin will end like this."
+   },
+   {
+    "id": "s-fin3",
+    "t": "Look back down it once. Then stop looking back down it."
+   },
+   {
+    "id": "s-fin5",
+    "t": "The ladder is done and it cannot be undone. That is the good of finishing things."
+   },
+   {
+    "id": "s-fin7",
+    "t": "You did it in small pieces on ordinary days. That is how everything worth having is done."
+   },
+   {
+    "id": "s-finx0b",
+    "t": "So they did. Say it properly, then."
+   },
+   {
+    "id": "s-finx1a",
+    "t": "That is a finished thing."
    }
   ]
  },
@@ -1357,7 +1489,49 @@
   "s-b0": "There you are! I was hoping.",
   "s-b2": "Oh good, you are back. Straight in, then.",
   "s-b4": "There you are. I am genuinely glad. Everything is exactly where you left it.",
-  "s-b6": "You said you would be back, and here you are. I like that about you."
+  "s-b6": "You said you would be back, and here you are. I like that about you.",
+  "s-ha0": "Good morning. Whatever else today turns out to be, the first ten minutes of it are yours.",
+  "s-ha1": "You are here, which means the day has already gone better than most people's.",
+  "s-ha2": "Come in. Nothing here is urgent and all of it counts.",
+  "s-ha3": "The fire is lit. It usually is, but I like saying it.",
+  "s-ha4": "I was just telling him you would be along.",
+  "s-ha5": "Right. What shall we make of today, then?",
+  "s-ha6": "There is no wrong way to use the next ten minutes in here.",
+  "s-ha7": "You have that look of somebody about to do something. I approve.",
+  "s-ha8": "Nothing has changed since yesterday except you, a little.",
+  "s-ha9": "The morning is the cheapest hour of the day. Nobody wants anything from you yet.",
+  "s-ha10": "Some days you will fly at this. Today does not have to be one of them.",
+  "s-ha11": "Whatever is waiting out there, it will wait ten more minutes.",
+  "s-ha12": "I have seen people come here for a year. It never stops being the small ones that do it.",
+  "s-ha13": "Take the easy one if you like. The easy ones are not a lesser thing.",
+  "s-ha14": "You do not have to feel like it. That is rather the point of the whole arrangement.",
+  "s-ha15": "A quiet day counts the same as a loud one. Nobody is keeping a different column.",
+  "s-ha16": "Start with something you will enjoy. That is allowed and it works better.",
+  "s-ha17": "There is no catching up to be done. There is only today.",
+  "s-ha18": "Good. Shoulders down. Pick one.",
+  "s-ha19": "If you only have two minutes, two minutes is a whole thing here.",
+  "s-ha20": "Evening is a fine time for this. Better, some people find.",
+  "s-ha21": "The light is going. Do one small thing and let the day be finished properly.",
+  "s-ha22": "You have been at this a while now. I hope you can feel that.",
+  "s-ha23": "I do like the ones who come without being reminded.",
+  "s-hx0a": "He has been standing there since before you woke up.",
+  "s-hx1a": "Do you ever soften?",
+  "s-hx2b": "Of course they are. Look at them.",
+  "s-hx3a": "What would you have them do today?",
+  "s-hx4b": "I was going to. You have spoiled it now.",
+  "s-hx5a": "Is it too early for you to be this stern?",
+  "s-hx6b": "He means it kindly. One thing really is the whole method.",
+  "s-hx7a": "I think they are getting good at this.",
+  "s-hx8a": "Some mornings I just like that you came.",
+  "s-hx9b": "Something. That is all either of us needs to know.",
+  "s-hx10a": "They could do anything in here today.",
+  "s-hx11b": "Still here. And so are you, so do not be smug about it.",
+  "s-fin0": "That is the whole ladder. Every rung of it, and you did every one.",
+  "s-fin2": "You can do a thing now that you could not do when you started. That is not nothing. That is the only thing.",
+  "s-fin4": "Somebody will ask you how you can do that. You will have to think, because it has become ordinary.",
+  "s-fin6": "I have been waiting to say this one to you. Well done, genuinely.",
+  "s-finx0a": "They finished it.",
+  "s-finx1b": "It is. And there are not many of those in a life."
  },
  "cover": {
   "em": "Nation of",
@@ -3829,6 +4003,478 @@
     "when": {
      "saidYes": true
     }
+   },
+   {
+    "id": "s-ha0",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "Good morning. Whatever else today turns out to be, the first ten minutes of it are yours."
+   },
+   {
+    "id": "s-ha1",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "You are here, which means the day has already gone better than most people's."
+   },
+   {
+    "id": "s-ha2",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "Come in. Nothing here is urgent and all of it counts."
+   },
+   {
+    "id": "s-ha3",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "The fire is lit. It usually is, but I like saying it."
+   },
+   {
+    "id": "s-ha4",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "I was just telling him you would be along."
+   },
+   {
+    "id": "s-ha5",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "Right. What shall we make of today, then?"
+   },
+   {
+    "id": "s-ha6",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "There is no wrong way to use the next ten minutes in here."
+   },
+   {
+    "id": "s-ha7",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "You have that look of somebody about to do something. I approve."
+   },
+   {
+    "id": "s-ha8",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "Nothing has changed since yesterday except you, a little."
+   },
+   {
+    "id": "s-ha9",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "The morning is the cheapest hour of the day. Nobody wants anything from you yet."
+   },
+   {
+    "id": "s-ha10",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "Some days you will fly at this. Today does not have to be one of them."
+   },
+   {
+    "id": "s-ha11",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "Whatever is waiting out there, it will wait ten more minutes."
+   },
+   {
+    "id": "s-ha12",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "I have seen people come here for a year. It never stops being the small ones that do it."
+   },
+   {
+    "id": "s-ha13",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "Take the easy one if you like. The easy ones are not a lesser thing."
+   },
+   {
+    "id": "s-ha14",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "You do not have to feel like it. That is rather the point of the whole arrangement."
+   },
+   {
+    "id": "s-ha15",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "A quiet day counts the same as a loud one. Nobody is keeping a different column."
+   },
+   {
+    "id": "s-ha16",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "Start with something you will enjoy. That is allowed and it works better."
+   },
+   {
+    "id": "s-ha17",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "There is no catching up to be done. There is only today."
+   },
+   {
+    "id": "s-ha18",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "Good. Shoulders down. Pick one."
+   },
+   {
+    "id": "s-ha19",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "If you only have two minutes, two minutes is a whole thing here."
+   },
+   {
+    "id": "s-ha20",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "Evening is a fine time for this. Better, some people find."
+   },
+   {
+    "id": "s-ha21",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "The light is going. Do one small thing and let the day be finished properly."
+   },
+   {
+    "id": "s-ha22",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "You have been at this a while now. I hope you can feel that."
+   },
+   {
+    "id": "s-ha23",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "I do like the ones who come without being reminded."
+   },
+   {
+    "id": "s-hm0",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "You are here. Begin."
+   },
+   {
+    "id": "s-hm1",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "No speech from me. Pick one."
+   },
+   {
+    "id": "s-hm2",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "The day asks the same question every morning. You are about to answer it."
+   },
+   {
+    "id": "s-hm3",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "Waiting for the mood to arrive is how most lives are spent. You are not doing that."
+   },
+   {
+    "id": "s-hm4",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "A small thing, now, badly, beats a large thing later, perfectly, that never happens."
+   },
+   {
+    "id": "s-hm5",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "You will not remember this particular morning. You will be made of it."
+   },
+   {
+    "id": "s-hm6",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "Do not look at the whole ladder. Look at the rung."
+   },
+   {
+    "id": "s-hm7",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "Nobody is coming to make you. That is the good news, once you understand it."
+   },
+   {
+    "id": "s-hm8",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "The work is the same whether you are in the mood or not. Only the story changes."
+   },
+   {
+    "id": "s-hm9",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "You have less time than you think and more than you fear. Use some of it."
+   },
+   {
+    "id": "s-hm10",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "What you do repeatedly is what you are. Everything else is talk."
+   },
+   {
+    "id": "s-hm11",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "Ten minutes. Then go and live the rest of it."
+   },
+   {
+    "id": "s-hm12",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "I have no wisdom for you today. Go and do one thing."
+   },
+   {
+    "id": "s-hm13",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "There is no secret. There is a list, and there is you."
+   },
+   {
+    "id": "s-hm14",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "A difficult day is still a day. Take the smallest one and take it now."
+   },
+   {
+    "id": "s-hx0a",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "He has been standing there since before you woke up.",
+    "when": {
+     "visitsMin": 3
+    },
+    "reply": {
+     "id": "s-hx0b",
+     "who": "marcus",
+     "t": "I find it settles the mind. You should try it."
+    }
+   },
+   {
+    "id": "s-hx1a",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "Do you ever soften?",
+    "when": {
+     "visitsMin": 3
+    },
+    "reply": {
+     "id": "s-hx1b",
+     "who": "marcus",
+     "t": "Occasionally. Not before the first one is done."
+    }
+   },
+   {
+    "id": "s-hx2a",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "They are back.",
+    "when": {
+     "visitsMin": 3
+    },
+    "reply": {
+     "id": "s-hx2b",
+     "who": "aurelia",
+     "t": "Of course they are. Look at them."
+    }
+   },
+   {
+    "id": "s-hx3a",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "What would you have them do today?",
+    "when": {
+     "visitsMin": 3
+    },
+    "reply": {
+     "id": "s-hx3b",
+     "who": "marcus",
+     "t": "Whatever is nearest. The choosing is where people lose the morning."
+    }
+   },
+   {
+    "id": "s-hx4a",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "Say something encouraging.",
+    "when": {
+     "visitsMin": 3
+    },
+    "reply": {
+     "id": "s-hx4b",
+     "who": "aurelia",
+     "t": "I was going to. You have spoiled it now."
+    }
+   },
+   {
+    "id": "s-hx5a",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "Is it too early for you to be this stern?",
+    "when": {
+     "visitsMin": 3
+    },
+    "reply": {
+     "id": "s-hx5b",
+     "who": "marcus",
+     "t": "It is never too early. It is sometimes too late."
+    }
+   },
+   {
+    "id": "s-hx6a",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "One thing.",
+    "when": {
+     "visitsMin": 3
+    },
+    "reply": {
+     "id": "s-hx6b",
+     "who": "aurelia",
+     "t": "He means it kindly. One thing really is the whole method."
+    }
+   },
+   {
+    "id": "s-hx7a",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "I think they are getting good at this.",
+    "when": {
+     "visitsMin": 3
+    },
+    "reply": {
+     "id": "s-hx7b",
+     "who": "marcus",
+     "t": "Do not tell them. Let them find out on a Tuesday."
+    }
+   },
+   {
+    "id": "s-hx8a",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "Some mornings I just like that you came.",
+    "when": {
+     "visitsMin": 3
+    },
+    "reply": {
+     "id": "s-hx8b",
+     "who": "marcus",
+     "t": "She is right, and I will deny it later."
+    }
+   },
+   {
+    "id": "s-hx9a",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "What did they do yesterday?",
+    "when": {
+     "visitsMin": 3
+    },
+    "reply": {
+     "id": "s-hx9b",
+     "who": "aurelia",
+     "t": "Something. That is all either of us needs to know."
+    }
+   },
+   {
+    "id": "s-hx10a",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "They could do anything in here today.",
+    "when": {
+     "visitsMin": 3
+    },
+    "reply": {
+     "id": "s-hx10b",
+     "who": "marcus",
+     "t": "Then they should start with one, and find out."
+    }
+   },
+   {
+    "id": "s-hx11a",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "Still here, then.",
+    "when": {
+     "visitsMin": 3
+    },
+    "reply": {
+     "id": "s-hx11b",
+     "who": "aurelia",
+     "t": "Still here. And so are you, so do not be smug about it."
+    }
+   },
+   {
+    "id": "s-fin0",
+    "who": "aurelia",
+    "slot": "ladderDone",
+    "t": "That is the whole ladder. Every rung of it, and you did every one."
+   },
+   {
+    "id": "s-fin1",
+    "who": "marcus",
+    "slot": "ladderDone",
+    "t": "Finished. Not started, not attempted — finished. Very few things you begin will end like this."
+   },
+   {
+    "id": "s-fin2",
+    "who": "aurelia",
+    "slot": "ladderDone",
+    "t": "You can do a thing now that you could not do when you started. That is not nothing. That is the only thing."
+   },
+   {
+    "id": "s-fin3",
+    "who": "marcus",
+    "slot": "ladderDone",
+    "t": "Look back down it once. Then stop looking back down it."
+   },
+   {
+    "id": "s-fin4",
+    "who": "aurelia",
+    "slot": "ladderDone",
+    "t": "Somebody will ask you how you can do that. You will have to think, because it has become ordinary."
+   },
+   {
+    "id": "s-fin5",
+    "who": "marcus",
+    "slot": "ladderDone",
+    "t": "The ladder is done and it cannot be undone. That is the good of finishing things."
+   },
+   {
+    "id": "s-fin6",
+    "who": "aurelia",
+    "slot": "ladderDone",
+    "t": "I have been waiting to say this one to you. Well done, genuinely."
+   },
+   {
+    "id": "s-fin7",
+    "who": "marcus",
+    "slot": "ladderDone",
+    "t": "You did it in small pieces on ordinary days. That is how everything worth having is done."
+   },
+   {
+    "id": "s-finx0a",
+    "who": "aurelia",
+    "slot": "ladderDone",
+    "t": "They finished it.",
+    "reply": {
+     "id": "s-finx0b",
+     "who": "marcus",
+     "t": "So they did. Say it properly, then."
+    }
+   },
+   {
+    "id": "s-finx1a",
+    "who": "marcus",
+    "slot": "ladderDone",
+    "t": "That is a finished thing.",
+    "reply": {
+     "id": "s-finx1b",
+     "who": "aurelia",
+     "t": "It is. And there are not many of those in a life."
+    }
    }
   ],
   "ask": {
@@ -3896,6 +4542,14 @@
     "seeAll": "See the whole page",
     "rung": "Rung {n} of {N}"
    }
+  },
+  "finish": {
+   "eyebrow": "The whole ladder",
+   "lede": "Every step of it. All {n} of them.",
+   "steps": "steps",
+   "days": "days on it",
+   "practised": "days practised",
+   "points": "points"
   }
  },
  "arrival": {

@@ -1226,3 +1226,14 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 .can img{width:52px;height:40px;object-fit:cover;border-radius:9px;box-shadow:0 0 0 1.2px var(--c2)}
 .can small{display:block;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--c);line-height:1.3}
 .can strong{display:block;font-family:var(--display);font-weight:500;font-size:15.5px;line-height:1.3;color:var(--ink);margin-top:2px}
+
+/* ---- finishing a ladder (v54) ---- */
+.finishcard .bigt .tsvg{width:104px;height:130px}
+.finishcard h2{font-size:28px;margin-bottom:4px}
+.finstats{display:flex;gap:7px;margin:14px 0 10px}
+.finstats span{flex:1;min-width:0;background:var(--ivory-2);border-radius:12px;padding:9px 4px;text-align:center;
+  font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);line-height:1.25}
+.finstats b{display:block;font-family:var(--display);font-weight:600;font-size:21px;letter-spacing:0;
+  text-transform:none;color:var(--c,var(--gold-deep));margin-bottom:2px}
+.finafter{margin:4px 0 0;font-size:13px;line-height:1.5;color:var(--ink-soft);
+  background:var(--gold-pale);border-radius:13px;padding:11px 13px}
