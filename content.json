@@ -1,5 +1,5 @@
 {
- "version": 51,
+ "version": 52,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -2653,7 +2653,19 @@
     "need": "{n} {name} steps done. {tier} at {need}."
    },
    "next": "{n} to {tier}",
-   "top": "Gold. Keep going."
+   "top": "Gold. Keep going.",
+   "page": {
+    "title": "Who you are becoming",
+    "lede": "{n} things you can do now that you could not before.",
+    "ledeOne": "One thing you can do now that you could not before. The first of many.",
+    "ledeNone": "Nothing counted yet. The first thing you do today starts this page.",
+    "traitsTitle": "The four kinds",
+    "canTitle": "Things you can do now",
+    "canLede": "The highest rung you have reached on every ladder you have touched. Each one is a real ability, and it stays yours.",
+    "more": "Every one",
+    "seeAll": "See the whole page",
+    "rung": "Rung {n} of {N}"
+   }
   }
  },
  "arrival": {

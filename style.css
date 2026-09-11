@@ -1206,3 +1206,23 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 .traits i{display:block;width:100%;height:6px;border-radius:3px;background:var(--card);overflow:hidden;box-shadow:inset 0 0 0 1px var(--line)}
 .traits em{display:block;height:100%;border-radius:3px;background:var(--c);transition:width .8s var(--spring)}
 .traits small{font-size:11px;font-weight:700;color:var(--ink-faint)}
+/* v52: the page behind Who you are becoming */
+.traitscard .shtop{align-items:center}
+.seeall{font-size:12px;font-weight:700;color:var(--gold-deep);padding:4px 0 4px 8px}
+.becominghead .bigline{margin:4px 0 0;font-family:var(--display);font-weight:500;font-size:clamp(20px,5.6vw,24px);line-height:1.25;color:var(--ink)}
+.traitblock{position:relative;padding:12px 12px 10px;border-radius:14px;background:var(--ivory);box-shadow:inset 0 0 0 1.5px var(--c);margin-top:8px}
+.traitblock .tbtop{display:flex;flex-direction:column;gap:2px}
+.traitblock .tbtop>span{display:flex;align-items:baseline;gap:10px}
+.traitblock .tn{font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--c)}
+.traitblock b{font-family:var(--display);font-weight:600;font-size:30px;line-height:1;color:var(--ink)}
+.traitblock p{margin:0;font-size:13.5px;color:var(--ink-soft)}
+.traitblock .tshelf{padding:8px 0 4px;gap:4px}
+.traitblock .tro{width:76px}
+.traitblock .tro span{text-transform:capitalize}
+.traitblock .tbar{display:block;height:6px;border-radius:3px;background:var(--card);overflow:hidden;box-shadow:inset 0 0 0 1px var(--line);margin-top:4px}
+.traitblock .tbar em{display:block;height:100%;background:var(--c);border-radius:3px}
+.cancard{--g1:#F3E3A8;--g2:var(--gold)}
+.can{display:grid;grid-template-columns:52px 1fr;gap:10px;align-items:center;padding:9px 0;border-top:1px solid var(--line)}
+.can img{width:52px;height:40px;object-fit:cover;border-radius:9px;box-shadow:0 0 0 1.2px var(--c2)}
+.can small{display:block;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--c);line-height:1.3}
+.can strong{display:block;font-family:var(--display);font-weight:500;font-size:15.5px;line-height:1.3;color:var(--ink);margin-top:2px}

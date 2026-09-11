@@ -872,6 +872,22 @@
   const troBtn = a => `<button class="tro ${a.earned ? 'on' : 'off'}" data-tro="${a.id}">${trophySVG(a)}
     <span>${a.short}</span><small>${a.earned ? ((a.kind === 'medal' || a.kind === 'trait') ? a.tier : (a.kind === 'stone' ? a.need + ' days' : 'Earned'))
       : (a.kind === 'stone' ? a.left + ' more day' + (a.left === 1 ? '' : 's') : a.left + ' more')}</small></button>`;
+  /* the page behind the card: the four kinds, and every real ability, highest rung first */
+  function becomingRoom(list) {
+    const T = C.school.traits, P = T.page || {}, tc = traitCounts(), aw = awards();
+    const fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
+    const can = allTracks().map(tr => { const done = tr.steps.filter(st => sdone(skey(tr, st))); if (!done.length) return null; const top = done[done.length - 1]; const when = S.school.done[skey(tr, top)] || ''; return { tr, top, n: done.length, when: typeof when === 'string' ? when : '' }; }).filter(Boolean).sort((x, y) => y.when.localeCompare(x.when));
+    const total = Object.keys(S.school.done).length + S.done.length;
+    const canRow = x => { const c = catOf(x.tr); return `<div class="can" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${x.tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><small>${c.name} · ${x.tr.name} · ${fmt(P.rung, { n: x.top.n, N: x.tr.steps.length })}</small><strong>${x.top.test}</strong></span></div>`; };
+    stageBack(closeRoom);
+    list.innerHTML = `<div class="acard prheadcard becominghead"><span class="eyebrow">${P.title || T.title}</span><p class="bigline">${total === 0 ? P.ledeNone : total === 1 ? P.ledeOne : fmt(P.lede, { n: total })}</p></div>` +
+      `<div class="acard"><span class="eyebrow">${P.traitsTitle}</span>` + Object.keys(T.kinds).map(k => { const n = tc[k] || 0, KN = T.kinds[k]; const tros = aw.filter(a => a.kind === 'trait' && a.trait === k); const nx = T.tiers.find(t => n < t[2]);
+        return `<div class="traitblock" id="tr-${k}" style="--c:${TRAIT_COLOUR[k]}"><div class="tbtop"><span><span class="tn">${KN.name}</span><b>${n}</b></span><p>${KN.line}</p></div><div class="shrow tshelf">${tros.map(a => `<button class="tro ${a.earned ? 'on' : 'off'}" data-tro="${a.id}">${trophySVG(a)}<span>${a.tier}</span><small>${a.earned ? 'yours' : a.left + ' more'}</small></button>`).join('')}</div>${nx ? `<i class="tbar"><em style="width:${Math.round(n / nx[2] * 100)}%"></em></i>` : ''}</div>`; }).join('') + `</div>` +
+      `<div class="acard cancard"><span class="eyebrow">${P.canTitle} · ${can.length}</span><p class="lede">${P.canLede}</p>` + (can.length ? can.slice(0, 10).map(canRow).join('') + (can.length > 10 ? foldCard('canall', `${P.more} (${can.length})`, can.slice(10).map(canRow).join('')) : '') : `<p class="lede">${P.ledeNone}</p>`) + `</div>`;
+    wireShelf(list); list.scrollTop = 0;
+    if (ROOMV_AT && ROOMV_AT !== 'top') { const el = $('tr-' + ROOMV_AT); if (el) setTimeout(() => el.scrollIntoView({ block: 'start', behavior: 'smooth' }), 150); }
+  }
+  let ROOMV_AT = null;
   function progressRoom(list) {
     const p = points(), r = rankOf(p), A = C.arrival.stand, RK = C.school.ranks, R = C.school.runs || {};
     const run = runInfo(), aw = awards(), lvl = RK.findIndex(x => x[1] === r.name);
@@ -929,6 +945,7 @@
   const pickRow = ([tr, st]) => { const c = catOf(tr), P = C.arrival, nd = (isKid() && isLittle(tr)) ? null : needsOf(st); return `<div class="pick" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span class="ptxt"><span class="scat">${c.name} · ${tr.name}${nd ? ` <b class="need ${nd}">${(P.needs || {})[nd] || nd}</b>` : ''}</span><span class="stest">${st.test}</span></span><span class="pbtns"><button class="btn btn-gold sm wide" data-do="${skey(tr, st)}">${P.do}</button><button class="btn btn-ghost sm" data-not="${skey(tr, st)}">${P.notThis}</button></span></div>`; };
   function renderArrival() {
     const list = $('slist'), keep = list.scrollTop;
+    if (ROOMV === 'becoming') { becomingRoom(list); return; }
     if (ROOMV) { progressRoom(list); return; }
     stageBack(null); const picks = todayPicks(), later = todayPicks('later'); const P = C.arrival, R = C.room, F = P.folds || {};
     // the feed: newest post, and whether it has been seen
@@ -983,6 +1000,7 @@
     const vr = list.querySelector('#visionread'); if (vr) vr.addEventListener('click', () => { sfx('tap'); if (VISREAD) { hush(); return; } readVision(list); });
     const rb = list.querySelector('#readit'); if (rb) rb.addEventListener('click', () => { sfx('tap'); hush(); clearTimeout(ROOMT); cap('aurelia', rd.title); ARIG.nod(); aureliaSay('ui-read-' + rd.id, () => { capHide(1500); idleRoom(); }); });
     wireShelf(list); wireLong(list);
+    list.querySelectorAll('[data-becoming]').forEach(b => b.addEventListener('click', () => { sfx('tap'); ROOMV_AT = b.dataset.becoming; openRoom('becoming'); }));
     list.querySelectorAll('[data-panel]').forEach(b => b.addEventListener('click', () => { sfx('open');
       openRoom(b.dataset.panel === 'run' ? 'run' : 'top'); }));
     list.querySelectorAll('[data-do]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.do); if (r) stepSheet(r[0], r[1], null, 'arrival'); }));
@@ -1223,8 +1241,8 @@
   function traitsCard() {
     const T = C.school.traits; if (!T) return ''; const tc = traitCounts();
     const fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
-    return `<div class="acard traitscard"><span class="eyebrow">${T.title}</span><p class="lede">${T.lede}</p><div class="traits">` + Object.keys(T.kinds).map(k => { const n = tc[k] || 0, KN = T.kinds[k]; const nx = T.tiers.find(t => n < t[2]); const prev = nx ? (T.tiers[T.tiers.indexOf(nx) - 1] || [null, null, 0])[2] : T.tiers[T.tiers.length - 1][2]; const pct = nx ? Math.round((n - prev) / (nx[2] - prev) * 100) : 100; const got = T.tiers.filter(t => n >= t[2]).pop();
-      return `<button class="tr" style="--c:${TRAIT_COLOUR[k]}" data-tro="trait.${k}.${nx ? nx[0] : 'gold'}"><span class="tn">${KN.name}</span><b>${n}</b><i><em style="width:${pct}%"></em></i><small>${nx ? fmt(T.next, { n: nx[2] - n, tier: nx[1].toLowerCase() }) : T.top}${got ? ' · ' + got[1].toLowerCase() : ''}</small></button>`; }).join('') + `</div></div>`;
+    return `<div class="acard traitscard"><div class="shtop"><span class="eyebrow">${T.title}</span><button class="seeall" data-becoming="top">${(T.page || {}).seeAll || 'See the whole page'} ›</button></div><p class="lede">${T.lede}</p><div class="traits">` + Object.keys(T.kinds).map(k => { const n = tc[k] || 0, KN = T.kinds[k]; const nx = T.tiers.find(t => n < t[2]); const prev = nx ? (T.tiers[T.tiers.indexOf(nx) - 1] || [null, null, 0])[2] : T.tiers[T.tiers.length - 1][2]; const pct = nx ? Math.round((n - prev) / (nx[2] - prev) * 100) : 100; const got = T.tiers.filter(t => n >= t[2]).pop();
+      return `<button class="tr" style="--c:${TRAIT_COLOUR[k]}" data-becoming="${k}"><span class="tn">${KN.name}</span><b>${n}</b><i><em style="width:${pct}%"></em></i><small>${nx ? fmt(T.next, { n: nx[2] - n, tier: nx[1].toLowerCase() }) : T.top}${got ? ' · ' + got[1].toLowerCase() : ''}</small></button>`; }).join('') + `</div></div>`;
   }
   const HUD_FLAME = '<path d="M8 19c-3.6 0-6-2.5-6-5.8 0-2.6 1.6-4.3 2.7-5.6.6-.7 1-1.3 1.2-2 .6 1.1 1.2 2 2 2.7C9.7 10 11 11.4 11 13.6c0 1.2-.5 2.3-1.2 3 .9-.2 4.2-1.6 4.2-5.7 0-3.2-2.2-5-3.5-6.6C9.4 3 8.9 1.8 9 0c-3 1.4-3.4 4.3-3.6 5.8C4.6 4.7 4.2 3.4 4.2 2 1.7 3.8 0 7.2 0 10.6 0 15.6 3.7 19 8 19z" fill="#E0812A"/><path d="M8 19c-1.9 0-3.2-1.4-3.2-3.2 0-1.5 1-2.4 1.6-3.2.4-.5.6-.9.7-1.4.5.8.9 1.3 1.4 1.8.7.7 1.6 1.6 1.6 2.8C10.1 17.6 9.2 19 8 19z" fill="#FFD36B"/>';
   const METALS = { bronze: ['#E8B48C', '#8A4E22'], silver: ['#FFFFFF', '#8E939B'], gold: ['#FFE9A0', '#B8860B'] };
