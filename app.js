@@ -870,7 +870,7 @@
       $('slist').scrollTop = el ? Math.max(0, el.offsetTop - 8) : 0; }, 30); }
   function closeRoom() { ROOMV = null; hush(); renderArrival(); $('slist').scrollTop = 0; }
   const troBtn = a => `<button class="tro ${a.earned ? 'on' : 'off'}" data-tro="${a.id}">${trophySVG(a)}
-    <span>${a.short}</span><small>${a.earned ? (a.kind === 'medal' ? a.tier : (a.kind === 'stone' ? a.need + ' days' : 'Earned'))
+    <span>${a.short}</span><small>${a.earned ? ((a.kind === 'medal' || a.kind === 'trait') ? a.tier : (a.kind === 'stone' ? a.need + ' days' : 'Earned'))
       : (a.kind === 'stone' ? a.left + ' more day' + (a.left === 1 ? '' : 's') : a.left + ' more')}</small></button>`;
   function progressRoom(list) {
     const p = points(), r = rankOf(p), A = C.arrival.stand, RK = C.school.ranks, R = C.school.runs || {};
@@ -970,7 +970,7 @@
       (C.vision ? foldCard('vision', C.vision.title, `<div class="acard visioncard"><div class="rhead"><span class="eyebrow">${C.vision.lede}</span><button class="playbtn" id="visionread" aria-label="Aurelia reads it">${SPK_IC}</button></div>${C.vision.paras.map(x => `<p>${x}</p>`).join('')}</div><div class="acard polycard"><span class="eyebrow">${C.vision.polyTitle}</span><p class="lede">${C.vision.polyLede}</p>${C.vision.polymaths.map(x => `<div class="poly"><b>${x.name}</b><span>${x.line}</span></div>`).join('')}<p class="close">${C.vision.close}</p></div>`, visits <= 2 && !S.school.visionSeen) : '') +
       (post ? foldCard('post', `<span class="foldic">${HORN_IC}</span>${C.feed.title}${isNew ? '<b class="dot">New</b>' : ''}`,
         `<div class="acard post ${isNew ? 'new' : ''}"><h3>${post.title}</h3><small>${post.date}</small><p>${post.text}</p></div>`, isNew) : '') +
-      shelfCard(true) +
+      traitsCard() + shelfCard(true) +
       foldCard('reading', F.reading || 'A reading from Aurelia', `<div class="acard reading"><div class="rhead"><span class="eyebrow">${R.readingsLede}</span><button class="playbtn" id="readit" aria-label="Aurelia reads it">${SPK_IC}</button></div><h3>${rd.title}</h3><p>${rd.text}</p></div>`) +
       (lib ? foldCard('library', F.library || 'From the library', lib) : '') +
       (rooms.length ? foldCard('rooms', F.rooms || 'Rooms climbed', `<div class="acard prog"><div class="rooms">${rooms.map(r => `<div class="rr" style="--c:${r.c.accent};--c2:${r.c.accent2}"><span>${r.c.name}</span><i><b style="width:${Math.round(r.n / r.N * 100)}%"></b></i><small>${r.n} of ${r.N}</small></div>`).join('')}</div></div>`) : '') +
@@ -1210,10 +1210,21 @@
         line: why + ' ' + (ri.best >= need ? fmt(R.have, { n: ri.best, s: ri.best === 1 ? '' : 's' })
                                            : fmt(R.need, { n: need, s: need === 1 ? '' : 's' })) });
     });
+    /* the four kinds of step, counted: what a person is made of, in bronze, silver and gold */
+    const T = C.school.traits; if (T) { const tc = traitCounts(); for (const k in T.kinds) { const n = tc[k] || 0, KN = T.kinds[k];
+      T.tiers.forEach(([id, tname, need], i) => { const earned = n >= need; out.push({ id: 'trait.' + k + '.' + id, kind: 'trait', trait: k, metal: id, tier: id, level: i, name: KN.name + ' ' + tname.toLowerCase(), short: KN.name, earned, n, need, left: Math.max(0, need - n), accent: TRAIT_COLOUR[k], line: KN.line + ' ' + fmt(earned ? T.show.have : T.show.need, { n, name: KN.name.toLowerCase(), tier: tname, need }) }); }); } }
     (AW.special || []).forEach(sp => { if (sp.id === 'twentyfive') { const n = S.done.length, N = C.moves.length; out.push({ id: sp.id, kind: 'wreath', tier: 'special', name: sp.name, short: 'The 25', earned: n >= N, n, need: N, left: Math.max(0, N - n), line: K.twentyfive || sp.line, accent: '#C9A227' }); } });
     SCH.categories.forEach(c => { const n = c.tracks.reduce((s, tr) => s + trackDone(tr), 0), N = c.tracks.reduce((s, tr) => s + tr.steps.length, 0);
       AW.tiers.forEach(([id, tname, at]) => { const need = at === null ? N : at, earned = n >= need; out.push({ id: c.id + '.' + id, kind: 'medal', metal: id, tier: id, room: c.name, name: c.name + ' ' + tname.toLowerCase(), short: c.name, earned, n, need, left: Math.max(0, need - n), line: earned ? fmt(K.room, { n, N, room: c.name }) : fmt(K.roomNeed, { n, need, room: c.name }), accent: c.accent, accent2: c.accent2 || c.accent }); }); });
     return out;
+  }
+  const TRAIT_COLOUR = { courage: '#9C3A47', skill: '#1F5E8A', kindness: '#2F6B4F', attention: '#6B4E9E' };
+  function traitCounts() { const t = {}; for (const k in S.school.done) { const r = findStep(k); if (r) t[r[1].kind] = (t[r[1].kind] || 0) + 1; } for (const id of S.done) { const m = C.moves.find(x => x.id === id); if (m) t[m.kind] = (t[m.kind] || 0) + 1; } return t; }
+  function traitsCard() {
+    const T = C.school.traits; if (!T) return ''; const tc = traitCounts();
+    const fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
+    return `<div class="acard traitscard"><span class="eyebrow">${T.title}</span><p class="lede">${T.lede}</p><div class="traits">` + Object.keys(T.kinds).map(k => { const n = tc[k] || 0, KN = T.kinds[k]; const nx = T.tiers.find(t => n < t[2]); const prev = nx ? (T.tiers[T.tiers.indexOf(nx) - 1] || [null, null, 0])[2] : T.tiers[T.tiers.length - 1][2]; const pct = nx ? Math.round((n - prev) / (nx[2] - prev) * 100) : 100; const got = T.tiers.filter(t => n >= t[2]).pop();
+      return `<button class="tr" style="--c:${TRAIT_COLOUR[k]}" data-tro="trait.${k}.${nx ? nx[0] : 'gold'}"><span class="tn">${KN.name}</span><b>${n}</b><i><em style="width:${pct}%"></em></i><small>${nx ? fmt(T.next, { n: nx[2] - n, tier: nx[1].toLowerCase() }) : T.top}${got ? ' · ' + got[1].toLowerCase() : ''}</small></button>`; }).join('') + `</div></div>`;
   }
   const HUD_FLAME = '<path d="M8 19c-3.6 0-6-2.5-6-5.8 0-2.6 1.6-4.3 2.7-5.6.6-.7 1-1.3 1.2-2 .6 1.1 1.2 2 2 2.7C9.7 10 11 11.4 11 13.6c0 1.2-.5 2.3-1.2 3 .9-.2 4.2-1.6 4.2-5.7 0-3.2-2.2-5-3.5-6.6C9.4 3 8.9 1.8 9 0c-3 1.4-3.4 4.3-3.6 5.8C4.6 4.7 4.2 3.4 4.2 2 1.7 3.8 0 7.2 0 10.6 0 15.6 3.7 19 8 19z" fill="#E0812A"/><path d="M8 19c-1.9 0-3.2-1.4-3.2-3.2 0-1.5 1-2.4 1.6-3.2.4-.5.6-.9.7-1.4.5.8.9 1.3 1.4 1.8.7.7 1.6 1.6 1.6 2.8C10.1 17.6 9.2 19 8 19z" fill="#FFD36B"/>';
   const METALS = { bronze: ['#E8B48C', '#8A4E22'], silver: ['#FFFFFF', '#8E939B'], gold: ['#FFE9A0', '#B8860B'] };
@@ -1245,6 +1256,11 @@
         <rect x="45" y="45" width="12" height="28" rx="1.4" fill="url(#tg-stone)" stroke="#8E7A50" stroke-width=".7"/>
         ${arch}<rect x="4" y="73" width="56" height="5" rx="1.6" fill="#D6CBB4"/></svg>`;
     }
+    if (a.kind === 'trait') {
+      const m = METALS[a.metal] || METALS.gold, c = a.accent;
+      const sign = { courage: '<path d="M14 58 L26 36 L33 48 L39 40 L50 58 Z" fill="#FFF7E4"/><circle cx="44" cy="34" r="4" fill="#FFE9A0"/>', attention: '<path d="M14 46 Q32 28 50 46 Q32 64 14 46 Z" fill="#FFF7E4"/><circle cx="32" cy="46" r="7" fill="' + c + '"/><circle cx="32" cy="46" r="3" fill="#FFF7E4"/>', kindness: '<path d="M32 60 C20 50 12 44 12 36 a8 8 0 0 1 16 -4 q4 -6 8 -6 a8 8 0 0 1 16 10 c0 8 -8 14 -20 24 z" fill="#FFF7E4"/>', skill: '<path d="M22 60 L36 40 M36 40 L44 32" stroke="#FFF7E4" stroke-width="5" stroke-linecap="round"/><path d="M38 24 l10 10 -4 4 -10 -10 z" fill="#FFF7E4"/><rect x="40" y="18" width="16" height="9" rx="2" transform="rotate(45 48 22)" fill="#FFF7E4"/>' }[a.trait] || '';
+      return `<svg class="tsvg" viewBox="0 0 64 80">${grad('tg-' + a.metal, m[0], m[1])}<path d="M32 4 L58 12 V40 Q58 62 32 76 Q6 62 6 40 V12 Z" fill="url(#tg-${a.metal})"/><path d="M32 9 L53 15.5 V40 Q53 58 32 70 Q11 58 11 40 V15.5 Z" fill="${c}"/>${sign}</svg>`;
+    }
     const m = METALS[a.metal] || METALS.gold;
     return `<svg class="tsvg" viewBox="0 0 64 80">${grad('tg-' + a.metal, m[0], m[1])}<path d="M18 0h13l4 32-11 6z" fill="${a.accent}"/><path d="M46 0H33l-4 32 11 6z" fill="${a.accent}" opacity=".7"/><circle cx="32" cy="55" r="23" fill="url(#tg-${a.metal})" stroke="${m[1]}" stroke-width="1"/><circle cx="32" cy="55" r="17.5" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="1.6"/><path d="M32 43.5l3.5 7.2 7.9 1-5.8 5.5 1.5 7.9L32 61.3l-7.1 3.8 1.5-7.9-5.8-5.5 7.9-1z" fill="rgba(255,255,255,.9)"/></svg>`;
   }
@@ -1253,7 +1269,7 @@
     const items = got.concat(next), AW = C.school.awards, K = AW.show || {};
     const fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
     return `<div class="acard shelfcard"><div class="shtop"><span class="eyebrow">${AW.title}</span><small>${got.length} earned</small></div>${compact ? '' : `<p class="lede">${AW.lede}</p>`}
-      <div class="shelf"><div class="shrow">${items.map(a => `<button class="tro ${a.earned ? 'on' : 'off'}" data-tro="${a.id}">${trophySVG(a)}<span>${a.short}</span><small>${a.earned ? (a.kind === 'medal' ? a.tier : (a.kind === 'stone' ? a.need + ' days' : (K.earned || 'Earned')))
+      <div class="shelf"><div class="shrow">${items.map(a => `<button class="tro ${a.earned ? 'on' : 'off'}" data-tro="${a.id}">${trophySVG(a)}<span>${a.short}</span><small>${a.earned ? ((a.kind === 'medal' || a.kind === 'trait') ? a.tier : (a.kind === 'stone' ? a.need + ' days' : (K.earned || 'Earned')))
         : (a.kind === 'stone' ? a.left + ' more day' + (a.left === 1 ? '' : 's') : fmt(K.more, { n: a.left, s: a.left === 1 ? '' : 's' }))}</small></button>`).join('')}</div><i class="plank"></i></div></div>`;
   }
   function wireShelf(root) { root.querySelectorAll('[data-tro]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const a = awards().find(x => x.id === b.dataset.tro); if (a) trophyShow(a); })); }

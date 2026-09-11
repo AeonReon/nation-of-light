@@ -1195,3 +1195,14 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 .askrow.surprise i{width:46px;height:40px;flex:none;border-radius:10px;display:grid;place-items:center;
   background:var(--gold-pale);color:var(--gold-deep);font-style:normal;font-size:18px}
 .askcard h2{font-size:22px}
+/* v51: who you are becoming — the four kinds of step, counted */
+.traitscard{--g1:#DCC9A2;--g2:var(--gold)}
+.traitscard .lede{margin-bottom:2px}
+.traits{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.traits .tr{display:flex;flex-direction:column;align-items:flex-start;gap:3px;padding:10px 11px 9px;border-radius:14px;background:var(--ivory);box-shadow:inset 0 0 0 1.4px var(--c);text-align:left;transition:transform .2s var(--spring)}
+.traits .tr:active{transform:scale(.96)}
+.traits .tn{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--c)}
+.traits b{font-family:var(--display);font-weight:600;font-size:26px;line-height:1;color:var(--ink)}
+.traits i{display:block;width:100%;height:6px;border-radius:3px;background:var(--card);overflow:hidden;box-shadow:inset 0 0 0 1px var(--line)}
+.traits em{display:block;height:100%;border-radius:3px;background:var(--c);transition:width .8s var(--spring)}
+.traits small{font-size:11px;font-weight:700;color:var(--ink-faint)}

@@ -1,5 +1,5 @@
 {
- "version": 50,
+ "version": 51,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -2609,6 +2609,51 @@
    "made": "Good. It will be waiting at the top.",
    "madeSurprise": "Then I will choose, and it will be waiting.",
    "pin": "You said you would do this one"
+  },
+  "traits": {
+   "title": "Who you are becoming",
+   "lede": "Every step is one of four kinds. They add up into a person.",
+   "tiers": [
+    [
+     "bronze",
+     "Bronze",
+     10
+    ],
+    [
+     "silver",
+     "Silver",
+     30
+    ],
+    [
+     "gold",
+     "Gold",
+     75
+    ]
+   ],
+   "kinds": {
+    "skill": {
+     "name": "Craft",
+     "line": "Things your hands and body can now do."
+    },
+    "attention": {
+     "name": "Attention",
+     "line": "Things that took looking and thinking properly."
+    },
+    "courage": {
+     "name": "Courage",
+     "line": "Things that took nerve."
+    },
+    "kindness": {
+     "name": "Kindness",
+     "line": "Things done for somebody else."
+    }
+   },
+   "show": {
+    "have": "{n} {name} steps done. {tier} is yours.",
+    "need": "{n} {name} steps done. {tier} at {need}."
+   },
+   "next": "{n} to {tier}",
+   "top": "Gold. Keep going."
   }
  },
  "arrival": {
