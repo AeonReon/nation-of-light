@@ -1,5 +1,5 @@
 {
- "version": 49,
+ "version": 50,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -468,6 +468,106 @@
    {
     "id": "c-day",
     "t": "Three done. That is a day well used. Anything more now is yours to enjoy."
+   },
+   {
+    "id": "s-m-first",
+    "t": "You are here. That is already more than most manage. Begin."
+   },
+   {
+    "id": "s-m-new1",
+    "t": "You did not have to come. You came. Note that."
+   },
+   {
+    "id": "s-m-reg1",
+    "t": "Again. Good."
+   },
+   {
+    "id": "s-m-reg2",
+    "t": "You have stopped needing to be persuaded. That took less time than it takes most."
+   },
+   {
+    "id": "s-m-old1",
+    "t": "I have watched a good many people begin. Fewer than you would think are still here at this point."
+   },
+   {
+    "id": "s-m-back1",
+    "t": "Some days are lost to other things. The pile does not grow while you are away. Begin."
+   },
+   {
+    "id": "s-m-back2",
+    "t": "You came back. That is harder than starting, and you have just done it."
+   },
+   {
+    "id": "s-m-close",
+    "t": "{n} short of {next}. You know what that costs. Nothing is stopping you."
+   },
+   {
+    "id": "s-m-run",
+    "t": "{run} days. The thing you are building is not the skill. It is the turning up."
+   },
+   {
+    "id": "s-m-d1",
+    "t": "Done. Next."
+   },
+   {
+    "id": "s-m-d2",
+    "t": "You did not wait to feel ready. That is the whole of it."
+   },
+   {
+    "id": "s-m-d3",
+    "t": "Good. Say nothing about it to anybody and do another."
+   },
+   {
+    "id": "s-m-d4",
+    "t": "A man who does one small thing today is not the same man who did none."
+   },
+   {
+    "id": "s-m-dfirst",
+    "t": "The first is the only hard one. Go on."
+   },
+   {
+    "id": "s-m-dfive",
+    "t": "You have gone past what was asked. Do that often enough and it stops being remarkable."
+   },
+   {
+    "id": "s-m-dten",
+    "t": "Ten. Some people do not manage ten in a year."
+   },
+   {
+    "id": "s-m-day1",
+    "t": "The day is answered for. Rest is earned now, not taken."
+   },
+   {
+    "id": "s-m-day2",
+    "t": "Three days of three. You are not trying any more. You are just doing it."
+   },
+   {
+    "id": "s-m-day3",
+    "t": "Nothing about today was owed to you. You made it worth something anyway."
+   },
+   {
+    "id": "s-m-rank1",
+    "t": "{rank}. A name is a small thing. What it is made of is not."
+   },
+   {
+    "id": "s-m-rank2",
+    "t": "You have climbed to {rank}. Do not stand there admiring it."
+   },
+   {
+    "id": "s-m-pr1",
+    "t": "You practised on a day with nothing to show for it. That is the day that counts."
+   },
+   {
+    "id": "s-m-pr2",
+    "t": "Repetition is not glamorous. Neither is anybody who is any good."
+   },
+   {
+    "id": "s-m-pk1",
+    "t": "You said it and then you did it. Very few people are the same on both days."
+   },
+   {
+    "id": "s-m-po1",
+    "t": "{promise}. You named it yourself. Nobody else is going to do it for you."
    }
   ]
  },
@@ -963,7 +1063,43 @@
   "lg-took": "Well done for taking something on. It is part of who you are now. It will be here every morning, and we will keep the count.",
   "day": "That is today, done. Three things, and most people will not do one. Anything more now is a gift.",
   "kid-made": "This page is the little one's now. Beside them, never for them. The first rung is small enough to be silly, and that is the whole point.",
-  "kid-back": "Your own page again."
+  "kid-back": "Your own page again.",
+  "s-a-first": "There you are. I will be here every time you come, and so will he.",
+  "s-a-new1": "Good morning. Three things are waiting, and none of them take long.",
+  "s-a-new2": "You came back. That is the part almost nobody does twice.",
+  "s-a-new3": "Nothing here needs preparing for. Pick one and it has started.",
+  "s-a-reg1": "Here you are again. I like that I can expect you.",
+  "s-a-reg2": "Good. Same as ever, then. One thing at a time.",
+  "s-a-old1": "It is strange to think you once had to be talked into this.",
+  "s-a-back1": "There you are. Nothing has moved. Start wherever you like.",
+  "s-a-back2": "It has been a while, and it does not matter in the least. Everything you did is still done.",
+  "s-a-back3": "Twice in one day. I will not pretend I am not pleased.",
+  "s-a-close": "You are {n} from {next}. That is one sitting, if you want it today.",
+  "s-a-run": "{run} days in a row now. That has stopped being an accident.",
+  "s-a-late": "Late, and you still came. One small thing counts exactly the same at this hour.",
+  "s-a-early": "Early. The whole day is still in front of you.",
+  "s-a-donealready": "Today is already done. Anything after this is yours for the pleasure of it.",
+  "s-a-d1": "Good. One more thing you can do than you could an hour ago.",
+  "s-a-d2": "That is done and it stays done.",
+  "s-a-d3": "{n} altogether now.",
+  "s-a-d4": "Small, and it counted. They all count the same here.",
+  "s-a-dfirst": "The first one today. The rest are easier now, which is not a trick — it is just true.",
+  "s-a-dtwo": "Two. One more and the day is done.",
+  "s-a-dfive": "Five today. You are well past what the day asked of you.",
+  "s-a-dten": "Ten in one day. I will remember this one.",
+  "s-a-day1": "That is today. Whatever else happens now, the day counted.",
+  "s-a-day2": "Done. Tell me one thing — what will you do tomorrow?",
+  "s-a-day3": "Three again. I am beginning to look forward to seeing what you pick.",
+  "s-a-day4": "That is a week of days you did not let go of.",
+  "s-a-rank1": "{rank}. Look back at where you started, once, and then carry on.",
+  "s-a-rank2": "{rank}, and every one of those was a thing you actually did.",
+  "s-a-pr1": "Logged. The days you practise and cannot see it are the ones doing the work.",
+  "s-a-pr2": "Another day on it. This is exactly how it goes — quietly, and then suddenly.",
+  "s-a-pk1": "You said you would, and you did. I was watching for it.",
+  "s-a-pk2": "That is the one you promised. Keeping your word to yourself is the rarest of all of these.",
+  "s-a-po1": "You said you would do {promise}. It is still there, first on your list.",
+  "s-a-po2": "I kept {promise} at the top for you.",
+  "s-ask": "Before you go — what will you do tomorrow?"
  },
  "cover": {
   "em": "Nation of",
@@ -1984,6 +2120,495 @@
    "everyRoom": "Every room, beside them",
    "pillHint": "Tap to go home and switch back",
    "addHint": "A second little page, for somebody from about four, done beside you."
+  },
+  "says": [
+   {
+    "id": "s-a-first",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "There you are. I will be here every time you come, and so will he.",
+    "when": {
+     "first": true
+    },
+    "once": true
+   },
+   {
+    "id": "s-m-first",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "You are here. That is already more than most manage. Begin.",
+    "when": {
+     "first": true
+    },
+    "once": true
+   },
+   {
+    "id": "s-a-new1",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "Good morning. Three things are waiting, and none of them take long.",
+    "when": {
+     "visitsMax": 5,
+     "hourMax": 12
+    }
+   },
+   {
+    "id": "s-a-new2",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "You came back. That is the part almost nobody does twice.",
+    "when": {
+     "visitsMax": 5
+    }
+   },
+   {
+    "id": "s-a-new3",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "Nothing here needs preparing for. Pick one and it has started.",
+    "when": {
+     "visitsMax": 8
+    }
+   },
+   {
+    "id": "s-m-new1",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "You did not have to come. You came. Note that.",
+    "when": {
+     "visitsMax": 8
+    }
+   },
+   {
+    "id": "s-a-reg1",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "Here you are again. I like that I can expect you.",
+    "when": {
+     "visitsMin": 10
+    }
+   },
+   {
+    "id": "s-a-reg2",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "Good. Same as ever, then. One thing at a time.",
+    "when": {
+     "visitsMin": 20
+    }
+   },
+   {
+    "id": "s-m-reg1",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "Again. Good.",
+    "when": {
+     "visitsMin": 20
+    }
+   },
+   {
+    "id": "s-m-reg2",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "You have stopped needing to be persuaded. That took less time than it takes most.",
+    "when": {
+     "visitsMin": 30
+    }
+   },
+   {
+    "id": "s-a-old1",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "It is strange to think you once had to be talked into this.",
+    "when": {
+     "visitsMin": 60
+    }
+   },
+   {
+    "id": "s-m-old1",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "I have watched a good many people begin. Fewer than you would think are still here at this point.",
+    "when": {
+     "visitsMin": 60
+    }
+   },
+   {
+    "id": "s-a-back1",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "There you are. Nothing has moved. Start wherever you like.",
+    "when": {
+     "gapMin": 3,
+     "gapMax": 13
+    }
+   },
+   {
+    "id": "s-m-back1",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "Some days are lost to other things. The pile does not grow while you are away. Begin.",
+    "when": {
+     "gapMin": 3,
+     "gapMax": 13
+    }
+   },
+   {
+    "id": "s-a-back2",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "It has been a while, and it does not matter in the least. Everything you did is still done.",
+    "when": {
+     "gapMin": 14
+    }
+   },
+   {
+    "id": "s-m-back2",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "You came back. That is harder than starting, and you have just done it.",
+    "when": {
+     "gapMin": 14
+    }
+   },
+   {
+    "id": "s-a-back3",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "Twice in one day. I will not pretend I am not pleased.",
+    "when": {
+     "gapMax": 0,
+     "doneTodayMin": 1
+    }
+   },
+   {
+    "id": "s-a-close",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "You are {n} from {next}. That is one sitting, if you want it today.",
+    "when": {
+     "toNextMax": 3
+    }
+   },
+   {
+    "id": "s-m-close",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "{n} short of {next}. You know what that costs. Nothing is stopping you.",
+    "when": {
+     "toNextMax": 5
+    }
+   },
+   {
+    "id": "s-a-run",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "{run} days in a row now. That has stopped being an accident.",
+    "when": {
+     "runMin": 5
+    }
+   },
+   {
+    "id": "s-m-run",
+    "who": "marcus",
+    "slot": "arrive",
+    "t": "{run} days. The thing you are building is not the skill. It is the turning up.",
+    "when": {
+     "runMin": 10
+    }
+   },
+   {
+    "id": "s-a-late",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "Late, and you still came. One small thing counts exactly the same at this hour.",
+    "when": {
+     "hourMin": 21
+    }
+   },
+   {
+    "id": "s-a-early",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "Early. The whole day is still in front of you.",
+    "when": {
+     "hourMax": 8
+    }
+   },
+   {
+    "id": "s-a-donealready",
+    "who": "aurelia",
+    "slot": "arrive",
+    "t": "Today is already done. Anything after this is yours for the pleasure of it.",
+    "when": {
+     "doneTodayMin": 3
+    }
+   },
+   {
+    "id": "s-a-d1",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Good. One more thing you can do than you could an hour ago."
+   },
+   {
+    "id": "s-a-d2",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "That is done and it stays done."
+   },
+   {
+    "id": "s-a-d3",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "{n} altogether now.",
+    "when": {
+     "pointsMin": 10
+    }
+   },
+   {
+    "id": "s-m-d1",
+    "who": "marcus",
+    "slot": "done",
+    "t": "Done. Next."
+   },
+   {
+    "id": "s-m-d2",
+    "who": "marcus",
+    "slot": "done",
+    "t": "You did not wait to feel ready. That is the whole of it."
+   },
+   {
+    "id": "s-m-d3",
+    "who": "marcus",
+    "slot": "done",
+    "t": "Good. Say nothing about it to anybody and do another."
+   },
+   {
+    "id": "s-a-d4",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Small, and it counted. They all count the same here."
+   },
+   {
+    "id": "s-m-d4",
+    "who": "marcus",
+    "slot": "done",
+    "t": "A man who does one small thing today is not the same man who did none."
+   },
+   {
+    "id": "s-a-dfirst",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "The first one today. The rest are easier now, which is not a trick — it is just true.",
+    "when": {
+     "doneTodayMax": 1
+    }
+   },
+   {
+    "id": "s-m-dfirst",
+    "who": "marcus",
+    "slot": "done",
+    "t": "The first is the only hard one. Go on.",
+    "when": {
+     "doneTodayMax": 1
+    }
+   },
+   {
+    "id": "s-a-dtwo",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Two. One more and the day is done.",
+    "when": {
+     "doneTodayMin": 2,
+     "doneTodayMax": 2
+    }
+   },
+   {
+    "id": "s-a-dfive",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Five today. You are well past what the day asked of you.",
+    "when": {
+     "doneTodayMin": 5
+    }
+   },
+   {
+    "id": "s-m-dfive",
+    "who": "marcus",
+    "slot": "done",
+    "t": "You have gone past what was asked. Do that often enough and it stops being remarkable.",
+    "when": {
+     "doneTodayMin": 5
+    }
+   },
+   {
+    "id": "s-a-dten",
+    "who": "aurelia",
+    "slot": "done",
+    "t": "Ten in one day. I will remember this one.",
+    "when": {
+     "doneTodayMin": 10
+    }
+   },
+   {
+    "id": "s-m-dten",
+    "who": "marcus",
+    "slot": "done",
+    "t": "Ten. Some people do not manage ten in a year.",
+    "when": {
+     "doneTodayMin": 10
+    }
+   },
+   {
+    "id": "s-a-day1",
+    "who": "aurelia",
+    "slot": "dayDone",
+    "t": "That is today. Whatever else happens now, the day counted."
+   },
+   {
+    "id": "s-a-day2",
+    "who": "aurelia",
+    "slot": "dayDone",
+    "t": "Done. Tell me one thing — what will you do tomorrow?"
+   },
+   {
+    "id": "s-m-day1",
+    "who": "marcus",
+    "slot": "dayDone",
+    "t": "The day is answered for. Rest is earned now, not taken."
+   },
+   {
+    "id": "s-a-day3",
+    "who": "aurelia",
+    "slot": "dayDone",
+    "t": "Three again. I am beginning to look forward to seeing what you pick.",
+    "when": {
+     "runMin": 3
+    }
+   },
+   {
+    "id": "s-m-day2",
+    "who": "marcus",
+    "slot": "dayDone",
+    "t": "Three days of three. You are not trying any more. You are just doing it.",
+    "when": {
+     "runMin": 3
+    }
+   },
+   {
+    "id": "s-a-day4",
+    "who": "aurelia",
+    "slot": "dayDone",
+    "t": "That is a week of days you did not let go of.",
+    "when": {
+     "runMin": 7
+    }
+   },
+   {
+    "id": "s-m-day3",
+    "who": "marcus",
+    "slot": "dayDone",
+    "t": "Nothing about today was owed to you. You made it worth something anyway.",
+    "when": {
+     "visitsMin": 15
+    }
+   },
+   {
+    "id": "s-a-rank1",
+    "who": "aurelia",
+    "slot": "rank",
+    "t": "{rank}. Look back at where you started, once, and then carry on."
+   },
+   {
+    "id": "s-m-rank1",
+    "who": "marcus",
+    "slot": "rank",
+    "t": "{rank}. A name is a small thing. What it is made of is not."
+   },
+   {
+    "id": "s-a-rank2",
+    "who": "aurelia",
+    "slot": "rank",
+    "t": "{rank}, and every one of those was a thing you actually did."
+   },
+   {
+    "id": "s-m-rank2",
+    "who": "marcus",
+    "slot": "rank",
+    "t": "You have climbed to {rank}. Do not stand there admiring it."
+   },
+   {
+    "id": "s-a-pr1",
+    "who": "aurelia",
+    "slot": "practised",
+    "t": "Logged. The days you practise and cannot see it are the ones doing the work."
+   },
+   {
+    "id": "s-m-pr1",
+    "who": "marcus",
+    "slot": "practised",
+    "t": "You practised on a day with nothing to show for it. That is the day that counts."
+   },
+   {
+    "id": "s-a-pr2",
+    "who": "aurelia",
+    "slot": "practised",
+    "t": "Another day on it. This is exactly how it goes — quietly, and then suddenly."
+   },
+   {
+    "id": "s-m-pr2",
+    "who": "marcus",
+    "slot": "practised",
+    "t": "Repetition is not glamorous. Neither is anybody who is any good."
+   },
+   {
+    "id": "s-a-pk1",
+    "who": "aurelia",
+    "slot": "promiseKept",
+    "t": "You said you would, and you did. I was watching for it."
+   },
+   {
+    "id": "s-a-pk2",
+    "who": "aurelia",
+    "slot": "promiseKept",
+    "t": "That is the one you promised. Keeping your word to yourself is the rarest of all of these."
+   },
+   {
+    "id": "s-m-pk1",
+    "who": "marcus",
+    "slot": "promiseKept",
+    "t": "You said it and then you did it. Very few people are the same on both days."
+   },
+   {
+    "id": "s-a-po1",
+    "who": "aurelia",
+    "slot": "promiseOpen",
+    "t": "You said you would do {promise}. It is still there, first on your list."
+   },
+   {
+    "id": "s-m-po1",
+    "who": "marcus",
+    "slot": "promiseOpen",
+    "t": "{promise}. You named it yourself. Nobody else is going to do it for you."
+   },
+   {
+    "id": "s-a-po2",
+    "who": "aurelia",
+    "slot": "promiseOpen",
+    "t": "I kept {promise} at the top for you."
+   }
+  ],
+  "ask": {
+   "title": "One thing for tomorrow",
+   "lede": "Say it out loud now and it is much harder to slide past. I will keep it at the top of your list.",
+   "who": "aurelia",
+   "say": "Before you go — what will you do tomorrow?",
+   "sayId": "ui-s-ask",
+   "surprise": "Surprise me",
+   "skip": "Not tonight",
+   "made": "Good. It will be waiting at the top.",
+   "madeSurprise": "Then I will choose, and it will be waiting.",
+   "pin": "You said you would do this one"
   }
  },
  "arrival": {
