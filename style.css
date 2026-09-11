@@ -1143,13 +1143,25 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
   padding:11px 14px 12px;box-shadow:var(--shadow),inset 0 0 0 1.4px rgba(201,162,39,.42);
   transition:transform .18s var(--spring)}
 .thinbar:active{transform:scale(.99)}
-.tb-top{display:flex;align-items:baseline;gap:7px;margin-bottom:8px}
-.tb-top b{font-family:var(--display);font-weight:600;font-size:23px;line-height:1;color:var(--ink)}
-.tb-lbl{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
-.tb-rank{font-family:var(--display);font-weight:600;font-size:17px;color:var(--gold-deep);margin-left:auto}
-.tb-top em{font-style:normal;font-size:12px;color:var(--ink-soft);white-space:nowrap}
-.tb-top em b{font-size:12px;font-family:var(--sans);font-weight:700;color:var(--ink)}
-.tb-chev{font-style:normal;font-size:17px;line-height:1;color:var(--gold-deep);flex:none}
+.thinbar{display:flex;align-items:center;gap:12px}
+.tb-body{flex:1;min-width:0}
+.tb-nums{display:flex;align-items:baseline;gap:7px;margin-bottom:8px}
+.tb-nums b{font-family:var(--display);font-weight:600;font-size:25px;line-height:1;color:var(--ink)}
+.tb-nums small{font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-faint)}
+.tb-goal{flex:none;display:flex;flex-direction:column;align-items:center;gap:1px;width:62px}
+/* not fully grey — you should want it. Enough colour to read as gold, enough
+   fade to read as not yours yet. */
+.tb-goal .tsvg{width:36px;height:44px;filter:grayscale(.5) opacity(.7)}
+.tb-goal small{font-size:9.5px;line-height:1.2;text-align:center;color:var(--ink-faint);font-weight:600}
+.tb-goal small b{color:var(--gold-deep);font-size:10.5px}
+.addkid{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:13px 15px;
+  border-radius:16px;background:var(--card);box-shadow:inset 0 0 0 1.3px var(--line);
+  transition:transform .18s var(--spring)}
+.addkid:active{transform:scale(.985)}
+.addkid i{width:32px;height:32px;flex:none;border-radius:50%;display:grid;place-items:center;
+  background:var(--gold-pale);color:var(--gold-deep);font-style:normal;font-size:19px;font-weight:700}
+.addkid strong{display:block;font-size:15px}
+.addkid small{display:block;font-size:12px;color:var(--ink-faint);line-height:1.4;margin-top:1px}
 .tb-track{display:block;height:6px;border-radius:3px;background:var(--ivory-2);overflow:hidden}
 .tb-track i{display:block;height:100%;border-radius:3px;
   background:linear-gradient(90deg,var(--gold-lt),var(--gold));transition:width .8s var(--spring)}

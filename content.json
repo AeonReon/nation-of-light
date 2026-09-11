@@ -1,5 +1,5 @@
 {
- "version": 48,
+ "version": 49,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -1982,7 +1982,8 @@
    "forLede": "Eight ladders written for small hands. Every other ladder in the school is open too, with you beside them.",
    "homeTitle": "{name}'s day",
    "everyRoom": "Every room, beside them",
-   "pillHint": "Tap to go home and switch back"
+   "pillHint": "Tap to go home and switch back",
+   "addHint": "A second little page, for somebody from about four, done beside you."
   }
  },
  "arrival": {

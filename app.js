@@ -778,14 +778,20 @@
      how far to the next — and the three things to do sit directly under it.
      Everything else moved down or into a fold. */
   function thinBar() {
-    const p = points(), r = rankOf(p), A = C.arrival.stand;
+    const p = points(), r = rankOf(p), A = C.arrival.stand, RK = C.school.ranks;
     const pct = r.next ? Math.max(3, Math.round((p - r.at) / (r.next[0] - r.at) * 100)) : 100;
+    /* The trophy you are working towards, drawn, on the right. His words: "I
+       like just the progress bar, the number, and then see the trophy so you
+       can see what you're actually working towards." The flame grows by rank,
+       so the one on the right is visibly bigger than the one you have. */
+    const i = RK.findIndex(x => x[1] === r.name);
+    const goal = r.next ? { kind: 'flame', level: i + 1, earned: false } : { kind: 'flame', level: i, earned: true };
     return `<button class="thinbar" data-panel="progress">
-      <span class="tb-top"><b>${p}</b><span class="tb-lbl">${A.steps}</span>
-        <span class="tb-rank">${r.name}</span>
-        ${r.next ? `<em><b>${r.next[0] - p}</b> to ${r.next[1]}</em>` : `<em>${A.rank}</em>`}
-        <i class="tb-chev">&#8250;</i></span>
-      <span class="tb-track"><i style="width:${pct}%"></i></span></button>`;
+      <span class="tb-body">
+        <span class="tb-nums"><b>${p}</b><small>${A.steps} &middot; ${r.name}</small></span>
+        <span class="tb-track"><i style="width:${pct}%"></i></span></span>
+      <span class="tb-goal">${trophySVG(goal)}
+        <small>${r.next ? `<b>${r.next[0] - p}</b> to ${r.next[1]}` : A.rank}</small></span></button>`;
   }
   function standCard(inPanel) {
     const p = points(), r = rankOf(p), A = C.arrival.stand;
@@ -924,8 +930,12 @@
     const rooms = SCH.categories.map(c => ({ c, n: c.tracks.reduce((s, tr) => s + trackDone(tr), 0), N: c.tracks.reduce((s, tr) => s + tr.steps.length, 0) })).filter(r => r.n > 0).sort((x, y) => y.n - x.n).slice(0, 8);
     const earlier = FEED.slice(1, 6);
     const KID = C.school.kid || {};
-    const whoStrip = `<div class="whostrip"><button class="wpill ${isKid() ? '' : 'on'}" data-who="me">${KID.you || 'You'}</button>${S.kid
-      ? `<button class="wpill ${isKid() ? 'on' : ''}" data-who="kid">${kidName()}</button>` : `<button class="wpill add" data-who="new">+ ${KID.add || 'With a little one'}</button>`}</div>`;
+    /* Most people do not have a little one, and the top of this page is for
+       one thing only. So the switcher appears ONLY once a child exists — and
+       the way to add one lives at the foot with the other settings. */
+    const whoStrip = S.kid ? `<div class="whostrip"><button class="wpill ${isKid() ? '' : 'on'}" data-who="me">${KID.you || 'You'}</button>
+      <button class="wpill ${isKid() ? 'on' : ''}" data-who="kid">${kidName()}</button></div>` : '';
+    const addKid = S.kid ? '' : `<button class="addkid" data-who="new"><i>+</i><span><strong>${KID.add || 'With a little one'}</strong><small>${KID.addHint || ''}</small></span></button>`;
     const kidCard = isKid() ? `<div class="acard kidcard"><span class="eyebrow">${fmt1(KID.forTitle || 'For {name}, from four', { name: kidName() })}</span><p class="lede">${KID.forLede || ''}</p>` +
       littleTracks().map(tr => { const c = catOf(tr), s = nextStep(tr), n = trackDone(tr); return s ? `<button class="crow" style="--c:${c.accent};--c2:${c.accent2}" data-step="${skey(tr, s)}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${s.test}</small></span><i class="cprog"><b style="width:${Math.round(n / tr.steps.length * 100)}%"></b></i></button>`
         : `<div class="crow done" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${(C.school.track || {}).finished || 'Finished'}</small></span></div>`; }).join('') + '</div>' : '';
@@ -947,7 +957,7 @@
       (lib ? foldCard('library', F.library || 'From the library', lib) : '') +
       (rooms.length ? foldCard('rooms', F.rooms || 'Rooms climbed', `<div class="acard prog"><div class="rooms">${rooms.map(r => `<div class="rr" style="--c:${r.c.accent};--c2:${r.c.accent2}"><span>${r.c.name}</span><i><b style="width:${Math.round(r.n / r.N * 100)}%"></b></i><small>${r.n} of ${r.N}</small></div>`).join('')}</div></div>`) : '') +
       (earlier.length ? foldCard('earlier', C.feed.earlier || 'Earlier', `<div class="acard feedcard">${earlier.map(p => `<div class="feedpost"><small>${p.date}</small><h4>${p.title}</h4><p>${p.text}</p></div>`).join('')}</div>`) : '') +
-      dayCard(ticks, nextLine, q && (l || !hasLong)) +
+      dayCard(ticks, nextLine, q && (l || !hasLong)) + addKid +
       `<div class="gorow"><button class="btn btn-gold" id="intoschool">${P.go}</button><button class="iconbtn" id="sharearr" aria-label="${C.share.btn}">${SHARE_IC}</button></div>`;
     if (post && isNew) { S.feed.seen.push(post.id); save(); }
     list.querySelector('#sharearr').addEventListener('click', () => { sfx('tap'); sharePanel(); });
