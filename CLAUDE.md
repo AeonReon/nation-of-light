@@ -210,3 +210,13 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   Parked ideas, in order: a "beside them" credit on the parent's own day bar for a session
   done on the child's page; an optional age in `kidPanel` so `from` can hide the adult-only
   rungs (the phone call at about six) on the child's Everything tab; a second child (`S.kids`).
+- **Who you are becoming (v51–v52, Fable session):** step `kind` (skill = Craft, attention,
+  courage, kindness) counted by `traitCounts()`; four meters at home (`traitsCard`), shield
+  trophies per trait in `awards()` (bronze 10 / silver 30 / gold 75, `trophySVG` kind 'trait'),
+  and the page behind it (`becomingRoom`, `ROOMV = 'becoming'`, opened by `[data-becoming]`):
+  headline count, the four kinds with shields, then "Things you can do now" = highest rung
+  reached on every ladder touched, newest first. He called this the missing piece. The pattern
+  he wants everywhere: a few at home, tap for the whole page.
+- **Agreed second-half roadmap:** traits (done) → a Daily routine unlocked at Flame (repeatable
+  practices per strand, with levels; needs new content) → measurable body ladders already
+  exist (fit.stretch, 20 rungs). Two sessions share this tree: read `git log` before editing app.js.
