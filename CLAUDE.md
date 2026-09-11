@@ -220,3 +220,20 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
 - **Agreed second-half roadmap:** traits (done) → a Daily routine unlocked at Flame (repeatable
   practices per strand, with levels; needs new content) → measurable body ladders already
   exist (fit.stretch, 20 rungs). Two sessions share this tree: read `git log` before editing app.js.
+- **v55 (2026-09-11, Fable session): the three thin moments, and More from us.** The other
+  session's end-notes named three moments with nothing written for them; each now has its own
+  slot in `school.says` (same picker, same weighting, every line voiced, Marcus's as companion
+  lines): **`rusty`** (a faded step earned again; `saySlot` picks it over `done` when `rusty`),
+  **`again`** (a fresh step done once more: a line now, the toast only if none), **`checkin`**
+  (conditioned on `when.mood` = well / struggle / hard / down; the pool speaks FIRST and his
+  real quotes m-d2 / m-x4 still follow for struggling and too hard — `CONDS.mood`, `sayState`
+  carries `mood` and `days`), and **`run`** (a days-in-a-row stone earned: `trophyShow` uses
+  `pickSay('run', {run: a.n})` instead of the generic trophy lines; `sayState.run` now honours
+  `ctx.run`, so `{run}` and `runMin` read the trophy's count, not today's). 54 lines, 8 of them
+  exchanges. Test any slot in the console: `NOL.say('checkin', {mood:'hard', days:3})`.
+  **More from us** (`C.apps`): a card at home (five icons, one line, "More from us ›") and a
+  room (`ROOMV = 'apps'`, `appsRoom`) with the five apps as cards that open in a new tab and
+  "Talk to us" at the foot. The address is built from character codes on tap (hello@ on the
+  aeonreon catch-all), never a literal in the repo — same rule as ni-apps. Icons in
+  `images/apps/` (256px, copied from ni-apps and Mo & Pip). Add an app = one entry in
+  `C.apps.list` + an icon. For the testers' packs.

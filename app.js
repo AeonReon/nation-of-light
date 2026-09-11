@@ -888,6 +888,23 @@
     <span>${a.short}</span><small>${a.earned ? ((a.kind === 'medal' || a.kind === 'trait') ? a.tier : (a.kind === 'stone' ? a.need + ' days' : 'Earned'))
       : (a.kind === 'stone' ? a.left + ' more day' + (a.left === 1 ? '' : 's') : a.left + ' more')}</small></button>`;
   /* the page behind the card: the four kinds, and every real ability, highest rung first */
+  /* ---- more from us: the other apps, and a way to reach us ----
+     For the testers' packs: one page that says the school is one of a small
+     family of free apps, shows them, and gives an address. The address is never
+     a literal in the repo; it is assembled on tap (same rule as ni-apps). */
+  function appsCard() { const P = C.apps; if (!P) return '';
+    return `<button class="acard appscard" data-apps="1"><span class="eyebrow">${P.home}</span><span class="appicons">${P.list.map(x => `<img src="${x.icon}" alt="${x.name}">`).join('')}</span><span class="appline">${P.homeLine}</span><span class="tapmore">${P.title} ›</span></button>`; }
+  function appsRoom(list) { const P = C.apps, K = P.contact || {};
+    stageBack(closeRoom);
+    list.innerHTML = `<div class="acard prheadcard"><span class="eyebrow">${P.eyebrow}</span><h2 class="apptitle">${P.title}</h2><p class="lede">${P.lede}</p></div>` +
+      P.list.map(x => `<a class="acard approw" href="${x.url}" target="_blank" rel="noopener" style="--c:${x.accent}"><img src="${x.icon}" alt=""><span><strong>${x.name}</strong><small>${x.line}</small></span><b class="appopen">${P.open}</b></a>`).join('') +
+      `<div class="acard contactcard"><span class="eyebrow">${K.title}</span><p class="lede">${K.lede}</p><div class="row" id="contactrow"><button class="btn btn-gold" id="contactshow" style="flex:1">${K.btn}</button></div></div>`;
+    list.scrollTop = 0;
+    const addr = () => String.fromCharCode(104, 101, 108, 108, 111, 64, 97, 101, 111, 110, 114, 101, 111, 110, 46, 99, 111, 109);
+    $('contactshow').addEventListener('click', () => { sfx('tap'); const e = addr();
+      $('contactrow').outerHTML = `<div class="addr" id="contactrow"><b>${e}</b><div class="row"><a class="btn btn-gold" href="mailto:${e}" style="flex:1">${K.mail}</a><button class="btn btn-ghost" id="contactcopy">${K.copy}</button></div></div>`;
+      $('contactcopy').addEventListener('click', () => { sfx('tap'); try { navigator.clipboard.writeText(e); } catch (x) {} $('contactcopy').textContent = K.copied; }); });
+  }
   function becomingRoom(list) {
     const T = C.school.traits, P = T.page || {}, tc = traitCounts(), aw = awards();
     const fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
@@ -961,6 +978,7 @@
   function renderArrival() {
     const list = $('slist'), keep = list.scrollTop;
     if (ROOMV === 'becoming') { becomingRoom(list); return; }
+    if (ROOMV === 'apps') { appsRoom(list); return; }
     if (ROOMV) { progressRoom(list); return; }
     stageBack(null); const picks = todayPicks(), later = todayPicks('later'); const P = C.arrival, R = C.room, F = P.folds || {};
     // the feed: newest post, and whether it has been seen
@@ -997,7 +1015,7 @@
       (C.vision ? foldCard('vision', C.vision.title, `<div class="acard visioncard"><div class="rhead"><span class="eyebrow">${C.vision.lede}</span><button class="playbtn" id="visionread" aria-label="Aurelia reads it">${SPK_IC}</button></div>${C.vision.paras.map(x => `<p>${x}</p>`).join('')}</div><div class="acard polycard"><span class="eyebrow">${C.vision.polyTitle}</span><p class="lede">${C.vision.polyLede}</p>${C.vision.polymaths.map(x => `<div class="poly"><b>${x.name}</b><span>${x.line}</span></div>`).join('')}<p class="close">${C.vision.close}</p></div>`, visits <= 2 && !S.school.visionSeen) : '') +
       (post ? foldCard('post', `<span class="foldic">${HORN_IC}</span>${C.feed.title}${isNew ? '<b class="dot">New</b>' : ''}`,
         `<div class="acard post ${isNew ? 'new' : ''}"><h3>${post.title}</h3><small>${post.date}</small><p>${post.text}</p></div>`, isNew) : '') +
-      traitsCard() + shelfCard(true) +
+      traitsCard() + shelfCard(true) + appsCard() +
       foldCard('reading', F.reading || 'A reading from Aurelia', `<div class="acard reading"><div class="rhead"><span class="eyebrow">${R.readingsLede}</span><button class="playbtn" id="readit" aria-label="Aurelia reads it">${SPK_IC}</button></div><h3>${rd.title}</h3><p>${rd.text}</p></div>`) +
       (lib ? foldCard('library', F.library || 'From the library', lib) : '') +
       (rooms.length ? foldCard('rooms', F.rooms || 'Rooms climbed', `<div class="acard prog"><div class="rooms">${rooms.map(r => `<div class="rr" style="--c:${r.c.accent};--c2:${r.c.accent2}"><span>${r.c.name}</span><i><b style="width:${Math.round(r.n / r.N * 100)}%"></b></i><small>${r.n} of ${r.N}</small></div>`).join('')}</div></div>`) : '') +
@@ -1011,6 +1029,7 @@
     const rb = list.querySelector('#readit'); if (rb) rb.addEventListener('click', () => { sfx('tap'); hush(); clearTimeout(ROOMT); cap('aurelia', rd.title); ARIG.nod(); aureliaSay('ui-read-' + rd.id, () => { capHide(1500); idleRoom(); }); });
     wireShelf(list); wireLong(list);
     list.querySelectorAll('[data-becoming]').forEach(b => b.addEventListener('click', () => { sfx('tap'); ROOMV_AT = b.dataset.becoming; openRoom('becoming'); }));
+    list.querySelectorAll('[data-apps]').forEach(b => b.addEventListener('click', () => { sfx('tap'); openRoom('apps'); }));
     list.querySelectorAll('[data-panel]').forEach(b => b.addEventListener('click', () => { sfx('open');
       openRoom(b.dataset.panel === 'run' ? 'run' : 'top'); }));
     list.querySelectorAll('[data-do]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.do); if (r) stepSheet(r[0], r[1], null, 'arrival'); }));
@@ -1076,6 +1095,7 @@
        it's cooking: something praising how nice it is to be around people who
        can make good food." */
     room: (v, s) => s.room === v, size: (v, s) => s.size === v, kind: (v, s) => s.kind === v,
+    mood: (v, s) => s.mood === v,
   };
   const dayGap = (a, b) => Math.round((Date.parse(b + 'T12:00:00') - Date.parse(a + 'T12:00:00')) / 864e5);
   function sayState(ctx) {
@@ -1086,11 +1106,12 @@
     const p = points(), r = rankOf(p), run = runInfo(), lv = S.school.prevVisit || S.school.lastVisit;
     return { p, rank: r.name, next: r.next ? r.next[1] : null, toNext: r.next ? r.next[0] - p : 0,
       visits: S.school.visits || 0, gap: lv ? dayGap(lv, today()) : 999,
-      run: run.cur, best: run.best, doneToday: dayCount(), hasLong: projects().length > 0,
+      run: (ctx && ctx.run) || run.cur, best: run.best, doneToday: dayCount(), hasLong: projects().length > 0,
       hour: new Date().getHours(), first: (S.school.visits || 0) <= 1,
       saidYes: saidYesterday(), name: isKid() ? kidName() : '',
       room: (ctx && ctx.room) || null, size: (ctx && ctx.size) || null, kind: (ctx && ctx.kind) || null,
-      track: (ctx && ctx.track) || '', roomName: (ctx && ctx.roomName) || '' };
+      track: (ctx && ctx.track) || '', roomName: (ctx && ctx.roomName) || '',
+      mood: (ctx && ctx.mood) || null, days: (ctx && ctx.days) || 0 };
   }
   const fillSay = (t, s) => String(t).replace(/\{(\w+)\}/g, (m0, k) =>
     k === 'n' ? (s.toNext || s.p) : (s[k] !== undefined && s[k] !== null ? s[k] : m0));
@@ -1351,10 +1372,12 @@
     if (a.earned) { sfx('wreath'); shower(); if (sc) { sparks(); PORTICO.flare(); } } else sfx('scroll');
     const n = SHOWN++;
     const mid = a.earned ? ['c-tr1', 'c-tr2', 'c-tr4'][n % 3] : 'c-tr3', aid = a.earned ? ['tr2', 'tr3', 'tr4'][n % 3] : 'tr-no';
+    const runLn = (a.earned && a.tier === 'run') ? pickSay('run', { run: a.n }) : null;   // the stones have their own words
     if (!sc) { popIn('marcus'); popIn('aurelia'); }
     setTimeout(() => {
       if (SHOW !== v) return;
       if (a.earned) { RIG.cheer(); ARIG.cheer(); }
+      if (runLn) { speakSchool(runLn.reply ? [asLine(runLn), asLine(runLn.reply)] : [asLine(runLn)], () => { if (!sc) { popOut('marcus', 1600); popOut('aurelia', 1600); } }); return; }
       const her = () => { if (SHOW !== v) return; cap('aurelia', C.voice[aid]); ARIG.nod(); aureliaSay('ui-' + aid, () => { capHide(1800); if (!sc) { popOut('marcus', 1600); popOut('aurelia', 1600); } }); };
       if (line(mid)) marcusSay(line(mid), a.earned ? 'cheer' : 'nod', () => setTimeout(her, 350)); else her();
     }, sc ? 500 : 900);
@@ -1531,7 +1554,15 @@
       <div class="moods"><button class="btn btn-gold" data-mood="well">${K.well}</button><button class="btn btn-ghost" data-mood="struggle">${K.struggle}</button><button class="btn btn-ghost" data-mood="hard">${K.hard}</button></div>
       <button class="what dark" id="putdown">${K.down}</button></div>`, 'light');
     backBtn(v, () => closeVeil());
-    const say = (mood) => { const L = (K.lines || {})[mood] || []; const lines = L.map(([who, id]) => who === 'aurelia' ? { who, id, t: C.voice[id.replace(/^ui-/, '')] || '' } : { who, id }); closeVeil(() => { rerender(); hush(); setTimeout(() => speakSchool(lines), 300); }); };
+    /* the check-in used to answer with one fixed pair per mood, so the fourth
+       time you said "struggling" you heard the same two sentences. Now a pool
+       (slot checkin, conditioned on the mood) speaks first; his real quote for
+       struggling / too hard stays, after it. */
+    const say = (mood) => { const L = (K.lines || {})[mood] || []; const old = L.map(([who, id]) => who === 'aurelia' ? { who, id, t: C.voice[id.replace(/^ui-/, '')] || '' } : { who, id });
+      const pk = pickSay('checkin', { mood, days: n, room: c.id, roomName: c.name, track: tr.name, size: tr.size });
+      const quotes = old.filter(l => l.who === 'marcus' && /^m-/.test(l.id));
+      const lines = pk ? (pk.reply ? [asLine(pk), asLine(pk.reply)] : [asLine(pk)]).concat(quotes) : old;
+      closeVeil(() => { rerender(); hush(); setTimeout(() => speakSchool(lines), 300); }); };
     v.querySelectorAll('[data-mood]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const p = prac(tr); p.mood = p.mood || {}; p.mood[today()] = b.dataset.mood; p.asked = today(); save(); say(b.dataset.mood); }));
     v.querySelector('#putdown').addEventListener('click', () => { sfx('tap'); S.school.projects = (S.school.projects || []).filter(id => id !== tr.id); S.school.dropped = (S.school.dropped || []).concat(tr.id); save(); say('down'); });
   }
@@ -1839,7 +1870,7 @@
         S.school.done[k] = new Date().toISOString();
         const t0 = today(); S.days[t0] = (S.days[t0] || 0) + 1; save();
         sfx('done'); if (inSceneNow()) sparks();
-        closeVeil(() => { rerender(); toast(K.againFresh || 'Marked again for today. Still yours.'); });
+        closeVeil(() => { rerender(); if (!saySlot('again', null, { room: c.id, roomName: c.name, track: tr.name, size: tr.size, kind: st.kind || 'skill' })) toast(K.againFresh || 'Marked again for today. Still yours.'); });
         return;
       }
       const before = rankOf(points()).name, awBefore = awards().filter(x => x.earned).length, hadIds = new Set(awards().filter(x => x.earned).map(x => x.id));
@@ -1864,7 +1895,7 @@
           setTimeout(() => finishCard(tr), 420); });
         return;
       }
-      if (saySlot(up ? 'rank' : 'done', null, sayCtx)) {
+      if (saySlot(up ? 'rank' : (rusty ? 'rusty' : 'done'), null, sayCtx)) {
         closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool();
           if (where !== 'track') setTimeout(() => afterStep(tr), 900); });
         return;

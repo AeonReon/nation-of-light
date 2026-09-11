@@ -347,6 +347,19 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .sheet .stestbig{font-family:var(--display);font-weight:500;font-size:clamp(19px,5.4vw,23px);line-height:1.3;color:var(--ink);margin:4px 0 12px}
 .sheet .how{margin:0 0 14px;padding-left:18px;font-size:14px;line-height:1.5;color:var(--ink-soft)}
 .sheet .how li+li{margin-top:4px}
+/* more from us: the other apps and the address */
+.appscard{display:block;width:100%;text-align:left}
+.appscard .appicons{display:flex;gap:8px;margin:8px 0 6px}
+.appscard .appicons img{width:44px;height:44px;border-radius:11px;box-shadow:0 2px 8px rgba(40,28,10,.18)}
+.appscard .appline{display:block;font-size:13.5px;line-height:1.45;color:var(--ink-soft)}
+.appscard .tapmore{display:block;margin-top:6px}
+.apptitle{font-family:var(--display);font-weight:600;font-size:26px;line-height:1.15;margin:2px 0 6px;color:var(--ink)}
+.approw{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:center;text-decoration:none;color:inherit;--g1:var(--c);--g2:var(--c)}
+.approw img{width:56px;height:56px;border-radius:14px;box-shadow:0 3px 10px rgba(40,28,10,.18)}
+.approw strong{display:block;font-family:var(--display);font-weight:600;font-size:17px;color:var(--ink)}
+.approw small{display:block;font-size:13px;line-height:1.4;color:var(--ink-soft);margin-top:2px}
+.approw .appopen{font-size:12.5px;font-weight:800;letter-spacing:.04em;color:var(--gold-deep);padding:7px 11px;border-radius:14px;box-shadow:inset 0 0 0 1.5px var(--gold)}
+.contactcard .addr b{display:block;font-family:var(--display);font-size:19px;text-align:center;margin:4px 0 12px;color:var(--ink);word-break:break-all}
 /* the little one (v47): who is holding the phone */
 .whostrip{display:flex;gap:8px;justify-content:center;margin:0 0 10px;flex-wrap:wrap}
 .wpill{height:34px;padding:0 15px;border-radius:17px;font-weight:700;font-size:13.5px;color:var(--ink-soft);background:var(--ivory-2);box-shadow:inset 0 0 0 1px var(--line);transition:transform .2s var(--spring)}
