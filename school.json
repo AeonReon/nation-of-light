@@ -5980,9 +5980,10 @@
      "steps": [
       {
        "n": 1,
-       "test": "Finger-spell your own name.",
+       "test": "Learn the sign-language alphabet for the letters of your name, and spell your name with your hands.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "note": "Sign language has its own alphabet. Any short video of the British Sign Language alphabet will show you the letters."
       },
       {
        "n": 2,
@@ -11017,9 +11018,10 @@
      "steps": [
       {
        "n": 1,
-       "test": "Write down on paper what a small event would need.",
+       "test": "Pick a small event you could actually run, a games afternoon for six children, say. Write down the five things it would need.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "note": "Not a real event yet. The point is seeing the whole list before the day, which is most of running anything."
       },
       {
        "n": 2,
@@ -12387,7 +12389,8 @@
        "n": 1,
        "test": "Learn what one word root means and find two English words that use it.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "Aqua means water: aquarium, aqueduct. That is the whole exercise, with a root of your own."
       },
       {
        "n": 2,
@@ -13451,9 +13454,10 @@
      "steps": [
       {
        "n": 1,
-       "test": "Write down three things about something you are buying that are not the price.",
+       "test": "Think of the last thing you bought that cost more than a coffee. Say two things about that deal that were not the price.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "note": "How long it will last. Whether you could take it back. When you had to pay. A deal is never only the number."
       },
       {
        "n": 2,
@@ -13532,7 +13536,7 @@
      "steps": [
       {
        "n": 1,
-       "test": "Before you go, write down the number you will not go above.",
+       "test": "Before you next buy one thing, write down the most you will pay for it. Then do not go above it.",
        "ctx": "room",
        "kind": "attention"
       },
@@ -14766,9 +14770,10 @@
      "steps": [
       {
        "n": 1,
-       "test": "Know how to call for help and exactly what to say.",
+       "test": "Say out loud, as if to the 999 operator, exactly what you would tell them: where you are, what has happened, who is hurt.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "note": "Where you are comes first. They can send help before they know anything else."
       },
       {
        "n": 2,

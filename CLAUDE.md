@@ -237,3 +237,15 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   aeonreon catch-all), never a literal in the repo — same rule as ni-apps. Icons in
   `images/apps/` (256px, copied from ni-apps and Mo & Pip). Add an app = one entry in
   `C.apps.list` + an icon. For the testers' packs.
+- **v56 (2026-09-12): three corrections from his first morning with v55.** (1) More from us is
+  the LAST thing at home, inside a drop-down (`appsFold`, `foldCard('apps')`), never a card in
+  the flow — a card there read as promotion. (2) **No aeonreon.com address is ever public**:
+  that domain is his sign-up catch-all. The contact address is `apps.contact.codes` (char codes)
+  in content.json, currently hi@daysoutni.com, which is verified to deliver (Days Out catch-all →
+  daysout-mailbox + the Days Out Gmail). nolschool.com has Cloudflare MX but no token here can
+  read its routing rules, so it is unverified — switch the codes only after one test email lands.
+  (3) **The day's picks must be different KINDS of thing** (`todayPicks`: a family not yet on
+  the list, then a room not yet on it, then anything), so one of the three catches whatever
+  mood you are in. Six vague first rungs rewritten to be concrete (money.run, deal.terms,
+  words.sign, home.firstaid, deal.walkaway, classic.roots): a step must say exactly what to do
+  right now, with a real example, never a hypothetical the reader has to invent.

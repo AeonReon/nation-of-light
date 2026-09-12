@@ -5768,10 +5768,7 @@
   },
   "apps": {
     "title": "More from us",
-    "eyebrow": "The same people",
-    "lede": "Light School is one of a small family of free apps made in Northern Ireland, for families here. No accounts, no ads, nothing to buy.",
-    "home": "Our other apps",
-    "homeLine": "Days out, the weather, fuel, parenting, and letters for the little ones.",
+    "lede": "Light School is one of a small family of free apps made here, for families here. No accounts, no ads, nothing to buy.",
     "open": "Open",
     "contact": {
       "title": "Talk to us",
@@ -5779,7 +5776,25 @@
       "btn": "Show the address",
       "copy": "Copy",
       "copied": "Copied",
-      "mail": "Write"
+      "mail": "Write",
+      "codes": [
+        104,
+        105,
+        64,
+        100,
+        97,
+        121,
+        115,
+        111,
+        117,
+        116,
+        110,
+        105,
+        46,
+        99,
+        111,
+        109
+      ]
     },
     "list": [
       {

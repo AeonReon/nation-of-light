@@ -691,7 +691,18 @@
     const key = which === 'later' ? 'later' : 'picks', limit = which === 'later' ? 4 : 6;
     const cand = quickCandidates(which).map(([tr, st]) => skey(tr, st));
     t[key] = t[key].filter(k => { const r = findStep(k); return r && !sdone(k) && fits(r[0], r[1], which); });
-    for (const k of cand) { if (t[key].length >= limit) break; if (!t[key].includes(k) && !t.skip.includes(k)) t[key].push(k); }
+    /* His rule (2026-09-12): the picks must be DIFFERENT kinds of thing — one
+       physical, one for the mind, one social, one to make — so that whatever
+       mood you are in, one of them catches you. Three passes: a family not yet
+       on the list, then a room not yet on the list, then anything. */
+    const groupOf = tr => { const c = catOf(tr); const g = SCH.groups.find(g => g.categories.includes(c.id)); return g ? g.id : c.id; };
+    const have = fn => new Set(t[key].map(k => { const r = findStep(k); return r ? fn(r[0]) : null; }));
+    const pool = cand.filter(k => !t[key].includes(k) && !t.skip.includes(k));
+    for (const pass of ['group', 'cat', 'any']) for (const k of pool) {
+      if (t[key].length >= limit) break; if (t[key].includes(k)) continue; const r = findStep(k); if (!r) continue;
+      if (pass === 'group' && have(groupOf).has(groupOf(r[0]))) continue;
+      if (pass === 'cat' && have(tr => catOf(tr).id).has(catOf(r[0]).id)) continue;
+      t[key].push(k); }
     save(); return t[key].map(findStep).filter(Boolean);
   }
   const levelTwo = () => allTracks().filter(tr => trackDone(tr) === 1 && !(S.school.projects || []).includes(tr.id)).map(tr => [tr, nextStep(tr)]).filter(([tr, st]) => st && NOW.has(st.ctx)).slice(0, 4);
@@ -889,22 +900,17 @@
       : (a.kind === 'stone' ? a.left + ' more day' + (a.left === 1 ? '' : 's') : a.left + ' more')}</small></button>`;
   /* the page behind the card: the four kinds, and every real ability, highest rung first */
   /* ---- more from us: the other apps, and a way to reach us ----
-     For the testers' packs: one page that says the school is one of a small
-     family of free apps, shows them, and gives an address. The address is never
-     a literal in the repo; it is assembled on tap (same rule as ni-apps). */
-  function appsCard() { const P = C.apps; if (!P) return '';
-    return `<button class="acard appscard" data-apps="1"><span class="eyebrow">${P.home}</span><span class="appicons">${P.list.map(x => `<img src="${x.icon}" alt="${x.name}">`).join('')}</span><span class="appline">${P.homeLine}</span><span class="tapmore">${P.title} ›</span></button>`; }
-  function appsRoom(list) { const P = C.apps, K = P.contact || {};
-    stageBack(closeRoom);
-    list.innerHTML = `<div class="acard prheadcard"><span class="eyebrow">${P.eyebrow}</span><h2 class="apptitle">${P.title}</h2><p class="lede">${P.lede}</p></div>` +
-      P.list.map(x => `<a class="acard approw" href="${x.url}" target="_blank" rel="noopener" style="--c:${x.accent}"><img src="${x.icon}" alt=""><span><strong>${x.name}</strong><small>${x.line}</small></span><b class="appopen">${P.open}</b></a>`).join('') +
-      `<div class="acard contactcard"><span class="eyebrow">${K.title}</span><p class="lede">${K.lede}</p><div class="row" id="contactrow"><button class="btn btn-gold" id="contactshow" style="flex:1">${K.btn}</button></div></div>`;
-    list.scrollTop = 0;
-    const addr = () => String.fromCharCode(104, 101, 108, 108, 111, 64, 97, 101, 111, 110, 114, 101, 111, 110, 46, 99, 111, 109);
-    $('contactshow').addEventListener('click', () => { sfx('tap'); const e = addr();
-      $('contactrow').outerHTML = `<div class="addr" id="contactrow"><b>${e}</b><div class="row"><a class="btn btn-gold" href="mailto:${e}" style="flex:1">${K.mail}</a><button class="btn btn-ghost" id="contactcopy">${K.copy}</button></div></div>`;
-      $('contactcopy').addEventListener('click', () => { sfx('tap'); try { navigator.clipboard.writeText(e); } catch (x) {} $('contactcopy').textContent = K.copied; }); });
-  }
+     His rule: the LAST thing on the page, inside a drop-down, so it never looks
+     like the school is promoting something. The address is never a literal in
+     the repo; it is character codes in content.json, assembled on tap. */
+  function appsFold() { const P = C.apps, K = P.contact || {};
+    return `<div class="acard appsfold"><p class="lede">${P.lede}</p>` +
+      P.list.map(x => `<a class="approw" href="${x.url}" target="_blank" rel="noopener" style="--c:${x.accent}"><img src="${x.icon}" alt=""><span><strong>${x.name}</strong><small>${x.line}</small></span><b class="appopen">${P.open}</b></a>`).join('') +
+      `<div class="contactcard"><span class="eyebrow">${K.title}</span><p class="lede">${K.lede}</p><div class="row" id="contactrow"><button class="btn btn-ghost" id="contactshow" style="flex:1">${K.btn}</button></div></div></div>`; }
+  function wireContact(list) { const K = (C.apps && C.apps.contact) || {}, b = list.querySelector('#contactshow'); if (!b) return;
+    b.addEventListener('click', () => { sfx('tap'); const e = String.fromCharCode.apply(null, K.codes || []);
+      list.querySelector('#contactrow').outerHTML = `<div class="addr" id="contactrow"><b>${e}</b><div class="row"><a class="btn btn-gold" href="mailto:${e}" style="flex:1">${K.mail}</a><button class="btn btn-ghost" id="contactcopy">${K.copy}</button></div></div>`;
+      list.querySelector('#contactcopy').addEventListener('click', () => { sfx('tap'); try { navigator.clipboard.writeText(e); } catch (x) {} list.querySelector('#contactcopy').textContent = K.copied; }); }); }
   function becomingRoom(list) {
     const T = C.school.traits, P = T.page || {}, tc = traitCounts(), aw = awards();
     const fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
@@ -978,7 +984,6 @@
   function renderArrival() {
     const list = $('slist'), keep = list.scrollTop;
     if (ROOMV === 'becoming') { becomingRoom(list); return; }
-    if (ROOMV === 'apps') { appsRoom(list); return; }
     if (ROOMV) { progressRoom(list); return; }
     stageBack(null); const picks = todayPicks(), later = todayPicks('later'); const P = C.arrival, R = C.room, F = P.folds || {};
     // the feed: newest post, and whether it has been seen
@@ -1015,11 +1020,12 @@
       (C.vision ? foldCard('vision', C.vision.title, `<div class="acard visioncard"><div class="rhead"><span class="eyebrow">${C.vision.lede}</span><button class="playbtn" id="visionread" aria-label="Aurelia reads it">${SPK_IC}</button></div>${C.vision.paras.map(x => `<p>${x}</p>`).join('')}</div><div class="acard polycard"><span class="eyebrow">${C.vision.polyTitle}</span><p class="lede">${C.vision.polyLede}</p>${C.vision.polymaths.map(x => `<div class="poly"><b>${x.name}</b><span>${x.line}</span></div>`).join('')}<p class="close">${C.vision.close}</p></div>`, visits <= 2 && !S.school.visionSeen) : '') +
       (post ? foldCard('post', `<span class="foldic">${HORN_IC}</span>${C.feed.title}${isNew ? '<b class="dot">New</b>' : ''}`,
         `<div class="acard post ${isNew ? 'new' : ''}"><h3>${post.title}</h3><small>${post.date}</small><p>${post.text}</p></div>`, isNew) : '') +
-      traitsCard() + shelfCard(true) + appsCard() +
+      traitsCard() + shelfCard(true) +
       foldCard('reading', F.reading || 'A reading from Aurelia', `<div class="acard reading"><div class="rhead"><span class="eyebrow">${R.readingsLede}</span><button class="playbtn" id="readit" aria-label="Aurelia reads it">${SPK_IC}</button></div><h3>${rd.title}</h3><p>${rd.text}</p></div>`) +
       (lib ? foldCard('library', F.library || 'From the library', lib) : '') +
       (rooms.length ? foldCard('rooms', F.rooms || 'Rooms climbed', `<div class="acard prog"><div class="rooms">${rooms.map(r => `<div class="rr" style="--c:${r.c.accent};--c2:${r.c.accent2}"><span>${r.c.name}</span><i><b style="width:${Math.round(r.n / r.N * 100)}%"></b></i><small>${r.n} of ${r.N}</small></div>`).join('')}</div></div>`) : '') +
       (earlier.length ? foldCard('earlier', C.feed.earlier || 'Earlier', `<div class="acard feedcard">${earlier.map(p => `<div class="feedpost"><small>${p.date}</small><h4>${p.title}</h4><p>${p.text}</p></div>`).join('')}</div>`) : '') +
+      (C.apps ? foldCard('apps', C.apps.title, appsFold()) : '') +
       dayCard(ticks, nextLine, q && (l || !hasLong)) + addKid +
       `<div class="gorow"><button class="btn btn-gold" id="intoschool">${P.go}</button><button class="iconbtn" id="sharearr" aria-label="${C.share.btn}">${SHARE_IC}</button></div>`;
     if (post && isNew) { S.feed.seen.push(post.id); save(); }
@@ -1027,9 +1033,8 @@
     list.querySelectorAll('.fold').forEach(d => d.addEventListener('toggle', () => { if (d.dataset.fold === 'how' && !d.open) { S.school.howSeen = true; save(); } if (d.dataset.fold === 'vision' && !d.open) { S.school.visionSeen = true; save(); } }));
     const vr = list.querySelector('#visionread'); if (vr) vr.addEventListener('click', () => { sfx('tap'); if (VISREAD) { hush(); return; } readVision(list); });
     const rb = list.querySelector('#readit'); if (rb) rb.addEventListener('click', () => { sfx('tap'); hush(); clearTimeout(ROOMT); cap('aurelia', rd.title); ARIG.nod(); aureliaSay('ui-read-' + rd.id, () => { capHide(1500); idleRoom(); }); });
-    wireShelf(list); wireLong(list);
+    wireShelf(list); wireLong(list); wireContact(list);
     list.querySelectorAll('[data-becoming]').forEach(b => b.addEventListener('click', () => { sfx('tap'); ROOMV_AT = b.dataset.becoming; openRoom('becoming'); }));
-    list.querySelectorAll('[data-apps]').forEach(b => b.addEventListener('click', () => { sfx('tap'); openRoom('apps'); }));
     list.querySelectorAll('[data-panel]').forEach(b => b.addEventListener('click', () => { sfx('open');
       openRoom(b.dataset.panel === 'run' ? 'run' : 'top'); }));
     list.querySelectorAll('[data-do]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.do); if (r) stepSheet(r[0], r[1], null, 'arrival'); }));
