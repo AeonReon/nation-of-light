@@ -255,3 +255,14 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   The line is: part of a growing network of free apps built for families in Northern Ireland,
   to get out more, live well, and find each other. Same fix applied to daysoutni's about,
   contact, terms and privacy pages the same day.
+- **v57 (2026-09-12): a number is its own count against a round target.** He made a coin
+  vanish, got a Craft bronze, and the card showed "23 done" (the whole school) — so it read as
+  the wrong award, and the shelf's "8 more steps" changed with every tick and looked random.
+  Now: the trophy card shows ITS count against ITS target (`awardProgress`: "5 of 10 Craft
+  steps", "25 of 25 done", "3 of 7 days in a row") with its own bar; the shelf says "6 of 10";
+  the four meters say "30 for silver"; the stand card says "Flame at 50". Never "n more" and
+  never the overall points on another award's card. Units in `awards.show.units`. Craft =
+  step kind `skill` = "things your hands and body can now do", so a coin vanish IS Craft; the
+  card's definition line is what tells the reader that. The event rung (money.run 1) rewritten
+  a second time with the hypothetical named and the note listing what "a thing" can be: a step
+  with a hypothetical must name it and give examples, or it reads as a riddle.

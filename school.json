@@ -11018,10 +11018,10 @@
      "steps": [
       {
        "n": 1,
-       "test": "Pick a small event you could actually run, a games afternoon for six children, say. Write down the five things it would need.",
+       "test": "Imagine you are putting on a games afternoon for six children. Write down five things you would have to sort out before the day.",
        "ctx": "room",
        "kind": "attention",
-       "note": "Not a real event yet. The point is seeing the whole list before the day, which is most of running anything."
+       "note": "There is no right list. A room, a start time, a helper, which games, what to drink, what happens if it rains. Anything that would go wrong if nobody thought of it counts. The point is writing it down before the day, which is most of running anything."
       },
       {
        "n": 2,

@@ -347,6 +347,12 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .sheet .stestbig{font-family:var(--display);font-weight:500;font-size:clamp(19px,5.4vw,23px);line-height:1.3;color:var(--ink);margin:4px 0 12px}
 .sheet .how{margin:0 0 14px;padding-left:18px;font-size:14px;line-height:1.5;color:var(--ink-soft)}
 .sheet .how li+li{margin-top:4px}
+/* a trophy's own count against its round target */
+.awprog{margin:6px 0 14px}
+.awprog .rf-n{display:flex;align-items:baseline;gap:8px;justify-content:center;margin-bottom:8px}
+.awprog .rf-n b{font-family:var(--display);font-weight:600;font-size:34px;line-height:1;color:var(--ink)}
+.awprog .rf-n small{font-size:13px;font-weight:700;color:var(--ink-soft)}
+.awprog .lvl{max-width:260px;margin:0 auto}
 /* more from us: the other apps and the address */
 .appsfold .lede{margin:0 0 4px}
 .apptitle{font-family:var(--display);font-weight:600;font-size:26px;line-height:1.15;margin:2px 0 6px;color:var(--ink)}

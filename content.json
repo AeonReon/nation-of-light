@@ -2366,7 +2366,15 @@
         "room": "{n} of {N} steps in {room}.",
         "roomNeed": "{n} of {need} steps in {room}.",
         "first": "The first flame. Lit the moment you did one real thing.",
-        "ladder": "The ladder"
+        "ladder": "The ladder",
+        "of": "{n} of {need}",
+        "units": {
+          "flame": "done",
+          "stone": "days in a row",
+          "trait": "{name} steps",
+          "medal": "steps in {room}",
+          "wreath": "of the first twenty-five"
+        }
       }
     },
     "rankLines": {
@@ -5140,7 +5148,7 @@
         "have": "{n} {name} steps done. {tier} is yours.",
         "need": "{n} {name} steps done. {tier} at {need}."
       },
-      "next": "{n} to {tier}",
+      "next": "{n} for {tier}",
       "top": "Gold. Keep going.",
       "page": {
         "title": "Who you are becoming",
@@ -5212,7 +5220,7 @@
       "nextLong": "Next: ten minutes on a long skill.",
       "done": "That is today. Anything more is a gift.",
       "run": "days in a row",
-      "lvlcap": "Every single thing you do moves this. {n} more to {name}.",
+      "lvlcap": "Every single thing you do moves this. {name} at {need}.",
       "lvlcapTop": "The top of the list — and the school keeps growing, so there is always more.",
       "seeProgress": "See how far you have come",
       "progressTitle": "How far you have come",

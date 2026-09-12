@@ -837,10 +837,10 @@
     const pct = r.next ? Math.max(2, Math.round((p - r.at) / (r.next[0] - r.at) * 100)) : 100;
     const body = `<div class="rankface"><span class="rf-n"><b>${p}</b><small>${A.steps}</small></span>
         <span class="rf-r"><strong>${r.name}</strong>${r.next
-          ? `<small><b>${r.next[0] - p}</b> to ${r.next[1]}</small>` : `<small>${A.rank}</small>`}</span></div>
+          ? `<small><b>${r.next[0]}</b> for ${r.next[1]}</small>` : `<small>${A.rank}</small>`}</span></div>
       <div class="lvl"><i style="width:${pct}%"></i></div>
-      <p class="lvlcap">${r.next ? fmt1(A.lvlcap || 'Every single thing you do moves this. {n} more to {name}.',
-        { n: r.next[0] - p, name: r.next[1] }) : (A.lvlcapTop || 'The top of the list, and the school keeps growing.')}</p>`;
+      <p class="lvlcap">${r.next ? fmt1(A.lvlcap || 'Every single thing you do moves this. {name} at {need}.',
+        { n: r.next[0] - p, need: r.next[0], name: r.next[1] }) : (A.lvlcapTop || 'The top of the list, and the school keeps growing.')}</p>`;
     return inPanel ? body : `<button class="standtap" data-panel="progress">${body}<span class="tapmore">${A.seeProgress || 'See how far you have come'} ›</span></button>`;
   }
   /* the run, in the shape he already likes from the Next thing tab */
@@ -1288,7 +1288,7 @@
     const T = C.school.traits; if (!T) return ''; const tc = traitCounts();
     const fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
     return `<div class="acard traitscard"><div class="shtop"><span class="eyebrow">${T.title}</span><button class="seeall" data-becoming="top">${(T.page || {}).seeAll || 'See the whole page'} ›</button></div><p class="lede">${T.lede}</p><div class="traits">` + Object.keys(T.kinds).map(k => { const n = tc[k] || 0, KN = T.kinds[k]; const nx = T.tiers.find(t => n < t[2]); const prev = nx ? (T.tiers[T.tiers.indexOf(nx) - 1] || [null, null, 0])[2] : T.tiers[T.tiers.length - 1][2]; const pct = nx ? Math.round((n - prev) / (nx[2] - prev) * 100) : 100; const got = T.tiers.filter(t => n >= t[2]).pop();
-      return `<button class="tr" style="--c:${TRAIT_COLOUR[k]}" data-becoming="${k}"><span class="tn">${KN.name}</span><b>${n}</b><i><em style="width:${pct}%"></em></i><small>${nx ? fmt(T.next, { n: nx[2] - n, tier: nx[1].toLowerCase() }) : T.top}${got ? ' · ' + got[1].toLowerCase() : ''}</small></button>`; }).join('') + `</div></div>`;
+      return `<button class="tr" style="--c:${TRAIT_COLOUR[k]}" data-becoming="${k}"><span class="tn">${KN.name}</span><b>${n}</b><i><em style="width:${pct}%"></em></i><small>${nx ? fmt(T.next, { n: nx[2], tier: nx[1].toLowerCase() }) : T.top}${got ? ' · ' + got[1].toLowerCase() : ''}</small></button>`; }).join('') + `</div></div>`;
   }
   const HUD_FLAME = '<path d="M8 19c-3.6 0-6-2.5-6-5.8 0-2.6 1.6-4.3 2.7-5.6.6-.7 1-1.3 1.2-2 .6 1.1 1.2 2 2 2.7C9.7 10 11 11.4 11 13.6c0 1.2-.5 2.3-1.2 3 .9-.2 4.2-1.6 4.2-5.7 0-3.2-2.2-5-3.5-6.6C9.4 3 8.9 1.8 9 0c-3 1.4-3.4 4.3-3.6 5.8C4.6 4.7 4.2 3.4 4.2 2 1.7 3.8 0 7.2 0 10.6 0 15.6 3.7 19 8 19z" fill="#E0812A"/><path d="M8 19c-1.9 0-3.2-1.4-3.2-3.2 0-1.5 1-2.4 1.6-3.2.4-.5.6-.9.7-1.4.5.8.9 1.3 1.4 1.8.7.7 1.6 1.6 1.6 2.8C10.1 17.6 9.2 19 8 19z" fill="#FFD36B"/>';
   const METALS = { bronze: ['#E8B48C', '#8A4E22'], silver: ['#FFFFFF', '#8E939B'], gold: ['#FFE9A0', '#B8860B'] };
@@ -1334,7 +1334,7 @@
     const fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
     return `<div class="acard shelfcard"><div class="shtop"><span class="eyebrow">${AW.title}</span><small>${got.length} earned</small></div>${compact ? '' : `<p class="lede">${AW.lede}</p>`}
       <div class="shelf"><div class="shrow">${items.map(a => `<button class="tro ${a.earned ? 'on' : 'off'}" data-tro="${a.id}">${trophySVG(a)}<span>${a.short}</span><small>${a.earned ? ((a.kind === 'medal' || a.kind === 'trait') ? a.tier : (a.kind === 'stone' ? a.need + ' days' : (K.earned || 'Earned')))
-        : (a.kind === 'stone' ? a.left + ' more day' + (a.left === 1 ? '' : 's') : fmt(K.more, { n: a.left, s: a.left === 1 ? '' : 's' }))}</small></button>`).join('')}</div><i class="plank"></i></div></div>`;
+        : fmt(K.of || '{n} of {need}', { n: a.n, need: a.need })}</small></button>`).join('')}</div><i class="plank"></i></div></div>`;
   }
   function wireShelf(root) { root.querySelectorAll('[data-tro]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const a = awards().find(x => x.id === b.dataset.tro); if (a) trophyShow(a); })); }
   /* the show: the trophy large, gold falling, the stand, and the two of them with a word each */
@@ -1367,10 +1367,20 @@
       saySlot('ladderDone', null, { room: c.id, roomName: c.name, track: tr.name, size: tr.size });
     }, inScene() ? 600 : 1000);
   }
+  /* His rule (2026-09-12): a trophy shows ITS OWN count against a ROUND
+     target — "12 of 30 Craft steps" — never the overall points card (a Craft
+     bronze was showing "23 done", which is the whole school, and it read as
+     the wrong award), and never "8 more", which changes with every tick. */
+  function awardProgress(a) {
+    const K = C.school.awards.show || {}, U = K.units || {}, fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
+    const unit = fmt(U[a.kind] || '', { name: a.short, room: a.room || '' });
+    const n = Math.min(a.n, a.need), pct = Math.max(2, Math.round(n / a.need * 100));
+    return `<div class="awprog"><span class="rf-n"><b>${a.n}</b><small>${fmt(K.of || '{n} of {need}', { n: '', need: a.need }).trim()} ${unit}</small></span><div class="lvl"><i style="width:${pct}%"></i></div></div>`;
+  }
   function trophyShow(a) {
     if (SHOW) closeShow(true);
     const K = C.school.awards.show || {}, sc = inScene(); hush();
-    const v = veil(`<div class="panel showcard"><div class="bigt ${a.earned ? '' : 'off'}">${trophySVG(a)}</div><div class="eyebrow"><i></i>${a.earned ? (K.earned || 'Earned') : (K.notyet || 'Not yet')}<i></i></div><h2>${a.name}</h2><p class="lede">${a.line}</p>${standCard(true)}${a.kind === 'flame' ? `<div class="ladderchips"><span class="eyebrow">${K.ladder || 'The ladder'}</span><div class="chips">${C.school.ranks.map((r, i) => `<span class="chip ${i < a.level || (i === a.level && a.earned) ? 'got' : ''} ${i === a.level ? 'this' : ''}">${r[1]}<small>${Math.max(1, r[0])}</small></span>`).join('')}</div></div>` : ''}<div class="showcap" id="showcap" hidden></div></div>`, 'light trophyveil');
+    const v = veil(`<div class="panel showcard"><div class="bigt ${a.earned ? '' : 'off'}">${trophySVG(a)}</div><div class="eyebrow"><i></i>${a.earned ? (K.earned || 'Earned') : (K.notyet || 'Not yet')}<i></i></div><h2>${a.name}</h2><p class="lede">${a.line}</p>${awardProgress(a)}${a.kind === 'flame' ? `<div class="ladderchips"><span class="eyebrow">${K.ladder || 'The ladder'}</span><div class="chips">${C.school.ranks.map((r, i) => `<span class="chip ${i < a.level || (i === a.level && a.earned) ? 'got' : ''} ${i === a.level ? 'this' : ''}">${r[1]}<small>${Math.max(1, r[0])}</small></span>`).join('')}</div></div>` : ''}<div class="showcap" id="showcap" hidden></div></div>`, 'light trophyveil');
     backBtn(v, () => closeShow());
     if (sc) { const scn = $('scene'); v.style.top = (scn.offsetTop + scn.offsetHeight) + 'px'; }
     SHOW = v;
