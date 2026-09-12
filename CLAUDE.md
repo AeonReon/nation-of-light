@@ -249,3 +249,9 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   mood you are in. Six vague first rungs rewritten to be concrete (money.run, deal.terms,
   words.sign, home.firstaid, deal.walkaway, classic.roots): a step must say exactly what to do
   right now, with a real example, never a hypothetical the reader has to invent.
+- **Framing rule (his, 2026-09-12):** never "a small family of apps", "a small independent
+  project", "not a big company", "labour of love" or anything that reads as a bedroom project;
+  it diminishes work he considers competitive with anything out there. Never corporate either.
+  The line is: part of a growing network of free apps built for families in Northern Ireland,
+  to get out more, live well, and find each other. Same fix applied to daysoutni's about,
+  contact, terms and privacy pages the same day.
