@@ -663,7 +663,16 @@
   const whenText = k => { const t = doneAt(k); return t === null ? ''
     : new Date(t).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }); };
   function rankOf(p) { const R = C.school.ranks; let r = R[0], nx = null; for (let i = 0; i < R.length; i++) { if (p >= R[i][0]) { r = R[i]; nx = R[i + 1] || null; } } return { name: r[1], at: r[0], next: nx }; }
-  function daysLit() { const s = new Set(Object.keys(S.days).filter(k => S.days[k] > 0)); for (const k in S.school.done) { const v = S.school.done[k]; if (typeof v === 'string') s.add(v.slice(0, 10)); } return s; }
+  /* Steps are stamped with toISOString(), which is UTC, and today() is the
+     LOCAL date. Through British summer time local runs an hour ahead of UTC, so
+     anything done between midnight and one in the morning was stamped with
+     yesterday's date and did not count towards today — no flame, no tick, and
+     the day looked untouched. Always turn the stamp back into a local day
+     before comparing it with one. */
+  const localDay = v => { const ms = typeof v === 'string' ? Date.parse(v) : NaN;
+    if (isNaN(ms)) return null; const d = new Date(ms);
+    return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
+  function daysLit() { const s = new Set(Object.keys(S.days).filter(k => S.days[k] > 0)); for (const k in S.school.done) { const d = localDay(S.school.done[k]); if (d) s.add(d); } return s; }
   function seededShuffle(arr, seed) { const out = arr.slice(); let x = seed; for (let i = out.length - 1; i > 0; i--) { x = (x * 9301 + 49297) % 233280; const j = Math.floor(x / 233280 * (i + 1)); [out[i], out[j]] = [out[j], out[i]]; } return out; }
   const daySeed = () => { const d = today(); return (+d.slice(0, 4)) * 372 + (+d.slice(5, 7)) * 31 + (+d.slice(8, 10)); };
   const started = () => allTracks().filter(tr => trackDone(tr) >= 1 && nextStep(tr) && !(S.school.projects || []).includes(tr.id)).sort((x, y) => (S.school.done[skey(y, y.steps[trackDone(y) - 1])] || '').localeCompare(S.school.done[skey(x, x.steps[trackDone(x) - 1])] || ''));
@@ -723,7 +732,36 @@
     const again = S.school.arrived === d; S.school.arrived = d; S.school.visits = (S.school.visits || 0) + 1; save(); arrival(fresh0, again);
   }
   const paintSearchBtn = () => { const b = $('searchbtn'); if (b) b.classList.toggle('on', SEARCH !== null); };
-  function paintSchoolCount() { const p = points(), r = rankOf(p); $('countn').textContent = p; const of = $('countn').nextElementSibling; of.hidden = false; of.textContent = r.name; paintRank(); paintDay(); paintWho(); }
+  /* ---- three flames on the parapet ----
+     His: "when I've completed my three tasks for the day I'd like something
+     more obvious and significant — maybe three flames lit up behind the
+     characters." One lights as each of the day's three goes in, so the progress
+     is standing there in the scene all day, and the third one is the
+     celebration. This is the thing that brings him back, so it gets to be
+     visible rather than a number in a bar. */
+  let FLAMES_LIT = -1;
+  function paintFlames() {
+    const scn = $('scene'); if (!scn || !C) return;
+    const goal = ((C.school.goal || {}).n) || 3;
+    let host = $('dayflames');
+    if (!host) {
+      scn.insertAdjacentHTML('afterbegin', `<div class="dayflames" id="dayflames" aria-hidden="true">${
+        Array.from({ length: goal }, () => `<span class="dfl"><i></i><svg viewBox="0 0 16 20">${HUD_FLAME}</svg></span>`).join('')}</div>`);
+      host = $('dayflames');
+    }
+    const n = Math.min(goal, dayCount());
+    let lit = 0;
+    [].forEach.call(host.children, (el, i) => {
+      const on = i < n, was = el.classList.contains('on');
+      el.classList.toggle('on', on);
+      if (on && !was && FLAMES_LIT >= 0) {
+        el.classList.remove('lighting'); void el.offsetWidth; el.classList.add('lighting'); lit++;
+      }
+    });
+    if (lit) sfx('flame');
+    FLAMES_LIT = n;
+  }
+  function paintSchoolCount() { const p = points(), r = rankOf(p); $('countn').textContent = p; const of = $('countn').nextElementSibling; of.hidden = false; of.textContent = r.name; paintRank(); paintDay(); paintWho(); paintFlames(); }
   /* the home button carries the child's name while it is their page: no room
      in that header for one more pill, and the name IS the way home */
   function paintWho() { const t = $('homebtn').querySelector('.stitle'); if (!t) return;
@@ -733,8 +771,8 @@
   let HOMEN = 0;
   function goHome() { ROOMV = null; if ($('stage').classList.contains('arrive')) { hush(); renderArrival(); $('slist').scrollTop = 0; return; }
     hush(); clearTimeout(ROOMT); HOMEN++; CAT = null; TRK = null; SEARCH = null; paintSearchBtn(); arrival(false, true, true); }
-  const todayQuick = () => { const t = today(); return Object.values(S.school.done).some(v => typeof v === 'string' && v.startsWith(t)); };
-  function dayCount() { const t = today(); const q = Object.values(S.school.done).filter(v => typeof v === 'string' && v.startsWith(t)).length; const pr = Object.values(S.school.practice || {}).filter(p => p.days && p.days[t]).length; return q + pr; }
+  const todayQuick = () => { const t = today(); return Object.values(S.school.done).some(v => localDay(v) === t); };
+  function dayCount() { const t = today(); const q = Object.values(S.school.done).filter(v => localDay(v) === t).length; const pr = Object.values(S.school.practice || {}).filter(p => p.days && p.days[t]).length; return q + pr; }
   function dayBar() { const G = C.school.goal || { n: 3 }, n = dayCount(), pct = Math.min(100, Math.round(n / G.n * 100)), over = G.overAt && n >= G.overAt; return `<div class="daybar ${n >= G.n ? 'full' : ''} ${over ? 'over' : ''}" title="${G.lede || ''}"><i style="width:${pct}%"></i><span>${over ? (G.over + ' · ' + n) : n >= G.n ? G.done : (n + ' of ' + G.n + ' ' + (G.label || 'today'))}</span></div>`; }
   function paintDay() { const b = $('daybar'); if (b) b.outerHTML = `<div id="daybar" class="daywrap">${dayBar()}</div>`; }
   /* ---- days in a row ----
@@ -985,7 +1023,7 @@
     const list = $('slist'), keep = list.scrollTop;
     if (ROOMV === 'becoming') { becomingRoom(list); return; }
     if (ROOMV) { progressRoom(list); return; }
-    stageBack(null); const picks = todayPicks(), later = todayPicks('later'); const P = C.arrival, R = C.room, F = P.folds || {};
+    stageBack(null); paintFlames(); const picks = todayPicks(), later = todayPicks('later'); const P = C.arrival, R = C.room, F = P.folds || {};
     // the feed: newest post, and whether it has been seen
     S.feed = S.feed || { posts: [], seen: [] }; const post = FEED[0] || null; const isNew = post && !S.feed.seen.includes(post.id);
     // today's ticks
