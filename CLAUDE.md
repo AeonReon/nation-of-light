@@ -1,5 +1,10 @@
 # Nation of Light (`APPS/nation-of-light`)
 
+**THIS IS THE LIVE APP AT nolschool.com** (moved here 2026-09-15; it had been pointing at the old
+`school-of-light-app` Vercel project by mistake). It is also on `nation-of-light.vercel.app`.
+`APPS/school-of-light` is the OLD catalogue app — still reachable at `school-of-light-app.vercel.app`,
+no longer on any custom domain.
+
 The character-led, scene-first version of Light School (full name: the Nation of Light School). Built 2026-09-07 as a
 SEPARATE app from `APPS/school-of-light` (the catalogue app live at nolschool.com) so the new
 delivery can be felt on its own before anything is merged. Same exercises, same mentor rule,
