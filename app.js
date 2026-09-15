@@ -949,6 +949,55 @@
     b.addEventListener('click', () => { sfx('tap'); const e = String.fromCharCode.apply(null, K.codes || []);
       list.querySelector('#contactrow').outerHTML = `<div class="addr" id="contactrow"><b>${e}</b><div class="row"><a class="btn btn-gold" href="mailto:${e}" style="flex:1">${K.mail}</a><button class="btn btn-ghost" id="contactcopy">${K.copy}</button></div></div>`;
       list.querySelector('#contactcopy').addEventListener('click', () => { sfx('tap'); try { navigator.clipboard.writeText(e); } catch (x) {} list.querySelector('#contactcopy').textContent = K.copied; }); }); }
+  /* ---- where your steps actually happen ----
+     He looked at his four kinds and found 15 Craft, 17 Attention, 1 Courage,
+     1 Kindness, and guessed why: "maybe I'm picking off the items that are not
+     to do alone, and I think a lot of people might do the same." He is right,
+     and it is not him — it is the shape of the thing. The day's three are
+     filtered to what needs nothing but you, which is his own rule and a good
+     one. But only 9% of the kindness steps and 17% of the courage steps can be
+     done alone in a chair, against 50% of attention. So the daily pick almost
+     never OFFERS courage or kindness. This strip says so out loud, and the
+     lists underneath are the way to go and fix it on purpose. */
+  const WHERE = [
+    ['alone', ['room', 'home'], '#1F5E8A'],
+    ['with', ['with'], '#B4573C'],
+    ['out', ['out', 'kit', 'long'], '#2F6B4F'],
+  ];
+  function whereCounts() {
+    const c = { alone: 0, with: 0, out: 0 };
+    for (const k in S.school.done) { const r = findStep(k); if (!r) continue;
+      const g = WHERE.find(w => w[1].indexOf(r[1].ctx || 'home') >= 0); if (g) c[g[0]]++; }
+    return c;
+  }
+  function whereStrip() {
+    const W = (C.school.traits || {}).where || {}; const c = whereCounts();
+    const tot = c.alone + c.with + c.out; if (!tot) return '';
+    const lop = Math.round(c.alone / tot * 100) >= 75 && tot >= 8;
+    return `<div class="acard wherecard"><span class="eyebrow">${W.title || 'Where your steps happen'}</span>
+      <div class="wbars">${WHERE.map(([k, , col]) => { const n = c[k], pct = Math.round(n / tot * 100);
+        return `<div class="wb" style="--c:${col}"><span class="wbt">${(W[k] || k)}</span>
+          <i><em style="width:${Math.max(n ? 3 : 0, pct)}%"></em></i><b>${n}</b></div>`; }).join('')}</div>
+      <p class="lede">${lop ? (W.lopsided || '') : (W.lede || '')}</p></div>`;
+  }
+  /* what is open, of one kind, grouped by what it costs you to start */
+  function kindActions(k) {
+    const T = C.school.traits, P = T.page || {}, W = T.where || {};
+    const open = [];
+    allTracks().forEach(tr => { const st = nextStep(tr); if (st && (st.kind || 'skill') === k) open.push([tr, st]); });
+    if (!open.length) return '';
+    const group = g => open.filter(([, st]) => g[1].indexOf(st.ctx || 'home') >= 0);
+    const row = ([tr, st]) => { const c = catOf(tr);
+      return `<button class="crow" style="--c:${c.accent};--c2:${c.accent2}" data-step="${skey(tr, st)}">
+        <img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'">
+        <span><strong>${st.test}</strong><small>${c.name} · ${tr.name}</small></span></button>`; };
+    return WHERE.map(g => { const list2 = group(g); if (!list2.length) return '';
+      const shown = list2.slice(0, 4);
+      return `<div class="kgroup"><h5>${W[g[0] + 'Do'] || W[g[0]] || g[0]}<em>${list2.length}</em></h5>
+        ${shown.map(row).join('')}
+        ${list2.length > 4 ? foldCard('k' + k + g[0], fmt1(P.moreOf || 'All {n}', { n: list2.length }), list2.slice(4).map(row).join('')) : ''}</div>`;
+    }).join('');
+  }
   function becomingRoom(list) {
     const T = C.school.traits, P = T.page || {}, tc = traitCounts(), aw = awards();
     const fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
@@ -957,8 +1006,10 @@
     const canRow = x => { const c = catOf(x.tr); return `<div class="can" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${x.tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><small>${c.name} · ${x.tr.name} · ${fmt(P.rung, { n: x.top.n, N: x.tr.steps.length })}</small><strong>${x.top.test}</strong></span></div>`; };
     stageBack(closeRoom);
     list.innerHTML = `<div class="acard prheadcard becominghead"><span class="eyebrow">${P.title || T.title}</span><p class="bigline">${total === 0 ? P.ledeNone : total === 1 ? P.ledeOne : fmt(P.lede, { n: total })}</p></div>` +
+      whereStrip() +
       `<div class="acard"><span class="eyebrow">${P.traitsTitle}</span>` + Object.keys(T.kinds).map(k => { const n = tc[k] || 0, KN = T.kinds[k]; const tros = aw.filter(a => a.kind === 'trait' && a.trait === k); const nx = T.tiers.find(t => n < t[2]);
-        return `<div class="traitblock" id="tr-${k}" style="--c:${TRAIT_COLOUR[k]}"><div class="tbtop"><span><span class="tn">${KN.name}</span><b>${n}</b></span><p>${KN.line}</p></div><div class="shrow tshelf">${tros.map(a => `<button class="tro ${a.earned ? 'on' : 'off'}" data-tro="${a.id}">${trophySVG(a)}<span>${a.tier}</span><small>${a.earned ? 'yours' : a.left + ' more'}</small></button>`).join('')}</div>${nx ? `<i class="tbar"><em style="width:${Math.round(n / nx[2] * 100)}%"></em></i>` : ''}</div>`; }).join('') + `</div>` +
+        return `<div class="traitblock" id="tr-${k}" style="--c:${TRAIT_COLOUR[k]}"><div class="tbtop"><span><span class="tn">${KN.name}</span><b>${n}</b></span><p>${KN.line}</p></div><div class="shrow tshelf">${tros.map(a => `<button class="tro ${a.earned ? 'on' : 'off'}" data-tro="${a.id}">${trophySVG(a)}<span>${a.tier}</span><small>${a.earned ? 'yours' : a.left + ' more'}</small></button>`).join('')}</div>${nx ? `<i class="tbar"><em style="width:${Math.round(n / nx[2] * 100)}%"></em></i>` : ''}
+          <div class="kacts">${kindActions(k)}</div></div>`; }).join('') + `</div>` +
       `<div class="acard cancard"><span class="eyebrow">${P.canTitle} · ${can.length}</span><p class="lede">${P.canLede}</p>` + (can.length ? can.slice(0, 10).map(canRow).join('') + (can.length > 10 ? foldCard('canall', `${P.more} (${can.length})`, can.slice(10).map(canRow).join('')) : '') : `<p class="lede">${P.ledeNone}</p>`) + `</div>`;
     wireShelf(list); list.scrollTop = 0;
     if (ROOMV_AT && ROOMV_AT !== 'top') { const el = $('tr-' + ROOMV_AT); if (el) setTimeout(() => el.scrollIntoView({ block: 'start', behavior: 'smooth' }), 150); }

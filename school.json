@@ -7005,6 +7005,136 @@
        "kind": "courage"
       }
      ]
+    },
+    {
+     "id": "speak.connect",
+     "name": "Meeting people",
+     "strand": "be-useful-to-somebody",
+     "line": "From a name you never asked for to a room where people know you.",
+     "size": "months",
+     "steps": [
+      {
+       "n": 1,
+       "test": "Ask one person you already know how they are, and listen to the whole answer.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 2,
+       "test": "Learn the name of somebody you see often and have never asked.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 3,
+       "test": "Use their name the next time you see them.",
+       "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 4,
+       "test": "Have a conversation with a stranger that lasts two minutes.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 5,
+       "test": "Ask somebody what they do, and one real question about it.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 6,
+       "test": "Find out one thing about somebody that you could ask after next time.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 7,
+       "test": "Go somewhere you know nobody, and stay a full hour.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 8,
+       "test": "Introduce yourself to three people while you are there.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Ask somebody for their number or their address so you can follow up.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 10,
+       "test": "Follow up within two days. A sentence is enough.",
+       "note": "Almost nobody does this, which is exactly why it works. The meeting is not the thing. The message afterwards is the thing.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 11,
+       "test": "Ask one of them to meet again — a coffee, a walk, a call.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 12,
+       "test": "Go to that second meeting.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 13,
+       "test": "Go to the same thing three times, so that people start to know your face.",
+       "ctx": "long",
+       "kind": "courage"
+      },
+      {
+       "n": 14,
+       "test": "Introduce two people to each other who ought to know each other.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 15,
+       "test": "Ask somebody for an introduction to a person they know.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 16,
+       "test": "Volunteer for something where you know nobody.",
+       "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 17,
+       "test": "Ask somebody further on than you for half an hour of their time.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 18,
+       "test": "Keep a list of people you have met and one thing about each.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 19,
+       "test": "Do somebody a good turn with nothing in it for you, and never mention it.",
+       "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 20,
+       "test": "Be the person who brings somebody new into the group.",
+       "ctx": "with",
+       "kind": "kindness"
+      }
+     ]
     }
    ]
   },

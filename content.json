@@ -1,5 +1,5 @@
 {
- "version": 60,
+ "version": 61,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -5780,7 +5780,19 @@
     "canLede": "The highest rung you have reached on every ladder you have touched. Each one is a real ability, and it stays yours.",
     "more": "Every one",
     "seeAll": "See the whole page",
-    "rung": "Rung {n} of {N}"
+    "rung": "Rung {n} of {N}",
+    "moreOf": "All {n}"
+   },
+   "where": {
+    "title": "Where your steps happen",
+    "alone": "On your own",
+    "with": "With somebody",
+    "out": "Out in the world",
+    "aloneDo": "Right where you are",
+    "withDo": "With somebody",
+    "outDo": "Out, or with a thing",
+    "lede": "Every day offers you three things that need nothing but you, so this leans that way on its own. The lists below are how you even it up on purpose.",
+    "lopsided": "Almost everything you have done, you did on your own. That is not a fault — the day only ever offers you things that need nothing. Courage and kindness nearly all live with other people, so they have to be chosen. Pick one from the lists below and the balance moves today."
    }
   },
   "finish": {
