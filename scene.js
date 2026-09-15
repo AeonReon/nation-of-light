@@ -143,6 +143,36 @@
       <circle cx="36" cy="330" r="1.6" fill="#3E4A2C"/><circle cx="58" cy="322" r="1.6" fill="#3E4A2C"/><circle cx="50" cy="338" r="1.6" fill="#4A5A34"/>
     </g>`;
   }
+
+  /* three torches standing on the parapet, one lit for each of the day's three.
+     They used to be an HTML overlay floating at 64% up the band with nothing
+     under them ("they look like they're just floating"). Now they are bronze
+     torchères on the coping, in the parapet layer, so they parallax with the
+     stone and the flames sit on something. Positioned between and just above
+     the two heads at home; hidden on the other stages (see style.css). */
+  function torch(x, i) {
+    const top = 232;
+    return `<g class="torch" data-i="${i}">
+      <ellipse cx="${x}" cy="322" rx="7.5" ry="2.4" fill="${BRONZE_D}"/>
+      <rect x="${x - 4}" y="315" width="8" height="7" rx="1.5" fill="${BRONZE}"/>
+      <path d="M${x} 315 L${x} ${top + 6}" stroke="${BRONZE}" stroke-width="3.4" stroke-linecap="round"/>
+      <path d="M${x - 0.9} 314 L${x - 0.9} ${top + 7}" stroke="${BRONZE_L}" stroke-width="1" stroke-linecap="round" opacity=".55"/>
+      <ellipse cx="${x}" cy="${top + 22}" rx="4" ry="1.6" fill="${BRONZE_L}"/>
+      <ellipse cx="${x}" cy="${top + 24}" rx="4" ry="1.6" fill="${BRONZE_D}"/>
+      <path d="M${x - 10} ${top} Q${x} ${top + 13} ${x + 10} ${top} L${x + 11.5} ${top - 3} L${x - 11.5} ${top - 3} Z" fill="${BRONZE}"/>
+      <path d="M${x - 10} ${top} Q${x - 5} ${top + 7} ${x - 1} ${top + 9} L${x - 1} ${top - 3} L${x - 11.5} ${top - 3} Z" fill="${BRONZE_L}" opacity=".45"/>
+      <ellipse cx="${x}" cy="${top - 3}" rx="11.5" ry="2.8" fill="${BRONZE_L}"/>
+      <ellipse cx="${x}" cy="${top - 3}" rx="8.5" ry="1.9" fill="#3A2A14"/>
+      <g class="tflame">
+        <path class="fl fl3" d="M${x} ${top - 3} Q${x - 9} ${top - 18} ${x - 2.5} ${top - 32} Q${x} ${top - 22} ${x + 2} ${top - 30} Q${x + 9} ${top - 18} ${x} ${top - 3} Z" fill="#FF8A2A" opacity=".85"/>
+        <path class="fl fl2" d="M${x} ${top - 3} Q${x - 5.5} ${top - 14} ${x - 1.2} ${top - 23} Q${x} ${top - 17} ${x + 2} ${top - 22} Q${x + 5.5} ${top - 14} ${x} ${top - 3} Z" fill="#FFB43C" opacity=".95"/>
+        <path class="fl fl1" d="M${x} ${top - 4} Q${x - 2.6} ${top - 10} ${x} ${top - 16} Q${x + 2.6} ${top - 10} ${x} ${top - 4} Z" fill="#FFF0A8"/>
+      </g>
+      <ellipse class="tglow" cx="${x}" cy="${top - 15}" rx="32" ry="28" fill="url(#gFlame)"/>
+    </g>`;
+  }
+  const TORCH_X = [150, 195, 240];
+  function torches() { return `<g class="torches">${TORCH_X.map((x, i) => torch(x, i)).join('')}</g>`; }
   function brazier() {
     return `<g class="brazier" transform="translate(362 0)">
       <ellipse cx="0" cy="446" rx="26" ry="4.5" fill="rgba(40,30,20,.22)"/>
@@ -242,6 +272,7 @@
     <rect x="0" y="364" width="${W}" height="2" fill="${MARBLE_S}"/>
     ${cols}${entablature('var(--col)')}
     <g class="wreaths"></g>
+    ${torches()}
   </g>
   <!-- depth 4: the pavement, the light, the props -->
   <g class="lyr" data-depth="4">
@@ -261,7 +292,7 @@
   class Portico {
     constructor(host) {
       host.innerHTML = build(); this.el = host; this.svg = host.querySelector('svg');
-      this.sun = this.svg.querySelector('.sun'); this.wreaths = this.svg.querySelector('.wreaths'); this.flame = this.svg.querySelector('.brazier');
+      this.sun = this.svg.querySelector('.sun'); this.wreaths = this.svg.querySelector('.wreaths'); this.flame = this.svg.querySelector('.brazier'); this.torches = [...this.svg.querySelectorAll('.torch')];
       this.layers = [...this.svg.querySelectorAll('.lyr')];
       this.props = { brazier: this.svg.querySelector('.brazier'), olive: this.svg.querySelector('.olive'), lyre: this.svg.querySelector('.lyre') };
       this.px = 0; this.py = 0; this.tx = 0; this.ty = 0; this.setPhase(0);
@@ -292,6 +323,11 @@
       this.wreaths.innerHTML = xs.slice(0, n).map(x => wreath(x, 101, 14)).join('');
     }
     hangWreath(i) { const w = this.wreaths; const g = document.createElementNS('http://www.w3.org/2000/svg', 'g'); g.innerHTML = wreath([110, 152, 195, 238, 280][i], 101, 14); g.classList.add('hang'); w.appendChild(g); }
+    /* n of the three torches lit; anim = the newly lit ones flare in (not on a first paint) */
+    setLamps(n, anim) {
+      this.torches.forEach((t, i) => { const on = i < n, was = t.classList.contains('lit'); t.classList.remove('lighting'); t.classList.toggle('lit', on);
+        if (on && !was && anim) { void t.getBoundingClientRect(); t.classList.add('lighting'); } });
+    }
     setFlame(state) { this.flame.classList.remove('lit', 'dim', 'out'); this.flame.classList.add(state); }
     flare() { this.flame.classList.remove('flare'); void this.flame.getBoundingClientRect(); this.flame.classList.add('flare'); }
   }

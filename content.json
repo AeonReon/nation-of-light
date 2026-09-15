@@ -2794,7 +2794,11 @@
    "done": "Today done",
    "over": "Blazing",
    "overAt": 7,
-   "lede": "Three things a day: quick ones, practice, any mix."
+   "lede": "Three things a day: quick ones, practice, any mix.",
+  "hail": "That is today",
+  "hailBig": "Three of three",
+  "hailRun": "Day {n} in a row",
+  "hailFirst": "The first day of many"
   },
   "twoTitle": "Level two: ladders you have started",
   "twoLede": "You did the first step. The second is here when you want it. Nothing is owed.",

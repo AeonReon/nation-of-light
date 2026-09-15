@@ -62,6 +62,11 @@
     else if (name === 'begin') { const g = ctx.createGain(); g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(.09, t + 1.6); g.gain.exponentialRampToValueAtTime(.0008, t + 4.2); g.connect(ctx.destination);
       [130.8, 196, 261.6, 329.6, 392, 523.3].forEach((f, i) => { const o = ctx.createOscillator(); o.type = i < 2 ? 'triangle' : 'sine'; o.frequency.setValueAtTime(f * .94, t); o.frequency.exponentialRampToValueAtTime(f, t + 1.8); const og = ctx.createGain(); og.gain.value = i < 2 ? .5 : .35; o.connect(og); og.connect(g); o.start(t + i * .12); o.stop(t + 4.4); });
       tone(1046.5, t + 1.5, 1.6, 'sine', .04, ctx); tone(1568, t + 1.7, 1.8, 'sine', .03, ctx); }
+    else if (name === 'fanfare') { [[523.25, 0, .24], [659.25, .17, .24], [783.99, .34, .28], [1046.5, .54, 1.5]].forEach(([f, d, l]) => { tone(f, t + d, l, 'triangle', .085, ctx); tone(f * 2, t + d, l * .8, 'sine', .03, ctx); tone(f / 2, t + d, l, 'sine', .05, ctx); });
+      tone(1568, t + .66, 1.6, 'sine', .03, ctx); tone(2093, t + .74, 1.8, 'sine', .018, ctx); }
+    else if (name === 'burst') { const th = ctx.createOscillator(), tg = ctx.createGain(); th.type = 'sine'; th.frequency.setValueAtTime(110, t); th.frequency.exponentialRampToValueAtTime(48, t + .32); tg.gain.setValueAtTime(.12, t); tg.gain.exponentialRampToValueAtTime(.0008, t + .34); th.connect(tg); tg.connect(ctx.destination); th.start(t); th.stop(t + .36);
+      const hiss = (at, dur, gain, freq) => { const n = ctx.createBufferSource(), b = ctx.createBuffer(1, Math.max(1, Math.floor(ctx.sampleRate * dur)), ctx.sampleRate), d = b.getChannelData(0); for (let i = 0; i < d.length; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / d.length, 2.2); n.buffer = b; const f = ctx.createBiquadFilter(); f.type = 'bandpass'; f.frequency.value = freq; f.Q.value = .7; const g = ctx.createGain(); g.gain.value = gain; n.connect(f); f.connect(g); g.connect(ctx.destination); n.start(at); };
+      hiss(t, .32, .11, 1700); for (let i = 0; i < 7; i++) hiss(t + .12 + Math.random() * .6, .025, .05, 2600 + Math.random() * 2400); }
     else if (name === 'scroll') { tone(523, t, .3, 'sine', .07, ctx); tone(659, t + .12, .35, 'sine', .07, ctx); tone(784, t + .24, .8, 'sine', .07, ctx); }
   }
   /* ---- the room: birds beyond the parapet, the brazier, a breath of wind. Made in code. ---- */
@@ -255,7 +260,7 @@
   function toast(text) { const old = document.querySelector('.toast'); if (old) old.remove(); const t = document.createElement('div'); t.className = 'toast'; t.textContent = text; $('stage').appendChild(t); setTimeout(() => { t.classList.add('gone'); setTimeout(() => t.remove(), 500); }, 3400); }
   function tapLyre(el) { ac(); sfx('tap'); el.classList.remove('hint'); if (LYRE.on) lyreStop(1000); else lyreStart(); }
   /* dawn at the first tablet, full morning by the middle, gold at the twenty-fifth */
-  const skyFor = () => Math.min(1, S.done.length / C.moves.length);
+  const skyFor = () => (S.school && S.school.celebrated === today()) ? 1 : Math.min(1, S.done.length / C.moves.length);
 
   function onMarcusTap() {
     if (!RIG || RIG.hidden) return;
@@ -741,24 +746,10 @@
      visible rather than a number in a bar. */
   let FLAMES_LIT = -1;
   function paintFlames() {
-    const scn = $('scene'); if (!scn || !C) return;
-    const goal = ((C.school.goal || {}).n) || 3;
-    let host = $('dayflames');
-    if (!host) {
-      scn.insertAdjacentHTML('afterbegin', `<div class="dayflames" id="dayflames" aria-hidden="true">${
-        Array.from({ length: goal }, () => `<span class="dfl"><i></i><svg viewBox="0 0 16 20">${HUD_FLAME}</svg></span>`).join('')}</div>`);
-      host = $('dayflames');
-    }
-    const n = Math.min(goal, dayCount());
-    let lit = 0;
-    [].forEach.call(host.children, (el, i) => {
-      const on = i < n, was = el.classList.contains('on');
-      el.classList.toggle('on', on);
-      if (on && !was && FLAMES_LIT >= 0) {
-        el.classList.remove('lighting'); void el.offsetWidth; el.classList.add('lighting'); lit++;
-      }
-    });
-    if (lit) sfx('flame');
+    if (!PORTICO || !C) return;
+    const goal = ((C.school.goal || {}).n) || 3, n = Math.min(goal, dayCount());
+    PORTICO.setLamps(n, FLAMES_LIT >= 0);
+    if (FLAMES_LIT >= 0 && n > FLAMES_LIT) sfx('flame');
     FLAMES_LIT = n;
   }
   function paintSchoolCount() { const p = points(), r = rankOf(p); $('countn').textContent = p; const of = $('countn').nextElementSibling; of.hidden = false; of.textContent = r.name; paintRank(); paintDay(); paintWho(); paintFlames(); }
@@ -807,14 +798,57 @@
   }
   function paintRank() { const b = $('rankbar'); if (b) b.outerHTML = `<div id="rankbar" class="daywrap">${rankBar()}</div>`; }
   function checkDay() {
-    const G = C.school.goal || { n: 3 }, t = today(); if (dayCount() < G.n || S.school.celebrated === t) { paintDay(); return; }
+    const G = C.school.goal || { n: 3 }, t = today(); paintFlames(); if (dayCount() < G.n || S.school.celebrated === t) { paintDay(); return; }
     S.school.celebrated = t; save(); paintDay();
-    setTimeout(() => { hush(); sfx('wreath'); shower(); if (inScene()) { sparks(); PORTICO.flare(); }
+    setTimeout(() => { hush(); dayCelebrate(() => {
       const ask = () => { const tm = S.school.tomorrow; if (!tm || tm.on !== t) setTimeout(askPromise, 800); };
       if (saySlot('dayDone', ask)) return;
       const hers = (S.school.visits || 0) % 2 === 0;
       speakSchool(hers ? [{ who: 'aurelia', id: 'ui-day', t: C.voice['day'] }] : [{ who: 'marcus', id: 'c-day' }], ask);
-    }, 1800);
+    }); }, 700);
+  }
+  /* ---- the third torch: the celebration ----
+     His: finishing the three "felt very underwhelming, I would have liked more
+     praise from the app". So the third light is a moment: a fanfare, fireworks
+     over the hills, the sky going golden for the rest of the day, the two of
+     them cheering, gold and laurel falling, and a hail over the scene with the
+     count and the run. THEN one of them speaks (the caller's `after`). Away
+     from the scene (in the tabs) the same happens over the page. */
+  function dayCelebrate(after) {
+    const sc = inScene(), host = sc ? $('scene') : $('stage'), G = C.school.goal || {}, run = runInfo().cur;
+    sfx('fanfare'); shower();
+    if (sc) { PORTICO.glideTo(1, 3200); sparks(); PORTICO.flare(); RIG.cheer(); if (ARIG && !ARIG.hidden) setTimeout(() => ARIG.cheer(), 160); }
+    fireworks(host, 4600);
+    setTimeout(() => {
+      const sub = run > 1 ? (G.hailRun || 'Day {n} in a row').replace('{n}', run) : (G.hailFirst || '');
+      const h = document.createElement('div'); h.className = 'dayhail' + (sc ? '' : ' plate'); h.innerHTML = `<span class="eyebrow">${G.hail || 'That is today'}${sub ? ' · ' + sub : ''}</span><h2>${G.hailBig || 'Three of three'}</h2>`;
+      host.appendChild(h); setTimeout(() => { h.classList.add('out'); setTimeout(() => h.remove(), 800); }, 4200);
+    }, 900);
+    setTimeout(after, 3400);
+  }
+  /* fireworks on a canvas over the host: rockets rise, burst into gold, white
+     and a little laurel, fall and fade. Made in code, nothing to load. */
+  function fireworks(host, ms) {
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const cv = document.createElement('canvas'); cv.className = 'fw'; host.appendChild(cv);
+    const r = host.getBoundingClientRect(), dpr = Math.min(2, devicePixelRatio || 1); cv.width = Math.max(1, r.width * dpr); cv.height = Math.max(1, r.height * dpr);
+    const g = cv.getContext('2d'); g.scale(dpr, dpr); const W = r.width, H = r.height;
+    const cols = ['#FFD166', '#FFF3C4', '#F0A830', '#FFFFFF', '#FFD166', '#A5BB93'];
+    const P = [], RK = []; const t0 = performance.now(); let last = t0, next = 0, n = 0;
+    const burst = (x, y) => { const c = cols[n++ % cols.length], k = 54 + Math.floor(Math.random() * 30), sp = 1.5 + Math.random() * 1.1;
+      for (let i = 0; i < k; i++) { const a = Math.random() * Math.PI * 2, v = sp * (.3 + Math.random() * .7); P.push({ x, y, vx: Math.cos(a) * v, vy: Math.sin(a) * v, l: 1, d: .010 + Math.random() * .012, c: i % 5 ? c : '#FFFFFF', s: 1.5 + Math.random() * 2 }); }
+      sfx('burst'); };
+    const frame = now => {
+      const dt = Math.min(40, now - last) / 16.7; last = now; const el = now - t0;
+      if (el < ms - 1400 && el >= next) { const x = W * (.16 + Math.random() * .68), y = H * (.07 + Math.random() * .26); RK.push({ x: x + (Math.random() - .5) * 30, y: H * .55, tx: x, ty: y, k: 0 }); next = el + 380 + Math.random() * 520; }
+      g.clearRect(0, 0, W, H);
+      for (let i = RK.length - 1; i >= 0; i--) { const q = RK[i]; q.k += .07 * dt; const e = 1 - Math.pow(1 - Math.min(1, q.k), 2); const x = q.x + (q.tx - q.x) * e, y = q.y + (q.ty - q.y) * e;
+        g.globalAlpha = .8; g.strokeStyle = '#FFE9A0'; g.lineWidth = 1.4; g.beginPath(); g.moveTo(x, y + 10); g.lineTo(x, y); g.stroke(); if (q.k >= 1) { RK.splice(i, 1); burst(q.tx, q.ty); } }
+      for (let i = P.length - 1; i >= 0; i--) { const p = P[i]; p.x += p.vx * dt; p.y += p.vy * dt; p.vy += .026 * dt; p.vx *= .984; p.vy *= .984; p.l -= p.d * dt;
+        if (p.l <= 0) { P.splice(i, 1); continue; } const al = Math.max(0, Math.min(1, p.l * 1.2)), rad = p.s * (.45 + p.l * .55); g.fillStyle = p.c; g.globalAlpha = al * .28; g.beginPath(); g.arc(p.x, p.y, rad * 2.6, 0, 6.3); g.fill(); g.globalAlpha = al; g.beginPath(); g.arc(p.x, p.y, rad, 0, 6.3); g.fill(); }
+      if (el < ms || P.length || RK.length) requestAnimationFrame(frame); else cv.remove();
+    };
+    requestAnimationFrame(frame);
   }
   const todayLong = () => projects().some(tr => !!prac(tr).days[today()]);
   const unpop = () => { clearTimeout(POPT.marcus); clearTimeout(POPT.aurelia); };
@@ -2117,7 +2151,7 @@
     $('helpbtn').addEventListener('click', () => { sfx('tap'); if (MODE === 'school' && C.tour && !S.school.toured2) { S.school.toured2 = true; save(); if ($('stage').classList.contains('arrive')) leaveArrival(); tour(); } else help(); });
     cover();
     if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
-    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool, show: id => trophyShow(awards().find(a => a.id === id)), awards, quiet: quietProject, check: id => checkIn(trackById(id)), entry: entryWord, home: goHome, lyr: () => ({ on: LYRE.on, paused: LYR.paused, src: LYR.src.split('/').pop(), vol: +LYR.volume.toFixed(2) }), prac: id => logPractice(trackById(id)), track: id => openTrack(trackById(id)), tracks: () => allTracks().map(t => t.id), say: pickSay, state: sayState, ask: askPromise };
+    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool, show: id => trophyShow(awards().find(a => a.id === id)), awards, quiet: quietProject, check: id => checkIn(trackById(id)), entry: entryWord, home: goHome, lyr: () => ({ on: LYRE.on, paused: LYR.paused, src: LYR.src.split('/').pop(), vol: +LYR.volume.toFixed(2) }), prac: id => logPractice(trackById(id)), track: id => openTrack(trackById(id)), tracks: () => allTracks().map(t => t.id), say: pickSay, state: sayState, ask: askPromise, fw: () => fireworks(inScene() ? $('scene') : $('stage'), 5000), day: dayCelebrate };
   }
   /* a phone held sideways: the stage turns back by ninety degrees and stays upright, which reads as "this app is this way up" */
   const rot = () => {

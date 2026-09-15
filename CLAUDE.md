@@ -271,3 +271,19 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   card's definition line is what tells the reader that. The event rung (money.run 1) rewritten
   a second time with the hypothetical named and the note listing what "a thing" can be: a step
   with a hypothetical must name it and give examples, or it reads as a riddle.
+- **v62 (2026-09-15, Fable session): the three torches, and the day-done celebration.** His:
+  the three flames were "floating" (they were an HTML overlay at 64% up the band with nothing
+  under them) and finishing the three "felt very underwhelming, I would have liked more praise".
+  Now: three bronze torchères stand ON the parapet in the scene SVG (`torch()` in scene.js,
+  `TORCH_X = [150,195,240]`, cups at y 232 so the flames sit between and just above the two
+  heads at home; `.torch{display:none}` except `.stage.school.arrive`); `PORTICO.setLamps(n,
+  anim)` lights n of them, `paintFlames()` is called at the top of `checkDay()` so a practice
+  lights one too (it used to light only on a step Done). The third light runs `dayCelebrate
+  (after)`: `sfx('fanfare')` + `shower()`, the sky glides to golden and STAYS golden for the
+  rest of the day (`skyFor()` returns 1 when `S.school.celebrated === today()`), both of them
+  `cheer()`, `fireworks(host, ms)` (a canvas of rockets and gold/white/laurel bursts, made in
+  code, `sfx('burst')` per burst, skipped under reduced-motion), then a `.dayhail` over the sky
+  above the torches (eyebrow `goal.hail` + the run `goal.hailRun`/`goal.hailFirst`, big
+  `goal.hailBig`), and only THEN the spoken dayDone line and the tomorrow ask. Away from the
+  scene (the tabs) the same runs over the page with the hail on a dark plate (`.plate`).
+  Test from the console: `NOL.fw()` (fireworks only), `NOL.day(()=>0)` (the whole moment).
