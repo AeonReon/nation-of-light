@@ -2289,6 +2289,9 @@
   },
   "areasLine": "Ten areas of a life. Go to the one that needs something.",
   "areaOrder": "In order, easiest first",
+  "areasLineFirst": "Ten areas of a life. One or two ladders are open in each to begin with.",
+  "areaOpenTitle": "Open now",
+  "areaLater": "{n} more in this area open later, with a facilitator.",
   "catLines": {
    "body": "ui-cat-body",
    "wild": "ui-cat-wild",

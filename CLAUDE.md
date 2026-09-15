@@ -323,3 +323,29 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   a real programme with rungs that explain themselves, the other areas opening stage by stage;
   and the Becoming chart should point people at the side they are weak on with one or two easy
   strong tracks for it. Many current rungs "look dumped, not perfectly thought through".
+- **v65 (2026-09-16, Fable session): they stay in their room; two programmes; one or two open per area.**
+  (1) **The pop-up button was hiding them at home.** His rule, now: the button ONLY stops pop-ups
+  in the tabs; at home and in the scene band they always stand there. `arrival()` always
+  enters them; the toggle only pops them out when `!inScene()`. (2) **Two programmes written
+  as real courses**, twenty rungs each with a `note` on every rung (the how, an example, and
+  the alternative): `speak.people1` "Meeting people, part one" (smile → hello → a name → the
+  time → directions → a shop question without buying → a compliment → one minute → a
+  recommendation → two phone calls, small then bigger → two messages to people whose work
+  you enjoy, then local → a neighbour → two minutes of listening → a cheerful odd question →
+  one useful thing → a contact with a reason → send what you promised → a second
+  conversation) and `food.real1` "Real food, part one" (`from: 16`; labels → drinks → slow
+  meal → one swap → 3h after waking → 3h before bed → no snacks → no sugar → five
+  ingredients → cook real → both edges → 12h window → carbs = vegetables → skip a meal →
+  two meals → real-food shop → three days no snacks → 10h → 16h once → 8h window, with a
+  doctor line at the end). His rules baked in: where money or eating is involved the note
+  gives a no-spend alternative; "if this is already how you live, do it on purpose and count
+  it" so nobody gets stuck on a rung they already do. `speak.strangers` rung 1 now says
+  "somebody", not "a child". (3) **Stage by stage.** `areas[].open` = one or two ladders per
+  area (people: people1; health: real1 + stretch; others a placeholder pair);
+  `everythingOpen()` = `S.school.everything` true/false wins, else ten steps done inside
+  keeps the whole school; `isOpen(tr)` also keeps anything started, taken on, or little for a
+  child. While closed: no Life areas / Every room switch (areas only), area page = "Open now"
+  + "{n} more open later, with a facilitator", long game suggests the open ones, search
+  skips held-back ladders and rooms. Feel it: `NOL.S.school.everything=false; NOL.save()`;
+  `NOL.all()` reports. No track tiles drawn yet for the two new ladders (room image
+  fallback).

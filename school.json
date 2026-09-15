@@ -6113,6 +6113,155 @@
    "line": "Strangers, the stage, listening, hard things, humour, teaching.",
    "tracks": [
     {
+     "id": "speak.people1",
+     "name": "Meeting people, part one",
+     "line": "From a smile to a second conversation, in twenty small steps.",
+     "size": "months",
+     "strand": "say-what-you-mean",
+     "steps": [
+      {
+       "n": 1,
+       "test": "Smile at three people you pass today, with your eyes on theirs for a second.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "That is the whole rung. Count them on your fingers. Most people look at the ground; you are already doing the rare thing."
+      },
+      {
+       "n": 2,
+       "test": "Say good morning, or hello, to three people you pass, and mean it.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "Out loud, not a nod. A dog walker, somebody at the bus stop, the person on the till. If one does not answer, that is theirs, not yours; the count is what you said."
+      },
+      {
+       "n": 3,
+       "test": "Thank somebody by their name today: read the badge, or ask it.",
+       "ctx": "out",
+       "kind": "kindness",
+       "note": "\"Thanks, Claire.\" The name changes the whole thing. If nobody wears a badge, \"Sorry, what is your name?\" is the rung."
+      },
+      {
+       "n": 4,
+       "test": "Ask a stranger the time, or whether this is the right road for somewhere.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "You already know the answer; the point is the asking. Pick somebody standing still. One sentence, a thank you, done."
+      },
+      {
+       "n": 5,
+       "test": "Ask somebody for directions to a place you can name, and listen to the whole answer.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "\"Excuse me, do you know the way to the library?\" Let them finish, say the first turn back to them, thank them."
+      },
+      {
+       "n": 6,
+       "test": "In a shop, ask where something is, then ask one more question about it.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "\"Where is the honey?\" then \"Is that one any good?\" You do not have to buy anything. A library, a market stall or a garden centre counts just as well as a shop."
+      },
+      {
+       "n": 7,
+       "test": "Give one honest compliment to a stranger.",
+       "ctx": "out",
+       "kind": "kindness",
+       "note": "Their dog, their garden, their coat, how they handled a child. Say it and move on; do not wait for anything back. It has to be true."
+      },
+      {
+       "n": 8,
+       "test": "Keep a conversation with somebody you do not know going for one minute.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "Three questions will do it: where are you from, what brings you here, what is good round here. Bus stops, queues and dog walks are where these happen."
+      },
+      {
+       "n": 9,
+       "test": "Ask somebody for a recommendation: a book, a walk, a podcast, a place.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "\"What is the best walk round here?\" People love being asked. Write the answer down; you will use it on rung eighteen."
+      },
+      {
+       "n": 10,
+       "test": "Phone a shop or business and ask one simple question.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Opening hours, or do they stock a thing. Under a minute. Write the question down before you dial. If you never phone anywhere, this is a bigger rung than it looks, and it counts double in your own book."
+      },
+      {
+       "n": 11,
+       "test": "Phone somewhere with a slightly bigger ask.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Can they order something in, hold something for you, or could a small group visit one afternoon. You are enquiring, not demanding; a no is a fine answer and the rung is still done."
+      },
+      {
+       "n": 12,
+       "test": "Send a message to somebody whose work you enjoy, saying the one thing it did for you.",
+       "ctx": "room",
+       "kind": "kindness",
+       "note": "An author, a maker, a podcaster, a musician. An email, or a message wherever they are. Three sentences, no ask, no link. Most of them are never told; you will be remembered."
+      },
+      {
+       "n": 13,
+       "test": "Send the same kind of message to somebody local.",
+       "ctx": "room",
+       "kind": "kindness",
+       "note": "A shop, a club, a coach, a band, the people who run the market. \"Just to say Saturday was brilliant, thank you for running it.\" Local people answer."
+      },
+      {
+       "n": 14,
+       "test": "Talk to a neighbour you have never properly spoken to.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "Their name, how long they have been here, that is enough. Over the fence, at the bins, at the car. Say your own name first."
+      },
+      {
+       "n": 15,
+       "test": "Ask somebody about themselves and listen for two minutes without talking about you.",
+       "ctx": "out",
+       "kind": "kindness",
+       "note": "\"How did you get into that?\" Then only questions. Two minutes is longer than you think; most people have never been listened to that long."
+      },
+      {
+       "n": 16,
+       "test": "Ask a cheerful, slightly odd question somewhere, and see what happens.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "\"Do you ever get people asking to bring a picnic in here?\" or \"Has anybody ever proposed in this shop?\" Respectful, smiling, one minute. The discovery is that nobody minds and most people enjoy it."
+      },
+      {
+       "n": 17,
+       "test": "Do one useful thing for a stranger today.",
+       "ctx": "out",
+       "kind": "kindness",
+       "note": "Hold a door, carry a bag to a car, tell somebody the queue is shorter next door, pass on a recommendation of your own. Small and real."
+      },
+      {
+       "n": 18,
+       "test": "Get one person's name and a way to reach them, with a reason.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "\"I will send you that walk.\" \"Let me know when the market is on again.\" A number, an email, a handle. The reason is what makes it natural. Somebody from rungs eight, nine or fourteen is ideal."
+      },
+      {
+       "n": 19,
+       "test": "Send what you said you would send, within a day.",
+       "ctx": "room",
+       "kind": "kindness",
+       "note": "The walk, the book title, the photo. Short, friendly, no questions. This is the rung almost nobody does, and it is the one that makes you somebody people remember."
+      },
+      {
+       "n": 20,
+       "test": "Have a second conversation with somebody you met on this ladder.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "Same person, another day. \"Did you try that walk?\" If it goes well, suggest something: a coffee, the market, the children at the park, a talk you both want to hear. That is a friend beginning. Part two starts here."
+      }
+     ]
+    },
+    {
      "id": "speak.strangers",
      "name": "Talking to people you do not know",
      "line": "Hello, to interviewing anybody.",
@@ -6121,7 +6270,7 @@
      "steps": [
       {
        "n": 1,
-       "test": "Say hello and your name to a child you have never met.",
+       "test": "Say hello and your name to somebody you have never met.",
        "ctx": "out",
        "kind": "courage"
       },
@@ -9894,6 +10043,156 @@
    "accent2": "#9CCACA",
    "line": "Knife skills, cooking, baking, growing, preserving, hosting.",
    "tracks": [
+    {
+     "id": "food.real1",
+     "name": "Real food, part one",
+     "line": "For grown-ups. From one honest look at a label to an eight-hour eating window.",
+     "size": "months",
+     "strand": "look-after-yourself",
+     "from": 16,
+     "steps": [
+      {
+       "n": 1,
+       "test": "Read the ingredients of everything you eat today. Change nothing.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Just read. If you cannot picture an ingredient growing, or being made in a kitchen, it is one to notice. Today is looking, not fixing."
+      },
+      {
+       "n": 2,
+       "test": "Drink only water, tea, coffee or herbal tea for a whole day.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "No fizzy drinks, no juice, nothing sweetened. If this is already how you live, do it on purpose today and count it. Already done is still done, and it is the ground the rest stands on."
+      },
+      {
+       "n": 3,
+       "test": "Eat one meal slowly: fork down between mouthfuls, taste every one.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Twenty minutes for a plate. Notice when you are full; it arrives earlier than the empty plate does."
+      },
+      {
+       "n": 4,
+       "test": "Swap one thing in one meal for something more real.",
+       "ctx": "kit",
+       "kind": "attention",
+       "note": "Cereal for eggs, crisps for nuts or cheese, a sauce from a jar for butter and salt, white bread for a plate of vegetables. One swap, one meal."
+      },
+      {
+       "n": 5,
+       "test": "Nothing to eat for the first three hours after waking.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Water, tea or coffee are fine. If you already skip breakfast, count it. Notice that hunger comes in waves and passes."
+      },
+      {
+       "n": 6,
+       "test": "Nothing to eat in the three hours before you sleep.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Finish dinner, close the kitchen. Herbal tea if you want something. Most people sleep better for it the very first night."
+      },
+      {
+       "n": 7,
+       "test": "A whole day without snacks: meals only, as many as you like.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Three meals, or two, or four; the rule is nothing between them. Snacking is the habit most worth breaking, so this is a big rung."
+      },
+      {
+       "n": 8,
+       "test": "A day sweetened only by honey, fruit, or nothing.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "No sugar, no sweeteners, no syrups. If you already live like this, do it on purpose and count it. Read the labels; sugar hides under twenty names."
+      },
+      {
+       "n": 9,
+       "test": "A day where nothing you eat has more than five ingredients on its label.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Food with no label (meat, fish, eggs, vegetables, fruit, butter) counts as zero. This is the rung that empties the biscuit tin."
+      },
+      {
+       "n": 10,
+       "test": "Cook one meal from real food only.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "Meat, fish or eggs; vegetables; butter, cream or olive oil; salt. Nothing from a packet with a list on it. It can be simple: eggs, spinach and butter is a meal."
+      },
+      {
+       "n": 11,
+       "test": "Both edges in one day: nothing for three hours after waking, nothing for three hours before bed.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Rungs five and six together. You have done each already; today they meet."
+      },
+      {
+       "n": 12,
+       "test": "A twelve-hour window: first bite and last bite twelve hours apart.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Eight to eight, nine to nine. Most people are nearly there already; this makes it deliberate. Water and tea outside the window are fine."
+      },
+      {
+       "n": 13,
+       "test": "A day where every carbohydrate is a vegetable or a piece of fruit.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "No bread, pasta, rice, potatoes, cereal or sweets. Plenty of everything else: meat, fish, eggs, cheese, butter, vegetables. Eat enough of the real things and you will not be hungry."
+      },
+      {
+       "n": 14,
+       "test": "Skip one meal on purpose and notice what actually happens.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Not a snack instead; nothing until the next meal. Hunger rises, peaks, and goes. Write down what you noticed."
+      },
+      {
+       "n": 15,
+       "test": "Two big meals and nothing else, for one day.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Make them proper meals, plates full of real food. This is how most people ate for most of history."
+      },
+      {
+       "n": 16,
+       "test": "Do one food shop buying only real food.",
+       "ctx": "out",
+       "kind": "attention",
+       "note": "Nothing that needs its label read. Meat, fish, eggs, dairy, vegetables, fruit, nuts, butter, olive oil. Look at the trolley at the end."
+      },
+      {
+       "n": 17,
+       "test": "Three days in a row with no snacks.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Rung seven, held. By the third day the pull between meals has mostly gone."
+      },
+      {
+       "n": 18,
+       "test": "A ten-hour window: first bite to last bite in ten hours.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Nine to seven, or ten to eight. Move the edges to suit your day; the width is the rung."
+      },
+      {
+       "n": 19,
+       "test": "Sixteen hours without eating, once.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Dinner at seven, nothing until eleven the next morning. Water, tea and coffee throughout. Sleep does most of it for you."
+      },
+      {
+       "n": 20,
+       "test": "An eight-hour window for a full day: sixteen hours off, eight on.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Two or three real meals inside the eight hours, nothing outside them. That is the far end of this ladder. Past here is part two; and if you have a health condition or take medicine, a doctor before you go further."
+      }
+     ]
+    },
     {
      "id": "food.knife",
      "name": "Knife and board",
@@ -17525,6 +17824,7 @@
    "line": "Meeting people, keeping them, and being good to have around.",
    "image": "cat/care.jpg",
    "tracks": [
+    "speak.people1",
     "speak.strangers",
     "speak.listen",
     "speak.connect",
@@ -17538,6 +17838,9 @@
     "care.older",
     "speak.sayit",
     "care.helping"
+   ],
+   "open": [
+    "speak.people1"
    ]
   },
   {
@@ -17559,6 +17862,10 @@
     "money.run",
     "speak.teach",
     "money.invest"
+   ],
+   "open": [
+    "money.handling",
+    "deal.price"
    ]
   },
   {
@@ -17567,6 +17874,7 @@
    "line": "Food, sleep, breath, and a body that can do things.",
    "image": "cat/fit.jpg",
    "tracks": [
+    "food.real1",
     "calm.sleep",
     "body.breath",
     "food.knife",
@@ -17586,6 +17894,10 @@
     "water.cold",
     "calm.fast",
     "food.kitchen"
+   ],
+   "open": [
+    "food.real1",
+    "fit.stretch"
    ]
   },
   {
@@ -17608,6 +17920,10 @@
     "belong.story",
     "calm.hard",
     "speak.stage"
+   ],
+   "open": [
+    "nerve.asking",
+    "belong.chair"
    ]
   },
   {
@@ -17626,6 +17942,10 @@
     "classic.roots",
     "classic.stories",
     "classic.big"
+   ],
+   "open": [
+    "calm.gratitude",
+    "calm.still"
    ]
   },
   {
@@ -17653,6 +17973,10 @@
     "care.animals",
     "beauty.town",
     "order.ownthings"
+   ],
+   "open": [
+    "order.bedroom",
+    "home.keep"
    ]
   },
   {
@@ -17678,6 +18002,10 @@
     "water.row",
     "water.fish",
     "water.sail"
+   ],
+   "open": [
+    "wild.weather",
+    "sky.stars"
    ]
   },
   {
@@ -17706,6 +18034,10 @@
     "beauty.symmetry",
     "beauty.proportion",
     "beauty.arches"
+   ],
+   "open": [
+    "mind.findout",
+    "words.books"
    ]
   },
   {
@@ -17730,6 +18062,10 @@
     "make.machines",
     "make.scissors",
     "make.crayons"
+   ],
+   "open": [
+    "make.draw",
+    "make.knots"
    ]
   },
   {
@@ -17758,6 +18094,10 @@
     "magic.juggleclub",
     "body.hopping",
     "music.song"
+   ],
+   "open": [
+    "music.sing",
+    "body.juggle"
    ]
   }
  ]

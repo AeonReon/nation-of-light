@@ -1330,3 +1330,6 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 .gatecard .lede{max-width:34ch;margin:0 auto 14px}
 .gatecard .daybar{margin:0 auto 16px;max-width:280px}
 .gatebtn{font-size:13.5px}
+
+/* the ladders held back in an area (v65) */
+.later{font-size:13px;color:var(--ink-soft);text-align:center;padding:14px 10px 4px}
