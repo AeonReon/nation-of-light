@@ -2277,6 +2277,9 @@
   "nextLine": "One clear thing, nothing needed but you. Keep the momentum.",
   "longLine": "Skills with a ladder: an afternoon, a week, or a month. One step at a time, the next one always ready.",
   "allLine": "Every room in the school, laid out to be seen.",
+  "allViews": [["areas", "Life areas"], ["rooms", "Every room"]],
+  "areasLine": "Ten areas of a life. Go to the one that needs something.",
+  "areaOrder": "In order, easiest first",
   "catLines": {
    "body": "ui-cat-body",
    "wild": "ui-cat-wild",

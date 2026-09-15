@@ -287,3 +287,17 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   `goal.hailBig`), and only THEN the spoken dayDone line and the tomorrow ask. Away from the
   scene (the tabs) the same runs over the page with the hail on a dark plate (`.plate`).
   Test from the console: `NOL.fw()` (fireworks only), `NOL.day(()=>0)` (the whole moment).
+- **v63 (2026-09-15, Fable session): Everything, two ways — LIFE AREAS.** His: the rooms are
+  good but "not nicely organised for my brain" (boats next to lighting a fire next to money);
+  he wants a drop-down/switch between life areas and everything, a plain orderly list of bars
+  with a picture on the left like Classical Mind, and an organised pathway inside each. Built as
+  a TEST to feel: `school.json.areas` = ten areas (people, work, health, courage, calm, home,
+  outdoors, learning, making, play), every one of the 161 ladders in EXACTLY one area (the
+  patch asserts it), `tracks` in order easiest-first. A `.seg` switch at the top of the
+  Everything tab (`C.school.allViews`, remembered in `S.school.allView`, life areas default),
+  `renderAreas` (bars = `.srow.pic.area`, 84x62 picture) / `renderRooms` (the old tiles), and
+  an area page (`AREA`, same shape as a room page: roomhead + `C.school.areaOrder` line +
+  trackRows; Back clears `AREA`). Pictures reuse the room tiles for now (`image` per area);
+  "Friends and family" uses care.jpg (hands + seedling) and needs a real one generated. The
+  rooms are untouched: same ladders, a different view. Not done: per-area pathway stages, an
+  area's own voice line, the destination line per ladder.

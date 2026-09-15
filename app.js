@@ -1335,7 +1335,7 @@
   /* ---- the three pages ---- */
   function renderSchool() {
     const tabs = $('stabs'); tabs.hidden = false; tabs.innerHTML = C.school.tabs.map(([k, l]) => `<button class="stab ${TAB === k ? 'on' : ''}" data-t="${k}">${l}</button>`).join('');
-    tabs.querySelectorAll('.stab').forEach(b => b.addEventListener('click', () => { sfx('tap'); TAB = b.dataset.t; CAT = null; SEARCH = null; renderSchool(); }));
+    tabs.querySelectorAll('.stab').forEach(b => b.addEventListener('click', () => { sfx('tap'); TAB = b.dataset.t; CAT = null; AREA = null; SEARCH = null; renderSchool(); }));
     const list = $('slist'); list.scrollTop = 0; paintSchoolCount();
     if (SEARCH !== null) {
       dock('pop'); $('stage').classList.remove('room'); $('stage').classList.add('searching');
@@ -1346,13 +1346,20 @@
     $('stage').classList.remove('searching');
     const trk = TRK ? trackById(TRK) : null;
     const cat = trk ? null : SCH.categories.find(c => c.id === CAT);
-    $('stage').classList.toggle('room', !!cat || !!trk);
+    const area = (trk || cat) ? null : areaById(AREA);
+    $('stage').classList.toggle('room', !!cat || !!trk || !!area);
     if (trk) {
       dock('scene'); RIG.show(true); ARIG.show(true);
       $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout');
       tabs.hidden = true; $('sline').textContent = '';
       trackPage(list, trk);
       stageBack(closeTrack); list.scrollTop = 0;
+    } else if (area) {
+      dock('scene'); RIG.show(true); ARIG.show(true); $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout');
+      tabs.hidden = true; $('sline').textContent = '';
+      const trs = area.tracks.map(trackById).filter(Boolean), c = catOf(trs[0]);
+      list.innerHTML = `<div class="roomhead" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/${area.image}" alt=""><div><h2>${area.name}</h2><p>${area.line}</p></div></div><div class="ghead slim"><p>${C.school.areaOrder || ''}</p></div>` + trs.map(trackRow).join('');
+      stageBack(() => { hush(); AREA = null; renderSchool(); }); list.scrollTop = 0;
     } else if (cat) {
       dock('scene'); RIG.show(true); ARIG.show(true); $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout');
       tabs.hidden = true; $('sline').textContent = '';
@@ -1712,11 +1719,36 @@
     v.querySelector('#putdown').addEventListener('click', () => { sfx('tap'); S.school.projects = (S.school.projects || []).filter(id => id !== tr.id); S.school.dropped = (S.school.dropped || []).concat(tr.id); save(); say('down'); });
   }
   /* Everything: families, then rooms, then ladders */
+  /* ---- Everything, two ways (v63) ----
+     His: the rooms are good but "not nicely organised for my brain": boats
+     next to lighting a fire next to money. So the same ladders are also laid
+     out as ten LIFE AREAS (school.json `areas`: friends, work and money,
+     health, courage, calm, home, outdoors, learning, making, play), a plain
+     orderly list of bars with a picture on the left, and inside each the
+     ladders in order, easiest first. Every ladder lives in exactly one area.
+     A switch at the top of the tab; the choice is remembered. */
   function renderAll(list) {
+    const views = C.school.allViews || [['areas', 'Life areas'], ['rooms', 'Every room']];
+    const view = (S.school.allView && views.some(v => v[0] === S.school.allView)) ? S.school.allView : views[0][0];
+    const seg = `<div class="seg" role="tablist">${views.map(([k, l]) => `<button class="${view === k ? 'on' : ''}" data-view="${k}">${l}</button>`).join('')}</div>`;
+    if (view === 'areas') { renderAreas(list, seg); }
+    else { renderRooms(list, seg); }
+    list.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => { sfx('tap'); S.school.allView = b.dataset.view; save(); renderSchool(); }));
+  }
+  const areaRow = a => { const trs = a.tracks.map(trackById).filter(Boolean), n = trs.reduce((s, tr) => s + trackDone(tr), 0), N = trs.reduce((s, tr) => s + tr.steps.length, 0), c = catOf(trs[0]);
+    return `<button class="srow pic area" data-area="${a.id}" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/${a.image}" alt="" loading="lazy"><span class="stxt"><span class="stest">${a.name}</span><span class="sline2">${a.line}</span><span class="sprog"><i style="width:${N ? Math.round(n / N * 100) : 0}%"></i></span></span><span class="snum">${n ? n + ' of ' + N : trs.length + ' ladders'}</span></button>`; };
+  function renderAreas(list, seg) {
+    $('sline').textContent = C.school.areasLine || '';
+    const K = C.school.kid || {};
+    const little = isKid() ? `<div class="ghead"><h3>${fmt1(K.forTitle || 'For {name}, from four', { name: kidName() })}</h3><p>${K.forLede || ''}</p></div>` + littleTracks().map(trackRow).join('') + `<div class="ghead"><h3>${K.everyArea || 'Every area'}</h3></div>` : '';
+    list.innerHTML = seg + little + `<div class="areas">${(SCH.areas || []).map(areaRow).join('')}</div>`;
+    list.querySelectorAll('[data-area]').forEach(el => el.addEventListener('click', () => { sfx('tap'); AREA = el.dataset.area; renderSchool(); }));
+  }
+  function renderRooms(list, seg) {
     $('sline').textContent = C.school.allLine;
     const K = C.school.kid || {};
     const little = isKid() ? `<div class="ghead"><h3>${fmt1(K.forTitle || 'For {name}, from four', { name: kidName() })}</h3><p>${K.forLede || ''}</p></div>` + littleTracks().map(trackRow).join('') + `<div class="ghead"><h3>${K.everyRoom || 'Every room'}</h3></div>` : '';
-    list.innerHTML = little + SCH.groups.map(g => { const cats = g.categories.map(id => SCH.categories.find(c => c.id === id)).filter(Boolean);
+    list.innerHTML = seg + little + SCH.groups.map(g => { const cats = g.categories.map(id => SCH.categories.find(c => c.id === id)).filter(Boolean);
       return `<div class="ghead"><h3>${g.name}</h3><p>${g.line}</p></div><div class="tiles">` + cats.map(c => { const n = c.tracks.reduce((s, tr) => s + trackDone(tr), 0), N = c.tracks.reduce((s, tr) => s + tr.steps.length, 0);
         return `<button class="tile" data-room="${c.id}" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/cat/${c.id}.jpg" alt="" loading="lazy"><span class="tname">${c.name}</span><span class="tnum">${n ? n + ' of ' + N : c.tracks.length + ' tracks'}</span></button>`; }).join('') + '</div>'; }).join('');
   }
@@ -1728,7 +1760,8 @@
      picture, the percentage, the medals, the days you turned up — and the
      steps sit under all of it instead of being all of it. Everything reads off
      steps.length, so a ladder can be six or twenty with no code change. */
-  let TRK = null, TRK_FROM = null;
+  let TRK = null, TRK_FROM = null, AREA = null;
+  const areaById = id => ((SCH && SCH.areas) || []).find(a => a.id === id);
   const trackCopy = () => (C.school.track || {});
   /* How long this one really takes, said out loud at the top of the ladder.
      His words: "playing a song on a guitar in front of a group is a major

@@ -1307,3 +1307,15 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 .kgroup .crow{margin-bottom:6px}
 .kgroup .crow strong{font-size:14.5px;line-height:1.35}
 .kgroup .crow small{display:block;font-size:11.5px;color:var(--ink-faint);margin-top:2px}
+
+/* ---- Everything, two ways: the switch and the life-area bars (v63) ---- */
+.seg{display:flex;gap:4px;padding:4px;margin:2px 0 12px;background:var(--ivory-2);border-radius:14px}
+.seg button{flex:1;padding:9px 10px;border:0;border-radius:11px;background:transparent;font:inherit;font-weight:700;font-size:13.5px;color:var(--ink-soft);cursor:pointer;transition:background .25s var(--ease),color .25s var(--ease)}
+.seg button.on{background:var(--card);color:var(--ink);box-shadow:var(--shadow)}
+.areas{display:flex;flex-direction:column;gap:10px}
+.srow.pic.area{padding:10px 12px 10px 10px}
+.srow.pic.area img{width:84px;height:62px;border-radius:12px}
+.srow.pic.area .stest{font-size:17px;font-family:var(--display);font-weight:600}
+.srow.pic.area .sline2{font-size:12.5px;line-height:1.3}
+.ghead.slim{padding-top:2px}
+.ghead.slim p{margin:0 0 4px}
