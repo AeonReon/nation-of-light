@@ -1,5 +1,5 @@
 {
- "version": 58,
+ "version": 60,
  "rule": "Two kinds of line. A quote is his own recorded words and always shows its source. A companion line is the school's words in his character (congratulations, tips, the word about skipping) and shows no source. The two are never mixed in one bubble.",
  "marcus": {
   "name": "Marcus Aurelius",
@@ -1072,6 +1072,90 @@
    {
     "id": "s-ddx5a",
     "t": "They did not skip one."
+   },
+   {
+    "id": "s-rk1",
+    "t": "{rank}. Names are cheap. What is underneath this one is not."
+   },
+   {
+    "id": "s-rk3",
+    "t": "A rank marks where you have been standing, not where you are going. Keep walking."
+   },
+   {
+    "id": "s-rk5",
+    "t": "Higher than most people ever get, and you did it in ordinary weeks."
+   },
+   {
+    "id": "s-rk7",
+    "t": "{rank}. Nobody gave it to you and nobody can take it off you."
+   },
+   {
+    "id": "s-rk9",
+    "t": "You have climbed. Do not stand there admiring the view."
+   },
+   {
+    "id": "s-rk11",
+    "t": "A new name. The same work tomorrow."
+   },
+   {
+    "id": "s-pc1",
+    "t": "You practised on a day with nothing to show for it. That is the day that counts."
+   },
+   {
+    "id": "s-pc3",
+    "t": "Repetition is not glamorous. Neither is anybody who is any good."
+   },
+   {
+    "id": "s-pc5",
+    "t": "Nobody saw you do that. That is rather the point."
+   },
+   {
+    "id": "s-pc7",
+    "t": "Ten minutes is not nothing. Ten minutes, ninety times, is a skill."
+   },
+   {
+    "id": "s-pc9",
+    "t": "The body learns while you sleep. You have just given it something to work on."
+   },
+   {
+    "id": "s-pc11",
+    "t": "Practice is the only word in this school that means anything."
+   },
+   {
+    "id": "s-pc13",
+    "t": "Steady. That is the whole instruction."
+   },
+   {
+    "id": "s-rz1",
+    "t": "A skill you have to fetch back is still yours. It was only sleeping."
+   },
+   {
+    "id": "s-rz3",
+    "t": "Most people find out they have lost a thing when they need it. You found out on purpose."
+   },
+   {
+    "id": "s-rz5",
+    "t": "Keeping is harder than getting, and far less celebrated. Not here."
+   },
+   {
+    "id": "s-rn1",
+    "t": "You have done the same small thing on {days} separate days. Think about what else you could do with that."
+   },
+   {
+    "id": "s-rn3",
+    "t": "{days} days. Anybody can be impressive once."
+   },
+   {
+    "id": "s-rn5",
+    "t": "Consistency is not a talent. It is a decision, repeated, on days that did not deserve it."
+   },
+   {
+    "id": "s-fn1",
+    "t": "Finished. Say it out loud once — you finished something."
+   },
+   {
+    "id": "s-fn3",
+    "t": "You began that when you could not do it. You are closing it able. Nothing else needs saying."
    }
   ]
  },
@@ -1764,7 +1848,28 @@
   "s-ddx2a": "Do you ever get tired of this bit?",
   "s-ddx3b": "Three, and cheerfully. That is the part that keeps people coming back.",
   "s-ddx4a": "That is them finished for today.",
-  "s-ddx5b": "They have not for a while now. Have you noticed?"
+  "s-ddx5b": "They have not for a while now. Have you noticed?",
+  "s-rk0": "{rank}. That is not a badge, it is a receipt. Every point was a thing you did.",
+  "s-rk2": "You have moved up. Take a moment and then forget about it, which is the right way round.",
+  "s-rk4": "{rank}. I remember when you were three points in and not at all sure about any of this.",
+  "s-rk6": "That one took a while. The next one will take longer, and you will hardly notice.",
+  "s-rk8": "Every rank in here is just days added up. That is the only secret there has ever been.",
+  "s-rk10": "Look at the ladder once. Then look at the next thing to do.",
+  "s-pc0": "Logged. The days you practise and see nothing are the ones doing the work.",
+  "s-pc2": "Another day on it. Quietly, and then suddenly — that is how it always goes.",
+  "s-pc4": "{days} days on this now. You are past the part where most people stop.",
+  "s-pc6": "That is the difference between somebody learning a thing and somebody who did it once.",
+  "s-pc8": "You did not feel like it and you did it. Write that down somewhere.",
+  "s-pc10": "Good. Now put it down and come back tomorrow.",
+  "s-pc12": "{days} days. The gap between you and where you started is getting hard to see from here.",
+  "s-rz0": "It came back faster than it came the first time. It always does.",
+  "s-rz2": "Nobody made you check. That is the part I would not have predicted about you.",
+  "s-rz4": "Done again, and it counts again. That is fair, and it is also true.",
+  "s-rn0": "That is set in stone now, and stone is the right word: a missed day can never take it back.",
+  "s-rn2": "Days in a row is the only thing in this school that cannot be rushed.",
+  "s-rn4": "I have watched this one build up stone by stone. Look at it.",
+  "s-fn0": "That is a whole ladder finished. There will not be many days like this one.",
+  "s-fn2": "Somebody who has finished one of these finds the next one easier. That is not encouragement, it is what happens."
  },
  "cover": {
   "em": "Nation of",
@@ -5358,6 +5463,258 @@
      "who": "aurelia",
      "t": "They have not for a while now. Have you noticed?"
     }
+   },
+   {
+    "id": "s-rk0",
+    "who": "aurelia",
+    "slot": "rank",
+    "t": "{rank}. That is not a badge, it is a receipt. Every point was a thing you did."
+   },
+   {
+    "id": "s-rk1",
+    "who": "marcus",
+    "slot": "rank",
+    "t": "{rank}. Names are cheap. What is underneath this one is not."
+   },
+   {
+    "id": "s-rk2",
+    "who": "aurelia",
+    "slot": "rank",
+    "t": "You have moved up. Take a moment and then forget about it, which is the right way round."
+   },
+   {
+    "id": "s-rk3",
+    "who": "marcus",
+    "slot": "rank",
+    "t": "A rank marks where you have been standing, not where you are going. Keep walking."
+   },
+   {
+    "id": "s-rk4",
+    "who": "aurelia",
+    "slot": "rank",
+    "t": "{rank}. I remember when you were three points in and not at all sure about any of this."
+   },
+   {
+    "id": "s-rk5",
+    "who": "marcus",
+    "slot": "rank",
+    "t": "Higher than most people ever get, and you did it in ordinary weeks."
+   },
+   {
+    "id": "s-rk6",
+    "who": "aurelia",
+    "slot": "rank",
+    "t": "That one took a while. The next one will take longer, and you will hardly notice."
+   },
+   {
+    "id": "s-rk7",
+    "who": "marcus",
+    "slot": "rank",
+    "t": "{rank}. Nobody gave it to you and nobody can take it off you."
+   },
+   {
+    "id": "s-rk8",
+    "who": "aurelia",
+    "slot": "rank",
+    "t": "Every rank in here is just days added up. That is the only secret there has ever been."
+   },
+   {
+    "id": "s-rk9",
+    "who": "marcus",
+    "slot": "rank",
+    "t": "You have climbed. Do not stand there admiring the view."
+   },
+   {
+    "id": "s-rk10",
+    "who": "aurelia",
+    "slot": "rank",
+    "t": "Look at the ladder once. Then look at the next thing to do."
+   },
+   {
+    "id": "s-rk11",
+    "who": "marcus",
+    "slot": "rank",
+    "t": "A new name. The same work tomorrow."
+   },
+   {
+    "id": "s-pc0",
+    "who": "aurelia",
+    "slot": "practised",
+    "t": "Logged. The days you practise and see nothing are the ones doing the work."
+   },
+   {
+    "id": "s-pc1",
+    "who": "marcus",
+    "slot": "practised",
+    "t": "You practised on a day with nothing to show for it. That is the day that counts."
+   },
+   {
+    "id": "s-pc2",
+    "who": "aurelia",
+    "slot": "practised",
+    "t": "Another day on it. Quietly, and then suddenly — that is how it always goes."
+   },
+   {
+    "id": "s-pc3",
+    "who": "marcus",
+    "slot": "practised",
+    "t": "Repetition is not glamorous. Neither is anybody who is any good."
+   },
+   {
+    "id": "s-pc4",
+    "who": "aurelia",
+    "slot": "practised",
+    "t": "{days} days on this now. You are past the part where most people stop."
+   },
+   {
+    "id": "s-pc5",
+    "who": "marcus",
+    "slot": "practised",
+    "t": "Nobody saw you do that. That is rather the point."
+   },
+   {
+    "id": "s-pc6",
+    "who": "aurelia",
+    "slot": "practised",
+    "t": "That is the difference between somebody learning a thing and somebody who did it once."
+   },
+   {
+    "id": "s-pc7",
+    "who": "marcus",
+    "slot": "practised",
+    "t": "Ten minutes is not nothing. Ten minutes, ninety times, is a skill."
+   },
+   {
+    "id": "s-pc8",
+    "who": "aurelia",
+    "slot": "practised",
+    "t": "You did not feel like it and you did it. Write that down somewhere."
+   },
+   {
+    "id": "s-pc9",
+    "who": "marcus",
+    "slot": "practised",
+    "t": "The body learns while you sleep. You have just given it something to work on."
+   },
+   {
+    "id": "s-pc10",
+    "who": "aurelia",
+    "slot": "practised",
+    "t": "Good. Now put it down and come back tomorrow."
+   },
+   {
+    "id": "s-pc11",
+    "who": "marcus",
+    "slot": "practised",
+    "t": "Practice is the only word in this school that means anything."
+   },
+   {
+    "id": "s-pc12",
+    "who": "aurelia",
+    "slot": "practised",
+    "t": "{days} days. The gap between you and where you started is getting hard to see from here."
+   },
+   {
+    "id": "s-pc13",
+    "who": "marcus",
+    "slot": "practised",
+    "t": "Steady. That is the whole instruction."
+   },
+   {
+    "id": "s-rz0",
+    "who": "aurelia",
+    "slot": "rusty",
+    "t": "It came back faster than it came the first time. It always does."
+   },
+   {
+    "id": "s-rz1",
+    "who": "marcus",
+    "slot": "rusty",
+    "t": "A skill you have to fetch back is still yours. It was only sleeping."
+   },
+   {
+    "id": "s-rz2",
+    "who": "aurelia",
+    "slot": "rusty",
+    "t": "Nobody made you check. That is the part I would not have predicted about you."
+   },
+   {
+    "id": "s-rz3",
+    "who": "marcus",
+    "slot": "rusty",
+    "t": "Most people find out they have lost a thing when they need it. You found out on purpose."
+   },
+   {
+    "id": "s-rz4",
+    "who": "aurelia",
+    "slot": "rusty",
+    "t": "Done again, and it counts again. That is fair, and it is also true."
+   },
+   {
+    "id": "s-rz5",
+    "who": "marcus",
+    "slot": "rusty",
+    "t": "Keeping is harder than getting, and far less celebrated. Not here."
+   },
+   {
+    "id": "s-rn0",
+    "who": "aurelia",
+    "slot": "run",
+    "t": "That is set in stone now, and stone is the right word: a missed day can never take it back."
+   },
+   {
+    "id": "s-rn1",
+    "who": "marcus",
+    "slot": "run",
+    "t": "You have done the same small thing on {days} separate days. Think about what else you could do with that."
+   },
+   {
+    "id": "s-rn2",
+    "who": "aurelia",
+    "slot": "run",
+    "t": "Days in a row is the only thing in this school that cannot be rushed."
+   },
+   {
+    "id": "s-rn3",
+    "who": "marcus",
+    "slot": "run",
+    "t": "{days} days. Anybody can be impressive once."
+   },
+   {
+    "id": "s-rn4",
+    "who": "aurelia",
+    "slot": "run",
+    "t": "I have watched this one build up stone by stone. Look at it."
+   },
+   {
+    "id": "s-rn5",
+    "who": "marcus",
+    "slot": "run",
+    "t": "Consistency is not a talent. It is a decision, repeated, on days that did not deserve it."
+   },
+   {
+    "id": "s-fn0",
+    "who": "aurelia",
+    "slot": "ladderDone",
+    "t": "That is a whole ladder finished. There will not be many days like this one."
+   },
+   {
+    "id": "s-fn1",
+    "who": "marcus",
+    "slot": "ladderDone",
+    "t": "Finished. Say it out loud once — you finished something."
+   },
+   {
+    "id": "s-fn2",
+    "who": "aurelia",
+    "slot": "ladderDone",
+    "t": "Somebody who has finished one of these finds the next one easier. That is not encouragement, it is what happens."
+   },
+   {
+    "id": "s-fn3",
+    "who": "marcus",
+    "slot": "ladderDone",
+    "t": "You began that when you could not do it. You are closing it able. Nothing else needs saying."
    }
   ],
   "ask": {

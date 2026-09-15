@@ -461,8 +461,11 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 
 /* ---- v16: the arrival, the one card, the long game ---- */
 .stage.school.arrive .scene{display:block;max-height:40vh;max-height:40dvh}
-.stage.school.arrive .mfig{width:40%;left:48%}
-.stage.school.arrive .afig{width:37%;left:4%}
+/* Symmetrical about the centre line, and closer together. She was at the far
+   left and he was near the middle, which never looked composed — and her dress
+   sat over the olive bush, so tapping the bush tapped her. */
+.stage.school.arrive .mfig{width:40%;left:46%}
+.stage.school.arrive .afig{width:37%;left:11%}
 .stage.school.arrive .shead{display:none}
 .stage.school.arrive .hud{display:none}
 .stage.school.arrive .bubble,.stage.school.arrive .abubble{display:none!important}
@@ -1260,21 +1263,22 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 /* Together in the middle, not scattered across the parapet — three lamps set
    side by side with the centre one dead centre, and big enough to read as the
    day's score from across the room. */
-.dayflames{position:absolute;left:0;right:0;bottom:42%;z-index:2;display:none;
-  justify-content:center;gap:12px;pointer-events:none}
+/* Above their heads, not behind them. On the parapet the third one spent all
+   day hidden behind Marcus and it read as two. Up here nothing can ever stand
+   in front of them. */
+.dayflames{position:absolute;left:0;right:0;bottom:64%;z-index:2;display:none;
+  justify-content:center;gap:16px;pointer-events:none}
 .stage.school.arrive .dayflames{display:flex}
 .dfl{position:relative;width:44px;height:56px;display:grid;place-items:center}
-.dfl i{position:absolute;left:50%;bottom:2px;width:28px;height:8px;border-radius:50%;
-  transform:translateX(-50%);background:linear-gradient(180deg,#E2D8C2,#BCAF92);
-  box-shadow:0 2px 6px rgba(40,28,10,.34)}
+.dfl i{display:none}
 /* An unlit one has to be clearly THERE, or you cannot see that three is the
    number. At 22% on a pale parapet it vanished and it looked like two. */
-.dfl svg{width:28px;height:35px;position:relative;margin-bottom:9px;
+.dfl svg{width:30px;height:38px;position:relative;margin-bottom:2px;
   opacity:.55;filter:grayscale(1) brightness(.62);
   transition:opacity .5s var(--ease),filter .5s var(--ease)}
-.dfl::before{content:"";position:absolute;left:50%;bottom:0;width:34px;height:34px;
+.dfl::before{content:"";position:absolute;left:50%;bottom:3px;width:26px;height:6px;
   transform:translateX(-50%);border-radius:50%;pointer-events:none;
-  background:radial-gradient(circle,rgba(40,28,10,.16) 0%,transparent 68%)}
+  background:radial-gradient(ellipse,rgba(255,255,255,.5) 0%,transparent 70%)}
 .dfl.on svg{opacity:1;filter:drop-shadow(0 0 6px rgba(255,180,60,.75));animation:dflick 1.6s ease-in-out infinite}
 .dfl.on::before{display:none}
 .dfl.on::after{content:"";position:absolute;left:50%;bottom:4px;width:66px;height:66px;

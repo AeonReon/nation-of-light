@@ -1424,6 +1424,13 @@
     SHOW = v;
     if (a.earned) { sfx('wreath'); shower(); if (sc) { sparks(); PORTICO.flare(); } } else sfx('scroll');
     const n = SHOWN++;
+    /* a stone IS a run of days, and twelve lines were written for exactly that
+       and had never once fired. Everything else keeps the general trophy words. */
+    if (a.earned && a.kind === 'stone') {
+      setTimeout(() => { if (SHOW !== v) return; RIG.cheer(); ARIG.cheer();
+        saySlot('run', null, { days: a.need }); }, sc ? 500 : 900);
+      return;
+    }
     const mid = a.earned ? ['c-tr1', 'c-tr2', 'c-tr4'][n % 3] : 'c-tr3', aid = a.earned ? ['tr2', 'tr3', 'tr4'][n % 3] : 'tr-no';
     const runLn = (a.earned && a.tier === 'run') ? pickSay('run', { run: a.n }) : null;   // the stones have their own words
     if (!sc) { popIn('marcus'); popIn('aurelia'); }
