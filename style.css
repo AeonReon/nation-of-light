@@ -398,8 +398,9 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 /* ---- v15: the school full screen; the two of them pop in at the edge; a band only inside a room ---- */
 .stage.school .scene{display:none}
 .stage.school.room .scene{display:block;max-height:30vh;max-height:30dvh}
-.stage.school.room .mfig{width:38%;left:50%}
-.stage.school.room .afig{width:35%;left:5%}
+/* the room band: the same centres as home (Aurelia 29.5%, Marcus 66%), smaller because the band is */
+.stage.school.room .mfig{width:38%;left:47%}
+.stage.school.room .afig{width:35%;left:12%}
 .stage.school.room .bubble{top:4%;width:52%;font-size:13px;padding:8px 10px 7px}
 .stage.school.room .abubble{top:4%;left:4%;width:56%}
 .stage.school.room .hud{display:none}
@@ -1319,3 +1320,13 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 .srow.pic.area .sline2{font-size:12.5px;line-height:1.3}
 .ghead.slim{padding-top:2px}
 .ghead.slim p{margin:0 0 4px}
+
+/* ---- pop-ups off (v64): while the folk are quiet, nothing in the tabs can show them.
+   They still stand in the scene band at home and on a room, area or ladder page. ---- */
+.stage.popmode.quiet .mfig,.stage.popmode.quiet .afig,.stage.popmode.quiet .bubble,.stage.popmode.quiet .abubble{display:none!important}
+/* ---- the gate ---- */
+.gatecard{text-align:center;padding:22px 18px 18px}
+.gatecard h2{font-family:var(--display);font-size:24px;line-height:1.15;margin:6px 0 8px}
+.gatecard .lede{max-width:34ch;margin:0 auto 14px}
+.gatecard .daybar{margin:0 auto 16px;max-width:280px}
+.gatebtn{font-size:13.5px}

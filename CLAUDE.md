@@ -301,3 +301,25 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   "Friends and family" uses care.jpg (hands + seedling) and needs a real one generated. The
   rooms are untouched: same ladders, a different view. Not done: per-area pathway stages, an
   area's own voice line, the destination line per ladder.
+- **v64 (2026-09-15, Fable session): the seven-day gate, pop-ups off for real, the band positions.**
+  (1) **The gate.** His: people should stay on the home page until they have done about seven
+  days consistently, then the next section opens, the way the twenty-five got people into the
+  first room. `C.school.gate` (`days: 7`, copy); `schoolOpen()` = `S.school.opened` or a best
+  run ≥ 7 or ≥ 10 steps already done inside (grandfathers testers and him); once true it is
+  saved and never re-locks. `renderSchool` shows `gateCard` instead of the tabs while shut
+  (search cleared too); a ladder, room or area page opened from home still works. The home
+  door reads "The school opens at seven days · n of 7" as a ghost button. Test: `NOL.open()`,
+  or `NOL.S.school.opened = false; NOL.save()` to feel it. (2) **Pop-ups off leaked.** With
+  the face button off, some paths still stood the figures up in the tabs (a rig pose calls
+  show(true)). Now `dock()` and the toggle stamp `.quiet` on the stage and
+  `.stage.popmode.quiet .mfig/.afig/.bubble/.abubble{display:none!important}`: in the tabs
+  nothing can show them; in the scene band (home, room, area, ladder page) they stay. Also
+  `checkDay` no longer speaks the fallback line after `saySlot` already returned quiet.
+  (3) **Room band positions** now share home's centres: Aurelia left 12% (was 5%), Marcus
+  left 47% (was 50%), widths unchanged because the band is shorter.
+- **His direction for the next wave (2026-09-15, not built):** the entry level stays wide (three
+  things a day from every part of life at home); after the gate, TWO main pathways open first
+  (meet new people / build a network, and get your health in order), each thought through as
+  a real programme with rungs that explain themselves, the other areas opening stage by stage;
+  and the Becoming chart should point people at the side they are weak on with one or two easy
+  strong tracks for it. Many current rungs "look dumped, not perfectly thought through".

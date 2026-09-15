@@ -585,7 +585,7 @@
   }
   /* where the two of them stand: in the portico, or popped in at the edge of the screen */
   function dock(where) {
-    const pop = $('pop'), scene = $('scene');
+    const pop = $('pop'), scene = $('scene'); $('stage').classList.toggle('quiet', quietFolk());
     if (where === 'pop') { pop.appendChild($('afig')); pop.appendChild($('abubble')); pop.appendChild($('mfig')); pop.appendChild($('bubble')); $('stage').classList.add('popmode'); }
     else { scene.appendChild($('afig')); scene.appendChild($('abubble')); scene.appendChild($('mfig')); scene.appendChild($('bubble')); $('stage').classList.remove('popmode'); }
   }
@@ -727,7 +727,7 @@
     $('shead').appendChild($('hud')); paintSchoolCount();
     if (!$('rankbar')) { $('countpill').hidden = true; $('hud').insertAdjacentHTML('afterbegin', `<div id="rankbar" class="daywrap">${rankBar()}</div><button class="facebtn ${S.popins === false ? 'off' : ''}" id="facebtn" aria-label="${C.help ? C.help.popins : 'Pop-ups'}"><img src="images/mentors/marcus.jpg" alt=""><i></i></button>`);
       $('facebtn').addEventListener('click', () => { S.popins = S.popins === false; save(); sfx('tap');
-        $('facebtn').classList.toggle('off', quietFolk());
+        $('facebtn').classList.toggle('off', quietFolk()); $('stage').classList.toggle('quiet', quietFolk());
         if (quietFolk()) { hush(); popOut('marcus', 0); popOut('aurelia', 0); RIG.show(false); ARIG.show(false); }
         else if ($('stage').classList.contains('arrive')) { RIG.enter(); setTimeout(() => { ARIG.show(true); $('afig').classList.remove('walk-out-l', 'walk-in-l', 'popin', 'popout'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l'); }, 300); idleRoom(40000); }
       }); }
@@ -802,7 +802,7 @@
     S.school.celebrated = t; save(); paintDay();
     setTimeout(() => { hush(); dayCelebrate(() => {
       const ask = () => { const tm = S.school.tomorrow; if (!tm || tm.on !== t) setTimeout(askPromise, 800); };
-      if (saySlot('dayDone', ask)) return;
+      if (saySlot('dayDone', ask) || quietFolk()) return;
       const hers = (S.school.visits || 0) % 2 === 0;
       speakSchool(hers ? [{ who: 'aurelia', id: 'ui-day', t: C.voice['day'] }] : [{ who: 'marcus', id: 'c-day' }], ask);
     }); }, 700);
@@ -1150,7 +1150,7 @@
       (earlier.length ? foldCard('earlier', C.feed.earlier || 'Earlier', `<div class="acard feedcard">${earlier.map(p => `<div class="feedpost"><small>${p.date}</small><h4>${p.title}</h4><p>${p.text}</p></div>`).join('')}</div>`) : '') +
       (C.apps ? foldCard('apps', C.apps.title, appsFold()) : '') +
       dayCard(ticks, nextLine, q && (l || !hasLong)) + addKid +
-      `<div class="gorow"><button class="btn btn-gold" id="intoschool">${P.go}</button><button class="iconbtn" id="sharearr" aria-label="${C.share.btn}">${SHARE_IC}</button></div>`;
+      `<div class="gorow"><button class="btn ${schoolOpen() ? 'btn-gold' : 'btn-ghost gatebtn'}" id="intoschool">${schoolOpen() ? P.go : fmt1(GATE().btn || P.go, { n: Math.min(GATE().days, runInfo().cur), days: GATE().days })}</button><button class="iconbtn" id="sharearr" aria-label="${C.share.btn}">${SHARE_IC}</button></div>`;
     if (post && isNew) { S.feed.seen.push(post.id); save(); }
     list.querySelector('#sharearr').addEventListener('click', () => { sfx('tap'); sharePanel(); });
     list.querySelectorAll('.fold').forEach(d => d.addEventListener('toggle', () => { if (d.dataset.fold === 'how' && !d.open) { S.school.howSeen = true; save(); } if (d.dataset.fold === 'vision' && !d.open) { S.school.visionSeen = true; save(); } }));
@@ -1184,7 +1184,31 @@
       switchTo('kid'); paintSchoolCount();
       closeVeil(() => { renderArrival(); $('slist').scrollTop = 0; shower(); cap('aurelia', K.title || ''); aureliaSay('ui-kid-made', () => capHide(1500)); }); });
   }
-  function leaveArrival() { ROOMV = null; clearTimeout(arrival._t); clearTimeout(ROOMT); hush(); musicStop(); lyreStop(800); $('stage').classList.remove('arrive'); RIG.show(false); ARIG.show(false); $('afig').classList.remove('walk-in-l'); dock('pop'); renderSchool(); if (!S.school.toured) setTimeout(offerTour, 600); else setTimeout(entryWord, 650); }
+  /* ---- the gate (v64) ----
+     His: people should only go to the home page until they have done about
+     seven days consistently, then the next section opens; the way the
+     twenty-five got people into the first room. Home stays wide (three
+     things a day from every part of life); the rooms, the ladders and the
+     life areas open once the flame has been lit seven days running. Once
+     open, open for good. Anyone who has already done ten steps inside keeps
+     their access (testers, and him). */
+  const GATE = () => C.school.gate || { days: 7 };
+  function schoolOpen() {
+    if (S.school.opened) return true;
+    const ri = runInfo(), steps = Object.keys(S.school.done || {}).length;
+    if (ri.best >= (GATE().days || 7) || steps >= 10) { S.school.opened = true; save(); return true; }
+    return false;
+  }
+  function gateCard(list) {
+    const G = GATE(), ri = runInfo(), n = Math.min(G.days, ri.cur), pct = Math.round(n / G.days * 100);
+    $('stabs').hidden = true; $('sline').textContent = ''; dock('pop'); $('stage').classList.remove('room');
+    list.innerHTML = `<div class="acard gatecard"><div class="eyebrow"><i></i>${G.eyebrow || 'Not yet'}</div><h2>${G.title}</h2><p class="lede">${G.lede}</p>
+      <div class="daybar ${n >= G.days ? 'full' : ''}"><i style="width:${pct}%"></i><span>${fmt1(G.count, { n, days: G.days })}</span></div>
+      <div class="gorow"><button class="btn btn-gold" id="gateback">${G.back || 'Back to today'}</button></div></div>`;
+    list.querySelector('#gateback').addEventListener('click', () => { sfx('tap'); goHome(); });
+    stageBack(goHome);
+  }
+  function leaveArrival() { ROOMV = null; clearTimeout(arrival._t); clearTimeout(ROOMT); hush(); musicStop(); lyreStop(800); $('stage').classList.remove('arrive'); RIG.show(false); ARIG.show(false); $('afig').classList.remove('walk-in-l'); dock('pop'); renderSchool(); if (!schoolOpen()) return; if (!S.school.toured) setTimeout(offerTour, 600); else setTimeout(entryWord, 650); }
   /* going in: one of them pops up with a word for the day ahead. Never the same one twice in a sitting, a different start each day, loosely his and hers in turn. */
   const ENTRYSAID = new Set();
   function entryWord() {
@@ -1337,6 +1361,7 @@
     const tabs = $('stabs'); tabs.hidden = false; tabs.innerHTML = C.school.tabs.map(([k, l]) => `<button class="stab ${TAB === k ? 'on' : ''}" data-t="${k}">${l}</button>`).join('');
     tabs.querySelectorAll('.stab').forEach(b => b.addEventListener('click', () => { sfx('tap'); TAB = b.dataset.t; CAT = null; AREA = null; SEARCH = null; renderSchool(); }));
     const list = $('slist'); list.scrollTop = 0; paintSchoolCount();
+    if (!schoolOpen() && !TRK && !CAT && !AREA) { SEARCH = null; paintSearchBtn(); gateCard(list); return; }
     if (SEARCH !== null) {
       dock('pop'); $('stage').classList.remove('room'); $('stage').classList.add('searching');
       tabs.hidden = true; $('sline').textContent = '';
@@ -2184,7 +2209,7 @@
     $('helpbtn').addEventListener('click', () => { sfx('tap'); if (MODE === 'school' && C.tour && !S.school.toured2) { S.school.toured2 = true; save(); if ($('stage').classList.contains('arrive')) leaveArrival(); tour(); } else help(); });
     cover();
     if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
-    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool, show: id => trophyShow(awards().find(a => a.id === id)), awards, quiet: quietProject, check: id => checkIn(trackById(id)), entry: entryWord, home: goHome, lyr: () => ({ on: LYRE.on, paused: LYR.paused, src: LYR.src.split('/').pop(), vol: +LYR.volume.toFixed(2) }), prac: id => logPractice(trackById(id)), track: id => openTrack(trackById(id)), tracks: () => allTracks().map(t => t.id), say: pickSay, state: sayState, ask: askPromise, fw: () => fireworks(inScene() ? $('scene') : $('stage'), 5000), day: dayCelebrate };
+    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool, show: id => trophyShow(awards().find(a => a.id === id)), awards, quiet: quietProject, check: id => checkIn(trackById(id)), entry: entryWord, home: goHome, lyr: () => ({ on: LYRE.on, paused: LYR.paused, src: LYR.src.split('/').pop(), vol: +LYR.volume.toFixed(2) }), prac: id => logPractice(trackById(id)), track: id => openTrack(trackById(id)), tracks: () => allTracks().map(t => t.id), say: pickSay, state: sayState, ask: askPromise, open: schoolOpen, fw: () => fireworks(inScene() ? $('scene') : $('stage'), 5000), day: dayCelebrate };
   }
   /* a phone held sideways: the stage turns back by ninety degrees and stays upright, which reads as "this app is this way up" */
   const rot = () => {
