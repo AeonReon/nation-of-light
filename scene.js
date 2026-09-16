@@ -151,7 +151,7 @@
      stone and the flames sit on something. Positioned between and just above
      the two heads at home; hidden on the other stages (see style.css). */
   function torch(x, i) {
-    const top = 232;
+    const top = 262;
     return `<g class="torch" data-i="${i}">
       <ellipse cx="${x}" cy="322" rx="7.5" ry="2.4" fill="${BRONZE_D}"/>
       <rect x="${x - 4}" y="315" width="8" height="7" rx="1.5" fill="${BRONZE}"/>

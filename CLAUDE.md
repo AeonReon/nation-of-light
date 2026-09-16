@@ -414,3 +414,23 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   behind with a brass megaphone in a town square (Draw Things, seed 11, recipe as
   tools/order-draw.mjs but with people allowed). **Session rule:** close the preview TAB
   (tabs_close), not just the server; the app's ambience keeps playing in an open tab.
+- **v70 (2026-09-16, Fable session): part two of People and Real food; the tidy-up pass.**
+  `speak.people2` "Meeting people, part two" (reconnect, invite, host a pot of tea, organise,
+  run a small regular thing three times, an event of six or more, count the people you could
+  call on a bad day) and `food.real2` "Real food, part two" (`from: 16`; weeks not days: real
+  breakfasts, five days no snacks, a sugar-free week then month, 12h → 10h → 16:8 for a week,
+  a real-food kitchen, one 24-hour fast on a quiet day with the doctor line, ends by writing
+  down your way of eating). Both carry `after: <part one id>`: `partDone(tr)` gates `isOpen`
+  (all rungs of part one done) and a part two inherits its part one's open place; the area
+  page shows a waiting part two greyed under its part one (`lockedRow`, `C.school.areaAfter`
+  "Opens when {name} is done"). Design, his list: (1) the three tabs are equal thirds
+  (`.stab.homet{flex:1}`); (2) the header was under the phone's status bar: `.hud` top is now
+  `env(safe-area-inset-top) + 9px` and the school band grows by the inset
+  (`calc(34dvh + env(safe-area-inset-top))`), viewport already has `viewport-fit=cover`;
+  (3) the torches moved DOWN (`top = 262` in scene.js) so the flames sit just above the two
+  heads and under the header, visible on a real phone; the day-done hail is a plate at the
+  bottom of the band (`bottom:3%`), never under the notch; (4) the long game's explanation is a
+  `foldCard('longhow', …)` drop-down ("How the long game works"); Look / Take it on are two
+  equal buttons; the drop-down's doubled chevron fixed (`::-webkit-details-marker`); (5) home
+  picks are clear boxes (`.pick` card with the room's colour ring, 104px picture filling the
+  box height, buttons `white-space:nowrap`). 173 ladders.

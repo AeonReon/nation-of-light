@@ -1404,8 +1404,10 @@
     } else if (area) {
       dock('scene'); RIG.show(true); ARIG.show(true); $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout');
       $('sline').textContent = '';
-      const all = area.tracks.map(trackById).filter(Boolean), trs = all.filter(isOpen), c = catOf(all[0]), later = all.length - trs.length;
-      list.innerHTML = `<div class="roomhead" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/${area.image}" alt=""><div><h2>${area.name}</h2><p>${area.line}</p></div></div><div class="ghead slim"><p>${everythingOpen() ? (C.school.areaOrder || '') : (C.school.areaOpenTitle || 'Open now')}</p></div>` + trs.map(trackRow).join('') + (later > 0 ? `<p class="later">${fmt1(C.school.areaLater || '{n} more open later.', { n: later })}</p>` : '');
+      const all = area.tracks.map(trackById).filter(Boolean), trs = all.filter(isOpen), c = catOf(all[0]);
+      const waiting = all.filter(tr => !isOpen(tr) && tr.after && trs.some(t => t.id === tr.after)), later = all.length - trs.length - waiting.length;
+      const lockedRow = tr => { const cc = catOf(tr), pre = trackById(tr.after); return `<div class="srow track pic locked" style="--c:${cc.accent};--c2:${cc.accent2}"><img src="images/track/${tr.id}.jpg" alt="" loading="lazy" onerror="this.src='images/cat/${cc.id}.jpg'"><span class="stxt"><span class="stest">${tr.name}</span><span class="sline2">${tr.line || ''}</span><span class="lockline">${fmt1(C.school.areaAfter || 'Opens when {name} is done', { name: pre ? pre.name : '' })}</span></span></div>`; };
+      list.innerHTML = `<div class="roomhead" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/${area.image}" alt=""><div><h2>${area.name}</h2><p>${area.line}</p></div></div><div class="ghead slim"><p>${everythingOpen() ? (C.school.areaOrder || '') : (C.school.areaOpenTitle || 'Open now')}</p></div>` + trs.map(tr => trackRow(tr) + waiting.filter(w => w.after === tr.id).map(lockedRow).join('')).join('') + (later > 0 ? `<p class="later">${fmt1(C.school.areaLater || '{n} more open later.', { n: later })}</p>` : '');
       stageBack(() => { hush(); AREA = null; renderSchool(); }); list.scrollTop = 0;
     } else if (cat) {
       dock('scene'); RIG.show(true); ARIG.show(true); $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout');
@@ -1653,7 +1655,7 @@
     const started = allTracks().filter(tr => !on.has(tr.id) && trackDone(tr) >= 1 && nextStep(tr)).sort((x, y) => trackDone(y) - trackDone(x)).slice(0, 6);
     const pool = (everythingOpen() ? L.list : (L.first || L.list)).map(trackById);
     const sug = pool.filter(tr => tr && nextStep(tr) && !on.has(tr.id) && !started.includes(tr)).slice(0, everythingOpen() ? 6 : 12);
-    list.innerHTML = `<p class="intro">${K.intro}</p>` +
+    list.innerHTML = foldCard('longhow', K.introTitle || 'How the long game works', `<p class="lede">${K.intro}</p>`) +
       `<div class="acard takencard"><span class="eyebrow">${K.takenTitle} · ${mine.length} of ${L.max}</span>` + (mine.length ? mine.map(projectRow).join('') : `<p class="lede">${K.takenNone}</p>`) + `</div>` +
       `<div class="acard"><span class="eyebrow">${K.chooseTitle}</span>` +
       (started.length ? `<h4 class="sub">${K.startedTitle}</h4>` + started.map(candRow).join('') : '') +
@@ -1817,7 +1819,8 @@
   const everythingOpen = () => { if (S.school.everything === true) return true; if (S.school.everything === false) return false;
     const A = (C.school.gate || {}).all || { days: 30, points: 100 }; return daysLit().size >= A.days || points() >= A.points; };
   const openIds = () => new Set(((SCH && SCH.areas) || []).flatMap(a => a.open || []));
-  const isOpen = tr => !!tr && (everythingOpen() || openIds().has(tr.id) || ((C.school.long || {}).first || []).includes(tr.id) || trackDone(tr) >= 1 || projects().some(p => p.id === tr.id) || (isKid() && isLittle(tr)));
+  const partDone = tr => { const a = tr && tr.after ? trackById(tr.after) : null; return !a || trackDone(a) >= a.steps.length; };
+  const isOpen = tr => !!tr && partDone(tr) && (everythingOpen() || openIds().has(tr.id) || (tr.after && openIds().has(tr.after)) || ((C.school.long || {}).first || []).includes(tr.id) || trackDone(tr) >= 1 || projects().some(p => p.id === tr.id) || (isKid() && isLittle(tr)));
   const trackCopy = () => (C.school.track || {});
   /* How long this one really takes, said out loud at the top of the ladder.
      His words: "playing a song on a guitar in front of a group is a major

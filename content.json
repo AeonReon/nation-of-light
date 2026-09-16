@@ -2447,7 +2447,8 @@
     "taken": "Taken on",
     "homeOne": "One to start with",
     "other": "A different one",
-    "about": "More about this"
+    "about": "More about this",
+    "introTitle": "How the long game works"
    },
    "soft": {
     "title": "Enjoying {name}?",
@@ -5856,7 +5857,8 @@
    "practised": "days practised",
    "points": "points"
   },
-  "kindsLine": "Every rung is one of four kinds. Here is every ladder by the kind it mostly is."
+  "kindsLine": "Every rung is one of four kinds. Here is every ladder by the kind it mostly is.",
+  "areaAfter": "Opens when {name} is done"
  },
  "arrival": {
   "lines": [

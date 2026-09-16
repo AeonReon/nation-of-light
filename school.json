@@ -6586,6 +6586,157 @@
      "about": "Twenty small steps from a smile to a second conversation with somebody you did not know a month ago. Nothing here needs money or a café; the shop rungs need no buying and the calls take a minute. It is written for the person who finds this genuinely hard, so the first rungs are tiny and the later ones are where the friends come from."
     },
     {
+     "id": "speak.people2",
+     "name": "Meeting people, part two",
+     "line": "From one small thing together to a room full of people you brought together.",
+     "size": "months",
+     "strand": "say-what-you-mean",
+     "after": "speak.people1",
+     "about": "Part one got you talking to people; part two turns talk into friends. Reconnecting, inviting, hosting a pot of tea, organising the walk, running a small regular thing, and finally putting on an event of your own. Nothing needs money: tea at yours, a bench, a park. It ends by counting the people you could call on a bad day.",
+     "steps": [
+      {
+       "n": 1,
+       "test": "Send a one-line message to three people you have not spoken to in a year.",
+       "ctx": "room",
+       "kind": "kindness",
+       "note": "\"Saw this and thought of you.\" \"Hope the new job is going well.\" No ask, no catch-up demand. Some will answer this week; that is enough."
+      },
+      {
+       "n": 2,
+       "test": "Ask somebody you met in part one to do one small thing together.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "A walk, the market, a look at that view you were told about. Twenty minutes is plenty. Costs nothing."
+      },
+      {
+       "n": 3,
+       "test": "Learn and use the name of everybody you meet this week.",
+       "ctx": "out",
+       "kind": "attention",
+       "note": "Say it back straight away, use it once in the conversation, and once at the end. Write them down that night."
+      },
+      {
+       "n": 4,
+       "test": "Introduce two people to each other who did not know each other.",
+       "ctx": "with",
+       "kind": "kindness",
+       "note": "\"You two should meet, you both…\" That sentence is the whole rung, and people remember who did it."
+      },
+      {
+       "n": 5,
+       "test": "Ask somebody for help with something small, and accept it.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "A hand with a box, a lift, an opinion, a recipe. Asking for help is the fastest road to a friend there is."
+      },
+      {
+       "n": 6,
+       "test": "Say yes to the next invitation you would normally turn down.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "The thing you would have made an excuse for. Go, stay an hour, then leave if you want to. Count it."
+      },
+      {
+       "n": 7,
+       "test": "Turn up at the same regular thing twice in one week.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "A run, a class, a market, a service, a group. The second time in a week is when you stop being a visitor."
+      },
+      {
+       "n": 8,
+       "test": "Have a proper conversation with somebody twenty years older than you, and one with somebody twenty years younger.",
+       "ctx": "out",
+       "kind": "kindness",
+       "note": "Ask them about their week. Most people only ever talk to their own age."
+      },
+      {
+       "n": 9,
+       "test": "Ask three people what they are working on, and follow up with one of them within a week.",
+       "ctx": "out",
+       "kind": "kindness",
+       "note": "\"How did the thing go?\" A week later, unprompted. Almost nobody does this; you will be remembered for it."
+      },
+      {
+       "n": 10,
+       "test": "Invite one person for a walk, a picnic, or a cup of tea at yours.",
+       "ctx": "with",
+       "kind": "courage",
+       "note": "Tea at home costs nothing. A sandwich on a bench is a picnic. The invitation is the rung, whether or not they can make it."
+      },
+      {
+       "n": 11,
+       "test": "Tell somebody something true about yourself that you usually keep back.",
+       "ctx": "with",
+       "kind": "courage",
+       "note": "Not a confession; a real thing. What you are afraid of, what you want, what you were like at fifteen. It is how acquaintances become friends."
+      },
+      {
+       "n": 12,
+       "test": "Be the one who organises: pick the day, the place, and the time, and tell people.",
+       "ctx": "with",
+       "kind": "courage",
+       "note": "Three people or more. Most gatherings never happen because nobody names a day. Name it."
+      },
+      {
+       "n": 13,
+       "test": "Host two or three people for a simple meal or a pot of tea.",
+       "ctx": "with",
+       "kind": "kindness",
+       "note": "Soup and bread is a meal. A pot of tea and a packet of biscuits is enough. The place from the Home ladder is ready in ten minutes."
+      },
+      {
+       "n": 14,
+       "test": "Reconnect with an old friend and meet in person.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "Somebody you were close to and drifted from. A message, then a walk. The first ten minutes are awkward and then they are not."
+      },
+      {
+       "n": 15,
+       "test": "Do a favour that costs you an hour.",
+       "ctx": "with",
+       "kind": "kindness",
+       "note": "Help somebody move something, mind a child, fix a bike, sit with somebody's parent. An hour of yours, given properly."
+      },
+      {
+       "n": 16,
+       "test": "Start a small regular thing and run it three times.",
+       "ctx": "with",
+       "kind": "courage",
+       "note": "A weekly walk, a game night, a Sunday call, a Saturday parkrun with two others. Three weeks running. After three it exists."
+      },
+      {
+       "n": 17,
+       "test": "Ask for an introduction to somebody you would like to meet, and follow it through.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "\"Do you know anyone who…?\" Then a message the same day it is offered, and the meeting inside a fortnight."
+      },
+      {
+       "n": 18,
+       "test": "Go somewhere alone where you know nobody, and leave with one name and a way to reach them.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "A talk, a club night, a fair, a class. The rung is the name, not the hour."
+      },
+      {
+       "n": 19,
+       "test": "Put on a small event of your own: six people or more.",
+       "ctx": "with",
+       "kind": "courage",
+       "note": "A picnic, a games afternoon, a talk in your front room, a walk with a flask at the end. You choose the day and you tell people. Then it happens."
+      },
+      {
+       "n": 20,
+       "test": "Write down the names of the people you could call on a bad day.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "If the list is longer than it was when you started part one, both ladders worked. That list is the point of all of it. From here a facilitator, and the network you build on purpose."
+      }
+     ]
+    },
+    {
      "id": "speak.strangers",
      "name": "Talking to people you do not know",
      "line": "Hello, to interviewing anybody.",
@@ -10823,6 +10974,158 @@
       }
      ],
      "about": "For grown-ups. Twenty rungs from one honest look at a label to an eight-hour eating window, in an order that never jumps. If a rung is already how you live, you do it on purpose that day and it counts. Real food, fewer snacks, a bit of space between meals; nothing extreme until the very end, and a doctor before going further if you take medicine."
+    },
+    {
+     "id": "food.real2",
+     "name": "Real food, part two",
+     "line": "For grown-ups. From an eight-hour window to a way of eating that is yours.",
+     "size": "months",
+     "strand": "look-after-yourself",
+     "from": 16,
+     "after": "food.real1",
+     "about": "Part one changed single days; part two makes it a week at a time and then a month. Real breakfasts, meals you cooked, no snacks for five days, a week of twelve-hour windows, then ten, then eight; a real-food kitchen, a whole chicken or a pot of beans used up, and one quiet day of twenty-four hours without food. Anybody on medicine, pregnant, diabetic, or under eighteen asks a doctor before the long ones. It ends with you writing down how you eat now.",
+     "steps": [
+      {
+       "n": 1,
+       "test": "A week where every breakfast is real food, or no breakfast at all.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Eggs, meat, fish, yoghurt, fruit, nuts, butter; or nothing until lunch. No cereal, no toast, no bars. If this is already how you live, do it on purpose and count it."
+      },
+      {
+       "n": 2,
+       "test": "Cook three real meals in one week.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "Meat or fish or eggs, vegetables, a fat you can name, salt. Nothing from a packet with a list. Three, on three different days."
+      },
+      {
+       "n": 3,
+       "test": "Five days running with no snacks.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Meals only, as many as you need. By day five the pull between meals has mostly gone."
+      },
+      {
+       "n": 4,
+       "test": "A week without sugar, honey included; fruit is fine.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Read every label. Sugar hides under twenty names. If this is already how you live, do it on purpose and count it."
+      },
+      {
+       "n": 5,
+       "test": "A twelve-hour eating window every day for a week.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Eight to eight, nine to nine. Seven days in a row. Water, tea and coffee outside the window are fine."
+      },
+      {
+       "n": 6,
+       "test": "Make one thing you usually buy.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "Bread, yoghurt, stock, a sauce, pickles, granola without the sugar. Once, properly, and taste the difference."
+      },
+      {
+       "n": 7,
+       "test": "Eat a big plate of vegetables with butter or olive oil as a whole meal.",
+       "ctx": "kit",
+       "kind": "attention",
+       "note": "Roasted, steamed, fried, whatever you like; a lot of them; fat on top. Notice that it is a meal."
+      },
+      {
+       "n": 8,
+       "test": "Three days running where every carbohydrate is a vegetable or a piece of fruit.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "No bread, pasta, rice, potatoes, cereal, sweets. Plenty of everything else. Eat enough and you will not be hungry."
+      },
+      {
+       "n": 9,
+       "test": "Cook a whole chicken, a whole fish, or a pot of beans from dry, and use all of it.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "The carcass becomes stock, the leftovers become tomorrow. This is how food was cooked for most of history."
+      },
+      {
+       "n": 10,
+       "test": "A ten-hour window every day for a week.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Nine to seven, ten to eight. Move the edges to fit your days; keep the width."
+      },
+      {
+       "n": 11,
+       "test": "A day of two meals, no snacks, both cooked by you.",
+       "ctx": "kit",
+       "kind": "courage",
+       "note": "Proper plates. Real food. Nothing between."
+      },
+      {
+       "n": 12,
+       "test": "Read one book, or listen to one long talk, on fasting or real food by a doctor or scientist who has studied it, and write down three things.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "One who has treated patients or run studies, not a seller of plans. Three things you did not know, in your own words."
+      },
+      {
+       "n": 13,
+       "test": "Sixteen hours off, eight on, three days running.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Dinner at seven, first bite at eleven. Sleep does most of it. Water, tea and coffee in the gap."
+      },
+      {
+       "n": 14,
+       "test": "Keep a real-food kitchen for a week: nothing in it with more than five ingredients.",
+       "ctx": "home",
+       "kind": "attention",
+       "note": "Clear the cupboards first. What has no label counts as zero. Everybody in the house eats better without deciding to."
+      },
+      {
+       "n": 15,
+       "test": "Eat only what you cooked yourself for three days.",
+       "ctx": "kit",
+       "kind": "courage",
+       "note": "Nothing bought ready, nothing from a café or a van. A flask and a box when you are out."
+      },
+      {
+       "n": 16,
+       "test": "Twenty-four hours without eating, once, on a quiet day.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Dinner to dinner. Water, tea and coffee throughout; rest; nothing heavy planned. Not if you are pregnant, diabetic, on medicine, or under eighteen: a doctor first, always."
+      },
+      {
+       "n": 17,
+       "test": "A month without sugar.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Thirty days, fruit allowed, honey not. After a month the sweet things you used to want taste like what they are. If this is already how you live, do it on purpose and count it."
+      },
+      {
+       "n": 18,
+       "test": "Cook a real-food meal for other people and say nothing about it being healthy.",
+       "ctx": "with",
+       "kind": "kindness",
+       "note": "Roast chicken, vegetables in butter, a good salad, cheese and fruit after. Let them enjoy it. The word healthy ruins a dinner."
+      },
+      {
+       "n": 19,
+       "test": "Sixteen hours off, eight on, for a full week.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Seven days. This is the far end of the ladder and most people find, by now, that it is simply how they eat."
+      },
+      {
+       "n": 20,
+       "test": "Write down how you eat now, what changed, and what you will keep.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "One page. That page is your way of eating, and it is yours to defend. From here a facilitator, if you want to go further, and a doctor beside you if you do."
+      }
+     ]
     },
     {
      "id": "food.knife",
@@ -19062,6 +19365,7 @@
    ],
    "tracks": [
     "food.real1",
+    "food.real2",
     "calm.sleep",
     "body.breath",
     "food.knife",
@@ -19093,6 +19397,7 @@
    ],
    "tracks": [
     "speak.people1",
+    "speak.people2",
     "speak.listen",
     "care.welcome",
     "speak.humour",

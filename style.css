@@ -75,7 +75,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 @keyframes wordin{0%{opacity:.3;transform:translateY(5px)}100%{opacity:1;transform:none}}
 
 /* ---- HUD over the entablature ---- */
-.hud{position:absolute;left:0;right:0;top:9px;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:0 10px;pointer-events:none}
+.hud{position:absolute;left:0;right:0;top:calc(env(safe-area-inset-top,0px) + 9px);z-index:5;display:flex;justify-content:space-between;align-items:center;padding:0 10px;pointer-events:none}
 .hud>*{pointer-events:auto}
 .pill{display:inline-flex;align-items:center;gap:7px;height:34px;padding:0 12px 0 9px;border-radius:17px;background:rgba(250,245,234,.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
   box-shadow:0 4px 14px rgba(40,28,10,.14),inset 0 0 0 1px rgba(201,162,39,.35);font-weight:600;font-size:13.5px;color:var(--ink);font-family:var(--sans)}
@@ -312,7 +312,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 
 /* ---- v14: the school ---- */
 /* v69: ONE band on every school page, the two of them always in it, the tabs right under */
-.stage.school .scene{max-height:34vh;max-height:34dvh}
+.stage.school .scene{max-height:34vh;max-height:calc(34dvh + env(safe-area-inset-top,0px))}
 .stage.school .mfig{width:38%;left:47%}
 .stage.school .afig{width:35%;left:12%}
 .stage.school .hud{display:flex}
@@ -870,7 +870,8 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 .cand .ladder{margin-top:2px;font-size:12px;color:var(--ink-faint)}
 .cand .ladder em{font-style:normal;font-weight:600;color:var(--ink)}
 .cand .cbtns{grid-column:1 / -1;display:flex;gap:8px}
-.cand .cbtns .btn-gold{flex:1}
+.cand .cbtns .btn{flex:1}
+.cand .more summary::-webkit-details-marker{display:none}
 .takencard{--g1:#F0D98A;--g2:#B08D1E}
 .proj.taken,.lgrow.taken{position:relative;padding:14px 12px 10px;margin:6px 0 2px;border-radius:16px;background:var(--card);border-top:0}
 .proj.taken::before,.lgrow.taken::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:3px;background:linear-gradient(135deg,#F3E3A8,#C9A227 55%,#8F6F12);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
@@ -1138,12 +1139,14 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 .foldic svg{width:15px;height:15px}
 
 /* the picks: a picture you can actually see, and a button that is not shouting */
-.pick{grid-template-columns:92px 1fr;gap:12px;padding:11px 0}
-.pick img{width:92px;height:74px;border-radius:12px}
+.pick{grid-template-columns:104px 1fr;gap:6px 12px;padding:10px;margin-top:10px;border-top:0;border-radius:16px;background:var(--card);box-shadow:0 0 0 1.5px var(--c2),0 4px 12px rgba(40,28,10,.06);align-items:stretch}
+.pick:first-of-type{margin-top:4px}
+.pick img{width:104px;height:100%;min-height:124px;grid-row:1 / span 2;align-self:stretch;border-radius:12px;box-shadow:none}
+.pick .ptxt{grid-column:2;justify-content:center}
 .pick .stest{font-size:15px;line-height:1.35}
 /* the buttons stay in the text column and stop stretching, so the picture gets
    the room instead. His note: the Do it button does not need to be that size. */
-.pick .pbtns{grid-column:2;justify-content:flex-start;margin-top:6px}
+.pick .pbtns{grid-column:2;justify-content:flex-start;margin-top:2px;align-self:end}
 .pick .pbtns .btn.sm{flex:0 0 auto;padding:8px 18px;font-size:13.5px}
 .lgrow{position:relative}
 .lgrow .px{position:absolute;top:6px;right:6px;width:26px;height:26px;border-radius:50%;z-index:3;
@@ -1292,12 +1295,12 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 @keyframes tglowin{0%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1.6)}100%{opacity:1;transform:scale(1)}}
 /* ---- the day done: fireworks over the hills and a hail over the scene ---- */
 .fw{position:absolute;inset:0;z-index:5;pointer-events:none}
-.dayhail{position:absolute;left:50%;top:1.5%;transform:translateX(-50%);z-index:6;text-align:center;pointer-events:none;white-space:nowrap;animation:hailin .9s var(--spring) both}
+.dayhail{position:absolute;left:50%;bottom:3%;transform:translateX(-50%);z-index:6;text-align:center;pointer-events:none;white-space:normal;width:max-content;max-width:86%;padding:10px 22px 12px;border-radius:20px;background:linear-gradient(160deg,rgba(58,74,136,.94),rgba(30,39,80,.94));box-shadow:0 14px 34px rgba(30,39,80,.35),0 0 0 2px rgba(255,214,120,.55);animation:hailin .9s var(--spring) both}
 .dayhail .eyebrow{display:block;justify-content:center;color:#FFE9A0;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;text-shadow:0 1px 2px rgba(40,20,0,.55);margin-bottom:2px}
 .dayhail h2{margin:0;font-family:var(--display);font-weight:700;font-size:29px;line-height:1.05;color:#FFF7DC;text-shadow:0 2px 0 #8F6F12,0 0 22px rgba(255,200,90,.85),0 0 60px rgba(255,180,60,.45)}
 .dayhail small{display:block;margin-top:4px;font-size:13px;font-weight:600;color:#FFF0B8;text-shadow:0 1px 2px rgba(40,20,0,.55)}
 .dayhail.out{animation:hailout .7s var(--ease) both}
-.dayhail.plate{top:16%;white-space:normal;width:max-content;max-width:86%;padding:12px 24px 14px;border-radius:20px;background:linear-gradient(160deg,#3A4A88,#1E2750);box-shadow:0 14px 34px rgba(30,39,80,.35),0 0 0 2px rgba(255,214,120,.55)}
+.dayhail.plate{top:16%;bottom:auto;white-space:normal;width:max-content;max-width:86%;padding:12px 24px 14px;border-radius:20px;background:linear-gradient(160deg,#3A4A88,#1E2750);box-shadow:0 14px 34px rgba(30,39,80,.35),0 0 0 2px rgba(255,214,120,.55)}
 @keyframes hailin{0%{opacity:0;transform:translateX(-50%) translateY(18px) scale(.7)}100%{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}}
 @keyframes hailout{0%{opacity:1;transform:translateX(-50%) translateY(0)}100%{opacity:0;transform:translateX(-50%) translateY(-14px)}}
 
@@ -1360,10 +1363,17 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 .previewbar b{color:#FFD166;font-weight:700}
 
 /* ---- v67: Home is the first tab; the Everything drop-down; one long skill at home ---- */
-.stab.homet{flex:0 0 auto;padding:0 14px}
+.stab.homet{flex:1}
 .stab.kid{color:#2B2210;background:linear-gradient(135deg,#F0D98A 0%,#C9A227 100%);max-width:34vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .viewsel{position:relative;display:block;margin:2px 0 12px}
 .viewsel select{width:100%;appearance:none;-webkit-appearance:none;font:inherit;font-weight:700;font-size:14px;color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:10px 40px 10px 14px;box-shadow:var(--shadow)}
 .viewsel svg{position:absolute;right:12px;top:50%;width:18px;height:18px;transform:translateY(-50%);pointer-events:none;color:var(--gold-deep)}
 .homeone{margin:4px 0 10px}
 .homeone .eyebrow{display:block;margin-bottom:6px}
+
+/* a part two waiting for its part one (v70) */
+.srow.locked{opacity:.62;pointer-events:none}
+.srow.locked img{filter:grayscale(.6)}
+.srow .lockline{display:block;margin-top:4px;font-size:12px;font-weight:700;color:var(--gold-deep)}
+
+.pick .pbtns .btn{white-space:nowrap}
