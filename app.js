@@ -590,6 +590,9 @@
   /* where the two of them stand: in the portico, or popped in at the edge of the screen */
   function dock(where) {
     const pop = $('pop'), scene = $('scene'); $('stage').classList.toggle('quiet', quietFolk());
+    /* v69, his: the room and the two of them stay at the top of every school page, the buttons
+       under them never move, and nothing pops up any more. So in the school 'pop' means 'scene'. */
+    if ($('stage').classList.contains('school')) { where = 'scene'; RIG.show(true); ARIG.show(true); $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout'); }
     if (where === 'pop') { pop.appendChild($('afig')); pop.appendChild($('abubble')); pop.appendChild($('mfig')); pop.appendChild($('bubble')); $('stage').classList.add('popmode'); }
     else { scene.appendChild($('afig')); scene.appendChild($('abubble')); scene.appendChild($('mfig')); scene.appendChild($('bubble')); $('stage').classList.remove('popmode'); }
   }
@@ -614,11 +617,13 @@
   }
   function popIn(who) {
     const el = $(who === 'marcus' ? 'mfig' : 'afig'), rig = who === 'marcus' ? RIG : ARIG;
+    if ($('stage').classList.contains('school')) { rig.show(true); return; }
     if (quietFolk()) return;
     clearTimeout(POPT[who]); el.classList.remove('popout'); rig.show(true); el.classList.add('popin');
   }
   function popOut(who, delay) {
     const el = $(who === 'marcus' ? 'mfig' : 'afig'), rig = who === 'marcus' ? RIG : ARIG;
+    if ($('stage').classList.contains('school')) return;
     clearTimeout(POPT[who]); POPT[who] = setTimeout(() => { el.classList.remove('popin'); el.classList.add('popout'); setTimeout(() => { rig.show(false); el.classList.remove('popout'); }, 700); }, delay || 0);
   }
   /* ---------- the school: the rooms beyond the door ----------
@@ -629,7 +634,7 @@
      in the portico: the two of them, where you stand, three for today. */
   let TAB = 'long', CAT = null, SAIDCAT = new Set(), LONGSAID = false, LIB = [], SHOW = null, SHOWN = 0, ROOM_FROM = null;
   const inSceneNow = () => inScene();
-  const inScene = () => { const c = $('stage').classList; return c.contains('room') || c.contains('arrive') || c.contains('portico'); };
+  const inScene = () => { const c = $('stage').classList; return c.contains('school') || c.contains('room') || c.contains('arrive') || c.contains('portico'); };
   const skey = (tr, st) => tr.id + '#' + st.n;
   const sdone = k => !!S.school.done[k];
   const trackDone = tr => tr.steps.filter(s => sdone(skey(tr, s))).length;
@@ -732,8 +737,11 @@
 
   function enterSchool() {
     $('stage').classList.add('school'); $('deck').hidden = true; $('school').hidden = false; $('hud').hidden = false; $('homebtn').hidden = true;
-    $('shead').appendChild($('hud')); paintSchoolCount();
-    if (!$('rankbar')) { $('countpill').hidden = true; $('hud').insertAdjacentHTML('afterbegin', `<div id="rankbar" class="daywrap">${rankBar()}</div><button class="facebtn ${S.popins === false ? 'off' : ''}" id="facebtn" aria-label="${C.help ? C.help.popins : 'Pop-ups'}"><img src="images/mentors/marcus.jpg" alt=""><i></i></button>`);
+    /* the caption goes UNDER the tabs, so the three buttons never move when one of them speaks */
+    if ($('capband').parentElement !== $('school')) $('stabs').after($('capband'));
+    paintSchoolCount();
+    if (!$('rankbar')) { $('countpill').hidden = true; $('hud').insertAdjacentHTML('afterbegin', `<div id="rankbar" class="daywrap">${rankBar()}</div>`);
+      const right = $('hud').querySelector('.right'); right.insertAdjacentHTML('afterbegin', `<button class="facebtn ${S.popins === false ? 'off' : ''}" id="facebtn" aria-label="${C.help ? C.help.popins : 'Pop-ups'}"><img src="images/mentors/marcus.jpg" alt=""><i></i></button>`); right.insertBefore($('searchbtn'), right.firstChild);
       $('facebtn').addEventListener('click', () => { S.popins = S.popins === false; save(); sfx('tap');
         $('facebtn').classList.toggle('off', quietFolk()); $('stage').classList.toggle('quiet', quietFolk());
         if (quietFolk()) { hush(); if (!inScene()) { popOut('marcus', 0); popOut('aurelia', 0); RIG.show(false); ARIG.show(false); } }
@@ -864,8 +872,9 @@
     const st = $('stage'); st.classList.add('arrive'); st.classList.remove('room', 'portico'); clearTimeout(ROOMT); stageBack(null); capHide(0); unpop(); dock('scene');
     $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout');
     /* they always stand here, whatever the pop-up button says: this is their room (his, 2026-09-15) */
-    { RIG.enter(); setTimeout(() => { ARIG.show(true); $('afig').classList.remove('walk-out-l', 'walk-in-l', 'popin', 'popout'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l'); }, 350); }
-    $('stabs').hidden = true; $('sline').textContent = ''; MODE = 'school';
+    if (RIG.hidden) { RIG.enter(); setTimeout(() => { ARIG.show(true); $('afig').classList.remove('walk-out-l', 'walk-in-l', 'popin', 'popout'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l'); }, 350); }
+    else { RIG.show(true); ARIG.show(true); }
+    paintTabs('home'); $('sline').textContent = ''; MODE = 'school';
     if (MUS.paused) musicStart(.4); ambStart(); if (points()) ambFire(true);
     renderArrival(); idleRoom(50000);
     if ((S.school.visits || 0) <= 4 && S.taps < 3) setTimeout(() => PORTICO.props.lyre.classList.add('hint'), 2500);
@@ -1158,7 +1167,7 @@
       (earlier.length ? foldCard('earlier', C.feed.earlier || 'Earlier', `<div class="acard feedcard">${earlier.map(p => `<div class="feedpost"><small>${p.date}</small><h4>${p.title}</h4><p>${p.text}</p></div>`).join('')}</div>`) : '') +
       (C.apps ? foldCard('apps', C.apps.title, appsFold()) : '') +
       dayCard(ticks, nextLine, q && (l || !hasLong)) + addKid +
-      `<div class="gorow"><button class="btn ${schoolOpen() ? 'btn-gold' : 'btn-ghost gatebtn'}" id="intoschool">${schoolOpen() ? P.go : fmt1(GATE().btn || P.go, { n: Math.min(GATE().days, runInfo().cur), days: GATE().days })}</button><button class="iconbtn" id="sharearr" aria-label="${C.share.btn}">${SHARE_IC}</button></div>`;
+      `<div class="gorow"><button class="iconbtn" id="sharearr" aria-label="${C.share.btn}">${SHARE_IC}</button></div>`;
     if (post && isNew) { S.feed.seen.push(post.id); save(); }
     list.querySelector('#sharearr').addEventListener('click', () => { sfx('tap'); sharePanel(); });
     list.querySelectorAll('.fold').forEach(d => d.addEventListener('toggle', () => { if (d.dataset.fold === 'how' && !d.open) { S.school.howSeen = true; save(); } if (d.dataset.fold === 'vision' && !d.open) { S.school.visionSeen = true; save(); } }));
@@ -1171,7 +1180,6 @@
     list.querySelectorAll('[data-do]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.do); if (r) stepSheet(r[0], r[1], null, 'arrival'); }));
     list.querySelectorAll('.crow[data-step]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.step); if (r) stepSheet(r[0], r[1], null, 'arrival'); }));
     list.querySelectorAll('[data-not]').forEach(b => b.addEventListener('click', () => { sfx('tap'); notThis(b.dataset.not); renderArrival(); if (line(C.arrival.another)) { hush(); marcusSay(line(C.arrival.another), 'nod'); } }));
-    list.querySelector('#intoschool').addEventListener('click', () => { sfx('tap'); leaveArrival(); });
     list.querySelectorAll('[data-who]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const w = b.dataset.who;
       if (w === 'new') { kidPanel(); return; }
       if (w === S.who) return;
@@ -1209,18 +1217,18 @@
   }
   function gateCard(list) {
     const G = GATE(), ri = runInfo(), n = Math.min(G.days, ri.cur), pct = Math.round(n / G.days * 100);
-    $('stabs').hidden = true; $('sline').textContent = ''; dock('pop'); $('stage').classList.remove('room');
+    $('sline').textContent = ''; dock('scene'); $('stage').classList.remove('room');
     list.innerHTML = `<div class="acard gatecard"><div class="eyebrow"><i></i>${G.eyebrow || 'Not yet'}</div><h2>${G.title}</h2><p class="lede">${G.lede}</p>
       <div class="daybar ${n >= G.days ? 'full' : ''}"><i style="width:${pct}%"></i><span>${fmt1(G.count, { n, days: G.days })}</span></div>
       <div class="gorow"><button class="btn btn-gold" id="gateback">${G.back || 'Back to today'}</button></div></div>`;
     list.querySelector('#gateback').addEventListener('click', () => { sfx('tap'); goHome(); });
     stageBack(goHome);
   }
-  function leaveArrival() { ROOMV = null; clearTimeout(arrival._t); clearTimeout(ROOMT); hush(); musicStop(); lyreStop(800); $('stage').classList.remove('arrive'); RIG.show(false); ARIG.show(false); $('afig').classList.remove('walk-in-l'); dock('pop'); renderSchool(); if (!schoolOpen()) return; if (!S.school.toured) setTimeout(offerTour, 600); else setTimeout(entryWord, 650); }
+  function leaveArrival() { ROOMV = null; clearTimeout(arrival._t); clearTimeout(ROOMT); hush(); musicStop(); lyreStop(800); $('stage').classList.remove('arrive'); $('afig').classList.remove('walk-in-l'); dock('scene'); renderSchool(); if (!schoolOpen()) return; if (!S.school.toured) setTimeout(offerTour, 600); else setTimeout(entryWord, 650); }
   /* going in: one of them pops up with a word for the day ahead. Never the same one twice in a sitting, a different start each day, loosely his and hers in turn. */
   const ENTRYSAID = new Set();
   function entryWord() {
-    if (!$('stage').classList.contains('school') || inScene() || quietFolk()) return;
+    if (!$('stage').classList.contains('school') || $('stage').classList.contains('arrive') || quietFolk()) return;
     const q = quietProject(); if (q) { hush(); prac(q).asked = today(); save(); speakSchool([{ who: 'aurelia', id: 'ui-lg-check', t: C.voice['lg-check'] }], () => checkIn(q)); return; }
     const E = C.school.entry || []; if (!E.length) return;
     const start = (daySeed() * 7 + (S.school.visits || 0) + HOMEN) % E.length;
@@ -1365,14 +1373,20 @@
     setTimeout(step, sc ? 300 : 900);
   }
   /* ---- the three pages ---- */
+  function paintTabs(active) {
+    const tabs = $('stabs'); tabs.hidden = false;
+    tabs.innerHTML = C.school.tabs.map(([k, l]) => `<button class="stab ${active === k ? 'on' : ''} ${k === 'home' ? 'homet' : ''}" data-t="${k}">${l}</button>`).join('');
+    tabs.querySelectorAll('.stab').forEach(b => b.addEventListener('click', () => { sfx('tap'); const k = b.dataset.t; if (k === 'home') { goHome(); return; }
+      TAB = k; CAT = null; AREA = null; TRK = null; TRK_FROM = null; SEARCH = null; if ($('stage').classList.contains('arrive')) leaveArrival(); else renderSchool(); }));
+    paintWho();
+  }
   function renderSchool() {
-    const tabs = $('stabs'); tabs.hidden = false; tabs.innerHTML = C.school.tabs.map(([k, l]) => `<button class="stab ${TAB === k ? 'on' : ''} ${k === 'home' ? 'homet' : ''}" data-t="${k}">${l}</button>`).join('');
-    tabs.querySelectorAll('.stab').forEach(b => b.addEventListener('click', () => { sfx('tap'); if (b.dataset.t === 'home') { goHome(); return; } TAB = b.dataset.t; CAT = null; AREA = null; SEARCH = null; renderSchool(); }));
+    const tabs = $('stabs'); paintTabs(TAB);
     const list = $('slist'); list.scrollTop = 0; paintSchoolCount();
     if (!schoolOpen() && !TRK && !CAT && !AREA && TAB !== 'long') { SEARCH = null; paintSearchBtn(); gateCard(list); return; }
     if (SEARCH !== null) {
-      dock('pop'); $('stage').classList.remove('room'); $('stage').classList.add('searching');
-      tabs.hidden = true; $('sline').textContent = '';
+      dock('scene'); $('stage').classList.remove('room'); $('stage').classList.add('searching');
+      $('sline').textContent = '';
       renderSearch(list); stageBack(closeSearch); paintSearchBtn();
       return;
     }
@@ -1384,24 +1398,24 @@
     if (trk) {
       dock('scene'); RIG.show(true); ARIG.show(true);
       $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout');
-      tabs.hidden = true; $('sline').textContent = '';
+      $('sline').textContent = '';
       trackPage(list, trk);
       stageBack(closeTrack); list.scrollTop = 0;
     } else if (area) {
       dock('scene'); RIG.show(true); ARIG.show(true); $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout');
-      tabs.hidden = true; $('sline').textContent = '';
+      $('sline').textContent = '';
       const all = area.tracks.map(trackById).filter(Boolean), trs = all.filter(isOpen), c = catOf(all[0]), later = all.length - trs.length;
       list.innerHTML = `<div class="roomhead" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/${area.image}" alt=""><div><h2>${area.name}</h2><p>${area.line}</p></div></div><div class="ghead slim"><p>${everythingOpen() ? (C.school.areaOrder || '') : (C.school.areaOpenTitle || 'Open now')}</p></div>` + trs.map(trackRow).join('') + (later > 0 ? `<p class="later">${fmt1(C.school.areaLater || '{n} more open later.', { n: later })}</p>` : '');
       stageBack(() => { hush(); AREA = null; renderSchool(); }); list.scrollTop = 0;
     } else if (cat) {
       dock('scene'); RIG.show(true); ARIG.show(true); $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout');
-      tabs.hidden = true; $('sline').textContent = '';
+      $('sline').textContent = '';
       list.innerHTML = `<div class="roomhead" style="--c:${cat.accent};--c2:${cat.accent2}"><img src="images/cat/${cat.id}.jpg" alt=""><div><h2>${cat.name}</h2><p>${cat.line}</p></div></div>` + cat.tracks.map(trackRow).join('');
       stageBack(() => { hush(); CAT = null;
         if (CAT_FROM && CAT_FROM.search !== undefined) { SEARCH = CAT_FROM.search; CAT_FROM = null; }
         renderSchool(); }); list.scrollTop = 0;
     } else {
-      dock('pop'); stageBack(null);
+      dock('scene'); stageBack(null);
       if (TAB === 'long') renderLong(list);
       else renderAll(list);
       list.querySelectorAll('[data-room]').forEach(el => el.addEventListener('click', () => { sfx('tap'); CAT = el.dataset.room; renderSchool(); const id = C.school.catLines[CAT]; if (id && !SAIDCAT.has(CAT)) { SAIDCAT.add(CAT); hush(); speakSchool([{ who: 'aurelia', id, t: SCH.categories.find(c => c.id === CAT).name }]); } }));
@@ -1630,7 +1644,8 @@
   }
   function candRow(tr) {
     const c = catOf(tr), st = nextStep(tr), last = tr.steps[tr.steps.length - 1], n = trackDone(tr), K = C.school.long.page;
-    return `<div class="cand" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${c.name} · ${tr.steps.length} steps${n ? ` · ${n} done` : ''}</small><small class="szl sz-${tr.size || 'months'}">${sizeOf(tr).name}</small><small class="ladder">From <em>${tr.steps[0].test}</em> to <em>${last.test}</em></small></span><span class="cbtns"><button class="btn btn-ghost sm" data-track="${tr.id}">${K.look}</button><button class="btn btn-gold sm" data-commit="${tr.id}">${K.take}</button></span></div>`;
+    const ladder = `<p class="ladder">From <em>${tr.steps[0].test}</em> to <em>${last.test}</em></p>`;
+    return `<div class="cand" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span class="ctext"><strong>${tr.name}</strong><small>${tr.line || ''}</small><small class="cmeta">${c.name} · ${tr.steps.length} steps${n ? ` · ${n} done` : ''} · <b class="szl sz-${tr.size || 'months'}">${sizeOf(tr).name}</b></small></span>${tr.about ? `<details class="more"><summary>${K.about || 'More about this'}</summary><p>${tr.about}</p>${ladder}</details>` : ladder}<span class="cbtns"><button class="btn btn-ghost sm" data-track="${tr.id}">${K.look}</button><button class="btn btn-gold sm" data-commit="${tr.id}">${K.take}</button></span></div>`;
   }
   function renderLong(list) {
     const L = C.school.long, K = L.page, mine = projects(), on = new Set(mine.map(t => t.id));

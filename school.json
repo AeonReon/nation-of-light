@@ -260,7 +260,8 @@
        "ctx": "with",
        "kind": "kindness"
       }
-     ]
+     ],
+     "about": "Three balls in the air is a month of a few minutes a day, and almost nobody who tries it properly fails. It teaches the hands and the eyes to work without you, and it is the clearest proof there is that a thing you could not do last month is now yours. Three rolled socks will do to start."
     },
     {
      "id": "body.skip",
@@ -342,7 +343,8 @@
        "ctx": "with",
        "kind": "kindness"
       }
-     ]
+     ],
+     "about": "Skipping is the quickest fitness there is and it feels like play. From stepping over a rope on the ground to a hundred in a row and tricks, in a few weeks. A rope costs a few pounds; a length of washing line will do to begin."
     },
     {
      "id": "body.upside",
@@ -1289,7 +1291,8 @@
        "kind": "courage",
        "note": "Sunrise from rung nine, dusk from rung three, and everything between. Part two is the wild proper."
       }
-     ]
+     ],
+     "about": "Out the door, wherever you live: an hour without the phone in your hand, north found and checked, the first star, rain on purpose, a sunrise, ten thousand steps, a walk at night with the torch off, and a whole day outside at the end. Every rung works from a town street."
     },
     {
      "id": "wild.fire",
@@ -4474,7 +4477,8 @@
        "kind": "attention",
        "note": "Write the question at the top. No phone, no book. Whatever you write underneath is yours. Part two goes deeper."
       }
-     ]
+     ],
+     "about": "How to learn anything, practised on a few things at once: a language, a poem, sums in your head, a book that is a bit too hard. The rungs are short and the last one is thirty minutes of thinking with only a pen. Nothing to buy; a library card helps."
     },
     {
      "id": "mind.tables",
@@ -4734,7 +4738,8 @@
        "ctx": "with",
        "kind": "skill"
       }
-     ]
+     ],
+     "about": "The cube looks impossible and is not: it is seven short patterns learned one at a time, and the first one takes an evening. A few minutes a day and within a month you solve it every time, which is a thing people will ask you to do for the rest of your life. You need a cube, about five pounds, and nothing else."
     },
     {
      "id": "mind.chess",
@@ -4864,7 +4869,8 @@
        "ctx": "with",
        "kind": "kindness"
       }
-     ]
+     ],
+     "about": "Chess is a language, and the rungs teach it the way a language is learned: the moves, then a few ideas, then games against people. A few months in you can hold your own against most people who play, and you will have taught somebody else. A board, or a free app."
     },
     {
      "id": "mind.memory",
@@ -4995,7 +5001,8 @@
        "ctx": "with",
        "kind": "courage"
       }
-     ]
+     ],
+     "about": "A trained memory is a trick anybody can learn: you put things in places in your head and walk past them. From ten things to a hundred, a deck of cards, the names of everybody in a room. It looks like a gift and it is a method."
     },
     {
      "id": "mind.mental",
@@ -6202,7 +6209,8 @@
        "ctx": "with",
        "kind": "kindness"
       }
-     ]
+     ],
+     "about": "Beautiful writing is slow writing, and it is one of the calmest things a person can practise. The rungs go from a single well-formed letter to a page anybody would frame. A proper pen, good paper, and ten minutes a day."
     },
     {
      "id": "words.poems",
@@ -6574,7 +6582,8 @@
        "kind": "courage",
        "note": "Same person, another day. \"Did you try that walk?\" If it goes well, suggest something: a coffee, the market, the children at the park, a talk you both want to hear. That is a friend beginning. Part two starts here."
       }
-     ]
+     ],
+     "about": "Twenty small steps from a smile to a second conversation with somebody you did not know a month ago. Nothing here needs money or a café; the shop rungs need no buying and the calls take a minute. It is written for the person who finds this genuinely hard, so the first rungs are tiny and the later ones are where the friends come from."
     },
     {
      "id": "speak.strangers",
@@ -7757,7 +7766,8 @@
        "kind": "skill",
        "note": "That is the bar. Part two is a craft you keep."
       }
-     ]
+     ],
+     "about": "Making, tried from every side: drawing, knots, paper, card, cloth, a photograph, soap carving, a circuit, a thing taken apart, a gift made and given. By the end one thing you made is good enough that somebody asks where you bought it. Scraps, tape and what is in the recycling."
     },
     {
      "id": "make.wood",
@@ -8228,7 +8238,8 @@
        "ctx": "with",
        "kind": "kindness"
       }
-     ]
+     ],
+     "about": "Clay is the most forgiving material there is; if it goes wrong you squash it and start again. From a pinch pot to a bowl you eat from, in a few months of an hour at a time. A bag of air-drying clay is a few pounds and needs no kiln."
     },
     {
      "id": "make.draw",
@@ -8366,7 +8377,8 @@
        "ctx": "with",
        "kind": "kindness"
       }
-     ]
+     ],
+     "about": "Drawing is looking, written down, and it can be learned like handwriting. The rungs go from ten minutes of drawing a mug to a face that looks like the person. A week of practice makes a difference you can see on the page, and that page is proof you can show anybody. A pencil and paper."
     },
     {
      "id": "make.electric",
@@ -9078,7 +9090,8 @@
        "kind": "courage",
        "note": "A song, a trick, a joke, a tune. Introduce it. Bow at the end. Part two is a real act."
       }
-     ]
+     ],
+     "about": "Songs, tricks, juggling, dancing, a joke, a tune on anything, a cartwheel, a character with a hat. Twenty rungs of play that end in a five-minute show for two people. Socks for juggling, a phone keyboard for the tune, and no audience until you are ready."
     },
     {
      "id": "music.sing",
@@ -9207,7 +9220,8 @@
        "ctx": "with",
        "kind": "kindness"
       }
-     ]
+     ],
+     "about": "Everybody can sing; most people have just never been allowed to. The rungs go from a song sung alone to one sung for people, in tune, with your own voice. Nothing to buy. This one changes how you feel about yourself faster than almost any other."
     },
     {
      "id": "music.instrument",
@@ -9342,7 +9356,8 @@
        "ctx": "with",
        "kind": "courage"
       }
-     ]
+     ],
+     "about": "One clear note, then five that make a tune, then a whole song played for somebody who knows it. It does not matter which instrument: a keyboard app on a phone will carry you through the first rungs, and a real instrument after that. This is the ladder for playing a song people recognise, for people, by ear or from the page."
     },
     {
      "id": "music.rhythm",
@@ -10091,7 +10106,8 @@
        "ctx": "with",
        "kind": "kindness"
       }
-     ]
+     ],
+     "about": "Card tricks are small performances: a secret, a story, and a moment when somebody's face changes. Each rung is one trick learned until it is smooth, then done for a person. By the end you have a five-minute act you can do at any table. Any pack of cards."
     },
     {
      "id": "magic.coins",
@@ -10221,7 +10237,8 @@
        "ctx": "with",
        "kind": "kindness"
       }
-     ]
+     ],
+     "about": "A coin vanish is the oldest trick there is and still the best, because everybody has a coin. The rungs build a few sleights until your hands do them without you, then put them in front of a person. Practise in front of a mirror; the mirror is the audience until you are ready."
     },
     {
      "id": "magic.mentalism",
@@ -10804,7 +10821,8 @@
        "kind": "courage",
        "note": "Two or three real meals inside the eight hours, nothing outside them. That is the far end of this ladder. Past here is part two; and if you have a health condition or take medicine, a doctor before you go further."
       }
-     ]
+     ],
+     "about": "For grown-ups. Twenty rungs from one honest look at a label to an eight-hour eating window, in an order that never jumps. If a rung is already how you live, you do it on purpose that day and it counts. Real food, fewer snacks, a bit of space between meals; nothing extreme until the very end, and a doctor before going further if you take medicine."
     },
     {
      "id": "food.knife",
@@ -11858,7 +11876,8 @@
        "kind": "courage",
        "note": "That is a business, however small. Part two grows it."
       }
-     ]
+     ],
+     "about": "Money made and money kept, in twenty rungs that start with writing down what you spent today and end with three different people paying you for the same thing. Selling one thing, asking for a better price, an offer said out loud, a tenth put aside. Small, real, and most of it is nerve rather than knowledge."
     },
     {
      "id": "money.handling",
@@ -15087,7 +15106,8 @@
        "kind": "courage",
        "note": "Nothing to put on, nothing to organise. When it happens, you belong here. Part two builds something for the town."
       }
-     ]
+     ],
+     "about": "Your own town, walked, learned, and joined. From a street you have never walked to a meeting you went back to twice, to being greeted by name on one walk through. Free things only; no group needs paying for and no shop needs buying from."
     },
     {
      "id": "belong.chair",
@@ -15829,7 +15849,8 @@
        "kind": "kindness",
        "note": "Tea, a clear table, a chair to sit in. When ten minutes is enough, the place works. Part two makes it beautiful."
       }
-     ]
+     ],
+     "about": "A home that works: the bed, one drawer, the sink dry, one thing fixed, the stopcock found, five things given away, and on to a whole room done properly and a week of tidy nights. It ends with somebody round and ten minutes to be ready. Renting counts exactly the same."
     },
     {
      "id": "home.keep",
@@ -17568,7 +17589,8 @@
        "kind": "attention",
        "note": "Ten minutes still, three things written, then the hard thing. A week of it is a different life. Part two goes further in."
       }
-     ]
+     ],
+     "about": "Two minutes still, then five, then twenty. Three things written down at night, one beautiful thing looked at properly, a day without complaining, a hard feeling sat with. It ends with a week of mornings that begin the right way. Nothing to buy and nothing to believe; just sitting, noticing, and the hard thing first."
     },
     {
      "id": "calm.still",

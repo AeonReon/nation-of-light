@@ -311,15 +311,21 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 @keyframes pulsebtn{0%,100%{box-shadow:0 10px 24px rgba(201,162,39,.35)}50%{box-shadow:0 12px 34px rgba(201,162,39,.7),0 0 0 6px rgba(201,162,39,.18)}}
 
 /* ---- v14: the school ---- */
-.stage.school .scene{max-height:36vh;max-height:36dvh}
-.stage.school .mfig{width:40%;left:47%}
-.stage.school .afig{width:37%;left:4%}
+/* v69: ONE band on every school page, the two of them always in it, the tabs right under */
+.stage.school .scene{max-height:34vh;max-height:34dvh}
+.stage.school .mfig{width:38%;left:47%}
+.stage.school .afig{width:35%;left:12%}
+.stage.school .hud{display:flex}
+.stage.school .shead{display:none}
+.stage.school .torch{display:block}
+.hud .daywrap{max-width:150px;margin:0}
+.hud .facebtn{width:34px;height:34px}
 .stage.school .bubble{top:6%;width:52%;font-size:13.5px;padding:8px 10px 7px}
 .school{position:relative;flex:1 1 auto;min-height:0;display:flex;flex-direction:column;background:linear-gradient(180deg,var(--marble) 0%,#E8DFCB 100%);z-index:2}
 .school::before{content:"";position:absolute;left:0;right:0;top:0;height:14px;background:linear-gradient(180deg,rgba(60,40,20,.14),transparent);pointer-events:none;z-index:1}
 .scap{margin:10px 12px 0;background:var(--card);border-radius:14px;padding:9px 12px;font-family:var(--display);font-weight:500;font-size:14.5px;line-height:1.35;color:var(--ink);box-shadow:var(--shadow);animation:panelin .5s var(--spring) both}
 .scap b{display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:2px}
-.stabs{display:flex;gap:6px;padding:10px 12px 6px}
+.stabs{display:flex;gap:6px;padding:8px 12px 4px}
 .stab{flex:1;height:36px;border-radius:18px;font-weight:700;font-size:13px;color:var(--ink-soft);background:var(--ivory-2);box-shadow:inset 0 0 0 1px var(--line);position:relative;transition:transform .2s var(--spring)}
 .stab:active{transform:scale(.96)}
 .stab.on{color:#2B2210;background:linear-gradient(135deg,#F0D98A 0%,#C9A227 100%);box-shadow:0 6px 16px rgba(201,162,39,.3)}
@@ -396,14 +402,12 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .veil.light:has(.sheet){overflow-y:auto;justify-content:flex-end}
 
 /* ---- v15: the school full screen; the two of them pop in at the edge; a band only inside a room ---- */
-.stage.school .scene{display:none}
-.stage.school.room .scene{display:block;max-height:30vh;max-height:30dvh}
+.stage.school .scene{display:block}
 /* the room band: the same centres as home (Aurelia 29.5%, Marcus 66%), smaller because the band is */
 .stage.school.room .mfig{width:38%;left:47%}
 .stage.school.room .afig{width:35%;left:12%}
 .stage.school.room .bubble{top:4%;width:52%;font-size:13px;padding:8px 10px 7px}
 .stage.school.room .abubble{top:4%;left:4%;width:56%}
-.stage.school.room .hud{display:none}
 .shead{display:flex;align-items:center;justify-content:space-between;padding:max(10px,env(safe-area-inset-top)) 12px 4px;position:relative;z-index:2}
 .stitle{font-family:var(--display);font-weight:600;font-size:20px;color:var(--ink);letter-spacing:-.01em}
 .shead .hud{position:static;padding:0;gap:6px;flex:0 0 auto}
@@ -461,14 +465,11 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .stage.school.room .popcap{bottom:auto;top:calc(30vh + 8px);top:calc(30dvh + 8px)}
 
 /* ---- v16: the arrival, the one card, the long game ---- */
-.stage.school.arrive .scene{display:block;max-height:40vh;max-height:40dvh}
+
 /* Symmetrical about the centre line, and closer together. She was at the far
    left and he was near the middle, which never looked composed — and her dress
    sat over the olive bush, so tapping the bush tapped her. */
-.stage.school.arrive .mfig{width:40%;left:46%}
-.stage.school.arrive .afig{width:37%;left:11%}
-.stage.school.arrive .shead{display:none}
-.stage.school.arrive .hud{display:none}
+
 .stage.school.arrive .bubble,.stage.school.arrive .abubble{display:none!important}
 .stage.school.arrive .popcap{bottom:auto;top:calc(40vh + 8px);top:calc(40dvh + 8px)}
 .acard{position:relative;background:var(--card);border-radius:18px;padding:14px 14px 12px;box-shadow:var(--shadow);--g1:var(--gold-lt);--g2:var(--gold);display:flex;flex-direction:column;gap:8px}
@@ -655,6 +656,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .capband.away,.popcap.away{animation:capaway .25s var(--ease) both}
 @keyframes capaway{to{opacity:0;transform:translateY(12px) scale(.96)}}
 .stage.school.arrive .capband,.stage.school.portico .capband,.stage.school.room .capband{display:block}
+.stage.school .capband{display:block}
 .stage.school .capband[hidden]{display:none!important}
 /* the arrival: punchy, and one row at the bottom */
 .standcard .punch,.prog .punch{margin:2px 0 0;font-family:var(--display);font-weight:500;font-size:16.5px;line-height:1.3;color:var(--ink);text-align:center}
@@ -851,13 +853,23 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 /* v33: the commitment, and the long game page made plain */
 .slist .intro{margin:2px 4px 2px;font-size:13.5px;line-height:1.45;color:var(--ink-soft)}
 .acard .sub{margin:6px 0 0;font-family:var(--display);font-weight:600;font-size:15px;color:var(--ink)}
-.cand{display:grid;grid-template-columns:52px 1fr;gap:6px 10px;align-items:center;padding:9px 0;border-top:1px solid var(--line)}
-.cand img{width:52px;height:40px;object-fit:cover;border-radius:9px;box-shadow:0 0 0 1.2px var(--c2)}
-.cand strong{display:block;font-family:var(--display);font-weight:600;font-size:15.5px;color:var(--ink)}
+/* v69, his: the picture prominent, the words with room, more behind a drop-down, like Classical Mind */
+.cand{display:grid;grid-template-columns:104px 1fr;gap:8px 12px;align-items:center;padding:12px 0;border-top:1px solid var(--line)}
+.cand img{width:104px;height:78px;object-fit:cover;border-radius:12px;box-shadow:0 0 0 1.4px var(--c2),0 6px 14px rgba(40,28,10,.12)}
+.cand .ctext{min-width:0}
+.cand .cmeta{margin-top:3px;color:var(--ink-faint)}
+.cand .cmeta b{font-weight:600}
+.cand .more{grid-column:1 / -1;margin:0}
+.cand .more summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--gold-deep);list-style:none;display:flex;align-items:center;gap:6px}
+.cand .more summary::before{content:'';width:7px;height:7px;border-right:2px solid var(--gold-deep);border-bottom:2px solid var(--gold-deep);transform:rotate(45deg);transition:transform .25s var(--ease);margin-bottom:3px}
+.cand .more[open] summary::before{transform:rotate(-135deg);margin-bottom:-2px}
+.cand .more p{margin:8px 0 0;font-size:13.5px;line-height:1.5;color:var(--ink)}
+.cand>.ladder{grid-column:1 / -1;margin:0}
+.cand strong{display:block;font-family:var(--display);font-weight:600;font-size:17px;line-height:1.15;color:var(--ink)}
 .cand small{display:block;font-size:12px;color:var(--ink-soft);line-height:1.3}
 .cand .ladder{margin-top:2px;font-size:12px;color:var(--ink-faint)}
 .cand .ladder em{font-style:normal;font-weight:600;color:var(--ink)}
-.cand .cbtns{grid-column:2;display:flex;gap:8px}
+.cand .cbtns{grid-column:1 / -1;display:flex;gap:8px}
 .cand .cbtns .btn-gold{flex:1}
 .takencard{--g1:#F0D98A;--g2:#B08D1E}
 .proj.taken,.lgrow.taken{position:relative;padding:14px 12px 10px;margin:6px 0 2px;border-radius:16px;background:var(--card);border-top:0}
@@ -1271,7 +1283,6 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
    One lights as each of the day's three goes in. Only at home: on the other
    stages the figures stand where the flames would be. */
 .torch{display:none}
-.stage.school.arrive .torch{display:block}
 .torch .tflame{opacity:0;transform:scale(.12);transform-origin:50% 100%;transform-box:fill-box;transition:opacity .45s var(--ease),transform .9s var(--spring)}
 .torch .tglow{opacity:0;transition:opacity .9s var(--ease);transform-origin:50% 50%;transform-box:fill-box}
 .torch.lit .tflame{opacity:1;transform:scale(1)}
@@ -1345,7 +1356,7 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 .stagebtn.on{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold-pale)}
 .builder .btn.wide{width:100%;margin-bottom:8px}
 .builder .what.dark{width:100%}
-.previewbar{position:absolute;left:50%;top:6px;transform:translateX(-50%);z-index:60;display:flex;gap:10px;align-items:center;padding:6px 12px;border-radius:999px;border:0;background:rgba(30,39,80,.88);color:#FFF3C4;font:inherit;font-size:12px;box-shadow:var(--shadow-lift);cursor:pointer;white-space:nowrap;max-width:94%}
+.previewbar{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);z-index:60;display:flex;gap:10px;align-items:center;padding:6px 12px;border-radius:999px;border:0;background:rgba(30,39,80,.88);color:#FFF3C4;font:inherit;font-size:12px;box-shadow:var(--shadow-lift);cursor:pointer;white-space:nowrap;max-width:94%}
 .previewbar b{color:#FFD166;font-weight:700}
 
 /* ---- v67: Home is the first tab; the Everything drop-down; one long skill at home ---- */

@@ -396,3 +396,21 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   (the second is an existing ladder). 171 ladders. No track tiles drawn for the ten
   programmes yet (room image fallback): draw them with tools/order-draw.mjs when he has
   read the rungs. Part two of each is the next content wave.
+- **v69 (2026-09-16, Fable session): ONE band, the tabs under it, nothing pops up; big long-game cards.**
+  His call, on my recommendation: the room and the two of them stay at the top of every school
+  page in one fixed position (34dvh), the three tabs sit right under and never move, the pop-ins
+  are gone. `dock()` forces 'scene' in the school and shows both rigs; `popIn/popOut` are no-ops
+  in the school; `inScene()` is true whenever the stage is `.school`; the caption band is moved
+  UNDER the tabs (`enterSchool`) so a spoken line never shifts the buttons. The header lives in
+  the scene's `.hud` over the sky (rank pill left; search, face, sound, help right); `.shead` is
+  hidden. `paintTabs(active)` renders the tabs at home (Home lit) and in the school; tabs stay on
+  room, area, ladder and search pages (Back on the band). Home lost its "Into the school"
+  button. Torches show on every school page. `.stage.school.arrive/.room` overrides for scene,
+  figures and hud were removed; sizes are `.stage.school .mfig{38%/47%} .afig{35%/12%}`.
+  The long-game candidate card (`candRow`) is now a 104x78 picture, the name and line, a meta
+  line, and a `<details class="more">` "More about this" (`tr.about`, written for the twelve
+  `long.first` and the ten programmes; 22 in school.json) with the from/to line inside; when a
+  ladder has no `about` the from/to shows plain. `nerve.asking` tile redrawn: a person from
+  behind with a brass megaphone in a town square (Draw Things, seed 11, recipe as
+  tools/order-draw.mjs but with people allowed). **Session rule:** close the preview TAB
+  (tabs_close), not just the server; the app's ambience keeps playing in an open tab.
