@@ -469,3 +469,39 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   `search.home`) opens the search page focused. (7) `trackImg(tr)` is the one place a ladder's picture URL
   is built; `pic: N` on a track busts the cache when a tile is redrawn — nerve.asking (megaphone, it WAS live,
   his phone had the cached one) and fit.lift (redrawn: a strong back holding a kettlebell in a garden) are 2.
+- **v73 (2026-09-16): the Health rewrite — one side food, one side fitness, and phases.**
+  His: "a lot of them were rushed at the beginning and they didn't really think about it logically…
+  in the health section it should be very clear that one side is the food and the other side is the
+  fitness, right now they're mixed up… think really carefully of the order in which you would take
+  them, each one building on the last… and we don't have too many opened up at the beginning, they
+  may open up in phases." Health first, then the same treatment area by area.
+  **The rewrite standard** (written down in `tools/health/lib.py`, follow it for the other nine):
+  a ladder sits in ONE path inside its area; the rungs are in the order you would actually take
+  them and each is the training for the next; every rung says exactly what to do now; every rung
+  carries a `note` (the how, an example, the no-kit/no-spend alternative, and "already doing it
+  counts"); the far end is significant but about three months away; the `line` MUST match the last
+  rung. **What changed.** All 21 Health ladders rewritten — 396 rungs, every one with a note, every
+  ladder with an `about` (it was 40 rungs of 396 before). `body.strength` was a copy of press-ups,
+  pull-ups, plank and lifting with a few carries in it; it is now **Carrying** (loads over ground)
+  and `fit.lift` is **Lifting** (off the floor and up high), no rung twice. Press-ups now END at
+  thirty in one go (his example: significant, not overwhelming, no equipment) instead of fifty;
+  pull-ups said ten and ended at four; stretching said the splits and ended at palms flat — the
+  lines now match. `calm.fast` used to repeat Real food's twelve- and sixteen-hour rungs; it starts
+  where part two finishes and is `after: food.real2`. Two NEW ladders, the fitness spine that the
+  food spine already had: **`fit.body1` / `fit.body2` Getting strong, part one and two** — the round
+  (squat, press-up, plank, table row), nothing but a floor and a table, three numbers written down
+  on rung one and again on rung twenty; part two ends by pointing at the single-move ladders.
+  175 ladders. **The shape.** `areas[].paths` = named paths inside a life area (Health: Food ·
+  Fitness · Rest and recovery), drawn one at a time with a gold rule, in the order you would take
+  them; an area with no `paths` renders exactly as before. **Phases:** a ladder can carry
+  `need: n` = steps done in ITS OWN life area before it opens (`areaOf`/`areaSteps`/`needMet` in
+  `isOpen`), and like `after` it survives the thirty-day everything gate — the phases are the shape
+  of the area, not a trial period. Health opens with four doors (Real food part one, Getting strong
+  part one, Sleep, and In the kitchen for a little one) and then 12 / 25 / 40 / 60 steps. A ladder
+  that is not open yet still SHOWS, with the reason (`C.school.areaNeed`, `areaAfter`), because the
+  road ahead is the motivating part. **Two real bugs found doing it:** (1) a rung with BOTH `how`
+  and `note` only ever showed the `how` — every note under a how was invisible; both are drawn now,
+  the note quieter, on the ladder page and in the step sheet. (2) `.roomhead` collapsed to zero
+  height on any long area page — the flex-item + `overflow:hidden` trap; it has `flex:none` now.
+  **Not done:** no track tiles drawn for `fit.body1`/`fit.body2` (fit category fallback), and
+  Fasting still wears the `calm` candle tile, which reads oddly now that it sits in the Food path.

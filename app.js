@@ -1447,8 +1447,22 @@
       $('sline').textContent = '';
       const all = area.tracks.map(trackById).filter(Boolean), trs = all.filter(isOpen), c = catOf(all[0]);
       const waiting = all.filter(tr => !isOpen(tr) && tr.after && trs.some(t => t.id === tr.after)), later = all.length - trs.length - waiting.length;
-      const lockedRow = tr => { const cc = catOf(tr), pre = trackById(tr.after); return `<div class="srow track pic locked" style="--c:${cc.accent};--c2:${cc.accent2}"><img src="${trackImg(tr)}" alt="" loading="lazy" onerror="this.src='images/cat/${cc.id}.jpg'"><span class="stxt"><span class="stest">${tr.name}</span><span class="sline2">${tr.line || ''}</span><span class="lockline">${fmt1(C.school.areaAfter || 'Opens when {name} is done', { name: pre ? pre.name : '' })}</span></span></div>`; };
-      list.innerHTML = `<div class="roomhead" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/${area.image}" alt=""><div><h2>${area.name}</h2><p>${area.line}</p></div></div><div class="ghead slim"><p>${everythingOpen() ? (C.school.areaOrder || '') : (C.school.areaOpenTitle || 'Open now')}</p></div>` + trs.map(tr => trackRow(tr) + waiting.filter(w => w.after === tr.id).map(lockedRow).join('')).join('') + (later > 0 ? `<p class="later">${fmt1(C.school.areaLater || '{n} more open later.', { n: later })}</p>` : '');
+      const lockWhy = tr => { const pre = trackById(tr.after);
+        if (pre && !partDone(tr)) return fmt1(C.school.areaAfter || 'Opens when {name} is done', { name: pre.name });
+        if (tr.need) return fmt1(C.school.areaNeed || 'Opens at {n} steps in {area} \u00b7 {done} so far', { n: tr.need, area: area.name, done: areaSteps(area) });
+        return C.school.areaOpenLater || 'Opens later.'; };
+      const lockedRow = tr => { const cc = catOf(tr); return `<div class="srow track pic locked" style="--c:${cc.accent};--c2:${cc.accent2}"><img src="${trackImg(tr)}" alt="" loading="lazy" onerror="this.src='images/cat/${cc.id}.jpg'"><span class="stxt"><span class="stest">${tr.name}</span><span class="sline2">${tr.line || ''}</span><span class="lockline">${lockWhy(tr)}</span></span></div>`; };
+      const head = `<div class="roomhead" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/${area.image}" alt=""><div><h2>${area.name}</h2><p>${area.line}</p></div></div>`;
+      /* v73: an area with `paths` is drawn one path at a time, in the order you would take them,
+         and a ladder that is not open yet still shows, with the reason. Areas with no paths are
+         drawn exactly as before. */
+      list.innerHTML = area.paths ? head + area.paths.map((pa, pi) => {
+          const rows = pa.tracks.map(trackById).filter(Boolean);
+          if (!rows.length) return '';
+          return `<div class="ghead slim path${pi ? '' : ' first'}"><h4>${pa.name}</h4><p>${pa.line || ''}</p></div>` +
+            rows.map(tr => isOpen(tr) ? trackRow(tr) : lockedRow(tr)).join('');
+        }).join('')
+        : head + `<div class="ghead slim"><p>${everythingOpen() ? (C.school.areaOrder || '') : (C.school.areaOpenTitle || 'Open now')}</p></div>` + trs.map(tr => trackRow(tr) + waiting.filter(w => w.after === tr.id).map(lockedRow).join('')).join('') + (later > 0 ? `<p class="later">${fmt1(C.school.areaLater || '{n} more open later.', { n: later })}</p>` : '');
       stageBack(() => { hushSoft(); AREA = null; renderSchool(); }); list.scrollTop = 0;
     } else if (cat) {
       dock('scene'); RIG.show(true); ARIG.show(true); $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout');
@@ -1867,7 +1881,13 @@
     const A = (C.school.gate || {}).all || { days: 30, points: 100 }; return daysLit().size >= A.days || points() >= A.points; };
   const openIds = () => new Set(((SCH && SCH.areas) || []).flatMap(a => a.open || []));
   const partDone = tr => { const a = tr && tr.after ? trackById(tr.after) : null; return !a || trackDone(a) >= a.steps.length; };
-  const isOpen = tr => !!tr && partDone(tr) && (everythingOpen() || openIds().has(tr.id) || (tr.after && openIds().has(tr.after)) || ((C.school.long || {}).first || []).includes(tr.id) || trackDone(tr) >= 1 || projects().some(p => p.id === tr.id) || (isKid() && isLittle(tr)));
+  /* v73, his: "we don't have too many opened up at the beginning, they may open up in phases".
+     A ladder can carry `need: n` = steps done in ITS OWN life area before it opens. Like `after`,
+     this survives the thirty-day everything gate: the phases are the shape of the area, not a trial. */
+  const areaOf = tr => ((SCH && SCH.areas) || []).find(a => (a.tracks || []).includes(tr.id));
+  const areaSteps = a => (a ? (a.tracks || []).map(trackById).filter(Boolean).reduce((n, t) => n + trackDone(t), 0) : 0);
+  const needMet = tr => !tr || !tr.need || areaSteps(areaOf(tr)) >= tr.need;
+  const isOpen = tr => !!tr && partDone(tr) && needMet(tr) && (everythingOpen() || openIds().has(tr.id) || (tr.after && openIds().has(tr.after)) || ((C.school.long || {}).first || []).includes(tr.id) || trackDone(tr) >= 1 || projects().some(p => p.id === tr.id) || (isKid() && isLittle(tr)));
   const trackCopy = () => (C.school.track || {});
   /* How long this one really takes, said out loud at the top of the ladder.
      His words: "playing a song on a guitar in front of a group is a major
@@ -1988,7 +2008,8 @@
 
     if (st) h += `<div class="acard one tk-next"><span class="eyebrow">${fmt1(K.nextTitle, { n: st.n, N })}</span>
       <div class="stestbig">${st.test}</div>
-      ${st.how ? `<p class="lede">${st.how[0]}</p>` : (st.note ? `<p class="lede">${st.note}</p>` : '')}
+      ${st.how ? `<p class="lede">${st.how[0]}</p>` : ''}
+      ${st.note ? `<p class="note">${st.note}</p>` : ''}
       ${st.twist ? `<p class="twist"><b>${K.twist || 'Already easy?'}</b> ${st.twist}</p>` : ''}
       <div class="row"><button class="btn btn-gold" data-step="${skey(tr, st)}" style="flex:1">${K.doIt}</button></div></div>`;
 
@@ -2119,7 +2140,8 @@
   function stepSheet(tr, st, from, where) {
     const c = catOf(tr), k = skey(tr, st), d = sdone(k), K = trackCopy();
     const rusty = d && isFaded(k);
-    const how = st.how ? `<ul class="how">${st.how.map(h => `<li>${h}</li>`).join('')}</ul>` : (st.note ? `<p class="note">${st.note}</p>` : '');
+    const how = (st.how ? `<ul class="how">${st.how.map(h => `<li>${h}</li>`).join('')}</ul>` : '')
+      + (st.note ? `<p class="note">${st.note}</p>` : '');
     /* The other-hand twist (his, 2026-09-10): the same rung for a child and a
        grown-up, and the grown-up who finds it easy does it with the hand or
        foot they would never choose, so they feel what the child is feeling. */

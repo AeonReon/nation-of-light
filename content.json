@@ -2306,7 +2306,7 @@
   },
   "areasLine": "Ten areas of a life. Go to the one that needs something.",
   "areaOrder": "In order, easiest first",
-  "areasLineFirst": "Ten areas of a life. One or two ladders are open in each to begin with.",
+  "areasLineFirst": "Ten areas of a life. Each one opens a path at a time, in the order you would take it.",
   "areaOpenTitle": "Open now",
   "areaLater": "{n} more in this area open later, with a facilitator.",
   "catLines": {
@@ -5871,7 +5871,9 @@
    "traitsTitle": "What it builds",
    "canTitle": "Things you can do now",
    "steps": "{n} step{s}"
-  }
+  },
+  "areaNeed": "Opens at {n} steps in {area} · {done} so far",
+  "areaOpenLater": "Opens later in this area."
  },
  "arrival": {
   "lines": [
