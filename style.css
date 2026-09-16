@@ -1333,3 +1333,17 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 
 /* the ladders held back in an area (v65) */
 .later{font-size:13px;color:var(--ink-soft);text-align:center;padding:14px 10px 4px}
+
+/* ---- the builder's view (v66) ---- */
+.builder{margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.builder h3{margin:0 0 4px}
+.builder p{margin:0 0 10px;font-size:13px;color:var(--ink-soft);line-height:1.4}
+.builder .stages{display:flex;flex-direction:column;gap:6px;margin-bottom:10px}
+.stagebtn{text-align:left;padding:9px 12px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);font:inherit;cursor:pointer}
+.stagebtn b{display:block;font-size:14px}
+.stagebtn small{display:block;font-size:12px;color:var(--ink-soft)}
+.stagebtn.on{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold-pale)}
+.builder .btn.wide{width:100%;margin-bottom:8px}
+.builder .what.dark{width:100%}
+.previewbar{position:absolute;left:50%;top:6px;transform:translateX(-50%);z-index:60;display:flex;gap:10px;align-items:center;padding:6px 12px;border-radius:999px;border:0;background:rgba(30,39,80,.88);color:#FFF3C4;font:inherit;font-size:12px;box-shadow:var(--shadow-lift);cursor:pointer;white-space:nowrap;max-width:94%}
+.previewbar b{color:#FFD166;font-weight:700}

@@ -2285,6 +2285,7 @@
    "lede": "Do your three here each day. Keep the flame lit seven days running and the rooms beyond open: every ladder in the school, and the ten areas of a life.",
    "count": "{n} of {days} days in a row",
    "btn": "The school opens at seven days · {n} of {days}",
+   "all": { "days": 30, "points": 100 },
    "back": "Back to today"
   },
   "areasLine": "Ten areas of a life. Go to the one that needs something.",
@@ -6423,7 +6424,15 @@
  },
  "help": {
   "popins": "Marcus and Aurelia",
-  "popinsHint": "Tap the face at the top to send them away or bring them back. With them off the portico is quiet — nobody appears and nobody speaks unless you ask."
+  "popinsHint": "Tap the face at the top to send them away or bring them back. With them off the portico is quiet — nobody appears and nobody speaks unless you ask.",
+  "builder": {
+   "title": "See it as they will",
+   "lede": "The school as somebody at each stage sees it. Your own account is kept and comes back with one tap.",
+   "stages": [["one", "Day one", "The cover and the twenty-five"], ["home", "The first week", "Home only, the school shut"], ["seven", "After seven days", "One or two ladders open in each area"], ["all", "Everything open", "A month in, or a hundred points"]],
+   "mine": "Back to my own account",
+   "play": "Play the day-done celebration",
+   "seeing": "Seeing it as: {stage}"
+  }
  },
  "apps": {
   "title": "More from us",

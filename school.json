@@ -653,7 +653,8 @@
        "n": 14,
        "test": "Carry a younger child on your back across a field.",
        "ctx": "with",
-       "kind": "kindness"
+       "kind": "kindness",
+       "place": "countryside"
       },
       {
        "n": 15,
@@ -782,7 +783,8 @@
        "n": 14,
        "test": "Run up a hill without walking any of it.",
        "ctx": "out",
-       "kind": "skill"
+       "kind": "skill",
+       "place": "hill"
       },
       {
        "n": 15,
@@ -1009,7 +1011,8 @@
        "n": 8,
        "test": "Ride up a hill without getting off.",
        "ctx": "out",
-       "kind": "skill"
+       "kind": "skill",
+       "place": "hill"
       },
       {
        "n": 9,
@@ -1220,7 +1223,8 @@
        "ctx": "with",
        "kind": "kindness"
       }
-     ]
+     ],
+     "place": "outdoors"
     },
     {
      "id": "wild.wayfind",
@@ -1432,7 +1436,8 @@
        "ctx": "out",
        "kind": "kindness"
       }
-     ]
+     ],
+     "place": "woodland"
     },
     {
      "id": "wild.weather",
@@ -1475,19 +1480,22 @@
        "n": 6,
        "test": "Read a tide table and say when the beach will be gone.",
        "ctx": "out",
-       "kind": "attention"
+       "kind": "attention",
+       "place": "coast"
       },
       {
        "n": 7,
        "test": "Know which way the tide is going right now, by looking.",
        "ctx": "out",
-       "kind": "attention"
+       "kind": "attention",
+       "place": "coast"
       },
       {
        "n": 8,
        "test": "Plan a beach walk around the tide and get it right.",
        "ctx": "out",
-       "kind": "skill"
+       "kind": "skill",
+       "place": "coast"
       },
       {
        "n": 9,
@@ -1821,7 +1829,8 @@
        "ctx": "with",
        "kind": "kindness"
       }
-     ]
+     ],
+     "place": "countryside"
     },
     {
      "id": "wild.tracks",
@@ -1950,7 +1959,8 @@
        "ctx": "with",
        "kind": "kindness"
       }
-     ]
+     ],
+     "place": "countryside"
     },
     {
      "id": "wild.camp",
@@ -2031,7 +2041,8 @@
        "ctx": "with",
        "kind": "kindness"
       }
-     ]
+     ],
+     "place": "garden"
     }
    ]
   },
@@ -2261,7 +2272,8 @@
        "ctx": "with",
        "kind": "kindness"
       }
-     ]
+     ],
+     "place": "water"
     },
     {
      "id": "water.row",
@@ -2342,7 +2354,8 @@
        "ctx": "with",
        "kind": "kindness"
       }
-     ]
+     ],
+     "place": "water"
     },
     {
      "id": "water.sail",
@@ -2472,7 +2485,8 @@
        "ctx": "with",
        "kind": "kindness"
       }
-     ]
+     ],
+     "place": "water"
     },
     {
      "id": "water.fish",
@@ -2554,7 +2568,8 @@
        "ctx": "with",
        "kind": "kindness"
       }
-     ]
+     ],
+     "place": "water"
     },
     {
      "id": "water.pools",
@@ -2611,7 +2626,8 @@
        "ctx": "out",
        "kind": "kindness"
       }
-     ]
+     ],
+     "place": "coast"
     }
    ]
   },
@@ -3484,7 +3500,8 @@
        "n": 6,
        "test": "Sprint uphill five times.",
        "ctx": "out",
-       "kind": "skill"
+       "kind": "skill",
+       "place": "hill"
       },
       {
        "n": 7,
@@ -10614,7 +10631,8 @@
        "ctx": "long",
        "kind": "kindness"
       }
-     ]
+     ],
+     "place": "outdoors"
     },
     {
      "id": "food.grow",
@@ -15668,7 +15686,8 @@
        "ctx": "with",
        "kind": "kindness"
       }
-     ]
+     ],
+     "place": "animals"
     },
     {
      "id": "care.younger",

@@ -349,3 +349,21 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   skips held-back ladders and rooms. Feel it: `NOL.S.school.everything=false; NOL.save()`;
   `NOL.all()` reports. No track tiles drawn yet for the two new ladders (room image
   fallback).
+- **v66 (2026-09-16, Fable session): the builder's view, the place tag, everything at a month.**
+  (1) **See it as they will** (`C.help.builder`, in the ? panel): four stage buttons (Day one /
+  The first week / After seven days / Everything open) and "Play the day-done celebration".
+  `previewStage(id)` puts the real account aside at `KEY + '.mine'`, writes a `freshState()` at
+  that stage (`S.preview = id`; member for all but day one; seven lit days + `opened` for seven
+  and all; `everything` true only for all) and reloads; `paintPreview()` in boot pins a
+  `.previewbar` at the top ("Seeing it as: … · Back to my own account") which restores and
+  removes `.mine`. `freshState` is a hoisted function because `load()` runs before the consts.
+  Shown to everyone for now (not public yet); hide behind `S.member` or a code before launch.
+  (2) **`place`** on a ladder or a rung (school.json: water.pools/fish/row/sail/cold, wild.camp/
+  shelter/fire/forage/tracks, food.firecook, care.animals; rungs body.strength#14, body.run#14,
+  body.ride#8, fit.sprint#6, wild.weather#6-8): `placeOf(tr, st)`; `quickCandidates` skips them
+  so the home picks never hand out a rock pool or a tent. His rule: in the first period pick only
+  what pretty much everyone can do. Later: a place profile that lets the right ones back in.
+  (3) **Everything opens** at 30 days lit or 100 points (`gate.all`), the `S.school.everything`
+  flag still wins either way; accounts from before v66 with ten steps done get the flag set once
+  in `load()` so nobody who is already inside loses the school. The help panel's own pop-up
+  toggle got the same no-hiding-at-home rule as the face button.

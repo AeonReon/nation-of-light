@@ -32,9 +32,13 @@
 
   /* ---------- state ---------- */
   function load() {
-    try { const s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s && s.v === 1) { s.said = s.said || []; s.skipped = s.skipped || []; s.school = s.school || { done: {}, points: 0 }; s.school.refresh = s.school.refresh || 0; s.who = s.who || 'me'; return s; } } catch (e) {}
-    return { v: 1, start: null, done: [], skipped: [], days: {}, sound: true, taps: 0, visits: 0, said: [], seenHelp: false, member: false, school: { done: {}, points: 0, refresh: 0 } };
+    try { const s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s && s.v === 1) { s.said = s.said || []; s.skipped = s.skipped || []; s.school = s.school || { done: {}, points: 0 }; s.school.refresh = s.school.refresh || 0; s.who = s.who || 'me';
+      /* accounts from before the stages (v66) keep the whole school; new ones earn it */
+      if (s.school.everything === undefined && Object.keys(s.school.done || {}).length >= 10) s.school.everything = true;
+      return s; } } catch (e) {}
+    return freshState();
   }
+  function freshState() { return { v: 1, start: null, done: [], skipped: [], days: {}, sound: true, taps: 0, visits: 0, said: [], seenHelp: false, member: false, school: { done: {}, points: 0, refresh: 0 } }; }
   function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
   const today = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
   const remaining = () => [...C.moves.filter(m => !S.done.includes(m.id) && !S.skipped.includes(m.id)), ...C.moves.filter(m => !S.done.includes(m.id) && S.skipped.includes(m.id))];
@@ -183,7 +187,7 @@
 
   /* ---------- the scene ---------- */
   function buildScene() {
-    PORTICO = new Portico($('portico'));
+    paintPreview(); PORTICO = new Portico($('portico'));
     RIG = new MarcusRig.Figure($('mfig'));
     RIG.visemeAt = () => {
       const c = CUES; if (!c || MAR.paused) return 'X';
@@ -690,8 +694,12 @@
   const NOW = new Set(['room']), LATER = new Set(['kit', 'with', 'out', 'home']);
   const fits = (tr, st, which) => (isKid() && isLittle(tr)) ? which !== 'later' : (which === 'later' ? LATER.has(st.ctx) : NOW.has(st.ctx));
   const needsOf = st => LATER.has(st.ctx) ? st.ctx : null;
+  /* v66, his: a rock pool or a tent in the garden is a great rung for some and an impossible one for
+     many (a flat, a town, central Europe). Tagged `place` on the ladder or the rung; the daily picks
+     skip them all. Later: a place profile that lets the right ones back in. */
+  const placeOf = (tr, st) => (st && st.place) || (tr && tr.place) || null;
   function quickCandidates(which) {
-    const ok = ([tr, st]) => fits(tr, st, which);
+    const ok = ([tr, st]) => fits(tr, st, which) && !placeOf(tr, st);
     const easy = (SCH.journey.find(j => j.id === 'easy') || { steps: [] }).steps.map(findStep).filter(Boolean).filter(([tr, st]) => !sdone(skey(tr, st))).filter(ok);
     const firsts = allTracks().map(tr => [tr, nextStep(tr)]).filter(([tr, st]) => st && st.n === 1 && !easy.some(([t2]) => t2 === tr)).filter(ok);
     const little = isKid() ? firsts.filter(([tr]) => isLittle(tr)) : [];
@@ -1794,7 +1802,8 @@
      `everythingOpen()` = S.school.everything (true/false wins), else anyone with
      ten steps already done inside keeps the whole school. A ladder you have
      already started, or taken on, stays yours. */
-  const everythingOpen = () => S.school.everything === true || (S.school.everything !== false && Object.keys(S.school.done || {}).length >= 10);
+  const everythingOpen = () => { if (S.school.everything === true) return true; if (S.school.everything === false) return false;
+    const A = (C.school.gate || {}).all || { days: 30, points: 100 }; return daysLit().size >= A.days || points() >= A.points; };
   const openIds = () => new Set(((SCH && SCH.areas) || []).flatMap(a => a.open || []));
   const isOpen = tr => !!tr && (everythingOpen() || openIds().has(tr.id) || trackDone(tr) >= 1 || projects().some(p => p.id === tr.id) || (isKid() && isLittle(tr)));
   const trackCopy = () => (C.school.track || {});
@@ -2189,15 +2198,50 @@
         <li>The flame lights on your first Done. The sun climbs as you go.</li>
       </ul>
       ${C.help ? `<label class="toggle"><input type="checkbox" id="popins" ${S.popins === false ? '' : 'checked'}><span>${C.help.popins}</span><small>${C.help.popinsHint}</small></label>` : ''}
+      ${C.help && C.help.builder ? builderPanel() : ''}
     </div></div>`, 'light');
     S.seenHelp = true; save();
     backBtn(v, () => closeVeil());
     const pi = v.querySelector('#popins'); if (pi) pi.addEventListener('change', () => { S.popins = pi.checked; save(); sfx('tap');
       const fb = $('facebtn'); if (fb) fb.classList.toggle('off', !pi.checked);
-      if (!pi.checked) { hush(); popOut('marcus', 0); popOut('aurelia', 0); RIG.show(false); ARIG.show(false); }
-      else if ($('stage').classList.contains('arrive')) { RIG.enter(); setTimeout(() => ARIG.show(true), 300); } });
+      $('stage').classList.toggle('quiet', !pi.checked);
+      if (!pi.checked) { hush(); if (!inScene()) { popOut('marcus', 0); popOut('aurelia', 0); RIG.show(false); ARIG.show(false); } } });
+    const B = C.help && C.help.builder;
+    if (B) { v.querySelectorAll('[data-stage]').forEach(b => b.addEventListener('click', () => { sfx('tap'); previewStage(b.dataset.stage); }));
+      v.querySelector('#playday').addEventListener('click', () => { sfx('tap'); closeVeil(); if (!$('stage').classList.contains('school')) return; setTimeout(() => { hush(); dayCelebrate(() => {}); }, 400); }); }
   }
 
+  /* ---- the builder's view (v66) ----
+     His: "is there a way I can actually see these, how people would see it?"
+     The help panel carries a row of stages. Choosing one puts his real account
+     aside (KEY + '.mine'), writes a made-up account at that stage, and reloads;
+     a bar at the top says which stage he is seeing, and "Back to my own account"
+     restores it. Not shown once the app is public unless he wants it. */
+  function builderPanel() {
+    const B = C.help.builder;
+    return `<div class="builder"><h3>${B.title}</h3><p>${B.lede}</p><div class="stages">${B.stages.map(([id, name, line]) => `<button class="stagebtn ${S.preview === id ? 'on' : ''}" data-stage="${id}"><b>${name}</b><small>${line}</small></button>`).join('')}</div>
+      ${S.preview ? `<button class="btn btn-gold wide" data-stage="mine">${B.mine}</button>` : ''}
+      <button class="what dark" id="playday">${B.play}</button></div>`;
+  }
+  function previewStage(stage) {
+    const MINE = KEY + '.mine';
+    if (stage === 'mine') { const m = localStorage.getItem(MINE); if (m) { localStorage.setItem(KEY, m); localStorage.removeItem(MINE); } location.reload(); return; }
+    if (!S.preview) localStorage.setItem(MINE, JSON.stringify(S));
+    const n = freshState(); n.preview = stage; n.sound = S.sound; n.popins = S.popins; n.seenHelp = true;
+    if (stage !== 'one') { n.member = true; }
+    if (stage === 'seven' || stage === 'all') {
+      const d = new Date(); for (let i = 0; i < 7; i++) { const x = new Date(d); x.setDate(d.getDate() - i); n.days[x.getFullYear() + '-' + String(x.getMonth() + 1).padStart(2, '0') + '-' + String(x.getDate()).padStart(2, '0')] = 1; }
+      n.school.opened = true; n.school.everything = stage === 'all';
+    }
+    if (stage === 'home') { n.school.opened = false; n.school.everything = false; }
+    localStorage.setItem(KEY, JSON.stringify(n)); location.reload();
+  }
+  function paintPreview() {
+    if (!S.preview || !C.help || !C.help.builder) return;
+    const B = C.help.builder, st = (B.stages.find(s => s[0] === S.preview) || [])[1] || S.preview;
+    const bar = document.createElement('button'); bar.className = 'previewbar'; bar.innerHTML = `<span>${fmt1(B.seeing, { stage: st })}</span><b>${B.mine}</b>`;
+    bar.addEventListener('click', () => previewStage('mine')); $('stage').appendChild(bar);
+  }
   /* ---------- boot ---------- */
   async function boot() {
     const [c, v, av, sch] = await Promise.all([fetch('content.json', { cache: 'no-cache' }).then(r => r.json()), fetch('audio/marcus/visemes.json', { cache: 'no-cache' }).then(r => r.json()).catch(() => null), fetch('audio/voice/visemes.json', { cache: 'no-cache' }).then(r => r.json()).catch(() => null), fetch('school.json', { cache: 'no-cache' }).then(r => r.json()).catch(() => null)]);
