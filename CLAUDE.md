@@ -451,3 +451,21 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   of the band (`#tuckbtn`, `setTucked(on)`, `S.school.tucked`): the band folds to
   `env(safe-area-inset-top) + 60px` showing the entablature (`preserveAspectRatio` flips to
   `xMidYMin`), figures/torches/caption/hud hidden, chevron flips; remembered.
+- **v72 (2026-09-16, Fable session): audio only, sentences finish, where you stand, the streak card, picks that move on.**
+  (1) In the school the two of them are AUDIO ONLY: `.stage.school .capband/.bubble/.abubble` hidden (his: the
+  text popping up is distracting; the voice alone feels natural). The cover/twenty-five keep their captions.
+  (2) **A page change no longer cuts them off**: `hushSoft()` (SPK++, clear the queue, keep the current
+  sentence) replaces `hush()` in leaveArrival, goHome, closeTrack and the area/room Back; `speakSchool` starts
+  through `whenQuiet(fn)` (polls every 300 ms until nothing is playing, 18 s cap). A Done still interrupts.
+  (3) **Where you stand** (`becomingRoom`, the Becoming door at home): one bar per LIFE AREA with steps done,
+  tap → that area's page (`data-go="area:id"`), then What it builds bars (tap → the traits view), then
+  "Things you can do now" in a fold; the old shields page is `becomingRoomOld`, unused. The days room and the
+  home "Rooms climbed" fold count by life area now. (4) **The streak card** (`daycard2`): one big flame (lit
+  when today is lit), the number, DAYS IN A ROW, the week strip, the day bar, and everything else inside
+  "More about your days" (`runs.more`). "With a little one" and Share share one row. (5) **Picks move on**:
+  a pick shown on three different days and not done rests for a fortnight (`S.school.shown[key][date]`,
+  `resting()` in `todayPicks`); pool = 59 first rungs doable with nothing + 18 easy wins for home, plus the
+  out/kit/with first rungs in the needs fold. (6) **Search bar** at the foot of Everything (`#qgo`,
+  `search.home`) opens the search page focused. (7) `trackImg(tr)` is the one place a ladder's picture URL
+  is built; `pic: N` on a track busts the cache when a tile is redrawn — nerve.asking (megaphone, it WAS live,
+  his phone had the cached one) and fit.lift (redrawn: a strong back holding a kettlebell in a garden) are 2.

@@ -104,7 +104,17 @@
   function ambStop() { if (!AMB.on) return; AMB.on = false; AMB.timers.forEach(clearTimeout); AMB.timers = []; try { AMB.master.gain.linearRampToValueAtTime(0, ac().currentTime + .8); } catch (e) {} setTimeout(() => { AMB.nodes.forEach(n => { try { n.stop(); } catch (e) {} }); AMB.nodes = []; }, 900); }
   const voiceOn = () => S.sound;
   function paintSound() { $('soundbtn').classList.toggle('off', !S.sound); }
-  function hush() { SPK++; NAR.pause(); MAR.pause(); if (RIG) RIG.hush(); if (ARIG) ARIG.hush(); $('readbtn').classList.remove('on'); musicDuck(false); clearTimeout(marcusSay._t); $('bubble').hidden = true; $('abubble').hidden = true; if ($('popcap')) capHide(0); SPEAKING = null; MQ.length = 0; }
+  /* v72, his: moving between pages cut them off mid-sentence. A page change now lets the
+     sentence finish (hushSoft: cancels what was queued, not what is being said), and the
+     next page's words wait until the room is quiet (whenQuiet). */
+  function hushSoft() { SPK++; MQ.length = 0; clearTimeout(whenQuiet._t); }
+  function whenQuiet(fn, tries) {
+    clearTimeout(whenQuiet._t);
+    const busy = SPEAKING || !NAR.paused || !MAR.paused;
+    if (!busy || (tries || 0) > 60) { fn(); return; }
+    whenQuiet._t = setTimeout(() => whenQuiet(fn, (tries || 0) + 1), 300);
+  }
+  function hush() { SPK++; clearTimeout(whenQuiet._t); NAR.pause(); MAR.pause(); if (RIG) RIG.hush(); if (ARIG) ARIG.hush(); $('readbtn').classList.remove('on'); musicDuck(false); clearTimeout(marcusSay._t); $('bubble').hidden = true; $('abubble').hidden = true; if ($('popcap')) capHide(0); SPEAKING = null; MQ.length = 0; }
   /* the music: one nocturne, in on Begin, under every voice, out on its own */
   let MUSV = 0, MUST = null;
   function musicTo(v, ms) { clearInterval(MUST); const from = MUS.volume, t0 = performance.now(); MUST = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / ms); MUS.volume = from + (v - from) * k; if (k >= 1) clearInterval(MUST); }, 50); }
@@ -636,6 +646,7 @@
   const inSceneNow = () => inScene();
   const inScene = () => { const c = $('stage').classList; return c.contains('school') || c.contains('room') || c.contains('arrive') || c.contains('portico'); };
   const skey = (tr, st) => tr.id + '#' + st.n;
+  const trackImg = tr => 'images/track/' + tr.id + '.jpg' + (tr.pic ? '?v=' + tr.pic : '');
   const sdone = k => !!S.school.done[k];
   const trackDone = tr => tr.steps.filter(s => sdone(skey(tr, s))).length;
   const nextStep = tr => tr.steps.find(s => !sdone(skey(tr, s)));
@@ -693,7 +704,7 @@
   function carryCard(limit) {
     const st = started().slice(0, limit || 4); if (!st.length) return '';
     const K = C.school.carry;
-    return `<div class="acard carry"><span class="eyebrow">${K.title}</span>` + st.map(tr => { const c = catOf(tr), s = nextStep(tr), n = trackDone(tr); return `<button class="crow" style="--c:${c.accent};--c2:${c.accent2}" data-step="${skey(tr, s)}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${s.test}</small></span><i class="cprog"><b style="width:${Math.round(n / tr.steps.length * 100)}%"></b></i></button>`; }).join('') + '</div>';
+    return `<div class="acard carry"><span class="eyebrow">${K.title}</span>` + st.map(tr => { const c = catOf(tr), s = nextStep(tr), n = trackDone(tr); return `<button class="crow" style="--c:${c.accent};--c2:${c.accent2}" data-step="${skey(tr, s)}"><img src="${trackImg(tr)}" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${s.test}</small></span><i class="cprog"><b style="width:${Math.round(n / tr.steps.length * 100)}%"></b></i></button>`; }).join('') + '</div>';
   }
   /* the quick ones: the journey's easy wins, then any track's first step, not yet done */
   const NOW = new Set(['room']), LATER = new Set(['kit', 'with', 'out', 'home']);
@@ -724,12 +735,18 @@
        on the list, then a room not yet on the list, then anything. */
     const groupOf = tr => { const c = catOf(tr); const g = SCH.groups.find(g => g.categories.includes(c.id)); return g ? g.id : c.id; };
     const have = fn => new Set(t[key].map(k => { const r = findStep(k); return r ? fn(r[0]) : null; }));
-    const pool = cand.filter(k => !t[key].includes(k) && !t.skip.includes(k));
+    /* v72, his: a pick you look at and never do should move on by itself. Shown on three
+       different days and not done, it rests for a fortnight and something else comes in. */
+    S.school.shown = S.school.shown || {}; const SH = S.school.shown;
+    const resting = k => { const sh = SH[k]; if (!sh || sh[d]) return false; const days = Object.keys(sh).sort(); if (days.length < 3) return false; return (daysAgo(days[days.length - 1]) || 0) < 14; };
+    t[key] = t[key].filter(k => !resting(k));
+    const pool = cand.filter(k => !t[key].includes(k) && !t.skip.includes(k) && !resting(k));
     for (const pass of ['group', 'cat', 'any']) for (const k of pool) {
       if (t[key].length >= limit) break; if (t[key].includes(k)) continue; const r = findStep(k); if (!r) continue;
       if (pass === 'group' && have(groupOf).has(groupOf(r[0]))) continue;
       if (pass === 'cat' && have(tr => catOf(tr).id).has(catOf(r[0]).id)) continue;
       t[key].push(k); }
+    t[key].forEach(k => { SH[k] = SH[k] || {}; SH[k][d] = 1; });
     save(); return t[key].map(findStep).filter(Boolean);
   }
   const levelTwo = () => allTracks().filter(tr => trackDone(tr) === 1 && !(S.school.projects || []).includes(tr.id)).map(tr => [tr, nextStep(tr)]).filter(([tr, st]) => st && NOW.has(st.ctx)).slice(0, 4);
@@ -780,7 +797,7 @@
   /* ---- the arrival: the portico, the two of them, where you stand, three for today ---- */
   let HOMEN = 0;
   function goHome() { ROOMV = null; if ($('stage').classList.contains('arrive')) { hush(); renderArrival(); $('slist').scrollTop = 0; return; }
-    hush(); clearTimeout(ROOMT); HOMEN++; CAT = null; TRK = null; SEARCH = null; paintSearchBtn(); arrival(false, true, true); }
+    hushSoft(); clearTimeout(ROOMT); HOMEN++; CAT = null; TRK = null; SEARCH = null; paintSearchBtn(); arrival(false, true, true); }
   const todayQuick = () => { const t = today(); return Object.values(S.school.done).some(v => localDay(v) === t); };
   function dayCount() { const t = today(); const q = Object.values(S.school.done).filter(v => localDay(v) === t).length; const pr = Object.values(S.school.practice || {}).filter(p => p.days && p.days[t]).length; return q + pr; }
   function dayBar() { const G = C.school.goal || { n: 3 }, n = dayCount(), pct = Math.min(100, Math.round(n / G.n * 100)), over = G.overAt && n >= G.overAt; return `<div class="daybar ${n >= G.n ? 'full' : ''} ${over ? 'over' : ''}" title="${G.lede || ''}"><i style="width:${pct}%"></i><span>${over ? (G.over + ' · ' + n) : n >= G.n ? G.done : (n + ' of ' + G.n + ' ' + (G.label || 'today'))}</span></div>`; }
@@ -949,16 +966,17 @@
   function dayCard(ticks, nextLine, done) {
     const run = runInfo(), A = C.arrival.stand, R = C.school.runs || {}, lit = daysLit();
     const nx = (R.levels || []).find(l => run.best < l[0]);
-    return `<button class="acard daycard" data-panel="run">
-      <div class="dc-top"><span class="dc-n"><b>${run.cur}</b><small>${A.run || 'days in a row'}</small></span>
-        <span class="dc-t">${run.best ? `<strong>${run.best}</strong><small>${R.bestLabel || 'your longest'}</small>` : ''}</span></div>
+    /* v72, his: the streak should look clean and powerful, a real flame and one number; the
+       detail behind a drop-down. */
+    return `<div class="acard daycard2 ${lit.has(today()) ? 'lit' : ''}">
+      <div class="dc-hero"><svg class="bigflame" viewBox="0 0 16 20">${HUD_FLAME}</svg><span class="dc-n"><b>${run.cur}</b><small>${A.run || 'days in a row'}</small></span>
+        ${run.best > run.cur ? `<span class="dc-t"><strong>${run.best}</strong><small>${R.bestLabel || 'your longest'}</small></span>` : ''}</div>
       ${weekStrip()}
       <div class="daywrap home">${dayBar()}</div>
-      ${ticks}
-      <p class="nextp ${done ? 'done' : ''}">${nextLine}</p>
+      ${foldCard('daymore', R.more || 'More about your days', `${ticks}<p class="nextp ${done ? 'done' : ''}">${nextLine}</p>
       <p class="runcap">${lit.size ? fmt1(R.lit || '{n} day{s} lit altogether.', { n: lit.size, s: lit.size === 1 ? '' : 's' }) : (R.none || 'One light a day is the whole habit.')}${
         nx ? ' ' + fmt1(R.toNext || '{n} more in a row for {name}.', { n: nx[0] - run.best, name: nx[1] }) : ''}</p>
-      <span class="tapmore">${R.see || 'Days in a row, and what they earn'} &#8250;</span></button>`;
+      <button class="what dark" data-panel="run">${R.see || 'Days in a row, and what they earn'} &#8250;</button>`)}</div>`;
   }
   function runCard(inPanel) {
     const run = runInfo(), A = C.arrival.stand, R = C.school.runs || {}, lit = daysLit();
@@ -1043,7 +1061,7 @@
     const group = g => open.filter(([, st]) => g[1].indexOf(st.ctx || 'home') >= 0);
     const row = ([tr, st]) => { const c = catOf(tr);
       return `<button class="crow" style="--c:${c.accent};--c2:${c.accent2}" data-step="${skey(tr, st)}">
-        <img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'">
+        <img src="${trackImg(tr)}" alt="" onerror="this.src='images/cat/${c.id}.jpg'">
         <span><strong>${st.test}</strong><small>${c.name} · ${tr.name}</small></span></button>`; };
     return WHERE.map(g => { const list2 = group(g); if (!list2.length) return '';
       const shown = list2.slice(0, 4);
@@ -1053,11 +1071,31 @@
     }).join('');
   }
   function becomingRoom(list) {
+    /* v72, his: the Becoming page confused a new account. It is a snapshot now: one bar per
+       life area (tap it to go to that area's ladders), then what it builds, the rest folded. */
+    const ST = C.school.standing || {}, P = (C.school.traits || {}).page || {};
+    const total = Object.keys(S.school.done).length + S.done.length;
+    const countIn = ids => ids.map(trackById).filter(Boolean).reduce((n, tr) => n + trackDone(tr), 0);
+    const areas = (SCH.areas || []).map(a => ({ a, n: countIn(a.tracks) })), amax = Math.max(10, ...areas.map(x => x.n));
+    const traits = (SCH.traits || []).map(t => ({ t, n: countIn(t.tracks) })), tmax = Math.max(10, ...traits.map(x => x.n));
+    const bar = (id, name, n, max, cls) => `<button class="rr ${cls}" data-go="${id}"><span>${name}</span><i><b style="width:${Math.round(n / max * 100)}%"></b></i><small>${fmt1(ST.steps || '{n} step{s}', { n, s: n === 1 ? '' : 's' })}</small></button>`;
+    stageBack(closeRoom);
+    const can = allTracks().map(tr => { const done = tr.steps.filter(st => sdone(skey(tr, st))); if (!done.length) return null; const top = done[done.length - 1]; const when = S.school.done[skey(tr, top)] || ''; return { tr, top, n: done.length, when: typeof when === 'string' ? when : '' }; }).filter(Boolean).sort((x, y) => y.when.localeCompare(x.when));
+    const canRow = x => { const c = catOf(x.tr); return `<div class="can" style="--c:${c.accent};--c2:${c.accent2}"><img src="${trackImg(x.tr)}" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><small>${c.name} · ${x.tr.name} · ${fmt1(P.rung || 'rung {n} of {N}', { n: x.top.n, N: x.tr.steps.length })}</small><strong>${x.top.test}</strong></span></div>`; };
+    list.innerHTML = `<div class="acard prheadcard becominghead"><span class="eyebrow">${ST.title || 'Where you stand'}</span><p class="bigline">${total === 0 ? (ST.ledeNone || '') : fmt1(ST.lede || '{n} things done.', { n: total })}</p></div>` +
+      `<div class="acard prog"><span class="eyebrow">${ST.areasTitle || 'By life area'}</span><div class="rooms">${areas.map(x => bar('area:' + x.a.id, x.a.name, x.n, amax, 'area')).join('')}</div></div>` +
+      `<div class="acard prog"><span class="eyebrow">${ST.traitsTitle || 'What it builds'}</span><div class="rooms">${traits.map(x => bar('trait:' + x.t.id, x.t.name, x.n, tmax, 'trait')).join('')}</div></div>` +
+      (can.length ? foldCard('canall', `${ST.canTitle || 'Things you can do now'} (${can.length})`, `<div class="acard cancard">${can.map(canRow).join('')}</div>`) : '');
+    list.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const [kind, id] = b.dataset.go.split(':');
+      ROOMV = null; TAB = 'all'; CAT = null; TRK = null; if (kind === 'area') { AREA = id; S.school.allView = 'areas'; } else { AREA = null; S.school.allView = 'traits'; } save(); leaveArrival(); }));
+    list.scrollTop = 0;
+  }
+  function becomingRoomOld(list) {
     const T = C.school.traits, P = T.page || {}, tc = traitCounts(), aw = awards();
     const fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
     const can = allTracks().map(tr => { const done = tr.steps.filter(st => sdone(skey(tr, st))); if (!done.length) return null; const top = done[done.length - 1]; const when = S.school.done[skey(tr, top)] || ''; return { tr, top, n: done.length, when: typeof when === 'string' ? when : '' }; }).filter(Boolean).sort((x, y) => y.when.localeCompare(x.when));
     const total = Object.keys(S.school.done).length + S.done.length;
-    const canRow = x => { const c = catOf(x.tr); return `<div class="can" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${x.tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><small>${c.name} · ${x.tr.name} · ${fmt(P.rung, { n: x.top.n, N: x.tr.steps.length })}</small><strong>${x.top.test}</strong></span></div>`; };
+    const canRow = x => { const c = catOf(x.tr); return `<div class="can" style="--c:${c.accent};--c2:${c.accent2}"><img src="${trackImg(x.tr)}" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><small>${c.name} · ${x.tr.name} · ${fmt(P.rung, { n: x.top.n, N: x.tr.steps.length })}</small><strong>${x.top.test}</strong></span></div>`; };
     stageBack(closeRoom);
     list.innerHTML = `<div class="acard prheadcard becominghead"><span class="eyebrow">${P.title || T.title}</span><p class="bigline">${total === 0 ? P.ledeNone : total === 1 ? P.ledeOne : fmt(P.lede, { n: total })}</p></div>` +
       whereStrip() +
@@ -1075,7 +1113,7 @@
     const ranks = aw.filter(a => a.kind === 'flame'), stones = aw.filter(a => a.kind === 'stone');
     const meds = aw.filter(a => a.kind === 'medal'), special = aw.filter(a => a.kind === 'wreath');
     const gotM = meds.filter(a => a.earned), nextM = meds.filter(a => !a.earned).sort((x, y) => x.left - y.left).slice(0, 6);
-    const rooms = SCH.categories.map(c => ({ c, n: c.tracks.reduce((s2, tr) => s2 + trackDone(tr), 0), N: c.tracks.reduce((s2, tr) => s2 + tr.steps.length, 0) })).sort((x, y) => y.n - x.n);
+    const rooms = (SCH.areas || []).map(a => { const trs = a.tracks.map(trackById).filter(Boolean); return { c: { name: a.name, accent: catOf(trs[0]).accent, accent2: catOf(trs[0]).accent2 }, n: trs.reduce((s2, tr) => s2 + trackDone(tr), 0), N: trs.reduce((s2, tr) => s2 + tr.steps.length, 0) }; }).sort((x, y) => y.n - x.n);
     const earned = aw.filter(a => a.earned).length;
     list.innerHTML =
       `<div class="acard prheadcard"><span class="eyebrow">${A.progressTitle || 'How far you have come'}</span>
@@ -1123,7 +1161,7 @@
     step();
   }
   function foldCard(key, title, inner, open) { return `<details class="fold" data-fold="${key}" ${open ? 'open' : ''}><summary>${title}</summary><div class="fbody">${inner}</div></details>`; }
-  const pickRow = ([tr, st]) => { const c = catOf(tr), P = C.arrival, nd = (isKid() && isLittle(tr)) ? null : needsOf(st); return `<div class="pick" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span class="ptxt"><span class="scat">${c.name} · ${tr.name}${nd ? ` <b class="need ${nd}">${(P.needs || {})[nd] || nd}</b>` : ''}</span><span class="stest">${st.test}</span></span><span class="pbtns"><button class="btn btn-gold sm wide" data-do="${skey(tr, st)}">${P.do}</button><button class="btn btn-ghost sm" data-not="${skey(tr, st)}">${P.notThis}</button></span></div>`; };
+  const pickRow = ([tr, st]) => { const c = catOf(tr), P = C.arrival, nd = (isKid() && isLittle(tr)) ? null : needsOf(st); return `<div class="pick" style="--c:${c.accent};--c2:${c.accent2}"><img src="${trackImg(tr)}" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span class="ptxt"><span class="scat">${c.name} · ${tr.name}${nd ? ` <b class="need ${nd}">${(P.needs || {})[nd] || nd}</b>` : ''}</span><span class="stest">${st.test}</span></span><span class="pbtns"><button class="btn btn-gold sm wide" data-do="${skey(tr, st)}">${P.do}</button><button class="btn btn-ghost sm" data-not="${skey(tr, st)}">${P.notThis}</button></span></div>`; };
   function renderArrival() {
     const list = $('slist'), keep = list.scrollTop;
     if (ROOMV === 'becoming') { becomingRoom(list); return; }
@@ -1138,7 +1176,7 @@
     const visits = (S.school.visits || 0);
     const rd = R.readings[daySeed() % R.readings.length];
     const lib = ['quote', 'book', 'beauty', 'figure'].map(k => { const pool = LIB.filter(x => x.kind === k); if (!pool.length) return ''; const it = pool[(daySeed() + k.length) % pool.length]; return `<div class="acard lib ${k}"><span class="eyebrow">${R.libraryLede[k]}</span>${it.title ? `<h3>${it.title}</h3>` : ''}<p>${it.t}</p>${it.by ? `<i>${it.by}${it.src ? ' · ' + it.src : ''}</i>` : ''}</div>`; }).join('');
-    const rooms = SCH.categories.map(c => ({ c, n: c.tracks.reduce((s, tr) => s + trackDone(tr), 0), N: c.tracks.reduce((s, tr) => s + tr.steps.length, 0) })).filter(r => r.n > 0).sort((x, y) => y.n - x.n).slice(0, 8);
+    const rooms = (SCH.areas || []).map(a => { const trs = a.tracks.map(trackById).filter(Boolean); return { c: { id: a.id, name: a.name, accent: catOf(trs[0]).accent, accent2: catOf(trs[0]).accent2 }, n: trs.reduce((s, tr) => s + trackDone(tr), 0), N: trs.reduce((s, tr) => s + tr.steps.length, 0) }; }).filter(r => r.n > 0).sort((x, y) => y.n - x.n).slice(0, 8);
     const earlier = FEED.slice(1, 6);
     const KID = C.school.kid || {};
     /* Most people do not have a little one, and the top of this page is for
@@ -1148,8 +1186,8 @@
       <button class="wpill ${isKid() ? 'on' : ''}" data-who="kid">${kidName()}</button></div>` : '';
     const addKid = S.kid ? '' : `<button class="addkid" data-who="new"><i>+</i><span><strong>${KID.add || 'With a little one'}</strong><small>${KID.addHint || ''}</small></span></button>`;
     const kidCard = isKid() ? `<div class="acard kidcard"><span class="eyebrow">${fmt1(KID.forTitle || 'For {name}, from four', { name: kidName() })}</span><p class="lede">${KID.forLede || ''}</p>` +
-      littleTracks().map(tr => { const c = catOf(tr), s = nextStep(tr), n = trackDone(tr); return s ? `<button class="crow" style="--c:${c.accent};--c2:${c.accent2}" data-step="${skey(tr, s)}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${s.test}</small></span><i class="cprog"><b style="width:${Math.round(n / tr.steps.length * 100)}%"></b></i></button>`
-        : `<div class="crow done" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${(C.school.track || {}).finished || 'Finished'}</small></span></div>`; }).join('') + '</div>' : '';
+      littleTracks().map(tr => { const c = catOf(tr), s = nextStep(tr), n = trackDone(tr); return s ? `<button class="crow" style="--c:${c.accent};--c2:${c.accent2}" data-step="${skey(tr, s)}"><img src="${trackImg(tr)}" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${s.test}</small></span><i class="cprog"><b style="width:${Math.round(n / tr.steps.length * 100)}%"></b></i></button>`
+        : `<div class="crow done" style="--c:${c.accent};--c2:${c.accent2}"><img src="${trackImg(tr)}" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${(C.school.track || {}).finished || 'Finished'}</small></span></div>`; }).join('') + '</div>' : '';
     list.innerHTML = whoStrip + thinBar() +
       (isKid() ? `<p class="kidname">${fmt1(KID.homeTitle || "{name}'s day", { name: kidName() })}</p>` : '') +
       `<div class="acard todaycard"><span class="eyebrow">${P.todayTitle || 'Three for today'}</span>${P.todayLede ? `<p class="lede">${P.todayLede}</p>` : ''}` +
@@ -1169,8 +1207,8 @@
       (rooms.length ? foldCard('rooms', F.rooms || 'Rooms climbed', `<div class="acard prog"><div class="rooms">${rooms.map(r => `<div class="rr" style="--c:${r.c.accent};--c2:${r.c.accent2}"><span>${r.c.name}</span><i><b style="width:${Math.round(r.n / r.N * 100)}%"></b></i><small>${r.n} of ${r.N}</small></div>`).join('')}</div></div>`) : '') +
       (earlier.length ? foldCard('earlier', C.feed.earlier || 'Earlier', `<div class="acard feedcard">${earlier.map(p => `<div class="feedpost"><small>${p.date}</small><h4>${p.title}</h4><p>${p.text}</p></div>`).join('')}</div>`) : '') +
       (C.apps ? foldCard('apps', C.apps.title, appsFold()) : '') +
-      dayCard(ticks, nextLine, q && (l || !hasLong)) + addKid +
-      `<div class="gorow"><button class="iconbtn" id="sharearr" aria-label="${C.share.btn}">${SHARE_IC}</button></div>`;
+      dayCard(ticks, nextLine, q && (l || !hasLong)) +
+      `<div class="gorow">${addKid}<button class="iconbtn" id="sharearr" aria-label="${C.share.btn}">${SHARE_IC}</button></div>`;
     if (post && isNew) { S.feed.seen.push(post.id); save(); }
     list.querySelector('#sharearr').addEventListener('click', () => { sfx('tap'); sharePanel(); });
     list.querySelectorAll('.fold').forEach(d => d.addEventListener('toggle', () => { if (d.dataset.fold === 'how' && !d.open) { S.school.howSeen = true; save(); } if (d.dataset.fold === 'vision' && !d.open) { S.school.visionSeen = true; save(); } }));
@@ -1227,7 +1265,7 @@
     list.querySelector('#gateback').addEventListener('click', () => { sfx('tap'); goHome(); });
     stageBack(goHome);
   }
-  function leaveArrival() { ROOMV = null; clearTimeout(arrival._t); clearTimeout(ROOMT); hush(); musicStop(); lyreStop(800); $('stage').classList.remove('arrive'); $('afig').classList.remove('walk-in-l'); dock('scene'); renderSchool(); if (!schoolOpen()) return; if (!S.school.toured) setTimeout(offerTour, 600); else setTimeout(entryWord, 650); }
+  function leaveArrival() { ROOMV = null; clearTimeout(arrival._t); clearTimeout(ROOMT); hushSoft(); musicStop(); lyreStop(800); $('stage').classList.remove('arrive'); $('afig').classList.remove('walk-in-l'); dock('scene'); renderSchool(); if (!schoolOpen()) return; if (!S.school.toured) setTimeout(offerTour, 600); else setTimeout(entryWord, 650); }
   /* going in: one of them pops up with a word for the day ahead. Never the same one twice in a sitting, a different start each day, loosely his and hers in turn. */
   const ENTRYSAID = new Set();
   function entryWord() {
@@ -1373,7 +1411,7 @@
       if (ln.who === 'marcus') { if (!ARIG.hidden) ARIG.smile(3); marcusSay(line(ln.id) || { id: ln.id, t: ln.t }, 'nod', () => setTimeout(step, 400)); }
       else { if (!RIG.hidden) RIG.smile(3); ARIG.nod(); cap('aurelia', ln.t); aureliaSay(ln.id, () => { capHide(1600); setTimeout(step, 400); }); }
     };
-    setTimeout(step, sc ? 300 : 900);
+    whenQuiet(() => { if (my === SPK) setTimeout(step, sc ? 300 : 600); });
   }
   /* ---- the three pages ---- */
   function paintTabs(active) {
@@ -1409,14 +1447,14 @@
       $('sline').textContent = '';
       const all = area.tracks.map(trackById).filter(Boolean), trs = all.filter(isOpen), c = catOf(all[0]);
       const waiting = all.filter(tr => !isOpen(tr) && tr.after && trs.some(t => t.id === tr.after)), later = all.length - trs.length - waiting.length;
-      const lockedRow = tr => { const cc = catOf(tr), pre = trackById(tr.after); return `<div class="srow track pic locked" style="--c:${cc.accent};--c2:${cc.accent2}"><img src="images/track/${tr.id}.jpg" alt="" loading="lazy" onerror="this.src='images/cat/${cc.id}.jpg'"><span class="stxt"><span class="stest">${tr.name}</span><span class="sline2">${tr.line || ''}</span><span class="lockline">${fmt1(C.school.areaAfter || 'Opens when {name} is done', { name: pre ? pre.name : '' })}</span></span></div>`; };
+      const lockedRow = tr => { const cc = catOf(tr), pre = trackById(tr.after); return `<div class="srow track pic locked" style="--c:${cc.accent};--c2:${cc.accent2}"><img src="${trackImg(tr)}" alt="" loading="lazy" onerror="this.src='images/cat/${cc.id}.jpg'"><span class="stxt"><span class="stest">${tr.name}</span><span class="sline2">${tr.line || ''}</span><span class="lockline">${fmt1(C.school.areaAfter || 'Opens when {name} is done', { name: pre ? pre.name : '' })}</span></span></div>`; };
       list.innerHTML = `<div class="roomhead" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/${area.image}" alt=""><div><h2>${area.name}</h2><p>${area.line}</p></div></div><div class="ghead slim"><p>${everythingOpen() ? (C.school.areaOrder || '') : (C.school.areaOpenTitle || 'Open now')}</p></div>` + trs.map(tr => trackRow(tr) + waiting.filter(w => w.after === tr.id).map(lockedRow).join('')).join('') + (later > 0 ? `<p class="later">${fmt1(C.school.areaLater || '{n} more open later.', { n: later })}</p>` : '');
-      stageBack(() => { hush(); AREA = null; renderSchool(); }); list.scrollTop = 0;
+      stageBack(() => { hushSoft(); AREA = null; renderSchool(); }); list.scrollTop = 0;
     } else if (cat) {
       dock('scene'); RIG.show(true); ARIG.show(true); $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout');
       $('sline').textContent = '';
       list.innerHTML = `<div class="roomhead" style="--c:${cat.accent};--c2:${cat.accent2}"><img src="images/cat/${cat.id}.jpg" alt=""><div><h2>${cat.name}</h2><p>${cat.line}</p></div></div>` + cat.tracks.filter(isOpen).map(trackRow).join('') + (cat.tracks.filter(isOpen).length < cat.tracks.length ? `<p class="later">${fmt1(C.school.areaLater || '{n} more open later.', { n: cat.tracks.length - cat.tracks.filter(isOpen).length })}</p>` : '');
-      stageBack(() => { hush(); CAT = null;
+      stageBack(() => { hushSoft(); CAT = null;
         if (CAT_FROM && CAT_FROM.search !== undefined) { SEARCH = CAT_FROM.search; CAT_FROM = null; }
         renderSchool(); }); list.scrollTop = 0;
     } else {
@@ -1637,7 +1675,7 @@
   function projectRow(tr) {
     const c = catOf(tr), st = nextStep(tr), n = trackDone(tr);
     const last = tr.steps[tr.steps.length - 1], first = tr.steps[0];
-    return `<div class="proj taken" style="--c:${c.accent};--c2:${c.accent2}"><div class="seal"><i></i>${C.school.long.page.taken}</div><div class="ptop"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${c.name} · ${tr.steps.length} steps</small><small class="szl sz-${tr.size || 'months'}">${sizeOf(tr).name}</small></span><button class="px" data-drop="${tr.id}" aria-label="Put this one down">×</button></div>
+    return `<div class="proj taken" style="--c:${c.accent};--c2:${c.accent2}"><div class="seal"><i></i>${C.school.long.page.taken}</div><div class="ptop"><img src="${trackImg(tr)}" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${c.name} · ${tr.steps.length} steps</small><small class="szl sz-${tr.size || 'months'}">${sizeOf(tr).name}</small></span><button class="px" data-drop="${tr.id}" aria-label="Put this one down">×</button></div>
       <div class="ladder">
         <div class="rung ${n === 0 ? 'here' : 'done'}"><b>1</b><span><em>${n === 0 ? 'Start here' : 'Started'}</em>${first.test}</span></div>
         ${n > 0 ? `<div class="rung here"><b>${n + 1}</b><span><em>You are here</em>${st.test}</span></div>` : ''}
@@ -1650,7 +1688,7 @@
   function candRow(tr) {
     const c = catOf(tr), st = nextStep(tr), last = tr.steps[tr.steps.length - 1], n = trackDone(tr), K = C.school.long.page;
     const ladder = `<p class="ladder">From <em>${tr.steps[0].test}</em> to <em>${last.test}</em></p>`;
-    return `<div class="cand" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span class="ctext"><strong>${tr.name}</strong><small>${tr.line || ''}</small><small class="cmeta">${c.name} · ${tr.steps.length} steps${n ? ` · ${n} done` : ''} · <b class="szl sz-${tr.size || 'months'}">${sizeOf(tr).name}</b></small></span>${tr.about ? `<details class="more"><summary>${K.about || 'More about this'}</summary><p>${tr.about}</p>${ladder}</details>` : ladder}<span class="cbtns"><button class="btn btn-ghost sm" data-track="${tr.id}">${K.look}</button><button class="btn btn-gold sm" data-commit="${tr.id}">${K.take}</button></span></div>`;
+    return `<div class="cand" style="--c:${c.accent};--c2:${c.accent2}"><img src="${trackImg(tr)}" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span class="ctext"><strong>${tr.name}</strong><small>${tr.line || ''}</small><small class="cmeta">${c.name} · ${tr.steps.length} steps${n ? ` · ${n} done` : ''} · <b class="szl sz-${tr.size || 'months'}">${sizeOf(tr).name}</b></small></span>${tr.about ? `<details class="more"><summary>${K.about || 'More about this'}</summary><p>${tr.about}</p>${ladder}</details>` : ladder}<span class="cbtns"><button class="btn btn-ghost sm" data-track="${tr.id}">${K.look}</button><button class="btn btn-gold sm" data-commit="${tr.id}">${K.take}</button></span></div>`;
   }
   function renderLong(list) {
     const L = C.school.long, K = L.page, mine = projects(), on = new Set(mine.map(t => t.id));
@@ -1686,7 +1724,7 @@
   function longCard() {
     const K = K_LG(), mine = projects();
     return `<div class="acard longcard"><span class="eyebrow">${K.roomTitle}</span><p class="lede">${mine.length ? K.roomLede : K.none}</p>` +
-      (mine.length ? mine.map(tr => { const c = catOf(tr), st = nextStep(tr), n = trackDone(tr); return `<div class="lgrow taken" style="--c:${c.accent};--c2:${c.accent2}"><div class="seal"><i></i>${C.school.long.page.taken}</div><button class="px" data-drop="${tr.id}" aria-label="Put this one down">&#215;</button><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${st.test}</small></span>${pracLine(tr)}</div>`; }).join('') + `<p class="rule">${K.capLine || ''}</p>`
+      (mine.length ? mine.map(tr => { const c = catOf(tr), st = nextStep(tr), n = trackDone(tr); return `<div class="lgrow taken" style="--c:${c.accent};--c2:${c.accent2}"><div class="seal"><i></i>${C.school.long.page.taken}</div><button class="px" data-drop="${tr.id}" aria-label="Put this one down">&#215;</button><img src="${trackImg(tr)}" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${st.test}</small></span>${pracLine(tr)}</div>`; }).join('') + `<p class="rule">${K.capLine || ''}</p>`
         : `${homeOne()}<button class="btn btn-ghost sm" id="pickLong">${C.school.long.page.other || K.pick}</button><p class="rule">${K.capLine || ''}</p>`) + `</div>`;
   }
   /* v67, his: first-week people should see ONE long skill at home, take it or ask for another */
@@ -1777,6 +1815,8 @@
     else if (view === 'rooms') { renderRooms(list, seg); }
     else { renderAreas(list, seg); }
     list.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => { sfx('tap'); S.school.allView = b.dataset.view; save(); renderSchool(); }));
+    list.insertAdjacentHTML('beforeend', `<button class="qbar qhome" id="qgo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/></svg><span>${esc((C.school.search || {}).home || 'Search the whole school')}</span></button>`);
+    $('qgo').addEventListener('click', () => { sfx('tap'); SEARCH = ''; renderSchool(); const b = $('qbox'); if (b) b.focus(); });
   }
   const areaRow = a => { const trs = a.tracks.map(trackById).filter(isOpen), n = trs.reduce((s, tr) => s + trackDone(tr), 0), N = trs.reduce((s, tr) => s + tr.steps.length, 0), c = catOf(trs[0]);
     return `<button class="srow pic area" data-area="${a.id}" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/${a.image}" alt="" loading="lazy"><span class="stxt"><span class="stest">${a.name}</span><span class="sline2">${a.line}</span><span class="sprog"><i style="width:${N ? Math.round(n / N * 100) : 0}%"></i></span></span><span class="snum">${n ? n + ' of ' + N : trs.length + (trs.length === 1 ? ' ladder' : ' ladders')}</span></button>`; };
@@ -1903,11 +1943,11 @@
   }
   function closeTrack() {
     const f = TRK_FROM || {}; TRK = null; TRK_FROM = null;
-    if (f.home) { hush(); goHome(); return; }
+    if (f.home) { goHome(); return; }
     if (f.search !== undefined) { SEARCH = f.search; CAT = null; }
     else if (f.cat) CAT = f.cat;
     else { CAT = null; if (f.tab) TAB = f.tab; }
-    hush(); renderSchool();
+    hushSoft(); renderSchool();
   }
   function trackPage(list, tr) {
     const c = catOf(tr), K = trackCopy(), N = tr.steps.length, n = trackDone(tr), st = nextStep(tr);
@@ -1922,7 +1962,7 @@
 
     let h = `<div class="tk" style="--c:${c.accent};--c2:${c.accent2}">`;
     const sz = sizeOf(tr);
-    h += `<div class="tk-hero"><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'">
+    h += `<div class="tk-hero"><img src="${trackImg(tr)}" alt="" onerror="this.src='images/cat/${c.id}.jpg'">
       ${n === N ? '<span class="tk-crown"></span>' : ''}
       <div class="tk-heroin"><span class="tk-chip">${c.name}</span><h2>${tr.name}</h2><p>${tr.line || ''}</p></div></div>`;
     h += `<div class="tk-size sz-${tr.size || 'months'}"><b>${sz.name}</b><span>${sz.line}</span></div>`;
@@ -2072,7 +2112,7 @@
   function openSearch() { SEARCH = SEARCH || ''; TRK = null; CAT = null; hush(); renderSchool(); }
   function closeSearch() { SEARCH = null; hush(); renderSchool(); }
 
-  function trackRow(tr) { const c = catOf(tr), n = trackDone(tr), N = tr.steps.length; return `<button class="srow track pic" style="--c:${c.accent};--c2:${c.accent2}" data-track="${tr.id}"><img src="images/track/${tr.id}.jpg" alt="" loading="lazy" onerror="this.src='images/cat/${c.id}.jpg'"><span class="stxt"><span class="stest">${tr.name}</span><span class="sline2">${tr.line || ''}</span><span class="szr sz-${tr.size || 'months'}">${sizeOf(tr).name}</span><span class="sprog"><i style="width:${Math.round(n / N * 100)}%"></i></span></span><span class="snum">${n} of ${N}</span></button>`; }
+  function trackRow(tr) { const c = catOf(tr), n = trackDone(tr), N = tr.steps.length; return `<button class="srow track pic" style="--c:${c.accent};--c2:${c.accent2}" data-track="${tr.id}"><img src="${trackImg(tr)}" alt="" loading="lazy" onerror="this.src='images/cat/${c.id}.jpg'"><span class="stxt"><span class="stest">${tr.name}</span><span class="sline2">${tr.line || ''}</span><span class="szr sz-${tr.size || 'months'}">${sizeOf(tr).name}</span><span class="sprog"><i style="width:${Math.round(n / N * 100)}%"></i></span></span><span class="snum">${n} of ${N}</span></button>`; }
   /* The old veil. Kept as a name only, so any caller left anywhere lands on
      the page instead of a dead end. */
   const trackSheet = tr => openTrack(tr);

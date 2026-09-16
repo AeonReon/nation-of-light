@@ -3477,7 +3477,8 @@
        "ctx": "long",
        "kind": "kindness"
       }
-     ]
+     ],
+     "pic": 2
     },
     {
      "id": "fit.stretch",
@@ -14322,7 +14323,8 @@
        "ctx": "with",
        "kind": "kindness"
       }
-     ]
+     ],
+     "pic": 2
     },
     {
      "id": "nerve.walkin",

@@ -2868,7 +2868,8 @@
    "rooms": "Rooms",
    "ladders": "Ladders",
    "steps": "Single steps",
-   "more": "Showing the first {n} of {N}. Add another word to narrow it."
+   "more": "Showing the first {n} of {N}. Add another word to narrow it.",
+   "home": "Search the whole school: fasting, juggling, kites…"
   },
   "runs": {
    "title": "Days in a row",
@@ -2935,7 +2936,8 @@
     "Two months. Other people can lean on somebody like this. That is worth more than the count.",
     "A hundred days. Ours built things that outlasted us by two thousand years, one day at a time.",
     "You have made a habit into a character. There is nothing further to say about it than that."
-   ]
+   ],
+   "more": "More about your days"
   },
   "kid": {
    "add": "With a little one",
@@ -5860,7 +5862,16 @@
   "kindsLine": "Every rung is one of four kinds. Here is every ladder by the kind it mostly is.",
   "areaAfter": "Opens when {name} is done",
   "traitsLine": "Every ladder, by the quality it grows in you.",
-  "dayPill": "Day {n}"
+  "dayPill": "Day {n}",
+  "standing": {
+   "title": "Where you stand",
+   "lede": "{n} things done, by the part of life they belong to. Tap one to go there.",
+   "ledeNone": "Nothing done yet. Every bar below starts at nothing; the first one moves today.",
+   "areasTitle": "By life area",
+   "traitsTitle": "What it builds",
+   "canTitle": "Things you can do now",
+   "steps": "{n} step{s}"
+  }
  },
  "arrival": {
   "lines": [
