@@ -434,3 +434,20 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   equal buttons; the drop-down's doubled chevron fixed (`::-webkit-details-marker`); (5) home
   picks are clear boxes (`.pick` card with the room's colour ring, 104px picture filling the
   box height, buttons `white-space:nowrap`). 173 ladders.
+- **v71 (2026-09-16, Fable session): his list after a day with v70.** (1) The quiet/face button
+  is gone (they are always there; the sound button is the mute): `quietFolk()` is always false,
+  the help-panel toggle removed. (2) **Everything = three groupings as segmented buttons**
+  (`.seg`, always shown): **Life areas** (rebuilt to HIS categories: Health, Relationships,
+  Community, Prosperity, Knowledge, Home, Fun and creativity, New experiences, Spirituality,
+  Emotions — `school.json.areas`, every ladder in exactly one), **What it builds** (eight
+  qualities, `school.json.traits`: Courage, Confidence, Calm, Kindness, Discipline, Curiosity,
+  Joy, Patience — every ladder in exactly one, `renderTraits`), and **Everything** (the rooms;
+  a room page lists only open ladders + "n more open later"). `renderKinds` is kept but unused.
+  (3) The mute button has a red line (`.round.off::after`). (4) "More about this" is right-
+  aligned (thumb side). (5) The "0 · Spark" rank pill became the **day pill**: "Day n" = days
+  lit + (today not lit ? 1 : 0), tap → the days room (`paintDayPill`, `C.school.dayPill`); rank
+  stays on the stand card at home. (6) **Their words no longer push the page**: `#capband`
+  lives INSIDE `#scene`, absolute over the foot of the band. (7) **The tuck handle** at the foot
+  of the band (`#tuckbtn`, `setTucked(on)`, `S.school.tucked`): the band folds to
+  `env(safe-area-inset-top) + 60px` showing the entablature (`preserveAspectRatio` flips to
+  `xMidYMin`), figures/torches/caption/hud hidden, chevron flips; remembered.

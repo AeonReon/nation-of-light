@@ -19388,9 +19388,9 @@
    ]
   },
   {
-   "id": "family",
-   "name": "Family and friends",
-   "line": "The people close to you, and being good to have around.",
+   "id": "relationships",
+   "name": "Relationships",
+   "line": "Family, friends, and being good to have around.",
    "image": "cat/care.jpg",
    "open": [
     "speak.people1"
@@ -19412,40 +19412,28 @@
    ]
   },
   {
-   "id": "network",
-   "name": "Network and community",
-   "line": "Strangers, your town, walking in anywhere, and belonging.",
+   "id": "community",
+   "name": "Community",
+   "line": "Your town, strangers, your network, and belonging somewhere.",
    "image": "cat/belong.jpg",
    "open": [
     "belong.town1",
-    "nerve.asking"
+    "speak.strangers"
    ],
    "tracks": [
     "belong.town1",
-    "nerve.asking",
-    "belong.chair",
     "speak.strangers",
     "speak.connect",
-    "nerve.phone",
-    "nerve.walkin",
-    "nerve.no",
-    "nerve.onthespot",
-    "nerve.odd",
-    "belong.shops",
-    "belong.cars",
-    "belong.rooms",
-    "belong.carry",
-    "belong.story",
     "speak.teach",
-    "speak.stage",
     "care.place",
-    "beauty.town"
+    "beauty.town",
+    "care.animals"
    ]
   },
   {
    "id": "prosperity",
    "name": "Prosperity",
-   "line": "Earning, selling, running something, and getting a fair deal.",
+   "line": "Money, work, selling, and getting a fair deal.",
    "image": "cat/money.jpg",
    "open": [
     "money.value1",
@@ -19468,8 +19456,8 @@
    ]
   },
   {
-   "id": "mind",
-   "name": "Mind and learning",
+   "id": "knowledge",
+   "name": "Knowledge",
    "line": "Numbers, words, languages, books, and thinking straight.",
    "image": "cat/words.jpg",
    "open": [
@@ -19529,52 +19517,30 @@
     "home.safe",
     "food.grow",
     "food.preserve",
-    "care.animals",
     "order.ownthings"
    ]
   },
   {
-   "id": "making",
-   "name": "Making things",
-   "line": "Wood, cloth, clay, drawing, machines, and things that fly.",
-   "image": "cat/make.jpg",
+   "id": "creativity",
+   "name": "Fun and creativity",
+   "line": "Making, music, tricks, drawing, and play.",
+   "image": "cat/music.jpg",
    "open": [
     "make.something1",
-    "make.draw"
+    "music.play1"
    ],
    "tracks": [
     "make.something1",
+    "music.play1",
     "make.draw",
     "make.knots",
+    "music.sing",
+    "body.juggle",
     "make.clay",
     "make.cloth",
     "make.wood",
     "words.callig",
     "make.photo",
-    "sky.kite",
-    "sky.birdsflight",
-    "sky.rocket",
-    "home.engines",
-    "home.bike",
-    "make.electric",
-    "make.machines",
-    "make.scissors",
-    "make.crayons"
-   ]
-  },
-  {
-   "id": "play",
-   "name": "Music, magic and play",
-   "line": "Singing, an instrument, tricks, juggling, and dance.",
-   "image": "cat/music.jpg",
-   "open": [
-    "music.play1",
-    "music.sing"
-   ],
-   "tracks": [
-    "music.play1",
-    "music.sing",
-    "body.juggle",
     "music.whistle",
     "music.rhythm",
     "music.dance",
@@ -19591,14 +19557,23 @@
     "body.upside",
     "sky.throw",
     "magic.juggleclub",
+    "sky.kite",
+    "sky.birdsflight",
+    "sky.rocket",
+    "home.engines",
+    "home.bike",
+    "make.electric",
+    "make.machines",
+    "make.scissors",
+    "make.crayons",
     "body.hopping",
     "music.song"
    ]
   },
   {
-   "id": "adventure",
-   "name": "Adventure and the outdoors",
-   "line": "Fire, weather, water, stars, and finding your way.",
+   "id": "experiences",
+   "name": "New experiences",
+   "line": "Out the door: weather, stars, water, fire, and finding your way.",
    "image": "cat/wild.jpg",
    "open": [
     "wild.door1",
@@ -19626,9 +19601,9 @@
    ]
   },
   {
-   "id": "spirit",
-   "name": "Spirit and calm",
-   "line": "Sitting still, noticing the good, and the big questions.",
+   "id": "spirituality",
+   "name": "Spirituality",
+   "line": "Stillness, gratitude, beauty, and the big questions.",
    "image": "cat/calm.jpg",
    "open": [
     "calm.still1",
@@ -19641,9 +19616,273 @@
     "calm.attention",
     "classic.beautiful",
     "classic.think",
-    "calm.hard",
     "classic.stories",
     "classic.big"
+   ]
+  },
+  {
+   "id": "emotions",
+   "name": "Emotions",
+   "line": "Nerve, confidence, and keeping your head.",
+   "image": "cat/nerve.jpg",
+   "open": [
+    "nerve.asking",
+    "belong.chair"
+   ],
+   "tracks": [
+    "nerve.asking",
+    "belong.chair",
+    "nerve.phone",
+    "nerve.walkin",
+    "nerve.no",
+    "nerve.onthespot",
+    "nerve.odd",
+    "belong.shops",
+    "belong.cars",
+    "belong.rooms",
+    "belong.carry",
+    "belong.story",
+    "calm.hard",
+    "speak.stage"
+   ]
+  }
+ ],
+ "traits": [
+  {
+   "id": "courage",
+   "name": "Courage",
+   "line": "Things that take nerve.",
+   "image": "cat/nerve.jpg",
+   "tracks": [
+    "nerve.asking",
+    "nerve.walkin",
+    "nerve.phone",
+    "nerve.no",
+    "nerve.onthespot",
+    "nerve.odd",
+    "speak.stage",
+    "speak.strangers",
+    "speak.people1",
+    "speak.people2",
+    "belong.town1",
+    "money.value1",
+    "deal.walkaway",
+    "deal.more",
+    "water.cold",
+    "body.upside",
+    "wild.camp",
+    "calm.hard",
+    "speak.hardthing",
+    "money.earn",
+    "money.sell",
+    "money.run"
+   ]
+  },
+  {
+   "id": "confidence",
+   "name": "Confidence",
+   "line": "Carrying yourself, and being at ease anywhere.",
+   "image": "cat/belong.jpg",
+   "tracks": [
+    "belong.chair",
+    "belong.shops",
+    "belong.cars",
+    "belong.rooms",
+    "belong.carry",
+    "belong.story",
+    "speak.connect",
+    "speak.humour",
+    "speak.story",
+    "speak.sayit",
+    "music.sing",
+    "music.play1",
+    "magic.cards",
+    "magic.coins",
+    "magic.mentalism",
+    "magic.mime",
+    "magic.puppet",
+    "deal.price",
+    "deal.terms",
+    "deal.both",
+    "deal.phone",
+    "money.negotiate",
+    "speak.teach"
+   ]
+  },
+  {
+   "id": "calm",
+   "name": "Calm",
+   "line": "Stillness, breath, and a clear head.",
+   "image": "cat/calm.jpg",
+   "tracks": [
+    "calm.still1",
+    "calm.still",
+    "calm.attention",
+    "calm.sleep",
+    "calm.gratitude",
+    "classic.beautiful",
+    "classic.think",
+    "body.breath",
+    "fit.stretch",
+    "words.callig",
+    "classic.big",
+    "classic.stories"
+   ]
+  },
+  {
+   "id": "kindness",
+   "name": "Kindness",
+   "line": "Things done for somebody else.",
+   "image": "cat/care.jpg",
+   "tracks": [
+    "care.younger",
+    "care.older",
+    "care.giving",
+    "care.welcome",
+    "care.helping",
+    "care.place",
+    "care.animals",
+    "food.host",
+    "speak.listen",
+    "order.giving",
+    "beauty.town"
+   ]
+  },
+  {
+   "id": "discipline",
+   "name": "Discipline",
+   "line": "Showing up, and keeping the thing kept.",
+   "image": "cat/fit.jpg",
+   "tracks": [
+    "food.real1",
+    "food.real2",
+    "calm.fast",
+    "fit.pressup",
+    "fit.situp",
+    "fit.pullup",
+    "fit.plank",
+    "fit.squat",
+    "fit.lift",
+    "fit.sprint",
+    "body.run",
+    "body.strength",
+    "body.skip",
+    "water.swim",
+    "home.works1",
+    "home.keep",
+    "order.bedroom",
+    "order.desk",
+    "order.wardrobe",
+    "order.broken",
+    "order.digital",
+    "order.forgotten",
+    "order.keeping",
+    "order.ownthings",
+    "money.handling",
+    "money.invest",
+    "words.hand",
+    "mind.tables",
+    "mind.mental",
+    "food.kitchen"
+   ]
+  },
+  {
+   "id": "curiosity",
+   "name": "Curiosity",
+   "line": "Finding things out, and looking properly.",
+   "image": "cat/words.jpg",
+   "tracks": [
+    "mind.learn1",
+    "mind.findout",
+    "mind.codes",
+    "mind.puzzles",
+    "mind.maps",
+    "words.lang",
+    "words.irish",
+    "words.read",
+    "words.books",
+    "words.sign",
+    "words.poems",
+    "classic.logic",
+    "classic.question",
+    "classic.roots",
+    "wild.living",
+    "wild.weather",
+    "wild.tracks",
+    "wild.forage",
+    "wild.wayfind",
+    "sky.stars",
+    "sky.wind",
+    "sky.birdsflight",
+    "home.engines",
+    "beauty.look",
+    "beauty.proportion",
+    "beauty.shapes",
+    "beauty.symmetry",
+    "beauty.arches",
+    "water.pools",
+    "wild.door1",
+    "wild.shelter"
+   ]
+  },
+  {
+   "id": "joy",
+   "name": "Joy",
+   "line": "Play, music, and being outside.",
+   "image": "cat/music.jpg",
+   "tracks": [
+    "music.instrument",
+    "music.rhythm",
+    "music.whistle",
+    "music.songwrite",
+    "music.readmusic",
+    "music.dance",
+    "music.song",
+    "body.juggle",
+    "body.balance",
+    "body.hopping",
+    "magic.juggleclub",
+    "sky.throw",
+    "sky.kite",
+    "sky.rocket",
+    "water.row",
+    "water.sail",
+    "water.fish",
+    "body.ride",
+    "wild.fire",
+    "food.firecook"
+   ]
+  },
+  {
+   "id": "patience",
+   "name": "Patience",
+   "line": "Slow work with the hands, done well.",
+   "image": "cat/make.jpg",
+   "tracks": [
+    "make.something1",
+    "make.wood",
+    "make.cloth",
+    "make.knots",
+    "make.clay",
+    "make.draw",
+    "make.electric",
+    "make.machines",
+    "make.photo",
+    "make.scissors",
+    "make.crayons",
+    "home.mend",
+    "home.tools",
+    "home.bike",
+    "home.firstaid",
+    "home.safe",
+    "food.cook",
+    "food.bake",
+    "food.knife",
+    "food.grow",
+    "food.preserve",
+    "mind.cube",
+    "mind.chess",
+    "mind.memory"
    ]
   }
  ]

@@ -2280,15 +2280,15 @@
   "allViews": [
    [
     "areas",
-    "By life area"
+    "Life areas"
+   ],
+   [
+    "traits",
+    "What it builds"
    ],
    [
     "rooms",
-    "By topic"
-   ],
-   [
-    "kinds",
-    "By kind"
+    "Everything"
    ]
   ],
   "gate": {
@@ -5858,7 +5858,9 @@
    "points": "points"
   },
   "kindsLine": "Every rung is one of four kinds. Here is every ladder by the kind it mostly is.",
-  "areaAfter": "Opens when {name} is done"
+  "areaAfter": "Opens when {name} is done",
+  "traitsLine": "Every ladder, by the quality it grows in you.",
+  "dayPill": "Day {n}"
  },
  "arrival": {
   "lines": [
@@ -6454,8 +6456,6 @@
   ]
  },
  "help": {
-  "popins": "Marcus and Aurelia",
-  "popinsHint": "Tap the face at the top to send them away or bring them back. With them off the portico is quiet — nobody appears and nobody speaks unless you ask.",
   "builder": {
    "title": "See it as they will",
    "lede": "The school as somebody at each stage sees it. Your own account is kept and comes back with one tap.",

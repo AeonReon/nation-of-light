@@ -126,7 +126,7 @@
      them standing there again. It now means what it looks like it means: the
      two of them are away, everywhere, until he taps the face again. The portico
      is simply quiet — nobody appears and nobody speaks unless he asks. */
-  const quietFolk = () => S.popins === false;
+  const quietFolk = () => false;   /* v71: the quiet button is gone; the sound button is the mute */
   function soloNar() {
     if (!MAR.paused) { MAR.pause(); if (RIG) RIG.hush(); }
     SPEAKING = null; MQ.length = 0;
@@ -737,16 +737,17 @@
 
   function enterSchool() {
     $('stage').classList.add('school'); $('deck').hidden = true; $('school').hidden = false; $('hud').hidden = false; $('homebtn').hidden = true;
-    /* the caption goes UNDER the tabs, so the three buttons never move when one of them speaks */
-    if ($('capband').parentElement !== $('school')) $('stabs').after($('capband'));
+    /* the caption sits OVER the foot of the band (v71): the page under the tabs never moves */
+    if ($('capband').parentElement !== $('scene')) $('scene').appendChild($('capband'));
+    if (!$('tuckbtn')) { $('scene').insertAdjacentHTML('beforeend', `<button class="tuck" id="tuckbtn" aria-label="Tuck the room away"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 15l6-6 6 6"/></svg></button>`);
+      $('tuckbtn').addEventListener('click', () => { sfx('tap'); setTucked(!S.school.tucked); }); }
+    setTucked(!!S.school.tucked);
     paintSchoolCount();
-    if (!$('rankbar')) { $('countpill').hidden = true; $('hud').insertAdjacentHTML('afterbegin', `<div id="rankbar" class="daywrap">${rankBar()}</div>`);
-      const right = $('hud').querySelector('.right'); right.insertAdjacentHTML('afterbegin', `<button class="facebtn ${S.popins === false ? 'off' : ''}" id="facebtn" aria-label="${C.help ? C.help.popins : 'Pop-ups'}"><img src="images/mentors/marcus.jpg" alt=""><i></i></button>`); right.insertBefore($('searchbtn'), right.firstChild);
-      $('facebtn').addEventListener('click', () => { S.popins = S.popins === false; save(); sfx('tap');
-        $('facebtn').classList.toggle('off', quietFolk()); $('stage').classList.toggle('quiet', quietFolk());
-        if (quietFolk()) { hush(); if (!inScene()) { popOut('marcus', 0); popOut('aurelia', 0); RIG.show(false); ARIG.show(false); } }
-        else if ($('stage').classList.contains('arrive')) idleRoom(40000);
-      }); }
+    if (!$('daypill')) { $('countpill').hidden = true; $('hud').insertAdjacentHTML('afterbegin', `<button class="pill daypill" id="daypill"><svg class="flame-ic" viewBox="0 0 16 20">${HUD_FLAME}</svg><b></b></button>`);
+      $('daypill').addEventListener('click', () => { sfx('tap'); if (!$('stage').classList.contains('arrive')) goHome(); openRoom('run'); });
+      paintDayPill();
+      const right = $('hud').querySelector('.right'); right.insertBefore($('searchbtn'), right.firstChild);
+ }
     if (!$('homebtn').dataset.sun) { $('homebtn').dataset.sun = '1'; $('homebtn').querySelector('svg').outerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9h18M4 9v10M9 9v10M15 9v10M20 9v10M2 19h20M12 3l9 6H3z"/></svg>'; }
     plates(false); MODE = 'school'; CUR = null; $('mfig').classList.remove('walk-in');
     const d = today(), fresh0 = !S.school.arrivedEver;
@@ -768,7 +769,9 @@
     if (FLAMES_LIT >= 0 && n > FLAMES_LIT) sfx('flame');
     FLAMES_LIT = n;
   }
-  function paintSchoolCount() { const p = points(), r = rankOf(p); $('countn').textContent = p; const of = $('countn').nextElementSibling; of.hidden = false; of.textContent = r.name; paintRank(); paintDay(); paintWho(); paintFlames(); }
+  /* v71, his: "0 · Spark" top left meant nothing to a new user. The pill is the day of your journey. */
+  function paintDayPill() { const b = $('daypill'); if (!b) return; const lit = daysLit(), n = lit.size + (lit.has(today()) ? 0 : 1); b.querySelector('b').textContent = fmt1(C.school.dayPill || 'Day {n}', { n }); }
+  function paintSchoolCount() { const p = points(), r = rankOf(p); $('countn').textContent = p; const of = $('countn').nextElementSibling; of.hidden = false; of.textContent = r.name; paintRank(); paintDayPill(); paintDay(); paintWho(); paintFlames(); }
   /* the home button carries the child's name while it is their page: no room
      in that header for one more pill, and the name IS the way home */
   function paintWho() { const hb = $('homebtn'); if (hb) hb.hidden = true;
@@ -1412,7 +1415,7 @@
     } else if (cat) {
       dock('scene'); RIG.show(true); ARIG.show(true); $('mfig').classList.remove('popin', 'popout'); $('afig').classList.remove('popin', 'popout');
       $('sline').textContent = '';
-      list.innerHTML = `<div class="roomhead" style="--c:${cat.accent};--c2:${cat.accent2}"><img src="images/cat/${cat.id}.jpg" alt=""><div><h2>${cat.name}</h2><p>${cat.line}</p></div></div>` + cat.tracks.map(trackRow).join('');
+      list.innerHTML = `<div class="roomhead" style="--c:${cat.accent};--c2:${cat.accent2}"><img src="images/cat/${cat.id}.jpg" alt=""><div><h2>${cat.name}</h2><p>${cat.line}</p></div></div>` + cat.tracks.filter(isOpen).map(trackRow).join('') + (cat.tracks.filter(isOpen).length < cat.tracks.length ? `<p class="later">${fmt1(C.school.areaLater || '{n} more open later.', { n: cat.tracks.length - cat.tracks.filter(isOpen).length })}</p>` : '');
       stageBack(() => { hush(); CAT = null;
         if (CAT_FROM && CAT_FROM.search !== undefined) { SEARCH = CAT_FROM.search; CAT_FROM = null; }
         renderSchool(); }); list.scrollTop = 0;
@@ -1769,11 +1772,11 @@
   function renderAll(list) {
     const views = C.school.allViews || [['areas', 'Life areas'], ['rooms', 'Every room']];
     const view = (S.school.allView && views.some(v => v[0] === S.school.allView)) ? S.school.allView : views[0][0];
-    const seg = everythingOpen() ? `<label class="viewsel"><select id="viewsel">${views.map(([k, l]) => `<option value="${k}" ${view === k ? 'selected' : ''}>${l}</option>`).join('')}</select><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></label>` : '';
-    if (view === 'areas' || !everythingOpen()) { renderAreas(list, seg); }
-    else if (view === 'kinds') { renderKinds(list, seg); }
-    else { renderRooms(list, seg); }
-    const vs = list.querySelector('#viewsel'); if (vs) vs.addEventListener('change', () => { sfx('tap'); S.school.allView = vs.value; save(); renderSchool(); });
+    const seg = `<div class="seg" role="tablist">${views.map(([k, l]) => `<button class="${view === k ? 'on' : ''}" data-view="${k}">${l}</button>`).join('')}</div>`;
+    if (view === 'traits') { renderTraits(list, seg); }
+    else if (view === 'rooms') { renderRooms(list, seg); }
+    else { renderAreas(list, seg); }
+    list.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => { sfx('tap'); S.school.allView = b.dataset.view; save(); renderSchool(); }));
   }
   const areaRow = a => { const trs = a.tracks.map(trackById).filter(isOpen), n = trs.reduce((s, tr) => s + trackDone(tr), 0), N = trs.reduce((s, tr) => s + tr.steps.length, 0), c = catOf(trs[0]);
     return `<button class="srow pic area" data-area="${a.id}" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/${a.image}" alt="" loading="lazy"><span class="stxt"><span class="stest">${a.name}</span><span class="sline2">${a.line}</span><span class="sprog"><i style="width:${N ? Math.round(n / N * 100) : 0}%"></i></span></span><span class="snum">${n ? n + ' of ' + N : trs.length + (trs.length === 1 ? ' ladder' : ' ladders')}</span></button>`; };
@@ -1784,7 +1787,11 @@
     list.innerHTML = seg + little + `<div class="areas">${(SCH.areas || []).map(areaRow).join('')}</div>`;
     list.querySelectorAll('[data-area]').forEach(el => el.addEventListener('click', () => { sfx('tap'); AREA = el.dataset.area; renderSchool(); }));
   }
-  /* by kind: each ladder under the kind most of its rungs are (Craft, Attention, Courage, Kindness) */
+  /* what it builds (v71): eight qualities, every ladder under one (school.json `traits`) */
+  function renderTraits(list, seg) {
+    $('sline').textContent = C.school.traitsLine || '';
+    list.innerHTML = seg + (SCH.traits || []).map(t => { const trs = t.tracks.map(trackById).filter(isOpen); if (!trs.length) return ''; return `<div class="ghead"><h3>${t.name}</h3><p>${t.line}</p></div>` + trs.map(trackRow).join(''); }).join('');
+  }
   function renderKinds(list, seg) {
     $('sline').textContent = C.school.kindsLine || '';
     const KD = C.school.traits.kinds, order = ['skill', 'attention', 'courage', 'kindness'];
@@ -2213,15 +2220,10 @@
         <li><b>No excuses</b> is the line under each one: what to use when you don't have the thing.</li>
         <li>The flame lights on your first Done. The sun climbs as you go.</li>
       </ul>
-      ${C.help ? `<label class="toggle"><input type="checkbox" id="popins" ${S.popins === false ? '' : 'checked'}><span>${C.help.popins}</span><small>${C.help.popinsHint}</small></label>` : ''}
       ${C.help && C.help.builder ? builderPanel() : ''}
     </div></div>`, 'light');
     S.seenHelp = true; save();
     backBtn(v, () => closeVeil());
-    const pi = v.querySelector('#popins'); if (pi) pi.addEventListener('change', () => { S.popins = pi.checked; save(); sfx('tap');
-      const fb = $('facebtn'); if (fb) fb.classList.toggle('off', !pi.checked);
-      $('stage').classList.toggle('quiet', !pi.checked);
-      if (!pi.checked) { hush(); if (!inScene()) { popOut('marcus', 0); popOut('aurelia', 0); RIG.show(false); ARIG.show(false); } } });
     const B = C.help && C.help.builder;
     if (B) { v.querySelectorAll('[data-stage]').forEach(b => b.addEventListener('click', () => { sfx('tap'); previewStage(b.dataset.stage); }));
       v.querySelector('#playday').addEventListener('click', () => { sfx('tap'); closeVeil(); if (!$('stage').classList.contains('school')) return; setTimeout(() => { hush(); dayCelebrate(() => {}); }, 400); }); }
@@ -2257,6 +2259,14 @@
     const B = C.help.builder, st = (B.stages.find(s => s[0] === S.preview) || [])[1] || S.preview;
     const bar = document.createElement('button'); bar.className = 'previewbar'; bar.innerHTML = `<span>${fmt1(B.seeing, { stage: st })}</span><b>${B.mine}</b>`;
     bar.addEventListener('click', () => previewStage('mine')); $('stage').appendChild(bar);
+  }
+  /* v71, his: sometimes you want the whole page. The handle at the foot of the band tucks the
+     room up into a thin strip (the entablature shows, the two of them go with it) and brings
+     it back. Remembered. */
+  function setTucked(on) {
+    S.school.tucked = on; save(); $('stage').classList.toggle('tucked', on);
+    if (PORTICO && PORTICO.svg) PORTICO.svg.setAttribute('preserveAspectRatio', on ? 'xMidYMin slice' : 'xMidYMax slice');
+    if (on) capHide(0);
   }
   /* ---------- boot ---------- */
   async function boot() {

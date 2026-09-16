@@ -87,6 +87,8 @@ h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.012em;margi
 .round:active{transform:scale(.9)}
 .round svg{width:18px;height:18px}
 .round.off{color:var(--ink-faint)}
+.round.off::after{content:'';position:absolute;left:-3px;top:50%;width:40px;height:3px;background:#93313D;transform:rotate(-40deg);border-radius:2px;box-shadow:0 0 0 1.5px #FFF7E4}
+.round{position:relative;overflow:hidden}
 
 /* ---- the table: laurel bar and the tablet ---- */
 .deck{position:relative;flex:1 1 auto;min-height:0;display:flex;flex-direction:column;padding:10px 14px 12px;background:linear-gradient(180deg,var(--marble) 0%,#E8DFCB 100%);z-index:2}
@@ -860,7 +862,7 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 .cand .cmeta{margin-top:3px;color:var(--ink-faint)}
 .cand .cmeta b{font-weight:600}
 .cand .more{grid-column:1 / -1;margin:0}
-.cand .more summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--gold-deep);list-style:none;display:flex;align-items:center;gap:6px}
+.cand .more summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--gold-deep);list-style:none;display:flex;align-items:center;justify-content:flex-end;gap:6px}
 .cand .more summary::before{content:'';width:7px;height:7px;border-right:2px solid var(--gold-deep);border-bottom:2px solid var(--gold-deep);transform:rotate(45deg);transition:transform .25s var(--ease);margin-bottom:3px}
 .cand .more[open] summary::before{transform:rotate(-135deg);margin-bottom:-2px}
 .cand .more p{margin:8px 0 0;font-size:13.5px;line-height:1.5;color:var(--ink)}
@@ -1377,3 +1379,16 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 .srow .lockline{display:block;margin-top:4px;font-size:12px;font-weight:700;color:var(--gold-deep)}
 
 .pick .pbtns .btn{white-space:nowrap}
+
+/* ---- v71: the day pill, the words over the band, the tuck handle ---- */
+.daypill{border:0;font:inherit;cursor:pointer}
+.daypill b{font-family:var(--display);font-weight:600;font-size:15px}
+.stage.school .capband{position:absolute;left:12px;right:12px;bottom:12px;margin:0;z-index:6;background:rgba(255,251,240,.94);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.tuck{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:44px;height:20px;border:0;border-radius:11px 11px 0 0;background:rgba(250,245,234,.92);box-shadow:0 -2px 10px rgba(40,28,10,.14),inset 0 0 0 1px rgba(201,162,39,.35);display:grid;place-items:center;z-index:8;cursor:pointer;color:var(--gold-deep)}
+.tuck svg{width:16px;height:16px;transition:transform .3s var(--ease)}
+.stage.school .scene{transition:max-height .45s var(--ease)}
+.stage.school.tucked .scene{max-height:calc(env(safe-area-inset-top,0px) + 60px)}
+.stage.school.tucked .mfig,.stage.school.tucked .afig{opacity:0;pointer-events:none}
+.stage.school.tucked .torch,.stage.school.tucked .capband{display:none!important}
+.stage.school.tucked .tuck svg{transform:rotate(180deg)}
+.stage.school.tucked .hud{display:none}
