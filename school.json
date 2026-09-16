@@ -1143,6 +1143,155 @@
    "line": "Fire, finding your way, shelter, weather, tracks, wild food.",
    "tracks": [
     {
+     "id": "wild.door1",
+     "name": "Out the door, part one",
+     "line": "From an hour's walk without a phone to a whole day outside.",
+     "size": "months",
+     "strand": "get-strong-outside",
+     "steps": [
+      {
+       "n": 1,
+       "test": "Walk for an hour with the phone in your pocket the whole time.",
+       "ctx": "out",
+       "kind": "attention",
+       "note": "Anywhere: streets count. Notice what you look at when there is nothing to look at."
+      },
+      {
+       "n": 2,
+       "test": "Say which way is north from where you stand, then check.",
+       "ctx": "out",
+       "kind": "attention",
+       "note": "The sun, the time, moss, a landmark. Then a compass or a map to see how you did."
+      },
+      {
+       "n": 3,
+       "test": "Watch the sky at dusk until the first star, and name it if you can.",
+       "ctx": "out",
+       "kind": "attention",
+       "note": "The first \"star\" is often a planet. A free sky app will tell you which."
+      },
+      {
+       "n": 4,
+       "test": "Go out in the rain on purpose, dressed for it, for twenty minutes.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "Proper coat, hood up. Nobody else is out; that is what makes it good."
+      },
+      {
+       "n": 5,
+       "test": "Name five trees or plants on one walk.",
+       "ctx": "out",
+       "kind": "attention",
+       "note": "A street, a park, a verge. An app can name them; you have to remember them."
+      },
+      {
+       "n": 6,
+       "test": "Read tomorrow's weather from tonight's sky and wind, write it down, and check.",
+       "ctx": "out",
+       "kind": "attention",
+       "note": "Red sky, wind direction, the kind of cloud. Then see in the morning. Wrong is fine; the looking is the rung."
+      },
+      {
+       "n": 7,
+       "test": "Walk somewhere new with a paper map, or no map at all.",
+       "ctx": "out",
+       "kind": "attention",
+       "note": "Pick a point a mile off and find a way there you have never used."
+      },
+      {
+       "n": 8,
+       "test": "Light a candle with one match.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "A fire where you have somewhere to make one; a candle where you do not. One match, no second go."
+      },
+      {
+       "n": 9,
+       "test": "Watch the sunrise, out of doors.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "Look up the time, be outside ten minutes before. Once a year would change most people."
+      },
+      {
+       "n": 10,
+       "test": "Walk ten thousand steps in one day.",
+       "ctx": "out",
+       "kind": "skill",
+       "note": "About five miles. The phone counts them; the legs do the rest."
+      },
+      {
+       "n": 11,
+       "test": "Find the moon, say what phase it is, and where it will be tomorrow.",
+       "ctx": "out",
+       "kind": "attention",
+       "note": "Later each night, by about fifty minutes. Check tomorrow."
+      },
+      {
+       "n": 12,
+       "test": "Sit outside for thirty minutes and write down everything alive you saw.",
+       "ctx": "out",
+       "kind": "attention",
+       "note": "Birds, insects, a cat, a dog, people. A doorstep or a balcony will do."
+      },
+      {
+       "n": 13,
+       "test": "Eat one meal outside.",
+       "ctx": "out",
+       "kind": "attention",
+       "note": "A sandwich on a bench, a flask on a wall. Weather permitting is not a rule; dressing for it is."
+      },
+      {
+       "n": 14,
+       "test": "Walk for two hours in one go.",
+       "ctx": "out",
+       "kind": "skill",
+       "note": "Six or seven miles. Water, a snack, no hurry."
+      },
+      {
+       "n": 15,
+       "test": "Spot three birds and name them.",
+       "ctx": "out",
+       "kind": "attention",
+       "note": "Pigeon, gull and crow count at first. A robin, a blackbird, a wren next."
+      },
+      {
+       "n": 16,
+       "test": "Go for a walk at night with a torch you do not switch on.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "Twenty minutes. Eyes adjust in about ten. Streets count; somewhere darker is better."
+      },
+      {
+       "n": 17,
+       "test": "Get yourself to somewhere five miles away and back, on foot or by bike.",
+       "ctx": "out",
+       "kind": "skill",
+       "note": "Ten miles in the day. Plan it, pack water, go."
+      },
+      {
+       "n": 18,
+       "test": "Pack a bag for a day out with everything you would need, and go.",
+       "ctx": "out",
+       "kind": "attention",
+       "note": "Water, food, a layer, a waterproof, a map, a plaster. Then a day out with it."
+      },
+      {
+       "n": 19,
+       "test": "Find the highest point you can walk to within an hour of home, and go up it.",
+       "ctx": "out",
+       "kind": "skill",
+       "note": "A hill, a tower, a multi-storey car park roof, a church that lets you climb. Look at your town from above."
+      },
+      {
+       "n": 20,
+       "test": "A whole day outside, dawn to dusk.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "Sunrise from rung nine, dusk from rung three, and everything between. Part two is the wild proper."
+      }
+     ]
+    },
+    {
      "id": "wild.fire",
      "name": "Fire",
      "line": "Gathering sticks to teaching somebody else.",
@@ -4178,6 +4327,155 @@
    "accent2": "#AFC2DE",
    "line": "Tables, the cube, chess, memory, codes, puzzles.",
    "tracks": [
+    {
+     "id": "mind.learn1",
+     "name": "Learning to learn, part one",
+     "line": "From one thing you wondered about to thinking for half an hour with a pen.",
+     "size": "months",
+     "strand": "say-what-you-mean",
+     "steps": [
+      {
+       "n": 1,
+       "test": "Look up one thing you have wondered about and read until you could explain it.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Why the sky is blue, how a lock works, where a word comes from. Explain it to the wall if nobody is there."
+      },
+      {
+       "n": 2,
+       "test": "Read for twenty minutes with your phone in another room.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Anything on paper. Twenty minutes is longer than it sounds the first time."
+      },
+      {
+       "n": 3,
+       "test": "Write ten lines by hand, slowly and neatly.",
+       "ctx": "room",
+       "kind": "skill",
+       "note": "Copy them from a book. The point is the hand, not the words."
+      },
+      {
+       "n": 4,
+       "test": "Learn five words of a language you do not speak and say them out loud.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Hello, thank you, please, yes, no. Pick the language of a place you would like to go."
+      },
+      {
+       "n": 5,
+       "test": "Memorise ten things and say them back an hour later.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "A shopping list, a poem's first verse, ten capitals. Picture each one somewhere in your house."
+      },
+      {
+       "n": 6,
+       "test": "Do twenty sums in your head, no paper.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Adding prices, doubling numbers, splitting a bill. Say the answers out loud."
+      },
+      {
+       "n": 7,
+       "test": "Explain one thing you know well to somebody in three sentences.",
+       "ctx": "with",
+       "kind": "kindness",
+       "note": "If it takes more than three, you do not know it as well as you thought. Try again tomorrow."
+      },
+      {
+       "n": 8,
+       "test": "Read one chapter of a book that is a bit too hard for you.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Look up nothing. Let the hard words go by and see how much you still got."
+      },
+      {
+       "n": 9,
+       "test": "Find an answer without a screen.",
+       "ctx": "out",
+       "kind": "attention",
+       "note": "A library, a reference book on a shelf, or three people who might know. Slower, and you will remember it."
+      },
+      {
+       "n": 10,
+       "test": "Learn the times table you never quite learned.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "The sevens, the eights, the twelves. Out loud, forwards and backwards. Have them all? Squares to twenty."
+      },
+      {
+       "n": 11,
+       "test": "Take one bad argument you hear this week and say, kindly, what is wrong with it.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "\"Everybody knows…\", \"you would say that\", two things happening together being called cause. Name the move."
+      },
+      {
+       "n": 12,
+       "test": "Learn twenty words of that language.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "The five from rung four and fifteen more. Numbers to ten count as ten."
+      },
+      {
+       "n": 13,
+       "test": "Read a whole book, cover to cover.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Any book, any length. Finishing is the rung."
+      },
+      {
+       "n": 14,
+       "test": "Write one page about what you learned this month.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "By hand or typed. What surprised you, what you got wrong, what you want next."
+      },
+      {
+       "n": 15,
+       "test": "Learn one poem by heart and say it to somebody.",
+       "ctx": "with",
+       "kind": "courage",
+       "note": "Short is fine. Four lines said properly beats twenty stumbled."
+      },
+      {
+       "n": 16,
+       "test": "Solve a puzzle that takes more than an hour.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "A hard crossword, a cube, a logic problem, a jigsaw. Sit with it; do not look up the answer."
+      },
+      {
+       "n": 17,
+       "test": "Teach somebody one thing you learned on this ladder.",
+       "ctx": "with",
+       "kind": "kindness",
+       "note": "The sums trick, the poem, the words. Teaching it is how you find out you know it."
+      },
+      {
+       "n": 18,
+       "test": "Hold a short conversation in that language.",
+       "ctx": "with",
+       "kind": "courage",
+       "note": "With a person, or with a recording you answer out loud. Two minutes. Mistakes and all."
+      },
+      {
+       "n": 19,
+       "test": "Read a book written more than a hundred years ago.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Old does not mean hard. A short one, all the way through, and notice what has not changed."
+      },
+      {
+       "n": 20,
+       "test": "Sit and think about one question for thirty minutes with nothing but a pen.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Write the question at the top. No phone, no book. Whatever you write underneath is yours. Part two goes deeper."
+      }
+     ]
+    },
     {
      "id": "mind.tables",
      "name": "Times tables",
@@ -7313,6 +7611,155 @@
    "line": "Wood, cloth, clay, drawing, knots, electronics, machines, code.",
    "tracks": [
     {
+     "id": "make.something1",
+     "name": "Make something, part one",
+     "line": "From a ten-minute drawing to a thing somebody asks where you bought.",
+     "size": "months",
+     "strand": "make-things",
+     "steps": [
+      {
+       "n": 1,
+       "test": "Draw one thing in front of you for ten minutes, mostly without looking at the paper.",
+       "ctx": "room",
+       "kind": "skill",
+       "note": "A mug, a hand, a plant. It will look wrong; that is the point. Keep it."
+      },
+      {
+       "n": 2,
+       "test": "Tie three knots you can name, and undo them.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "A reef knot, a bowline, a clove hitch. Rope, a shoelace, a phone cable will all do."
+      },
+      {
+       "n": 3,
+       "test": "Fold a paper aeroplane that flies across a room.",
+       "ctx": "room",
+       "kind": "skill",
+       "note": "Any paper. Fold, throw, adjust, throw again. The adjusting is the making."
+      },
+      {
+       "n": 4,
+       "test": "Draw the same thing every day for five days and keep all five.",
+       "ctx": "room",
+       "kind": "skill",
+       "note": "Same mug, same chair. Lay the five out in a row and see what happened."
+      },
+      {
+       "n": 5,
+       "test": "Make something from a cardboard box.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "A house, a mask, a shelf, a castle. Scissors and tape. It has to stand up."
+      },
+      {
+       "n": 6,
+       "test": "Sew two pieces of cloth together by hand, ten even stitches.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "Any two scraps. Even matters more than small."
+      },
+      {
+       "n": 7,
+       "test": "Take ten photographs of one ordinary thing until one is good.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "A cup, a doorway, a puddle. Move, wait for the light, try again. Keep the one."
+      },
+      {
+       "n": 8,
+       "test": "Build something that stands on its own from what is in the recycling.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "A tower, a bridge, a creature. It stands without your hand for one minute."
+      },
+      {
+       "n": 9,
+       "test": "Draw a face that looks like the person.",
+       "ctx": "with",
+       "kind": "skill",
+       "note": "Somebody sitting still for ten minutes, or a photo. Eyes halfway down the head, not at the top."
+      },
+      {
+       "n": 10,
+       "test": "Shape one thing from wood, clay, or a bar of soap.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "A spoon, a bird, a bowl. A knife and a bar of soap is enough for a first carving."
+      },
+      {
+       "n": 11,
+       "test": "Make a simple circuit: a battery, a wire, and a bulb or buzzer.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "A pound-shop kit, or a lemon, two different coins and a small LED. Light comes on: done."
+      },
+      {
+       "n": 12,
+       "test": "Take a broken thing apart and see how it worked.",
+       "ctx": "kit",
+       "kind": "attention",
+       "note": "A clock, a toaster, a toy. Unplugged. Lay the parts out in order."
+      },
+      {
+       "n": 13,
+       "test": "Draw a room in perspective, the lines meeting at one point.",
+       "ctx": "room",
+       "kind": "skill",
+       "note": "Dot in the middle, floor and ceiling lines running to it. Then the furniture."
+      },
+      {
+       "n": 14,
+       "test": "Make a gift by hand and give it.",
+       "ctx": "kit",
+       "kind": "kindness",
+       "note": "A card, a small carving, a drawing framed, a jar of something. Given, not kept."
+      },
+      {
+       "n": 15,
+       "test": "Mend one thing with glue, thread, or a screw so it works again.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "A chair, a book, a bag strap, a toy. Working is the test."
+      },
+      {
+       "n": 16,
+       "test": "Write your name beautifully twenty times, until the last one is good.",
+       "ctx": "room",
+       "kind": "skill",
+       "note": "A proper pen, slow. Compare the first and the twentieth."
+      },
+      {
+       "n": 17,
+       "test": "Make a kite, a boat, or a rocket, and fly, float, or launch it.",
+       "ctx": "out",
+       "kind": "skill",
+       "note": "Paper and string, a bottle and a cork, a balloon on a straw. It has to actually go."
+      },
+      {
+       "n": 18,
+       "test": "Follow written instructions to build something with more than twenty steps.",
+       "ctx": "kit",
+       "kind": "attention",
+       "note": "A model, flat-pack furniture, a recipe with stages. Every step, in order, no skipping."
+      },
+      {
+       "n": 19,
+       "test": "Design something on paper first, then make it.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "A drawing with sizes, then the thing. Notice where the drawing was wrong."
+      },
+      {
+       "n": 20,
+       "test": "Make one thing good enough that somebody asks where you bought it.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "That is the bar. Part two is a craft you keep."
+      }
+     ]
+    },
+    {
      "id": "make.wood",
      "name": "Wood",
      "line": "Sanding to furniture.",
@@ -8484,6 +8931,155 @@
    "accent2": "#CFB2DC",
    "line": "Singing, an instrument, rhythm, songs, whistling, reading music.",
    "tracks": [
+    {
+     "id": "music.play1",
+     "name": "Play, part one",
+     "line": "From a song sung alone to a five-minute show for two people.",
+     "size": "months",
+     "strand": "make-things",
+     "steps": [
+      {
+       "n": 1,
+       "test": "Sing one whole song out loud, alone, start to finish.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "In the car, the shower, the kitchen. All the verses you know."
+      },
+      {
+       "n": 2,
+       "test": "Clap a rhythm back to somebody, and have them clap yours.",
+       "ctx": "with",
+       "kind": "skill",
+       "note": "Four beats, then eight. A table and two spoons if hands are boring."
+      },
+      {
+       "n": 3,
+       "test": "Learn one coin or card trick well enough to fool yourself in a mirror.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "A coin vanish, or the trick where the chosen card comes to the top. Ten minutes a day for three days."
+      },
+      {
+       "n": 4,
+       "test": "Throw and catch one ball a hundred times without dropping it.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "A rolled sock counts. Same height every throw; that is the whole secret of juggling."
+      },
+      {
+       "n": 5,
+       "test": "Whistle a tune somebody can name.",
+       "ctx": "room",
+       "kind": "skill",
+       "note": "Cannot whistle? Hum it, and whistling is a rung in the Music room when you want it."
+      },
+      {
+       "n": 6,
+       "test": "Stand on one leg for a minute, then the other.",
+       "ctx": "room",
+       "kind": "skill",
+       "note": "Eyes on one spot. Then, when it is easy, eyes shut."
+      },
+      {
+       "n": 7,
+       "test": "Learn a three-line joke and tell it to somebody.",
+       "ctx": "with",
+       "kind": "courage",
+       "note": "Short, clean, told slowly. The pause before the last line is the joke."
+      },
+      {
+       "n": 8,
+       "test": "Do one trick for one person.",
+       "ctx": "with",
+       "kind": "courage",
+       "note": "The trick from rung three. If they see how it works, that is how you learn where to look."
+      },
+      {
+       "n": 9,
+       "test": "Juggle two balls in one hand, or three balls for three throws.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "Socks again. Three throws and a drop still counts."
+      },
+      {
+       "n": 10,
+       "test": "Dance for a whole song with nobody watching.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Curtains closed if you like. All the way to the end of the song."
+      },
+      {
+       "n": 11,
+       "test": "Play five notes on any instrument that make a tune somebody recognises.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "A keyboard app on a phone counts. Ode to Joy is five notes. An instrument you own is better."
+      },
+      {
+       "n": 12,
+       "test": "Skip ten times in a row.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "A rope, a washing line, a length of anything. Ten without a stumble."
+      },
+      {
+       "n": 13,
+       "test": "Learn a second trick and do both, one after the other, for somebody.",
+       "ctx": "with",
+       "kind": "courage",
+       "note": "Two tricks is an act. Say something between them."
+      },
+      {
+       "n": 14,
+       "test": "Sing with another person, both of you singing.",
+       "ctx": "with",
+       "kind": "courage",
+       "note": "Any song you both know. Out loud, together, to the end."
+      },
+      {
+       "n": 15,
+       "test": "Do a cartwheel, a handstand against a wall, or a forward roll.",
+       "ctx": "room",
+       "kind": "skill",
+       "note": "On grass or a carpet. Whichever you have never done, or not for twenty years."
+      },
+      {
+       "n": 16,
+       "test": "Make up a game with rules and play it with somebody.",
+       "ctx": "with",
+       "kind": "kindness",
+       "note": "A cup, a coin, a hallway. Write the rules down in three lines."
+      },
+      {
+       "n": 17,
+       "test": "Play a whole tune for one person.",
+       "ctx": "with",
+       "kind": "courage",
+       "note": "Start to finish, mistakes and all. The instrument from rung eleven."
+      },
+      {
+       "n": 18,
+       "test": "Juggle three balls for ten throws.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "This is the one people remember learning. A month of a few minutes a day."
+      },
+      {
+       "n": 19,
+       "test": "Be somebody else for ten minutes: a voice, a hat, a face painted on.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "A character with a name. Children are the best audience for this one."
+      },
+      {
+       "n": 20,
+       "test": "Put on a five-minute show for two or more people.",
+       "ctx": "with",
+       "kind": "courage",
+       "note": "A song, a trick, a joke, a tune. Introduce it. Bow at the end. Part two is a real act."
+      }
+     ]
+    },
     {
      "id": "music.sing",
      "name": "Singing",
@@ -11115,6 +11711,155 @@
    "accent2": "#DBA7C6",
    "line": "Handling it, earning it, selling, running something, investing.",
    "tracks": [
+    {
+     "id": "money.value1",
+     "name": "Money and value, part one",
+     "line": "From writing down what you spend to being paid three times for one thing.",
+     "size": "months",
+     "strand": "be-useful-to-somebody",
+     "steps": [
+      {
+       "n": 1,
+       "test": "Write down every penny you spend today.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "On paper or the notes app. No changing anything; just seeing it."
+      },
+      {
+       "n": 2,
+       "test": "Write down, roughly, what came in this month and what went out.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "One page. Two numbers and the gap between them is more than most people ever look at."
+      },
+      {
+       "n": 3,
+       "test": "Name three things you own that somebody would pay for.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Not the house. A bike, a coat, a tool, a book, a game. Write a price beside each."
+      },
+      {
+       "n": 4,
+       "test": "Sell one thing you no longer need, for any price.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "An online listing, a car boot, a friend. Given away does not count; a pound does. The point is asking for money and getting it."
+      },
+      {
+       "n": 5,
+       "test": "Ask for a better price on one thing, politely.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "\"Is that your best price?\" at a market, on a phone contract, on anything second-hand. A no costs nothing."
+      },
+      {
+       "n": 6,
+       "test": "Cancel one thing you pay for and do not use.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "A subscription, a membership, a service. If there is nothing to cancel, count it and enjoy that."
+      },
+      {
+       "n": 7,
+       "test": "Write down one skill you have that somebody would pay for.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Everybody has one. Tidying, driving, baking, explaining a phone, fixing a bike, minding a dog. Write it as an offer: \"I can … for …\"."
+      },
+      {
+       "n": 8,
+       "test": "Make one thing that could be sold.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "A card, a loaf, a poster, a small repair, a jar of something. Made, finished, and you would take money for it."
+      },
+      {
+       "n": 9,
+       "test": "Offer one thing to one person for money.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "An hour of help, a bake, a lift, a lesson. A no is a fine answer; the rung is the offer, said out loud."
+      },
+      {
+       "n": 10,
+       "test": "Earn one pound you did not have this morning.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "Any honest way. Most people go years without earning a single pound outside their job."
+      },
+      {
+       "n": 11,
+       "test": "Find out properly what three people you know do for a living.",
+       "ctx": "with",
+       "kind": "attention",
+       "note": "What they actually do all day, what is hard, what pays. Ask; people like being asked."
+      },
+      {
+       "n": 12,
+       "test": "Set one money goal with a number and a date, written down.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "\"£200 by the end of next month, from things I make or do.\" Small and real beats big and vague."
+      },
+      {
+       "n": 13,
+       "test": "Put aside a tenth of anything that comes in this week, before you spend.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "A jar, a separate account, an envelope. The oldest money habit there is. If this is already how you live, do it on purpose today and count it. Already done is still done."
+      },
+      {
+       "n": 14,
+       "test": "Ask for something you want at work or in a deal: more, better, or sooner.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "A day off, a rate, a discount, a start date. Ask once, plainly, then stop talking."
+      },
+      {
+       "n": 15,
+       "test": "Price one thing you could sell, from what it costs you to what people pay.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Materials, time, what the shop charges. Write the number down and say it out loud without flinching."
+      },
+      {
+       "n": 16,
+       "test": "Sell that thing three times.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "Three different people, or the same one thrice. Now you know it sells."
+      },
+      {
+       "n": 17,
+       "test": "Read one book, or listen to one long talk, by somebody who has actually made money.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Not a guru: a person who built and ran something. One, all the way through."
+      },
+      {
+       "n": 18,
+       "test": "Spend nothing for one whole day.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Not a penny. Notice how often the hand goes to the pocket. If this is already how you live, do it on purpose today and count it. Already done is still done."
+      },
+      {
+       "n": 19,
+       "test": "Write a one-page plan for something you could run.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "What it is, who it is for, what it costs, what it earns, what you would do first. One page, no more."
+      },
+      {
+       "n": 20,
+       "test": "Get paid by three different people for the same thing.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "That is a business, however small. Part two grows it."
+      }
+     ]
+    },
     {
      "id": "money.handling",
      "name": "Handling money",
@@ -14196,6 +14941,155 @@
    "line": "Fine shops, grand rooms and expensive things — so you never again decide somewhere is above you.",
    "tracks": [
     {
+     "id": "belong.town1",
+     "name": "Your town, part one",
+     "line": "From a street you have never walked to being greeted by name.",
+     "size": "months",
+     "strand": "be-useful-to-somebody",
+     "steps": [
+      {
+       "n": 1,
+       "test": "Walk one street in your own town that you have never walked.",
+       "ctx": "out",
+       "kind": "attention",
+       "note": "Ten minutes. Look up: the upper floors are where the old town still is. If you have walked every street, walk one at a different time of day."
+      },
+      {
+       "n": 2,
+       "test": "Learn the names of five streets or places you pass every week.",
+       "ctx": "out",
+       "kind": "attention",
+       "note": "Say them out loud as you pass. Most people can name three streets in the town they have lived in for years."
+      },
+      {
+       "n": 3,
+       "test": "Say hello to the person who runs one shop, stall or café you pass often, by name if you can.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "No need to buy anything. \"Morning, I walk past every day and never say hello.\" That is the whole rung."
+      },
+      {
+       "n": 4,
+       "test": "Find out one thing about your town's history and tell somebody.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Why the name, what the oldest building was for, who the statue is. One fact, told once."
+      },
+      {
+       "n": 5,
+       "test": "Walk into a building you have never been in and look around for two minutes.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "A library, a town hall, a church, a hotel lobby, an auction house. You are allowed. Nod to somebody, look, leave."
+      },
+      {
+       "n": 6,
+       "test": "Sit somewhere public for fifteen minutes and just watch who comes and goes.",
+       "ctx": "out",
+       "kind": "attention",
+       "note": "A bench, a square, a station, the steps of somewhere. A bench costs nothing and a café is not required."
+      },
+      {
+       "n": 7,
+       "test": "Find three groups that meet in your town and write them down.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "A choir, a club, a parkrun, a class, a market, a men's shed, a mums' group. The library notice board, a search, or asking somebody."
+      },
+      {
+       "n": 8,
+       "test": "Ask somebody local for their best recommendation.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "A walk, a view, a shop, a person worth knowing. \"You've lived here a while, what should I not miss?\""
+      },
+      {
+       "n": 9,
+       "test": "Pick up litter for ten minutes on one street and leave it better.",
+       "ctx": "out",
+       "kind": "kindness",
+       "note": "A bag and, if you have them, gloves. Nobody will thank you and that is rather the point."
+      },
+      {
+       "n": 10,
+       "test": "Go to one thing that is on, and stay half an hour.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "A market, a match, a talk, a service, a fair, a carol concert. Pick one that is free."
+      },
+      {
+       "n": 11,
+       "test": "Find out who actually runs things in your town.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "The council, your councillor, the group behind the events, who owns the big empty building. Names, written down."
+      },
+      {
+       "n": 12,
+       "test": "Send one message of thanks to a local person or group for something they run.",
+       "ctx": "room",
+       "kind": "kindness",
+       "note": "The market, the run, the choir, the litter pick. Three sentences. Local people answer."
+      },
+      {
+       "n": 13,
+       "test": "Walk into somewhere you feel you do not belong and ask one question.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "A fine shop, a golf club reception, a grand hotel. \"Is the restaurant open to non-residents?\" Smile, thank them, go."
+      },
+      {
+       "n": 14,
+       "test": "Introduce yourself to a neighbour two doors further than you have ever gone.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "Your name, how long you have been here. In a flat, the floor above or below counts."
+      },
+      {
+       "n": 15,
+       "test": "Go to one group's meeting once. Say your name. Stay to the end.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "One from rung seven. Free ones exist everywhere: a run, a choir, a walking group, a class at the library."
+      },
+      {
+       "n": 16,
+       "test": "Offer to help at one thing.",
+       "ctx": "out",
+       "kind": "kindness",
+       "note": "Set out chairs, hand out water, tidy up, hold a banner. \"Do you need a hand with anything?\" is the whole rung."
+      },
+      {
+       "n": 17,
+       "test": "Go back to the same group a second time.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "The second visit is when people start to remember you. Say your name again anyway."
+      },
+      {
+       "n": 18,
+       "test": "Bring somebody with you to something local.",
+       "ctx": "with",
+       "kind": "kindness",
+       "note": "A friend, a child, a neighbour. Being the one who knows what is on is a kind of belonging."
+      },
+      {
+       "n": 19,
+       "test": "Learn ten local names.",
+       "ctx": "out",
+       "kind": "attention",
+       "note": "The butcher, the postie, the librarian, the coach, the people at the bus stop. Write them down; use them."
+      },
+      {
+       "n": 20,
+       "test": "Be greeted by name by three people on one walk through town.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "Nothing to put on, nothing to organise. When it happens, you belong here. Part two builds something for the town."
+      }
+     ]
+    },
+    {
      "id": "belong.chair",
      "name": "From where you are sitting",
      "line": "All of this can start today, at home.",
@@ -14788,6 +15682,155 @@
    "accent2": "#B3C1CE",
    "line": "Keeping a place, mending, tools, bikes, first aid, engines.",
    "tracks": [
+    {
+     "id": "home.works1",
+     "name": "A home that works, part one",
+     "line": "From a made bed to a place that is ready for anybody in ten minutes.",
+     "size": "months",
+     "strand": "look-after-the-place",
+     "steps": [
+      {
+       "n": 1,
+       "test": "Make your bed and clear the floor of your room.",
+       "ctx": "home",
+       "kind": "skill",
+       "note": "Everything off the floor, into its place or a bag. Two minutes, and the whole room looks different."
+      },
+      {
+       "n": 2,
+       "test": "Empty one drawer and put it back in order.",
+       "ctx": "home",
+       "kind": "attention",
+       "note": "Everything out, wipe it, only what belongs goes back. One drawer, not the kitchen."
+      },
+      {
+       "n": 3,
+       "test": "Wash up everything and leave the sink empty and dry.",
+       "ctx": "home",
+       "kind": "skill",
+       "note": "Dry and empty is the rung. A dry sink is the sign of a kitchen somebody runs."
+      },
+      {
+       "n": 4,
+       "test": "Fix one small broken thing.",
+       "ctx": "home",
+       "kind": "skill",
+       "note": "A loose handle, a squeaking door, a wobbling chair, a blown bulb. Ten minutes and a screwdriver."
+      },
+      {
+       "n": 5,
+       "test": "Find out where the water stopcock and the fuse box are, and how they work.",
+       "ctx": "home",
+       "kind": "attention",
+       "note": "Turn the stopcock and back. Open the fuse box and read the labels. Renting counts just the same."
+      },
+      {
+       "n": 6,
+       "test": "Give away five things.",
+       "ctx": "home",
+       "kind": "kindness",
+       "note": "A bag to a charity shop, a neighbour, a friend. Things you have not used in a year."
+      },
+      {
+       "n": 7,
+       "test": "Clean one window until you forget it is there.",
+       "ctx": "home",
+       "kind": "skill",
+       "note": "Inside and out if you can reach. Newspaper and vinegar work. Then look through it."
+      },
+      {
+       "n": 8,
+       "test": "Sort the phone: delete twenty things and turn off ten notifications.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Apps, photos, old messages. Then the notifications that were never your idea."
+      },
+      {
+       "n": 9,
+       "test": "Cook, and leave the kitchen as you found it.",
+       "ctx": "home",
+       "kind": "skill",
+       "note": "Cooking is half the job. The other half is a kitchen that does not know you were there."
+      },
+      {
+       "n": 10,
+       "test": "Learn one house skill: change a fuse, reset a trip switch, or bleed a radiator.",
+       "ctx": "home",
+       "kind": "skill",
+       "note": "Ask somebody, watch a video, then do it yourself. One is enough today."
+      },
+      {
+       "n": 11,
+       "test": "Sew on a button or mend one hem.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "Needle, thread, five minutes. Nobody will see the stitches and you will know they are there."
+      },
+      {
+       "n": 12,
+       "test": "Clear one forgotten place.",
+       "ctx": "home",
+       "kind": "attention",
+       "note": "Under the bed, the top of the wardrobe, the cupboard under the stairs, the glove box. One."
+      },
+      {
+       "n": 13,
+       "test": "Keep a plant alive for a fortnight.",
+       "ctx": "kit",
+       "kind": "kindness",
+       "note": "A cutting in a jar of water counts. Water it, look at it, notice when it wants something."
+      },
+      {
+       "n": 14,
+       "test": "Sharpen the knives, oil a hinge, and tighten whatever wobbles.",
+       "ctx": "home",
+       "kind": "skill",
+       "note": "Three small things in one go. A home stays working through small things done early."
+      },
+      {
+       "n": 15,
+       "test": "Do one whole room properly: cleared, cleaned, everything with a place.",
+       "ctx": "home",
+       "kind": "attention",
+       "note": "Half a day. Choose the room you use most. Take a photo before and after."
+      },
+      {
+       "n": 16,
+       "test": "Make a first-aid kit that would actually help.",
+       "ctx": "kit",
+       "kind": "attention",
+       "note": "Plasters, a bandage, antiseptic, painkillers, scissors, tweezers, a foil blanket. Check what is out of date."
+      },
+      {
+       "n": 17,
+       "test": "Deal with the pile: every letter and paper opened, filed, or binned.",
+       "ctx": "home",
+       "kind": "attention",
+       "note": "One sitting. Three piles: act, keep, bin. The bin pile is bigger than you think."
+      },
+      {
+       "n": 18,
+       "test": "Make one thing for the home.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "A shelf, a frame, a cushion, a hook, a bird box. Made by you, in use."
+      },
+      {
+       "n": 19,
+       "test": "A full week with the place tidy every night before bed.",
+       "ctx": "home",
+       "kind": "attention",
+       "note": "Ten minutes each night. By the seventh night it takes five."
+      },
+      {
+       "n": 20,
+       "test": "Have somebody round, and be ready in ten minutes.",
+       "ctx": "with",
+       "kind": "kindness",
+       "note": "Tea, a clear table, a chair to sit in. When ten minutes is enough, the place works. Part two makes it beautiful."
+      }
+     ]
+    },
     {
      "id": "home.keep",
      "name": "Keeping a place",
@@ -16379,6 +17422,155 @@
    "line": "Stillness, attention, sleep, fasting, gratitude, doing hard things.",
    "tracks": [
     {
+     "id": "calm.still1",
+     "name": "Stillness, part one",
+     "line": "From two quiet minutes to a morning that begins the right way, seven days running.",
+     "size": "months",
+     "strand": "look-after-yourself",
+     "steps": [
+      {
+       "n": 1,
+       "test": "Sit still for two minutes, eyes closed, and count your breaths.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Lose count, start again. Two minutes is longer than you think and shorter than you fear."
+      },
+      {
+       "n": 2,
+       "test": "Write down three things you are grateful for tonight.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Small ones are best: the kettle, a text, the weather holding."
+      },
+      {
+       "n": 3,
+       "test": "Look at one beautiful thing for five full minutes.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "A tree, a painting, a face, the sky. Five minutes without looking away."
+      },
+      {
+       "n": 4,
+       "test": "Eat one meal with no screen, no book, no phone.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Just the food and whoever is there. Notice how long the meal actually takes."
+      },
+      {
+       "n": 5,
+       "test": "Sit still for five minutes.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Same as rung one, longer. A timer, so you are not the one watching the clock."
+      },
+      {
+       "n": 6,
+       "test": "Do the hard thing first tomorrow, before anything else.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "The call, the email, the task you keep moving. Decide tonight what it is."
+      },
+      {
+       "n": 7,
+       "test": "Thank somebody for something they did a long time ago.",
+       "ctx": "with",
+       "kind": "kindness",
+       "note": "A teacher, a parent, an old friend. A message or a call. Most people never hear it."
+      },
+      {
+       "n": 8,
+       "test": "Read one page of something old and wise, and copy out one line.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Marcus, the Psalms, Epictetus, a proverb book. One line, by hand, kept."
+      },
+      {
+       "n": 9,
+       "test": "Ten minutes of stillness.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Sitting, breathing, nothing else. The mind will wander; bring it back, that is the exercise."
+      },
+      {
+       "n": 10,
+       "test": "A whole day without complaining out loud.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Catch yourself, stop, say something else. Most people do not last until lunch the first time."
+      },
+      {
+       "n": 11,
+       "test": "Write one page on what a good life would be, for you.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Not the money. The days, the people, the work, the place. By hand if you can."
+      },
+      {
+       "n": 12,
+       "test": "A full day without news or social media.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Notice what you reach for instead. If this is already how you live, do it on purpose today and count it. Already done is still done."
+      },
+      {
+       "n": 13,
+       "test": "Forgive one small thing and let it go.",
+       "ctx": "room",
+       "kind": "kindness",
+       "note": "Nobody needs to know. Say it in your head, then stop bringing it up, even to yourself."
+      },
+      {
+       "n": 14,
+       "test": "Fifteen minutes of stillness, three days running.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Same time each day works best. Morning, before the phone."
+      },
+      {
+       "n": 15,
+       "test": "Every day for a week, write down one thing you were given for nothing.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Sight, a friend, the sea, a language, a joke. Seven days, seven things."
+      },
+      {
+       "n": 16,
+       "test": "Do something kind that nobody will ever know about.",
+       "ctx": "out",
+       "kind": "kindness",
+       "note": "Not even the person. Pay for the next coffee, clear a neighbour's leaves, leave a book on a bench."
+      },
+      {
+       "n": 17,
+       "test": "Sit with a hard feeling for ten minutes without fixing it.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "No phone, no food, no distraction. Just notice it. It changes on its own."
+      },
+      {
+       "n": 18,
+       "test": "Twenty minutes of stillness.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "This is where it starts to feel like something you would miss."
+      },
+      {
+       "n": 19,
+       "test": "Tell one person, to their face, what you are grateful to them for.",
+       "ctx": "with",
+       "kind": "courage",
+       "note": "In person, not a message. Short. Watch what it does to them."
+      },
+      {
+       "n": 20,
+       "test": "Seven mornings running that begin with stillness, gratitude, and the hard thing first.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Ten minutes still, three things written, then the hard thing. A week of it is a different life. Part two goes further in."
+      }
+     ]
+    },
+    {
      "id": "calm.still",
      "name": "Sitting still",
      "line": "One minute to twenty.",
@@ -17898,10 +19090,11 @@
    "line": "Strangers, your town, walking in anywhere, and belonging.",
    "image": "cat/belong.jpg",
    "open": [
-    "nerve.asking",
-    "belong.chair"
+    "belong.town1",
+    "nerve.asking"
    ],
    "tracks": [
+    "belong.town1",
     "nerve.asking",
     "belong.chair",
     "speak.strangers",
@@ -17928,10 +19121,11 @@
    "line": "Earning, selling, running something, and getting a fair deal.",
    "image": "cat/money.jpg",
    "open": [
-    "money.handling",
-    "deal.price"
+    "money.value1",
+    "money.handling"
    ],
    "tracks": [
+    "money.value1",
     "money.handling",
     "deal.price",
     "money.earn",
@@ -17952,10 +19146,11 @@
    "line": "Numbers, words, languages, books, and thinking straight.",
    "image": "cat/words.jpg",
    "open": [
-    "mind.findout",
-    "words.books"
+    "mind.learn1",
+    "mind.findout"
    ],
    "tracks": [
+    "mind.learn1",
     "mind.findout",
     "words.books",
     "words.read",
@@ -17987,10 +19182,11 @@
    "line": "A place that works, things mended, and nothing lost.",
    "image": "cat/home.jpg",
    "open": [
-    "order.bedroom",
-    "home.keep"
+    "home.works1",
+    "order.bedroom"
    ],
    "tracks": [
+    "home.works1",
     "order.bedroom",
     "home.keep",
     "order.desk",
@@ -18016,10 +19212,11 @@
    "line": "Wood, cloth, clay, drawing, machines, and things that fly.",
    "image": "cat/make.jpg",
    "open": [
-    "make.draw",
-    "make.knots"
+    "make.something1",
+    "make.draw"
    ],
    "tracks": [
+    "make.something1",
     "make.draw",
     "make.knots",
     "make.clay",
@@ -18044,10 +19241,11 @@
    "line": "Singing, an instrument, tricks, juggling, and dance.",
    "image": "cat/music.jpg",
    "open": [
-    "music.sing",
-    "body.juggle"
+    "music.play1",
+    "music.sing"
    ],
    "tracks": [
+    "music.play1",
     "music.sing",
     "body.juggle",
     "music.whistle",
@@ -18076,10 +19274,11 @@
    "line": "Fire, weather, water, stars, and finding your way.",
    "image": "cat/wild.jpg",
    "open": [
-    "wild.weather",
-    "sky.stars"
+    "wild.door1",
+    "wild.weather"
    ],
    "tracks": [
+    "wild.door1",
     "wild.weather",
     "sky.stars",
     "sky.wind",
@@ -18105,10 +19304,11 @@
    "line": "Sitting still, noticing the good, and the big questions.",
    "image": "cat/calm.jpg",
    "open": [
-    "calm.gratitude",
-    "calm.still"
+    "calm.still1",
+    "calm.gratitude"
    ],
    "tracks": [
+    "calm.still1",
     "calm.gratitude",
     "calm.still",
     "calm.attention",

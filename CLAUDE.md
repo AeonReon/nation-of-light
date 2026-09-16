@@ -385,3 +385,14 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   its Next-thing step and `ui-t-1` was re-voiced (Kokoro, gen_voice.py; step 5 points at the
   Home tab). music.instrument already IS the "one recognisable tune, then a song for people"
   ladder he asked about, so no new piano ladder.
+- **v68 (2026-09-16, Fable session): a beginner programme in every life area.** Eight more
+  twenty-rung "part one" ladders, each with a `note` per rung (the how, an example, the
+  no-spend alternative, and "already doing it counts" where it applies), none of them
+  place-bound: `belong.town1` Your town (network), `money.value1` Money and value
+  (prosperity), `mind.learn1` Learning to learn, `home.works1` A home that works,
+  `make.something1` Make something, `music.play1` Play, `wild.door1` Out the door
+  (adventure, all doable from a town street), `calm.still1` Stillness (spirit). With
+  `speak.people1` and `food.real1` that is ten. Each sits first in its area's `open` pair
+  (the second is an existing ladder). 171 ladders. No track tiles drawn for the ten
+  programmes yet (room image fallback): draw them with tools/order-draw.mjs when he has
+  read the rungs. Part two of each is the next content wave.
