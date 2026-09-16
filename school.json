@@ -17838,60 +17838,14 @@
  ],
  "areas": [
   {
-   "id": "people",
-   "name": "Friends and family",
-   "line": "Meeting people, keeping them, and being good to have around.",
-   "image": "cat/care.jpg",
-   "tracks": [
-    "speak.people1",
-    "speak.strangers",
-    "speak.listen",
-    "speak.connect",
-    "care.welcome",
-    "speak.humour",
-    "speak.story",
-    "food.host",
-    "care.giving",
-    "speak.hardthing",
-    "care.younger",
-    "care.older",
-    "speak.sayit",
-    "care.helping"
-   ],
-   "open": [
-    "speak.people1"
-   ]
-  },
-  {
-   "id": "work",
-   "name": "Work and money",
-   "line": "Earning, selling, running something, and getting a fair deal.",
-   "image": "cat/money.jpg",
-   "tracks": [
-    "money.handling",
-    "money.earn",
-    "money.sell",
-    "deal.price",
-    "deal.more",
-    "deal.phone",
-    "deal.terms",
-    "deal.walkaway",
-    "deal.both",
-    "money.negotiate",
-    "money.run",
-    "speak.teach",
-    "money.invest"
-   ],
-   "open": [
-    "money.handling",
-    "deal.price"
-   ]
-  },
-  {
    "id": "health",
-   "name": "Health and strength",
+   "name": "Health",
    "line": "Food, sleep, breath, and a body that can do things.",
    "image": "cat/fit.jpg",
+   "open": [
+    "food.real1",
+    "fit.stretch"
+   ],
    "tracks": [
     "food.real1",
     "calm.sleep",
@@ -17913,129 +17867,98 @@
     "water.cold",
     "calm.fast",
     "food.kitchen"
-   ],
-   "open": [
-    "food.real1",
-    "fit.stretch"
    ]
   },
   {
-   "id": "courage",
-   "name": "Confidence and courage",
-   "line": "Asking out loud, walking in, standing up, and belonging anywhere.",
-   "image": "cat/nerve.jpg",
+   "id": "family",
+   "name": "Family and friends",
+   "line": "The people close to you, and being good to have around.",
+   "image": "cat/care.jpg",
+   "open": [
+    "speak.people1"
+   ],
+   "tracks": [
+    "speak.people1",
+    "speak.listen",
+    "care.welcome",
+    "speak.humour",
+    "speak.story",
+    "food.host",
+    "care.giving",
+    "speak.hardthing",
+    "care.younger",
+    "care.older",
+    "speak.sayit",
+    "care.helping"
+   ]
+  },
+  {
+   "id": "network",
+   "name": "Network and community",
+   "line": "Strangers, your town, walking in anywhere, and belonging.",
+   "image": "cat/belong.jpg",
+   "open": [
+    "nerve.asking",
+    "belong.chair"
+   ],
    "tracks": [
     "nerve.asking",
+    "belong.chair",
+    "speak.strangers",
+    "speak.connect",
     "nerve.phone",
     "nerve.walkin",
     "nerve.no",
     "nerve.onthespot",
     "nerve.odd",
-    "belong.chair",
     "belong.shops",
     "belong.cars",
     "belong.rooms",
     "belong.carry",
     "belong.story",
-    "calm.hard",
-    "speak.stage"
-   ],
-   "open": [
-    "nerve.asking",
-    "belong.chair"
-   ]
-  },
-  {
-   "id": "calm",
-   "name": "Calm and clear thinking",
-   "line": "Sitting still, thinking straight, and noticing the good.",
-   "image": "cat/calm.jpg",
-   "tracks": [
-    "calm.gratitude",
-    "calm.still",
-    "calm.attention",
-    "classic.beautiful",
-    "classic.question",
-    "classic.logic",
-    "classic.think",
-    "classic.roots",
-    "classic.stories",
-    "classic.big"
-   ],
-   "open": [
-    "calm.gratitude",
-    "calm.still"
-   ]
-  },
-  {
-   "id": "home",
-   "name": "Home and order",
-   "line": "A place that works, things mended, and nothing lost.",
-   "image": "cat/home.jpg",
-   "tracks": [
-    "order.bedroom",
-    "order.desk",
-    "order.wardrobe",
-    "order.broken",
-    "order.giving",
-    "order.digital",
-    "order.forgotten",
-    "order.keeping",
-    "home.keep",
-    "home.tools",
-    "home.mend",
-    "home.firstaid",
-    "home.safe",
-    "food.grow",
-    "food.preserve",
+    "speak.teach",
+    "speak.stage",
     "care.place",
-    "care.animals",
-    "beauty.town",
-    "order.ownthings"
-   ],
-   "open": [
-    "order.bedroom",
-    "home.keep"
+    "beauty.town"
    ]
   },
   {
-   "id": "outdoors",
-   "name": "Outdoors and adventure",
-   "line": "Fire, weather, water, stars, and finding your way.",
-   "image": "cat/wild.jpg",
+   "id": "prosperity",
+   "name": "Prosperity",
+   "line": "Earning, selling, running something, and getting a fair deal.",
+   "image": "cat/money.jpg",
+   "open": [
+    "money.handling",
+    "deal.price"
+   ],
    "tracks": [
-    "wild.weather",
-    "sky.wind",
-    "sky.stars",
-    "wild.living",
-    "water.pools",
-    "mind.maps",
-    "wild.wayfind",
-    "wild.fire",
-    "food.firecook",
-    "wild.shelter",
-    "wild.camp",
-    "wild.forage",
-    "wild.tracks",
-    "body.ride",
-    "water.row",
-    "water.fish",
-    "water.sail"
-   ],
-   "open": [
-    "wild.weather",
-    "sky.stars"
+    "money.handling",
+    "deal.price",
+    "money.earn",
+    "money.sell",
+    "deal.more",
+    "deal.phone",
+    "deal.terms",
+    "deal.walkaway",
+    "deal.both",
+    "money.negotiate",
+    "money.run",
+    "money.invest"
    ]
   },
   {
-   "id": "learning",
-   "name": "Learning and knowledge",
-   "line": "Numbers, words, languages, books, and how to find things out.",
+   "id": "mind",
+   "name": "Mind and learning",
+   "line": "Numbers, words, languages, books, and thinking straight.",
    "image": "cat/words.jpg",
+   "open": [
+    "mind.findout",
+    "words.books"
+   ],
    "tracks": [
     "mind.findout",
-    "words.read",
     "words.books",
+    "words.read",
     "words.hand",
     "words.poems",
     "mind.tables",
@@ -18045,6 +17968,9 @@
     "mind.codes",
     "mind.cube",
     "mind.chess",
+    "classic.logic",
+    "classic.question",
+    "classic.roots",
     "words.lang",
     "words.irish",
     "words.sign",
@@ -18053,10 +17979,35 @@
     "beauty.symmetry",
     "beauty.proportion",
     "beauty.arches"
-   ],
+   ]
+  },
+  {
+   "id": "home",
+   "name": "Home",
+   "line": "A place that works, things mended, and nothing lost.",
+   "image": "cat/home.jpg",
    "open": [
-    "mind.findout",
-    "words.books"
+    "order.bedroom",
+    "home.keep"
+   ],
+   "tracks": [
+    "order.bedroom",
+    "home.keep",
+    "order.desk",
+    "order.wardrobe",
+    "order.broken",
+    "order.giving",
+    "order.digital",
+    "order.forgotten",
+    "order.keeping",
+    "home.tools",
+    "home.mend",
+    "home.firstaid",
+    "home.safe",
+    "food.grow",
+    "food.preserve",
+    "care.animals",
+    "order.ownthings"
    ]
   },
   {
@@ -18064,6 +18015,10 @@
    "name": "Making things",
    "line": "Wood, cloth, clay, drawing, machines, and things that fly.",
    "image": "cat/make.jpg",
+   "open": [
+    "make.draw",
+    "make.knots"
+   ],
    "tracks": [
     "make.draw",
     "make.knots",
@@ -18081,10 +18036,6 @@
     "make.machines",
     "make.scissors",
     "make.crayons"
-   ],
-   "open": [
-    "make.draw",
-    "make.knots"
    ]
   },
   {
@@ -18092,8 +18043,13 @@
    "name": "Music, magic and play",
    "line": "Singing, an instrument, tricks, juggling, and dance.",
    "image": "cat/music.jpg",
+   "open": [
+    "music.sing",
+    "body.juggle"
+   ],
    "tracks": [
     "music.sing",
+    "body.juggle",
     "music.whistle",
     "music.rhythm",
     "music.dance",
@@ -18105,7 +18061,6 @@
     "magic.mentalism",
     "magic.mime",
     "magic.puppet",
-    "body.juggle",
     "body.skip",
     "body.balance",
     "body.upside",
@@ -18113,10 +18068,55 @@
     "magic.juggleclub",
     "body.hopping",
     "music.song"
-   ],
+   ]
+  },
+  {
+   "id": "adventure",
+   "name": "Adventure and the outdoors",
+   "line": "Fire, weather, water, stars, and finding your way.",
+   "image": "cat/wild.jpg",
    "open": [
-    "music.sing",
-    "body.juggle"
+    "wild.weather",
+    "sky.stars"
+   ],
+   "tracks": [
+    "wild.weather",
+    "sky.stars",
+    "sky.wind",
+    "wild.living",
+    "water.pools",
+    "mind.maps",
+    "wild.wayfind",
+    "wild.fire",
+    "food.firecook",
+    "wild.shelter",
+    "wild.camp",
+    "wild.forage",
+    "wild.tracks",
+    "body.ride",
+    "water.row",
+    "water.fish",
+    "water.sail"
+   ]
+  },
+  {
+   "id": "spirit",
+   "name": "Spirit and calm",
+   "line": "Sitting still, noticing the good, and the big questions.",
+   "image": "cat/calm.jpg",
+   "open": [
+    "calm.gratitude",
+    "calm.still"
+   ],
+   "tracks": [
+    "calm.gratitude",
+    "calm.still",
+    "calm.attention",
+    "classic.beautiful",
+    "classic.think",
+    "calm.hard",
+    "classic.stories",
+    "classic.big"
    ]
   }
  ]

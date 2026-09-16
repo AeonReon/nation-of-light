@@ -1550,7 +1550,7 @@
   "y4": "Yes. Another one behind you. Keep the pace and do not stop to think.",
   "y5": "That is it. I taught a boy this way, one small thing at a time, and the world knows his name.",
   "y6": "Done, and done properly. The flame stays lit for that.",
-  "t-1": "Three buttons, and that is the whole school. Next thing hands you one small thing at a time. The long game is for skills with a ladder: an afternoon, a week, or a month. Everything is every room, laid out to be seen.",
+  "t-1": "Two buttons and home. The long game is for skills with a ladder: a week, or a month, a little most days. Everything is every part of a life, laid out to be seen.",
   "t-2": "Where you stand: the days you have shown up, the things you have done, and your rank. The bar fills toward the next one.",
   "t-3": "This is your next thing. Do it and tap Done. If it is not the one, tap Not this one and we find another. That is all there is to it.",
   "t-4": "A flame for every day you show up. It never resets, and nobody scolds you. One light a day is the whole habit.",
@@ -2250,8 +2250,8 @@
  "school": {
   "tabs": [
    [
-    "next",
-    "Next thing"
+    "home",
+    "Home"
    ],
    [
     "long",
@@ -2277,7 +2277,20 @@
   "nextLine": "One clear thing, nothing needed but you. Keep the momentum.",
   "longLine": "Skills with a ladder: an afternoon, a week, or a month. One step at a time, the next one always ready.",
   "allLine": "Every room in the school, laid out to be seen.",
-  "allViews": [["areas", "Life areas"], ["rooms", "Every room"]],
+  "allViews": [
+   [
+    "areas",
+    "By life area"
+   ],
+   [
+    "rooms",
+    "By topic"
+   ],
+   [
+    "kinds",
+    "By kind"
+   ]
+  ],
   "gate": {
    "days": 7,
    "eyebrow": "Not yet",
@@ -2285,7 +2298,10 @@
    "lede": "Do your three here each day. Keep the flame lit seven days running and the rooms beyond open: every ladder in the school, and the ten areas of a life.",
    "count": "{n} of {days} days in a row",
    "btn": "The school opens at seven days · {n} of {days}",
-   "all": { "days": 30, "points": 100 },
+   "all": {
+    "days": 30,
+    "points": 100
+   },
    "back": "Back to today"
   },
   "areasLine": "Ten areas of a life. Go to the one that needs something.",
@@ -2428,7 +2444,9 @@
     "look": "Look",
     "take": "Take it on",
     "seeAll": "Every room in the school",
-    "taken": "Taken on"
+    "taken": "Taken on",
+    "homeOne": "One to start with",
+    "other": "A different one"
    },
    "soft": {
     "title": "Enjoying {name}?",
@@ -2442,7 +2460,21 @@
     "no": "Keep it",
     "yes": "Put it down",
     "done": "{name} put down. Nothing lost."
-   }
+   },
+   "first": [
+    "mind.cube",
+    "body.juggle",
+    "magic.cards",
+    "make.draw",
+    "music.instrument",
+    "words.callig",
+    "magic.coins",
+    "body.skip",
+    "music.sing",
+    "mind.chess",
+    "mind.memory",
+    "make.clay"
+   ]
   },
   "ranks": [
    [
@@ -2811,10 +2843,10 @@
    "over": "Blazing",
    "overAt": 7,
    "lede": "Three things a day: quick ones, practice, any mix.",
-  "hail": "That is today",
-  "hailBig": "Three of three",
-  "hailRun": "Day {n} in a row",
-  "hailFirst": "The first day of many"
+   "hail": "That is today",
+   "hailBig": "Three of three",
+   "hailRun": "Day {n} in a row",
+   "hailFirst": "The first day of many"
   },
   "twoTitle": "Level two: ladders you have started",
   "twoLede": "You did the first step. The second is here when you want it. Nothing is owed.",
@@ -5822,7 +5854,8 @@
    "days": "days on it",
    "practised": "days practised",
    "points": "points"
-  }
+  },
+  "kindsLine": "Every rung is one of four kinds. Here is every ladder by the kind it mostly is."
  },
  "arrival": {
   "lines": [
@@ -6300,7 +6333,7 @@
    {
     "sel": "#stabs",
     "id": "ui-t-1",
-    "t": "Three buttons, and that is the whole school. Next thing hands you one small thing at a time. The long game is for skills with a ladder: an afternoon, a week, or a month. Everything is every room, laid out to be seen."
+    "t": "Two buttons and home. The long game is for skills with a ladder: a week, or a month, a little most days. Everything is every part of a life, laid out to be seen."
    },
    {
     "sel": ".stand",
@@ -6308,17 +6341,12 @@
     "t": "Where you stand: the days you have shown up, the things you have done, and your rank. The bar fills toward the next one."
    },
    {
-    "sel": ".acard.one",
-    "id": "ui-t-3",
-    "t": "This is your next thing. Do it and tap Done. If it is not the one, tap Not this one and we find another. That is all there is to it."
-   },
-   {
     "sel": ".week",
     "id": "ui-t-4",
     "t": "A flame for every day you show up. It never resets, and nobody scolds you. One light a day is the whole habit."
    },
    {
-    "sel": "#homebtn",
+    "sel": ".stab[data-t=\"home\"]",
     "id": "ui-t-5",
     "t": "And this is home: the portico, the two of us, where you stand and what today asks. Come back to it whenever you like."
    }
@@ -6428,7 +6456,28 @@
   "builder": {
    "title": "See it as they will",
    "lede": "The school as somebody at each stage sees it. Your own account is kept and comes back with one tap.",
-   "stages": [["one", "Day one", "The cover and the twenty-five"], ["home", "The first week", "Home only, the school shut"], ["seven", "After seven days", "One or two ladders open in each area"], ["all", "Everything open", "A month in, or a hundred points"]],
+   "stages": [
+    [
+     "one",
+     "Day one",
+     "The cover and the twenty-five"
+    ],
+    [
+     "home",
+     "The first week",
+     "Home only, the school shut"
+    ],
+    [
+     "seven",
+     "After seven days",
+     "One or two ladders open in each area"
+    ],
+    [
+     "all",
+     "Everything open",
+     "A month in, or a hundred points"
+    ]
+   ],
    "mine": "Back to my own account",
    "play": "Play the day-done celebration",
    "seeing": "Seeing it as: {stage}"

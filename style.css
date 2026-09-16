@@ -1347,3 +1347,12 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 .builder .what.dark{width:100%}
 .previewbar{position:absolute;left:50%;top:6px;transform:translateX(-50%);z-index:60;display:flex;gap:10px;align-items:center;padding:6px 12px;border-radius:999px;border:0;background:rgba(30,39,80,.88);color:#FFF3C4;font:inherit;font-size:12px;box-shadow:var(--shadow-lift);cursor:pointer;white-space:nowrap;max-width:94%}
 .previewbar b{color:#FFD166;font-weight:700}
+
+/* ---- v67: Home is the first tab; the Everything drop-down; one long skill at home ---- */
+.stab.homet{flex:0 0 auto;padding:0 14px}
+.stab.kid{color:#2B2210;background:linear-gradient(135deg,#F0D98A 0%,#C9A227 100%);max-width:34vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.viewsel{position:relative;display:block;margin:2px 0 12px}
+.viewsel select{width:100%;appearance:none;-webkit-appearance:none;font:inherit;font-weight:700;font-size:14px;color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:10px 40px 10px 14px;box-shadow:var(--shadow)}
+.viewsel svg{position:absolute;right:12px;top:50%;width:18px;height:18px;transform:translateY(-50%);pointer-events:none;color:var(--gold-deep)}
+.homeone{margin:4px 0 10px}
+.homeone .eyebrow{display:block;margin-bottom:6px}

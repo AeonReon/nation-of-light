@@ -367,3 +367,21 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   flag still wins either way; accounts from before v66 with ten steps done get the flag set once
   in `load()` so nobody who is already inside loses the school. The help panel's own pop-up
   toggle got the same no-hiding-at-home rule as the face button.
+- **v67 (2026-09-16, Fable session): Next thing gone, Home is a tab, the long game from day one, the Everything drop-down, clean life areas.**
+  His: the Next thing tab was a weaker copy of home. `renderNext` deleted; `school.tabs` = Home /
+  The long game / Everything (`TAB` defaults to `long`); the Home tab calls `goHome()` and carries
+  the child's name in gold (`paintWho`), and `#homebtn` in the header is hidden (`enterSchool`),
+  which frees the top. The long game is reachable through the gate (`TAB !== 'long'` in the guard):
+  while everything is shut it suggests `C.school.long.first` (twelve inspiring at-home skills: the
+  cube, juggling, card and coin tricks, drawing, an instrument, calligraphy, skipping, singing,
+  chess, memory, clay), all counted open by `isOpen`; the "Every room in the school" button is
+  gone (it duplicated the tab). At home with nothing taken on, `homeOne()` shows ONE of those by
+  day (`candRow`: Look / Take it on) plus "A different one" → the long tab; Look opens the ladder
+  with `{ home: true }` so Back returns home (`closeTrack`). Everything (only when everything is
+  open) has a `<select>` (`.viewsel`): By life area / By topic (rooms) / By kind (`renderKinds`,
+  each ladder under the kind most of its rungs are). The ten areas were rebuilt as CLEAN life
+  areas (his: courage is a skill, not a life area): health, family, network, prosperity, mind,
+  home, making, play, adventure, spirit; every ladder in exactly one (asserted). The tour lost
+  its Next-thing step and `ui-t-1` was re-voiced (Kokoro, gen_voice.py; step 5 points at the
+  Home tab). music.instrument already IS the "one recognisable tune, then a song for people"
+  ladder he asked about, so no new piano ladder.

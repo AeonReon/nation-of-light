@@ -627,7 +627,7 @@
      to three things taken on deliberately, a dot per step, a bit today.
      Everything is families, then rooms, then ladders. And every day begins
      in the portico: the two of them, where you stand, three for today. */
-  let TAB = 'next', CAT = null, SAIDCAT = new Set(), LONGSAID = false, LIB = [], SHOW = null, SHOWN = 0, ROOM_FROM = null;
+  let TAB = 'long', CAT = null, SAIDCAT = new Set(), LONGSAID = false, LIB = [], SHOW = null, SHOWN = 0, ROOM_FROM = null;
   const inSceneNow = () => inScene();
   const inScene = () => { const c = $('stage').classList; return c.contains('room') || c.contains('arrive') || c.contains('portico'); };
   const skey = (tr, st) => tr.id + '#' + st.n;
@@ -731,7 +731,7 @@
   function notThis(key) { const t = S.school.today; t.skip.push(key); t.picks = t.picks.filter(k => k !== key); t.later = (t.later || []).filter(k => k !== key); save(); }
 
   function enterSchool() {
-    $('stage').classList.add('school'); $('deck').hidden = true; $('school').hidden = false; $('hud').hidden = false;
+    $('stage').classList.add('school'); $('deck').hidden = true; $('school').hidden = false; $('hud').hidden = false; $('homebtn').hidden = true;
     $('shead').appendChild($('hud')); paintSchoolCount();
     if (!$('rankbar')) { $('countpill').hidden = true; $('hud').insertAdjacentHTML('afterbegin', `<div id="rankbar" class="daywrap">${rankBar()}</div><button class="facebtn ${S.popins === false ? 'off' : ''}" id="facebtn" aria-label="${C.help ? C.help.popins : 'Pop-ups'}"><img src="images/mentors/marcus.jpg" alt=""><i></i></button>`);
       $('facebtn').addEventListener('click', () => { S.popins = S.popins === false; save(); sfx('tap');
@@ -763,9 +763,9 @@
   function paintSchoolCount() { const p = points(), r = rankOf(p); $('countn').textContent = p; const of = $('countn').nextElementSibling; of.hidden = false; of.textContent = r.name; paintRank(); paintDay(); paintWho(); paintFlames(); }
   /* the home button carries the child's name while it is their page: no room
      in that header for one more pill, and the name IS the way home */
-  function paintWho() { const t = $('homebtn').querySelector('.stitle'); if (!t) return;
-    if (!t.dataset.own) t.dataset.own = t.textContent;
-    t.textContent = isKid() ? kidName() : t.dataset.own; $('homebtn').classList.toggle('kid', isKid()); }
+  function paintWho() { const hb = $('homebtn'); if (hb) hb.hidden = true;
+    const tb = document.querySelector('.stab[data-t="home"]'); if (!tb) return;
+    tb.textContent = isKid() ? kidName() : ((C.school.tabs.find(t => t[0] === 'home') || [])[1] || 'Home'); tb.classList.toggle('kid', isKid()); }
   /* ---- the arrival: the portico, the two of them, where you stand, three for today ---- */
   let HOMEN = 0;
   function goHome() { ROOMV = null; if ($('stage').classList.contains('arrive')) { hush(); renderArrival(); $('slist').scrollTop = 0; return; }
@@ -1366,10 +1366,10 @@
   }
   /* ---- the three pages ---- */
   function renderSchool() {
-    const tabs = $('stabs'); tabs.hidden = false; tabs.innerHTML = C.school.tabs.map(([k, l]) => `<button class="stab ${TAB === k ? 'on' : ''}" data-t="${k}">${l}</button>`).join('');
-    tabs.querySelectorAll('.stab').forEach(b => b.addEventListener('click', () => { sfx('tap'); TAB = b.dataset.t; CAT = null; AREA = null; SEARCH = null; renderSchool(); }));
+    const tabs = $('stabs'); tabs.hidden = false; tabs.innerHTML = C.school.tabs.map(([k, l]) => `<button class="stab ${TAB === k ? 'on' : ''} ${k === 'home' ? 'homet' : ''}" data-t="${k}">${l}</button>`).join('');
+    tabs.querySelectorAll('.stab').forEach(b => b.addEventListener('click', () => { sfx('tap'); if (b.dataset.t === 'home') { goHome(); return; } TAB = b.dataset.t; CAT = null; AREA = null; SEARCH = null; renderSchool(); }));
     const list = $('slist'); list.scrollTop = 0; paintSchoolCount();
-    if (!schoolOpen() && !TRK && !CAT && !AREA) { SEARCH = null; paintSearchBtn(); gateCard(list); return; }
+    if (!schoolOpen() && !TRK && !CAT && !AREA && TAB !== 'long') { SEARCH = null; paintSearchBtn(); gateCard(list); return; }
     if (SEARCH !== null) {
       dock('pop'); $('stage').classList.remove('room'); $('stage').classList.add('searching');
       tabs.hidden = true; $('sline').textContent = '';
@@ -1402,8 +1402,7 @@
         renderSchool(); }); list.scrollTop = 0;
     } else {
       dock('pop'); stageBack(null);
-      if (TAB === 'next') renderNext(list);
-      else if (TAB === 'long') renderLong(list);
+      if (TAB === 'long') renderLong(list);
       else renderAll(list);
       list.querySelectorAll('[data-room]').forEach(el => el.addEventListener('click', () => { sfx('tap'); CAT = el.dataset.room; renderSchool(); const id = C.school.catLines[CAT]; if (id && !SAIDCAT.has(CAT)) { SAIDCAT.add(CAT); hush(); speakSchool([{ who: 'aurelia', id, t: SCH.categories.find(c => c.id === CAT).name }]); } }));
     }
@@ -1587,7 +1586,7 @@
     v.querySelector('#touryes').addEventListener('click', () => { sfx('tap'); S.school.toured = true; save(); closeVeil(tour); });
   }
   function tour() {
-    const T = C.tour; TAB = 'next'; CAT = null; renderSchool(); hush();
+    const T = C.tour; TAB = 'long'; CAT = null; renderSchool(); hush();
     const layer = document.createElement('div'); layer.className = 'tour'; layer.innerHTML = '<div class="hole"></div><div class="tcap" id="tcap"></div>'; $('stage').appendChild(layer);
     const hole = layer.querySelector('.hole'); let i = 0;
     const place = (el) => { const r = el.getBoundingClientRect(), s = $('stage').getBoundingClientRect(); hole.style.left = (r.left - s.left - 6) + 'px'; hole.style.top = (r.top - s.top - 6) + 'px'; hole.style.width = (r.width + 12) + 'px'; hole.style.height = (r.height + 12) + 'px';
@@ -1606,23 +1605,6 @@
     step();
   }
   /* Next thing: the bar, ONE card, the week, a thought folded shut. Nothing else. */
-  function renderNext(list) {
-    $('sline').textContent = C.school.nextLine;
-    const picks = todayPicks(), later = todayPicks('later'); const pick = picks[0]; const P = C.arrival;
-    const lit = daysLit(), t = today(); const days = []; for (let i = 6; i >= 0; i--) { const d = new Date(); d.setDate(d.getDate() - i); days.push(d); }
-    const dk = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
-    const th = line(C.school.thoughts[daySeed() % C.school.thoughts.length]);
-    list.innerHTML = `<div class="acard">${standCard(true)}</div>` +
-      (pick ? (([tr, st]) => { const c = catOf(tr); return `<div class="acard one" style="--c:${c.accent};--c2:${c.accent2}"><span class="eyebrow" style="color:var(--c)">${c.name} · ${tr.name}</span><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><div class="stestbig">${st.test}</div>${st.how ? `<p class="lede">${st.how[0]}</p>` : (st.note ? `<p class="lede">${st.note}</p>` : '')}<div class="row"><button class="btn btn-gold" data-do="${skey(tr, st)}" style="flex:1.6">${P.do}</button><button class="btn btn-ghost" data-not="${skey(tr, st)}">${P.notThis}</button></div></div>`; })(pick)
-        : `<div class="acard"><p class="lede">Every quick one is done. The long game is where the rest of you lives.</p></div>`) +
-      (picks.length > 1 ? foldCard('more', C.school.nextMore || 'Three more easy ones', `<div class="acard" style="padding-top:4px">${picks.slice(1, 4).map(pickRow).join('')}</div>`) : '') +
-      (later.length ? foldCard('later', P.laterTitle || 'With people, outside, or with a thing', `<p class="lede" style="padding:0 6px">${P.laterLede || ''}</p><div class="acard" style="padding-top:4px">${later.map(pickRow).join('')}</div>`) : '') +
-      (levelTwo().length ? foldCard('two', C.school.twoTitle || 'Level two', `<p class="lede" style="padding:0 6px">${C.school.twoLede || ''}</p><div class="acard" style="padding-top:4px">${levelTwo().map(pickRow).join('')}</div>`) : '') +
-      `<div class="acard week"><div class="wrow">${days.map(d => `<span class="wk ${lit.has(dk(d)) ? 'on' : ''} ${dk(d) === t ? 'td' : ''}"><i></i><b>${d.toLocaleDateString('en-GB', { weekday: 'narrow' })}</b></span>`).join('')}</div><p>${lit.size ? `<b>${lit.size}</b> day${lit.size === 1 ? '' : 's'} lit altogether` : 'One light a day is the whole habit'}${lit.has(t) ? ' · today is lit' : ''}</p></div>` +
-      (th ? `<details class="thought"><summary>A thought from Marcus</summary><p>${th.t}</p><i>${C.names.marcus} · ${th.src}</i></details>` : '');
-    list.querySelectorAll('[data-do]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.do); if (r) stepSheet(r[0], r[1]); }));
-    list.querySelectorAll('[data-not]').forEach(b => b.addEventListener('click', () => { sfx('tap'); notThis(b.dataset.not); renderSchool(); if (line(C.arrival.another)) { hush(); popIn('marcus'); marcusSay(line(C.arrival.another), 'nod', () => popOut('marcus', 1200)); } }));
-  }
   /* The long game: up to three, taken on deliberately */
   const projects = () => (S.school.projects || []).map(trackById).filter(tr => tr && nextStep(tr)).slice(0, C.school.long.max || 3);
   function longSuggest() {
@@ -1654,16 +1636,14 @@
     const L = C.school.long, K = L.page, mine = projects(), on = new Set(mine.map(t => t.id));
     $('sline').textContent = '';
     const started = allTracks().filter(tr => !on.has(tr.id) && trackDone(tr) >= 1 && nextStep(tr)).sort((x, y) => trackDone(y) - trackDone(x)).slice(0, 6);
-    const pool = everythingOpen() ? L.list.map(trackById) : [...openIds()].map(trackById);
-    const sug = pool.filter(tr => tr && nextStep(tr) && !on.has(tr.id) && !started.includes(tr)).slice(0, 6);
+    const pool = (everythingOpen() ? L.list : (L.first || L.list)).map(trackById);
+    const sug = pool.filter(tr => tr && nextStep(tr) && !on.has(tr.id) && !started.includes(tr)).slice(0, everythingOpen() ? 6 : 12);
     list.innerHTML = `<p class="intro">${K.intro}</p>` +
       `<div class="acard takencard"><span class="eyebrow">${K.takenTitle} · ${mine.length} of ${L.max}</span>` + (mine.length ? mine.map(projectRow).join('') : `<p class="lede">${K.takenNone}</p>`) + `</div>` +
       `<div class="acard"><span class="eyebrow">${K.chooseTitle}</span>` +
       (started.length ? `<h4 class="sub">${K.startedTitle}</h4>` + started.map(candRow).join('') : '') +
-      `<h4 class="sub">${K.suggestedTitle}</h4>` + sug.map(candRow).join('') +
-      `<button class="what dark" id="seeall">${K.seeAll}</button></div>`;
+      `<h4 class="sub">${K.suggestedTitle}</h4>` + sug.map(candRow).join('') + `</div>`;
     list.querySelectorAll('[data-commit]').forEach(b => b.addEventListener('click', () => { sfx('tap'); commitCard(trackById(b.dataset.commit), 'long'); }));
-    list.querySelector('#seeall').addEventListener('click', () => { sfx('tap'); TAB = 'all'; CAT = null; renderSchool(); });
     wireLong(list);
     if (!LONGSAID && line('c-long')) { LONGSAID = true; hush(); popIn('marcus'); setTimeout(() => marcusSay(line('c-long'), 'point', () => popOut('marcus', 1400)), 700); }
   }
@@ -1687,7 +1667,14 @@
     const K = K_LG(), mine = projects();
     return `<div class="acard longcard"><span class="eyebrow">${K.roomTitle}</span><p class="lede">${mine.length ? K.roomLede : K.none}</p>` +
       (mine.length ? mine.map(tr => { const c = catOf(tr), st = nextStep(tr), n = trackDone(tr); return `<div class="lgrow taken" style="--c:${c.accent};--c2:${c.accent2}"><div class="seal"><i></i>${C.school.long.page.taken}</div><button class="px" data-drop="${tr.id}" aria-label="Put this one down">&#215;</button><img src="images/track/${tr.id}.jpg" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${st.test}</small></span>${pracLine(tr)}</div>`; }).join('') + `<p class="rule">${K.capLine || ''}</p>`
-        : `<button class="btn btn-ghost sm" id="pickLong">${K.pick}</button><p class="rule">${K.capLine || ''}</p>`) + `</div>`;
+        : `${homeOne()}<button class="btn btn-ghost sm" id="pickLong">${C.school.long.page.other || K.pick}</button><p class="rule">${K.capLine || ''}</p>`) + `</div>`;
+  }
+  /* v67, his: first-week people should see ONE long skill at home, take it or ask for another */
+  function homeOne() {
+    const L = C.school.long, ids = (everythingOpen() ? L.list : (L.first || L.list)), on = new Set(projects().map(t => t.id));
+    const cands = ids.map(trackById).filter(tr => tr && nextStep(tr) && !on.has(tr.id)); if (!cands.length) return '';
+    const tr = cands[daySeed() % cands.length];
+    return `<div class="homeone"><span class="eyebrow">${L.page.homeOne || ''}</span>${candRow(tr)}</div>`;
   }
   function wireLong(root) {
     /* The × on a taken-on skill was drawn from the start and never wired to
@@ -1698,6 +1685,7 @@
     root.querySelectorAll('[data-prac]').forEach(b => b.addEventListener('click', () => { sfx('tap'); logPractice(trackById(b.dataset.prac)); }));
     root.querySelectorAll('[data-check]').forEach(b => b.addEventListener('click', () => { sfx('tap'); checkIn(trackById(b.dataset.check)); }));
     const pk = root.querySelector('#pickLong'); if (pk) pk.addEventListener('click', () => { sfx('tap'); TAB = 'long'; leaveArrival(); });
+    root.querySelectorAll('.homeone [data-track]').forEach(b => b.addEventListener('click', () => { sfx('tap'); openTrack(trackById(b.dataset.track), { home: true }); }));
     root.querySelectorAll('[data-commit]').forEach(b => b.addEventListener('click', () => { sfx('tap'); commitCard(trackById(b.dataset.commit), 'long'); }));
   }
   const rerender = () => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); };
@@ -1764,10 +1752,11 @@
   function renderAll(list) {
     const views = C.school.allViews || [['areas', 'Life areas'], ['rooms', 'Every room']];
     const view = (S.school.allView && views.some(v => v[0] === S.school.allView)) ? S.school.allView : views[0][0];
-    const seg = everythingOpen() ? `<div class="seg" role="tablist">${views.map(([k, l]) => `<button class="${view === k ? 'on' : ''}" data-view="${k}">${l}</button>`).join('')}</div>` : '';
+    const seg = everythingOpen() ? `<label class="viewsel"><select id="viewsel">${views.map(([k, l]) => `<option value="${k}" ${view === k ? 'selected' : ''}>${l}</option>`).join('')}</select><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></label>` : '';
     if (view === 'areas' || !everythingOpen()) { renderAreas(list, seg); }
+    else if (view === 'kinds') { renderKinds(list, seg); }
     else { renderRooms(list, seg); }
-    list.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => { sfx('tap'); S.school.allView = b.dataset.view; save(); renderSchool(); }));
+    const vs = list.querySelector('#viewsel'); if (vs) vs.addEventListener('change', () => { sfx('tap'); S.school.allView = vs.value; save(); renderSchool(); });
   }
   const areaRow = a => { const trs = a.tracks.map(trackById).filter(isOpen), n = trs.reduce((s, tr) => s + trackDone(tr), 0), N = trs.reduce((s, tr) => s + tr.steps.length, 0), c = catOf(trs[0]);
     return `<button class="srow pic area" data-area="${a.id}" style="--c:${c.accent};--c2:${c.accent2}"><img src="images/${a.image}" alt="" loading="lazy"><span class="stxt"><span class="stest">${a.name}</span><span class="sline2">${a.line}</span><span class="sprog"><i style="width:${N ? Math.round(n / N * 100) : 0}%"></i></span></span><span class="snum">${n ? n + ' of ' + N : trs.length + (trs.length === 1 ? ' ladder' : ' ladders')}</span></button>`; };
@@ -1777,6 +1766,14 @@
     const little = isKid() ? `<div class="ghead"><h3>${fmt1(K.forTitle || 'For {name}, from four', { name: kidName() })}</h3><p>${K.forLede || ''}</p></div>` + littleTracks().map(trackRow).join('') + `<div class="ghead"><h3>${K.everyArea || 'Every area'}</h3></div>` : '';
     list.innerHTML = seg + little + `<div class="areas">${(SCH.areas || []).map(areaRow).join('')}</div>`;
     list.querySelectorAll('[data-area]').forEach(el => el.addEventListener('click', () => { sfx('tap'); AREA = el.dataset.area; renderSchool(); }));
+  }
+  /* by kind: each ladder under the kind most of its rungs are (Craft, Attention, Courage, Kindness) */
+  function renderKinds(list, seg) {
+    $('sline').textContent = C.school.kindsLine || '';
+    const KD = C.school.traits.kinds, order = ['skill', 'attention', 'courage', 'kindness'];
+    const dom = tr => { const n = {}; tr.steps.forEach(st => { n[st.kind] = (n[st.kind] || 0) + 1; }); return order.reduce((b, k) => (n[k] || 0) > (n[b] || 0) ? k : b, 'skill'); };
+    const by = {}; allTracks().filter(isOpen).forEach(tr => { const k = dom(tr); (by[k] = by[k] || []).push(tr); });
+    list.innerHTML = seg + order.map(k => (by[k] && by[k].length) ? `<div class="ghead"><h3>${KD[k].name}</h3><p>${KD[k].line}</p></div>` + by[k].map(trackRow).join('') : '').join('');
   }
   function renderRooms(list, seg) {
     $('sline').textContent = C.school.allLine;
@@ -1805,7 +1802,7 @@
   const everythingOpen = () => { if (S.school.everything === true) return true; if (S.school.everything === false) return false;
     const A = (C.school.gate || {}).all || { days: 30, points: 100 }; return daysLit().size >= A.days || points() >= A.points; };
   const openIds = () => new Set(((SCH && SCH.areas) || []).flatMap(a => a.open || []));
-  const isOpen = tr => !!tr && (everythingOpen() || openIds().has(tr.id) || trackDone(tr) >= 1 || projects().some(p => p.id === tr.id) || (isKid() && isLittle(tr)));
+  const isOpen = tr => !!tr && (everythingOpen() || openIds().has(tr.id) || ((C.school.long || {}).first || []).includes(tr.id) || trackDone(tr) >= 1 || projects().some(p => p.id === tr.id) || (isKid() && isLittle(tr)));
   const trackCopy = () => (C.school.track || {});
   /* How long this one really takes, said out loud at the top of the ladder.
      His words: "playing a song on a guitar in front of a group is a major
@@ -1881,6 +1878,7 @@
   }
   function closeTrack() {
     const f = TRK_FROM || {}; TRK = null; TRK_FROM = null;
+    if (f.home) { hush(); goHome(); return; }
     if (f.search !== undefined) { SEARCH = f.search; CAT = null; }
     else if (f.cat) CAT = f.cat;
     else { CAT = null; if (f.tab) TAB = f.tab; }
