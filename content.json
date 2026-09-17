@@ -6412,6 +6412,7 @@
   "olive": "The olive"
  },
  "hero": {
+  "on": false,
   "title": "Your character",
   "newDot": "New",
   "unnamed": "He has no name yet",

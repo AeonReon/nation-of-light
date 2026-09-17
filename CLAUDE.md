@@ -753,3 +753,12 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   thicker arms and legs, watch/grey hair/beard in the negative; `pic: 2`): same young face now, no wristwatch, the
   body visibly grows. Still loose: the emperor's boots look modern; the labourer could be thinner.
   NOT done: a woman's path (must exist before launch), the other nine stages, a voiced line from Marcus at a new stage.
+- **v88 (2026-09-18, Fable session): the music belongs to the band; the picture character is switched off.** (1) His:
+  the music stopped whenever he moved between Home, The long game and Everything, "the same as the characters did".
+  `leaveArrival()` called `musicStop()` (a rule from v24, when music was home's alone). Removed: the playlist now runs
+  on through every school page, ducks to .26 under a voice anywhere in the school, and only the lyre, the mute or
+  leaving the app stops it. (2) His verdict on the v86 character: "just three different pictures isn't really very
+  interesting"; what he meant is the video-game kind, where EVERY point makes the figure a little bigger and
+  stronger, with gear added and choices that make him yours, and he wants it tried somewhere it cannot interfere with
+  the school. So `hero.on: false` in content.json (code and pictures stay), and the experiment lives in its own app:
+  `APPS/character-lab`. Bring it back here only when he says the lab version is good.

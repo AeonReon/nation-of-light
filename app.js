@@ -170,7 +170,7 @@
      silence. The very first Begin still opens on that nocturne; every other start takes the next piece. */
   let MUSV = 0, MUST = null, MUSWANT = false, MUSGAP = null, MUSI = 0;
   const musicList = () => [(C.music && C.music.first) || { id: 'dawn' }].concat((C.music && C.music.pieces) || []);
-  const duckTo = () => atHome() ? .26 : .14;
+  const duckTo = () => $('stage').classList.contains('school') ? .26 : .14;
   function musicTo(v, ms) { clearInterval(MUST); const from = getVol(MUS), t0 = performance.now(); MUST = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / ms); setVol(MUS, from + (v - from) * k); if (k >= 1) clearInterval(MUST); }, 50); }
   function musicPlay() {
     clearTimeout(MUSGAP); if (!MUSWANT || !S.sound) return;
@@ -1267,7 +1267,7 @@
      in images/hero/<id>.jpg, painted in Draw Things (tools/hero). A stage not reached yet shows blurred and dark.
      `S.hero = { name, seen }`; `seen` = the highest stage already looked at, so a new one wears a New dot and
      opens with the fanfare. "See every stage" is the builder's view: hide it with the other one before launch. */
-  const heroOn = () => !!C.hero && !isKid() && schoolOpen();
+  const heroOn = () => !!C.hero && C.hero.on !== false && !isKid() && schoolOpen();
   const heroIx = p => { let ix = 0; C.hero.stages.forEach((st, i) => { if (p >= st.at) ix = i; }); return ix; };
   const heroImg = st => 'images/hero/' + st.id + '.jpg?v=' + (st.pic || 1);
   function heroCard() {
@@ -1404,7 +1404,7 @@
     list.querySelector('#gateback').addEventListener('click', () => { sfx('tap'); goHome(); });
     stageBack(goHome);
   }
-  function leaveArrival() { ROOMV = null; clearTimeout(arrival._t); clearTimeout(ROOMT); hushSoft(); musicStop(); lyreStop(800); $('stage').classList.remove('arrive'); $('afig').classList.remove('walk-in-l'); dock('scene'); renderSchool(); if (!schoolOpen()) return; if (!S.school.toured) setTimeout(offerTour, 600); else setTimeout(entryWord, 650); }
+  function leaveArrival() { ROOMV = null; clearTimeout(arrival._t); clearTimeout(ROOMT); hushSoft(); /* v88: the music belongs to the band, not to home: it plays on through the long game and everything */ $('stage').classList.remove('arrive'); $('afig').classList.remove('walk-in-l'); dock('scene'); renderSchool(); if (!schoolOpen()) return; if (!S.school.toured) setTimeout(offerTour, 600); else setTimeout(entryWord, 650); }
   /* going in: one of them pops up with a word for the day ahead. Never the same one twice in a sitting, a different start each day, loosely his and hers in turn. */
   const ENTRYSAID = new Set();
   function entryWord() {
@@ -2567,7 +2567,7 @@
     for (const l of (C.marcus.spoken || [])) LINES[l.id] = l;
     buildScene();
     $('donebtn').addEventListener('click', onDone); $('skipbtn').addEventListener('click', onSkip); $('readbtn').addEventListener('click', readTablet);
-    $('soundbtn').addEventListener('click', () => { S.sound = !S.sound; save(); paintSound(); if (!S.sound) { hush(); musicStop(); lyreStop(300); ambStop(); } else { sfx('tap'); ambStart(); if (S.done.length || (atHome() && points())) ambFire(true); if (atHome()) musicStart(.4); } });
+    $('soundbtn').addEventListener('click', () => { S.sound = !S.sound; save(); paintSound(); if (!S.sound) { hush(); musicStop(); lyreStop(300); ambStop(); } else { sfx('tap'); ambStart(); if (S.done.length || (atHome() && points())) ambFire(true); if ($('stage').classList.contains('school')) musicStart(.4); } });
     capSwipe($('popcap')); capSwipe($('capband'));
     /* swipe down on either of them while they are popped up: both go, and the words with them */
     ['mfig', 'afig'].forEach(id => { const el = $(id); let y0 = null; el.addEventListener('pointerdown', e => { y0 = $('stage').classList.contains('popmode') ? e.clientY : null; }, { passive: true }); el.addEventListener('pointermove', e => { if (y0 !== null && e.clientY - y0 > 36) { y0 = null; hush(); popOut('marcus', 0); popOut('aurelia', 0); capHide(0); } }, { passive: true }); el.addEventListener('pointerup', () => { y0 = null; }); });
