@@ -6411,8 +6411,37 @@
   "brazier": "The brazier",
   "olive": "The olive"
  },
+ "amb": {
+  "xfade": 5,
+  "every": 2,
+  "day": [
+   {
+    "id": "birds-morning",
+    "gain": 0.16
+   },
+   {
+    "id": "birds-garden",
+    "gain": 0.14
+   }
+  ],
+  "evening": [
+   {
+    "id": "birds-evening",
+    "gain": 0.25
+   }
+  ],
+  "water": null,
+  "fire": {
+   "id": "brazier",
+   "gain": 0.7
+  }
+ },
  "music": {
   "lede": "The lyre plays",
+  "gap": [
+   20,
+   40
+  ],
   "pieces": [
    {
     "id": "nocturne-27-2",

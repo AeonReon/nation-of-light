@@ -647,3 +647,23 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   extras 123. **Left:** the seven under-sevens ladders (strand little) — body.hopping, speak.sayit,
   make.scissors, make.crayons, music.song, care.helping, order.ownthings — which have their own shape (from four,
   beside a grown-up, twists).
+- **v81 (2026-09-17, Fable session): the room is REAL recordings, and the music is a playlist.** His: the room
+  sounded like "a frog clicking" with "fuzz" behind it, always the same, and "it feels like we only have one song".
+  All true: the ambience was made in code (brown-noise wind = the fuzz, triangle-wave brazier pops = the frog) and the
+  music was one 52-second nocturne, the same one every visit, then silence. **The room** now plays beds from
+  `audio/amb/` (Mixkit free licence, cut from `APPS/storyreel/sfx`, see CREDIT.txt): two different minutes of morning
+  birdsong by day, a quieter forest bed in the evening (hour >= 19, or the golden sky once the day is done), a real
+  campfire for the brazier only while the flame is lit. Listed in content.json `amb` (`day`, `evening`, `every` = loops
+  before the birds change, `xfade`, `fire`, per-bed `gain`; `water` is an optional second layer, null until a good
+  brook or fountain recording is sourced — storyreel's river.wav is a flat roar and would be fuzz again). Each bed is a
+  decoded buffer crossfaded into the next (`ambFeed`, one 1 s ticker, context-time based so throttling cannot drift
+  it); the first bed differs visit by visit (`AMB.off`). **Never synthesise ambience again; a real recording or
+  nothing** (the same lesson storyreel learned). **The music**: `musicList()` = dawn + the four lyre pieces, one after
+  another with 20-40 s of the room alone between (`music.gap`); each start takes the next piece (`S.musicN`), only the
+  very first Begin opens on dawn; `MUSWANT` is the "should be playing" flag (callers test that, not `MUS.paused`,
+  because it is paused between pieces); the lyre skips the piece the room is playing. **iPhone fixes found on the
+  way:** iOS ignores `audio.volume`, so the music never faded or ducked there — MUS and LYR now go through a gain
+  node (`wire`, `setVol`, `getVol`; falls back to volume); `navigator.audioSession.type = 'playback'` so the ringer
+  switch no longer silences the room and effects while the voices carry on; a hidden page quiets the room and pauses
+  the music. Console: `NOL.amb()`, `NOL.mus()`, `NOL.skip()` (end the piece now). The preview pane reports
+  `document.hidden = true`, so to hear/test there, override it first. More pieces need sourcing (Musopen CC0).

@@ -50,7 +50,15 @@
 
   /* ---------- sound ---------- */
   let AC = null;
-  function ac() { if (!AC) { try { AC = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) {} } if (AC && AC.state === 'suspended') AC.resume(); return AC; }
+  /* v81: the room and the sound effects are Web Audio, which an iPhone silences with the ringer switch
+     while the voices carry on; 'playback' makes the whole app one kind of sound. */
+  try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch (e) {}
+  function ac() { if (!AC) { try { AC = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) {} } if (AC && AC.state !== 'running') { try { const p = AC.resume(); if (p && p.catch) p.catch(() => {}); } catch (e) {} } return AC; }
+  /* v81: an iPhone ignores audio.volume, so the music never faded or ducked there. A music element
+     goes through a gain node once; if that cannot be done it falls back to volume as before. */
+  function wire(el) { if (el._g || el._nowire) return; const ctx = ac(); if (!ctx) return; try { const src = ctx.createMediaElementSource(el), g = ctx.createGain(); g.gain.value = el._v == null ? el.volume : el._v; src.connect(g); g.connect(ctx.destination); el._g = g; el.volume = 1; } catch (e) { el._nowire = true; } }
+  function setVol(el, v) { el._v = v; if (el._g) el._g.gain.value = v; else el.volume = v; }
+  const getVol = el => el._v == null ? el.volume : el._v;
   function tone(f, t0, dur, type, gain, ctx) {
     const o = ctx.createOscillator(), g = ctx.createGain(); o.type = type; o.frequency.setValueAtTime(f, t0);
     g.gain.setValueAtTime(0, t0); g.gain.linearRampToValueAtTime(gain, t0 + .012); g.gain.exponentialRampToValueAtTime(.0008, t0 + dur);
@@ -73,35 +81,55 @@
       hiss(t, .32, .11, 1700); for (let i = 0; i < 7; i++) hiss(t + .12 + Math.random() * .6, .025, .05, 2600 + Math.random() * 2400); }
     else if (name === 'scroll') { tone(523, t, .3, 'sine', .07, ctx); tone(659, t + .12, .35, 'sine', .07, ctx); tone(784, t + .24, .8, 'sine', .07, ctx); }
   }
-  /* ---- the room: birds beyond the parapet, the brazier, a breath of wind. Made in code. ---- */
-  const AMB = { on: false, nodes: [], timers: [] };
-  function noiseBuffer(ctx, secs) { const b = ctx.createBuffer(1, ctx.sampleRate * secs, ctx.sampleRate), d = b.getChannelData(0); let last = 0; for (let i = 0; i < d.length; i++) { const w = Math.random() * 2 - 1; last = (last + 0.02 * w) / 1.02; d[i] = last * 3.5; } return b; }
+  /* ---- the room (v81): REAL recordings, never made in code again. His: the coded room sounded like
+     "a frog clicking" (the brazier pops) over "fuzz" (the brown-noise wind), and always the same.
+     Beds live in audio/amb/ and are listed in content.json `amb`: the birds change every `every`
+     loops and start on a different one each visit; evening and the golden sky get the quieter bed;
+     `water` is an optional second layer; the brazier is a real fire, only while the flame is lit.
+     A bed is a decoded buffer looped by crossfading into the next (an mp3 never loops cleanly). ---- */
+  const AMB = { on: false, bufs: {}, layers: [], tick: null, fireOn: false };
+  function ambBuf(id) {
+    if (!AMB.bufs[id]) AMB.bufs[id] = fetch('audio/amb/' + id + '.mp3?v=' + C.version).then(r => { if (!r.ok) throw 0; return r.arrayBuffer(); }).then(ab => new Promise((ok, no) => ac().decodeAudioData(ab, ok, no))).catch(() => { delete AMB.bufs[id]; return null; });
+    return AMB.bufs[id];
+  }
+  function ambBird(n) {
+    const A = C.amb, h = new Date().getHours(), late = h >= 19 || h < 5 || skyFor() >= 1;
+    const L = late ? (A.evening || []).concat((A.day || []).slice(-1)) : (A.day || []); if (!L.length) return null;
+    return L[(Math.floor(n / (A.every || 2)) + (AMB.off || 0)) % L.length];
+  }
+  function ambLayer(pick, level) { const ctx = ac(), out = ctx.createGain(); out.gain.value = level; out.connect(AMB.master); const L = { pick, out, n: 0, nextAt: 0, busy: false, live: [] }; AMB.layers.push(L); return L; }
+  function ambFeed(L) {
+    const ctx = ac(); if (!AMB.on || L.busy || document.hidden || ctx.currentTime < L.nextAt) return;
+    const bed = L.pick(L.n); if (!bed) return; L.busy = true;
+    ambBuf(bed.id).then(buf => {
+      L.busy = false; if (!AMB.on) return; if (!buf) { L.nextAt = ctx.currentTime + 8; return; }
+      const X = Math.min(C.amb.xfade || 5, buf.duration / 4), t = ctx.currentTime + .05, d = buf.duration, v = bed.gain || .15;
+      const src = ctx.createBufferSource(), g = ctx.createGain(); src.buffer = buf;
+      g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(v, t + X); g.gain.setValueAtTime(v, t + d - X); g.gain.linearRampToValueAtTime(0, t + d);
+      src.connect(g); g.connect(L.out); src.start(t); L.live.push(src); src.onended = () => { L.live = L.live.filter(x => x !== src); try { g.disconnect(); } catch (e) {} };
+      L.nextAt = t + d - X; L.n++; L.bed = bed.id; const nx = L.pick(L.n); if (nx && nx.id !== bed.id) ambBuf(nx.id);
+    });
+  }
   function ambStart() {
-    if (AMB.on || !S.sound) return; const ctx = ac(); if (!ctx) return; AMB.on = true;
+    if (AMB.on || !S.sound || !C.amb) return; const ctx = ac(); if (!ctx) return; AMB.on = true; AMB.off = (S.school && S.school.visits) || S.visits || 0;   /* a different bed first, visit by visit */
     const master = ctx.createGain(); master.gain.value = 0; master.connect(ctx.destination); AMB.master = master;
     master.gain.linearRampToValueAtTime(1, ctx.currentTime + 4);
-    // wind: brown noise through a low-pass, slowly breathing
-    const wind = ctx.createBufferSource(); wind.buffer = noiseBuffer(ctx, 6); wind.loop = true;
-    const wf = ctx.createBiquadFilter(); wf.type = 'lowpass'; wf.frequency.value = 260; const wg = ctx.createGain(); wg.gain.value = .05;
-    const lfo = ctx.createOscillator(); lfo.frequency.value = .07; const lg = ctx.createGain(); lg.gain.value = .025; lfo.connect(lg); lg.connect(wg.gain);
-    wind.connect(wf); wf.connect(wg); wg.connect(master); wind.start(); lfo.start(); AMB.nodes.push(wind, lfo);
-    // the brazier: a bed of hiss and the odd pop, only once the flame is lit
-    const fire = ctx.createBufferSource(); fire.buffer = noiseBuffer(ctx, 4); fire.loop = true;
-    const ff = ctx.createBiquadFilter(); ff.type = 'bandpass'; ff.frequency.value = 1400; ff.Q.value = .6; const fg = ctx.createGain(); fg.gain.value = 0; AMB.fire = fg;
-    fire.connect(ff); ff.connect(fg); fg.connect(master); fire.start(); AMB.nodes.push(fire);
-    const pop = () => { if (!AMB.on) return; if (AMB.fire.gain.value > 0) { const t = ctx.currentTime, o = ctx.createOscillator(), g = ctx.createGain(); o.type = 'triangle'; o.frequency.setValueAtTime(900 + Math.random() * 1400, t); o.frequency.exponentialRampToValueAtTime(200, t + .04); g.gain.setValueAtTime(.05 + Math.random() * .05, t); g.gain.exponentialRampToValueAtTime(.0005, t + .06); o.connect(g); g.connect(master); o.start(t); o.stop(t + .08); } AMB.timers.push(setTimeout(pop, 250 + Math.random() * 1600)); };
-    pop();
-    // birds: two of them, out beyond the parapet, left and right
-    const chirp = (pan) => { const t = ctx.currentTime, n = 2 + Math.floor(Math.random() * 4), base = 2300 + Math.random() * 1500;
-      for (let i = 0; i < n; i++) { const t0 = t + i * (.09 + Math.random() * .07), o = ctx.createOscillator(), g = ctx.createGain(), p = ctx.createStereoPanner ? ctx.createStereoPanner() : null;
-        o.type = 'sine'; o.frequency.setValueAtTime(base, t0); o.frequency.exponentialRampToValueAtTime(base * (1.25 + Math.random() * .3), t0 + .05); o.frequency.exponentialRampToValueAtTime(base * .9, t0 + .1);
-        g.gain.setValueAtTime(0, t0); g.gain.linearRampToValueAtTime(.022, t0 + .015); g.gain.exponentialRampToValueAtTime(.0005, t0 + .11);
-        o.connect(g); if (p) { p.pan.value = pan; g.connect(p); p.connect(master); } else g.connect(master); o.start(t0); o.stop(t0 + .13); } };
-    const bird = (pan) => { if (!AMB.on) return; chirp(pan); AMB.timers.push(setTimeout(() => bird(pan), 2500 + Math.random() * 7000)); };
-    AMB.timers.push(setTimeout(() => bird(-.6), 1200), setTimeout(() => bird(.7), 4200));
+    ambLayer(ambBird, 1);
+    if (C.amb.water) ambLayer(() => C.amb.water, 1);
+    AMB.fire = ambLayer(() => AMB.fireOn ? C.amb.fire : null, AMB.fireOn ? 1 : 0).out;
+    AMB.layers.forEach(ambFeed); AMB.tick = setInterval(() => AMB.layers.forEach(ambFeed), 1000);
   }
-  function ambFire(on) { if (AMB.fire) AMB.fire.gain.linearRampToValueAtTime(on ? .09 : 0, ac().currentTime + 1.5); }
-  function ambStop() { if (!AMB.on) return; AMB.on = false; AMB.timers.forEach(clearTimeout); AMB.timers = []; try { AMB.master.gain.linearRampToValueAtTime(0, ac().currentTime + .8); } catch (e) {} setTimeout(() => { AMB.nodes.forEach(n => { try { n.stop(); } catch (e) {} }); AMB.nodes = []; }, 900); }
+  function ambFire(on) { AMB.fireOn = !!on; if (AMB.on && AMB.fire) { const t = ac().currentTime; AMB.fire.gain.cancelScheduledValues(t); AMB.fire.gain.setValueAtTime(AMB.fire.gain.value, t); AMB.fire.gain.linearRampToValueAtTime(on ? 1 : 0, t + 1.5); } }
+  function ambStop() {
+    if (!AMB.on) return; AMB.on = false; clearInterval(AMB.tick); const layers = AMB.layers, master = AMB.master; AMB.layers = []; AMB.fire = null;
+    try { const t = ac().currentTime; master.gain.cancelScheduledValues(t); master.gain.setValueAtTime(master.gain.value, t); master.gain.linearRampToValueAtTime(0, t + .8); } catch (e) {}
+    setTimeout(() => { layers.forEach(L => L.live.forEach(n => { try { n.stop(); } catch (e) {} })); try { master.disconnect(); } catch (e) {} }, 900);
+  }
+  /* a hidden tab or a pocketed phone: the room and the music go quiet, and come back with the page */
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) { if (AMB.on) AMB.master.gain.setTargetAtTime(0, ac().currentTime, .15); if (!MUS.paused) { MUS.pause(); MUS._held = true; } }
+    else { if (AMB.on) AMB.master.gain.setTargetAtTime(1, ac().currentTime, .6); if (MUS._held) { MUS._held = false; if (MUSWANT && S.sound) MUS.play().catch(() => {}); } }
+  });
   const voiceOn = () => S.sound;
   function paintSound() { $('soundbtn').classList.toggle('off', !S.sound); }
   /* v72, his: moving between pages cut them off mid-sentence. A page change now lets the
@@ -115,12 +143,24 @@
     whenQuiet._t = setTimeout(() => whenQuiet(fn, (tries || 0) + 1), 300);
   }
   function hush() { SPK++; clearTimeout(whenQuiet._t); NAR.pause(); MAR.pause(); if (RIG) RIG.hush(); if (ARIG) ARIG.hush(); $('readbtn').classList.remove('on'); musicDuck(false); clearTimeout(marcusSay._t); $('bubble').hidden = true; $('abubble').hidden = true; if ($('popcap')) capHide(0); SPEAKING = null; MQ.length = 0; }
-  /* the music: one nocturne, in on Begin, under every voice, out on its own */
-  let MUSV = 0, MUST = null;
-  function musicTo(v, ms) { clearInterval(MUST); const from = MUS.volume, t0 = performance.now(); MUST = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / ms); MUS.volume = from + (v - from) * k; if (k >= 1) clearInterval(MUST); }, 50); }
-  function musicStart(v) { if (!S.sound) return; MUSV = v || .55; MUS.volume = 0; MUS.currentTime = 0; MUS.play().then(() => musicTo(MUSV, 2600)).catch(() => {}); }
-  function musicDuck(on) { lyreDuck(on); if (MUS.paused) return; musicTo(on ? (atHome() ? .26 : .14) : MUSV, on ? 350 : 1400); }
-  function musicStop() { if (MUS.paused) return; musicTo(0, 1200); setTimeout(() => MUS.pause(), 1300); }
+  /* the music (v81): every piece on the shelf, one after another with a stretch of the room alone
+     between them (`music.gap` seconds). It was one 52-second nocturne, the same one every visit, then
+     silence. The very first Begin still opens on that nocturne; every other start takes the next piece. */
+  let MUSV = 0, MUST = null, MUSWANT = false, MUSGAP = null, MUSI = 0;
+  const musicList = () => ['dawn'].concat(((C.music && C.music.pieces) || []).map(p => p.id));
+  const duckTo = () => atHome() ? .26 : .14;
+  function musicTo(v, ms) { clearInterval(MUST); const from = getVol(MUS), t0 = performance.now(); MUST = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / ms); setVol(MUS, from + (v - from) * k); if (k >= 1) clearInterval(MUST); }, 50); }
+  function musicPlay() {
+    clearTimeout(MUSGAP); if (!MUSWANT || !S.sound) return;
+    if (LYRE.on || document.hidden) { MUSGAP = setTimeout(musicPlay, 8000); return; }
+    const L = musicList(); wire(MUS); MUS.src = 'audio/music/' + L[MUSI % L.length] + '.mp3'; setVol(MUS, 0);
+    MUS.play().then(() => musicTo((!NAR.paused || !MAR.paused) ? duckTo() : MUSV, 2600)).catch(() => {});
+  }
+  function musicStart(v, opening) { if (!S.sound) return; MUSWANT = true; MUSV = v || .55; if (opening) MUSI = 0; else { S.musicN = (S.musicN || 0) + 1; MUSI = S.musicN; save(); } musicPlay(); }
+  MUS.addEventListener('ended', () => { if (!MUSWANT) return; MUSI++; S.musicN = MUSI; save(); const G = (C.music && C.music.gap) || [20, 40]; MUSGAP = setTimeout(musicPlay, (G[0] + Math.random() * (G[1] - G[0])) * 1000); });
+  function musicDuck(on) { lyreDuck(on); if (MUS.paused) return; musicTo(on ? duckTo() : MUSV, on ? 350 : 1400); }
+  function musicStop() { MUSWANT = false; clearTimeout(MUSGAP); MUS._held = false; if (MUS.paused) return; musicTo(0, 1200); setTimeout(() => { if (!MUSWANT) MUS.pause(); }, 1300); }
+  const musicNow = () => musicList()[MUSI % musicList().length];
   [NAR, MAR].forEach(el => { el.addEventListener('play', () => musicDuck(true)); const back = () => { if (NAR.paused && MAR.paused) musicDuck(false); }; el.addEventListener('ended', back); el.addEventListener('pause', back); });
 
   /* Aurelia reads: the tablets, the breaks, the finish. */
@@ -252,14 +292,14 @@
   }
   /* the lyre plays a real piece: a strum on the tap, then about a minute of Chopin (Musopen, CC0), one after another day by day */
   const LYR = new Audio(); LYR.preload = 'none';
-  function vol(el, v, ms) { clearInterval(el._vt); const from = el.volume, t0 = performance.now(); el._vt = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / ms); el.volume = from + (v - from) * k; if (k >= 1) clearInterval(el._vt); }, 50); }
+  function vol(el, v, ms) { clearInterval(el._vt); const from = getVol(el), t0 = performance.now(); el._vt = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / ms); setVol(el, from + (v - from) * k); if (k >= 1) clearInterval(el._vt); }, 50); }
   function lyreStart() {
     const ctx = ac(); if (!ctx || !S.sound) return; if (LYRE.on) return; LYRE.on = true;
     const out = ctx.createGain(); out.gain.value = .5; out.connect(ctx.destination); LYRE.out = out;
     const N = LYRE.notes, t = ctx.currentTime + .05; for (let i = 0; i < N.length; i++) pluck(ctx, N[i], t + i * .045, .2);
     const P = (C.music && C.music.pieces) || []; if (!P.length) { LYRE.on = false; return; }
-    const pc = P[(daySeed() + (S.lyreN || 0)) % P.length]; S.lyreN = (S.lyreN || 0) + 1; save();
-    LYR.src = 'audio/music/' + pc.id + '.mp3'; LYR.volume = 0; LYR.onended = () => lyreStop(0);
+    let pc = P[(daySeed() + (S.lyreN || 0)) % P.length]; if (P.length > 1 && !MUS.paused && pc.id === musicNow()) { S.lyreN = (S.lyreN || 0) + 1; pc = P[(daySeed() + S.lyreN) % P.length]; } S.lyreN = (S.lyreN || 0) + 1; save();
+    wire(LYR); LYR.src = 'audio/music/' + pc.id + '.mp3'; setVol(LYR, 0); LYR.onended = () => lyreStop(0);
     LYRE.timer = setTimeout(() => { if (!LYRE.on) return; LYR.play().then(() => vol(LYR, .75, 2200)).catch(() => { LYRE.on = false; PORTICO.props.lyre.classList.remove('play'); }); }, 700);
     PORTICO.props.lyre.classList.add('play'); if (!MUS.paused) musicTo(.05, 900);
     toast(pc.name);
@@ -478,7 +518,7 @@
     v.querySelector('#sharelink').addEventListener('click', () => { sfx('tap'); sharePanel(cover); });
     v.querySelector('#begin').addEventListener('click', () => {
       ac(); unlockAudio();
-      musicStart(); ambStart();
+      musicStart(null, !S.member && !S.done.length); ambStart();   /* only the very first Begin opens on the dawn nocturne */
       if (S.member && SCH) { sfx('tap'); unlockAudio(); closeVeil(enterSchool); }
       else if (back) { sfx('tap'); unlockAudio(); closeVeil(enter); }
       else { sfx('begin'); closeVeil(welcome); }
@@ -931,7 +971,7 @@
     if (RIG.hidden) { RIG.enter(); setTimeout(() => { ARIG.show(true); $('afig').classList.remove('walk-out-l', 'walk-in-l', 'popin', 'popout'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l'); }, 350); }
     else { RIG.show(true); ARIG.show(true); }
     paintTabs('home'); $('sline').textContent = ''; MODE = 'school';
-    if (MUS.paused) musicStart(.4); ambStart(); if (points()) ambFire(true);
+    if (!MUSWANT) musicStart(.4); ambStart(); if (points()) ambFire(true);
     renderArrival(); idleRoom(50000);
     if ((S.school.visits || 0) <= 4 && S.taps < 3) setTimeout(() => PORTICO.props.lyre.classList.add('hint'), 2500);
     const vn = (S.school.visits || 0) + HOMEN;
@@ -1191,7 +1231,7 @@
   function readVision(root) {
     const V = C.vision, seq = V.read || [], ps = [...root.querySelectorAll('.visioncard p')]; if (!seq.length) return;
     hush(); clearTimeout(ROOMT); VISREAD = true; const my = ++SPK; CAPLITE = V.title;
-    if (MUS.paused) musicStart(.4);
+    if (!MUSWANT) musicStart(.4);
     let i = 0; const done = () => { VISREAD = false; CAPLITE = null; ps.forEach(p => p.classList.remove('now')); capHide(1200); idleRoom(); };
     const step = () => {
       if (my !== SPK) { VISREAD = false; CAPLITE = null; ps.forEach(p => p.classList.remove('now')); return; }
@@ -2470,7 +2510,7 @@
     for (const l of (C.marcus.spoken || [])) LINES[l.id] = l;
     buildScene();
     $('donebtn').addEventListener('click', onDone); $('skipbtn').addEventListener('click', onSkip); $('readbtn').addEventListener('click', readTablet);
-    $('soundbtn').addEventListener('click', () => { S.sound = !S.sound; save(); paintSound(); if (!S.sound) { hush(); musicStop(); ambStop(); } else { sfx('tap'); ambStart(); if (S.done.length) ambFire(true); } });
+    $('soundbtn').addEventListener('click', () => { S.sound = !S.sound; save(); paintSound(); if (!S.sound) { hush(); musicStop(); ambStop(); } else { sfx('tap'); ambStart(); if (S.done.length || (atHome() && points())) ambFire(true); if (atHome()) musicStart(.4); } });
     capSwipe($('popcap')); capSwipe($('capband'));
     /* swipe down on either of them while they are popped up: both go, and the words with them */
     ['mfig', 'afig'].forEach(id => { const el = $(id); let y0 = null; el.addEventListener('pointerdown', e => { y0 = $('stage').classList.contains('popmode') ? e.clientY : null; }, { passive: true }); el.addEventListener('pointermove', e => { if (y0 !== null && e.clientY - y0 > 36) { y0 = null; hush(); popOut('marcus', 0); popOut('aurelia', 0); capHide(0); } }, { passive: true }); el.addEventListener('pointerup', () => { y0 = null; }); });
@@ -2479,7 +2519,7 @@
     $('helpbtn').addEventListener('click', () => { sfx('tap'); if (MODE === 'school' && C.tour && !S.school.toured2) { S.school.toured2 = true; save(); if ($('stage').classList.contains('arrive')) leaveArrival(); tour(); } else help(); });
     cover();
     if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
-    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool, show: id => trophyShow(awards().find(a => a.id === id)), awards, quiet: quietProject, check: id => checkIn(trackById(id)), entry: entryWord, home: goHome, lyr: () => ({ on: LYRE.on, paused: LYR.paused, src: LYR.src.split('/').pop(), vol: +LYR.volume.toFixed(2) }), prac: id => logPractice(trackById(id)), track: id => openTrack(trackById(id)), tracks: () => allTracks().map(t => t.id), say: pickSay, state: sayState, ask: askPromise, open: schoolOpen, all: everythingOpen, fw: () => fireworks(inScene() ? $('scene') : $('stage'), 5000), day: dayCelebrate };
+    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool, show: id => trophyShow(awards().find(a => a.id === id)), awards, quiet: quietProject, check: id => checkIn(trackById(id)), entry: entryWord, home: goHome, lyr: () => ({ on: LYRE.on, paused: LYR.paused, src: LYR.src.split('/').pop(), vol: +getVol(LYR).toFixed(2) }), amb: () => ({ on: AMB.on, fire: AMB.fireOn, beds: Object.keys(AMB.bufs), layers: AMB.layers.map(L => ({ n: L.n, live: L.live.length, bed: L.bed, next: +(L.nextAt - ac().currentTime).toFixed(1) })) }), mus: () => ({ want: MUSWANT, piece: musicNow(), paused: MUS.paused, vol: +getVol(MUS).toFixed(2), wired: !!MUS._g }), skip: () => { MUS.pause(); MUS.dispatchEvent(new Event('ended')); }, prac: id => logPractice(trackById(id)), track: id => openTrack(trackById(id)), tracks: () => allTracks().map(t => t.id), say: pickSay, state: sayState, ask: askPromise, open: schoolOpen, all: everythingOpen, fw: () => fireworks(inScene() ? $('scene') : $('stage'), 5000), day: dayCelebrate };
   }
   /* a phone held sideways: the stage turns back by ninety degrees and stays upright, which reads as "this app is this way up" */
   const rot = () => {

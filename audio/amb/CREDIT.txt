@@ -1,0 +1,10 @@
+The room's beds (v81). All real recordings from Mixkit (https://mixkit.co/free-sound-effects/), Mixkit Sound
+Effects Free License: free for commercial and non-commercial use, no attribution required. Cut from the
+loudness-matched WAVs in APPS/storyreel/sfx (see its SOURCES.md and sfx_fetch.py), about a minute each,
+high-passed to take the rumble out, mp3. The app crossfades each into the next, so no loop point is needed.
+
+birds-morning, birds-garden = Mixkit #2472 "Morning birds" (two different minutes of it)
+birds-evening = Mixkit #1220 "Quiet forest ambience"
+brazier = Mixkit #1329 "Campfire burning crackles"
+
+Never ship synthesised ambience: the coded wind and fire pops were heard as "fuzz" and "a frog clicking".
