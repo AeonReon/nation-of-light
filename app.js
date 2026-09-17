@@ -110,10 +110,30 @@
       L.nextAt = t + d - X; L.n++; L.bed = bed.id; const nx = L.pick(L.n); if (nx && nx.id !== bed.id) ambBuf(nx.id);
     });
   }
+  /* v86: BACK TO THE CODED ROOM (his call). The recordings were tried three ways and the birdsong was "very sharp in
+     the ear"; nobody here can hear a bed before it ships, so `amb.mode: "coded"` is the room he had before: a breath
+     of wind and two soft birds beyond the parapet. The one change: the brazier's hiss and pops are gone, because the
+     pops were the "frog clicking" he asked about in the first place. The recordings stay on /sounds.html. */
+  function ambCoded(ctx, master) {
+    AMB.nodes = []; AMB.timers = [];
+    const nb = secs => { const b = ctx.createBuffer(1, ctx.sampleRate * secs, ctx.sampleRate), d = b.getChannelData(0); let last = 0; for (let i = 0; i < d.length; i++) { const w = Math.random() * 2 - 1; last = (last + 0.02 * w) / 1.02; d[i] = last * 3.5; } return b; };
+    const wind = ctx.createBufferSource(); wind.buffer = nb(6); wind.loop = true;
+    const wf = ctx.createBiquadFilter(); wf.type = 'lowpass'; wf.frequency.value = 260; const wg = ctx.createGain(); wg.gain.value = .05;
+    const lfo = ctx.createOscillator(); lfo.frequency.value = .07; const lg = ctx.createGain(); lg.gain.value = .025; lfo.connect(lg); lg.connect(wg.gain);
+    wind.connect(wf); wf.connect(wg); wg.connect(master); wind.start(); lfo.start(); AMB.nodes.push(wind, lfo);
+    const chirp = (pan) => { const t = ctx.currentTime, n = 2 + Math.floor(Math.random() * 4), base = 2300 + Math.random() * 1500;
+      for (let i = 0; i < n; i++) { const t0 = t + i * (.09 + Math.random() * .07), o = ctx.createOscillator(), g = ctx.createGain(), pn = ctx.createStereoPanner ? ctx.createStereoPanner() : null;
+        o.type = 'sine'; o.frequency.setValueAtTime(base, t0); o.frequency.exponentialRampToValueAtTime(base * (1.25 + Math.random() * .3), t0 + .05); o.frequency.exponentialRampToValueAtTime(base * .9, t0 + .1);
+        g.gain.setValueAtTime(0, t0); g.gain.linearRampToValueAtTime(.022, t0 + .015); g.gain.exponentialRampToValueAtTime(.0005, t0 + .11);
+        o.connect(g); if (pn) { pn.pan.value = pan; g.connect(pn); pn.connect(master); } else g.connect(master); o.start(t0); o.stop(t0 + .13); } };
+    const bird = (pan) => { if (!AMB.on) return; if (!document.hidden) chirp(pan); AMB.timers.push(setTimeout(() => bird(pan), 2500 + Math.random() * 7000)); };
+    AMB.timers.push(setTimeout(() => bird(-.6), 1200), setTimeout(() => bird(.7), 4200));
+  }
   function ambStart() {
     if (AMB.on || !S.sound || !C.amb) return; const ctx = ac(); if (!ctx) return; AMB.on = true; AMB.off = (S.school && S.school.visits) || S.visits || 0;   /* a different bed first, visit by visit */
     const master = ctx.createGain(); master.gain.value = 0; master.connect(ctx.destination); AMB.master = master;
     master.gain.linearRampToValueAtTime(1, ctx.currentTime + 4);
+    if (C.amb.mode === 'coded') { ambCoded(ctx, master); return; }
     ambLayer(ambBird, 1);
     /* flowing water: a second layer under the birds, there on one visit in `visits` so the room is not the same twice running */
     const W = C.amb.water; if (W && AMB.off % (W.visits || 1) === 0) ambLayer(() => W, 1);
@@ -122,9 +142,9 @@
   }
   function ambFire(on) { AMB.fireOn = !!on; if (AMB.on && AMB.fire) { const t = ac().currentTime; AMB.fire.gain.cancelScheduledValues(t); AMB.fire.gain.setValueAtTime(AMB.fire.gain.value, t); AMB.fire.gain.linearRampToValueAtTime(on ? 1 : 0, t + 1.5); } }
   function ambStop() {
-    if (!AMB.on) return; AMB.on = false; clearInterval(AMB.tick); const layers = AMB.layers, master = AMB.master; AMB.layers = []; AMB.fire = null;
+    if (!AMB.on) return; AMB.on = false; clearInterval(AMB.tick); (AMB.timers || []).forEach(clearTimeout); AMB.timers = []; const layers = AMB.layers, master = AMB.master, nodes = AMB.nodes || []; AMB.nodes = []; AMB.layers = []; AMB.fire = null;
     try { const t = ac().currentTime; master.gain.cancelScheduledValues(t); master.gain.setValueAtTime(master.gain.value, t); master.gain.linearRampToValueAtTime(0, t + .8); } catch (e) {}
-    setTimeout(() => { layers.forEach(L => L.live.forEach(n => { try { n.stop(); } catch (e) {} })); try { master.disconnect(); } catch (e) {} }, 900);
+    setTimeout(() => { nodes.forEach(n => { try { n.stop(); } catch (e) {} }); layers.forEach(L => L.live.forEach(n => { try { n.stop(); } catch (e) {} })); try { master.disconnect(); } catch (e) {} }, 900);
   }
   /* a hidden tab or a pocketed phone: the room and the music go quiet, and come back with the page */
   document.addEventListener('visibilitychange', () => {
@@ -1239,6 +1259,47 @@
   }
   function foldCard(key, title, inner, open) { return `<details class="fold" data-fold="${key}" ${open ? 'open' : ''}><summary>${title}</summary><div class="fbody">${inner}</div></details>`; }
   const pickRow = ([tr, st]) => { const c = catOf(tr), P = C.arrival, nd = (isKid() && isLittle(tr)) ? null : needsOf(st); return `<div class="pick" style="--c:${c.accent};--c2:${c.accent2}"><img src="${trackImg(tr)}" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span class="ptxt"><span class="scat">${c.name}${tr.solo ? '' : ' · ' + tr.name}${st.mins ? ' · ' + fmt1(P.mins || '{n} min', { n: st.mins }) : ''}${nd ? ` <b class="need ${nd}">${(P.needs || {})[nd] || nd}</b>` : ''}</span><span class="stest">${st.test}</span></span><span class="pbtns"><button class="btn btn-gold sm wide" data-do="${skey(tr, st)}">${P.do}</button><button class="btn btn-ghost sm" data-not="${skey(tr, st)}">${P.notThis}</button></span></div>`; };
+  /* ---- the character (v86, a FIRST FEEL, three stages of twelve) ----
+     His idea: a figure you name, who starts a thin labourer in rags at the town gate and rises through Roman life
+     as you rise through the ranks, all the way to emperor: where Marcus stood. Not the main thing: a card at home
+     once the school has opened (the seven-day gate), and a full-screen portrait behind it. He never loses anything
+     and never goes backwards (the flame's rule). Stages are `hero.stages` in content.json (`at` = points), pictures
+     in images/hero/<id>.jpg, painted in Draw Things (tools/hero). A stage not reached yet shows blurred and dark.
+     `S.hero = { name, seen }`; `seen` = the highest stage already looked at, so a new one wears a New dot and
+     opens with the fanfare. "See every stage" is the builder's view: hide it with the other one before launch. */
+  const heroOn = () => !!C.hero && !isKid() && schoolOpen();
+  const heroIx = p => { let ix = 0; C.hero.stages.forEach((st, i) => { if (p >= st.at) ix = i; }); return ix; };
+  const heroImg = st => 'images/hero/' + st.id + '.jpg?v=' + (st.pic || 1);
+  function heroCard() {
+    if (!heroOn()) return ''; const H = C.hero, p = points(), ix = heroIx(p), st = H.stages[ix], nx = H.stages[ix + 1], h = S.hero || {};
+    const isNew = h.seen == null || h.seen < ix, pct = nx ? Math.max(4, Math.min(100, Math.round((p - st.at) / (nx.at - st.at) * 100))) : 100;
+    return `<button class="acard herocard ${isNew ? 'new' : ''}" data-hero><img src="${heroImg(st)}" alt=""><span class="ht"><span class="eyebrow">${H.title}${isNew ? ` <b class="dot">${H.newDot}</b>` : ''}</span><strong>${h.name || H.unnamed}</strong><small>${st.title}</small><i class="hbar"><em style="width:${pct}%"></em></i><small class="hn">${nx ? fmt1(H.next, { p, at: nx.at, title: nx.title }) : H.top}</small></span></button>`;
+  }
+  function heroShow(at, all) {
+    const H = C.hero, p = points(), mine = heroIx(p); S.hero = S.hero || {};
+    if (!S.hero.name) { heroName(() => heroShow(at, all)); return; }
+    const fresh = S.hero.seen == null || S.hero.seen < mine; const ix = at == null ? mine : at, st = H.stages[ix], nx = H.stages[ix + 1], open = all || ix <= mine;
+    const v = veil(`<div class="herofull ${open ? '' : 'locked'}"><img class="hpic" src="${heroImg(st)}" alt=""><div class="hfoot">
+      <span class="eyebrow"><i></i>${open ? fmt1(H.stageOf, { n: ix + 1, N: H.stages.length }) : H.locked}<i></i></span>
+      <h2>${open ? S.hero.name : '…'}</h2><p class="htitle">${open ? st.title : fmt1(H.lockedAt, { at: st.at })}</p>${open ? `<p class="hline">${st.line}</p>` : ''}
+      ${ix === mine && nx ? `<i class="hbar"><em style="width:${Math.max(4, Math.min(100, Math.round((p - st.at) / (nx.at - st.at) * 100)))}%"></em></i><p class="hn">${fmt1(H.next, { p, at: nx.at, title: nx.title })}</p>` : ''}
+      <div class="hstrip">${H.stages.map((x, i) => `<button class="hst ${i === ix ? 'on' : ''} ${all || i <= mine ? '' : 'lk'}" data-hst="${i}" aria-label="${x.title}"><img src="${heroImg(x)}" alt=""></button>`).join('')}</div>
+      <div class="hrow"><button class="linkbtn" id="hrename">${H.rename}</button><button class="linkbtn" id="hall">${all ? H.builderOff : H.builder}</button></div></div></div>`, 'deep herov');
+    backBtn(v, () => closeVeil(() => { if (atHome()) renderArrival(); }));
+    v.querySelectorAll('[data-hst]').forEach(b => b.addEventListener('click', () => { sfx('tap'); heroShow(+b.dataset.hst, all); }));
+    v.querySelector('#hrename').addEventListener('click', () => { sfx('tap'); heroName(() => heroShow(at, all), true); });
+    v.querySelector('#hall').addEventListener('click', () => { sfx('tap'); heroShow(ix, !all); });
+    if (fresh && at == null) { S.hero.seen = mine; save(); sfx('fanfare'); shower(); }
+  }
+  function heroName(then, again) {
+    const H = C.hero, v = veil(`<div class="panel sheet heroname"><div class="eyebrow"><i></i>${H.title}<i></i></div><h2>${again ? H.rename : H.nameTitle}</h2><p class="lede">${H.nameLede}</p>
+      <label class="field"><span>${H.nameLabel}</span><input id="heroname" type="text" maxlength="20" autocomplete="off" placeholder="${H.namePh}" value="${again && S.hero.name ? S.hero.name.replace(/"/g, '&quot;') : ''}"></label>
+      <div class="row"><button class="btn btn-gold" id="herogo" style="flex:1">${H.nameGo}</button></div></div>`, 'light');
+    backBtn(v, () => closeVeil(() => { if (again) then(); }));
+    setTimeout(() => { const i = v.querySelector('#heroname'); if (i) i.focus(); }, 350);
+    const go = () => { const n = v.querySelector('#heroname').value.trim().replace(/[<>]/g, ''); if (!n) return; sfx('done'); S.hero = S.hero || {}; S.hero.name = n; save(); then(); };
+    v.querySelector('#herogo').addEventListener('click', go); v.querySelector('#heroname').addEventListener('keydown', e => { if (e.key === 'Enter') go(); });
+  }
   function renderArrival() {
     const list = $('slist'), keep = list.scrollTop;
     if (ROOMV === 'becoming') { becomingRoom(list); return; }
@@ -1273,7 +1334,7 @@
       `</div>` +
       (later.length ? foldCard('later', P.laterTitle || 'With people, outside, or with a thing', `<p class="lede" style="padding:0 6px">${P.laterLede || ''}</p><div class="acard" style="padding-top:4px">${later.map(pickRow).join('')}</div>`) : '') +
       kidCard + longCard() + extraCard() +
-      `<p class="punch homepunch">${standLine()}</p>` +
+      `<p class="punch homepunch">${standLine()}</p>` + heroCard() +
       (P.how ? foldCard('how', P.how.title, `<ol class="howlist">${P.how.lines.map(x => `<li>${x}</li>`).join('')}</ol>`, visits <= 3 && !S.school.howSeen) : '') +
       (C.vision ? foldCard('vision', C.vision.title, `<div class="acard visioncard"><div class="rhead"><span class="eyebrow">${C.vision.lede}</span><button class="playbtn" id="visionread" aria-label="Aurelia reads it">${SPK_IC}</button></div>${C.vision.paras.map(x => `<p>${x}</p>`).join('')}</div><div class="acard polycard"><span class="eyebrow">${C.vision.polyTitle}</span><p class="lede">${C.vision.polyLede}</p>${C.vision.polymaths.map(x => `<div class="poly"><b>${x.name}</b><span>${x.line}</span></div>`).join('')}<p class="close">${C.vision.close}</p></div>`, visits <= 2 && !S.school.visionSeen) : '') +
       (post ? foldCard('post', `<span class="foldic">${HORN_IC}</span>${C.feed.title}${isNew ? '<b class="dot">New</b>' : ''}`,
@@ -1293,6 +1354,7 @@
     const rb = list.querySelector('#readit'); if (rb) rb.addEventListener('click', () => { sfx('tap'); hush(); clearTimeout(ROOMT); cap('aurelia', rd.title); ARIG.nod(); aureliaSay('ui-read-' + rd.id, () => { capHide(1500); idleRoom(); }); });
     wireShelf(list); wireLong(list); wireContact(list); wireExtra(list);
     list.querySelectorAll('[data-becoming]').forEach(b => b.addEventListener('click', () => { sfx('tap'); ROOMV_AT = b.dataset.becoming; openRoom('becoming'); }));
+    list.querySelectorAll('[data-hero]').forEach(b => b.addEventListener('click', () => { sfx('tap'); heroShow(); }));
     list.querySelectorAll('[data-panel]').forEach(b => b.addEventListener('click', () => { sfx('open');
       openRoom(b.dataset.panel === 'run' ? 'run' : 'top'); }));
     list.querySelectorAll('[data-do]').forEach(b => b.addEventListener('click', () => { sfx('tap'); const r = findStep(b.dataset.do); if (r) stepSheet(r[0], r[1], null, 'arrival'); }));
@@ -2514,7 +2576,7 @@
     $('helpbtn').addEventListener('click', () => { sfx('tap'); if (MODE === 'school' && C.tour && !S.school.toured2) { S.school.toured2 = true; save(); if ($('stage').classList.contains('arrive')) leaveArrival(); tour(); } else help(); });
     cover();
     if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
-    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool, show: id => trophyShow(awards().find(a => a.id === id)), awards, quiet: quietProject, check: id => checkIn(trackById(id)), entry: entryWord, home: goHome, amb: () => ({ on: AMB.on, fire: AMB.fireOn, beds: Object.keys(AMB.bufs), layers: AMB.layers.map(L => ({ n: L.n, live: L.live.length, bed: L.bed, next: +(L.nextAt - ac().currentTime).toFixed(1) })) }), mus: () => ({ want: MUSWANT, piece: musicNow(), paused: MUS.paused, vol: +getVol(MUS).toFixed(2), wired: !!MUS._g }), skip: () => { MUS.pause(); MUS.dispatchEvent(new Event('ended')); }, prac: id => logPractice(trackById(id)), track: id => openTrack(trackById(id)), tracks: () => allTracks().map(t => t.id), say: pickSay, state: sayState, ask: askPromise, open: schoolOpen, all: everythingOpen, fw: () => fireworks(inScene() ? $('scene') : $('stage'), 5000), day: dayCelebrate };
+    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool, show: id => trophyShow(awards().find(a => a.id === id)), awards, quiet: quietProject, check: id => checkIn(trackById(id)), entry: entryWord, home: goHome, amb: () => ({ on: AMB.on, fire: AMB.fireOn, beds: Object.keys(AMB.bufs), layers: AMB.layers.map(L => ({ n: L.n, live: L.live.length, bed: L.bed, next: +(L.nextAt - ac().currentTime).toFixed(1) })) }), mus: () => ({ want: MUSWANT, piece: musicNow(), paused: MUS.paused, vol: +getVol(MUS).toFixed(2), wired: !!MUS._g }), skip: () => { MUS.pause(); MUS.dispatchEvent(new Event('ended')); }, prac: id => logPractice(trackById(id)), track: id => openTrack(trackById(id)), tracks: () => allTracks().map(t => t.id), say: pickSay, state: sayState, ask: askPromise, open: schoolOpen, all: everythingOpen, hero: (i, all) => heroShow(i, all), fw: () => fireworks(inScene() ? $('scene') : $('stage'), 5000), day: dayCelebrate };
   }
   /* a phone held sideways: the stage turns back by ninety degrees and stays upright, which reads as "this app is this way up" */
   const rot = () => {

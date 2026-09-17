@@ -733,3 +733,21 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   Gymnopédie 1, the C sharp minor nocturne, the Goldberg Aria, Bach's Prelude in C, Träumerei (all PD/CC0, see
   audio/music/CREDIT.txt; `music.first` + `music.pieces` carry names). Linear gain only on music too: loudnorm made
   v83's piano pump.
+- **v86 (2026-09-17, Fable session): back to the coded room; the character, a first feel.** (1) **The room.** He heard
+  v85's rebuilt birdsong as "very sharp in the ear" and said go back to what we had unless something is KNOWN to be
+  better; nothing can be known from a terminal, so `amb.mode: "coded"` restores the old made-in-code room (wind + two
+  soft birds, `ambCoded`), minus the brazier hiss and pops (the pops were his "frog clicking"). The recordings, the
+  layer player and /sounds.html all stay; set `amb.mode` to anything else to use them again. Three rounds of
+  recorded ambience failed by ear: do not try a fourth without him choosing the files on /sounds.html first. The
+  music playlist and the lyre switch are unchanged. (2) **The character** (`C.hero`, `heroCard`, `heroShow`,
+  `heroName`, `S.hero = { name, seen }`, class prefix `hero`/`h`): a card at home under the punch line once the school
+  has opened (seven-day gate; never on a child's page), tap = name him the first time, then a FULL-SCREEN painted
+  portrait with his name, the stage title and line, a bar to the next stage and a strip of the stages (not-reached
+  ones blurred dark). A newly reached stage wears a New dot on the card and opens with the fanfare and the leaf
+  shower. He never loses a stage. Three stages of an intended twelve: labourer 0, legionary 100 (Torch), emperor 877
+  (Radiant, everything). "See every stage (builder's view)" on the portrait shows them all: HIDE IT with the other
+  builder's view before launch. Console: `NOL.hero(i, all)`. Pictures: images/hero/<id>.jpg, 704x980, painted with
+  tools/hero/draw.mjs (Flux 2 Klein, stage one by txt2img, the rest by img2img off stage one at strength 1,
+  image_guidance 2.5-3, use curl not node fetch: renders pass 300 s); bump `pic` on a stage to bust the cache.
+  Known faults in the first three: legionary looks 45, emperor wears a wristwatch, the body does not visibly grow.
+  NOT done: a woman's path (must exist before launch), the other nine stages, a voiced line from Marcus at a new stage.

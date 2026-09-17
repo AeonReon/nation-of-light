@@ -1462,3 +1462,40 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 /* v76: who a ladder is for */
 .srow .swho{font-size:11.5px;font-weight:700;color:var(--ink-faint);line-height:1.3}
 .tk-who{margin:8px 2px 0;font-size:13px;font-weight:700;color:var(--ink-soft)}
+
+/* ---- the character (v86) ---- */
+.herocard{flex-direction:row;align-items:center;gap:14px;text-align:left;border:0;width:100%;cursor:pointer;font:inherit;color:inherit;padding:12px;--g1:var(--gold-lt);--g2:var(--crimson);transition:transform .35s var(--spring)}
+.herocard::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:2px;background:linear-gradient(135deg,var(--g1),var(--g2));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.herocard:active{transform:scale(.98)}
+.herocard img{flex:none;width:84px;height:116px;object-fit:cover;object-position:50% 12%;border-radius:12px;box-shadow:0 4px 14px rgba(40,28,10,.25)}
+.herocard .ht{display:flex;flex-direction:column;gap:3px;min-width:0;flex:1}
+.herocard strong{font-family:var(--display);font-size:21px;line-height:1.15}
+.herocard small{color:var(--ink-soft);font-size:13.5px}
+.herocard .hn{color:var(--ink-faint);font-size:12.5px}
+.herocard .dot{font-size:9.5px;letter-spacing:.08em;background:var(--crimson);color:#fff;padding:2px 7px;border-radius:8px;margin-left:4px}
+.herocard.new{animation:heroglow 2.4s ease-in-out infinite}
+@keyframes heroglow{0%,100%{box-shadow:var(--shadow)}50%{box-shadow:0 0 0 3px rgba(201,162,39,.35),var(--shadow)}}
+.hbar{display:block;height:6px;border-radius:6px;background:var(--gold-pale);overflow:hidden;margin-top:4px}
+.hbar em{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,var(--gold-lt),var(--gold))}
+.veil.herov{padding:0;justify-content:flex-end;background:#120f0a}
+.herofull{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end}
+.herofull .hpic{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0;animation:heroin 1.4s var(--ease) both}
+@keyframes heroin{from{transform:scale(1.08)}to{transform:scale(1)}}
+.herofull.locked .hpic{filter:blur(16px) brightness(.45) saturate(.6)}
+.herofull .hfoot{position:relative;padding:90px 20px max(18px,env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(18,15,10,0) 0%,rgba(18,15,10,.78) 34%,rgba(18,15,10,.96) 100%);color:#FBF3DF;text-align:center}
+.herofull .eyebrow{color:var(--gold-lt);justify-content:center}
+.herofull h2{font-family:var(--display);font-size:38px;line-height:1.05;margin:4px 0 2px;color:#fff}
+.herofull .htitle{font-size:16px;color:var(--gold-lt);margin:0 0 6px;font-weight:600}
+.herofull .hline{font-size:14.5px;line-height:1.5;color:#E9DFC8;margin:0 auto 10px;max-width:34ch}
+.herofull .hbar{background:rgba(255,255,255,.16);max-width:280px;margin:6px auto 0}
+.herofull .hn{font-size:12.5px;color:#CFC3A6;margin:6px 0 0}
+.hstrip{display:flex;justify-content:center;gap:10px;margin:14px 0 8px}
+.hst{position:relative;width:46px;height:62px;border-radius:10px;border:0;padding:0;overflow:hidden;background:#2a241a;cursor:pointer;opacity:.75;transition:transform .35s var(--spring),opacity .2s}
+.hst::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:2px;background:linear-gradient(135deg,var(--gold-lt),var(--gold));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.5}
+.hst.on{opacity:1;transform:scale(1.12)}.hst.on::after{opacity:1}
+.hst img{width:100%;height:100%;object-fit:cover;object-position:50% 10%}
+.hst.lk img{filter:blur(5px) brightness(.4)}
+.hrow{display:flex;justify-content:center;gap:18px}
+.herofull .linkbtn{background:none;border:0;color:#CFC3A6;font:inherit;font-size:12.5px;text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:6px 2px}
+.veil.herov .backbtn{z-index:3}
+.stage.school:not(.tucked) .veil.herov .backbtn{top:max(12px,env(safe-area-inset-top))}

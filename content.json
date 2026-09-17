@@ -6411,7 +6411,46 @@
   "brazier": "The brazier",
   "olive": "The olive"
  },
+ "hero": {
+  "title": "Your character",
+  "newDot": "New",
+  "unnamed": "He has no name yet",
+  "nameTitle": "Give him a name",
+  "nameLede": "He came to the town gate the same week you came here, with nothing but a staff. Every step you take, he takes. Every rank you reach, he reaches.",
+  "nameLabel": "His name",
+  "namePh": "A name you would be proud of",
+  "nameGo": "That is his name",
+  "rename": "Change the name",
+  "stageOf": "Stage {n} of {N}",
+  "locked": "Not yet",
+  "lockedAt": "He reaches this at {at} points",
+  "next": "{p} of {at} points · next, {title}",
+  "top": "There is nothing above this.",
+  "builder": "See every stage (builder's view)",
+  "builderOff": "Hide the stages not reached",
+  "stages": [
+   {
+    "id": "labourer",
+    "at": 0,
+    "title": "The labourer at the gate",
+    "line": "A worn tunic, a staff, and the road into the city. Everybody who became anything stood here first."
+   },
+   {
+    "id": "legionary",
+    "at": 100,
+    "title": "The legionary",
+    "line": "Stronger and straighter, and trusted with a shield. The days you kept are in his shoulders."
+   },
+   {
+    "id": "emperor",
+    "at": 877,
+    "title": "The emperor",
+    "line": "Everything the school holds, done. He stands where Marcus stood."
+   }
+  ]
+ },
  "amb": {
+  "mode": "coded",
   "xfade": 5,
   "every": 2,
   "day": [
