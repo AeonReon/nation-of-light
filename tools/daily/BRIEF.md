@@ -1,6 +1,6 @@
 # Light School — writing brief for the new daily items (v74)
 
-The app: Light School (live at nolschool.com), a free self-development app for adults and families in Northern Ireland. Every day the home page offers **three quick things** to do. Adults and children both read it.
+The app: Light School (live at nolschool.com), a free self-development app for adults and families, used in many countries. Every day the home page offers **three quick things** to do. Adults and children both read it.
 
 You are writing items in two new pools that belong to NO ladder:
 
@@ -19,6 +19,7 @@ You are writing items in two new pools that belong to NO ladder:
 8. **No duplicates** of each other or of the existing rungs in `existing-rungs.txt` (same folder). Similar topic is fine if the action is clearly different.
 9. **Variety is the whole point.** Spread across these kinds of thing: movement, mind, making, words, kindness, order, curiosity, calm, beauty, music. No run of five items that feel the same.
 10. British spelling (colour, organise, tidy). No emoji.
+11. Works anywhere in the world: never name a country, region, national body, currency symbol or phone number as if the reader lives there ("your weather service", "your emergency number", "20" not "£20"). No UK slang.
 
 ## Field format — write a JSON array, nothing else in the file
 

@@ -346,7 +346,7 @@
        "kind": "kindness"
       }
      ],
-     "about": "Skipping is the quickest fitness there is and it feels like play. From stepping over a rope on the ground to a hundred in a row and tricks, in a few weeks. A rope costs a few pounds; a length of washing line will do to begin."
+     "about": "Skipping is the quickest fitness there is and it feels like play. From stepping over a rope on the ground to a hundred in a row and tricks, in a few weeks. A rope costs very little; a length of washing line will do to begin."
     },
     {
      "id": "body.upside",
@@ -1918,7 +1918,7 @@
      "line": "From dressing for the weather you can feel to leading a walk in wind and rain that brings everybody home warm.",
      "size": "months",
      "strand": "get-strong-outside",
-     "about": "For everybody: a child and a grown-up can climb it side by side, and the rungs at the shore are always done with a grown-up. It starts at the front door, dressing for what is really outside, then reading a forecast properly: the hour-by-hour, the \"feels like\" number, the rain map and the warnings. Then daylight, layers, getting dry again, the early signs of somebody getting too cold, and a turn-back time you keep. The middle rungs are the tide: reading a tide table, knowing the dangers, watching the water, and planning a shore walk around it. It ends with you deciding the weather plan for a family day out and leading a walk in wind and rain that everybody enjoys. In Northern Ireland the weather changes by the hour, so this is the skill that gets people out of the door more often, not less.",
+     "about": "For everybody: a child and a grown-up can climb it side by side, and the rungs at the shore are always done with a grown-up. It starts at the front door, dressing for what is really outside, then reading a forecast properly: the hour-by-hour, the \"feels like\" number, the rain map and the warnings. Then daylight, layers, getting dry again, the early signs of somebody getting too cold, and a turn-back time you keep. The middle rungs are the tide: reading a tide table, knowing the dangers, watching the water, and planning a shore walk around it. It ends with you deciding the weather plan for a family day out and leading a walk in wind and rain that everybody enjoys. In many places the weather changes by the hour, so this is the skill that gets people out of the door more often, not less.",
      "steps": [
       {
        "n": 1,
@@ -1931,7 +1931,7 @@
       {
        "n": 2,
        "test": "Open today's forecast and say, hour by hour, what to bring if you go out at ten, at two and at six.",
-       "note": "Use the hour-by-hour view on the Met Office website or app, both free. For each time, name the actual things: a coat, a hat, sun cream, gloves, nothing extra. The point is that a day in Northern Ireland is often three different days.",
+       "note": "Use the hour-by-hour view from your national weather service; its website or app is free. For each time, name the actual things: a coat, a hat, sun cream, gloves, nothing extra. The point is that one day can be three different days.",
        "ctx": "room",
        "kind": "attention"
       },
@@ -1952,21 +1952,21 @@
       {
        "n": 5,
        "test": "Open a free rain radar map, find the nearest shower, say when it will reach you, and check.",
-       "note": "The Met Office has a free rain map that moves forward through the next few hours. Find where you are, watch the blue patches, and say a time: \"about twenty past three\". Then look out at that time. Within half an hour is a good result.",
+       "note": "Most national weather services have a free rain map that moves forward through the next few hours. Find where you are, watch the blue patches, and say a time: \"about twenty past three\". Then look out at that time. Within half an hour is a good result.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 6,
-       "test": "Look up the weather warnings for Northern Ireland today, and say what yellow, amber and red each mean.",
-       "note": "The Met Office website lists them by region. Roughly: yellow means be aware and plan around it, amber means be prepared for real disruption, red means take action and avoid travel if you can. If there are no warnings today, that counts: say so, and say what each colour would mean.",
+       "test": "Look up today's weather warnings for your area, and say what each warning level means.",
+       "note": "Your national weather service lists them by region, usually in colours or levels. In many countries the lowest means be aware and plan around it, the middle means be prepared for real disruption, and the highest means take action and avoid travel if you can. If there are no warnings today, that counts: say so, and say what each level would mean.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 7,
        "test": "Look up today's sunset time, then go for a walk that finishes half an hour before it.",
-       "note": "In Northern Ireland the sun sets around four o'clock in December and after ten in June, so \"before dark\" means very different things. Pick a walk, work back from the sunset time, and be home or back at the car with half an hour to spare.",
+       "note": "In many places the sun sets hours earlier in winter than in summer, so \"before dark\" means very different things through the year. Pick a walk, work back from the sunset time, and be home or back at the car with half an hour to spare.",
        "ctx": "out",
        "kind": "skill"
       },
@@ -1987,7 +1987,7 @@
       {
        "n": 10,
        "test": "Learn the early signs that somebody is getting too cold, and say them out loud to somebody else.",
-       "note": "The NHS lists them: shivering, pale cold skin, being tired or muddled, clumsy hands, and slurred words. What to do first: out of the wind and wet, dry layers on, a hat, a warm drink if they are fully awake, and 999 if they stop shivering but are still cold or seem confused. A child can learn it as \"shivering, slow and muddled\".",
+       "note": "Health services list them: shivering, pale cold skin, being tired or muddled, clumsy hands, and slurred words. What to do first: out of the wind and wet, dry layers on, a hat, a warm drink if they are fully awake, and ring your emergency number if they stop shivering but are still cold or seem confused. A child can learn it as \"shivering, slow and muddled\".",
        "ctx": "room",
        "kind": "attention"
       },
@@ -2008,14 +2008,14 @@
       {
        "n": 13,
        "test": "Look up the tide times for the beach or shore nearest you, and say when high water and low water are today.",
-       "note": "Free tide times come from the Admiralty EasyTide website, and harbours and shops by the sea often have printed tide tables. There are usually two high tides and two low tides a day, a little over six hours apart, and they come later each day. Write today's four times down.",
+       "note": "Free tide times are on tide-times websites and apps, and harbours and shops by the sea often have printed tide tables. There are usually two high tides and two low tides a day, a little over six hours apart, and they come later each day. Write today's four times down.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 14,
        "test": "Learn the four rules for the shore, and tell them to whoever you would go with.",
-       "note": "One: stay off sandbanks, mudflats, rocks and paths to islands when the tide is coming in; it can come round behind you faster than you can walk. Two: know the time of high water before you set off. Three: if somebody is in trouble in the sea, ring 999 and ask for the Coastguard; do not go in after them. Four: if you fall in, float on your back until you get your breath, which is the RNLI's \"Float to Live\" advice.",
+       "note": "One: stay off sandbanks, mudflats, rocks and paths to islands when the tide is coming in; it can come round behind you faster than you can walk. Two: know the time of high water before you set off. Three: if somebody is in trouble in the sea, ring your emergency number and ask for the coastguard or sea rescue; do not go in after them. Four: if you fall in, float on your back until you get your breath, which is what sea-rescue services teach.",
        "ctx": "room",
        "kind": "attention"
       },
@@ -2044,7 +2044,7 @@
       {
        "n": 17,
        "test": "Read or listen to the inshore waters forecast for the stretch of coast you would walk, and say what it means for a walk on the coast tomorrow.",
-       "note": "It is free on the Met Office website and read out on the radio. It gives the wind strength on a scale of numbers, the sea state and the visibility. A wind of 6 or more, or a \"rough\" sea, means a walk well back from the edge of the water, or a walk inland instead.",
+       "note": "Many national weather services publish a free forecast for coastal waters, and some read it out on the radio. It usually gives the wind strength on a scale of numbers, the sea state and the visibility. A wind of 6 or more, or a \"rough\" sea, means a walk well back from the edge of the water, or a walk inland instead.",
        "ctx": "room",
        "kind": "attention"
       },
@@ -2807,7 +2807,7 @@
       }
      ],
      "warn": "Never on your own, and never in open water on this ladder. Every step happens at a pool or a lifeguarded beach with somebody beside you who can already swim.",
-     "about": "Swimming is the one thing on this list that is a safety skill as well as a fitness one, and the water is patient: it takes almost everybody from blowing bubbles to fifty metres inside a few months. It needs a pool, which is the only cost here — most council leisure centres are a few pounds and many have free or cheap family sessions. Nothing else in the school trains your breathing and your whole body at once like this.",
+     "about": "Swimming is the one thing on this list that is a safety skill as well as a fitness one, and the water is patient: it takes almost everybody from blowing bubbles to fifty metres inside a few months. It needs a pool, which is the only cost here — public pools are usually cheap and many have free or low-cost family sessions. Nothing else in the school trains your breathing and your whole body at once like this.",
      "place": "pool",
      "need": 60
     },
@@ -5770,12 +5770,12 @@
      "line": "From finding the Plough to an hour under the stars showing family or friends ten things by name.",
      "size": "months",
      "strand": "get-strong-outside",
-     "about": "For everybody: a child and a grown-up can climb it side by side, and a grown-up is always with a child out in the dark. It starts with the one shape you can see from Northern Ireland on every clear night of the year, the Plough, and uses it to find the North Star and Cassiopeia. Then the sky turning through the night, the big pattern of the season, a planet, the space station, shooting stars and the Moon's craters. It finishes somewhere properly dark with the Milky Way and the Andromeda galaxy, and then an hour of showing other people what you know. Most of it needs nothing but a clear night and a doorstep, and it is one of the best things to share with a child.",
+     "about": "For everybody: a child and a grown-up can climb it side by side, and a grown-up is always with a child out in the dark. It is written for the northern half of the world; south of the equator the sky is different, so start with the Southern Cross instead. It starts with the one shape you can see on every clear night of the year from most northern countries, the Plough, and uses it to find the North Star and Cassiopeia. Then the sky turning through the night, the big pattern of the season, a planet, the space station, shooting stars and the Moon's craters. It finishes somewhere properly dark with the Milky Way and the Andromeda galaxy, and then an hour of showing other people what you know. Most of it needs nothing but a clear night and a doorstep, and it is one of the best things to share with a child.",
      "steps": [
       {
        "n": 1,
        "test": "On a clear night, go outside or to a dark window and find the Plough.",
-       "note": "The Plough is seven bright stars in the shape of a saucepan: four make the pan and three make the handle. From Northern Ireland it never sets, so it is up on every clear night of the year, somewhere in the northern half of the sky. Turn off the lights behind you. A free sky map such as Stellarium Web can show you where to look, then put the phone away.",
+       "note": "The Plough is seven bright stars in the shape of a saucepan: four make the pan and three make the handle. From north of about 40 degrees (most of Europe, North America and northern Asia) it never sets, so it is up on every clear night of the year, somewhere in the northern half of the sky. Turn off the lights behind you. A free sky map such as Stellarium Web can show you where to look, then put the phone away.",
        "ctx": "out",
        "kind": "attention",
        "mins": 5
@@ -5783,14 +5783,14 @@
       {
        "n": 2,
        "test": "Follow the two end stars of the Plough's pan to the North Star, and point north.",
-       "note": "Take the two stars on the side of the pan furthest from the handle. Follow the line they make out of the top of the pan, about five times the gap between them, to a star on its own that is not especially bright. That is the North Star. Face it and you are facing north; check with a compass app if you like. From here it sits a little over halfway up the sky, and it hardly moves.",
+       "note": "Take the two stars on the side of the pan furthest from the handle. Follow the line they make out of the top of the pan, about five times the gap between them, to a star on its own that is not especially bright. That is the North Star. Face it and you are facing north; check with a compass app if you like. How high it sits matches how far north you live: about halfway up the sky in northern Europe, lower further south. It hardly moves.",
        "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 3,
        "test": "Find Cassiopeia, the W of five stars on the far side of the North Star from the Plough.",
-       "note": "Draw an imaginary line from the Plough through the North Star and keep going about the same distance again. Cassiopeia looks like a W or an M depending on the time of year and night. Like the Plough, it never sets from Northern Ireland.",
+       "note": "Draw an imaginary line from the Plough through the North Star and keep going about the same distance again. Cassiopeia looks like a W or an M depending on the time of year and night. Like the Plough, it never sets from most northern countries.",
        "ctx": "out",
        "kind": "skill"
       },
@@ -5825,7 +5825,7 @@
       {
        "n": 8,
        "test": "Find the big pattern of the season: Orion in winter, bright Arcturus in spring and early summer, or the Summer Triangle in late summer and autumn.",
-       "note": "November to March evenings: Orion, low in the south, with three stars in a short straight line for his belt, an orange star above them and a white one below. April to July: follow the curve of the Plough's handle away from the pan to a bright orange star, Arcturus. August to October: three bright stars high overhead, Vega, Deneb and Altair, make the Summer Triangle. In June and early July the sky here never gets fully dark, so try late in the evening.",
+       "note": "November to March evenings: Orion, low in the south, with three stars in a short straight line for his belt, an orange star above them and a white one below. April to July: follow the curve of the Plough's handle away from the pan to a bright orange star, Arcturus. August to October: three bright stars high overhead, Vega, Deneb and Altair, make the Summer Triangle. Far in the north, the sky in June and early July never gets fully dark, so try late in the evening.",
        "ctx": "out",
        "kind": "skill"
       },
@@ -5874,14 +5874,14 @@
       {
        "n": 15,
        "test": "Plan a trip to a dark place: pick a night near new moon, check the forecast, and pack for the cold.",
-       "note": "A dark place means away from town lights: a forest car park, a quiet beach, the hills. Davagh Forest in County Tyrone is an official Dark Sky Park. The best nights are the week either side of new moon, which the Met Office and most calendars show. Pack warm layers, a hat, a flask, a blanket and a red light, and tell somebody where you are going.",
+       "note": "A dark place means away from town lights: a forest car park, a quiet beach, the hills. Many countries have official Dark Sky Parks; search for the nearest one. The best nights are the week either side of new moon, which most calendars and weather apps show. Pack warm layers, a hat, a flask, a blanket and a red light, and tell somebody where you are going.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 16,
        "test": "From your dark place, find the Milky Way.",
-       "note": "It is a pale band of light, like thin cloud that does not move, running across the sky; it is the light of millions of stars in our own galaxy. From Northern Ireland it is best from August to October in the evening, passing high overhead through Cassiopeia and the Summer Triangle. Give your eyes twenty minutes first. A grown-up with any child, and stay near the car or the path.",
+       "note": "It is a pale band of light, like thin cloud that does not move, running across the sky; it is the light of millions of stars in our own galaxy. From northern countries it is best from August to October in the evening, passing high overhead through Cassiopeia and the Summer Triangle. Give your eyes twenty minutes first. A grown-up with any child, and stay near the car or the path.",
        "ctx": "out",
        "kind": "attention"
       },
@@ -5914,7 +5914,7 @@
        "kind": "kindness"
       }
      ],
-     "who": "For everybody; a grown-up with any child in the dark"
+     "who": "For everybody in the northern half of the world; a grown-up with any child in the dark"
     },
     {
      "id": "sky.birdsflight",
@@ -6689,7 +6689,7 @@
        "kind": "skill"
       }
      ],
-     "about": "The cube looks impossible and is not: it is seven short patterns learned one at a time, and the first one takes an evening. A few minutes a day and within a month you solve it every time, which is a thing people will ask you to do for the rest of your life. You need a cube, about five pounds, and nothing else."
+     "about": "The cube looks impossible and is not: it is seven short patterns learned one at a time, and the first one takes an evening. A few minutes a day and within a month you solve it every time, which is a thing people will ask you to do for the rest of your life. You need a cube, which costs very little, and nothing else."
     },
     {
      "id": "mind.chess",
@@ -7051,7 +7051,7 @@
       },
       {
        "n": 15,
-       "test": "Add up a shopping basket as you go, and be within a pound at the till.",
+       "test": "Add up a shopping basket as you go, and be within one whole unit of your money at the till.",
        "ctx": "out",
        "kind": "attention"
       },
@@ -7316,7 +7316,7 @@
        "test": "Ask an AI chat tool one question with who you are, what you need and why written into it, and get a useful first answer.",
        "ctx": "room",
        "kind": "skill",
-       "note": "Compare \"radiator cold\" with \"I rent a flat in Northern Ireland and one radiator is cold at the top and warm at the bottom. What can I safely check myself before I ring the landlord?\" The second one gets a better answer first time. If you do not use them, put the same full question to a search engine or a person and count it."
+       "note": "Compare \"radiator cold\" with \"I rent a flat and one radiator is cold at the top and warm at the bottom. What can I safely check myself before I ring the landlord?\" The second one gets a better answer first time. If you do not use them, put the same full question to a search engine or a person and count it."
       },
       {
        "n": 8,
@@ -7594,14 +7594,14 @@
     },
     {
      "id": "words.irish",
-     "name": "Irish",
+     "name": "The old language of your place",
      "line": "Your own name to a conversation.",
      "size": "months",
      "strand": "say-what-you-mean",
      "steps": [
       {
        "n": 1,
-       "test": "Say your own name and where you are from, in Irish.",
+       "test": "Say your own name and where you are from, in the old language of where you live or where your family comes from.",
        "ctx": "room",
        "kind": "skill",
        "mins": 5
@@ -7614,13 +7614,13 @@
       },
       {
        "n": 3,
-       "test": "Count to ten in Irish.",
+       "test": "Count to ten in that language.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 4,
-       "test": "Learn the Irish for ten things in your house, and put a label on each.",
+       "test": "Learn the words in that language for ten things in your house, and put a label on each.",
        "ctx": "home",
        "kind": "skill"
       },
@@ -7638,8 +7638,8 @@
       },
       {
        "n": 7,
-       "test": "Find out what your own town or townland name means in Irish.",
-       "note": "Almost every place name here is Irish underneath. Yours says something, and it is usually about the land.",
+       "test": "Find out what the name of your own town or area means in that language.",
+       "note": "Many place names come from an older language underneath. Yours says something, and it is usually about the land.",
        "ctx": "room",
        "kind": "attention"
       },
@@ -7657,7 +7657,7 @@
       },
       {
        "n": 10,
-       "test": "Learn twenty words for food, and ask for something in Irish.",
+       "test": "Learn twenty words for food, and ask for something in that language.",
        "ctx": "out",
        "kind": "courage"
       },
@@ -7675,7 +7675,7 @@
       },
       {
        "n": 13,
-       "test": "Listen to five minutes of Irish radio or television and catch ten words.",
+       "test": "Listen to five minutes of radio or television in that language and catch ten words.",
        "ctx": "room",
        "kind": "attention"
       },
@@ -7693,13 +7693,13 @@
       },
       {
        "n": 16,
-       "test": "Tell somebody in Irish what you did yesterday.",
+       "test": "Tell somebody in that language what you did yesterday.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 17,
-       "test": "Learn a song or a poem in Irish and say it from memory.",
+       "test": "Learn a song or a poem in that language and say it from memory.",
        "ctx": "room",
        "kind": "skill"
       },
@@ -7717,7 +7717,7 @@
       },
       {
        "n": 20,
-       "test": "Tell a short story in Irish to the group.",
+       "test": "Tell a short story in that language to the group.",
        "ctx": "out",
        "kind": "courage"
       }
@@ -7865,7 +7865,7 @@
      "line": "From one page tonight to a whole book of about two hundred pages in one day.",
      "size": "months",
      "strand": "say-what-you-mean",
-     "about": "For grown-ups, and for any child who can already read a chapter book on their own (the Reading ladder comes before this one). The climb starts with one page at bedtime and a book you actually want, then builds the habit a few days a week, then the length of a sitting, from ten pages to an hour, then a hundred and fifty pages in a day. It ends with a whole book of about two hundred pages read between getting up and going to bed. Nothing to buy: joining Libraries NI is free, and you can ask a library to get in a book it does not have on the shelf.",
+     "about": "For grown-ups, and for any child who can already read a chapter book on their own (the Reading ladder comes before this one). The climb starts with one page at bedtime and a book you actually want, then builds the habit a few days a week, then the length of a sitting, from ten pages to an hour, then a hundred and fifty pages in a day. It ends with a whole book of about two hundred pages read between getting up and going to bed. Nothing to buy: joining a public library is free in most places, and you can ask a library to get in a book it does not have on the shelf.",
      "steps": [
       {
        "n": 1,
@@ -8320,7 +8320,7 @@
        "test": "Learn the sign-language alphabet for the letters of your name, and spell your name with your hands.",
        "ctx": "room",
        "kind": "attention",
-       "note": "Sign language has its own alphabet. Any short video of the British Sign Language alphabet will show you the letters.",
+       "note": "Sign language has its own alphabet. Any short video of the sign-language alphabet used where you live (for example British, American or Auslan) will show you the letters.",
        "mins": 5
       },
       {
@@ -8764,7 +8764,7 @@
       {
        "n": 1,
        "test": "Order something for yourself at a counter, out loud, and say thank you at the end.",
-       "note": "A chippy, a bakery, a café, a post office. A child does the talking while the grown-up stands beside them and says nothing. No money to spend: ask at the library to renew a book, or at a station for a timetable. If you do this every day already, do it today with your eyes on theirs and count it.",
+       "note": "A chip shop, a bakery, a café, a post office. A child does the talking while the grown-up stands beside them and says nothing. No money to spend: ask at the library to renew a book, or at a station for a timetable. If you do this every day already, do it today with your eyes on theirs and count it.",
        "ctx": "out",
        "kind": "courage",
        "mins": 3
@@ -8835,7 +8835,7 @@
       {
        "n": 11,
        "test": "Ask somebody at work if they could answer three of your questions now, and ask them.",
-       "note": "\"I am practising asking people about their jobs; could I ask you three quick questions?\" A shop worker in a quiet moment, a librarian, a postie. If they say not now, thank them; asking was the rung, and try somebody else.",
+       "note": "\"I am practising asking people about their jobs; could I ask you three quick questions?\" A shop worker in a quiet moment, a librarian, a postal worker. If they say not now, thank them; asking was the rung, and try somebody else.",
        "ctx": "out",
        "kind": "courage"
       },
@@ -9942,7 +9942,7 @@
        "test": "Make a simple circuit: a battery, a wire, and a bulb or buzzer.",
        "ctx": "kit",
        "kind": "skill",
-       "note": "A pound-shop kit, or a lemon, two different coins and a small LED. Light comes on: done."
+       "note": "A cheap kit, or a lemon, two different coins and a small LED. Light comes on: done."
       },
       {
        "n": 12,
@@ -10484,7 +10484,7 @@
        "kind": "kindness"
       }
      ],
-     "about": "Clay is the most forgiving material there is; if it goes wrong you squash it and start again. From a pinch pot to a bowl you eat from, in a few months of an hour at a time. A bag of air-drying clay is a few pounds and needs no kiln."
+     "about": "Clay is the most forgiving material there is; if it goes wrong you squash it and start again. From a pinch pot to a bowl you eat from, in a few months of an hour at a time. A bag of air-drying clay costs little and needs no kiln."
     },
     {
      "id": "make.draw",
@@ -13701,7 +13701,7 @@
        "how": [
         "Bowl on the scale, zero it, then add. Zero it again for the next thing.",
         "Get it exact rather than close. Baking is the one place where close is not good enough.",
-        "No scale? Kitchen scales are a few pounds second hand and every charity shop has one."
+        "No scale? Kitchen scales are cheap second hand and most charity shops have one."
        ],
        "ctx": "kit",
        "kind": "attention",
@@ -13822,7 +13822,7 @@
        "how": [
         "Four ingredients only. Nothing else belongs in a loaf.",
         "Knead ten minutes, rise until doubled, knock back, shape, rise again, bake hot.",
-        "It costs about thirty pence and takes fifteen minutes of actual work spread over an afternoon."
+        "It costs very little and takes fifteen minutes of actual work spread over an afternoon."
        ],
        "ctx": "home",
        "kind": "skill",
@@ -13886,7 +13886,7 @@
        ],
        "ctx": "home",
        "kind": "kindness",
-       "note": "A baked thing made by a person is one of the few gifts nobody has ever had too many of, and it costs about three pounds."
+       "note": "A baked thing made by a person is one of the few gifts nobody has ever had too many of, and it costs very little."
       },
       {
        "n": 17,
@@ -13917,12 +13917,12 @@
        "test": "Price what you baked and sell it to people who are not related to you.",
        "how": [
         "Cost plus your time, then a real price, written on a card.",
-        "A stall, a car boot, a school fair, a sign at the gate, a message to the street group.",
+        "A stall, a second-hand sale, a school fair, a sign at the gate, a message to the street group.",
         "Say the price out loud without apologising for it."
        ],
        "ctx": "out",
        "kind": "courage",
-       "note": "The nerve is not in the baking, it is in saying the number. That is the rung. Ten pounds earned from something you made changes how you see your own hands."
+       "note": "The nerve is not in the baking, it is in saying the number. That is the rung. Money earned from something you made changes how you see your own hands."
       },
       {
        "n": 20,
@@ -13937,7 +13937,7 @@
        "note": "Hands off is the hard part and the whole rung. Something somebody made themselves, badly, with you beside them, is what makes them a baker."
       }
      ],
-     "about": "Baking is chemistry that you get to eat, and unlike cooking it rewards exactness rather than judgement, which makes it the better one to learn with children. The ladder goes from a packet mix to a proper loaf of bread from flour, water and salt — which costs about thirty pence and beats anything in a shop — and ends by selling what you made to somebody who is not related to you, which is a different kind of nerve entirely.",
+     "about": "Baking is chemistry that you get to eat, and unlike cooking it rewards exactness rather than judgement, which makes it the better one to learn with children. The ladder goes from a packet mix to a proper loaf of bread from flour, water and salt — which costs very little and beats anything in a shop — and ends by selling what you made to somebody who is not related to you, which is a different kind of nerve entirely.",
      "need": 40
     },
     {
@@ -14614,7 +14614,7 @@
        "test": "Sell one thing you no longer need, for any price.",
        "ctx": "room",
        "kind": "courage",
-       "note": "An online listing, a car boot, a friend. Given away does not count; a pound does. The point is asking for money and getting it."
+       "note": "An online listing, a second-hand sale, a friend. Given away does not count; any price does. The point is asking for money and getting it."
       },
       {
        "n": 5,
@@ -14653,10 +14653,10 @@
       },
       {
        "n": 10,
-       "test": "Earn one pound you did not have this morning.",
+       "test": "Earn some money you did not have this morning, however small.",
        "ctx": "out",
        "kind": "courage",
-       "note": "Any honest way. Most people go years without earning a single pound outside their job."
+       "note": "Any honest way. Most people go years without earning anything outside their job."
       },
       {
        "n": 11,
@@ -14670,7 +14670,7 @@
        "test": "Set one money goal with a number and a date, written down.",
        "ctx": "room",
        "kind": "attention",
-       "note": "\"£200 by the end of next month, from things I make or do.\" Small and real beats big and vague."
+       "note": "\"200 by the end of next month, from things I make or do.\" Small and real beats big and vague."
       },
       {
        "n": 13,
@@ -14743,22 +14743,22 @@
       {
        "n": 1,
        "test": "Put one of each coin on the table and put them in order of value, smallest first.",
-       "note": "1p, 2p, 5p, 10p, 20p, 50p, £1, £2. A child names each one out loud. No coins in the house: use the pictures on the Royal Mint website. Already easy? Tip out a purse or a jar of mixed coins and total it in your head, then count to check.",
+       "note": "Every coin your country uses, from the smallest to the largest. A child names each one out loud. No coins in the house: your central bank or mint shows pictures of them online. Already easy? Tip out a purse or a jar of mixed coins and total it in your head, then count to check.",
        "ctx": "home",
        "kind": "attention",
        "mins": 3
       },
       {
        "n": 2,
-       "test": "Make one pound out of coins in three different ways.",
-       "note": "Two 50ps; five 20ps; a 50p, two 20ps and a 10p. A grown-up can make £3.85 in the fewest coins possible, then in the most.",
+       "test": "Make one whole unit of your money (a pound, a dollar, a euro) out of coins in three different ways.",
+       "note": "For example two halves, five fifths, or one half, two fifths and a tenth, in whatever coins you have. A grown-up can make 3.85 in the fewest coins possible, then in the most.",
        "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 3,
        "test": "In a shop, add up the prices of three things in your head before you reach the till.",
-       "note": "Round each price to the nearest ten pence to make it easier, then check your answer against the till. No trip to a shop today: do it with a receipt from the bin or three prices on a supermarket website.",
+       "note": "Round each price to the nearest tenth of a unit (10p, 10 cents) to make it easier, then check your answer against the till. No trip to a shop today: do it with a receipt from the bin or three prices on a supermarket website.",
        "ctx": "out",
        "kind": "attention"
       },
@@ -14771,15 +14771,15 @@
       },
       {
        "n": 5,
-       "test": "Play shop at home: one person buys, the other gives change from a £5 note, five times in a row with no mistakes.",
-       "note": "Real coins or paper ones. Prices under £5, like £3.40 or £1.85. Count up from the price to £5, the way shops used to. A grown-up on their own can do five from old receipts on paper.",
+       "test": "Play shop at home: one person buys, the other gives change from a 5 note, five times in a row with no mistakes.",
+       "note": "Real coins or paper ones. Prices under 5, like 3.40 or 1.85. Count up from the price to 5, the way shops used to. A grown-up on their own can do five from old receipts on paper.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 6,
-       "test": "Work out, in your head, the change from £10 and from £20 for five different prices, and get all five right.",
-       "note": "Take prices from a receipt or a supermarket leaflet: £7.35 from £10 is £2.65. Write your answers first, then check on a calculator.",
+       "test": "Work out, in your head, the change from 10 and from 20 for five different prices, and get all five right.",
+       "note": "Take prices from a receipt or a supermarket leaflet: 7.35 from 10 is 2.65. Write your answers first, then check on a calculator.",
        "ctx": "room",
        "kind": "skill"
       },
@@ -14938,7 +14938,7 @@
       },
       {
        "n": 13,
-       "test": "Turn ten pounds into thirty pounds honestly, and show your working.",
+       "test": "Turn a small amount of money into three times as much honestly, and show your working.",
        "ctx": "home",
        "kind": "skill"
       },
@@ -15282,7 +15282,7 @@
       },
       {
        "n": 5,
-       "test": "Work out what a pound a week becomes in a year.",
+       "test": "Work out what one coin a week becomes in a year.",
        "ctx": "room",
        "kind": "attention"
       },
@@ -16914,7 +16914,7 @@
       {
        "n": 8,
        "test": "Ask politely for a better price, and take no cheerfully if that is the answer.",
-       "note": "A stall at a market or a car boot sale (\"would you take eight for it?\"), a quote from a tradesperson, or a phone or broadband contract when it is due to renew (\"is that the best you can do for me?\"). Smile, ask once, and say thank you either way. A child can do the car boot with a grown-up.",
+       "note": "A stall at a market or a second-hand sale (\"would you take eight for it?\"), a quote from a tradesperson, or a phone or broadband contract when it is due to renew (\"is that the best you can do for me?\"). Smile, ask once, and say thank you either way. A child can do the second-hand sale with a grown-up.",
        "ctx": "out",
        "kind": "courage"
       },
@@ -17403,21 +17403,21 @@
       {
        "n": 4,
        "test": "Write down the one sentence you will use to ask for a lower price, and say it out loud three times.",
-       "note": "\"Would you take £30 for it?\" or \"I have seen this for £45 elsewhere; can you do that?\" Saying it at home first makes it much easier to say in front of somebody. Keep it short and friendly.",
+       "note": "\"Would you take 30 for it?\" or \"I have seen this for 45 elsewhere; can you do that?\" Saying it at home first makes it much easier to say in front of somebody. Keep it short and friendly.",
        "ctx": "room",
        "kind": "courage"
       },
       {
        "n": 5,
-       "test": "Offer a lower price for something second-hand: at a car boot sale, a market stall, or on an online listing.",
-       "note": "Say a number, about a quarter under the asking price: for a £20 item, £15. You do not need a yes; the rung is saying the number. Only offer on something you would actually buy at your price. A child does this with a grown-up beside them.",
+       "test": "Offer a lower price for something second-hand: at a second-hand sale, a market stall, or on an online listing.",
+       "note": "Say a number, about a quarter under the asking price: for something marked 20, offer 15. You do not need a yes; the rung is saying the number. Only offer on something you would actually buy at your price. A child does this with a grown-up beside them.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 6,
        "test": "Get a second-hand price lowered by agreeing a number between yours and theirs.",
-       "note": "They ask £20, you offer £15, they say £18, you say \"£17 and it is a deal\". Then pay and say thank you. If they will not move at all, that is their right; try somewhere else another day.",
+       "note": "They ask 20, you offer 15, they say 18, you say \"17 and we have a deal\". Then pay and say thank you. If they will not move at all, that is their right; try somewhere else another day.",
        "ctx": "out",
        "kind": "courage"
       },
@@ -17431,7 +17431,7 @@
       {
        "n": 8,
        "test": "In a shop, show a lower price you found somewhere else, and ask whether they will match it.",
-       "note": "Use the list from rung two, on your phone. \"I have seen this for £45 in another shop; will you match that?\" Some large shops have a rule that they will. Never say you saw a price you did not see.",
+       "note": "Use the list from rung two, on your phone. \"I have seen this for 45 in another shop; will you match that?\" Some large shops have a rule that they will. Never say you saw a price you did not see.",
        "ctx": "out",
        "kind": "courage"
       },
@@ -18064,7 +18064,7 @@
        "test": "Learn ten local names.",
        "ctx": "out",
        "kind": "attention",
-       "note": "The butcher, the postie, the librarian, the coach, the people at the bus stop. Write them down; use them."
+       "note": "The butcher, the postal worker, the librarian, the coach, the people at the bus stop. Write them down; use them."
       },
       {
        "n": 20,
@@ -18088,7 +18088,7 @@
       {
        "n": 1,
        "test": "Look up one grand building near you that is open to the public, and write down its opening times and whether it is free.",
-       "note": "A city hall, a cathedral, an old library, a big country house, a grand hotel lobby. Belfast City Hall, for example, has free public tours. Check the building's own website for the times. Write them down with the date you looked.",
+       "note": "A city hall, a cathedral, an old library, a big country house, a grand hotel lobby. Many city halls and parliament buildings run free public tours. Check the building's own website for the times. Write them down with the date you looked.",
        "ctx": "room",
        "kind": "attention",
        "mins": 5
@@ -18096,14 +18096,14 @@
       {
        "n": 2,
        "test": "Find one grand place within an hour of you that has a free way in, such as a free tour, a free day or an open day.",
-       "note": "European Heritage Open Days in September open many buildings in Northern Ireland that are usually closed, for free. Some country houses have free gardens or grounds even when the house costs money. Parliament Buildings at Stormont has run free tours. Check the dates before you plan anything.",
+       "note": "Many countries hold heritage open days once a year, when buildings that are usually closed open for free. Some country houses have free gardens or grounds even when the house costs money, and many parliaments and city halls run free tours. Check the dates before you plan anything.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 3,
        "test": "Look up the real price of something you would never normally look up.",
-       "note": "A made-to-measure suit, a good watch, a grand piano, a week on a sailing boat, a meal in the best restaurant in your county. Write the price down. Some will be what you expected and some will not be; either way you now know instead of guessing.",
+       "note": "A made-to-measure suit, a good watch, a grand piano, a week on a sailing boat, a meal in the best restaurant in your area. Write the price down. Some will be what you expected and some will not be; either way you now know instead of guessing.",
        "ctx": "room",
        "kind": "attention"
       },
@@ -18124,7 +18124,7 @@
       {
        "n": 6,
        "test": "Write down three places near you that you had assumed were not for you, and one fact you found about each.",
-       "note": "For example: \"The hotel lounge: anybody can have a coffee, about four pounds.\" \"City Hall: free tours, times on its website.\" \"The golf club restaurant: open to non-members.\" Keep the list; the next rungs use it.",
+       "note": "For example: \"The hotel lounge: anybody can have a coffee, and here is the price.\" \"City Hall: free tours, times on its website.\" \"The golf club restaurant: open to non-members.\" Keep the list; the next rungs use it.",
        "ctx": "room",
        "kind": "attention"
       },
@@ -18951,7 +18951,7 @@
        "test": "Write down the repairs in your home you should never do yourself, and who you would ring for each.",
        "ctx": "room",
        "kind": "attention",
-       "note": "Anything to do with gas, the fixed mains electrics (sockets, switches, the fuse box wiring), and anything on a roof or up a tall ladder. Gas work in Northern Ireland needs a Gas Safe registered engineer; wiring needs a qualified electrician. If you smell gas, open windows, do not touch switches, and ring the Northern Ireland gas emergency number, 0800 002 001. Keep the list on the fridge or in your phone."
+       "note": "Anything to do with gas, the fixed mains electrics (sockets, switches, the fuse box wiring), and anything on a roof or up a tall ladder. Gas work needs a registered gas engineer; wiring needs a qualified electrician. If you smell gas, open windows, do not touch switches, and ring the gas emergency number for your area: look it up now and write it on the list. Keep the list on the fridge or in your phone."
       },
       {
        "n": 4,
@@ -19020,7 +19020,7 @@
        "test": "Fill a small hole or crack in a wall and sand it flat.",
        "ctx": "kit",
        "kind": "skill",
-       "note": "A screw hole from an old picture or a dent from a door handle. Scrape out loose bits, press ready-mixed filler in with a knife so it stands a little above the wall, leave it as long as the tub says, then sand it smooth with sandpaper wrapped round a block. Filler is a few pounds; ask a neighbour or a relative for the end of a tub. If you rent, ask the landlord first, and wear a dust mask when sanding."
+       "note": "A screw hole from an old picture or a dent from a door handle. Scrape out loose bits, press ready-mixed filler in with a knife so it stands a little above the wall, leave it as long as the tub says, then sand it smooth with sandpaper wrapped round a block. Filler is cheap; ask a neighbour or a relative for the end of a tub. If you rent, ask the landlord first, and wear a dust mask when sanding."
       },
       {
        "n": 13,
@@ -19302,7 +19302,7 @@
      "steps": [
       {
        "n": 1,
-       "test": "Say out loud, as if to the 999 operator, exactly what you would tell them: where you are, what has happened, who is hurt.",
+       "test": "Say out loud, as if to the emergency operator (999, 112, 911: whichever number works where you live), exactly what you would tell them: where you are, what has happened, who is hurt.",
        "ctx": "room",
        "kind": "attention",
        "note": "Where you are comes first. They can send help before they know anything else.",
@@ -20098,7 +20098,7 @@
       {
        "n": 8,
        "test": "Do one kind thing that nobody will ever find out was you.",
-       "note": "Clear the frost off a neighbour's car, bring in their bin, leave a thank-you note for the postie, put a coin back in the trolley for the next person. Tell nobody, including here: just tap Done.",
+       "note": "Clear the frost off a neighbour's car, bring in their bin, leave a thank-you note for the person who delivers the post, put a coin back in the trolley for the next person. Tell nobody, including here: just tap Done.",
        "ctx": "home",
        "kind": "kindness"
       },
@@ -20112,7 +20112,7 @@
       {
        "n": 10,
        "test": "Choose a small amount to give each week and put this week's aside in a jar or envelope.",
-       "note": "A child might choose 20p from pocket money; a grown-up might choose a pound or five. The size does not matter; choosing it on purpose does. If money is tight, choose an hour of your time a week instead, and write that on the jar.",
+       "note": "A child might choose a small coin from pocket money; a grown-up might choose a little more. The size does not matter; choosing it on purpose does. If money is tight, choose an hour of your time a week instead, and write that on the jar.",
        "ctx": "room",
        "kind": "attention"
       },
@@ -20214,14 +20214,14 @@
       {
        "n": 4,
        "test": "Sort what you collected into the right bins at home.",
-       "note": "Your council's website says what goes in which bin. Rinse cans and bottles. Notice what most of it was: that tells you where it is coming from.",
+       "note": "Your local council's website usually says what goes in which bin. Rinse cans and bottles. Notice what most of it was: that tells you where it is coming from.",
        "ctx": "home",
        "kind": "attention"
       },
       {
        "n": 5,
        "test": "Report one thing on your patch that you cannot fix yourself, to whoever is responsible.",
-       "note": "A broken street light, a pothole, dumped rubbish, a needle, graffiti. Your council website takes most reports; roads and street lights can be reported through nidirect. Write down the date and what you reported.",
+       "note": "A broken street light, a pothole, dumped rubbish, a needle, graffiti. Your local council or government website usually takes these reports, often through an online form. Write down the date and what you reported.",
        "ctx": "room",
        "kind": "courage"
       },
@@ -20235,7 +20235,7 @@
       {
        "n": 7,
        "test": "Find out who owns or looks after your patch.",
-       "note": "Usually the council's parks or cleansing department, but it might be the Housing Executive, a housing association, the Department for Infrastructure for a roadside verge, a church, or a business. Ask the council by email or phone if the map does not make it clear. Write down a name and a way to reach them.",
+       "note": "Usually the council's parks or cleansing department, but it might be a housing body, a roads department for a roadside verge, a church, or a business. Ask the council by email or phone if the map does not make it clear. Write down a name and a way to reach them.",
        "ctx": "room",
        "kind": "attention"
       },
@@ -20284,7 +20284,7 @@
       {
        "n": 14,
        "test": "Tell your council the date you will do a bigger tidy with helpers, and ask whether they will collect the bags or lend equipment.",
-       "note": "Many councils will collect bagged litter from a clean-up if they know in advance, and some lend pickers and bags. Keep Northern Ireland Beautiful also supports local clean-ups. Do this at least two weeks ahead.",
+       "note": "Many councils will collect bagged litter from a clean-up if they know in advance, and some lend pickers and bags. Many places also have a national litter or clean-up charity that supports local tidies. Do this at least two weeks ahead.",
        "ctx": "room",
        "kind": "attention"
       },
@@ -21252,7 +21252,7 @@
       {
        "n": 6,
        "test": "Thank somebody outside who is rarely thanked for what they do.",
-       "note": "The bin crew, the lollipop person, the bus driver as you get off, the cleaner at the leisure centre, the person stacking shelves. Short and clear: \"Thanks, you keep this place lovely.\" If you already do this, do it on purpose today and count it.",
+       "note": "The bin crew, the school crossing guard, the bus driver as you get off, the cleaner at the leisure centre, the person stacking shelves. Short and clear: \"Thanks, you keep this place lovely.\" If you already do this, do it on purpose today and count it.",
        "ctx": "out",
        "kind": "kindness"
       },
@@ -23815,7 +23815,7 @@
    {
     "id": "q-lang-thanks",
     "test": "Learn how to say thank you in five languages and write them down.",
-    "note": "A phone search for thank you in French gives merci; do the same for four more, such as Irish, Polish, Italian and Portuguese. Write each one with the name of the language beside it. Pick one to use at home today.",
+    "note": "A phone search for thank you in French gives merci; do the same for four more, such as Spanish, Polish, Italian and Japanese. Write each one with the name of the language beside it. Pick one to use at home today.",
     "mins": 3,
     "cat": "words",
     "kind": "skill",
@@ -23835,7 +23835,7 @@
    {
     "id": "q-lang-morning",
     "test": "Learn good morning and good night in three languages and say them out loud.",
-    "note": "Search good morning in German, then in Irish, then in one language of your choice. Most search results show how to say it as well as how to write it. Use one of them for real tonight or tomorrow morning.",
+    "note": "Search good morning in German, then in Japanese, then in one language of your choice. Most search results show how to say it as well as how to write it. Use one of them for real tonight or tomorrow morning.",
     "mins": 3,
     "cat": "words",
     "kind": "skill",
@@ -23945,7 +23945,7 @@
    {
     "id": "q-ten-percent",
     "test": "Work out ten, five and fifteen per cent of three prices in your head.",
-    "note": "Ten per cent: move the point one place left, so ten per cent of 24 pounds is 2 pounds 40. Five per cent is half of that, 1 pound 20. Fifteen per cent is both added: 3 pounds 60. Try 18 pounds, 60 pounds and 7 pounds 50.",
+    "note": "Ten per cent: move the point one place left, so ten per cent of 24.00 is 2.40. Five per cent is half of that, 1.20. Fifteen per cent is both added: 3.60. Try 18.00, 60.00 and 7.50.",
     "mins": 3,
     "cat": "mind",
     "kind": "skill",
@@ -24035,7 +24035,7 @@
    {
     "id": "q-coin-look",
     "test": "Look at one coin closely, find the year on it and the picture on the back, and look up what the picture means.",
-    "note": "Use a magnifying glass or your phone camera zoomed in if the writing is small. Search the coin value and the picture, such as 50p coin designs. Write down the year and one thing you found out.",
+    "note": "Use a magnifying glass or your phone camera zoomed in if the writing is small. Search the coin value and the picture, such as the country's name and coin designs. Write down the year and one thing you found out.",
     "mins": 3,
     "cat": "money",
     "kind": "attention",
@@ -24235,7 +24235,7 @@
    {
     "id": "q-renewal-date",
     "test": "Find the renewal date of one yearly payment and put a reminder in your phone a month before it.",
-    "note": "Car insurance, the TV licence and home insurance are common ones; the date is on the letter or email. Set the reminder with a note such as compare prices. A paper calendar on the fridge works just as well.",
+    "note": "Car insurance, home insurance and a phone contract are common ones; the date is on the letter or email. Set the reminder with a note such as compare prices. A paper calendar on the fridge works just as well.",
     "mins": 4,
     "cat": "deal",
     "kind": "attention",
@@ -24374,8 +24374,8 @@
    },
    {
     "id": "q-proverb-meaning",
-    "test": "Look up one saying in Irish or Ulster Scots and write down what it means word for word.",
-    "note": "Search Irish proverbs or Ulster Scots sayings and pick one short one. Write the words, what each word means, and what the whole thing is saying. Read it out loud once, trying the sounds.",
+    "test": "Look up one old saying in a language spoken where you live, or where your family comes from, and write down what it means word for word.",
+    "note": "Search proverbs in that language and pick one short one. Write the words, what each word means, and what the whole thing is saying. Read it out loud once, trying the sounds.",
     "mins": 4,
     "cat": "words",
     "kind": "attention",
@@ -24395,7 +24395,7 @@
    {
     "id": "q-price-per-100",
     "test": "Take two packets of the same food in your cupboard and work out which one costs less per 100 grams.",
-    "note": "Look at the price you paid, or the receipt, and the weight on the packet. Price divided by weight, times 100. For example, 1 pound 50 for 500 grams is 30p per 100 grams. Many shop shelf labels already print this small at the side; next time you shop, look for it.",
+    "note": "Look at the price you paid, or the receipt, and the weight on the packet. Price divided by weight, times 100. For example, 1.50 for 500 grams is 0.30 per 100 grams. Many shop shelf labels already print this small at the side; next time you shop, look for it.",
     "mins": 4,
     "cat": "money",
     "kind": "attention",
@@ -24666,7 +24666,7 @@
    },
    {
     "id": "x-potato-story",
-    "test": "Find out where the potato first came from and how it reached Ireland, and tell somebody in three sentences.",
+    "test": "Find out where the potato first came from and how it reached the country you live in, and tell somebody in three sentences.",
     "note": "Look it up online or in an encyclopedia on the shelf: start with the mountains of South America and follow it across the sea. Then peel or wash one potato for tomorrow while you tell the story. If there is nobody to tell, write the three sentences on a card and stick it inside a kitchen cupboard door.",
     "mins": 15,
     "cat": "food",
@@ -24677,7 +24677,7 @@
    {
     "id": "x-tea-story",
     "test": "Read the packet of tea or coffee in your cupboard, find the country it was grown in on a map, and read how it is picked there.",
-    "note": "Packets often name a country or region, such as Kenya, Assam in India, or Colombia. Find it on a map on your phone or in an atlas, then look up how the leaves or beans are picked and dried there. If the packet does not say, pick Kenya: a large share of the tea drunk in Britain and Ireland is grown there.",
+    "note": "Packets often name a country or region, such as Kenya, Assam in India, or Colombia. Find it on a map on your phone or in an atlas, then look up how the leaves or beans are picked and dried there. If the packet does not say, pick Kenya, one of the biggest tea growers in the world.",
     "mins": 15,
     "cat": "food",
     "kind": "attention",
@@ -24687,7 +24687,7 @@
    {
     "id": "x-cassiopeia",
     "test": "Find the W shape of Cassiopeia from a window or your doorstep after dark.",
-    "note": "From Northern Ireland, Cassiopeia is above the horizon every clear night of the year, on the opposite side of the North Star from the Plough. Turn off the lights in the room and give your eyes ten minutes to get used to the dark. If it is cloudy, open the free website Stellarium Web on your phone, set your town, and find it on the screen instead.",
+    "note": "From most northern countries, Cassiopeia is above the horizon every clear night of the year, on the opposite side of the North Star from the Plough. Turn off the lights in the room and give your eyes ten minutes to get used to the dark. If it is cloudy, open the free website Stellarium Web on your phone, set your town, and find it on the screen instead. South of the equator, find the Southern Cross the same way. South of the equator, find the Southern Cross the same way.",
     "mins": 15,
     "cat": "sky",
     "kind": "attention",
@@ -24727,7 +24727,7 @@
    {
     "id": "x-street-trees",
     "test": "Name five different trees on your street or in the nearest park.",
-    "note": "Take a clear photo of a leaf and of the bark of each tree, then check them with a free app such as Seek or the Woodland Trust's tree guide online. Write the five names down with the house or lamp post each tree is next to. Staying in? Use photos of trees you have already taken, or name the trees you can see from a window.",
+    "note": "Take a clear photo of a leaf and of the bark of each tree, then check them with a free app such as Seek, or a tree guide online. Write the five names down with the house or lamp post each tree is next to. Staying in? Use photos of trees you have already taken, or name the trees you can see from a window.",
     "mins": 20,
     "cat": "wild",
     "kind": "attention",
@@ -24738,7 +24738,7 @@
    {
     "id": "x-street-birds",
     "test": "Name five different birds that live on or near your street.",
-    "note": "Stand at an open door or window, or walk slowly to the end of the street, and use the free Merlin Bird ID app, which can name birds from their song. Blackbirds, robins, starlings, jackdaws and blue tits are common in Northern Ireland towns. On a wet evening, look up those five on the RSPB website and learn to tell them apart by sight.",
+    "note": "Stand at an open door or window, or walk slowly to the end of the street, and use the free Merlin Bird ID app, which can name birds from their song. The app lists the birds most common where you live. On a wet evening, look up the five most common on a bird website and learn to tell them apart by sight.",
     "mins": 20,
     "cat": "wild",
     "kind": "attention",
@@ -24748,7 +24748,7 @@
    {
     "id": "x-space-station",
     "test": "Find out when the International Space Station next passes over your town, and if it is tonight, watch it go over.",
-    "note": "Search NASA's free Spot the Station website for Belfast or the nearest large town. It looks like a bright, steady light moving across the sky with no flashing, and a pass lasts a few minutes. If the next pass is another night, put an alarm in your phone for it, then read about who is living on board right now.",
+    "note": "Search NASA's free Spot the Station website for your town or the nearest large one. It looks like a bright, steady light moving across the sky with no flashing, and a pass lasts a few minutes. If the next pass is another night, put an alarm in your phone for it, then read about who is living on board right now.",
     "mins": 15,
     "cat": "sky",
     "kind": "attention",
@@ -24757,8 +24757,8 @@
    },
    {
     "id": "x-name-clouds",
-    "test": "Name every type of cloud in the sky right now using the Met Office cloud guide.",
-    "note": "The free Met Office website has pictures of each type: high, thin wisps are cirrus; flat grey sheets are stratus; heaped white ones are cumulus. Look from a window, match each cloud to a picture, and sketch the ones you find. On a clear blue evening, learn the ten main types from the guide and test yourself tomorrow.",
+    "test": "Name every type of cloud in the sky right now using a free cloud guide.",
+    "note": "National weather services put free cloud guides online, with pictures of each type: high, thin wisps are cirrus; flat grey sheets are stratus; heaped white ones are cumulus. Look from a window, match each cloud to a picture, and sketch the ones you find. On a clear blue evening, learn the ten main types from the guide and test yourself tomorrow.",
     "mins": 15,
     "cat": "sky",
     "kind": "attention",
@@ -24778,7 +24778,7 @@
    {
     "id": "x-listen-dusk",
     "test": "Stand at an open window or door at dusk for ten minutes and write down every sound you hear, then look up one you cannot name.",
-    "note": "Number them as they come: a car door, a blackbird, the wind in a hedge, a dog two gardens away. Most evenings bring more than twenty. If a bird call puzzles you, play it into a free app such as Merlin Bird ID, or describe it in words and search the RSPB website.",
+    "note": "Number them as they come: a car door, a blackbird, the wind in a hedge, a dog two gardens away. Most evenings bring more than twenty. If a bird call puzzles you, play it into a free app such as Merlin Bird ID, or describe it in words and search a bird website.",
     "mins": 15,
     "cat": "wild",
     "kind": "attention",
@@ -24799,7 +24799,7 @@
    {
     "id": "x-street-built",
     "test": "Find out roughly when your street was built.",
-    "note": "The free PRONI Historical Maps viewer online lets you look at your area on old maps from the 1830s onwards; see which map your street first appears on. Look out for date stones on the houses, or ask the neighbour who has lived there longest. All of the map work can be done from the sofa.",
+    "note": "Many national archives and libraries put old maps online for free, so you can look at your area as it was over a hundred years ago; see which map your street first appears on. Look out for date stones on the houses, or ask the neighbour who has lived there longest. All of the map work can be done from the sofa.",
     "mins": 20,
     "cat": "belong",
     "kind": "attention",
@@ -24820,7 +24820,7 @@
    {
     "id": "x-read-plaques",
     "test": "Read every plaque, date stone and inscription on one old building in your town.",
-    "note": "Churches, banks, schools and town halls often have them near the door or high on the wall. Photograph each one, then find out one fact about a name or date you read. At home, open the Ulster History Circle website, which puts up blue plaques across Northern Ireland, and read about the plaque nearest to you.",
+    "note": "Churches, banks, schools and town halls often have them near the door or high on the wall. Photograph each one, then find out one fact about a name or date you read. At home, search for historic plaques or monuments near you and read about the nearest one.",
     "mins": 20,
     "cat": "belong",
     "kind": "attention",
@@ -24831,7 +24831,7 @@
    {
     "id": "x-oldest-mile",
     "test": "Find the oldest thing within a mile of your home.",
-    "note": "It might be a churchyard stone, a bridge, a standing stone, a ringfort or a very old tree. The free Historic Environment Map Viewer from the Department for Communities shows recorded old sites on a map, so you can start from home. If it is close and the evening is dry, walk to it and look.",
+    "note": "It might be a churchyard stone, a bridge, a standing stone, a ringfort or a very old tree. Many countries have a free online map of recorded old sites and listed buildings, so you can start from home. If it is close and the evening is dry, walk to it and look.",
     "mins": 20,
     "cat": "belong",
     "kind": "attention",
@@ -24841,7 +24841,7 @@
    {
     "id": "x-town-name",
     "test": "Find out what the name of your town means and which language it came from.",
-    "note": "Most place names in Northern Ireland come from Irish, and some from Scots or English. The free PlaceNamesNI website gives the meaning and the old spellings: Belfast, for example, comes from Béal Feirste, the mouth of the sandbank ford. Then look up the name of your townland or street the same way.",
+    "note": "Many place names come from an older language, and describe the land: a hill, a river crossing, a church. Search the name of your town with the words \"place name meaning\" or \"origin of the name\". Then look up the name of your street or area the same way.",
     "mins": 15,
     "cat": "belong",
     "kind": "attention",
@@ -24892,7 +24892,7 @@
    {
     "id": "x-tap-water",
     "test": "Find out which reservoir or lough the water in your kitchen tap comes from.",
-    "note": "The NI Water website explains where water for each area comes from and how it is treated. Find the place on a map and work out how far the water travels to reach your tap. Then fill a glass and drink it slowly, knowing where it has been.",
+    "note": "Your water company's website usually explains where the water for each area comes from and how it is treated. Find the place on a map and work out how far the water travels to reach your tap. Then fill a glass and drink it slowly, knowing where it has been.",
     "mins": 15,
     "cat": "water",
     "kind": "attention",
@@ -24902,7 +24902,7 @@
    {
     "id": "x-old-photos-town",
     "test": "Find an old photograph of a street in your town and see what has changed.",
-    "note": "Try the PRONI or National Museums NI websites, or the museum run by your local council, and search for your town. Pick one photo and list five differences from today: the shops, the clothes, the transport, the road. If the street is near, walk to where the photographer stood and look at the same view.",
+    "note": "Try your national archive or museum websites, or your local museum or library, and search for your town. Pick one photo and list five differences from today: the shops, the clothes, the transport, the road. If the street is near, walk to where the photographer stood and look at the same view.",
     "mins": 20,
     "cat": "belong",
     "kind": "attention",
@@ -24912,7 +24912,7 @@
    {
     "id": "x-library-town-book",
     "test": "Find a book or booklet about the history of your own town and read the first chapter.",
-    "note": "Your local library usually keeps these on a local history shelf, and borrowing is free. The Libraries NI website also lets you search the catalogue and borrow e-books from home. If there is no book about your town, read about the nearest bigger town or your county.",
+    "note": "Your local library usually keeps these on a local history shelf, and borrowing is free. Most library services also let you search the catalogue and borrow e-books from home. If there is no book about your town, read about the nearest bigger town or your region.",
     "mins": 20,
     "cat": "belong",
     "kind": "attention",
@@ -25032,7 +25032,7 @@
    {
     "id": "x-trade-lighthouse",
     "test": "Read about the life of a lighthouse keeper, and write down three things that surprised you.",
-    "note": "Find out what a keeper did through one night, how they got food and news, and why the job ended. Rathlin Island and St John's Point both have lighthouses with written histories online. Write your three things down, then read them back out loud.",
+    "note": "Find out what a keeper did through one night, how they got food and news, and why the job ended. Many lighthouses have their written histories online; pick the nearest one to you, or a famous one. Write your three things down, then read them back out loud.",
     "mins": 20,
     "cat": "mind",
     "kind": "attention",
@@ -25071,7 +25071,7 @@
    },
    {
     "id": "x-trade-shipwright",
-    "test": "Read about the people who built ships in Belfast a hundred years ago, and write down three things that surprised you.",
+    "test": "Read about the people who built ships in one of the great shipbuilding cities a hundred years ago, and write down three things that surprised you.",
     "note": "Look up the jobs inside a shipyard: riveters, platers, joiners, painters. Find out how many people worked there, what hours they kept, and what age they started. Write your three things down. You could read one of them out at tea.",
     "mins": 20,
     "cat": "classic",
@@ -25092,7 +25092,7 @@
    {
     "id": "x-trade-waller",
     "test": "Find out how a dry-stone waller builds a wall with no cement, and write down three things that surprised you.",
-    "note": "Look for how the big stones and the small stones are used, and why the wall is wider at the bottom. Northern Ireland has miles of these walls in the Mournes. Write your three things down, then draw the shape of the wall from the end.",
+    "note": "Look for how the big stones and the small stones are used, and why the wall is wider at the bottom. Many hill countries have miles of these walls. Write your three things down, then draw the shape of the wall from the end.",
     "mins": 15,
     "cat": "wild",
     "kind": "attention",

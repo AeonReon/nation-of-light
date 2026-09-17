@@ -73,3 +73,6 @@ for tid in IDS:
     s, k = re.subn(r"'%s': (None|\d+)" % re.escape(tid), "'%s': %d" % (tid, m), s); assert k == 1, tid
 open(fm, 'w').write(s)
 print('rewritten:', len(IDS), 'ladders,', sum(len(where[t][0]['tracks'][where[t][1]]['steps']) for t in IDS), 'rungs')
+
+# v77: the place-neutral pass runs after, or re-running this would bring the Northern Ireland wording back
+import runpy; runpy.run_path(os.path.join(HERE, '..', 'global', 'unlocal_v77.py'), run_name='__main__')

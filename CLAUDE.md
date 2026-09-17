@@ -581,3 +581,14 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   the order of each ladder: tools/areas/A-/B-/C-notes.md. Unverified at source: NI gas emergency 0800 002 001
   (believed right), Stormont free tours ("has run"), council litter-pick support, Keep Northern Ireland Beautiful.
   Quick pool now 192. Next: the remaining ladders area by area, same brief.
+- **v77 (2026-09-17, Opus session): the school works anywhere, not only in Northern Ireland.** His: "there will be
+  others on it from other places. Just make it so it works for everywhere." A scan of school.json, content.json
+  and library.json for place-specific words (NI bodies and towns, £ and pence, 999, Met Office, NHS, RNLI, PRONI,
+  Libraries NI, council bodies, UK slang like chippy/postie/car boot) → 115 edits in
+  `tools/global/unlocal_v77.py` (idempotent; `apply_v76.py` now runs it after itself so a re-run cannot bring NI
+  wording back). Money is written with no symbol ("20", "one whole unit of your money"); services are "your
+  national weather service", "your emergency number (999, 112, 911)", "your local council". `words.irish` is now
+  "The old language of your place" (same rungs, "in that language"). `sky.stars` says plainly it is written for the
+  northern half of the world and points the south at the Southern Cross. The More from us list still names Days Out
+  NI, Conscious Parenting NI and Fuel Price NI because they are NI apps; its lede dropped "in Northern Ireland".
+  **Rule from now on (in both BRIEFs): never assume where the reader lives.**
