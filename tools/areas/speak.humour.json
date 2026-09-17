@@ -1,0 +1,139 @@
+{
+ "id": "speak.humour",
+ "name": "Being funny",
+ "line": "From one clean joke learned word for word, to five minutes of your own kind, funny stories told to a group of ten or more.",
+ "size": "months",
+ "strand": "say-what-you-mean",
+ "from": 8,
+ "who": "From about eight; a child and a grown-up side by side",
+ "about": "For everybody from about eight: a child and a grown-up can climb it side by side. It starts with one joke learned word for word and told with a pause in the right place, moves to noticing what really makes people laugh, telling funny things that happened to you, and writing jokes of your own. It ends with five minutes of your own funny stories told to a group of ten or more. One rule runs through every rung: no joke ever makes fun of a real person, and every joke is one you could tell in front of a grandparent and a small child at the same time.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Choose one short clean joke and say it out loud until you can tell it word for word.",
+   "note": "For example: \"Why did the scarecrow win a prize? Because he was outstanding in his field.\" Find one in a joke book from the library, or ask somebody for their favourite. Say it five times. Check it passes the rule for this whole ladder: fine to tell to a grandparent and a small child at once.",
+   "ctx": "room",
+   "kind": "skill",
+   "mins": 3
+  },
+  {
+   "n": 2,
+   "test": "Tell that joke to somebody, with a short pause just before the last line.",
+   "note": "Set it up, stop for one beat, then say the last line clearly and do not laugh first. The pause is most of the skill. If they do not laugh, the rung still counts; you told it properly.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 3,
+   "test": "This evening, write down three things that made somebody laugh today.",
+   "note": "A face somebody pulled, a word said wrong, the dog stealing a sock, something on the radio. Write what it was, not whether it was clever. Most laughs come from surprise and from things everybody recognises.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Learn five clean jokes and tell one a day to five different people.",
+   "note": "Keep them on a card in your pocket until you know them. Notice which one gets the biggest laugh, and which one you tell best. Both are useful to know.",
+   "ctx": "long",
+   "kind": "skill"
+  },
+  {
+   "n": 5,
+   "test": "Tell a joke that gets no laugh at all, then smile and carry on talking.",
+   "note": "It will happen on its own if you keep telling jokes; count the first time it does. \"Well, I liked it\" and a smile is all you need. Everybody who is funny has told jokes that got silence.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 6,
+   "test": "Tell somebody a funny thing that really happened to you, and keep the funniest part for the very last sentence.",
+   "note": "For example, the day you searched the house for your glasses while wearing them. Tell it in order, leave out anything that does not help, and stop straight after the funny part. Do not explain it.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Make a small joke about a mistake you made today, not about anybody else.",
+   "note": "\"I put the milk in the cupboard and the cereal in the fridge. The cereal was very cold.\" Laughing at your own small mistakes helps other people relax. Keep it light; this is not about saying bad things about yourself.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 8,
+   "test": "Say one funny thing you notice in the moment, out loud, after checking it is kind.",
+   "note": "The check is quick: would the person it is about laugh too? If the answer is no, or not sure, keep it in. If yes, say it instead of saving it for later.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 9,
+   "test": "Write down ten things you find funny, and one sentence on what most of them have in common.",
+   "note": "A scene from a film, a comic strip, a family story, a comedian, a funny book. What they share might be surprise, somebody being very serious about something silly, or a thing going wrong slowly. That is the kind of funny that suits you.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Write one joke of your own: a set-up, then a last line that surprises.",
+   "note": "Start from something ordinary you know well: your cat, your school bus, your kitchen. Write the set-up as a plain statement or question, then look for a last line that turns it round. A play on words is a fine first one. Write several and keep the best.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 11,
+   "test": "Tell your own joke to two people, and change one thing after the first if it got no laugh.",
+   "note": "Change one thing only: a shorter set-up, a longer pause, a different last word. Then tell the second person. Notice whether the change helped.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "Play \"Yes, and\" with somebody for five minutes, building a silly story where each of you adds to what the other just said.",
+   "note": "One says \"We opened the fridge and found a penguin.\" The other says \"Yes, and it was eating all the cheese.\" Never say \"No\". This is how comedy actors practise, and it works at a kitchen table or on a car journey.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Get a laugh from somebody without saying a word.",
+   "note": "Act out trying to open a jar that will not open, a very slow sneeze, or walking into a strong wind. Big, clear movements, and a straight face. Children are often much better at this than grown-ups.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Cheer up somebody who is having a hard day with something light, and stop if they would rather you did not.",
+   "note": "A funny story from your week, a silly photo, your jar mime. Watch their face; if a smile does not come, stop and just be with them. Sometimes listening helps more than a laugh, and knowing that is part of being funny.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 15,
+   "test": "Write three minutes of funny true stories from your own life, with at least three places where you hope people laugh.",
+   "note": "Three minutes spoken is about 400 words. Two or three short stories is plenty. Mark the three laughs. Read it aloud with a timer and cut anything that slows it down. The kindness rule still applies to every line.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 16,
+   "test": "Tell your three minutes to one person you trust, then cut or change the part that got no laugh.",
+   "note": "Ask them afterwards which bit they liked most. Keep that, and cut or rewrite the flattest part. Then say the whole new version aloud once on your own.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 17,
+   "test": "Tell your three minutes to a group of five or more people you know.",
+   "note": "At a family meal, a birthday, a class, a club. Ask first: \"Can I tell you something that happened?\" Stand where everybody can see you. Tell it the way you practised, and let the laughs finish before you carry on.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 18,
+   "test": "Tell five minutes of your own kind, funny stories to a group of ten or more.",
+   "note": "A family party, a club night, a school or community talent evening, a gathering of friends. Add two minutes of new stories to your three and try the whole thing on one person first. A laugh every half a minute or so is a very good result. This is the far end of the ladder.",
+   "ctx": "with",
+   "kind": "courage"
+  }
+ ]
+}

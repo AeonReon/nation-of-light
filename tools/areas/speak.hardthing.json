@@ -1,0 +1,132 @@
+{
+ "id": "speak.hardthing",
+ "name": "Saying the hard thing",
+ "line": "From a two-sentence apology, to calmly saying the thing a whole group has been avoiding.",
+ "size": "months",
+ "strand": "say-what-you-mean",
+ "from": 10,
+ "who": "Grown-ups and anybody from about ten",
+ "about": "For grown-ups and anybody from about ten; a child can practise the early rungs with their own family. It starts with the plain ones: a real apology with no \"but\", saying no kindly without an invented excuse, and saying \"I was wrong\". Then it moves to hearing criticism without defending yourself, disagreeing with one calm reason, giving honest feedback, and writing down and then having a conversation you have been putting off. It ends with calmly saying the thing a whole group has been avoiding, and suggesting a way forward. Every rung is done kindly; the aim is fewer silent grudges and more honest, warm relationships.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Think of one thing you did this week that upset somebody, and write an apology of two sentences: what you did, and what you will do instead.",
+   "note": "\"I snapped at you when you asked about dinner. Next time I am tired I will say so instead.\" Name the thing plainly, with no excuse and no \"if you were upset\". If nothing comes to mind, write one for the last small thing, like being late or forgetting to reply.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 3
+  },
+  {
+   "n": 2,
+   "test": "Say that apology to the person, with no \"but\" in it.",
+   "note": "\"But\" cancels whatever came before it: \"Sorry, but you were annoying me\" is not an apology. Say your two sentences, then stop and let them answer. A message is fine if you cannot see them; in person is better.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 3,
+   "test": "Over the next week, do what you said you would do instead, without mentioning it.",
+   "note": "The apology is the promise; this is keeping it. If you slip once, say so quickly and carry on. Tick the rung at the end of the week.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Say no to the next small request you do not want to do, kindly and in one sentence.",
+   "note": "\"No, thank you, not this time.\" A lift you cannot give, a club you do not want to join, a second helping. Smile, and do not say it three different ways. For a child, practise with a grown-up at home first.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 5,
+   "test": "Say no without making up an excuse.",
+   "note": "\"I would rather not\" is enough. An invented reason (\"I am busy that day\") invites the other person to solve it for you. The truth, said kindly, is easier to keep up. If you say this one already, do it on purpose and count it.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 6,
+   "test": "Tell somebody \"I was wrong about that\", naming the thing, on the same day you realise it.",
+   "note": "\"I said the shop shut at five. I was wrong, it is six.\" Start with small facts; they are practice for bigger things. No excuse after it.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 7,
+   "test": "Ask somebody close to you, \"What is one thing I could do better?\", and answer only \"Thank you\".",
+   "note": "A partner, a parent, a brother or sister, a friend, a colleague. Do not explain, defend or give your side, even if it feels unfair. Thinking about it later is allowed; arguing now is not.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 8,
+   "test": "Do that one thing better for a week, then tell the person you tried.",
+   "note": "\"You said I interrupt. I have been trying not to this week.\" You do not need to ask whether it worked. The telling shows them their honesty was safe with you.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Give somebody honest feedback on something they made or did: one thing that works and one clear thing to change.",
+   "note": "A drawing, a meal, a piece of work, a speech. \"The opening made me laugh. The middle part was hard to follow; could you cut it shorter?\" Be specific in both halves, and ask first: \"Would you like my honest thoughts?\"",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 10,
+   "test": "Disagree with somebody about something small, out loud and calmly, with one reason.",
+   "note": "\"I see it differently: I think the park is better, because it is dry.\" Which film, which route, whether it will rain. Keep your voice the same as for any other sentence. You do not need to win; saying it is the rung.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 11,
+   "test": "Disagree politely with somebody older than you or in charge, giving one reason and asking one question.",
+   "note": "A parent, a teacher, a manager, a coach. \"I do not think that will work, because the room is too small. Could we try the hall?\" Pick a calm moment, not in the middle of an argument.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "Write down, in three sentences, a hard thing you need to say to somebody: what you have noticed, how it affects things, and what you would like.",
+   "note": "\"The last three times we met, you arrived half an hour late. I end up waiting on my own and feeling a bit silly. Could you text me if you are running late?\" Facts, not labels: \"late three times\", not \"you are rude\".",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Say it to them kindly, then listen to their side all the way through.",
+   "note": "Choose a private moment. Say your three sentences, then stop. They may have a reason you did not know about. The rung is done when both of you have been heard, whether or not anything changes yet.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 14,
+   "test": "Write down the conversation you have been putting off longest, and have it within a week.",
+   "note": "Money you lent, a job that keeps falling to you, something said that hurt. Use the three-sentence shape. If it is with somebody who could harm you, do not do it alone: talk it over with somebody you trust first, and choose a safe place.",
+   "ctx": "long",
+   "kind": "courage"
+  },
+  {
+   "n": 15,
+   "test": "Go back to somebody you have fallen out with, even a little, and be the first to try to put it right.",
+   "note": "\"I am sorry for my part in the other day. Can we start again?\" Say sorry for your part only; you cannot apologise for theirs. If there is nobody, do this after the next small disagreement, within a day.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 16,
+   "test": "Speak up with one calm sentence when somebody is being left out, talked over or unfairly blamed.",
+   "note": "\"Wait, Sam was about to say something.\" \"That was not Mia, she was with me.\" Only where it is safe; if anybody is in danger, get help from somebody in charge or ring your emergency number instead.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 17,
+   "test": "At a meeting or a family table, calmly say the thing everybody has been avoiding, and suggest one way forward.",
+   "note": "\"We keep planning the holiday and never booking it. Shall we each say one date that works, now?\" Or the chores nobody does, the club that is running out of money. Say it as a fact, suggest one next step, then let others speak. This is the far end of the ladder.",
+   "ctx": "with",
+   "kind": "courage"
+  }
+ ]
+}

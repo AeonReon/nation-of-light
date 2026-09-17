@@ -1,0 +1,111 @@
+{
+ "id": "nerve.walkin",
+ "name": "Walking in",
+ "line": "From ten minutes inside a building you have never entered, to bringing somebody new to a group you now belong to.",
+ "size": "weeks",
+ "strand": "be-useful-to-somebody",
+ "from": 10,
+ "who": "Grown-ups and anybody from about ten",
+ "about": "For grown-ups and anybody from about ten; a child goes into a new group with a grown-up who meets the person running it and waits nearby. It is about the moment of going through the door: first into buildings and shops you have walked past for years, then a public event on your own, then a group that meets every week. The middle rungs are staying for the chat afterwards, going back a second time and walking into something already under way. It ends four weeks into a group you joined alone, bringing somebody who would never have walked in on their own. Almost everything good that happens with other people starts with somebody walking into a room.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Walk into a free public building you have never been inside, and stay for ten minutes.",
+   "note": "A library, a museum, a gallery, the entrance hall of a town hall, a place of worship that is open to visitors. Look at one thing properly while you are there. If you walk into new places all the time, pick one you have walked past for years and never entered, and count it.",
+   "ctx": "out",
+   "kind": "courage",
+   "mins": 20
+  },
+  {
+   "n": 2,
+   "test": "Go into a small shop or café you have walked past but never been into, and look round for five minutes.",
+   "note": "A bookshop, a hardware shop, a bakery, a shop that sells things you know nothing about. You do not have to buy anything; \"just looking, thank you\" is all you need to say. A child goes in first with the grown-up behind.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 3,
+   "test": "Sit at a table on your own in a café, a library or a public square for twenty minutes, with your phone away.",
+   "note": "Bring a book or a notebook if you want something in your hands. A café needs a drink, but a library table or a bench in a square costs nothing. Notice that after the first few minutes nobody is looking at you. A child sits with their grown-up at a table nearby.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 4,
+   "test": "Go on your own to a free event that is open to the public, and stay until the end.",
+   "note": "A talk at the library, a concert in a park, a gallery opening, a local history society evening, a service open to all. Arrive five minutes early: walking into a room that is filling up is easier than walking into a full one. A child goes with a grown-up, who sits a few seats away.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 5,
+   "test": "At an event with seats, sit next to somebody instead of choosing an empty row.",
+   "note": "\"Is anybody sitting here?\" is the whole sentence. You do not need to talk any more than that. If you already do this, do it on purpose today and count it.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 6,
+   "test": "Find one group that meets every week and welcomes new people, and write down when and where it next meets.",
+   "note": "A walking group, a choir, a beginners' night at a running club, a chess club, a craft morning at the library, a volunteering session, a youth club for a child. Look on the library or community noticeboard, your local council's website, or ask at the library desk.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Go to that group for the first time, and tell the person running it that it is your first time.",
+   "note": "Arrive a few minutes early. \"Hello, I am new; is this the right place?\" People who run groups are glad of new faces, and they will usually show you what to do. A child's grown-up meets the leader at the door, then waits nearby or comes back at the end.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 8,
+   "test": "After the group, stay for the tea or the chat for ten minutes instead of leaving as soon as it ends.",
+   "note": "Stand near the kettle or wherever people gather. One sentence about the session is enough: \"That was harder than I thought\" or \"How long have you been coming?\" If there is no tea, help put the chairs away.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 9,
+   "test": "Go back to the same group a second time, within two weeks.",
+   "note": "The second visit is the one most people skip, especially if the first felt awkward. This time you will recognise a face or two, and somebody may recognise you. If you did not like that group at all, go to a different one for its first time, then go back to that one.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 10,
+   "test": "Walk into a drop-in session that is already under way, find the person in charge, and ask what you can do.",
+   "note": "A community garden work morning, a repair café, a litter pick, a craft drop-in, a charity sorting morning. People will already be busy when you arrive. \"Hello, I have come to help; what would be useful?\" A child goes with a grown-up, and they are given a job together.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 11,
+   "test": "Go to a gathering where you know only one person, and stay at least an hour without standing next to them the whole time.",
+   "note": "A friend's birthday, a neighbour's barbecue, a school fair, a work evening, a friend's club night out. Say hello to your friend, then spend part of the hour somewhere else in the room: at the food, helping, looking at the view.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "Go to a group where you are clearly the youngest or the oldest there, and take part fully.",
+   "note": "A teenager at a local history society, a grandparent at a beginners' climbing night, a grown-up at a family craft session. Nobody minds; most groups are pleased to have somebody different. Take part as you would anywhere, without apologising for being there.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 13,
+   "test": "Go to your weekly group four weeks in a row.",
+   "note": "The group from rung nine, or any group you have found since. If it meets every two weeks or once a month, four meetings in a row counts. By the fourth time, somebody will usually know your name, and you will know theirs.",
+   "ctx": "long",
+   "kind": "courage"
+  },
+  {
+   "n": 14,
+   "test": "Bring somebody who would not have walked in on their own to your group, and introduce them to the person running it.",
+   "note": "A neighbour who lives alone, a friend who has just moved, a relative who has been meaning to try it, a child's friend. Meet them outside and walk in together. That is the far end of this ladder: you are now the person who makes it easy for somebody else to walk in.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

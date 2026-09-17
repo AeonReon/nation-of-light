@@ -1,0 +1,153 @@
+{
+ "id": "money.negotiate",
+ "name": "Negotiating",
+ "line": "From writing down what each side wanted in a past deal to planning, doing and reviewing a negotiation for something that matters to you for a year or more.",
+ "size": "months",
+ "strand": "say-what-you-mean",
+ "who": "Grown-ups and teenagers",
+ "about": "For grown-ups and teenagers from about fourteen. This is the whole method, from start to finish: preparing, opening, moving, closing and looking back. It starts at home with \"if you do this, I will do that\", then picks one real negotiation and prepares for it: the other side's situation, three numbers, an opening with a reason, a practice run. Then come the moves: naming a price, asking for theirs, moving in smaller steps, asking for something back each time, pausing when it gets heated, and saying the agreement out loud. It ends with a planned negotiation for something that matters to you for a year or more, such as pay, rent, a car or a contract, written up afterwards. Honest always: never invent another offer, and never pressure anybody.",
+ "from": 14,
+ "steps": [
+  {
+   "n": 1,
+   "test": "Think of the last time you agreed a price or a plan with somebody, and write down what each of you wanted.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Buying a used car, choosing a holiday with a friend, agreeing pocket money, a price for a job. Two lines: what you wanted, what they wanted. Every negotiation starts by knowing both.",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Agree something at home using the words \"If you ..., then I ...\".",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "\"If you dry the dishes, then I will wash and you choose the music.\" \"If you drive there, then I will drive back.\" This is the shape of every fair trade: nothing given without something agreed in return."
+  },
+  {
+   "n": 3,
+   "test": "The next time somebody says no to something you asked, ask one question about why before you say anything else.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "\"What makes it difficult?\" or \"What would need to be different for it to work?\" The answer often shows a way to a yes. Listen to the end of the answer."
+  },
+  {
+   "n": 4,
+   "test": "Choose one real negotiation you will have in the next month, and write it down in one sentence.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Selling something second-hand, a price for a job you need done, your rate for babysitting or tutoring, a change to your hours at work, a lower rent at renewal. Pick something real; the next rungs prepare you for it."
+  },
+  {
+   "n": 5,
+   "test": "For that negotiation, write down three things about the other side: what they need, when they need it by, and what else they could do.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "A landlord needs a reliable tenant and no empty months. A buyer may need the bike by the weekend. A tradesperson may have a quiet week. Find out by asking, reading the listing, or asking people who know them."
+  },
+  {
+   "n": 6,
+   "test": "Write three numbers for it: the result you would be delighted with, the one you aim for, and the one you will not go past.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Selling a bike: delighted at 120, aiming for 100, not going under 80. If you have climbed \"Being willing to walk away\", the last number is your limit from there. Write all three before you speak to anybody."
+  },
+  {
+   "n": 7,
+   "test": "Write the first number you will say, and one honest reason for it.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "\"100, because it had a full service in the spring.\" \"15 an hour, because I have first aid training.\" The reason must be true. A number with a reason is easier to hear and easier to say."
+  },
+  {
+   "n": 8,
+   "test": "Practise the conversation out loud with a friend or family member playing the other side, then swap parts.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Give them your notes on the other side so they can play it well. Do it twice. Playing the other side shows you what they are likely to say."
+  },
+  {
+   "n": 9,
+   "test": "When you sell something second-hand, say your price first, with your reason.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "When you know the usual price well, saying yours first gives the talk a starting point. Say the number, give the reason, then stop and wait for their answer. A teenager selling online does this with a grown-up's say-so."
+  },
+  {
+   "n": 10,
+   "test": "When somebody quotes you for a job or a service, ask for their price before you give any number of your own.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "\"What would you charge for that?\" When you do not know the usual price well, hearing theirs first protects you from offering more than they would have asked. Write their number down."
+  },
+  {
+   "n": 11,
+   "test": "In a real negotiation, make each move you make smaller than the one before, and say why you are moving.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "100, then 92, then 88. \"I can come down a little because you are collecting it today.\" Smaller steps show honestly that you are close to your limit. Never go past your limit from rung six."
+  },
+  {
+   "n": 12,
+   "test": "Each time you give something in a negotiation, ask for something back.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "\"I can do 90 if you can collect it tonight.\" \"I can start earlier if the work includes the back gate.\" Use the words from rung two. Giving with nothing asked in return teaches the other side to keep asking."
+  },
+  {
+   "n": 13,
+   "test": "When a negotiation is getting tense, say so calmly and suggest a short break.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "\"I think we are both getting frustrated. Can we take ten minutes, or talk again tomorrow?\" Use it with a family member, a seller, or at work. A break is never a trick; come back when you said you would."
+  },
+  {
+   "n": 14,
+   "test": "At the end of a negotiation, say the whole agreement out loud in one or two sentences, and check the other person agrees.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "\"So: 90 for the bike and the lock, you collect it Friday evening and pay cash. Is that right?\" Many disagreements later come from two people remembering it differently. Saying it out loud settles that now."
+  },
+  {
+   "n": 15,
+   "test": "After a negotiation, write three lines: what worked, what you gave too early, and what you will say next time.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Do it the same day while you remember the words. Keep these notes together. Before your next negotiation, read them first."
+  },
+  {
+   "n": 16,
+   "test": "Agree a price for your own work or time with somebody who wants it.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Babysitting, tutoring, walking dogs, a piece of design, a garden tidy, a freelance job. Use your three numbers, your opening with a reason, and ask something back for each move. If you already charge for your work, negotiate the next job on purpose and count it."
+  },
+  {
+   "n": 17,
+   "test": "Ask for a pay rise or a better rate, with a written list of what you have done to earn it.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Three to five facts: extra jobs taken on, things finished, money saved, good words from customers. Book a time to talk rather than asking in passing. A teenager can do this for pocket money tied to jobs, or for a part-time job."
+  },
+  {
+   "n": 18,
+   "test": "Negotiate on behalf of somebody else, with their say-so and a limit they set.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Selling a relative's car, getting a quote for a neighbour who finds it hard, agreeing a price for a club. Agree their three numbers with them first, and never go past their limit. Tell them afterwards exactly what was said."
+  },
+  {
+   "n": 19,
+   "test": "Plan and do a negotiation for something that costs more than a week's food shopping, using your written plan.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "A used car, a big repair, furniture, a course fee. One page: the other side's situation, your three numbers, your opening and reason, what you can give and what you will ask back. Take the page with you."
+  },
+  {
+   "n": 20,
+   "test": "Plan, do and write up a negotiation for something that will matter to you for a year or more.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Your pay, your rent, a car, a long contract, the terms of a new job. Use the one-page plan, the practice run, and the three-line review afterwards. That is the far end of this ladder."
+  }
+ ]
+}

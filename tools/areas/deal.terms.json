@@ -1,0 +1,97 @@
+{
+ "id": "deal.terms",
+ "name": "Terms, not just the price",
+ "line": "From noticing what a deal was apart from its price to agreeing a job or a bigger purchase with your three most important terms written down before you pay.",
+ "size": "weeks",
+ "strand": "say-what-you-mean",
+ "who": "Grown-ups and teenagers",
+ "about": "For grown-ups and teenagers; a teenager does any rung about a job at home with the grown-up whose home it is. A deal is more than its price: when you get it, how you pay, what happens if it goes wrong, how long you have to change your mind, and who does the work. The ladder starts with noticing those things, then reading returns rules and small print, then asking about dates, guarantees and who does the work. It ends with a job or a bigger purchase where your three most important terms are agreed and written down before you pay anything. Getting the terms right often matters more than a few coins off the price.",
+ "from": 13,
+ "steps": [
+  {
+   "n": 1,
+   "test": "Pick the last thing you paid a fair amount for, and write down two things about that deal that were not the price.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "When you paid, how it reached you, whether you could return it, how long it was guaranteed, who fitted it. A pair of trainers, a phone, a repair, a holiday booking all count. These are the terms of the deal.",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Find the returns rules of a shop or website you often use, and write down how many days you have to return something.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "They are usually on the website under \"Returns\" or on the back of a receipt. Note whether you need the receipt and whether you get money back or only a credit note. Now you know before you buy, not after."
+  },
+  {
+   "n": 3,
+   "test": "Before you buy something that has to be ordered or delivered, ask when it will arrive and whether it could come sooner.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "A pair of glasses, a sofa, a part for a bike, a school blazer. In a shop, on the phone or in an online chat. Write down the date they give you."
+  },
+  {
+   "n": 4,
+   "test": "Before you buy something that costs a fair amount, ask what happens if it breaks or goes wrong.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "\"If this stops working in the first year, what happens?\" Listen for who fixes it, who pays, and whether you go back to the shop or to the maker. If the answer is unclear, ask them to show you where it is written."
+  },
+  {
+   "n": 5,
+   "test": "Before you agree to something with a sign-up, read its terms all the way through and write down one thing you did not expect.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "A gym, an app, a hire car, a club, a booking. Look for the notice needed to cancel, whether it renews by itself, and any fees. Take as long as it takes; this is the part most people skip."
+  },
+  {
+   "n": 6,
+   "test": "Ask somebody to confirm by text or email something they told you out loud.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "A price for a job, a date they will come, a promise that a part is included. \"So we both have it, could you send me that in a text?\" Most people are glad to, because it protects them too."
+  },
+  {
+   "n": 7,
+   "test": "For a job at your home, ask who will do the work, what day they will arrive, and how long it will take.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "A plumber, a painter, a gardener, somebody fitting a carpet. The person who gives the quote is not always the person who does the work. Write the three answers down."
+  },
+  {
+   "n": 8,
+   "test": "Before a bigger purchase or a job, write down the three terms that matter most to you, in order.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "For example: finished before a certain date, paid when the work is done, and the mess cleared away. Or for a purchase: delivered on a Saturday, a long guarantee, thirty days to return it. Putting them in order tells you what you could let go of."
+  },
+  {
+   "n": 9,
+   "test": "Ask to pay for a job in stages as it is done, or when it is finished, rather than all of it before the work starts.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "\"Could I pay half when you start and half when it is finished?\" A deposit for materials is normal and fair. Never borrow money or sign up to a credit plan for this rung; it is only about when you pay."
+  },
+  {
+   "n": 10,
+   "test": "Ask for longer to return something or to change your mind.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "\"It is a present; could I have thirty days to return it instead of fourteen?\" Some shops will write it on the receipt. If they say yes, check it is written down before you leave. A polite no still counts as the rung done."
+  },
+  {
+   "n": 11,
+   "test": "Offer to let go of a term that matters less to you in return for one that matters more.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "\"I can wait two extra weeks if you can do it on a Saturday.\" \"I will collect it myself if you can keep it for me until the end of the month.\" Use your ordered list from rung eight. Only offer what you really can give."
+  },
+  {
+   "n": 12,
+   "test": "Agree a job or a bigger purchase with your three most important terms settled and written down before you pay anything.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "A text, an email, a written quote or the receipt all count, as long as all three terms are there. Check it before you hand over money. That is the far end of this ladder."
+  }
+ ]
+}

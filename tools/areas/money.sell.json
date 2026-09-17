@@ -1,0 +1,153 @@
+{
+ "id": "money.sell",
+ "name": "Selling",
+ "line": "From one sentence that says what you sell to thirty sales of the same thing, with five people who came back.",
+ "size": "months",
+ "strand": "be-useful-to-somebody",
+ "from": 8,
+ "about": "For anybody from about eight: a child sells only with a grown-up beside them, to people the family knows or at an event where selling is allowed, and never online or to strangers on their own. It is about selling one thing well and honestly: saying what it is in a sentence, offering it and hearing no, asking what people want, keeping a sales page, running a table, telling a customer the truth even when it costs a sale, and changing what you sell because of what buyers say. It ends with thirty sales of the same thing, all written down, with five people who came back for more. Sell only things you made, grew, or own and have the owner's say-so to sell, and only where the rules where you live allow it.",
+ "who": "From about eight, with a grown-up for every sale",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Pick one thing you could sell, and write one sentence that says what it is, who it is for, and the price.",
+   "note": "\"Home-grown tomato plants, ready to plant out, 2 each.\" \"Hand-painted bookmarks for readers, 1 each.\" A child picks something made with a grown-up: biscuits, painted stones, cards. Anything from the house needs its owner's say-so.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Say that sentence out loud until you can say it five times in a row without looking.",
+   "note": "In front of a mirror, or into your phone and play it back. Can you hear what it is, who it is for and the price? If any part is unclear, change the sentence and try again.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 3,
+   "test": "Offer it to one person you know, and ask plainly whether they would like one.",
+   "note": "Say your sentence, then \"Would you like one?\", then wait. A yes and a no are both answers. A child does this with a grown-up beside them.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 4,
+   "test": "Offer it to three more people, and write down every yes and every no.",
+   "note": "Friends, neighbours, people at a club. Face to face is best. The list of no answers is as useful as the list of yes answers.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 5,
+   "test": "Before you offer it to the next person, ask what they are looking for, and only offer if it fits.",
+   "note": "\"Do you grow anything?\" before the tomato plants; \"Do you read much?\" before the bookmarks. If it does not fit, say so and do not offer it; that is part of selling honestly.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Start a sales page: the date, what you sold, who to (first name only), the price, and what it cost you to make or get.",
+   "note": "Include every cost: ingredients, pots, bags, travel. A notebook page is enough. Add every sale from now on, the same day.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Offer it to ten people you have not offered it to before, and keep going after each no.",
+   "note": "Over a few days is fine. A child offers only to people the family knows, with a grown-up. A grown-up selling to strangers online meets in a busy public place for any hand-over and never shares a home address.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 8,
+   "test": "After a no, ask politely what would make it right for them, and write down the answer.",
+   "note": "\"Thank you. Can I ask what would have made it right for you?\" Often it is the size, the colour, the price, or the day. Do not argue with the answer; just write it down.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Change one thing about what you sell because of what people told you.",
+   "note": "A smaller size, a different colour, a pack of three, a clearer label. Write on the sales page what you changed and why.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "Sell from a table for two hours at an event where selling is allowed, starting with a float of coins and notes for change.",
+   "note": "A school fair, a community sale, a table at a club event; ask whoever runs it first, since selling in a street or public place often needs permission. Count the float before you start. A child under about sixteen does it with a grown-up at the table.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 11,
+   "test": "After the table, count the money, take away the float, and check it matches what the sales page says.",
+   "note": "If it does not match, work out where the gap came from: a missed sale on the page, the wrong change given. Write down what you will do differently next time.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Tell one customer something honest that might stop the sale: a flaw, a cheaper choice, or that it is not what they need.",
+   "note": "\"This one has a small chip on the back.\" \"If it is for a very small garden, the smaller plant would suit you better.\" People buy again from somebody who told them the truth.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 13,
+   "test": "Ask a customer why they bought it, and write down their exact words.",
+   "note": "Right after the sale: \"Can I ask what made you choose it?\" Their words are often better than yours.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 14,
+   "test": "Use a customer's words in the sentence you say or the label you write for your next sales.",
+   "note": "If a customer said \"they make the kitchen smell like summer\", that may belong on the label. Write the new sentence on the sales page.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 15,
+   "test": "Decide what you will do if a customer is unhappy, a swap, a repair or their money back, and tell every customer that week.",
+   "note": "\"If anything is wrong with it, bring it back and I will swap it or give your money back.\" Write your promise on the sales page, and keep it whenever it is asked for.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 16,
+   "test": "Sell to somebody who has bought from you before.",
+   "note": "Tell earlier customers when you have more, face to face or through the grown-up for a child. Mark repeat customers on the sales page with a tick.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 17,
+   "test": "Ask a pleased customer whether they would tell one other person about what you sell.",
+   "note": "\"If you know anybody who would like one, I would be glad if you told them.\" Ask once, then thank them either way.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 18,
+   "test": "Sell to twenty different people, every sale written on the sales page.",
+   "note": "Count the names, not the items. Over a month or two is fine. Look at which way of selling brought the most: the table, word of mouth, or asking people you know.",
+   "ctx": "long",
+   "kind": "courage"
+  },
+  {
+   "n": 19,
+   "test": "Help somebody else make their first sale, and let them do all the talking.",
+   "note": "A friend, a younger brother or sister, a parent starting something. Help them write the one sentence, practise it with them, then stand back while they offer it.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 20,
+   "test": "Reach thirty sales of the same thing, every one written down, with at least five people who came back and bought again.",
+   "note": "The sales page shows it: thirty lines, five names with a tick. A grown-up selling regularly checks what their national tax office says about it. That is the far end of this ladder.",
+   "ctx": "long",
+   "kind": "skill"
+  }
+ ]
+}

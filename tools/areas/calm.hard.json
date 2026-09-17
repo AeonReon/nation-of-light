@@ -1,0 +1,139 @@
+{
+ "id": "calm.hard",
+ "name": "Doing hard things",
+ "line": "From one put-off job done now to one chosen hard thing done on twenty-eight days out of thirty.",
+ "size": "months",
+ "strand": "look-after-yourself",
+ "from": 8,
+ "about": "For anybody from about eight: a child and a grown-up can climb it side by side, each with their own hard things. A hard thing here means something safe that you would rather not do but know is worth doing: a job put off, a practice you want to stop, being a beginner in front of people. It starts with one put-off job done now, then keeping going ten minutes past the point you wanted to stop, being a beginner where people can see, and getting something wrong and trying again. Then it gets longer: three days, a week of a private promise, and at the end one chosen hard thing done on twenty-eight days out of thirty. If life is already hard right now, getting through the day counts, and this ladder will still be here later.",
+ "who": "From about eight; a child and a grown-up side by side",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Pick one job you have been putting off that takes under ten minutes, and do it now, all the way to the end.",
+   "note": "A reply to a message, a drawer sorted, a form filled in, homework handed over, a plant repotted. All the way means finished and put away. If you have no put-off jobs, do the one you least want to do today, on purpose, and count it.",
+   "ctx": "room",
+   "kind": "courage",
+   "mins": 10
+  },
+  {
+   "n": 2,
+   "test": "The next time something you are doing stops being fun, keep going for ten more minutes, with a timer.",
+   "note": "Practising an instrument, a long jigsaw, weeding, reading a hard chapter, times tables. Set the timer at the moment you want to stop. Something you must not carry on with, like anything that hurts, is not what this rung is about.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Write one big job you have been avoiding as five small steps on paper, and do the first step today.",
+   "note": "For example \"clear the shed\": empty one shelf, sort it into keep and go, take the rubbish out, and so on. For a child: \"tidy my room\" becomes floor, bed, desk, clothes, bin. Each step should take less than half an hour.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Do the other four steps of that job within the next seven days.",
+   "note": "One a day, or two on a free day. Tick each one off on the same paper. If a step turns out to be bigger, split it again rather than stopping.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Do something you are a beginner at while somebody else watches.",
+   "note": "Juggling, a song on an instrument, a cartwheel on grass, a few words of another language, a new recipe, a game with a child who is better at it than you. Laughing at how it goes is fine. If it goes well, try the next bit that is harder.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 6,
+   "test": "Go to a class, club or session where you will be one of the least skilled people, and stay to the end.",
+   "note": "A chess club, a choir, a dance class, a climbing wall taster, a sports session, a language evening at a library. Many clubs let you try once for free. A child goes with a grown-up, and the grown-up can join in too.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 7,
+   "test": "Ask somebody to explain something you feel you should already know.",
+   "note": "How to check the oil in a car, what a word at work means, how the heating timer works, the way a child is taught to do long division now. Say it plainly: \"I have never understood this properly, could you show me?\". Say thank you and try it while they are there.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 8,
+   "test": "Get something wrong in front of somebody, say \"I got that wrong\", and do it again.",
+   "note": "A sum said out loud, a card trick, a word in another language, a tune, a catch. The words matter: say it simply, without a long excuse, then try again straight away. Grown-ups doing this in front of children shows them it is safe to do.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 9,
+   "test": "Choose one hard thing and do it three days running.",
+   "note": "Ten minutes of instrument practice, a page of a difficult book, ten press-ups, ten new words, making the bed properly, tidying for ten minutes. Something safe, in your control, and small enough to do on a busy day. The same one each day.",
+   "ctx": "long",
+   "kind": "courage"
+  },
+  {
+   "n": 10,
+   "test": "On a day you feel like doing nothing, do one small thing you had planned, then rest.",
+   "note": "A walk round the block, the washing-up, one piece of homework, a short practice. Then rest properly. This is for an ordinary low-energy day, not for illness, grief or exhaustion; on those days, looking after yourself is the right thing to do and counts.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 11,
+   "test": "Choose the harder of two options on purpose once today, and write down why.",
+   "note": "The stairs, not the lift; cooking, not a takeaway; walking a short distance, not a lift in the car; finishing the chapter, not picking up the phone. One line: \"I took the stairs because I want to be able to climb hills with my kids.\"",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "Do one safe but uncomfortable thing outdoors on purpose: a walk in the rain, up early for a sunrise, or the steepest street near you.",
+   "note": "Dress for the weather and tell somebody where you are going. Not in storms, ice or dangerous heat; in a hot climate, go at dawn and carry water. A child does this with a grown-up.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 13,
+   "test": "Say yes to one chance this week that makes you nervous, and go through with it.",
+   "note": "Reading out loud at a group, joining a game in the park, speaking up at a meeting, inviting somebody round, trying out for a team. Nervous, not unsafe: never something you have a good reason to refuse. Tell one person afterwards how it went.",
+   "ctx": "long",
+   "kind": "courage"
+  },
+  {
+   "n": 14,
+   "test": "Make yourself a promise that nobody else knows about, and keep it for seven days.",
+   "note": "Out of bed when the alarm goes, no phone at the table, ten minutes of practice, the bed made. Write it on a card only you will see. If a day slips, carry on the next day and add a day at the end.",
+   "ctx": "long",
+   "kind": "courage"
+  },
+  {
+   "n": 15,
+   "test": "Go back to something you once gave up on and do one session of it.",
+   "note": "An instrument in a cupboard, a half-read book, a language, drawing, a sport. Stopping before was not a failure; starting again is part of doing hard things. Keep this session short, about fifteen minutes, so there is a second one.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 16,
+   "test": "Help somebody else keep going at the moment they want to stop.",
+   "note": "A child stuck on homework, a friend learning to drive, a colleague on a long task. Do not lecture: say what they have already done, suggest ten more minutes, or do ten minutes alongside them. Then let them decide.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 17,
+   "test": "Write down one thing that used to be hard for you and is not hard now, and what made the difference.",
+   "note": "It might be from this ladder or from years ago: swimming a length, a phone call, getting up early, reading a whole book. Keep the paper with the card from your seven-day promise.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 18,
+   "test": "Choose one hard thing and do it on at least twenty-eight of the next thirty days.",
+   "note": "This is the end of the ladder. The same kind of hard thing as rung nine, perhaps a bit bigger, marked on a calendar each day. Two missed days are allowed so that one bad day does not end it; if you are ill, stop the count and pick it up again when you are well.",
+   "ctx": "long",
+   "kind": "courage"
+  }
+ ]
+}

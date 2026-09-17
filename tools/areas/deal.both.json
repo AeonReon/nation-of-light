@@ -1,0 +1,153 @@
+{
+ "id": "deal.both",
+ "name": "Both sides pleased",
+ "line": "From one swap you are both glad of to a regular arrangement with somebody that has run for four weeks and that both of you still want.",
+ "size": "months",
+ "strand": "be-useful-to-somebody",
+ "who": "From about eight; a child and a grown-up side by side",
+ "about": "For everybody from about eight. A child does the early rungs at home with a grown-up (swaps, turns, family plans), and the later rungs suit grown-ups and teenagers. It starts with a small swap, then asking what the other person wants, saying their side back, and finding what costs you little and is worth a lot to them. In the middle you settle family plans so everybody gets what they care about, tell the truth when it costs you, and put right a deal that went badly for the other person. It ends with a regular arrangement, such as a lift share or a swap of help, that has run for four weeks and that both of you still want. Deals like this are the ones people come back for.",
+ "from": 8,
+ "steps": [
+  {
+   "n": 1,
+   "test": "Swap something with somebody so that you are both glad of the swap.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Stickers, cards, books, a jumper you never wear for a game they have finished, a job at home for another job. Ask \"Are you happy with that?\" before you both agree. A child does this with a friend, brother or sister, with a grown-up nearby.",
+   "mins": 10
+  },
+  {
+   "n": 2,
+   "test": "Before you ask somebody at home for something, first ask what they would like out of it.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "Before you ask for the television, ask what they were hoping to watch. Before you ask for help with the washing up, ask what they need done tonight. Then say what you want."
+  },
+  {
+   "n": 3,
+   "test": "In a disagreement, say the other person's side back to them in one sentence, and ask whether you have it right, before you give yours.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "\"So you want to go to the park because you have been inside all day; is that right?\" If they say no, try again until they say yes. Only then give your side."
+  },
+  {
+   "n": 4,
+   "test": "Settle a small disagreement at home by finding what each person actually wants from the thing.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Two children want the last orange: one wants to eat it, the other wants the peel for baking, so both get all of what they wanted. Ask \"What do you want it for?\" This works for the front seat, the bathroom, the last slice, the laptop."
+  },
+  {
+   "n": 5,
+   "test": "For a real deal coming up, write two short lists: what matters to you, and what you guess matters to the other person.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "A trade with a neighbour, a price for a job, a plan with a friend, pocket money for jobs at home. Three items on each list is plenty. The next rung checks your guesses."
+  },
+  {
+   "n": 6,
+   "test": "Ask that person what matters most to them in the deal, and compare it with your guess.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "\"What is the most important thing for you here?\" Listen to the whole answer. Mark on your list where you guessed right and where you guessed wrong."
+  },
+  {
+   "n": 7,
+   "test": "Find one thing that would cost you little and is worth a lot to them, and offer it before they ask.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Being flexible about the day, collecting instead of having it delivered, leaving a tool with them for a week, doing the part of the job they dislike. Offer it plainly: \"I can easily do Saturday if that is better for you.\""
+  },
+  {
+   "n": 8,
+   "test": "Offer two different deals that are both fine for you, and let the other person choose.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "\"I can do it for 40 on Saturday, or 35 if you can wait until next week.\" \"You can have the front seat there or on the way back.\" Make sure you would be glad of either answer."
+  },
+  {
+   "n": 9,
+   "test": "Tell the other side something true that makes your own position weaker.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "The bike you are selling has a slow puncture. The job will take longer than they hoped. The thing they want is cheaper somewhere else. Say it before they agree, not after."
+  },
+  {
+   "n": 10,
+   "test": "Plan something as a family or a group so that every person gets the part they care about most.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "A day out, a weekend, a meal, the jobs in the house. Ask each person for the one thing that matters most to them, then build the plan around those. A child can run this with a grown-up helping to keep the list."
+  },
+  {
+   "n": 11,
+   "test": "Write down, before you talk to them, the one thing you will not do in a deal, and tell the other person at the start.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "\"I cannot do weekends, but everything else is open.\" Saying it first saves both of you from building a deal that could never happen. Keep it to one thing and keep it true."
+  },
+  {
+   "n": 12,
+   "test": "Agree a deal with somebody you see every week.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "A neighbour, a colleague, another parent from school, a housemate: sharing a lawnmower, a rota for putting the bins out, taking turns driving the children to school. Use what you have practised: ask what they want, offer what costs you little."
+  },
+  {
+   "n": 13,
+   "test": "A week after a deal, ask the other person whether it is still working for them.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "\"Is the Tuesday lift still suiting you?\" If something is not working, change it together now, while it is still small. If it is all fine, you have both heard that it is."
+  },
+  {
+   "n": 14,
+   "test": "Keep a promise you made in a deal even though something better for you came up afterwards.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "You agreed to sell a chair for 30, then somebody offered 50. You said you would help on Saturday, then another invitation came. If nothing better comes up, keeping the promise to the end still counts. Your word is worth more than the difference."
+  },
+  {
+   "n": 15,
+   "test": "Go back and put right a deal that turned out unfair on the other person.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "You sold something that broke a week later, a job took them far longer than either of you expected, you got much the better side of a swap. Offer something back: money, a repair, another turn. If no deal of yours has gone that way, count this rung the first time one does."
+  },
+  {
+   "n": 16,
+   "test": "Say no to a deal you do not want, in a way that leaves the other person glad to deal with you another time.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Thank them, give the honest reason in one sentence, and say what might work in future: \"Thank you for thinking of me. It is more than I need right now; I would be glad to hear from you if you have a smaller one.\""
+  },
+  {
+   "n": 17,
+   "test": "Help two other people reach an agreement without making the decision for them.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Two children who both want the same toy, two housemates arguing about cleaning, two friends planning a trip. Ask each what they want and why, say each side back, and let them find the answer. A teenager can do this for younger children with a grown-up around."
+  },
+  {
+   "n": 18,
+   "test": "Do a second deal with somebody you have dealt with before, and make it better for both of you than the first.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "The same neighbour, the same seller, the same person you swap help with. Use what you learned last time about what matters to them. Ask afterwards whether it was better for them."
+  },
+  {
+   "n": 19,
+   "test": "Ask somebody you have dealt with what would make them glad to deal with you again.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "\"Was there anything I could have done to make that easier for you?\" Listen, say thank you, and write down what they said. Do not argue with the answer."
+  },
+  {
+   "n": 20,
+   "test": "Set up a regular arrangement with somebody that has run for four weeks and that both of you still want.",
+   "ctx": "long",
+   "kind": "kindness",
+   "note": "A lift share, a swap of childcare, lessons in return for help in the garden, a rota for a shared vegetable plot. Use the rungs: ask what matters, offer what costs you little, check in after a week. At four weeks, ask \"Shall we keep going?\" and hear a yes from both sides. That is the far end of this ladder."
+  }
+ ]
+}

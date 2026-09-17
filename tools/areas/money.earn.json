@@ -1,0 +1,153 @@
+{
+ "id": "money.earn",
+ "name": "Earning",
+ "line": "From writing down five jobs you could do to keeping three regular paying customers for twelve weeks.",
+ "size": "months",
+ "strand": "be-useful-to-somebody",
+ "from": 8,
+ "about": "For anybody from about eight: a child earns only with a grown-up's say-so, only for people the family knows, and never gives their own details to strangers or online. It is about being paid for work: agreeing a job and a price before you start, doing it well, keeping a record, turning up on time, telling people what you offer, and going back to check your work. It ends with three regular customers kept for twelve weeks. Where you live there may be laws about the age and hours for working for a business, and rules about telling the tax office once you earn regularly; the notes say where to check.",
+ "who": "From about eight, with a grown-up's say-so",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Write down five jobs that people near you pay to have done, which you could do this month.",
+   "note": "Washing a car, walking a dog, weeding a garden, carrying shopping, cleaning ground-floor windows, sorting a shed, showing somebody how to use their phone, helping a younger child with reading. A child writes jobs for family and neighbours the family already knows.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Agree one paid job with somebody you know: exactly what will be done, by when, and for how much, before you start.",
+   "note": "A child agrees a job with a grown-up at home, beyond their usual chores, or with a neighbour the grown-up knows and has said yes to. A grown-up agrees one with a friend, relative or neighbour. Say it back to them: \"So, all the weeds out of the front bed by Saturday, for 10.\"",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 3,
+   "test": "Do that job to the standard you agreed, tidy up after, and show the person before you are paid.",
+   "note": "Put tools back, sweep up, check the corners. \"I have finished; would you like to look?\" Being paid after they have seen it is fair to you both.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 4,
+   "test": "Start an earnings page and write in it: the date, the job, who it was for, how long it took, and what you were paid.",
+   "note": "A page in a notebook or a note on the phone. A child uses first names only. Add every job from now on, the same day.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Ask the person you did the job for what you could do better next time, and write it down.",
+   "note": "\"Is there anything you would like done differently next time?\" Listen without explaining. Write their exact words on the earnings page.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 6,
+   "test": "Find out what people near you usually pay for one of your jobs, and set your own price for it.",
+   "note": "Ask two or three people what they pay for a dog walk or a car wash, or look at local noticeboards and adverts. A child sets a price with a grown-up. Write it down.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Tell somebody what you charge for that job, as a plain number, with no apology before or after it.",
+   "note": "\"I walk dogs for 5 an hour.\" Then stop talking. Practise saying it at home first. Somebody the family knows is a good first person to tell.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 8,
+   "test": "Do a paid job for somebody outside your own household.",
+   "note": "A child works only for people the family knows, with a grown-up's say-so, and a grown-up always knows where they are; a child never goes into a house alone that the grown-up has not agreed. Agree the job and the price first, as on rung two.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 9,
+   "test": "Turn up at exactly the agreed time for three jobs in a row, and send word ahead if anything has to change.",
+   "note": "Set a reminder the day before and an alarm to leave. If you will be late or cannot come, say so before, not after. Write the three times on your earnings page.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Write a short note or card that says what you offer, your price, and how to reach you.",
+   "note": "Three lines: \"Car washing, inside and out. 8 a car. Ask for Sam.\" A child puts a grown-up's phone number on it, never their own details. A grown-up leaves off a home address, and hand-written is fine.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 11,
+   "test": "Give your note to five people you or your family know, or put it on a noticeboard where you have asked permission.",
+   "note": "Neighbours, a club, a place of worship, a shop or library noticeboard (ask at the counter first). A child never posts it online.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "Get one new paid job from somebody who saw your note.",
+   "note": "Agree it the same way as before: what, when, how much. If nobody has asked within a week, give the note to five more people.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 13,
+   "test": "A week after a finished job, go back and ask whether anything needs putting right, and put it right for no charge.",
+   "note": "\"I just wanted to check the fence paint has held up.\" Most of the time the answer is \"it is fine\". When it is not, fixing it for nothing is what makes people ask you again.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 14,
+   "test": "Do the same job for the same person on a regular day, four times.",
+   "note": "Every Saturday morning, every Tuesday after school. Same time, same standard. Write each one on your earnings page.",
+   "ctx": "long",
+   "kind": "skill"
+  },
+  {
+   "n": 15,
+   "test": "Ask a pleased customer whether there is another job they would like done.",
+   "note": "\"While I am here, is there anything else you need doing?\" Say your price for it plainly before you start.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 16,
+   "test": "Work out what you really earned per hour on your last five jobs, including the time getting there and back.",
+   "note": "Add the pay, add all the hours including travel, divide. Write the number down. Notice which job paid best per hour; it is often not the one with the biggest payment.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 17,
+   "test": "Set a higher price for new customers, and say it plainly the next time somebody asks.",
+   "note": "Keep the old price for people who already pay you, if you like. A child agrees the new price with a grown-up first. Some will say no; write down who says yes.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 18,
+   "test": "Take on a job that needs two, bring somebody in, agree their share before you start, and pay it to them in full.",
+   "note": "A big garden, a garage to clear, a lot of cars at once. A child brings a friend or brother or sister, with both families' say-so. Pay them the same day.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 19,
+   "test": "Put aside half of everything you earn for four weeks, towards something you have written down.",
+   "note": "A jar, an envelope or a separate account. Write what it is for and how much it needs at the top of the earnings page.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 20,
+   "test": "Keep at least three regular paying customers for twelve weeks running, on time for every job.",
+   "note": "Your earnings page shows it: three names, a job each week or each fortnight, every one written down. A grown-up earning regularly on the side checks what their national tax office says about it. That is the far end of this ladder.",
+   "ctx": "long",
+   "kind": "skill"
+  }
+ ]
+}

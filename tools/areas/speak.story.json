@@ -1,0 +1,146 @@
+{
+ "id": "speak.story",
+ "name": "Storytelling",
+ "line": "From telling somebody what happened today, to keeping ten or more people listening to a story told from memory.",
+ "size": "months",
+ "strand": "say-what-you-mean",
+ "from": 6,
+ "who": "From about six; a child and a grown-up side by side",
+ "about": "For everybody from about six: a child and a grown-up can climb it side by side. It starts with telling what happened today in order, then true stories with a beginning, a middle and an end, then made-up stories where somebody wants something and something is in the way. Along the way come pauses, voices, a story learned from memory and a true story from your own family. It ends with a story told from memory to ten or more people, with everybody listening to the end. Stories are how people have passed on what matters for as long as there have been people, and anybody can learn to tell one well.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Tell somebody what happened to you today, in the order it happened, in under two minutes.",
+   "note": "Start with where you were, then what happened, then how it ended. At dinner, in the car, on a phone call. If you tend to jump about, say \"first\", \"then\" and \"in the end\" out loud to keep the order.",
+   "ctx": "with",
+   "kind": "attention",
+   "mins": 3
+  },
+  {
+   "n": 2,
+   "test": "Tell a short true story with a clear beginning, middle and end, and stop as soon as it has ended.",
+   "note": "The time the dog got out, the day you got lost, a surprise that went wrong. Beginning: where and who. Middle: what happened. End: how it turned out. Then stop; do not add \"anyway, so yes\".",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 3,
+   "test": "Retell a story everybody knows, without the book, in under three minutes.",
+   "note": "The Tortoise and the Hare, Cinderella, a folk tale from your own family's tradition, the story of a film you love. Getting the order right from memory is the whole rung. A child can tell it to a grown-up, and a grown-up to a child.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 4,
+   "test": "Make up a story out loud about three objects in the room, and record it on a phone.",
+   "note": "Pick three things you can see, such as a spoon, a shoe and a clock, and let them all matter in the story. Record it so nobody needs to be there. No phone? Tell it out loud to yourself and count it.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 5,
+   "test": "Listen back to your recording and write down one thing to change.",
+   "note": "A part that went on too long, an ending that was not clear, lots of \"um\". Only one thing. Tell the story again with that change, and notice the difference.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Tell a made-up story in which somebody wants something, and something is in the way.",
+   "note": "A mouse wants the cheese and the cat is asleep beside it. A girl wants to win the race and her shoe breaks. Nearly every story ever told works this way: somebody wants something, something is in the way, and the story is how it turns out.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "In the next story you tell, stop for a slow count of two just before the most important moment.",
+   "note": "\"She opened the box, and inside was...\" one, two \"...a tiny grey kitten.\" Watch your listener lean in during the pause. That is the pause working.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Tell a story with at least two characters, and give each of them a different voice.",
+   "note": "A deep slow voice for the giant, a quick high one for the mouse. Voices do not need to be good impressions, just different enough that the listener knows who is speaking without being told.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Tell a younger child a bedtime story without a book, and keep them listening to the end.",
+   "note": "Keep it short and gentle, with one character they can picture and a happy ending. If they ask questions, answer inside the story. A child climbing this ladder can tell one to a younger brother, sister or cousin, or to a grown-up at bedtime.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 10,
+   "test": "Ask somebody older in your family for a true story from their past, and ask two questions to get the details.",
+   "note": "\"What was the naughtiest thing you did at school?\" \"How did you and Grandad meet?\" Then ask \"What did it look like?\" and \"What happened next?\" If you have no older relative nearby, ring one, or ask an older friend or neighbour.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Tell that family story to somebody else, with the details you learned.",
+   "note": "Say whose story it is at the start: \"This happened to my gran.\" Keep the details that make it real, such as the name of the street or the colour of the bike. Tell the person it came from that you told it; most people are glad to hear it.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 12,
+   "test": "Tell a round-the-table story with two or more people, each adding one sentence in turn until it ends.",
+   "note": "You start: \"Once there was a baker who could not stop sneezing.\" The next person adds a sentence, and so on. Your job as the storyteller is to steer it towards an ending when it has gone round a few times. Good for a meal or a long journey.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Learn a folk tale by reading it three times, then tell it from memory to somebody.",
+   "note": "Any tradition in the world: Anansi and the pot of wisdom, the Pied Piper, Momotaro the peach boy, Stone Soup. Your library will have a book of them. Do not learn the words; learn the order of what happens, and tell it in your own words.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Tell the same story to two different people, and make the second telling better by one change you chose.",
+   "note": "Cut a slow part, add a pause, open with the most exciting moment instead of the weather. Decide the change before the second telling. It still counts if the second telling does not feel better; you tried something on purpose.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 15,
+   "test": "Tell a story that makes your listeners laugh at a point you planned in advance.",
+   "note": "Choose the funny moment before you start, build up to it, pause, then say it plainly. Kind stories only: laugh at what happened, not at a person. A true story from your own life is the easiest place to start.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 16,
+   "test": "Tell a story that makes your listeners go completely quiet at a point you planned in advance.",
+   "note": "A moment of danger, a surprise, a sad or tender ending. Slow down, speak more softly, and leave a silence after the moment. Choose a story that suits the listeners' ages.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 17,
+   "test": "Tell a story for five minutes to three or more people, from memory, without being interrupted.",
+   "note": "The folk tale or the family story, made a little longer. Ask first: \"Can I tell you a story?\" Sit or stand where everybody can see your face. If somebody interrupts, smile, answer briefly, and carry on.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 18,
+   "test": "Teach a younger person the three parts of a story, and listen while they tell one of their own.",
+   "note": "Somebody wants something, something is in the way, and how it turns out. Help them with one question if they get stuck, and otherwise say nothing until they have finished. Then tell them the best part of it.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 19,
+   "test": "Tell a story from memory to ten or more people, and keep everybody listening to the end.",
+   "note": "A family gathering, a class, a club, a campfire, a birthday. Five to ten minutes, a story you have told at least twice before. Watch the faces as you go; if people start to look away or fidget, move to the next exciting part. This is the far end of the ladder.",
+   "ctx": "with",
+   "kind": "courage"
+  }
+ ]
+}

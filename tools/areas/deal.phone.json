@@ -1,0 +1,102 @@
+{
+ "id": "deal.phone",
+ "name": "Bills by phone and email",
+ "line": "From working out what one bill costs a year to going through every regular bill in one afternoon and getting at least one lowered.",
+ "size": "afternoon",
+ "strand": "say-what-you-mean",
+ "who": "Grown-ups who pay household bills",
+ "about": "For grown-ups who pay household bills; a teenager from about sixteen can sit beside them and do the looking-up. Every rung is done from home, by phone, email or a company's online chat. It starts with one bill: what it costs in a year, when the contract ends, and what new customers pay. Then you write down what you will say, ask, ask for the right team, and say honestly whether you would leave. It ends with a list of every regular payment, the end dates in a calendar, and one afternoon spent going through them. Companies often keep a better price for customers who ask, and it takes a phone call or an email to find out.",
+ "from": 16,
+ "steps": [
+  {
+   "n": 1,
+   "test": "Pick one bill your household pays every month and work out what it costs in a whole year.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "The phone, the internet, insurance, a television service, a gym, energy. Multiply the monthly amount by twelve and write the answer down. Seeing the yearly number is often enough to make the next rungs feel worth doing.",
+   "mins": 10
+  },
+  {
+   "n": 2,
+   "test": "Find out the date that bill's contract ends and whether there is a fee for leaving before then.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Look in your online account, on a recent bill, or in the email you got when you signed up. Write down the date and the fee. Some things have no contract at all and can be changed any month; write that down if so."
+  },
+  {
+   "n": 3,
+   "test": "Look up what a new customer would pay today, with the same company, for exactly the same thing.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Use the company's own website: same speed, same cover, same number of minutes. Write the price and the date you saw it. If it is lower than what you pay, that is the number you ask about."
+  },
+  {
+   "n": 4,
+   "test": "Look up what two other companies would charge you for the same thing.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Their own websites or a price comparison website both count. Write each company's name, the price and the date. You will only ever quote a price you have actually seen."
+  },
+  {
+   "n": 5,
+   "test": "Write down the price you would be glad to pay and the three sentences you will say.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Keep it short and every word true. Read it out loud once so it sounds like you.",
+   "how": [
+    "\"I have been with you for [how many] years.\"",
+    "\"New customers pay [price], and [other company] offers [price].\"",
+    "\"What is the best price you can offer me to stay?\""
+   ]
+  },
+  {
+   "n": 6,
+   "test": "Contact the company about that bill by phone, email or their online chat, say your three sentences, and ask for their best price.",
+   "ctx": "room",
+   "kind": "courage",
+   "note": "Use the phone number or website printed on your bill, never one from a message somebody sent you, and never give out a full password. Be friendly; the person answering did not set your price. Write down their name, the date and what they offered."
+  },
+  {
+   "n": 7,
+   "test": "If the first person cannot lower the bill, ask politely to speak to the team that deals with customers who are thinking of leaving.",
+   "ctx": "room",
+   "kind": "courage",
+   "note": "Many companies have one, with names like \"customer loyalty\" or \"cancellations\". Those staff are often the ones allowed to offer a different price. \"Could you put me through to the team that can change the price?\" is enough."
+  },
+  {
+   "n": 8,
+   "test": "If you really would move to another company for a better price, say so plainly and ask what they can do.",
+   "ctx": "room",
+   "kind": "courage",
+   "note": "\"I am ready to move to [company] at [price] unless you can come close.\" Only say it if it is true, and if they cannot help, then move. Whatever you agree, ask for it by email or letter, and check the next bill shows the new price."
+  },
+  {
+   "n": 9,
+   "test": "Ask about a second bill in writing, by email or online chat, using the same three sentences.",
+   "ctx": "room",
+   "kind": "courage",
+   "note": "Choose a different bill, and first look up its new-customer price and two other prices, as in rungs three and four. Writing gives you a record of every word, and some people find it easier than a call. Save the reply."
+  },
+  {
+   "n": 10,
+   "test": "Using your last two bank statements, write a list of every regular payment, with what each costs in a year.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Include the small ones: online storage, a streaming service, a charity, a magazine, a phone insurance. Some bills have a price nobody can change or only one supplier where you live; mark those and leave them out of the asking."
+  },
+  {
+   "n": 11,
+   "test": "Put the contract end date of every bill on your list into a calendar, with a reminder one month before each.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "A paper calendar or the calendar on your phone. A month is usually enough time to look up prices and ask. If you do not know an end date, finding it is part of this rung."
+  },
+  {
+   "n": 12,
+   "test": "Spend one afternoon going through every bill on your list that is out of contract or ends within two months, and get at least one lowered or changed.",
+   "ctx": "room",
+   "kind": "courage",
+   "note": "Use the same steps each time: the new-customer price, two other prices, your three sentences, the right team, and the agreement in writing. Moving to a cheaper company counts as lowering it. That is the far end of this ladder: every regular bill looked at, not left alone."
+  }
+ ]
+}

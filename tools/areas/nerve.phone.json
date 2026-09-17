@@ -1,0 +1,102 @@
+{
+ "id": "nerve.phone",
+ "name": "On the phone",
+ "line": "From ringing a friend instead of sending a message, to making every call you have been putting off in one sitting.",
+ "size": "weeks",
+ "strand": "say-what-you-mean",
+ "from": 10,
+ "who": "Grown-ups and anybody from about ten",
+ "about": "For grown-ups and anybody from about ten; a child makes calls to businesses with a grown-up in the room. It starts with ringing somebody you know instead of sending a message, then a written first sentence, notes during the call, a clear voicemail and a booking. In the middle come the harder calls: getting through a menu and a wait on hold, ringing somebody you have never spoken to, and reporting something that has gone wrong. It ends with calling for somebody who finds the phone hard, and then clearing every call you have been putting off in one sitting. A five-minute call often settles what would take days of messages.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Phone somebody you know instead of sending the message you were about to send.",
+   "note": "A friend to fix a time to meet, a grandparent to say how your week went, a relative to say happy birthday. If they do not pick up, ring again later or leave a short message; making the call is the rung. If you already ring people all the time, do it on purpose today and count it.",
+   "ctx": "with",
+   "kind": "courage",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Before your next call, write down your first sentence and the one thing you need to find out, then make the call.",
+   "note": "\"Hello, my name is Sam, I am ringing to ask whether the pool has a lane swim on Saturday.\" Keep the paper in front of you while you talk. Good calls to try this on: the dentist to check an appointment time, the library about a book you reserved, a club about when it next meets. Most nerves are about the first ten seconds, and the written sentence gets you past them.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "During a call to a shop, office or service, write down the answer and the name of the person you spoke to before you hang up.",
+   "note": "Have a pen and paper beside you before you dial. Near the end, ask \"Sorry, who am I speaking to?\"; people are used to being asked. A name and a note mean you never have to ring twice to find out what was said.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Leave a voicemail under thirty seconds that says your name, why you are calling, and your number twice, slowly.",
+   "note": "Write it out first in three lines. Ringing a business outside its opening hours is an easy way to get a voicemail to practise on, as long as you have a real reason to call. A child gives a grown-up's number, with their say-so, not their own.",
+   "how": [
+    "Say your name and the reason in one sentence.",
+    "Say the number slowly, in small groups of digits.",
+    "Say it a second time, then say goodbye."
+   ],
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 5,
+   "test": "Phone to book something, then repeat the day, time and name back to them before you hang up.",
+   "note": "A haircut, a doctor's or dentist's appointment, a swimming lesson, a table for a family meal. Free ones count just as well: a computer slot at the library, a place on a free museum tour or a council-run walk. \"So that is Tuesday the fourth at ten, under Morgan.\" If your name gets misheard, spell it out.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 6,
+   "test": "Phone somewhere you already have a booking, an account or a loan, and ask them to check or change one detail.",
+   "note": "Renew your library books by phone, confirm when your next dental check-up is due, move an appointment by a day, ask a school or club to update your address. Say who you are, what you want changed, and check they have done it before you say goodbye.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 7,
+   "test": "Get through a menu of numbers to press, wait on hold, and ask your question to a real person.",
+   "note": "A bank, an energy or water company, your local council, a phone company. Listen to the whole list of options once before you press anything, and write the numbers down as you go. Do something with your hands while you wait, like washing up or folding laundry. If they offer to call you back instead, saying yes counts too.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Phone somebody you have never spoken to, by name, to ask about joining something they run.",
+   "note": "The secretary of a walking club, the leader of a choir, the coach of a children's team, the person who runs a community garden. Their number is usually on the group's website or a noticeboard at the library. Start with where you found it: \"I saw your number on the library board; I would like to ask about joining.\"",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 9,
+   "test": "Phone to report something that has gone wrong, and before you hang up, find out what happens next, by when, and get a reference number.",
+   "note": "A parcel that never arrived, a bill that looks wrong, a repair that did not last, a broken streetlight reported to your local council. Say what happened in two or three calm sentences, facts first. Write down the date, the name of the person and the reference. A teenager can make this call for a household problem, with a grown-up's say-so.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 10,
+   "test": "On the day they said it would be sorted, ring back, give your reference number, and ask where things have got to.",
+   "note": "Use the notes from rung nine. \"I rang on the third, reference 4417; you said it would be done by today. Could you tell me where it has got to?\" If it was already put right, ring anyway to say thank you and check it is closed. Most people never ring back, and ringing back is often what gets a problem put right.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 11,
+   "test": "Make a call for somebody who finds phoning hard, with them sitting beside you.",
+   "note": "A grandparent booking a doctor's appointment, a friend whose first language is not yours, a neighbour sorting out a delivery. Say at the start \"I am calling on behalf of\" and their name; never pretend to be them. Some places need to hear the person say yes themselves, so have them close enough to take the phone.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 12,
+   "test": "Write a list of every call you have been putting off, then make all of them in one sitting.",
+   "note": "Start with the easiest to get going. Put a line through each one as you finish, and write what it settled beside it. If a place is closed, leave a voicemail the way you learned on rung four and cross it off. That is the far end of this ladder: no call left waiting because you would rather not make it.",
+   "ctx": "room",
+   "kind": "courage"
+  }
+ ]
+}

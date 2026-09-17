@@ -1,0 +1,102 @@
+{
+ "id": "nerve.onthespot",
+ "name": "Speaking up on the spot",
+ "line": "From saying one thing at the table without being asked, to two minutes standing up in front of ten people on a subject handed to you there and then.",
+ "size": "weeks",
+ "strand": "say-what-you-mean",
+ "from": 8,
+ "who": "From about eight; the early rungs happen at home",
+ "about": "For anybody from about eight, and for grown-ups; the early rungs happen at home, the later ones in a class, a club, a meeting or a family gathering. This ladder is speaking in a group with no time to prepare. It starts at the family table, then a topic game at home with a simple shape for any answer: one point, one example, stop. In the middle you take that shape into groups outside home: adding to what somebody said, going first, offering an idea, summing up. It ends with two minutes standing in front of ten people on a subject you were given a moment before.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "At a family meal, say one thing about your day before anybody asks you.",
+   "note": "\"Something funny happened on the bus.\" \"I found out how bread rises.\" One or two sentences, then let somebody else talk. If you are always the one who talks first, let everybody else speak first and say yours at the end.",
+   "ctx": "with",
+   "kind": "courage",
+   "mins": 2
+  },
+  {
+   "n": 2,
+   "test": "In a conversation with three or more people, when there is a pause, be the one who speaks.",
+   "note": "Friends at lunch, family in the car, a break at work. Say anything that fits: a question, something you noticed, a thought on what was just said. A pause of two or three seconds is your moment; you do not need a clever line.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 3,
+   "test": "Play the topic game at home: somebody gives you a subject you have not seen, and you talk about it for thirty seconds straight away.",
+   "note": "Write twenty subjects on slips of paper: your favourite meal, the best day out you have had, rain, a thing you would invent, your first memory. Somebody draws one and starts a timer. Take turns if there are two or more of you.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 4,
+   "test": "In the topic game, answer three subjects using one point, one example, then stop.",
+   "note": "\"Rain is better than people think. Last Saturday we stayed in and built a den all afternoon. That is why I like rain.\" The stop is the hard part; most people ramble because they have not decided how to finish.",
+   "how": [
+    "Say your point in one sentence.",
+    "Give one real example of it.",
+    "Say your point again in a few words, and stop."
+   ],
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 5,
+   "test": "In the topic game, talk for one full minute on a subject drawn from the pile.",
+   "note": "Use the shape from rung four, with two or three examples instead of one. When you want to say \"um\", pause instead; a pause sounds like thinking. If you cannot think what to say next, give another example.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Have somebody ask you three questions on subjects you know little about, and answer each one with what you do know, in two sentences.",
+   "note": "How does a plane stay up? Why is the sea salty? Who built the first bridge? \"I am not sure of the whole answer, but I know the wings are shaped to push air down.\" Being honest about the edge of what you know, and still saying something, is the skill.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "In a class, club or meeting, add to what somebody else just said: agree with them by name and give one more reason.",
+   "note": "\"I agree with Priya; it would also be quicker.\" You do not need a new idea, only one more reason for theirs. It is the easiest way to speak in a group you do not know well.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 8,
+   "test": "When a group goes round the room introducing themselves or answering a question, go first.",
+   "note": "Classes, clubs, courses, meetings and training days often start like this. As soon as the leader asks, say \"I will start\" and use the shape from rung four. Going first means nobody has set a pattern to follow, and it is over before the nerves build.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 9,
+   "test": "When a group is deciding something, say an idea of your own that nobody has mentioned.",
+   "note": "Where to go on a family day out, a name for a team, what to do at a club's next session, how to split a job at work. \"What about the beach, if the weather holds?\" Say it once, clearly, and let the group decide.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 10,
+   "test": "When a group discussion keeps coming back to the same points, sum up out loud what has been said so far.",
+   "note": "\"So we have two ideas: the park or the museum. The park is free, the museum is dry.\" Two or three sentences. It is often the most useful thing anybody says, and it needs no preparation, only listening.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "At a gathering, stand up and say a few words of thanks to somebody, with no notes, for about thirty seconds.",
+   "note": "At a birthday, the last session of a club, the end of a talk, a family meal somebody cooked. \"Can I just say thank you to Dad for this meal...\" What they did, why it mattered, thank you. A child can do this at a family gathering.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "Speak for two minutes, standing, to a group of at least ten people, on a subject somebody gives you there and then.",
+   "note": "A family gathering playing the topic game, a class, a youth group, a club night. Many towns have a public speaking club where guests can have a go at this, often for free. That is the far end of this ladder: handed a subject, you stand and speak without a word prepared.",
+   "ctx": "with",
+   "kind": "courage"
+  }
+ ]
+}

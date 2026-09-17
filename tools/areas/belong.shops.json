@@ -1,0 +1,97 @@
+{
+ "id": "belong.shops",
+ "name": "Fine shops",
+ "line": "From looking up one fine shop at home to taking somebody round one who would never have gone in on their own.",
+ "size": "weeks",
+ "strand": "look-after-yourself",
+ "from": 10,
+ "about": "For grown-ups and teenagers, and for a child from about ten with a grown-up beside them. Fine shops are open to anybody who walks in, and looking is what they are there for, so no rung needs any money and nobody pretends to be buying. It starts with one shop looked up at home, then walking in and looking properly, a question, holding one thing, a second kind of shop, and learning how the best things are made. It ends with taking somebody round a shop they would never have gone into on their own. Knowing what fine work looks like, and that you are welcome to look at it, is worth having whatever you earn.",
+ "who": "Grown-ups and teenagers; from ten with a grown-up",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Find one fine shop near you on its website, and write down three things it sells and one you would like to see up close.",
+   "note": "A jeweller, a watchmaker, a tailor, a shop selling good furniture, pianos, pens or kitchen knives, a fine food hall, a gallery that sells paintings. Write the shop name, its opening hours and the three things. No shop like this near you: do the next rungs in the best shop of any kind you can reach.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Walk into that shop, look closely at three things for about a minute each, and walk out at an unhurried pace.",
+   "note": "Look at how each is made: the stitching, the finish, the weight of it on the stand. You do not need to speak to anybody on this rung. If somebody says hello, say hello back. A child does this with a grown-up.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 3,
+   "test": "When somebody offers to help, say \"I am just looking today, thank you\", and stay at least five more minutes.",
+   "note": "It is true, it is polite, and it is what shop staff hear all day. Then keep looking at your own pace. If you already go into shops like this without a second thought, do it on purpose today and count it.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 4,
+   "test": "Ask a member of staff one question about something in the shop.",
+   "note": "For example: \"What is this made of?\", \"Where is this made?\", \"How long does this take to make?\" Listen to the whole answer and say thank you.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 5,
+   "test": "Ask what the difference is between two similar things at very different prices, and listen to the whole answer.",
+   "note": "Two watches, two coats, two pans, two pens. People who work in good shops usually like explaining this. Afterwards, say in one sentence what you learned.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Ask whether you may hold or try one thing, saying honestly that you are not buying today.",
+   "note": "A watch on your wrist, a coat on, a pen in your hand, a leather bag on your shoulder. Most shops say yes. Have clean hands, hold it over the counter, and hand it back carefully. If they say no, say thank you; the rung is the asking.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 7,
+   "test": "Go into a second, different kind of fine shop, look properly, and ask one question.",
+   "note": "If the first was a jeweller, try a tailor, a piano shop or a shop selling good tools. Same as before: look closely, one question, thank you, and leave at an easy pace, with no apology and no excuse.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 8,
+   "test": "Ask somebody who works there which thing in the shop they would choose for themselves, and why.",
+   "note": "Their answer usually tells you what really matters about the thing, which is often not the most expensive one. Write down what they chose and their reason.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Go back to one of the shops a second time and say hello to somebody you spoke to before.",
+   "note": "Tell them something you remembered from last time: \"You told me about the stitching on the coats; I have been noticing it since.\" Being remembered works both ways.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 10,
+   "test": "Find out how the best version of one thing you saw is made, and explain it to somebody at home in two minutes.",
+   "note": "From a person in the shop, the maker's own website, or a video of the workshop. How a watch movement is put together, how a suit is cut by hand, how a good knife is forged. Two minutes, out loud.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Spend half an hour in a fine shop or the fine department of a large store, looking and asking, with nothing bought and nothing to apologise for.",
+   "note": "Take your time with each thing. Ask two or three questions across the half hour. When you leave, say thank you to whoever helped you.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "Take somebody who would never have gone in on their own round one of your shops, and let them ask the first question.",
+   "note": "A friend, a grandparent, a teenager, a neighbour. Tell them beforehand what to say if staff come over. That is the far end of this ladder: you are the one showing somebody else that they are welcome there too.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

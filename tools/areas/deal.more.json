@@ -1,0 +1,97 @@
+{
+ "id": "deal.more",
+ "name": "Asking for more instead of less",
+ "line": "From noticing what came with the last thing you bought to buying something that matters with two extras added in.",
+ "size": "weeks",
+ "strand": "be-useful-to-somebody",
+ "who": "Grown-ups and teenagers; from ten with a grown-up",
+ "about": "For grown-ups and teenagers, and for a child from about ten with a grown-up beside them in any shop or at any stall. This ladder is about getting more for the same money, not paying less: a spare part, a set-up, the old one taken away, a small extra added to a bag. It starts with noticing what already comes with things, moves to asking what comes with them, then asking for small extras, then offering more yourself when somebody asks you for money off. It ends with a purchase you were making anyway that comes with two extras you asked for. A seller can often add something that costs them little far more easily than they can lower a price.",
+ "from": 10,
+ "steps": [
+  {
+   "n": 1,
+   "test": "Pick something you bought in the last month and write down everything that came with it apart from the thing itself.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "A phone came with a charger and a case, a bike came with lights, a haircut came with a wash, a sofa came with delivery. Some things came with nothing extra at all, and that is worth noticing too. This list shows you the kind of extras that exist.",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Before you pay for something today, ask the person serving you what comes with it.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "\"Does this come with anything else?\" works for a pair of shoes (spare laces, a shoe bag), a coffee machine (a descaler), or a plant (a pot). You are only asking, not bargaining. A child asks with a grown-up beside them."
+  },
+  {
+   "n": 3,
+   "test": "For something you plan to buy soon, write down three extras you would value more than money off.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "For a bike: a lock, a first service, lights. For a washing machine: carrying it in, plumbing it in, taking the old one away. For a lesson or a course: a practice session, the notes to keep. Keep this list; rung eight uses it."
+  },
+  {
+   "n": 4,
+   "test": "When you buy several things at a market stall, bakery or farm shop, ask politely whether they could add one small thing in.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "\"I am taking six rolls; could you add a seventh?\" or \"Could you add a bunch of parsley with the vegetables?\" Small shops and stalls often say yes, and a no is fine. Say thank you either way. A child asks with a grown-up standing beside them."
+  },
+  {
+   "n": 5,
+   "test": "When you book a service you were going to pay for anyway, ask whether a small extra could be included.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "A trim of the fringe with a haircut, the tyres pumped up with a bike repair, the inside wiped with a car wash, one more window with a window clean. Ask when you book or before they start, not after. Ask for something small that takes them a few minutes, not a second job."
+  },
+  {
+   "n": 6,
+   "test": "For something that will be delivered, ask whether they will carry it in, set it up, or take the old one away at no extra charge.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "Beds, fridges, washing machines, a garden shed, a large piece of furniture. Some sellers do this as standard and do not advertise it. Ask before you pay, by phone, email, online chat or in the shop."
+  },
+  {
+   "n": 7,
+   "test": "When a seller tells you the price cannot come down, ask what else they could include instead.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "\"I understand the price is fixed. Is there anything you could include with it?\" Then wait for their answer and let them suggest something. Use it only on something you were going to buy anyway at that price."
+  },
+  {
+   "n": 8,
+   "test": "Ask for one of the three extras you wrote down in rung three.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "Name the exact extra: \"Could the lock be included with the bike?\" Ask once, plainly, and say thank you whatever the answer. If that purchase has already happened, choose three extras for the next one and ask for one of those."
+  },
+  {
+   "n": 9,
+   "test": "The next time you have already paid for a seat, a room or a table, ask whether a better one is free at no extra cost.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "A better seat at a show or a match when the hall is half empty, a quieter room when you check in somewhere to stay, a bigger table when the room is empty. Ask only when you can see or reasonably expect that one is free. A no is the usual answer and is still the rung done."
+  },
+  {
+   "n": 10,
+   "test": "When somebody asks you for money off something you are selling or doing, offer them something extra instead.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Selling a bike second-hand: offer the lock and the pump with it. Charging for babysitting, dog walking or a lift: offer an extra half hour or a stop on the way. Pick an extra that costs you little and is worth something to them. If nobody has asked you for money off yet, offer an extra to the next person who buys from you and count it."
+  },
+  {
+   "n": 11,
+   "test": "On a real purchase, say exactly which extra would make you buy today, and let the seller decide whether to add it.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "\"If it came with fitting, I would buy it today.\" Only say it if it is true, and then buy it if they agree. If they say no, you can still buy it without the extra or leave; both are fine."
+  },
+  {
+   "n": 12,
+   "test": "Buy something that matters, which you were going to buy anyway, and come away with two extras you asked for.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "A bike, a washing machine, a course, a car service, a set of school uniform. Use anything from the ladder: asking what comes with it, your list of three, the extra that would make it a yes. Make sure both extras are written on the receipt or in an email. That is the far end of this ladder."
+  }
+ ]
+}

@@ -1,0 +1,138 @@
+{
+ "id": "classic.stories",
+ "name": "The great stories",
+ "line": "From one fable read aloud to three stories from three parts of the world, told from memory in one sitting.",
+ "size": "months",
+ "strand": "say-what-you-mean",
+ "about": "For everybody: a child and a grown-up can climb it side by side, with the grown-up reading aloud until the child can read alone. It starts with short fables from Greece, India and West Africa, then trickster stories, creation stories and hero stories from many peoples. In the middle you learn one story well enough to tell it without the page, you notice the same old story told in two far-apart places, and you read one great epic from start to finish in a retelling. It ends with three stories from three parts of the world told from memory to a family or group in one sitting. These are the stories people across the world have kept telling for thousands of years, and knowing them makes new books and films more interesting too.",
+ "who": "For everybody; a child and a grown-up side by side",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Read or listen to one short fable, and say in one sentence what happens in it.",
+   "note": "Good first ones: \"The North Wind and the Sun\" from Aesop (Greece), \"The Monkey and the Crocodile\" from the Panchatantra (India), or a short Anansi the spider story (West Africa). Your library has them, and old collections are free online. A grown-up reads it aloud for a young child.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Read the same fable again, and say in your own words what it teaches.",
+   "note": "Ask \"what did the story want us to learn?\". There is often more than one fair answer: \"being gentle works better than force\" is one for the North Wind and the Sun. A child and a grown-up can each give an answer and compare.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Read three fables from three different places and say the lesson of each.",
+   "note": "For example one from Aesop, one from the Panchatantra, and one from La Fontaine (France) or Krylov (Russia). Notice whether they teach the same kinds of things. Three short fables take about ten minutes.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Read one trickster story, and say who was tricked, how it was done, and whether the trickster deserved to win.",
+   "note": "Almost every people has a clever trickster: Anansi the spider (West Africa and the Caribbean), Coyote (stories of many Native American peoples), Reynard the Fox (medieval Europe), the Monkey King in Journey to the West (China). There is no right answer to \"did they deserve it\"; give a reason for yours.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Choose one short story you have read on this ladder and learn it well enough to tell without the page, saying it aloud to yourself three times.",
+   "note": "You do not need the exact words. Learn the order of what happens, three to six events, and the one line that matters most, if there is one. The first time you will look at the page; by the third time, try not to.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Tell that story from memory to somebody.",
+   "note": "A child tells a grown-up, a grown-up tells a child, a friend on the phone. Start with where and when: \"Long ago, in a village by a river, there lived a monkey...\". On your own, record yourself telling it and play it back.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Read creation stories from three different peoples, and write one way they are alike and one way they differ.",
+   "note": "For example Pangu and the great egg (China), Ymir the giant (Norse), Rangi the sky and Papa the earth pushed apart by their children (Māori), and the opening of the Book of Genesis. Some of these stories are sacred to people alive today; describe them the way the tradition tells them, \"in this tradition, the world began when...\". A short retelling of each is enough.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Read one hero story, and say what the hero wanted, what stopped them, and what it cost them.",
+   "note": "For example Sundiata, the founder of old Mali, as told by the griots; Mulan from the old Chinese ballad; Momotarō, the peach boy of Japan; Theseus and the Minotaur from Greece. Children's retellings are fine for grown-ups too. The cost is the interesting part: what did the hero give up?",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Find the same kind of story told in two far-apart places, and write down what is the same and what is different.",
+   "note": "Two well-known pairs: Ye Xian, a Chinese story written down more than a thousand years ago, and Cinderella, both about a mistreated girl and a lost shoe; or the great flood told in the Epic of Gilgamesh and in the story of Noah, as told in the Bible and the Qur'an. Your library or an online search for \"the same folk tale in different countries\" will find more.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Find one of these old story patterns in a film, book or show made in the last few years, and explain it to somebody.",
+   "note": "The trickster, the poor child who is really special, the hero who has to go into the dark place and come back, the flood, the quest. Say which film and which old story it follows. If nobody is around, write it in three sentences.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Choose one great epic and read or listen to a whole retelling of it, a chapter at a time.",
+   "note": "Choose one: the Odyssey (Greece), the Ramayana (India), the Epic of Gilgamesh (ancient Iraq), Sundiata (West Africa), Journey to the West (China), the Kalevala (Finland), the Popol Vuh (the Maya). A retelling for young readers is a good start for anybody; libraries lend them, and many have free audio versions. A chapter a day, read aloud together, works well for a family.",
+   "ctx": "long",
+   "kind": "skill"
+  },
+  {
+   "n": 12,
+   "test": "Tell somebody the whole epic you read, in five minutes, in your own words.",
+   "note": "Pick the main events, not every one: where it starts, the three or four biggest moments, how it ends. It is fine to look at a short list of the events on a card. A child and a grown-up can tell it in turns.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Say which character in that epic you are most like and which you would like to be more like, and give a reason for each.",
+   "note": "Say it to somebody or write it down. For example \"I am most like Odysseus's son, waiting and not sure what to do, and I would like to be more like Penelope, who stayed clever and patient\". Children often choose the animals; that is fine.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 14,
+   "test": "Find and read a story from a people or country you know almost nothing about.",
+   "note": "Pick a place on a map or globe you have never read anything about, then look in your library or online for its folk tales. Say where it comes from and what surprised you. Read it with the same respect you gave the others.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 15,
+   "test": "Find an old story or legend from the area where you live, and write it down in about ten lines.",
+   "note": "Almost every place has one: how a hill, a lake or a town got its name, a giant, a saint, a lost bell, a clever local person. Ask an older neighbour or relative, your library, or a local history group. If there are several versions, note that too.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 16,
+   "test": "Read a story aloud to a younger child or a small group, with a different voice for each character.",
+   "note": "Slow down for the exciting parts and pause before the ending. The voices do not need to be good, only different. If there is no younger child around, read to an older relative or record it for a child in the family who lives far away.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 17,
+   "test": "Learn two more stories to tell from memory, each from a different part of the world from your first one.",
+   "note": "Choose from everything you have read on this ladder: a fable, a trickster story, a hero story, your local legend. Say each one aloud three times over a few days. You now have three stories from three parts of the world.",
+   "ctx": "long",
+   "kind": "skill"
+  },
+  {
+   "n": 18,
+   "test": "Tell three stories from three different parts of the world from memory, to your family or a group, in one sitting.",
+   "note": "This is the end of the ladder. After a meal, round a fire, at a family gathering, at a club. Say where each story comes from before you begin, and ask at the end which one they liked best and why.",
+   "ctx": "with",
+   "kind": "courage"
+  }
+ ]
+}

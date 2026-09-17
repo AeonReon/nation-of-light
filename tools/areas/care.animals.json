@@ -1,0 +1,146 @@
+{
+ "id": "care.animals",
+ "name": "Animals",
+ "line": "From watching one animal for five minutes, to caring for an animal every week for twelve weeks.",
+ "size": "months",
+ "strand": "look-after-the-place",
+ "who": "Everybody; no animal of your own needed",
+ "about": "For everybody: a child and a grown-up can climb it side by side, and a child always has a grown-up with them around an animal they do not know. You do not need an animal of your own: a neighbour's dog, a friend's cat, the birds outside and an animal shelter are all ways in. The climb goes from watching and reading an animal, to helping an owner with feeding, cleaning and walking, to a week in charge, questions to people who know, help for a shelter and a first thing trained with rewards. It ends with caring for an animal every week for twelve weeks. Looking after an animal well takes patience and close noticing, and both grow with practice.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Watch one animal for five minutes and write down three things it did.",
+   "note": "A bird at a feeder or on a roof, a neighbour's cat on a wall, a dog in a park, a pet at home, a snail, fish in a pond. Write what you saw, not what you think it meant: \"washed its face with a paw\", \"stopped and listened\". A window view counts.",
+   "ctx": "out",
+   "kind": "attention",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Find out what one kind of animal eats, how much and how often, from a vet's or an animal charity's guide.",
+   "note": "Choose the animal you watched, or one you might help look after. Write the answer down. The amount on a food packet is a starting point; an animal's size, age and how active it is change it.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Meet a neighbour's or friend's calm dog or cat with the owner's permission, and let it come to you and sniff your hand before you stroke it.",
+   "note": "Ask the owner first, every time. Stand or crouch side-on, hold your hand low and still, and stroke the shoulder, not the top of the head. Never go up to a dog that is on its own, tied up outside, eating or asleep. A child does this with a grown-up.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 4,
+   "test": "Learn five signs that a dog or cat is relaxed or worried, then spot two of them in a real animal.",
+   "note": "Signs commonly taught for a worried dog: yawning when not tired, licking its lips, tail tucked under, turning its head away; a relaxed dog has a loose, wiggly body. A worried cat: ears flat, tail flicking hard; a relaxed cat blinks slowly at you. An animal charity's website or a library book will have pictures.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Put out a shallow dish of water for birds or other wild animals, and clean and refill it every day for a week.",
+   "note": "An old plate or a plant saucer with a stone in it so small creatures can climb out. Scrub it and change the water each day so it stays clean. In freezing weather, break or melt the ice each morning; in hot, dry weather, keep it in the shade.",
+   "ctx": "long",
+   "kind": "kindness"
+  },
+  {
+   "n": 6,
+   "test": "Feed and water somebody's animal while they watch, doing it exactly the way they do.",
+   "note": "Your own pet, a neighbour's, a relative's or a friend's. Ask how much, which bowl, where it goes and what time. Wash the bowl first and your hands after.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Do one cleaning job for an animal all the way through, with its owner showing you.",
+   "note": "A litter tray, a hutch, a cage, a fish tank's water change, or picking up after a dog on a walk. Wear gloves or use a bag over your hand, and wash your hands afterwards. People who are pregnant are usually advised to leave litter trays to somebody else.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 8,
+   "test": "Walk a neighbour's or friend's dog with its owner, holding the lead yourself the whole way.",
+   "note": "Keep the lead short near roads and other dogs, and let the dog sniff on quiet stretches. Take bags and pick up after it. A child walks a dog only with a grown-up, and only a dog small and calm enough for them to hold.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Look after one animal's food, water and cleaning every day for a week, with its owner checking.",
+   "note": "Your own pet, or one in your family or next door. Write the jobs on a card and tick them each day. If this is already your job at home, do it on purpose this week and count it.",
+   "ctx": "long",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "Write down what that animal looks like when it is well, and check it against your list each day for a week.",
+   "note": "Eating, drinking, droppings, coat or feathers, eyes, how lively it is. Anything different from normal for more than a day is worth telling the owner. That is how illness is often caught early.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Ask a vet, a shelter worker or an experienced owner three questions you wrote down beforehand.",
+   "note": "At a vet visit with the owner, by phone to a shelter, or a neighbour who has kept animals for years. For example: \"How do you tell when a cat is in pain?\", \"How much exercise does a young dog need?\", \"What is the most common mistake new owners make?\"",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "Work out what one animal costs to keep for a year, including food, vet visits, bedding and care when the owner is away.",
+   "note": "Ask an owner, look at prices online, or use an animal charity's guide. Add it up and write the total. It is the most useful sum to do before anybody gets an animal.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 13,
+   "test": "Phone or visit an animal shelter or rescue near you and ask what help they need most.",
+   "note": "It might be walkers, cleaners, people to sit with shy animals, or old towels and blankets. Many ask volunteers to be at least sixteen; ask what younger people can do with a grown-up. If there is no shelter nearby, ask a vet or a local animal charity.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 14,
+   "test": "Give that shelter the help they asked for: an hour of your time, or a collection of what they need.",
+   "note": "Collect old towels, blankets or newspapers from people you know if you are too young to volunteer. Deliver them in person and ask what happens to them.",
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 15,
+   "test": "Sit quietly near a nervous animal, without reaching for it, until it comes to you on its own.",
+   "note": "A shy cat at a friend's house, a shelter animal with the staff's permission, a pet hiding after a loud noise. Sit low, look slightly away, speak softly or not at all. If it does not come in twenty minutes, that is fine: leave it be and try another day.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 16,
+   "test": "Teach an animal one thing using only rewards, with its owner's permission.",
+   "note": "A dog to sit or come, a cat to come to its name or the sound of a cupboard. Sessions of two or three minutes, a small treat or praise the moment it gets it right, never shouting or pushing. Owners can tell you which treats are safe.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 17,
+   "test": "Look after somebody's animal completely for at least two days while they are away.",
+   "note": "Before they leave, write down the food, times, walks, anything unusual, and the vet's phone number. Visit as often as the animal needs. A child does this with a grown-up in charge.",
+   "ctx": "long",
+   "kind": "skill"
+  },
+  {
+   "n": 18,
+   "test": "Show somebody new how to feed, clean and handle that animal, and watch them do it without help.",
+   "note": "A younger brother or sister, a friend, a new volunteer. Use the same order you learned it in: watch, then help, then do it alone. Keep your hands off while they try.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 19,
+   "test": "Care for an animal every week for twelve weeks, and mark each week on a calendar.",
+   "note": "Your own pet, a neighbour's dog you walk every week, or a regular shift at a shelter. The same day each week helps. Twelve weeks of caring for an animal shows it, and you, that you can be counted on.",
+   "ctx": "long",
+   "kind": "kindness"
+  }
+ ],
+ "place": "animals"
+}

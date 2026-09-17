@@ -592,3 +592,19 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   northern half of the world and points the south at the Southern Cross. The More from us list still names Days Out
   NI, Conscious Parenting NI and Fuel Price NI because they are NI apps; its lede dropped "in Northern Ireland".
   **Rule from now on (in both BRIEFs): never assume where the reader lives.**
+- **v78 (2026-09-17, Opus session): rewrite wave two — Relationships, Community, Spirituality, Emotions done.**
+  36 ladders, 574 rungs, to `tools/areas/BRIEF.md` (worldwide rule, `who` label), writers D–I, every rung read;
+  `tools/areas/apply_v78.py` (run after apply_v76.py) asserts fields, a banned-words list (£, NI, 999, UK slang,
+  "finish line") and `who` under 60 chars. Relationships: care.welcome, speak.humour (kindness rule: fine in front
+  of a grandparent and a small child at once), speak.story, food.host, speak.hardthing, speak.connect (now
+  **Keeping in touch** — it was a third copy of Meeting people). Community: care.younger (never alone with somebody
+  else's child), care.older, speak.teach, beauty.town (now **The beauty of where you live**), care.animals (no
+  animal of your own needed). Spirituality: calm.still (the longer sitting practice after part one — not locked
+  behind it), classic.think, classic.stories (many cultures), classic.big (traditions in their own voice, never
+  tells you what to believe), classic.beautiful. Emotions: nerve.phone, nerve.walkin, nerve.no, nerve.onthespot,
+  nerve.odd, speak.stage, belong.shops, belong.cars, belong.rooms, belong.carry, belong.story, calm.hard.
+  Prosperity: money.earn, money.sell, deal.more, deal.phone (now **Bills by phone and email**), deal.terms,
+  deal.walkaway (now **Being ready to say no to a deal**), deal.both, money.negotiate. `unlocal_v77.py` now skips
+  targets a later wave rewrote. 87 of 175 ladders now to the standard; quick pool 206. **Left:** Prosperity
+  money.run, money.invest; all of Knowledge (21), Home (13), Fun and creativity (30), New experiences (15); the
+  under-sevens set. Writers' order notes: tools/areas/D-…I-notes.md.

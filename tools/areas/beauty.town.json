@@ -1,0 +1,110 @@
+{
+ "id": "beauty.town",
+ "name": "The beauty of where you live",
+ "line": "From three things you like the look of at your own door, to walking somebody round the ten most beautiful things near your home.",
+ "size": "weeks",
+ "strand": "look-after-the-place",
+ "who": "Everybody; a child and a grown-up side by side",
+ "about": "For everybody: a child and a grown-up can walk it side by side. It works in a city, a town or a village. You start at your own front door, naming three things built by people that you like the look of. The rungs go from looking up above the shop fronts, to what the buildings are made of, to light, trees, corners and views, to drawing a row of buildings, and end with a walk you have planned past the ten most beautiful things near your home, taking somebody with you. Once you have learned to look, the walk you take every day becomes a better walk.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Stand at your front door or a window and name three things made by people that you like the look of.",
+   "note": "A gate, a chimney, a railing, the pattern of the bricks, a neighbour's painted door, a lamp post, a row of planted trees. Say one word for why: the colour, the shape, how old it is. Any three count, however small.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 3
+  },
+  {
+   "n": 2,
+   "test": "Walk one street near home, stop, and look up above the doors and shop fronts until you find one detail you had never noticed.",
+   "note": "A date carved in stone, a face or a flower over a window, an old painted sign, iron brackets, a pattern in the roof. Always stop walking and stand back from the road before you look up.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "On the same street, write down every material the buildings are made of.",
+   "note": "Brick, stone, wood, render, concrete, glass, metal, clay tiles, slate, mud or thatch. Notice which one there is most of. The materials used near you are a big part of why your place looks like itself and not like anywhere else.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Find the best-kept building near you, and say three things its owner does to keep it that way.",
+   "note": "Clean windows, fresh paint, a mended gate, flowers by the door, a swept step. A small house kept well often looks better than a grand one left to go shabby.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Find a street where the buildings share a height, a material or a line of roofs, and one where they do not, and say which you would rather stand in.",
+   "note": "A terrace, a row of shops, a street of houses built at the same time, then a street where every building is different. There is no wrong answer: say why you chose.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Walk a street you know early in the morning or in the evening, and find one thing the low sun shows that midday hides.",
+   "note": "Carving that throws a shadow, the colour of brick turning warm, the shape of a roof against the sky. The sun is low early and late in every season and every part of the world. Go with a grown-up if you are a child and it is getting dark.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Find a corner, step or doorway where people naturally stop or sit, and say what makes it a good place to stop.",
+   "note": "Shelter from the wind, a wall to lean on, sun, a view, a step at the right height, out of the way of people walking. Watch for a few minutes to check that people really do stop there.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Find a spot where a tree, water or planting makes a street more beautiful, and picture the street without it.",
+   "note": "A tree in a square, a fountain, a canal or stream, window boxes, a planted roundabout. Say what would be lost: shade, colour, sound, movement, birds.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Find the best view along a street near you, and take a photograph or make a quick sketch of it.",
+   "note": "A long straight street with a church, a hill or the sea at the end; a bend where the buildings slowly come into sight; a gap between two houses that shows the hills. Stand somewhere safe, off the road.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Draw the fronts of three buildings side by side on one street, roughly, from where you stand.",
+   "note": "Boxes for the buildings, rectangles for the windows and doors, a line for each roof. It does not need to be good: drawing makes you see where windows line up and where they do not. A pencil and the back of an envelope are enough.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 11,
+   "test": "Find a place near you that is unpleasant to stand in, and write down two small changes that would make it better.",
+   "note": "An underpass, a car park, a bare wall, a bus stop with no shelter. A bench, a tree, a coat of paint, a light, a planter, a mural. Small and real, not \"knock it all down\".",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Thank the owner of one beautiful or well-kept building or garden, in person or with a note through the door.",
+   "note": "\"I walk past your garden every day, and it makes my morning.\" Owners rarely hear it. A child does this with a grown-up.",
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 13,
+   "test": "Plan a walk of about half an hour from home that passes your ten favourite things from this ladder, and walk it once to check.",
+   "note": "Write the ten in order on paper or draw a rough map. Things from any rung count: a carved date, the best-kept house, the view, the good corner. Change the route if a stretch is dull or unsafe.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Take somebody on your walk, show them your ten things and why, and ask them to add one of their own.",
+   "note": "Somebody at home, a friend, a visitor, a neighbour. Stop at each one and say what you see in a sentence or two. Their eleventh thing is the start of the next walk.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

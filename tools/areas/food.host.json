@@ -1,0 +1,139 @@
+{
+ "id": "food.host",
+ "name": "Feeding people",
+ "line": "From laying the table properly, to hosting a meal with a reason to it for eight or more people.",
+ "size": "months",
+ "strand": "be-useful-to-somebody",
+ "from": 8,
+ "who": "From about eight; a child hosts with a grown-up",
+ "about": "For everybody from about eight: a child can lay, serve and host beside a grown-up, and the grown-up looks after the hot cooking. It starts at your own table (laying it, serving others first, asking what people like), moves to inviting one guest and planning the meal on paper with the timings worked backwards, and then to bigger tables and guests who have never met. It ends with a meal for eight or more with a reason to it, such as a birthday or a welcome. The food can be simple; this ladder is about the table and the people round it, and the cooking ladder (Cooking a meal) is where the cooking itself is learned.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Lay the table for the next meal at home: a plate, a knife and fork or spoon, a glass and a napkin at every place.",
+   "note": "Fork on the left, knife on the right with the blade facing the plate, glass above the knife. A folded square of kitchen roll is a fine napkin. If your household eats in another way, such as with hands or chopsticks, lay it properly in that way. If you already lay it every day, do it on purpose tonight and count it.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "At the next meal, pour everybody's water before your own, and sit down last.",
+   "note": "A jug of tap water on the table makes it easy. Look round before you sit: has everybody got a plate, a drink and what they need? Then sit.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 3,
+   "test": "At a meal, notice what somebody needs before they ask, and pass it to them.",
+   "note": "The salt, the bread, the sauce, a spoon for the little one. Keep half an eye on the table while you eat. Once is enough for the rung, and you will find yourself doing it again.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Ask everybody at home what meal they would most like this week, and what they do not like or cannot eat.",
+   "note": "Write the answers down. Then help to make one of the favourites happen this week, even if all you do is ask for it on the shopping list. This is the same question you will ask guests later.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Put one thing on the table that nobody asked for.",
+   "note": "A jug of flowers or leaves from outside, a folded napkin at each place, a small bowl of lemon slices for the water. A candle is lovely, lit by a grown-up and kept away from sleeves. A table with something on it tells guests they were expected, and it need cost nothing.",
+   "ctx": "home",
+   "kind": "kindness"
+  },
+  {
+   "n": 6,
+   "test": "Invite one person who does not live with you to a meal at home, and ask what they cannot or do not eat.",
+   "note": "A friend, a neighbour, a grandparent, a colleague. \"Would you come for a meal on Friday? Is there anything you do not eat?\" Write the answer down. A child invites with a grown-up's say-so, and a friend's parent gets asked too.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 7,
+   "test": "Plan that meal on paper: what you will serve, what is already in the house, and what you still need.",
+   "note": "Keep it simple: one main dish, something green, something sweet or some fruit. Choose food you have made before. Cross off what you already have; the shopping list is what is left. A soup and bread is a proper meal.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 8,
+   "test": "Write the timings backwards from the moment you want to sit down.",
+   "note": "Sitting down at 6:30? The pasta goes in at 6:15, the water on at 6:00, the table is laid at 5:45, the pudding is made at 5:00. Start from the plates on the table and work back. Everything else is guessing.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Make one part of the meal the day before, so there is less to do on the day.",
+   "note": "A soup, a stew, a pudding, a salad dressing, a batch of biscuits. Most soups and stews taste as good or better the next day. Keep it in the fridge, covered.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "Host the meal: greet your guest at the door, sit down within ten minutes of the time you planned, and eat with them.",
+   "note": "Follow your backwards timings. Once the food is on the table, stay sitting; the washing up can wait. If something goes wrong, such as a burnt edge or a runny sauce, serve it with a smile and do not apologise more than once.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 11,
+   "test": "The day after, write down three things that went well and one thing to do differently next time.",
+   "note": "Was the timing right? Did you get to sit down? Was there too much food, or too little? Keep the note with your plan; it is the start of your own way of hosting.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Host a meal for three or four guests who do not all know each other, and introduce each one with something they share.",
+   "note": "\"Ana, this is Joe. You both walk by the river every morning.\" Plan it with the same paper plan and backwards timings. If you hosted two or three people in Meeting people, part two, this time the meal itself is planned and cooked.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 13,
+   "test": "During a meal, bring the quietest guest into the talk with one question that suits them.",
+   "note": "Something you already know they enjoy: \"Joe, how is the vegetable patch doing?\" Then let them answer fully before anybody else speaks. Watch for them again later in the evening.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 14,
+   "test": "Let a guest help with one job, and let them do it their way.",
+   "note": "Carrying plates, filling glasses, cutting the bread. Most people like to help and feel more at home when they do. Say thank you, and do not redo it after them.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 15,
+   "test": "Invite somebody round on the same day and feed them from what is already in the house.",
+   "note": "Pasta with a tin of tomatoes and an onion, eggs on toast, a pan of soup from the vegetables in the fridge. No shopping allowed. Tell them it is simple; it is the being asked that people remember.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 16,
+   "test": "Host a meal for six that costs no more than your household's food for a normal day.",
+   "note": "Beans, lentils, rice, potatoes, pasta, eggs and seasonal vegetables go a long way. Or ask each guest to bring one dish so the table is shared. Keep the receipt and add it up afterwards.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 17,
+   "test": "Plan a meal for eight or more with a reason to it, and send the invitations two weeks ahead.",
+   "note": "A birthday, a welcome for somebody new, a leaving, a finished exam, the first evening of a season. Say the reason in the invitation and ask what people do not eat. Paper plan, backwards timings and a day-before dish, as before. A child plans this with a grown-up.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 18,
+   "test": "Host that meal for eight or more, sit down with your guests, and send everybody home with something.",
+   "note": "A slice of cake wrapped in a napkin, a jar of soup, a cutting from a plant, a photo from the evening sent the next day. Borrow chairs and plates if you need to, or eat on blankets outside in good weather. This is the far end of the ladder.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

@@ -1,0 +1,111 @@
+{
+ "id": "care.welcome",
+ "name": "Welcoming",
+ "line": "From going to the door when a visitor arrives, to welcoming every new person to your group for four weeks running.",
+ "size": "weeks",
+ "strand": "be-useful-to-somebody",
+ "from": 7,
+ "who": "From about seven; a child and a grown-up side by side",
+ "about": "For everybody from about seven: a child and a grown-up can climb it side by side. It starts at your own front door (greeting a visitor, showing them where to sit, seeing them out) and then moves to a group you already belong to, where you notice the new person, tell them what nobody thinks to tell them, and remember their name the next time. It ends with you being the one who welcomes every new person to that group for four weeks. Being new is hard for almost everybody, and the person who made it easy is often remembered for years.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "The next time somebody visits your home, be the first to the door and say hello to them, by name if you know it.",
+   "note": "A grandparent, a friend, a neighbour, somebody coming to fix something. Open the door wide, smile, say \"Hello, come in.\" A child goes to the door with a grown-up, and only for somebody the family is expecting. If you already do this, do it on purpose and count it.",
+   "ctx": "with",
+   "kind": "kindness",
+   "mins": 2
+  },
+  {
+   "n": 2,
+   "test": "Take the visitor's coat or bag, show them where to sit, and offer them a drink.",
+   "note": "\"Can I take your coat? Sit here, it is the comfy one. Would you like tea, or a glass of water?\" Water is a perfectly good offer. A child can take the coat and show the seat while a grown-up makes the drink.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 3,
+   "test": "Before the next visitor comes, get the room ready: one clear seat, nothing on the floor to trip over, and a light on.",
+   "note": "Five minutes is enough. Move the pile off the chair, pick up the shoes by the door, open the curtains or put a lamp on. People feel expected when a seat is waiting for them.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "When the visitor leaves, walk them to the door, thank them for coming, and stay at the door until they have gone.",
+   "note": "\"Thank you for coming, it was lovely to see you.\" Wave them off down the path or to the lift. The end of a visit is remembered as much as the start.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 5,
+   "test": "In a group you already belong to, say hello to the next new person first and tell them your name.",
+   "note": "Your class, a club, a team, your work, a place of worship, a choir. \"Hello, I am Sam, is it your first time?\" Say it before they have had time to stand on their own. A child's group can be their class or their club.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 6,
+   "test": "Tell that new person the three things they need first: where to put their things, where the toilets are, and what happens next.",
+   "note": "\"Bags go on those hooks, the toilets are through there, and we start with a warm-up in five minutes.\" New people are often too shy to ask any of these. Three plain facts are a real kindness.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 7,
+   "test": "Stay with a new person who is on their own for the first ten minutes or the whole break.",
+   "note": "Sit beside them, stand with them, show them where the drinks are. You do not need to fill every silence; being next to them is the point. If your friends are waiting, bring the new person over to them.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 8,
+   "test": "Introduce the new person to one other member, with one thing the two of them share.",
+   "note": "\"This is Priya, she has just moved here. Tom, you moved last year too.\" Then stay a minute while they talk. If you did introductions in Meeting people, part two, this time it is a newcomer you are bringing in.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 9,
+   "test": "Tell a new person one unwritten rule of the group that nobody thinks to tell them.",
+   "note": "Where people usually sit, whether you bring your own cup, what everybody calls the leader, that the last ten minutes are for tidying up. To find one, think back to what you did not know on your own first day.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "The next time you see that new person, greet them by name and ask about one thing they told you.",
+   "note": "\"Hello Priya, did you find somewhere to park in the end?\" If you have forgotten their name, say so and ask again; that still counts. Being remembered is the moment a new person starts to feel part of a group.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Welcome a new neighbour with a short written note: your name, which door is yours, and one useful thing about the area.",
+   "note": "Which day the bins go out, where the nearest post box or food shop is, a good place for a walk. Knock and hand it over with a hello, or put it through the door. A child does this with a grown-up. If nobody new has moved near you, welcome the newest person in your building or street.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "Write one page for newcomers to your group: the practical things, the unwritten rules, and who to ask.",
+   "note": "Use what you learned on the last few rungs. Keep it to one side of paper, in short lines. Show it to the person who runs the group before anybody else sees it.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Ask the person who runs the group whether you can be the one who welcomes new people for the next four weeks.",
+   "note": "\"I would like to look after new people when they come, if that helps.\" Show them your page. If the group has no leader, just tell the others you will do it.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 14,
+   "test": "For four weeks, welcome every new person to the group: hello first, the page, somebody to sit with, and their name remembered the week after.",
+   "note": "Tick each person off on a note as you go. A week with nobody new still counts; be ready anyway. At the end of the four weeks, ask one of them what made it easier to come back.",
+   "ctx": "long",
+   "kind": "kindness"
+  }
+ ]
+}

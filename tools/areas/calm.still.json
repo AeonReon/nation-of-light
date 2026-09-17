@@ -1,0 +1,139 @@
+{
+ "id": "calm.still",
+ "name": "Sitting still",
+ "line": "From ten still minutes on a chair to thirty minutes every morning for thirty mornings running.",
+ "size": "months",
+ "strand": "look-after-yourself",
+ "from": 12,
+ "about": "For grown-ups and anybody from about twelve who has finished Stillness, part one, or who can already sit quietly for twenty minutes. Part one mixes stillness with gratitude and a hard thing first; this ladder is only the sitting, done for longer. It starts with how to sit so your body can stay put, then twenty minutes most days, then ways of sitting that many traditions use: feeling the breath at one spot, noticing when you are thinking, listening, and walking slowly between two sittings. It ends with thirty minutes every morning for thirty mornings running. If sitting quietly ever brings up something that feels like too much, open your eyes and stop; stopping is allowed, and talking to somebody you trust is a good next step.",
+ "who": "Grown-ups and anybody from about twelve, after part one",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Set a timer for ten minutes, sit on a chair with both feet flat on the floor, and stay still until it rings.",
+   "note": "Sit a little forward so your back holds itself up, hands resting on your thighs, eyes closed or looking at the floor. If you finished Stillness, part one, this will feel easy: do it on purpose today and count it. If you have never sat still on purpose before, start with part one instead.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 10
+  },
+  {
+   "n": 2,
+   "test": "Find a way of sitting you can keep without moving, and sit that way for twenty minutes.",
+   "note": "Try three: a chair as in rung one, cross-legged on a firm cushion or folded blanket, or kneeling with a cushion between your heels. Pick the one where nothing hurts after twenty minutes. A sharp or growing pain means move gently; this is never about putting up with pain, and a chair with a back is fine for anybody with a bad back or knees.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 3,
+   "test": "Sit for twenty minutes at the same time and in the same place on five days in one week.",
+   "note": "For example seven in the morning, on the same chair, before you look at your phone. The same time and place make it easier to begin because you do not have to decide each day. If a day is missed, add another day; the five do not have to be in a row.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Sit for twenty minutes feeling your breath at one spot only, the nostrils or the belly, and go back to that spot whenever you drift.",
+   "note": "At the nostrils it feels like a cool touch coming in and a warmer one going out; at the belly it is a rise and fall. Do not change the breath, just feel it. Coming back a hundred times is not doing it badly; the coming back is the practice.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Sit for twenty minutes, and each time you notice you are thinking, say \"thinking\" silently once and go back to the breath.",
+   "note": "This way of noting is taught in some Buddhist traditions, and anybody can use it. It does not matter what the thought was: a shopping list, an argument, a song. One quiet word, then back to the breath.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Sit for twenty minutes, and when an itch or an urge to move comes, wait three breaths before you move.",
+   "note": "Often the itch fades in those three breaths, and sometimes it does not; either is fine, and after three breaths you may move slowly. This is only for itches and restlessness. Pain, numbness or pins and needles are a reason to shift straight away.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Sit for twenty-five minutes.",
+   "note": "Same seat, same way of sitting, a timer so you are not the one watching the clock. The last five minutes are often where the wish to get up is strongest. Notice it, stay with the breath, and let the timer end it.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Sit for twenty minutes listening, letting each sound come and go without naming it.",
+   "note": "A fridge humming, a car going past, birds, wind, somebody in the next room. You do not need a quiet place for this; the sounds are what you sit with. When you catch yourself thinking about a sound, come back to just hearing.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Sit for twenty minutes somewhere with ordinary noise and people around you.",
+   "note": "A bench in a park, a library, a waiting room, a café with a drink. Eyes open and resting on the ground a little ahead of you works better in public. If you cannot go out, sit at home by an open window or with the radio on quietly in the next room.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Sit for thirty minutes, once.",
+   "note": "Choose a time nobody will need you and tell the people you live with. Use whichever way of sitting and whichever method, breath or listening, worked best for you. If you have to move once, move slowly and carry on.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Sit for twenty minutes every morning for fourteen mornings running.",
+   "note": "Before the phone, before breakfast if you can. If a morning is missed, sit that evening and carry on the next morning; start the count again only if two days in a row are missed. If you already sit every morning, do this fortnight on purpose and count it.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "On a morning you do not want to sit, sit for twenty minutes anyway, then write one line about how it went.",
+   "note": "Tired, busy, in a bad mood: those are the mornings this rung is for. The line can be as plain as \"restless the whole time, still did it\". This is for an ordinary reluctant morning; if you are ill or something hard has happened, rest is the right choice today.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 13,
+   "test": "Walk very slowly for ten minutes, feeling each foot lift, move and touch the floor.",
+   "note": "Walk across a room and back, or along a hallway, about one step every two breaths, hands held loosely in front or behind you. Many traditions that sit for a long time also walk slowly like this between sittings. A garden path or a quiet yard works just as well.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 14,
+   "test": "Sit for twenty minutes, walk slowly for ten, then sit for twenty more.",
+   "note": "Fifty minutes in all, with the walking in the middle so your legs get a rest without the quiet ending. Keep your eyes down and do not pick up the phone between the parts. Set the timer again for each part.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 15,
+   "test": "Sit for thirty minutes every morning for seven mornings running.",
+   "note": "Getting up ten minutes earlier is usually the easiest way to find the extra time. Same seat and time as before. If a morning is missed, start the seven again; there is no hurry.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 16,
+   "test": "Sit for forty-five minutes in one go, once.",
+   "note": "A free morning suits this. Water first, a toilet visit first, the timer set, the people you live with told. If you must move, move slowly once and carry on; forty-five minutes with one slow move still counts.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 17,
+   "test": "Lead five minutes of quiet sitting for your family or a group: tell them how to sit, start the timer, and end it.",
+   "note": "Keep it simple: \"Sit comfortably, feet on the floor, eyes closed or looking down. Feel your breathing. When your mind wanders, come back to the breath. I will ring when five minutes are up.\" A phone timer or a gentle bell. Children are welcome to join; five minutes is plenty for them.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 18,
+   "test": "Sit for thirty minutes every morning for thirty mornings running.",
+   "note": "This is the end of the ladder. Keep a simple tick on a calendar by the seat; a missed morning can be made up that evening, but two missed in a row starts the count again. At the end, write a few lines about what, if anything, is different about your mornings.",
+   "ctx": "long",
+   "kind": "attention"
+  }
+ ]
+}

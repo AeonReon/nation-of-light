@@ -1,0 +1,158 @@
+{
+ "id": "speak.stage",
+ "name": "Standing up in front of people",
+ "line": "From reading one page aloud in an empty room, to a fifteen-minute talk to thirty people, with questions at the end.",
+ "size": "months",
+ "strand": "say-what-you-mean",
+ "from": 8,
+ "who": "From about eight; a grown-up arranges a child's audiences",
+ "about": "For anybody from about eight, and for grown-ups; for a child the audiences are family, class and club, and a grown-up arranges the later rungs. This is prepared speaking: a talk you have written and practised, given to people sitting and listening. It starts with reading one page aloud to an empty room, then to one or two people, then a one-minute talk from a card. In the middle it builds a five-minute talk with a real opening, pauses, a voice that reaches the back, and a way to carry on when something goes wrong. It ends with a fifteen-minute talk to thirty people, with questions at the end.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Read one page of a book aloud, standing up, in an empty room, slowly enough that every word is clear.",
+   "note": "Any page of any book: a story, a recipe, a newspaper article. Nerves make everybody speed up, so read slower than feels right. If you read aloud often, read standing today and count it.",
+   "ctx": "room",
+   "kind": "courage",
+   "mins": 3
+  },
+  {
+   "n": 2,
+   "test": "Record yourself reading the same page on a phone, listen back once, and write down one thing to change.",
+   "note": "Too fast, too quiet, dropping the ends of sentences, a voice that stays on one note. Most people dislike their recorded voice at first; listen for the one thing, not the sound of it. With no phone, read it to somebody and ask them for the one thing instead.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Read a page aloud, standing, to one or two people at home, fixing the thing you wrote down.",
+   "note": "A partner, a parent, a child, a grandparent on a video call. Ask them afterwards whether they heard every word.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 4,
+   "test": "Read aloud to somebody standing still, feet apart, hands resting, and ask them to tell you each time you move.",
+   "note": "Swaying, shifting from foot to foot and fiddling with hands all make people watch you move instead of listening. Hold the page in one hand if you need to. Standing still feels strange at first and looks calm from the outside.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Choose a subject you know well, and write three points about it on a small card.",
+   "note": "How to look after a dog, the best walk near you, how your job works, a game you love, a trip you took. Three short points, a few words each, big enough to read at arm's length. The back of an envelope works as well as a card.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Talk for one minute from your card, standing, to an empty room, with a timer.",
+   "note": "Say each point and give one example for it. If you finish early, add another example; if you run over, cut. Do it three times.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Give that one-minute talk to one or two people, looking at each of them in turn.",
+   "note": "Look at one person for a sentence, then the next. Glance at the card only between points. Ask them what they remember; it tells you which point they took in.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 8,
+   "test": "Write a first sentence for your talk that is not \"Hello, my name is\", and a last sentence that ends it clearly.",
+   "note": "Start with a question (\"Who here has ever been lost?\"), a surprising fact, or a very short story. End with the one thing you want people to remember, then \"Thank you.\" Write both out in full; they are the two sentences worth learning by heart.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Give a two-minute talk to three or more people, with your new first and last sentences.",
+   "note": "Family after a meal, friends, a few people at a club. Stand where everybody can see you. Say your first sentence, then look up before you go on.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 10,
+   "test": "In a talk, leave a pause of three full seconds after your most important sentence.",
+   "note": "Count three in your head. It will feel far too long to you and sound right to them. The pause is what tells listeners that sentence mattered. Give the two-minute talk again with the pause in it.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "In a hall or a big room, speak until a person standing against the far wall hears every word without you shouting.",
+   "note": "A school hall, a church hall, a community centre, a large room at home with the doors open, or outdoors across a garden. Breathe in low, stand tall, and aim your voice at the back wall, not the floor. Ask them to put a hand up if a word goes missing.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 12,
+   "test": "Read something aloud to a group outside your home.",
+   "note": "A reading at a club or a place of worship, a story to younger children at a library session, a poem at a class, a notice at a meeting. Use everything so far: slow, still, heard at the back, a pause. Ask the person running it beforehand whether you may.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 13,
+   "test": "Plan a five-minute talk on paper, then practise it aloud three times, timing each one.",
+   "note": "Pick a subject you know or want to find out about. Aim for about five minutes; people nearly always run long on the day. Put your three points on one card.",
+   "how": [
+    "An opening sentence.",
+    "Three points, each with one example.",
+    "A closing sentence, then thank you."
+   ],
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Practise the five-minute talk with somebody who interrupts you on purpose twice, and carry on each time from where you stopped.",
+   "note": "They drop a book, their phone rings, or they ask \"sorry, what?\" in the middle of a sentence. Pause, glance at your card, and pick up the sentence you were in. Something going a bit wrong happens at almost every real talk, and practising it takes most of the fear away.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 15,
+   "test": "Give the five-minute talk to five or more people, then take questions for two minutes.",
+   "note": "Before the talk, write the three questions you are most likely to be asked and a short answer to each. Repeat each question out loud before you answer, so everybody hears it. Keep answers short.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 16,
+   "test": "Ask two people from that audience for one thing that worked and one thing to change, and make the change in your notes.",
+   "note": "\"What is one thing that worked, and one thing I should change?\" Write down both answers exactly, without arguing. Change your talk before you give it again.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 17,
+   "test": "Offer a ten-minute talk to a group that has meetings, and fix a date.",
+   "note": "A club, a class, a youth group, a care home's afternoon, a local history society, a team meeting at work, a school assembly for a child with their teacher's say-so. Say what the talk is about in one sentence. If the first says no, ask the next.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 18,
+   "test": "Give a ten-minute talk to fifteen or more people, with one card of notes, and take questions.",
+   "note": "Extend your five-minute talk or write a new one, and practise it aloud three times first. Arrive early and stand where you will speak before anybody comes in. Use the interruption practice if anything goes wrong.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 19,
+   "test": "Plan a fifteen-minute talk, practise it aloud three times, and give it once to two or three people at home.",
+   "note": "Use the changes from rung sixteen and what you learned at rung eighteen. Time every practice. Ask your home audience where it felt slow, and cut there.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 20,
+   "test": "Give a fifteen-minute talk to thirty or more people, with one card of notes, and take questions at the end.",
+   "note": "The group from rung seventeen may invite you back, or offer the talk to a bigger one: an assembly, a society meeting, a larger club night. That is the far end of this ladder: a room of thirty listening to you, and you able to answer what they ask.",
+   "ctx": "with",
+   "kind": "courage"
+  }
+ ]
+}

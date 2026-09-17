@@ -1,0 +1,125 @@
+{
+ "id": "classic.think",
+ "name": "Thinking on your own",
+ "line": "From five minutes with one question to twelve weekly pages of your own thinking, read back and written about.",
+ "size": "months",
+ "strand": "look-after-yourself",
+ "from": 10,
+ "about": "For grown-ups and anybody from about ten who can write a page. It starts with five minutes on one question with no screen, then ten minutes and three written sentences, then a walk with the phone left behind. Next you learn to write down what you think before you look anything up, to read somebody else on the same question, and to change your mind on paper. A thinking notebook starts in the middle, one page a week, and the ladder ends when it holds twelve pages that you read back and write about. Working out what you think before you hear what everybody else thinks is harder than it sounds, and it gets easier with practice.",
+ "who": "Grown-ups and anybody from about ten",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Pick one question, set a timer for five minutes, think about it with no screen, then say out loud what you think.",
+   "note": "Any question with more than one answer: \"Should children get pocket money?\", \"Is it better to have a few close friends or lots of friends?\", \"What would make our street a nicer place?\", \"What would I do with a whole free Saturday?\". Sit or stand anywhere, phone out of reach. Say your answer to yourself or to whoever is there.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Think about one question for ten minutes, then write three sentences: what you think, why, and what might change your mind.",
+   "note": "Pen and paper, no screen. The third sentence is the useful one: \"I would think differently if I found out that most people who tried it were unhappy.\" A child can say the three sentences for a grown-up to write.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Go for a twenty-minute walk with no phone, thinking about one question, and say or write what you worked out when you get back.",
+   "note": "Choose the question before you leave. Take a route you know. If you need a phone for safety, take it switched to silent in a bag and do not look at it; a child walks with a grown-up or on a route the family has agreed. If you cannot go out, walk slowly up and down a room or garden.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Before you look anything up about a question, write down what you already think; then look it up and mark what you got right and wrong.",
+   "note": "For example: \"Why do leaves change colour in autumn?\", \"How does a fridge keep things cold?\", \"Why do some countries drive on the left?\". Find out what you think before you find out what everybody else thinks; it is much harder afterwards. Getting things wrong on this rung is fine, and usually interesting.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Write a whole page by hand on what you think about one question, without looking anything up.",
+   "note": "One side of paper is enough. Example questions: \"Should everybody learn to cook?\", \"What makes a good neighbour?\", \"Is it ever right to break a rule?\". Do not tidy it up; the point is to see what you actually think.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Read one thing somebody else has written on the same question, then add three lines to your page: where you agree, where you do not, and one thing you had not thought of.",
+   "note": "An article, a chapter of a book, a letter to a newspaper, or ask somebody older to write you a paragraph. Read it slowly. Add your three lines under your own page, so you can see both.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Write down one idea about the world you have repeated many times, then write the best reasons for it and against it.",
+   "note": "Ideas like \"things were better in the past\", \"people are more selfish than they used to be\", \"the expensive one is always better\" or \"you need a degree to do well\". Two columns on a page, three reasons in each if you can. You do not have to decide at the end.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Start a thinking notebook and write one page in it each week, on a different question, for four weeks.",
+   "note": "Any notebook or a stack of paper in a folder, with the date at the top of each page. Keep a list of questions at the back to choose from: things you wondered about, overheard or argued about. The pages from this rung onward count towards the twelve at the end of the ladder.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Find one place in your notebook where you now think you were wrong, cross it out neatly, and write what changed your mind.",
+   "note": "Something you read, somebody you talked to, or just thinking about it longer. \"I wrote that dogs are easier than cats. My aunt has both and says the opposite, because cats do not need walking.\" Changing your mind for a good reason is part of thinking well.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 10,
+   "test": "Sit for twenty minutes with one question, a pen and paper, and nothing else.",
+   "note": "Write only when something new comes; long gaps with nothing written are normal. If your mind drifts, read the question again. A question you care about works best, for example a choice coming up in your own life.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Spend one hour of free time with no screen and nothing planned, then write down what you ended up thinking about.",
+   "note": "Sit in a chair, lie on the grass, look out of a window. The first twenty minutes often feel restless and slow; notice that and stay. Afterwards, list the things that went through your head, even the small ones.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "Choose one practical thing you have been avoiding thinking about, write it down, and write one small next step.",
+   "note": "Something practical: a form, a decision about a course, a conversation that needs having, a plan for the holidays, a cupboard of paperwork. Keep painful things like a loss for a time when you have somebody to talk them through with; this rung does not need them. The next step should be small enough to do this week.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 13,
+   "test": "Make one decision you have been putting off by writing the choices, what each would likely lead to, and what you chose and why.",
+   "note": "A small or middle-sized decision: which club to join, whether to change a routine, which of two things to save for. Two or three choices, a few lines each. Then write the decision and act on it or tell somebody.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 14,
+   "test": "Tell one person, calmly, something you think that most people around you do not, and give your reason.",
+   "note": "Something ordinary, not something to start a row: \"I think we should eat together more\", \"I think the park is better in the rain\". Say it once, give the reason, and then listen to their answer properly. You do not need them to agree.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 15,
+   "test": "Spend one whole day using screens only for calls and what work or school needs, and write a page that evening.",
+   "note": "Tell the people you live or work with the day before. Put the television remote and the tablet in a drawer. In the evening, write a notebook page on anything the quiet day gave you time to think about.",
+   "ctx": "long",
+   "kind": "courage"
+  },
+  {
+   "n": 16,
+   "test": "Reach twelve weekly pages in your thinking notebook, read all twelve back in one sitting, and write one more page on how your thinking changed.",
+   "note": "This is the end of the ladder, about three months after you started the notebook. Notice which questions you kept coming back to and where you changed your mind. The last page can start: \"Three months ago I thought ..., and now I think ...\".",
+   "ctx": "long",
+   "kind": "attention"
+  }
+ ]
+}

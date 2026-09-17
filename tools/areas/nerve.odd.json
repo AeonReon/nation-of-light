@@ -1,0 +1,96 @@
+{
+ "id": "nerve.odd",
+ "name": "Not minding what people think",
+ "line": "From humming a tune as you walk past people, to a month of the harmless thing you had put off because of what people might think.",
+ "size": "weeks",
+ "strand": "look-after-yourself",
+ "who": "Everybody; a child and a grown-up side by side",
+ "about": "For everybody: a child and a grown-up can climb it side by side, and it is especially good for teenagers. Every rung is harmless, kind and cheerful, and something people might look at. It starts small, with humming as you walk and stopping to look properly at something, then wearing what you like, singing outdoors, playing in a park, drawing in public, and being the first to clap, cheer and dance. It ends with a month of the one harmless thing you have put off only because of what people might think. Nothing on this ladder frightens anybody, gets in anybody's way or makes fun of anybody, and if it would embarrass the person you are with, do it another day on your own.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Hum a tune while you walk somewhere with other people about.",
+   "note": "Down a street, through a shop, along a park path. Loud enough that somebody passing might hear, not so loud that it bothers anybody. If you hum all the time already, do it on purpose today and count it.",
+   "ctx": "out",
+   "kind": "courage",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "In a busy place, stop and look properly at one thing people walk past, for two full minutes.",
+   "note": "A carving over a door, the top of an old building, a flower growing out of a wall, a spider's web, clouds. Stand to one side so nobody has to walk round you. People may look to see what you are looking at, and some will stop too.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Wear something you like but usually leave at home, for a whole day out.",
+   "note": "A bright colour, a hat, a scarf you love, odd socks, a badge. Use what you already have; nothing needs buying. Notice how few people notice.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 4,
+   "test": "Sing a whole song out loud, at an ordinary volume, outdoors where a few people might hear.",
+   "note": "On a park path, in your garden, on a beach, walking along a quiet road. Not in a quiet place like a library, and not right beside somebody. A child and a grown-up can sing it together.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 5,
+   "test": "In a park, do something playful that people your age do not usually do, for five minutes.",
+   "note": "A grown-up rolls down a grassy slope, skips along a path, or plays on a climbing frame in a park where grown-ups are allowed; a teenager plays hopscotch or a game of tag with younger children in the family. Only where it is allowed and safe, and never take a swing or a slide a child is waiting for.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 6,
+   "test": "Sit in a public place and draw what is in front of you for twenty minutes, letting people look.",
+   "note": "A building, a tree, a boat, people's shoes at a bus stop. A pencil and any paper will do. If somebody looks over your shoulder, say hello and carry on; how good it looks does not matter.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 7,
+   "test": "At the end of something, be the first to clap, clearly and warmly.",
+   "note": "A busker's song, a school concert, a talk, a street performer, a friend's football match. Start as soon as it ends. Others usually join in within a second, and the person who performed will notice.",
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 8,
+   "test": "Cheer out loud for people you do not know at a race, a parade or a match.",
+   "note": "A local fun run, a charity walk, a children's sports day, a cycling race passing through. Shout the numbers or names on their shirts: \"Keep going, number 42!\" Runners say it helps.",
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 9,
+   "test": "Dance where people can see you, when others are dancing too.",
+   "note": "At a wedding, a party, a festival, a street fair, next to a busker playing a good tune, in the kitchen with the family and the window open. Any dancing counts; nobody is judging the steps.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 10,
+   "test": "Be the first to join in when a dance, a song or a game is started for everybody.",
+   "note": "The first onto an empty dance floor, the first to join a community sing, the first to try the game at a fair. Somebody has to go first, and the rest follow faster than you think. If you are with a friend, take their hand and go together.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 11,
+   "test": "Write down three harmless things you would do if nobody ever looked, and do the smallest one this week.",
+   "note": "Learning to ride a bike as a grown-up, running in the streets, swimming, singing in a choir, practising an instrument with the window open, going to a class people think you are too old or too young for. Only things that are kind and safe. Do the smallest one once.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "Do the biggest thing on your list at least once a week for a month.",
+   "note": "Four times, on four different weeks. If it needs money, choose the free version: running outside instead of a gym, a library class instead of a paid one, a borrowed bike. That is the far end of this ladder: the thing you once put off because of other people is now part of your week.",
+   "ctx": "long",
+   "kind": "courage"
+  }
+ ]
+}

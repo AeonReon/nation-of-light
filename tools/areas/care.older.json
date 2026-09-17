@@ -1,0 +1,139 @@
+{
+ "id": "care.older",
+ "name": "Older people",
+ "line": "From one phone call to an older person, to visiting or phoning the same person every week for twelve weeks.",
+ "size": "months",
+ "strand": "be-useful-to-somebody",
+ "from": 8,
+ "who": "From about eight; a child and a grown-up side by side",
+ "about": "For everybody from about eight: a child and a grown-up can climb it together, and a child visits with a grown-up. You start with one phone call to an older person you already know (a grandparent, an older relative or neighbour) and let them talk. The rungs go from asking about their life, to small practical jobs, to visits, learning something from them, taking them out, and writing down one of their stories. It ends with twelve weeks of visiting or phoning the same person every week. A regular visitor can be the part of the week an older person looks forward to most, and the visitor hears a lifetime of stories.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Phone an older person you know, just to ask how they are, and let them do most of the talking.",
+   "note": "A grandparent, a great-aunt, an older neighbour, somebody older from your place of worship or a club. Say \"I was thinking of you and wanted to see how you are.\" Ask one more question about whatever they tell you. If you do not have their number, ask somebody in the family for it.",
+   "ctx": "with",
+   "kind": "kindness",
+   "mins": 10
+  },
+  {
+   "n": 2,
+   "test": "Ask an older person what an ordinary day was like when they were your age, and listen to the whole answer.",
+   "note": "What time they got up, what they ate, how they got to school or work, what they did in the evening. Let them wander off the question; that is often where the best part is. A phone call counts.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Ask them what work they did, and what one ordinary day of that work was like.",
+   "note": "Not just the name of the job: what they did with their hands, who they worked with, what was hard. If they looked after a home and a family, ask about that; it was a full day of work too.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Do one practical job for an older neighbour or relative, after asking what would help.",
+   "note": "Putting the bins out, carrying a heavy bag in, changing a bulb, reaching a high shelf, fetching a paper. Ask first, and do it their way. A child does jobs like these with a grown-up there, and never climbs anything.",
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 5,
+   "test": "Visit an older person in person and stay for half an hour.",
+   "note": "Arrange it first so they are expecting you. Sit down, accept the cup of tea if they offer, and leave your phone in your pocket. A child visits with a grown-up.",
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 6,
+   "test": "Ask them to show you one old photograph and tell you about it.",
+   "note": "Who is in it, where it was, what happened that day, who took it. If they have no photographs to hand, ask them to describe the house they grew up in, room by room.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Ask what the place where they grew up was like when they were young, and write down three things they tell you afterwards.",
+   "note": "The shops, the games children played, what was built where, what things cost. Write the three things down the same day, before you forget. Keep the paper: it is the start of rung fourteen.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Visit or phone the same person again within a week, and ask about something they told you last time.",
+   "note": "\"You said your father kept pigeons. What happened to them?\" Remembering what somebody said is one of the kindest things you can do for them.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 9,
+   "test": "Ask them to teach you one thing they know how to do, and learn it from them.",
+   "note": "A recipe, a card game, a song, a knot, how to darn a sock, how to grow tomatoes. Older people are often asked for nothing; being asked to teach is a real gift. Do it back to them before you leave.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 10,
+   "test": "Show them how to do one thing they want to do on a phone or computer, and let them press every button themselves.",
+   "note": "Making a video call, making the text bigger, sending a photo, setting an alarm. Keep your hands off the phone and say one step at a time. Write the steps on paper for them to keep.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 11,
+   "test": "Bring them something you made or grew.",
+   "note": "A few biscuits, a jar of soup, a plant grown from a cutting, a drawing, a card with a letter inside. It costs nothing that matters: a drawing or a letter is as welcome as a cake. Check first whether they have any foods they cannot eat.",
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 12,
+   "test": "Visit or phone the same person every week for four weeks, and mark each one on a calendar.",
+   "note": "Pick the same day and roughly the same time, so they can look forward to it. If you miss a week, ring to say so and go the next day.",
+   "ctx": "long",
+   "kind": "kindness"
+  },
+  {
+   "n": 13,
+   "test": "Take them out somewhere they would like to go, at their pace.",
+   "note": "A café, a park bench, a garden, a market, the seaside, a walk round the block. Ask where they would like to go. Check where the seats and toilets are before you set off, and bring a coat for them in case the weather turns.",
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 14,
+   "test": "Write down one story from their life in their own words, read it back to them, and give them a copy.",
+   "note": "Ask them to tell one story again: how they met somebody, the day something big happened, a job they were proud of. Write it or record it on your phone, then write it out. A copy for them and one for their family is a gift that lasts.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 15,
+   "test": "If they want to talk about somebody they loved who has died, ask about that person and listen for as long as they want.",
+   "note": "Ask \"What was she like?\" or \"How did you meet?\" Many older people rarely get to say the name of somebody they miss. Never press: if they change the subject, go with them.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 16,
+   "test": "Bring one other person with you on a visit, and help the two of them get talking.",
+   "note": "A child, a teenager, a friend, somebody of a very different age from them. Before you arrive, tell the new person one thing to ask about, like the pigeons or the old job.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 17,
+   "test": "Invite an older person who lives on their own to join you for a meal or a family gathering.",
+   "note": "A weekend meal, a birthday, a picnic in the park. Offer a lift or to walk with them, and say what time you will bring them home. A child invites with a grown-up, to the grown-up's home.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 18,
+   "test": "Keep visiting or phoning the same person every week until you reach twelve weeks.",
+   "note": "Carry on from the four weeks on rung twelve and keep marking the calendar. By now you will know what they like to talk about and they will know you. If they move into care or hospital, keep going there.",
+   "ctx": "long",
+   "kind": "kindness"
+  }
+ ]
+}

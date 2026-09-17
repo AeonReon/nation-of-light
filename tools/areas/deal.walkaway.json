@@ -1,0 +1,97 @@
+{
+ "id": "deal.walkaway",
+ "name": "Being willing to walk away",
+ "line": "From spotting the words that try to hurry you to saying no to something you really wanted because the price or terms were past your limit.",
+ "size": "weeks",
+ "strand": "look-after-yourself",
+ "who": "Grown-ups and anybody from about ten",
+ "about": "For grown-ups and anybody from about ten; a child does the shop rungs with their own pocket money and a grown-up nearby. It starts with noticing the signs and words that try to make you decide fast, then writing your limit and your other option before you buy. Then you practise leaving: an online basket left overnight, a shop left with \"I will think about it\", a decision left until the next day, an extra at the till turned down. It ends with saying no to something you really wanted, because it was past your limit, and looking back on it a week later. Being ready to say no is what keeps every other deal honest and calm.",
+ "from": 10,
+ "steps": [
+  {
+   "n": 1,
+   "test": "Find three signs, adverts or emails that try to make you buy quickly, and write down their exact words.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "\"Only two left.\" \"Offer ends tonight.\" A clock counting down on a website. A child can hunt for these with a grown-up in a shop or on a screen. Once you have seen them written down, they are easier to spot.",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Before you next buy something, write down the most you will pay for it.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "A second-hand game, a coat, a bike, a used car. Write the number on paper or in your phone before you look at any price tag. The number is yours to keep to."
+  },
+  {
+   "n": 3,
+   "test": "For that same thing, write down what you will do instead if you cannot get it at your price.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Buy it somewhere else, wait for a second-hand one, borrow one, save for another month, or do without. Having another option written down is what makes saying no possible."
+  },
+  {
+   "n": 4,
+   "test": "Put something in an online basket and leave it there overnight before you decide.",
+   "ctx": "room",
+   "kind": "courage",
+   "note": "Close the page. In the morning, decide with a clear head whether you still want it at that price. Both answers count; the rung is waiting."
+  },
+  {
+   "n": 5,
+   "test": "In a shop, say \"I will think about it\", and leave without buying.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "Choose something you are not yet sure about, and really think about it once you are home. Say it kindly and say thank you. A child does this with a grown-up nearby."
+  },
+  {
+   "n": 6,
+   "test": "When somebody wants an answer today, tell them you will decide tomorrow, and then decide tomorrow.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "A salesperson on the phone, a club asking you to sign up, a friend selling something. \"I do not decide on the same day; I will tell you tomorrow.\" A fair offer is usually still there the next day, and if it is not, that tells you something too."
+  },
+  {
+   "n": 7,
+   "test": "When a price is over the limit you wrote down, say \"That is more than I want to spend, thank you\", and leave.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "At a market stall, a second-hand sale, a shop. Say it only when it is true. If they come down to your limit, you may buy it; if they do not, you go, and stay friendly."
+  },
+  {
+   "n": 8,
+   "test": "Turn down an extra you are offered at the till or at an online checkout.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "Extended warranty, insurance for a small item, a bigger size of drink, a membership card with a fee. \"No, thank you\" is a whole sentence. If you had already decided you wanted it, it does not count; pick the next one."
+  },
+  {
+   "n": 9,
+   "test": "The next time you notice yourself hurrying to buy something, put it down and walk around for ten minutes before you decide.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "Hurry often feels like a racing heart, a quick \"just get it\", or not reading the price. Ten minutes away is enough to know whether you still want it. A child can take the ten minutes with a grown-up."
+  },
+  {
+   "n": 10,
+   "test": "Say no to something you could afford but do not need.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "A third pair of shoes, a gadget, a treat at the till. Hold it, think about it, and put it back. Nobody else has to know."
+  },
+  {
+   "n": 11,
+   "test": "Stop offering or bidding when the price goes past your limit, even if somebody else then gets it.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "An online auction, a second-hand listing with several people interested, a sale where people make offers. Write your limit before it starts. A child does this with a grown-up and the grown-up's account."
+  },
+  {
+   "n": 12,
+   "test": "Say no to something you really wanted because the price or the terms were past your limit, and a week later write down how you feel about it.",
+   "ctx": "long",
+   "kind": "courage",
+   "note": "A car, a holiday, a phone, a flat, a bike you wanted very much. Say no kindly and leave. After a week, write a few lines: what you did instead and whether you are glad. That is the far end of this ladder."
+  }
+ ]
+}

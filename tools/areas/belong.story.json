@@ -1,0 +1,139 @@
+{
+ "id": "belong.story",
+ "name": "The story you tell yourself",
+ "line": "From writing down one \"not for people like me\" to doing three of them and telling somebody what really happened.",
+ "size": "months",
+ "strand": "look-after-yourself",
+ "from": 13,
+ "about": "For grown-ups and teenagers. Most of us have places and activities we have quietly decided are \"not for people like me\": a gallery, a gym, a smart hotel lobby, a running club, a lecture. This ladder starts by writing one of them down, with exactly what you think would happen there and the words you say to yourself about it. Then you find out the facts, go, and write what really happened under what you predicted; then a second one, a weekly habit, and a person who does it. It ends when you have done three things from your list and told somebody the old story and what really happened. Pick ordinary, safe things; a fear that is strong or linked to something that hurt you is better talked through with somebody you trust than tested here.",
+ "who": "Grown-ups and teenagers",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Write down one place or activity you have decided is \"not for people like me\".",
+   "note": "Ordinary, safe and legal: an art gallery, a golf club open day, a smart hotel for a coffee, a gym, a dance class, a public lecture at a university, a theatre, a running club, a big library. Pick something you would quite like to try if the thought were not there. One is enough.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 3
+  },
+  {
+   "n": 2,
+   "test": "Under it, write exactly what you think would happen if you went there, and keep the paper.",
+   "note": "Be specific: \"People would stare when I walked in\", \"I would not know where to go or what to do\", \"It would cost more than I have\", \"Everyone would already know each other\". Put the date on it. You will need this page later.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Write down, word for word, the sentence you say to yourself about it.",
+   "note": "The exact words, even if they sound blunt: \"People like me don't go there\", \"I would look stupid\", \"That is for rich people\", \"I am too old for that\". Seeing the sentence on paper is different from hearing it in your head.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Write where you think that sentence first came from, if you know.",
+   "note": "Something a parent, teacher or friend said, somewhere you felt out of place once, a film, or nowhere you can remember. This is not about blaming anybody; they may have been trying to protect you. \"I don't know\" is a fine answer.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "For one day, write down every time a thought stops you doing something, with the exact words of the thought.",
+   "note": "Carry a scrap of paper or use a note on your phone. Small things count: not asking a question in a shop, not joining in a conversation, not trying on a colour. Look at the list in the evening and notice any sentences that repeat.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Next to your prediction from rung two, write the evidence you have for it and the evidence against it.",
+   "note": "Evidence means something that actually happened or that you know for certain, not a feeling. \"I went to a gallery once as a child and got told off for touching\" is evidence of something; \"I just know\" is not. Often the against column is empty only because you have never checked.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Find out three facts about the place before you go: when it is open, what it costs, and what people do or wear there.",
+   "note": "Its website, a phone call, or asking somebody who has been. Many galleries, museums, libraries and lectures are free; many clubs and classes offer a free first visit. If a visit would cost more than a normal household can spare, pick a free thing from your list instead.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Go to the place, or do the activity, once, and stay for at least fifteen minutes.",
+   "note": "Go alone or with one friend. In a hotel or café, a glass of water or the cheapest drink is enough; in a gallery, look at three things properly. If you feel very uneasy, notice it and stay for the fifteen minutes; if you ever feel unsafe, leave.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 9,
+   "test": "Under your prediction, write down what actually happened.",
+   "note": "The same day if you can, while you remember. Go line by line: did people stare, did you know what to do, did it cost what you thought? Write the surprises as well as anything that was as you expected.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Write a new sentence about that place that is true now, and say it out loud.",
+   "note": "Not a slogan, just what is true: \"I went to the gallery, nobody looked twice, and I liked the big room upstairs.\" Say it out loud once. Keep it on the same page as the old sentence.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 11,
+   "test": "Pick a second \"not for me\" from your list, write down your prediction, go, and write what actually happened.",
+   "note": "Choose one a little bigger than the first: a class instead of a visit, or staying an hour instead of fifteen minutes. Same method: prediction and date first, facts found out, go, then what happened.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "Write down one thing you were right to be careful about, and one thing you were wrong about.",
+   "note": "Being careful is sometimes right: a place really was expensive, or a class really was for a higher level. This ladder is about checking, not about ignoring every warning. Both lines are useful.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 13,
+   "test": "Find somebody who does the thing you thought was not for people like you, and read or listen to how they started.",
+   "note": "An interview, a short biography, a club's page about its members, a talk online. Look for somebody whose start looks like yours: late, nervous, with no money or no family who did it. Write down one thing they did at the beginning.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 14,
+   "test": "Ask one person who does it how they got started.",
+   "note": "Somebody at the club, the person at the gallery desk, a friend of a friend, a colleague. \"I am thinking of trying this; how did you start?\" is enough. Listen to the whole answer and say thank you.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 15,
+   "test": "Go to one place from your list every week for four weeks.",
+   "note": "The same place each week, or a different one; both work. Put it in your calendar like any other appointment. By the third week, notice whether the old sentence still turns up and how loud it is.",
+   "ctx": "long",
+   "kind": "courage"
+  },
+  {
+   "n": 16,
+   "test": "Tell one person something you want to do that the old story said you could not.",
+   "note": "A friend, a partner, a parent, a colleague. Say it plainly: \"I want to join the choir\", \"I want to go to the lecture series at the university\". You are not asking permission, just saying it out loud to somebody.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 17,
+   "test": "Do a third thing from your list, bigger than the first two.",
+   "note": "Join the class for a term, book the concert, enter a charity run, go to the members' evening. Same method: prediction first, then go, then what happened written underneath. If it costs money, choose the free version.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 18,
+   "test": "Read your first page again, then tell somebody the old story and what actually happened.",
+   "note": "This is the end of the ladder. Somebody who might have a \"not for me\" of their own is a good choice. Tell them the prediction, the sentence, and what really happened at your three places, and if they want, help them write down their first one.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

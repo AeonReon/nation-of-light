@@ -1,0 +1,97 @@
+{
+ "id": "nerve.no",
+ "name": "Getting told no",
+ "line": "From writing down what you have never asked for, to putting yourself forward for something most people are turned down for.",
+ "size": "weeks",
+ "strand": "look-after-yourself",
+ "from": 10,
+ "who": "Grown-ups and anybody from about ten",
+ "about": "For grown-ups and anybody from about ten; a child asks strangers only with a grown-up beside them. It starts at home with a list of things you have never asked for and a no you answer with \"fair enough\". Then it goes outside: an ask that will probably be refused, three noes in a week, asking for the reason, asking what would change the answer, and asking again later. It ends with twenty noes in four weeks and then putting yourself forward for something where most people are turned down. The rule on every rung is that a no is always allowed: one friendly question, then thank them and leave it.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Write down three things you have not asked for because you expected the answer to be no.",
+   "note": "A later bedtime, a different job at work, a place in a team, a neighbour's spare apples, a lift, help with something. Small or big, just write them. Keep the list; later rungs use it.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Ask somebody at home for something small you expect a no to, and when the no comes, say \"Fair enough, thanks\" and nothing more.",
+   "note": "A child asks to choose the film, or to stay up half an hour; a grown-up asks somebody else to cook tonight. The rung is the answer you give: no arguing, no sulking, no asking twice. If you get a yes, enjoy it, and try again with something bigger.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 3,
+   "test": "After your next no, write two lines: what you were afraid would happen, and what actually did.",
+   "note": "Use the no from rung two, or any no this week. Most of the time the second line is short: \"They said no. We carried on.\" Seeing it written down is the point of the rung.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "At a quiet time, ask a place for a look behind the scenes that they probably do not give, and thank them whatever they say.",
+   "note": "A bakery's kitchen, a fire station, a print shop, a farm, the back of a theatre, a bike repair workshop. \"Would it be possible to have a quick look at where you make the bread?\" A yes happens more often than you think. A child asks with a grown-up beside them.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 5,
+   "test": "Collect three noes in one week, from three different people, and tick each one off.",
+   "note": "Use the list from rung one. Ask the library whether they would buy a book you want, a friend whether they would swap a job with you, a neighbour whether you could pick some fruit from their tree. Only ask for things where a yes would be fine for them too. A yes does not count towards the three, so ask again elsewhere.",
+   "ctx": "long",
+   "kind": "courage"
+  },
+  {
+   "n": 6,
+   "test": "When you are told no, ask in a friendly voice whether there is a reason, and listen to the whole answer.",
+   "note": "\"That is fine; can I ask why?\" Then stop talking and listen. People are allowed not to give a reason; if they would rather not say, thank them and leave it.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 7,
+   "test": "After a no, ask \"What would need to be different for it to be a yes?\" and write down the answer.",
+   "note": "\"Not this week\" might mean next week works. \"Not until you are twelve\" is a date. \"Not without a written plan\" tells you exactly what to bring. Ask once, write it down, and do not argue with it.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 8,
+   "test": "Go back to somebody who told you no, now that something has changed, and ask again.",
+   "note": "The answer from rung seven is your guide: the week has passed, you have written the plan, you are a year older. Say what changed: \"Last time you said not until it was lighter in the evenings; could I ask again now?\" A second no is fine; this rung is the asking again.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 9,
+   "test": "Put yourself forward for something where you might not be picked.",
+   "note": "Try out for a team, audition for a choir or a school or community play, apply for a volunteer role, enter a local art or baking competition, apply for a job. Most of these are free to enter. Whatever the result, the rung is putting your name down.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 10,
+   "test": "When a no comes to something you care about, write three things you could do next, and do the first one within a day.",
+   "note": "Ask what would have made the difference, practise and try again next season, try a different team or role, ask somebody who got in how they prepared. If rung nine got you a yes, use the next no you are given that matters to you.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Over four weeks, collect twenty noes, and keep a tally on paper.",
+   "note": "About five a week. Mix the kinds you have practised: asks at home, asks in shops and places, putting yourself forward. Every ask must be one where a yes would be fine for the other person. By the end, notice how small a no now feels.",
+   "ctx": "long",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "Put yourself forward for something where most people are turned down, and send it off.",
+   "note": "A place on a course that takes few people, a job you are only just ready for, a scholarship or grant, a story or photo sent to a magazine or a competition with judges. Do your best work on it, send it, and write down the date. That is the far end of this ladder: going for the thing that will probably say no, because you no longer mind if it does.",
+   "ctx": "room",
+   "kind": "courage"
+  }
+ ]
+}

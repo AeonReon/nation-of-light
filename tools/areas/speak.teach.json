@@ -1,0 +1,111 @@
+{
+ "id": "speak.teach",
+ "name": "Teaching",
+ "line": "From writing down the steps of one thing you can do, to teaching a group over three sessions until everybody can do it without you.",
+ "size": "weeks",
+ "strand": "be-useful-to-somebody",
+ "from": 8,
+ "who": "From about eight; a child can teach a grown-up too",
+ "about": "For anybody from about eight: a child can teach a grown-up and a grown-up can teach a child. You start with one small thing you can already do and write its steps down. The rungs go from teaching one person with your hands off, to checking a week later, to changing how you teach when somebody finds it hard, to three short lessons, and end with teaching a group over three sessions until everybody can do it without you. Teaching shows you quickly whether you really know something, and it is useful to somebody every time.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Choose one small thing you can do that somebody near you cannot, and write down its steps in order.",
+   "note": "Folding a paper aeroplane, tying a bowline, boiling an egg, shuffling cards, a trick for the nine times table, a phone shortcut. Number the steps. Five to eight steps is plenty.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Do the thing yourself following only your written steps, and add any step you had left out.",
+   "note": "Read one step, do exactly that, and nothing more. You will almost always find a step you do without thinking, like \"fold it in half first\" or \"wait for the water to boil\". Write it in.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Teach that thing to one person using your steps, showing each step slowly once.",
+   "note": "Somebody at home, a friend, a brother or sister, a grandparent. Show one step, then let them do that step, then the next. If they already know it, choose another thing from your list.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 4,
+   "test": "Let them do it all the way through while you keep your hands behind your back and speak only when they ask.",
+   "note": "Taking it off them to show them again is the most common mistake in teaching. If they go wrong, let them notice. Wait until they ask, then answer only that question.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Ask them to teach it back to you, and write down the step where they went wrong.",
+   "note": "Pretend you do not know it and do exactly what they say. The step they miss or muddle is the step your teaching did not make clear.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Change that step in your written steps, and teach the thing to a different person.",
+   "note": "Make the step smaller, add a picture, or say it a different way. Then see whether the second person gets past it without trouble.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "A week later, ask the first person to do the thing again without help, and go over it once if they need to.",
+   "note": "Whatever they have forgotten after a week is what needed practising. Go over only that part, then let them do it all again.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "When somebody asks you a question you cannot answer, say \"I do not know, so let us find out\", and find out together.",
+   "note": "Look it up, try it, or ask somebody who knows. Pretending to know is the one thing that loses a learner's trust. If nobody asks you such a question this week, ask your learner for the hardest question they can think of.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 9,
+   "test": "Teach one thing to two people at once, so both can do it by the end.",
+   "note": "Stand where both can see your hands. Let them take turns, and let the one who gets it first help the other. Two friends, two people at home, two children with their grown-up there.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 10,
+   "test": "Teach somebody who is finding it hard by showing it a different way from the first.",
+   "note": "Draw it instead of saying it, do it in slow motion, break one step into three smaller ones, or use their own hands with yours beside them doing the same. Keep going until one way works.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 11,
+   "test": "Choose a bigger skill that needs more than one session, and split it into three short lessons on paper.",
+   "note": "Juggling three balls (one ball, two balls, three), the rules of chess (how pieces move, check, a first game), a simple recipe (chopping, cooking, the whole dish). Write what the learner should be able to do at the end of each lesson.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 12,
+   "test": "Teach those three lessons to one person on three different days.",
+   "note": "Start each lesson by asking them to show you what they remember from the last one. Only move on when they can do the part before.",
+   "ctx": "long",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Teach one small thing to a group of four or more at once.",
+   "note": "A family gathering, a class, a club, friends. Show it once where everybody can see, then walk round and watch each person try. A grown-up teaching children does it with the children's own grown-ups there.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 14,
+   "test": "Teach a group your three lessons over three sessions, until everybody can do the skill without you.",
+   "note": "Use the lessons from rung eleven, changed by what you learned on rung twelve. At the end, ask each person to do it with you standing back. If one person cannot yet, give them a fourth short session.",
+   "ctx": "long",
+   "kind": "skill"
+  }
+ ]
+}

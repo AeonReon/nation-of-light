@@ -1,0 +1,97 @@
+{
+ "id": "belong.cars",
+ "name": "Cars",
+ "line": "From looking up one car you admire to taking somebody else for their first look round a showroom.",
+ "size": "weeks",
+ "strand": "look-after-yourself",
+ "from": 10,
+ "about": "For grown-ups and teenagers, and for a child from about ten with a grown-up; the drive near the end needs a driving licence, and its note gives a way for non-drivers. Showrooms and car shows are there to be looked round, and every rung here is done honestly, saying you are not buying today. It starts with one car you admire looked up at home and what it really costs to run, then looking at one up close, walking into a showroom, sitting in it, asking owners and staff what they know, and learning how one part works. It ends with an honest test drive or ride, and then taking somebody else for their first look. By the end you know what the car you admire is like to sit in, how one part of it works, and what it costs to keep.",
+ "who": "Grown-ups and teenagers; from ten with a grown-up",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Choose one car you admire and write down three facts about it: the price new, what drives it, and where it is made.",
+   "note": "Any car at all: a family estate, an electric car, a classic, a sports car. The maker's website has the price and the engine or battery. Write the three facts on paper with the date.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 10
+  },
+  {
+   "n": 2,
+   "test": "Find out roughly what that car costs to run for one year: fuel or charging, insurance, tax, servicing, and the value it loses.",
+   "note": "Owners' clubs, running-cost calculators and motoring magazines online give rough figures. Write one number for each, then a total. Rough is fine; the point is a real number instead of a guess.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Find the car you chose, or one like it, on show somewhere free and look at it closely for five minutes.",
+   "note": "A showroom window, a car museum, a classic car meet in a car park, a motor show on its free day. Look, but never touch or lean on a car that belongs to somebody unless they invite you to.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Walk into a car showroom and look round one car for ten minutes, saying \"just looking today, thank you\" if somebody comes over.",
+   "note": "Walk round it slowly: the wheels, the lights, the boot, the inside through the window. Showrooms expect people who are years away from buying. A child does this with a grown-up.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 5,
+   "test": "Ask the salesperson one question you actually want answered about that car.",
+   "note": "For example: \"How far does it go on a full charge in winter?\", \"Why is this one dearer than that one?\", \"What is the warranty?\" Listen to the whole answer and thank them.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 6,
+   "test": "Ask whether you may sit in the car, saying plainly you are not buying today, then adjust the seat and mirrors and stay for three minutes.",
+   "note": "Most showroom cars are left open for exactly this. Notice what you can see from the seat, where your hands fall, how the door sounds when it shuts. If they say no, thank them; the asking is the rung.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 7,
+   "test": "Ask somebody who knows the car what owners like most about it and what they wish were different.",
+   "note": "A salesperson, a mechanic, or an owner at a car meet. Owners are usually glad to talk about their cars. Write down one thing from each side.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Go to a different kind of place where cars are on show, and talk to one owner or member of staff.",
+   "note": "A classic car show, a car museum, a club meet, or a different brand's showroom. Many club meets are free to walk round. Ask one question and listen.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 9,
+   "test": "Learn how one part of that car works well enough to explain it to somebody at home in one minute.",
+   "note": "How the brakes put charge back into the battery, what a turbocharger does, how four-wheel drive decides which wheel to push. A diagram on paper helps. One minute, out loud.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Write down, on paper, what it would honestly take to own that car: the price, a year of running costs, and how long you would need to save.",
+   "note": "Use your numbers from rungs one and two. Divide by what you could put aside each month to get a date. The answer may be next year or twenty years away; either way it is now a number, not a feeling.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Ask a showroom for a short test drive, saying honestly how far away you are from buying, and take it if they say yes.",
+   "note": "\"I am saving towards one in a few years; could I take a short drive so I know what I am saving for?\" Some will say yes and some no, and both are fair answers. Needs a full licence. A non-driver or a teenager asks instead to sit in the passenger seat while a member of staff drives, or to sit in it with the engine running.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "Take somebody for their first look round a showroom, and let them ask a question and sit in a car.",
+   "note": "A friend, a son or daughter, a parent who never goes in. Tell them beforehand to say \"just looking today\". That is the far end of this ladder: you are the one who knows the way in and shows somebody else.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

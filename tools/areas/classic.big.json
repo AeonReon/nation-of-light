@@ -1,0 +1,145 @@
+{
+ "id": "classic.big",
+ "name": "The big questions",
+ "line": "From saying what \"good\" means to running a half-hour conversation on a big question where every view gets a fair hearing.",
+ "size": "months",
+ "strand": "say-what-you-mean",
+ "about": "For grown-ups and anybody from about ten; younger children can do the first eight rungs out loud with a grown-up. It starts with old questions you can answer at the kitchen table: what good means, whether a lie is ever right, what fair is. Then you learn to give the best answer for a view you do not hold, and to read what great traditions from different parts of the world say about living well, in their own words, written down so that a follower would agree it is what they teach. It ends with you running a half-hour conversation on a big question where every person gives a reason and every view gets a fair hearing. This ladder never tells you what to believe; it helps you think clearly about what you do believe and understand people who believe otherwise.",
+ "who": "From about ten; younger children with a grown-up",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Say in your own words what the word \"good\" means, and give one example.",
+   "note": "Say it to whoever is there, or to yourself. There is no right answer to find; people have argued about this for thousands of years. A child might say \"good is when you help\", which is a fine start: then ask \"is helping always good?\".",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 3
+  },
+  {
+   "n": 2,
+   "test": "Answer \"Is it ever right to tell a lie?\" with a reason, then give the best reason for the other answer.",
+   "note": "Ordinary cases help: keeping a surprise party secret, telling a friend you like a present you do not, saying you are fine when you are not. The second half is the skill: the best reason for the answer you did not give.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Say what \"fair\" means, and give one real case where being fair is hard.",
+   "note": "For example: should an older and a younger child get the same pocket money? Should the hungriest person get the biggest slice? Is it fair that some people are born taller or faster? Pick one and say why it is hard.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Answer this puzzle with a reason: if every plank of a ship is replaced one by one, is it still the same ship?",
+   "note": "This is the Ship of Theseus, a puzzle written about by the Greek writer Plutarch nearly two thousand years ago. Then try: what if somebody builds a second ship from all the old planks, which one is the real ship? Both answers have good reasons.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Say whether you are the same person you were at five years old, and what has stayed the same.",
+   "note": "Your body, memories, likes, name and the people who know you all come into it. For a child, \"at five\" can be \"as a baby\". A grown-up and a child can each answer and see where they differ.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Say whether something can be beautiful if nobody ever sees it, and give a reason.",
+   "note": "For example a flower at the bottom of the sea, a star too far away to see, a song sung once in an empty room. Ask what \"beautiful\" is: something in the thing, or something in the person looking?",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Choose one big question and write down three different answers people could give, each with its best reason, without saying which one you hold.",
+   "note": "Questions like \"What makes a life a good one?\", \"Do we owe anything to strangers?\", \"What is happiness?\". Write each answer the way somebody who holds it would say it. This rung is practice for reading the traditions fairly.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Ask an older person \"What do you think makes a life a good one?\" and listen to their whole answer without adding your own.",
+   "note": "A grandparent, a neighbour, an older colleague. Ask one follow-up question, like \"When did you work that out?\". Say thank you, and write down afterwards the part you most want to remember.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Read one page from one tradition's own writings about how a person should live.",
+   "note": "Read the source itself, not a book about it. Some starting places: the Analects of Confucius (China), the Dhammapada (Buddhist), the Handbook of Epictetus (a Stoic, Rome), the Book of Proverbs or the Sermon on the Mount (the Bible), a short chapter of the Qur'an, the Bhagavad Gita (Hindu), the Tao Te Ching (Taoist). All of these are in libraries and free online in translation.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Write down in a few sentences what that page teaches, in a way that somebody who follows it would say \"yes, that is it\".",
+   "note": "Use the tradition's own words where you can, and leave out your opinion of it. No \"they think, wrongly...\" and no \"they claim\". If you can, show it to somebody who knows the tradition and ask if you have it right.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Read one page from a second tradition, from a different part of the world, on the same question, and write it down the same way.",
+   "note": "If your first was from Asia, try Europe, the Middle East or Africa, or the other way round. Ubuntu, from southern Africa, is often put as \"a person is a person through other people\", and is a good one to read about. Same rule: in its own voice.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Write where the two traditions agree and where they differ, without deciding which one is right.",
+   "note": "Two short lists. Many traditions share something like \"do not do to others what you would not want done to you\", said in different ways; the differences are often about why, and about what happens after this life. Leave the lists as they are.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 13,
+   "test": "Ask somebody from a tradition or way of life different from yours what it teaches about living well, and listen without arguing.",
+   "note": "A colleague, a neighbour, a friend's parent; many places of worship welcome visitors with questions, and some hold open days. Ask \"What does it mean to you, day to day?\". A child does this with a grown-up there. Say thank you, and tell them one thing you found interesting.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 14,
+   "test": "Give the best case for a view on a big question that you do not hold, well enough that somebody who holds it would agree.",
+   "note": "Write it or say it to somebody. Use their strongest reasons, not their weakest. If you know somebody who holds that view, ask them afterwards whether you got it right.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 15,
+   "test": "Think about one big question for a week, writing one line about it each day, without settling on an answer.",
+   "note": "Pick the question on day one and write it at the top of a page. Each day, one line: something you noticed, read or thought. On day seven, read the seven lines; you still do not have to decide.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 16,
+   "test": "Write one page on what you think about one big question and why, including where your view came from.",
+   "note": "Your family, a book, a teacher, a faith, something that happened to you, your own thinking. Being honest about where a view came from is part of thinking clearly about it. This is your own view; nobody on this ladder is telling you what it should be.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 17,
+   "test": "Ask somebody to question your page kindly, answer each question honestly, and change one line if a question showed you something.",
+   "note": "Choose somebody who will be fair, and ask for three questions, not a verdict. Thank them. If nothing needs changing, write down why you kept it; that counts too.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 18,
+   "test": "Talk about a big question with a child younger than eight, at their level, and listen to their answer.",
+   "note": "Questions young children like: \"Is it all right to take the last biscuit?\", \"Can you be friends with somebody you argue with?\", \"Do animals have feelings?\". Ask, wait, and ask \"why do you think that?\". A child climbing this ladder can do it with a younger brother, sister or cousin; a grown-up with no young child at home can do it with a friend's or relative's child while their parent is there.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 19,
+   "test": "Run a half-hour conversation on one big question with three or more people, where each person gives a reason and nobody is told they are wrong.",
+   "note": "This is the end of the ladder. Set the rules at the start: one person speaks at a time, give a reason, say back what the last person said before you disagree. Ask the question, keep time, bring in the quiet ones, and end by thanking everybody; nobody needs to agree at the end.",
+   "ctx": "with",
+   "kind": "courage"
+  }
+ ]
+}

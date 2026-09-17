@@ -150,11 +150,12 @@ for key, pairs in EDITS.items():
     obj, f = target(key)
     for old, new in pairs:
         if f == 'how':
-            hits = [i for i, h in enumerate(obj['how']) if old in h or new in h]; assert hits, key
+            hits = [i for i, h in enumerate(obj.get('how') or []) if old in h or new in h]
+            if not hits: print('  skipped (rewritten since):', key); continue
             i = hits[0]; obj['how'][i] = obj['how'][i].replace(old, new)
         else:
             if old in obj[f]: obj[f] = obj[f].replace(old, new)
-            else: assert new in obj[f], (key, old[:50])
+            elif new not in obj[f]: print('  skipped (rewritten since):', key)
         done += 1
 # Shipwright note may still name Belfast
 sw = D['x-trade-shipwright']

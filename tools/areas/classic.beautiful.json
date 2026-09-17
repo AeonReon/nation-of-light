@@ -1,0 +1,111 @@
+{
+ "id": "classic.beautiful",
+ "name": "One beautiful thing a day",
+ "line": "From one beautiful thing in the room you are in, to sixty days of them in a notebook and the three best chosen.",
+ "size": "weeks",
+ "strand": "look-after-yourself",
+ "from": 8,
+ "who": "From about eight; a family can do it together",
+ "about": "For everybody from about eight; a family can do it together, each with their own page. You start with one beautiful thing in the room you are in and one sentence on why. The rungs go from ordinary things, sounds and things nobody made, to a notebook kept every day, drawing, a line copied from a poem, a famous painting or piece of music looked at slowly, and showing somebody what they had walked past. It ends with sixty days in the notebook and the three best chosen. This is not about what went well; it is about training your eyes and ears to find beauty wherever you are.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Find one beautiful thing in the room you are in, and say in one sentence why it is beautiful.",
+   "note": "The light on a glass of water, the grain in a wooden table, the curve of a cup handle, a plant against the window. \"Why\" can be the colour, the shape, a pattern, how the light falls on it, or how well it is made.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 2
+  },
+  {
+   "n": 2,
+   "test": "Find one beautiful thing outside today and say in one sentence why.",
+   "note": "On a walk, on the way to school or work, or from a window: the shape of a cloud, moss on a wall, a well-made gate, a bird. Stop for a moment when you find it.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Find one beautiful thing in an object people use every day.",
+   "note": "A spoon, a door handle, a stair rail, a jug, an old tool, a pair of scissors. Look at how the shape fits the hand or the job. Things made to be useful are often the most beautiful.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Find one beautiful sound today, and stop to listen to it until it ends.",
+   "note": "Rain on a roof, a bird singing, a bell, wind in trees, somebody laughing in the next room. Close your eyes if it is safe to.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Find one beautiful thing made by a person and one that nobody made, and say which you would rather keep looking at.",
+   "note": "A bridge and a tree, a painted door and a shell, a bowl and a leaf. There is no right answer; say why.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Start a notebook for beautiful things, and write today's in it with the date and one line on why.",
+   "note": "Any notebook, a few sheets of paper folded and stapled, or a note on your phone. One line is enough: \"Tuesday. Frost on the car roof, like feathers.\"",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Write one beautiful thing in the notebook every day for seven days.",
+   "note": "Pick a time: before bed, or on the way home. If you miss a day, write the next one and keep going. A family can each write their own and read them out at dinner.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Draw one of your beautiful things in the notebook instead of writing it.",
+   "note": "Roughly, in pencil, in a few minutes. Drawing makes you look at it for longer than writing does, and you will see more.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Copy into the notebook one line from a poem, a book or a song that you think is beautiful, and write why.",
+   "note": "From a book at home, a library book, a hymn, a song you love. Write the name of the person who wrote it underneath.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Look at one famous painting or listen to one famous piece of music for ten minutes without doing anything else, and write down what you noticed.",
+   "note": "For example, Vermeer's \"The Milkmaid\", Hokusai's \"The Great Wave\", Bach's \"Air on the G String\" or Beethoven's \"Moonlight Sonata\". Many great museums show their paintings free on their websites, and music is free to listen to online or on the radio.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Show somebody one beautiful thing near home that they walk past every day, and tell them why you think it is beautiful.",
+   "note": "The carving over a door, a tree in a certain light, a pattern in the paving. Take them to it; do not just describe it.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 12,
+   "test": "Write one beautiful thing in the notebook every day for thirty days.",
+   "note": "Carry on from your first week. Try to find a new kind of thing now and then: a sound, a person being kind, something small. Mark the days on the page.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 13,
+   "test": "Describe the painting or music from rung ten to somebody from memory, for one minute.",
+   "note": "What is in it, the colours or the sounds, what happens in it, what you like. Look again first if you need to, then put it away and describe it.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Reach sixty days in the notebook, read every page back, and choose the three best to show somebody.",
+   "note": "Carry on from thirty days. Read it all in one sitting. Pick the three you would most want to see again, and tell somebody at home why you chose them.",
+   "ctx": "long",
+   "kind": "attention"
+  }
+ ]
+}

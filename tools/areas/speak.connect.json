@@ -1,0 +1,139 @@
+{
+ "id": "speak.connect",
+ "name": "Keeping in touch",
+ "line": "From writing down ten people you like, to twelve weeks in which every one of them has heard from you at least twice.",
+ "size": "months",
+ "strand": "be-useful-to-somebody",
+ "from": 10,
+ "who": "Grown-ups and anybody from about ten",
+ "about": "For grown-ups and anybody from about ten; a child can keep in touch with grandparents, cousins and old friends with a grown-up's help. This is not about meeting new people (that is Meeting people, parts one and two); it is about not losing the people you already have. It starts with a list of ten names and one thing going on in each life, then messages that ask about real news, calls, birthdays, and a regular time with a few people. It ends with twelve weeks in which every person on your list has heard from you at least twice. Friendships rarely end in a row; far more often they fade because nobody got in touch.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Write down the names of ten people you like but have not been in touch with this month.",
+   "note": "Old friends, cousins, a former neighbour, a grandparent, somebody from a club you left. Paper or a note on your phone. Ten is the list for this whole ladder, so choose people you would be glad to hear from.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 3
+  },
+  {
+   "n": 2,
+   "test": "Next to each name, write roughly when you last spoke and one thing going on in their life.",
+   "note": "A new baby, a house move, an exam, a new job, a parent who is ill. If you do not know anything, write \"do not know\"; that is useful to see too.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Send one person on the list a short message asking about the thing going on in their life.",
+   "note": "\"How did the move go? Is the new place feeling like home yet?\" One or two lines. A question about their news shows you remembered, which is worth more than \"Hi, how are you?\"",
+   "ctx": "room",
+   "kind": "kindness"
+  },
+  {
+   "n": 4,
+   "test": "Ring one person on the list, just to ask how they are, and talk for at least five minutes.",
+   "note": "No reason needed: \"I was thinking about you, so I thought I would ring.\" If they do not answer, leave a short cheerful voice message and count it. A video call counts too.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 5,
+   "test": "Tell one person on the list a piece of your own news, so it is not only questions.",
+   "note": "Something small and real: a thing you made, a walk you took, what you are reading, a funny moment from your week. Keeping in touch works when both people share.",
+   "ctx": "room",
+   "kind": "kindness"
+  },
+  {
+   "n": 6,
+   "test": "When you see something that makes you think of somebody on the list, send it with one line.",
+   "note": "A photo of a place you went together, a song, a recipe, an article about their hobby. \"This made me think of you.\" If nothing turns up today, look back through your photos for one to send.",
+   "ctx": "room",
+   "kind": "kindness"
+  },
+  {
+   "n": 7,
+   "test": "Write the birthdays you know from your list into a calendar, and ask for any you do not know.",
+   "note": "A paper calendar on the wall or the one on your phone, with a reminder on the day. \"When is your birthday? I want to put it in my calendar\" is a message people like to get.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "On the next birthday from your list, send a message that says one real thing, not only \"Happy birthday\".",
+   "note": "\"Happy birthday! I still laugh about the day we got the tent up in the rain.\" If no birthday comes up soon, send one to anybody you know whose birthday it is.",
+   "ctx": "room",
+   "kind": "kindness"
+  },
+  {
+   "n": 9,
+   "test": "When somebody tells you about something coming up, put a reminder in your calendar and ask how it went on the day.",
+   "note": "An interview, a hospital appointment, a first day, a driving test, a match. \"Thinking of you today, how did it go?\" Being remembered on the day is one of the kindest things one person can do for another.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Send a handwritten note or card to somebody on your list.",
+   "note": "Four or five lines is plenty. Post it, or put it through their door if they live nearby. If a stamp is not in reach, write it by hand and send a photo of it instead; it still counts.",
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 11,
+   "test": "Agree a regular time with one person on your list: a call, a walk or a meal, on a set day each month or each fortnight.",
+   "note": "\"Shall we ring each other on the first Sunday of every month?\" A fixed day means neither of you has to wonder who should get in touch next. Put it in both calendars.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "Keep that regular time twice in a row.",
+   "note": "If one of you has to miss it, set the new date there and then. Two in a row is when it starts to feel normal.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 13,
+   "test": "Send one kind message to somebody on your list who has not replied to you for a while, with no question about why.",
+   "note": "\"No need to reply, just wanted to say I hope you are well.\" People go quiet for all sorts of reasons: work, illness, a new baby, a hard time. A message with no pressure in it is easy to answer when they are ready.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 14,
+   "test": "For four weeks, get in touch with two people from your list each week, and tick them off.",
+   "note": "A message, a call, a note: any of the ways from the earlier rungs. Choose the two at the start of each week. Update the \"one thing going on\" column as you learn their news.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 15,
+   "test": "Remember a hard date for somebody on your list, and send them a message on the day.",
+   "note": "The anniversary of somebody dying, a first birthday without a parent, the date of a big operation. \"Thinking of you today.\" Nothing more is needed. Put the date in your calendar so next year you remember too.",
+   "ctx": "room",
+   "kind": "kindness"
+  },
+  {
+   "n": 16,
+   "test": "Agree a regular time with two more people on your list, and keep each one at least once.",
+   "note": "That makes three people with a set day. Different shapes suit different people: a monthly call with one, a walk every fortnight with another, a meal every season with a third.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 17,
+   "test": "Send a short round-up to a group of family or old friends: three lines of your news and one question for them, and do it twice, a month apart.",
+   "note": "A group message or an email. \"The garden is full of weeds, I have started a pottery class, and Mum is well. What is everybody reading?\" It keeps a whole group in contact, not just you with each person.",
+   "ctx": "room",
+   "kind": "kindness"
+  },
+  {
+   "n": 18,
+   "test": "Reach twelve weeks from the start of your list, with every one of the ten having heard from you at least twice.",
+   "note": "Look down your list and count. Three of them now have a regular time with you. If somebody has not heard from you twice yet, send them something today, then tick this rung. This is the far end of the ladder.",
+   "ctx": "long",
+   "kind": "attention"
+  }
+ ]
+}

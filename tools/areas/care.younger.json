@@ -1,0 +1,139 @@
+{
+ "id": "care.younger",
+ "name": "Younger ones",
+ "line": "From one question asked at a younger child's eye level, to helping a family with young children every day for a week.",
+ "size": "months",
+ "strand": "be-useful-to-somebody",
+ "from": 10,
+ "who": "From about ten; teenagers and grown-ups too",
+ "about": "For anybody from about ten: older brothers and sisters, cousins, teenagers and grown-ups. The younger ones are children in your own family or the children of friends, and their own grown-up is always nearby and in charge; no rung asks you to be alone with somebody else's child. The climb goes from playing their game their way, to comforting, settling arguments and saying a kind no, to running an activity for a small group, and ends with a week of real help for a family with young children. Being the older one a small child trusts is one of the most useful things a person can be.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Get down to a younger child's eye level and ask them one question about what they are doing.",
+   "note": "Kneel, crouch or sit so your eyes are level with theirs. \"What are you building?\" or \"Who is that in your drawing?\" works well. A younger brother or sister, a cousin, or a friend's child while their grown-up is there all count.",
+   "ctx": "with",
+   "kind": "attention",
+   "mins": 2
+  },
+  {
+   "n": 2,
+   "test": "Play a younger child's game with them for ten minutes and let them make every rule.",
+   "note": "If the rule is that the sofa is a boat and the floor is water, the floor is water. Ask \"What happens next?\" instead of suggesting. If you already play with younger ones every day, do it on purpose today and count it.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 3,
+   "test": "Read a picture book to a younger child, and stop on each page to let them point at something.",
+   "note": "Ask \"Where is the cat?\" or \"What do you think happens next?\" and wait for the answer. Any book in the house will do, and a library lends them for nothing. If there is no book, tell a short story about their own day.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Bring a younger child who is on their own into a game you are already playing.",
+   "note": "At a family gathering, in a garden or at a park where their grown-up is with them. Give them a real job in the game, like counting to twenty or guarding the base, not just watching. Say their name when you invite them.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 5,
+   "test": "Watch a younger child try something they find hard, and count to ten in your head before you offer help.",
+   "note": "Doing up a zip, pouring a drink, building a tower that keeps falling. Often they manage it by seven or eight. If they do need help, do only the part they are stuck on and give it back.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Play a game against a younger child with a head start for them that you both agree, then play it properly.",
+   "note": "They start five squares ahead, they get three goes to your one, or you throw with your other hand. They know about the head start, so the win is real and nobody has been fooled. A board game, a race to a tree or noughts and crosses all work.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 7,
+   "test": "Say no to a younger child kindly, give the reason in one sentence, and keep to it.",
+   "note": "\"No more biscuits, because dinner is in ten minutes.\" Say it once, calmly, and do not argue it again if they cry or ask again. Offer something they can have instead, like a drink of water or a game until dinner. Only say no to things their grown-up would say no to.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 8,
+   "test": "Comfort a younger child who is upset by getting down to their height and saying what happened, without telling them it does not matter.",
+   "note": "\"Your tower fell down and you worked hard on it.\" Then wait. Naming it is often enough for a small child to settle. If they are hurt, fetch their own grown-up straight away.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 9,
+   "test": "Help two younger children who are arguing to find a fair way to share, without deciding who wins.",
+   "note": "Ask each one what they want, then offer a fair way: take turns while you count to sixty, or one cuts the cake and the other chooses the piece. Let them choose which fair way to use. If anybody is being hurt, a grown-up steps in first.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 10,
+   "test": "Make up a game that keeps three younger children playing happily for fifteen minutes.",
+   "note": "A treasure hunt for five things in the garden, a game of statues, or \"bring me something blue\". Keep the rules to one or two sentences. You need nothing you do not already have, and their grown-ups stay nearby.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 11,
+   "test": "Help a younger child try one small thing they are nervous of, by doing it beside them first.",
+   "note": "Stroking a calm dog whose owner says yes, putting their face in the bath water, walking across a wobbly bridge in a play park. Do it first, then do it together, then let them try. If they still say no, that is fine: stop and try another day.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "Help with a younger child's mealtime or bedtime from start to finish, with their grown-up in the house.",
+   "note": "Ask their grown-up how it normally goes and do it the same way: the order, the story, what they like to hear before the light goes off. Small children like things done the same way each time. Hand over to their grown-up at the end and tell them how it went.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Look after a younger child in your family for an hour while their grown-up is in another room of the house.",
+   "note": "A little brother or sister, a cousin, a niece or nephew. Agree the plan first: what you will play, what they may eat, and to fetch the grown-up if anything goes wrong. If you are under about twelve, the grown-up stays in the same room.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Go on a walk of at least half an hour with a younger child and their grown-up, and get the child to the end still happy.",
+   "note": "Take a drink and a small snack. Play a game on the way: count red doors, find ten leaves of different shapes, race from one lamp post to the next. Let the child set the pace and stop to look at things. Hold hands near roads.",
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 15,
+   "test": "Plan and run a one-hour activity for three or more younger children, with their grown-ups there.",
+   "note": "A den built out of blankets and chairs, a treasure hunt with drawn clues, a puppet show from socks, a mini sports day. Write the plan on one piece of paper, with something to do if it rains. Their grown-ups stay in the room or the garden the whole time.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 16,
+   "test": "Ask a parent of young children what one thing would help them most this week, and do it.",
+   "note": "A friend, a relative, or a neighbour you already know. The answer might be washing up after dinner, playing with the children in the same room while they cook, or carrying the shopping in. Do exactly what they ask, not what you guess.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 17,
+   "test": "Keep one regular time with a younger child every week for eight weeks, agreed with their grown-up.",
+   "note": "A story every Saturday morning, a game of football in the park with their grown-up there, a board game after a weekend meal. Mark each week on a calendar. The point is that the child comes to expect it and can rely on you.",
+   "ctx": "long",
+   "kind": "kindness"
+  },
+  {
+   "n": 18,
+   "test": "Help one family with young children for a whole week: one useful thing each day, agreed with the parents first.",
+   "note": "Sit down with the parents and write seven jobs they would really like help with: a meal cooked, the washing folded, the children played with while a parent rests in the house. Do one each day and tick it off. A new baby, an illness or a house move are the weeks this matters most.",
+   "ctx": "long",
+   "kind": "kindness"
+  }
+ ]
+}

@@ -1,0 +1,153 @@
+{
+ "id": "belong.carry",
+ "name": "Carrying yourself",
+ "line": "From one minute standing well at home to seven days of walking, sitting and speaking the same calm way everywhere you go.",
+ "size": "months",
+ "strand": "look-after-yourself",
+ "from": 10,
+ "about": "For anybody from about ten: a child and a grown-up can climb it side by side. How you stand, walk, sit and speak is a set of habits, and habits can be practised. It starts at home with standing and walking and sitting properly, then takes them out: into a shop, through a whole conversation, saying your name, being served without apologising, asking plainly, letting a pause be. Later rungs use them in rooms where you feel out of place, and it ends with seven days of carrying yourself this way everywhere. It is not about looking richer or grander than anybody; it is about standing, moving and speaking as calmly in a grand room as in your own kitchen.",
+ "who": "From about ten; a child and a grown-up side by side",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Stand with your feet under your hips, your weight even on both feet, your shoulders relaxed and your head level, for one minute.",
+   "note": "Anywhere at home, in front of a mirror if you have one. Let your arms hang. Breathe normally. Notice where you usually lean or tip your head.",
+   "ctx": "room",
+   "kind": "skill",
+   "mins": 1
+  },
+  {
+   "n": 2,
+   "test": "Walk across a room at home five times at an easy, unhurried pace, with your head up.",
+   "note": "Look at the far wall, not the floor. Let your arms swing a little. If it feels slow, it is probably right.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 3,
+   "test": "Sit properly for five minutes: back against the chair, both feet on the floor, hands still.",
+   "note": "During a meal, a programme or a phone call. Not perched on the front edge of the seat. A child can do it at the table while a grown-up does the same.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Walk into a shop or café at that same unhurried pace, head up, and say hello to the first person you meet.",
+   "note": "Walk in as you practised at home. The person at the counter, at the door, or the person you step aside for. If you already walk in like this, do it on purpose today and count it.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 5,
+   "test": "Stand with your weight even and your shoulders relaxed for one whole conversation.",
+   "note": "Any conversation where you are standing: at the door, in a queue, in a corridor. Notice if you start to fold your arms or lean away, and come back to standing evenly.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "For one conversation, look at the other person's face while you are speaking, for the whole of each sentence.",
+   "note": "Look at the face, not a stare into the eyes; between the eyebrows works if eye contact feels hard. In some families and places a steady look at an older person is rude, so do what is respectful where you are.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Say your own name slowly and clearly to somebody you have not met before, with the greeting that is usual where you are.",
+   "note": "A handshake, a nod, a bow, or just \"Hello, I am Sam.\" For example: a new neighbour, a shopkeeper, a parent at the school gate, a new player at a club. Practise saying your name at home first.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 8,
+   "test": "Let somebody serve or help you, and say \"thank you\" instead of \"sorry for the trouble\".",
+   "note": "Somebody bringing a drink, holding a door, giving you a lift, passing the salt. It is their job or their kindness; a thank you is the right answer to both.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "When somebody gives you a compliment, say \"thank you\" and nothing after it.",
+   "note": "No \"oh, this old thing\", no pointing out what is wrong with it. Just thank you, and a smile. A grown-up can give the child a compliment to practise on, and the other way round.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 10,
+   "test": "For one whole day, say sorry only for things that really were your fault, and say \"excuse me\" or \"thank you\" in place of the rest.",
+   "note": "Bumping into a door is not a sorry. Asking a question is not a sorry. Somebody waiting for you: \"thank you for waiting\". Keep a count of the sorries you swapped.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Ask for something you want as a plain sentence, with no apology in front of it.",
+   "note": "\"I would like the table by the window, please\" instead of \"Sorry, is there any chance we could maybe sit there?\" At home: \"Please could you pass the bread.\" Do it three times today.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "When a conversation goes quiet, count three seconds in your head before anybody fills it, including you.",
+   "note": "Most pauses feel longer than they are. Often the other person says the more interesting thing in that gap. Do it in one conversation today.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 13,
+   "test": "Wear something you already own and feel good in to something ordinary, on purpose.",
+   "note": "A good shirt to the supermarket, a favourite jacket to school or work. Nothing bought. Walk and sit the way you practised.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 14,
+   "test": "Walk into a place where you feel out of place, and walk, stand and sit there the way you practised.",
+   "note": "A grand hotel lobby, a fine shop, a meeting where everybody is older than you, a club you have never been to. Stay at least ten minutes. The ladders Fine shops and Grand rooms are full of places to try.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 15,
+   "test": "In a place like that, ask a member of staff for something you want, as a plain sentence.",
+   "note": "\"Could you tell me where the reading room is, please?\", \"I would like to see the blue one, please.\" Standing evenly, looking at their face, no apology first.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 16,
+   "test": "At a gathering, introduce yourself by name to the person running it.",
+   "note": "The host at a party, the chair of a meeting, the coach at a club, the head teacher at a school event. \"Hello, I am Sam, I came along for the first time today.\" A child does this with a grown-up nearby.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 17,
+   "test": "Disagree once, calmly, with somebody older or in charge of you, in a normal voice and with your reason.",
+   "note": "\"I see it differently, because…\" and then listen to their answer. Not to win; just to say it plainly. A child picks something small and safe: which way to walk, what the answer to a quiz question is.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 18,
+   "test": "In a room where you are fairly new, make somebody who looks even newer feel welcome.",
+   "note": "Say hello, tell them your name, show them where the water or the seats are. You remember exactly how it feels, which makes you the right person to do it.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 19,
+   "test": "For one whole day, carry yourself this way everywhere you go: unhurried walk, head up, sitting properly, your name said clearly, no needless sorry.",
+   "note": "In the morning, read the list once. In the evening, write down where it was easy and where you forgot.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 20,
+   "test": "For seven days running, carry yourself this way everywhere you go, and write one line each evening about where it was easy and where it was not.",
+   "note": "Same list as the single day. At the end of the week, read the seven lines and notice which places no longer feel out of place. That is the far end of this ladder.",
+   "ctx": "long",
+   "kind": "attention"
+  }
+ ]
+}

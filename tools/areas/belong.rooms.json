@@ -1,0 +1,97 @@
+{
+ "id": "belong.rooms",
+ "name": "Grand rooms",
+ "line": "From looking up at one grand ceiling to an evening event in the grandest room near you, stayed to the end.",
+ "size": "weeks",
+ "strand": "get-strong-outside",
+ "from": 8,
+ "about": "For anybody from about eight; a child goes with a grown-up to every place on this ladder. It is the going-in that follows Grand places, from home: cathedrals, city halls, old libraries, grand hotels, university halls and galleries, most of which let anybody in for nothing. It starts with one grand ceiling looked at properly, then details, a question, a free tour, a public meeting, a talk or recital and an exhibition opening, an hour on your own, and the story of the room. It ends with an evening event in the grandest room near you, stayed to the end. These rooms were built to be walked into, and they are at their best with people in them.",
+ "who": "From about eight; a child with a grown-up",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Go into one grand building that is free and open to the public, and look up at the ceiling for one full minute.",
+   "note": "A cathedral, a city hall, an old public library, a museum's main hall, a railway station built long ago. Stand still and look up. If you did Grand places, from home, use a building from your list.",
+   "ctx": "out",
+   "kind": "attention",
+   "mins": 30
+  },
+  {
+   "n": 2,
+   "test": "In a grand building, find three details somebody put there on purpose, and draw or write down each one.",
+   "note": "A carved face above a door, a painted name, a coloured window, a clock, a pattern in the floor. A quick sketch is enough. A child can look for the smallest detail they can find.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Ask a member of staff or a volunteer one question about the building.",
+   "note": "For example: \"When was this room built?\", \"What was this room used for?\", \"Which part is the oldest?\" People who work in grand buildings are often glad to be asked.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 4,
+   "test": "Go on a free guided tour of a grand building and ask the guide one question during it.",
+   "note": "Many city halls, parliament buildings, libraries and cathedrals run free tours; check the building's website for times. If you booked a tour on Grand places, from home, this is that tour: count it.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 5,
+   "test": "Walk into the lounge of a grand hotel and ask at reception whether people who are not staying there may sit in it.",
+   "note": "Ask honestly: \"Is it all right for non-residents to sit in the lounge?\" If they say yes, sit for ten minutes. If they say you need to order something, you choose: a glass of water or a coffee, or thank them and go. The rung is the asking.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 6,
+   "test": "Go to a free talk, lecture or lunchtime concert held in a grand room.",
+   "note": "Universities, cathedrals, libraries, museums and city halls often hold them, many free and open to anybody. Check their websites for \"public events\". Arrive ten minutes early and sit near the front half.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "At the end of a talk or concert, speak to one person: the speaker, a player, or somebody sitting near you.",
+   "note": "One sentence is enough: \"Thank you, I enjoyed the part about the organ.\" or \"Have you been to one of these before?\" A child can thank a player with a grown-up beside them.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 8,
+   "test": "Sit in the public seats of a council meeting or a court for half an hour.",
+   "note": "Many local councils and courts let the public watch; check the rules and times on their website first. Arrive early, turn your phone off, and stand when others stand. Many courts do not let children in, so a child goes to the council meeting instead.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 9,
+   "test": "Go to the opening of an exhibition that says it is open to the public.",
+   "note": "Galleries and museums list openings on their websites and noticeboards. Only go if it says open to all; if it says by invitation, choose another. Look at the work, and say hello to one person.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 10,
+   "test": "Go into a grand building on your own and stay for one whole hour.",
+   "note": "The reading room of an old library is ideal: sit at a table and read. A cathedral, a museum hall or a gallery also works. A child does the hour with a grown-up in the same room, each on their own.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 11,
+   "test": "Find out the story of one grand room you have been in: who built it, who it was for, and who may use it now, and tell somebody.",
+   "note": "The building's own website, a guidebook from the library, or the guide on your tour. Tell it at home in two minutes.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Go to an evening event in the grandest room near you, and stay to the very end.",
+   "note": "A concert, a public lecture, a debate, a carol service, an organ recital. Many are free; for the rest, choose the cheapest seat or a free one. Wear what you are comfortable in. That is the far end of this ladder.",
+   "ctx": "out",
+   "kind": "courage"
+  }
+ ]
+}
