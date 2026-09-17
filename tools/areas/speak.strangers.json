@@ -1,0 +1,138 @@
+{
+ "id": "speak.strangers",
+ "name": "Talking to people you do not know",
+ "line": "From ordering at a counter yourself, to a half-hour interview with somebody you had never met.",
+ "size": "months",
+ "strand": "say-what-you-mean",
+ "from": 8,
+ "about": "For anybody from about eight, and for grown-ups; a child does every rung with a grown-up beside them. Where Meeting people is about making friends, this ladder is about asking people you do not know for what you need, and then for what they know: ordering, asking for things that are not on show, asking for advice, and finally interviewing people about their work. It ends with a half-hour interview with somebody you had never met, written up and given back to them. Everybody you meet knows something you do not; this is how you find out what.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Order something for yourself at a counter, out loud, and say thank you at the end.",
+   "note": "A chippy, a bakery, a café, a post office. A child does the talking while the grown-up stands beside them and says nothing. No money to spend: ask at the library to renew a book, or at a station for a timetable. If you do this every day already, do it today with your eyes on theirs and count it.",
+   "ctx": "out",
+   "kind": "courage",
+   "mins": 3
+  },
+  {
+   "n": 2,
+   "test": "Ask somebody at a desk or counter for something that is not on show.",
+   "note": "A free map at the tourist office, a glass of tap water, a library card form, a bus timetable, a spare bag. You are asking for something they have and you cannot see. A yes or a no both finish the rung.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 3,
+   "test": "Ask the person serving you one question that is not about what you are buying.",
+   "note": "\"Is it always this busy on a Saturday?\" \"Do you bake these here?\" \"How long have you worked here?\" Pick a quiet moment, not when there is a queue behind you.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 4,
+   "test": "Ask somebody working in a public place what they are doing today.",
+   "note": "A park keeper, a market trader setting up, a lifeguard, somebody painting railings, a librarian shelving. Only ask somebody who can stop safely: never somebody working near traffic or with machines running.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 5,
+   "test": "Ask somebody at work two questions in a row, where the second comes from their first answer.",
+   "note": "They say they start at six; you ask what the first job of the morning is. The second question shows you were listening, and that is when people start to tell you more.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Ask somebody who knows their trade for advice on a real problem you have, then follow it.",
+   "note": "A butcher on how to cook a cheap cut, a hardware shop on which screw holds a shelf, a garden centre on why a plant is dying, a librarian for a book like the last one you loved. You do not have to buy anything to ask.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 7,
+   "test": "Go back to the person who gave you the advice and tell them how it went.",
+   "note": "\"You told me to cook it slowly; it was brilliant.\" People who give advice almost never hear what happened. This is often the start of being known in a place.",
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 8,
+   "test": "Ask somebody who has run a local shop or business for years how they started, and listen to the whole story.",
+   "note": "The shoe mender, the family butcher, the hairdresser, the man at the market stall. Pick a quiet time of day. Five minutes of their story is plenty.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Write down ten questions you could ask anybody about their work or their life.",
+   "note": "\"How did you get into this?\" \"What does a normal day look like?\" \"What is the hardest part?\" \"What do people get wrong about your job?\" \"What would you tell somebody starting?\" Questions that cannot be answered with yes or no.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Try three of your questions on somebody you already know, and mark which gave the longest answers.",
+   "note": "A grandparent, a neighbour, a friend's parent, a colleague. Cross out any question that got a one-word answer and write a better one.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Ask somebody at work if they could answer three of your questions now, and ask them.",
+   "note": "\"I am practising asking people about their jobs; could I ask you three quick questions?\" A shop worker in a quiet moment, a librarian, a postie. If they say not now, thank them; asking was the rung, and try somebody else.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "Ask somebody if you could come back another day for ten minutes of questions about their work, and fix a time.",
+   "note": "Somebody from the last few rungs is ideal. Agree a day, a time and a place they choose, and write it down. A child asks with their grown-up there, and the grown-up is at the interview too.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 13,
+   "test": "Do that ten-minute interview with your questions, and write notes as they talk.",
+   "note": "Arrive on time, say thank you first, ask your questions, and let them wander off the list if they want to; that is often the best part. Stop at ten minutes unless they want to keep going.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 14,
+   "test": "Write up what they told you on one page, and give or send them a copy.",
+   "note": "Their name, their work, the best things they said, in your words. Let them correct anything. Very few people have ever had their story written down.",
+   "ctx": "room",
+   "kind": "kindness"
+  },
+  {
+   "n": 15,
+   "test": "Ask somebody whose work you know nothing about for twenty minutes of questions, and fix a time.",
+   "note": "A farmer, a bus driver, a nurse, a vet, a baker who starts at four in the morning, a boat builder. Ask through somebody you know, or at their place of work. A no is fine; ask the next one.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 16,
+   "test": "Do the twenty-minute interview, and ask their permission before you record or write it down.",
+   "note": "\"Is it all right if I take notes?\" A phone can record the sound if they agree. Use your questions, then ask one you had not planned, about the part that surprised you.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 17,
+   "test": "At the end of an interview, ask \"Who else should I talk to?\", and ask them to introduce you.",
+   "note": "People almost always know somebody. Ask for one name and whether they would send a message or tell that person you will be in touch.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 18,
+   "test": "Interview the person you were introduced to, somebody you had never met, for half an hour, and give them a written copy.",
+   "note": "Fix the time, bring your questions, write it up afterwards and send it to them, and a note of thanks to whoever introduced you. That is the far end of this ladder: you can walk up to a stranger and come away knowing their story.",
+   "ctx": "with",
+   "kind": "courage"
+  }
+ ]
+}

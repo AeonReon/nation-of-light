@@ -1459,3 +1459,6 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 .stage.school:not(.tucked) .backbtn{top:calc(34dvh + env(safe-area-inset-top,0px) - 50px);width:auto;height:38px;padding:0 14px 0 8px;border-radius:19px;gap:2px;display:flex;align-items:center;font-size:14px;font-weight:700}
 .stage.school:not(.tucked) .backbtn[hidden]{display:none}
 .stage.school:not(.tucked) .backbtn::after{content:"Back"}
+/* v76: who a ladder is for */
+.srow .swho{font-size:11.5px;font-weight:700;color:var(--ink-faint);line-height:1.3}
+.tk-who{margin:8px 2px 0;font-size:13px;font-weight:700;color:var(--ink-soft)}

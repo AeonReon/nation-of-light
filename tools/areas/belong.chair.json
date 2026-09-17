@@ -1,0 +1,96 @@
+{
+ "id": "belong.chair",
+ "name": "From where you are sitting",
+ "line": "From looking up opening times at home to booking the visit you would have talked yourself out of.",
+ "size": "weeks",
+ "strand": "say-what-you-mean",
+ "from": 14,
+ "about": "For grown-ups and teenagers. Every rung but one is done from a chair at home with a phone or a computer. It starts with finding out which grand buildings near you are open and when, what a free way in looks like, and what good things really cost, which is often less than people assume. Then a list of places you had assumed were not for you, an email and a phone call to one of them, a free tour booked, a date in the diary, and one person told. It ends with booking the visit you most doubted was for you. Many of the places people feel shut out of are open to anybody who asks.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Look up one grand building near you that is open to the public, and write down its opening times and whether it is free.",
+   "note": "A city hall, a cathedral, an old library, a big country house, a grand hotel lobby. Belfast City Hall, for example, has free public tours. Check the building's own website for the times. Write them down with the date you looked.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Find one grand place within an hour of you that has a free way in, such as a free tour, a free day or an open day.",
+   "note": "European Heritage Open Days in September open many buildings in Northern Ireland that are usually closed, for free. Some country houses have free gardens or grounds even when the house costs money. Parliament Buildings at Stormont has run free tours. Check the dates before you plan anything.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Look up the real price of something you would never normally look up.",
+   "note": "A made-to-measure suit, a good watch, a grand piano, a week on a sailing boat, a meal in the best restaurant in your county. Write the price down. Some will be what you expected and some will not be; either way you now know instead of guessing.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Look up what afternoon tea or a coffee costs in the grandest hotel near you.",
+   "note": "Many good hotels let anybody sit in the lounge for a coffee, not only people staying there. Write down the price of a coffee and of afternoon tea. It is often much less than people assume.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Look up what one night in the best hotel within an hour of you costs, and what is included.",
+   "note": "Pick a date a few months ahead. Write down the cheapest room price and what comes with it: breakfast, the spa, parking. You are not booking; you are replacing a guess with a number.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Write down three places near you that you had assumed were not for you, and one fact you found about each.",
+   "note": "For example: \"The hotel lounge: anybody can have a coffee, about four pounds.\" \"City Hall: free tours, no booking on some days.\" \"The golf club restaurant: open to non-members.\" Keep the list; the next rungs use it.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Email one place on your list with a real question.",
+   "note": "A real question is one you want the answer to: \"Can I look round the ballroom when there is no event on?\", \"Is there a dress code in the lounge?\", \"Do you run tours for families?\" Keep it to three or four lines, sign with your name, and send it.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 8,
+   "test": "Phone another place on your list and ask two questions.",
+   "note": "Write the two questions down first. For example, to a hotel: \"Can non-residents have afternoon tea, and do I need to book?\" To a car showroom: \"Can I come in and sit in one without booking a test drive?\" Say thank you, and write the answers down.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 9,
+   "test": "Book a place on something free at one of the places you found: a tour, an open day or a talk.",
+   "note": "From your list or from what you found on rung two. Many are booked online in a couple of minutes. If nothing free is coming up, put your name on the mailing list so you hear about the next one.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 10,
+   "test": "Put the date in your diary, and work out how you will get there and back.",
+   "note": "Bus or train times, parking, how long it takes, what time to leave. Write it on the calendar where the house can see it, not only in your head.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Tell one person you are going, and ask whether they would like to come.",
+   "note": "A friend, a parent, a partner, a grandparent. Saying it out loud makes it real. If they say no, you are still going.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "Book, in advance, a visit to the place on your list you most doubted was for you.",
+   "note": "The lounge for afternoon tea, the guided tour of the big house, a concert in the grand hall, a meal in the good restaurant. If money is tight, pick the free or cheapest way in: a coffee instead of afternoon tea, the free lunchtime recital instead of the evening concert. The end of the ladder is the booking made and the date in the diary.",
+   "ctx": "room",
+   "kind": "courage"
+  }
+ ]
+}

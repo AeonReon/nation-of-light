@@ -1,0 +1,110 @@
+{
+ "id": "deal.price",
+ "name": "Asking for a better price",
+ "line": "From knowing the usual price to getting money off something with a printed price tag.",
+ "size": "weeks",
+ "strand": "be-useful-to-somebody",
+ "from": 10,
+ "about": "For grown-ups and teenagers, and for a child from about ten spending their own pocket money, with a grown-up beside them for every rung in a shop or at a stall. Every rung is done on something you were going to buy anyway, so it needs no extra money. It starts with finding out what a thing usually costs, then saying a lower number for something second-hand, then asking a shop to match a price, asking about discounts, marked goods and quotes, and ends with money off something that had a printed price tag on it. Asking politely is always allowed, and the worst answer is the price you were going to pay anyway.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Pick one thing you are going to buy soon, and write down what you expect to pay for it.",
+   "note": "School shoes, a bike, a game, a tank of heating oil, a haircut, a second-hand pram. Just your guess, written down. The next rung checks it.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 2
+  },
+  {
+   "n": 2,
+   "test": "Find three prices for that exact thing: from shops, websites, or second-hand.",
+   "note": "Same make, same size, same model. Write down where each price was and the date. Compare with your guess from rung one. This list is what you bring to the later rungs.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Ask somebody you know what they paid for something like it, and where they got it.",
+   "note": "A parent, a neighbour, a friend at school, a colleague. \"What did you pay for your bike?\" People are often glad to tell you, especially when they got a good deal.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Write down the one sentence you will use to ask for a lower price, and say it out loud three times.",
+   "note": "\"Would you take £30 for it?\" or \"I have seen this for £45 elsewhere; can you do that?\" Saying it at home first makes it much easier to say in front of somebody. Keep it short and friendly.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 5,
+   "test": "Offer a lower price for something second-hand: at a car boot sale, a market stall, or on an online listing.",
+   "note": "Say a number, about a quarter under the asking price: for a £20 item, £15. You do not need a yes; the rung is saying the number. Only offer on something you would actually buy at your price. A child does this with a grown-up beside them.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 6,
+   "test": "Get a second-hand price lowered by agreeing a number between yours and theirs.",
+   "note": "They ask £20, you offer £15, they say £18, you say \"£17 and it is a deal\". Then pay and say thank you. If they will not move at all, that is their right; try somewhere else another day.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 7,
+   "test": "Write down the exact words that got you the lower price.",
+   "note": "The words you said, what they said back, and what you paid. Keep it with the sentence from rung four. Next time you use the words that worked.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "In a shop, show a lower price you found somewhere else, and ask whether they will match it.",
+   "note": "Use the list from rung two, on your phone. \"I have seen this for £45 in another shop; will you match that?\" Some large shops have a rule that they will. Never say you saw a price you did not see.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 9,
+   "test": "Ask what the price would be if you bought two or more.",
+   "note": "Plants at a garden centre, eggs at a farm gate, tins of paint, a second ticket, two haircuts for brothers. Only ask about things you would use two of.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 10,
+   "test": "Ask whether there is a discount you might be able to get.",
+   "note": "\"Do you do a discount for students, or for pensioners, or for families, or for a first order?\" Many places have one and do not put it on the sign. On the phone counts too.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 11,
+   "test": "Ask for money off something marked, scuffed, the last one, or on display.",
+   "note": "A dented box, a scratched table, the floor model, the last pair in your size. \"Would you take something off for the mark?\" Check it still works before you ask.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "For a job you need done, get two written quotes, and ask the dearer one whether they can come down.",
+   "note": "Cutting a hedge, fixing a car, clearing gutters, repairing a bike. Written means an email or a text with the price. Tell them honestly what the other quote was. A teenager can make the calls for a grown-up's job, with the grown-up's say-so.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 13,
+   "test": "When the person serving you says they cannot change a price, ask politely who can.",
+   "note": "\"I understand. Is there somebody who can decide on the price?\" A manager, the owner, a supervisor. Wait while they fetch them, then ask again.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 14,
+   "test": "Get money off something that had a printed price tag on it, in an ordinary shop.",
+   "note": "Use anything you have learned: a lower price elsewhere, buying two, a mark, a discount, asking the manager. Only on something you came in to buy. That is the far end of this ladder: a printed price is one you can ask about.",
+   "ctx": "out",
+   "kind": "courage"
+  }
+ ]
+}

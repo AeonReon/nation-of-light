@@ -1,0 +1,97 @@
+{
+ "id": "nerve.asking",
+ "name": "Asking out loud",
+ "line": "From asking somebody to say that again to asking for something you really want from somebody who can say yes.",
+ "size": "weeks",
+ "strand": "be-useful-to-somebody",
+ "from": 10,
+ "about": "For grown-ups and anybody from about ten; a child has a grown-up close by for any ask of a stranger. It starts with the smallest ask there is, \"Sorry, could you say that again?\", then free things in a café, a shop checking the back, a hand from a stranger, and a question in front of a group. In the middle you learn to ask and then wait in silence for the answer, and to ask for a better price and take no cheerfully. It ends with asking somebody for half an hour of their time, then asking for something you really want from somebody who can say yes, and then helping somebody else make their first ask. Many of the things people want, they would get simply by asking.",
+ "pic": 2,
+ "steps": [
+  {
+   "n": 1,
+   "test": "The next time you do not catch what somebody said, ask them to say it again instead of nodding.",
+   "note": "\"Sorry, could you say that again?\" At a counter, on the phone, in class, at the table. Most people nod and guess. Today you ask, and you listen to the whole answer the second time.",
+   "ctx": "with",
+   "kind": "courage",
+   "mins": 1
+  },
+  {
+   "n": 2,
+   "test": "In a café or shop, ask for something small that is free.",
+   "note": "A glass of tap water, an extra napkin, a spoon, the wifi password, a pen to borrow. Ask clearly and say thank you. If you already do this without thinking, do it on purpose today and count it.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 3,
+   "test": "Ask a shop assistant to check whether they have something in a different size or colour.",
+   "note": "Shoes in the next size up, a jumper in another colour, the last one of something in the back. You do not have to buy it when they bring it; \"thanks, I will think about it\" is fine.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 4,
+   "test": "Ask a stranger for a hand with something.",
+   "note": "Reaching a high shelf in a supermarket, taking a photo of your family, holding a door while you get a buggy through, which platform the next train goes from. A child asks with a grown-up standing beside them.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 5,
+   "test": "Ask one question out loud in front of a group.",
+   "note": "In a class, at a club, on a guided tour, at a parents' evening, at the end of a talk. Have the question ready before the moment comes. One sentence is enough.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 6,
+   "test": "Ask for a small change to what you have been given: a different table, a different seat, or a swap on a plate.",
+   "note": "A table by the window instead of by the door, salad instead of chips, a seat that is not in the draught. Politely, without a reason if you do not have one. Most places say yes when they can.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 7,
+   "test": "Ask for something today, then say nothing at all until the other person answers.",
+   "note": "The hard part is the pause. Most people fill it with \"it is fine if not\" and answer for the other person. Ask, close your mouth, and count slowly in your head. Any ask counts: a lift, a favour, a question at a counter.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Ask politely for a better price, and take no cheerfully if that is the answer.",
+   "note": "A stall at a market or a car boot sale (\"would you take eight for it?\"), a quote from a tradesperson, or a phone or broadband contract when it is due to renew (\"is that the best you can do for me?\"). Smile, ask once, and say thank you either way. A child can do the car boot with a grown-up.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 9,
+   "test": "Ask a neighbour, friend or relative for a favour you would normally talk yourself out of asking for.",
+   "note": "Borrowing a ladder or a drill, a lift to the station, somebody to water the plants while you are away, a hand moving a sofa. Say exactly what you need and when, and make it easy to say no.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 10,
+   "test": "Ask somebody who knows how to do something for half an hour of their time, and say what it is for.",
+   "note": "A neighbour who grows vegetables, a relative who fixes cars, somebody who does a job you are curious about. \"Could I have half an hour one evening to ask how you started? I would like to try it.\" Offer a cup of tea or help with a job in return.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 11,
+   "test": "Ask for something you really want from the person who can say yes to it.",
+   "note": "Extra hours or a change of hours from a manager, a place on a course or a team, a stall at a local fair, a trial day somewhere you would like to work, more pocket money for a job done at home. Say what you want, why, and then wait for the answer. A no today is still the ask done.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "Stand beside somebody while they make their first ask of a stranger.",
+   "note": "A child asking for tap water, a friend asking for a size in the back, a teenager asking a question at a counter. Let them choose the ask, stay close, and say nothing unless they look at you for help. Afterwards, tell them what they did well.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

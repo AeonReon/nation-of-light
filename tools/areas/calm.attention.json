@@ -1,0 +1,152 @@
+{
+ "id": "calm.attention",
+ "name": "Attention",
+ "line": "From ten minutes on one thing to three hours on one thing, once a week, three weeks running.",
+ "size": "months",
+ "strand": "look-after-yourself",
+ "from": 12,
+ "about": "For grown-ups and anybody from about twelve: schoolwork, a job, a hobby, reading or a practical task all count as \"the thing\". It starts with ten minutes on one task with a timer, then a written aim, the phone in another room, and counting the times your mind wanders. Twenty-five minutes, then two of them, then forty, an hour and ninety, with the things that pull you away found and removed along the way. It ends with a three-hour stretch on one thing, once a week, three weeks running. Being able to stay with one thing is behind almost every other skill in this school.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Pick one task, set a timer for ten minutes, and do only that task until it rings.",
+   "note": "Anything real: homework, an email you have been putting off, sorting a drawer, practising a tune. When your hand goes to the phone, put it back and carry on. If ten minutes on one thing is already easy for you, do it on purpose today and count it.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 10
+  },
+  {
+   "n": 2,
+   "test": "Before you start, write down in one line what you will do and what finished looks like, then do it.",
+   "note": "For example: \"Maths sheet, questions 1 to 8, checked.\" or \"Reply to the three emails from Monday.\" A line on paper stops you drifting into something else, because you can see what you said you would do.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Put your phone in a different room, then spend fifteen minutes on one task.",
+   "note": "Not face down on the desk: in another room, where getting it means standing up. If you need it for the task, turn off everything else on it. Notice how often you reach for where it would normally be.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "During fifteen minutes on one task, make a mark on paper every time your mind wanders, then bring it back.",
+   "note": "A tally mark, no judging. Twenty marks is a perfectly normal first number. The skill is not the wandering stopping; it is noticing sooner and coming back. Keep the paper to compare later.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Work on one task for twenty-five minutes without stopping, then take a five-minute break away from any screen.",
+   "note": "Timer on, the one-line aim written, phone away. In the break stand up, get a drink, look out of a window. If a thought about something else comes, write it on a scrap and go back to the task.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Turn off notifications on your phone and computer for one whole session of work.",
+   "note": "Most phones have a \"do not disturb\" or focus setting in the quick menu. Turn it back on afterwards if you want to. People who might need you urgently can usually still get through by phone call.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Keep a \"later\" list beside you, and write down every urge to check something instead of checking it.",
+   "note": "Messages, the news, what that actor was in, the price of something. Write it down and carry on. At the end of the session, look at the list: most of it will not matter any more, and the rest takes five minutes.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 8,
+   "test": "Finish three tasks today, one at a time, each one completely before you start the next.",
+   "note": "Small ones are fine: a form, a load of washing hung out, one piece of homework. Completely means done, checked and put away. Starting a second before the first is finished is the habit this rung is breaking.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Do two twenty-five-minute stretches in one morning or afternoon, with a five-minute break between them.",
+   "note": "Same task or two different ones. In the break, do not open anything on a screen; that is what makes the second stretch hard to start.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "After three sessions, write down the three things that pulled you away most.",
+   "note": "Look at your tally marks and your later lists. For example: \"messages\", \"hungry\", \"people talking in the kitchen\". Be honest and specific.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Remove or fix one of those three before your next session.",
+   "note": "Messages: phone in another room. Hungry: eat first. Noise: a different room or a quieter time of day. Tabs open: close them all before you start. Pick the easiest one to fix.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Read something difficult for forty minutes without stopping.",
+   "note": "Difficult means it needs your full attention: an old novel, a history book, a manual, a long article about something you care about. Phone away, a pencil to mark what you do not understand, no looking things up until the forty minutes are over.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 13,
+   "test": "Spend one hour on one task with no screen within reach.",
+   "note": "Work that does not need a screen: writing by hand, drawing, reading on paper, fixing something, practising an instrument, planning on paper. If your work needs a computer, turn off everything on it except the one thing you are using.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Sit down to the same task at the same time on three days in one week.",
+   "note": "For example 7 to 8 in the evening on Monday, Wednesday and Friday. The same time and place mean you spend less effort getting started, because the start becomes a habit.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 15,
+   "test": "Do one boring task all the way to the end in one go.",
+   "note": "The ironing pile, filing papers, cleaning out the car, copying notes up, a long form. Boring tasks are the best practice because nothing about them holds you there except you. Write the one-line aim first and tick it at the end.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 16,
+   "test": "Work on one thing for ninety minutes, with one short break at most.",
+   "note": "Two forty-five-minute halves work well. Water and a snack on the desk before you start. Aim written, notifications off, later list beside you.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 17,
+   "test": "Spend two hours on one thing, with a five-minute break every forty-five minutes.",
+   "note": "The same thing you did for ninety minutes, or a new one. Before you start, fill the water glass and write the one-line aim. In the breaks, stand up and move; do not open anything on a screen.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 18,
+   "test": "Spend three hours of one morning or afternoon on one thing, with short breaks.",
+   "note": "One project, not one task list: a chapter, a garden bed, a piece of music, a big piece of schoolwork, a room decorated. Take a five-minute break about every forty-five minutes, away from screens.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 19,
+   "test": "Tell somebody else exactly how you get yourself to concentrate, and help them try one thing from it.",
+   "note": "A friend, a teenager with exams, a colleague. Give them the one thing that made the most difference for you, for example the phone in another room or the later list, and ask how it went a few days later. Explaining it also shows you what you actually do.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 20,
+   "test": "Set a three-hour stretch on one thing, on the same day each week, for the next three weeks, and do all three.",
+   "note": "For example every Saturday morning from nine to twelve. Put it in the calendar and tell the people you live with. This is the end of the ladder: three hours of real attention is enough to learn, make or finish almost anything worth doing.",
+   "ctx": "long",
+   "kind": "attention"
+  }
+ ]
+}

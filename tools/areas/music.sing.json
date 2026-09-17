@@ -1,0 +1,157 @@
+{
+ "id": "music.sing",
+ "name": "Singing",
+ "line": "From one steady hummed note to starting a song that everybody in the room joins in with.",
+ "size": "months",
+ "strand": "say-what-you-mean",
+ "about": "For everybody: a child and a grown-up can climb it side by side. The climb starts on your own with one long hummed note and a two-minute warm-up, then learns to breathe low, to match a note, and to sing a song through with the recording turned off. Only then does anybody else hear you: one person, then a round with somebody, then a group. It ends with you starting a song that the whole room joins in with. Nothing to buy; a free piano app or website gives you the notes, and no rung asks anybody to listen until you have practised alone.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Hum one long, steady note for as long as one breath lasts, and time it.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 2,
+   "note": "Pick a comfortable note in the middle of your voice, not high or low. Keep it the same, without wobbling up or down, until the breath runs out. Write down the seconds; you will beat it on rung three."
+  },
+  {
+   "n": 2,
+   "test": "Do a two-minute voice warm-up: humming, a lip buzz, and slides from low to high.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "It loosens the voice before singing, the way a stretch does before running. Do it quietly; it does not need to be loud.",
+   "how": [
+    "Hum gently on a comfortable note for thirty seconds.",
+    "Blow air through loose closed lips so they buzz, and slide the note up and down, for thirty seconds.",
+    "Sing \"oo\" sliding slowly from your lowest comfortable note to your highest and back, four times.",
+    "Finish with a long, easy hum."
+   ]
+  },
+  {
+   "n": 3,
+   "test": "Breathe in so your stomach moves out and your shoulders stay still, then hum one note for longer than on rung one.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Put one hand on your stomach and one on your chest. Breathe in through your nose so the lower hand moves and the upper hand hardly moves. Let the breath out slowly on the hum. If your shoulders rise, start again, slower."
+  },
+  {
+   "n": 4,
+   "test": "Do the warm-up three mornings running.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "In the shower, making breakfast, or in the car. The same two minutes as rung two. Tick off the three mornings."
+  },
+  {
+   "n": 5,
+   "test": "Match one note: play it on a free piano app or website, and hum it until your note and that note sound the same.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Search \"online piano\" for a free keyboard. Pick a note in the middle, play it, and hum. When you are slightly off you hear a wobble or a buzz between the two sounds; when you match, the two sounds blend into one. Slide your hum slowly up or down until the wobble stops, or ask somebody to sing you the note instead."
+  },
+  {
+   "n": 6,
+   "test": "Match five different notes in a row on the piano app.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Choose five notes close together, one at a time. Play, listen, then hum. If one goes wrong, play it again and slide to it before moving on."
+  },
+  {
+   "n": 7,
+   "test": "Sing the first five notes of a scale up and back down, in tune with the piano app.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "On the piano app, start on any white key and play the next four white keys to the right; that is five notes going up. Sing them on \"la\", one per note, then back down. Play each note first if you need to, then try singing all five without it."
+  },
+  {
+   "n": 8,
+   "test": "Write out the words of one song you like from memory, check them, and sing it through without looking.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "A song you already half know is easiest: a hymn, a football song, a song from a film, a folk song. Fix the lines you got wrong, then sing it all through at a normal speaking volume. Nobody else needs to hear this one."
+  },
+  {
+   "n": 9,
+   "test": "Record yourself singing that song on your phone, and listen back to all of it once.",
+   "ctx": "room",
+   "kind": "courage",
+   "note": "Many people do not like hearing their own recorded voice at first, and that is normal. Listen once to the end and write down one part that was in tune and one that was not. The recording is only for you; delete it afterwards if you like."
+  },
+  {
+   "n": 10,
+   "test": "Do the warm-up every morning for one week.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "The same two minutes, seven days. Add rung seven's five notes at the end. If you miss a day, carry on the next."
+  },
+  {
+   "n": 11,
+   "test": "Sing along with the recording of your song, turn the sound off halfway, and still be in time and in tune when you turn it back on.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Use a music app or a video. Sing with it for the first verse, mute it, keep singing, and unmute at the chorus. If you have drifted away, try again; it usually takes a few goes. This is what singing without backing feels like."
+  },
+  {
+   "n": 12,
+   "test": "Sing the same song louder, without it going shouty.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Loud singing comes from breathing low, as on rung three, not from squeezing your throat. Stand up, open your mouth wider, and let the sound out on each breath. If your throat hurts, stop and try again quieter tomorrow. Pick a time when nobody in the house is sleeping."
+  },
+  {
+   "n": 13,
+   "test": "Learn a second song properly, words and all.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "A different kind from the first: if the first was slow, make this one quicker. Use the same method: write the words out, check them, sing it with and then without the recording."
+  },
+  {
+   "n": 14,
+   "test": "Sing one of your two songs all the way through to one person.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Somebody in your family, a friend, a grandparent on a phone call. Tell them you are practising singing and ask them to just listen. Stand up, breathe low, and do not stop to apologise; carry on to the end."
+  },
+  {
+   "n": 15,
+   "test": "Sing a round with somebody else, each of you holding your own part.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "\"Row, Row, Row Your Boat\", \"London's Burning\" and \"Frère Jacques\" are rounds. One person starts, and the second starts from the beginning when the first reaches the end of the first line. Keep going until you can each sing through twice without joining the other person's part."
+  },
+  {
+   "n": 16,
+   "test": "Do the warm-up every morning for thirty days.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Two or three minutes each morning for a month. By now it is warm-up, five notes up and down, and one song. If you miss a day, carry on the next and add a day at the end."
+  },
+  {
+   "n": 17,
+   "test": "Sing three songs from memory, back to back, with no words in front of you.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Your two songs and one more. Sing them standing up, one straight after the other, as if somebody were listening. If you forget a line, keep the tune going on \"la\" until the words come back."
+  },
+  {
+   "n": 18,
+   "test": "Join in with a group singing, and sing every word out loud from beginning to end.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "A church service, a choir's open rehearsal, a carol service, a match, a singing session in a pub or community hall, a birthday. Many choirs welcome a newcomer who wants to listen or try; ask before you go. Sing at full voice, not mouthing along."
+  },
+  {
+   "n": 19,
+   "test": "Sing one song on your own to a group of three or more people.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "A family gathering, a friend's birthday, a car full of people. Say what you are going to sing, stand up if you can, and sing the whole thing. A child can sing to the family at teatime."
+  },
+  {
+   "n": 20,
+   "test": "Start a song yourself and get everybody in the room singing along with you.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Happy Birthday at a party, a round at a family gathering, a song everybody knows on a long car journey. Start clearly on a note that suits most voices, not too high, and keep singing loudly so others can follow. When the whole room is singing, you have finished this ladder."
+  }
+ ]
+}

@@ -1,13 +1,12 @@
 """v74: Creating order rungs that stand on their own and take 10-20 minutes, read by hand.
-They can come up as Today's extra. Doing one as an extra does NOT tick the rung or enrol you
+They can come up as Today's extra. (v76: the bedroom was rewritten; its extras are now rungs 1, 3, 4 and 5.) Doing one as an extra does NOT tick the rung or enrol you
 in the ladder. (rung n, minutes, note written for when it arrives without its ladder)."""
 EXTRAS = {
  'order.bedroom': [
   (1, 20, "Bedside table, chest of drawers, windowsill, the chair that collects clothes. Everything off, then back only what you picked up in the last seven days. The rest goes where it lives, or into one bag to decide about at the weekend."),
   (3, 15, "Every house has one: the box, bag or corner where things wait to be dealt with. Tip it out. Each thing gets one of three answers: bin, give, or a real home. No fourth pile."),
-  (4, 10, "Clothes into the wash basket or back on a hanger, shoes in a pair, bags on a hook, anything else into its place. Set a timer for ten minutes and see how much of the floor comes back."),
   (5, 20, "Look where you never look: under the bed with a torch, along the skirting, into the corners, and the light switch that everybody touches. A damp cloth does all of it."),
-  (7, 15, "The bedroom is for sleeping and dressing. The ironing pile, the exercise bike used as a rail, the work bag, the laptop charger: take one of them out and find it a better place tonight."),
+  (4, 15, "The bedroom is for sleeping and dressing. The ironing pile, the exercise bike used as a rail, the work bag, the laptop charger: take one of them out and find it a better place tonight."),
  ],
  'order.desk': [
   (1, 15, "Everything off: the pens, the mugs, the post. Wipe it with a damp cloth until it is bare. Then choose three things you actually use every day, and only those go back. A kitchen table you work at counts."),

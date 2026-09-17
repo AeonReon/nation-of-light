@@ -1,0 +1,157 @@
+{
+ "id": "home.mend",
+ "name": "Mending",
+ "line": "From fresh batteries in something that stopped to teaching somebody else a repair, hands off.",
+ "size": "months",
+ "strand": "make-things",
+ "about": "For grown-ups and teenagers; a child from about eight can do many of the rungs with a grown-up beside them, and each note says where a grown-up is needed. The climb starts with batteries and the right screwdriver, then learns where the line is (gas, mains electrics and roofs are always for a qualified person), then glue, cloth, zips, a sink trap, a sticking door, a hole in a wall, and a part replaced rather than the whole thing. It ends with fixing something for somebody else, and then teaching them to fix one thing themselves. Most of it needs only what is already in a drawer at home, and every repair is one less thing bought.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Change the batteries in something that has stopped working, and put the cover back on properly.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 5,
+   "note": "A remote control, a torch, a kitchen scales, a toy, a bathroom scale. Match the size printed on the old batteries (AA, AAA, a round button cell) and the plus and minus marks inside. Old batteries go to the battery box at a supermarket, not the bin. Button batteries are dangerous if swallowed, so keep them well away from small children."
+  },
+  {
+   "n": 2,
+   "test": "Find three screws in the house and the screwdriver that fits each one with no wobble.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Try a cupboard hinge, a battery cover on a toy, or a door handle; screw heads are either a straight slot or a cross, and they come in sizes; the right one sits deep in the head and does not slip. With no screwdriver, a coin often fits a straight slot. Leave the screws on light switches and sockets alone."
+  },
+  {
+   "n": 3,
+   "test": "Write down the repairs in your home you should never do yourself, and who you would ring for each.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Anything to do with gas, the fixed mains electrics (sockets, switches, the fuse box wiring), and anything on a roof or up a tall ladder. Gas work in Northern Ireland needs a Gas Safe registered engineer; wiring needs a qualified electrician. If you smell gas, open windows, do not touch switches, and ring the Northern Ireland gas emergency number, 0800 002 001. Keep the list on the fridge or in your phone."
+  },
+  {
+   "n": 4,
+   "test": "Glue one broken thing with the right glue, leave it the full time on the tube, and check it still holds a week later.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "A plant pot, an ornament, a toy, the sole of an old shoe. Read the tube: some glues are for paper and wood, some for ceramics, some for shoes. Hold or clamp it (rubber bands, a pile of books) for the whole time the tube says. A grown-up handles superglue, which sticks skin in seconds; anything used for hot food or drink is better replaced than glued."
+  },
+  {
+   "n": 5,
+   "test": "Mend a book: glue a loose page back in, or tape a torn page from the back.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "A thin line of white PVA glue along the edge of a loose page, pushed back in, then the book closed under something heavy overnight. For a tear, clear tape on the side with less printing, or thin paper and glue. A child can do this one alone with a glue stick."
+  },
+  {
+   "n": 6,
+   "test": "Fix a screw that just spins in its hole, so it holds tight.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Common on cupboard hinges and door handles. Take the screw out, push two or three wooden matchsticks or cocktail sticks dipped in wood glue into the hole, snap them off level, leave it an hour, then put the screw back in. If you have no wood glue, the sticks alone often work for something light.",
+   "how": [
+    "Take the loose screw out.",
+    "Push glued matchsticks into the hole until it is full.",
+    "Snap or cut them off level with the surface and wait an hour.",
+    "Drive the screw back in gently until it is firm."
+   ]
+  },
+  {
+   "n": 7,
+   "test": "Patch or darn one hole in a piece of clothing so it can be worn again.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "A sock heel, a jumper elbow, the knee of a child's trousers. For a small hole, sew back and forth across it, then across those stitches the other way, like weaving. For a bigger one, sew a piece of fabric from an old garment over it. A needle and thread are the only kit; a sewing kit from a hotel or a cracker is enough."
+  },
+  {
+   "n": 8,
+   "test": "Put a zip back on its track, or give a zip with a broken pull a new one.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "If one side has come out, open the zip fully, ease the slider back over both rows of teeth at the bottom, and pull up gently. If the pull tab has snapped off, a key ring, a paper clip or a loop of string through the hole works. Coats, bags and pencil cases are good places to find one."
+  },
+  {
+   "n": 9,
+   "test": "Clear a slow sink: take the hair out of the plughole, then undo and clean the U-bend underneath and put it back without drips.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Put a basin under the curved pipe under the sink first, because it is full of water. Unscrew the two plastic rings by hand, rinse the bend out in a bucket (not in the same sink), and screw it back hand-tight. Run the tap for a minute and check for drips. Wear rubber gloves, never mix drain cleaners, and a child does this one with a grown-up."
+  },
+  {
+   "n": 10,
+   "test": "Fix a door that sticks or a drawer that does not run smoothly.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "For a door: tighten every hinge screw first, since a loose hinge is the usual cause, then rub chalk on the edge, close it, and look where the chalk has rubbed off. For a drawer: take it out, clean the runners, and rub a candle or a bar of dry soap along them. If a door needs planing, that is a job to watch somebody do first."
+  },
+  {
+   "n": 11,
+   "test": "Take one small thing apart to fix it, keep the screws in order, and put it back together so it works.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "A pepper grinder, a torch, a toy, a stapler, a pair of glasses with a loose arm. Photograph each stage with your phone and put the screws in an egg box, one cup per stage. Never open anything that plugs into the mains, a microwave, a television or a phone charger: they can hold a dangerous charge even when unplugged. A child does this with a grown-up."
+  },
+  {
+   "n": 12,
+   "test": "Fill a small hole or crack in a wall and sand it flat.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "A screw hole from an old picture or a dent from a door handle. Scrape out loose bits, press ready-mixed filler in with a knife so it stands a little above the wall, leave it as long as the tub says, then sand it smooth with sandpaper wrapped round a block. Filler is a few pounds; ask a neighbour or a relative for the end of a tub. If you rent, ask the landlord first, and wear a dust mask when sanding."
+  },
+  {
+   "n": 13,
+   "test": "Paint over the patch you filled so the edges cannot be seen.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Use leftover paint from that wall; many houses have the tin in a shed or under the stairs. Paint a little wider than the patch and spread the edges out thin with an almost dry brush. Let it dry, then look from across the room in daylight. A child can do this with a small brush and a grown-up nearby."
+  },
+  {
+   "n": 14,
+   "test": "Fix three broken things in one day.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Walk round the house first and write down every small broken thing you have been meaning to fix, then pick three you now know how to do. A loose handle, a stuck drawer, a torn page all count. Tick them off as they are done."
+  },
+  {
+   "n": 15,
+   "test": "Replace one worn-out part instead of replacing the whole thing.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "A shower hose, a vacuum cleaner belt, a cupboard handle, a toilet seat, the rubber feet on a chair. Take the old part with you to the shop, or search the model number printed on the thing for the exact part. For free, take a part from a broken one of the same kind, or ask at a repair café."
+  },
+  {
+   "n": 16,
+   "test": "Watch somebody who knows how mend something, and ask them to explain each step while they do it.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "A grandparent who darns, a neighbour who fixes bikes, a relative who does DIY. A repair café is ideal if there is one near you: search \"repair café\" and the name of your town. Bring one of your own broken things if you can, and write down one thing you learned."
+  },
+  {
+   "n": 17,
+   "test": "Put together one box of the things you kept needing on this ladder.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Look back at what you used: two screwdrivers, glue, a needle and thread, tape, sandpaper, a few spare screws, matchsticks, a torch. One shoebox is enough. Keep it somewhere everybody in the house knows about."
+  },
+  {
+   "n": 18,
+   "test": "Fix one thing that somebody in the house had already given up on and put aside to throw out.",
+   "ctx": "home",
+   "kind": "courage",
+   "note": "Ask around: there is usually something in a cupboard or a bag by the door. Look it up, try, and if it cannot be fixed, find out why before it goes. Working again is the rung; learning exactly why it cannot be fixed also counts."
+  },
+  {
+   "n": 19,
+   "test": "Fix something for somebody else who could not fix it themselves.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "A neighbour's sticking door, a grandparent's torch, a friend's coat zip. Take your box from rung seventeen. Only take on repairs you have already done on this ladder, and say so if it is beyond you."
+  },
+  {
+   "n": 20,
+   "test": "Teach somebody to fix one thing themselves, with your hands off it the whole time.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Pick a repair from this ladder that you are sure of: a patch, a spinning screw, a stuck drawer. Talk them through it and keep your hands in your pockets, even when it is slow. It is finished when the thing works and they did every part of it."
+  }
+ ]
+}

@@ -2112,6 +2112,8 @@
       ${n === N ? '<span class="tk-crown"></span>' : ''}
       <div class="tk-heroin"><span class="tk-chip">${c.name}</span><h2>${tr.name}</h2><p>${tr.line || ''}</p></div></div>`;
     h += `<div class="tk-size sz-${tr.size || 'months'}"><b>${sz.name}</b><span>${sz.line}</span></div>`;
+    /* v76, his: say plainly whether a ladder is for children, grown-ups, or both */
+    if (tr.who) h += `<p class="tk-who">${tr.who}</p>`;
     /* One ladder in the school needs a guard, and a guard nobody reads is not
        one — so it sits above the trophies and the next step, not under them. */
     if (tr.warn) h += `<div class="tk-warn"><b>Read this first</b><span>${tr.warn}</span></div>`;
@@ -2259,7 +2261,7 @@
   function openSearch() { SEARCH = SEARCH || ''; TRK = null; CAT = null; hush(); renderSchool(); }
   function closeSearch() { SEARCH = null; hush(); renderSchool(); }
 
-  function trackRow(tr) { const c = catOf(tr), n = trackDone(tr), N = tr.steps.length; return `<button class="srow track pic" style="--c:${c.accent};--c2:${c.accent2}" data-track="${tr.id}"><img src="${trackImg(tr)}" alt="" loading="lazy" onerror="this.src='images/cat/${c.id}.jpg'"><span class="stxt"><span class="stest">${tr.name}</span><span class="sline2">${tr.line || ''}</span><span class="szr sz-${tr.size || 'months'}">${sizeOf(tr).name}</span><span class="sprog"><i style="width:${Math.round(n / N * 100)}%"></i></span></span><span class="snum">${n} of ${N}</span></button>`; }
+  function trackRow(tr) { const c = catOf(tr), n = trackDone(tr), N = tr.steps.length; return `<button class="srow track pic" style="--c:${c.accent};--c2:${c.accent2}" data-track="${tr.id}"><img src="${trackImg(tr)}" alt="" loading="lazy" onerror="this.src='images/cat/${c.id}.jpg'"><span class="stxt"><span class="stest">${tr.name}</span><span class="sline2">${tr.line || ''}</span>${tr.who ? `<span class="swho">${tr.who}</span>` : ''}<span class="szr sz-${tr.size || 'months'}">${sizeOf(tr).name}</span><span class="sprog"><i style="width:${Math.round(n / N * 100)}%"></i></span></span><span class="snum">${n} of ${N}</span></button>`; }
   /* The old veil. Kept as a name only, so any caller left anywhere lands on
      the page instead of a dead end. */
   const trackSheet = tr => openTrack(tr);

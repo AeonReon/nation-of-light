@@ -1,0 +1,124 @@
+{
+ "id": "money.handling",
+ "name": "Handling money",
+ "line": "From putting the coins in order to doing a whole week's shop under budget, receipt checked.",
+ "size": "weeks",
+ "strand": "be-useful-to-somebody",
+ "from": 7,
+ "about": "For everybody from about seven: a child with pocket money and a grown-up can climb it side by side. For a child it is the real basics, coins, change and value; a grown-up does the same rungs faster, and the notes say what the grown-up version looks like. It goes from coins in order, to change in your head, to price per gram on the shelf, to a week of money written down, and ends with a whole week's shop planned on paper and done under budget. None of it needs any money beyond what the household already spends.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Put one of each coin on the table and put them in order of value, smallest first.",
+   "note": "1p, 2p, 5p, 10p, 20p, 50p, £1, £2. A child names each one out loud. No coins in the house: use the pictures on the Royal Mint website. Already easy? Tip out a purse or a jar of mixed coins and total it in your head, then count to check.",
+   "ctx": "home",
+   "kind": "attention",
+   "mins": 3
+  },
+  {
+   "n": 2,
+   "test": "Make one pound out of coins in three different ways.",
+   "note": "Two 50ps; five 20ps; a 50p, two 20ps and a 10p. A grown-up can make £3.85 in the fewest coins possible, then in the most.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 3,
+   "test": "In a shop, add up the prices of three things in your head before you reach the till.",
+   "note": "Round each price to the nearest ten pence to make it easier, then check your answer against the till. No trip to a shop today: do it with a receipt from the bin or three prices on a supermarket website.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Pay for something small with cash, and count your change before you walk away.",
+   "note": "Use something the house needs anyway: milk, bread, a stamp. A child hands over the money and counts the change while the grown-up waits. If it is wrong, say so politely at the counter; that is part of the rung.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 5,
+   "test": "Play shop at home: one person buys, the other gives change from a £5 note, five times in a row with no mistakes.",
+   "note": "Real coins or paper ones. Prices under £5, like £3.40 or £1.85. Count up from the price to £5, the way shops used to. A grown-up on their own can do five from old receipts on paper.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Work out, in your head, the change from £10 and from £20 for five different prices, and get all five right.",
+   "note": "Take prices from a receipt or a supermarket leaflet: £7.35 from £10 is £2.65. Write your answers first, then check on a calculator.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Compare two sizes of the same thing on a shop shelf, using the price per 100 grams, and say which is better value.",
+   "note": "The smaller numbers on the shelf label give the price per 100g, per kilo or per item. Cereal, rice, washing-up liquid. No shop today: the same numbers are on a supermarket website.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Find one thing where the bigger pack costs more per 100 grams than the smaller one.",
+   "note": "It happens more often than people expect, especially with offers. Write down what it was. That is the reason to read the price per 100g line every time.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Check every card or phone payment from the last seven days against what you remember buying.",
+   "note": "On the banking app or a paper statement. Tick each one. A child with no card sits with a grown-up and finds three of the grown-up's payments on the list. Anything you do not recognise, ask the bank about it.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Write down all the money that comes in and all the money that goes out, for seven days in a row.",
+   "note": "Pocket money and what it was spent on; or wages, bills, shopping and every coffee. If you did one day in Money and value, this is the same, for a whole week. A page in a notebook is enough.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Sort that week's spending into three lists: needed, wanted, and did not notice spending.",
+   "note": "The third list is the interesting one: the snack on the way home, the app, the small things that added up. No judging, just sorting.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Put a fixed amount of spending money in an envelope or pot for one week, and make it last to the end of the week.",
+   "note": "A child uses their pocket money. A grown-up uses a week's money for extras (coffees, snacks, treats), taken out as cash or written as a number on the envelope. If it runs out on Thursday, that is useful to know; do the week again.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 13,
+   "test": "Plan one meal on paper: the ingredients, a price beside each, and a total.",
+   "note": "Spaghetti, a stew, a packed lunch for three days. Prices from a supermarket website or last week's receipt. Count only what you need to buy, not what is already in the cupboard.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Shop for that meal with a budget just over your total, keeping a running total as you go, and come in under it.",
+   "note": "Round each item up as you put it in the basket and add it in your head or on your phone. A child does this with a grown-up and family money; the grown-up only helps if asked.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 15,
+   "test": "Plan a whole week's food shop on paper, with a price beside each item and a budget at the bottom.",
+   "note": "Plan the meals first, then write the list from the meals, then price it. For a child, this is a week of their own packed lunches or breakfasts, worked out with a grown-up.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 16,
+   "test": "Do that week's shop, come in under budget, and check the receipt against the shelf prices.",
+   "note": "Keep your running total, swap an item if you go over, and check the receipt before you leave the shop. A child does it with a grown-up beside them, holding the list and the total. That is the far end of this ladder.",
+   "ctx": "out",
+   "kind": "skill"
+  }
+ ]
+}

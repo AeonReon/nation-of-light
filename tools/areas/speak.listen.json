@@ -1,0 +1,137 @@
+{
+ "id": "speak.listen",
+ "name": "Listening",
+ "line": "From putting your phone down when somebody talks, to helping somebody reach their own answer with only questions.",
+ "size": "weeks",
+ "strand": "be-useful-to-somebody",
+ "from": 8,
+ "about": "For anybody from about eight: a child and a grown-up can climb it side by side. It starts with the plain things (phone down, face the person, let them finish) and moves to saying back what you heard, asking instead of telling, and staying quiet when somebody is upset. The last rungs are listening to people you disagree with, and helping somebody think a real decision through using nothing but questions. Being properly listened to is rare, and the people who can do it are the people others come back to.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Put down whatever is in your hands and turn to face the next person who talks to you.",
+   "note": "Your phone, the remote, a book, a pen. Turn your shoulders, not just your head, and look at them until they have finished. That is the whole rung, and it changes the conversation more than you would expect.",
+   "ctx": "with",
+   "kind": "attention",
+   "mins": 2
+  },
+  {
+   "n": 2,
+   "test": "Let somebody tell you about their day, and say nothing until they have stopped.",
+   "note": "At tea, in the car, on the walk home from school. Nods are allowed; words are not. If you live alone, ring somebody and ask about their day. If you find you already do this, do it on purpose tonight and count it.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Let somebody finish every sentence for a whole conversation, even when you know how it ends.",
+   "note": "Catch yourself when you want to jump in and finish it for them. Wait for the full stop. A conversation of five minutes is enough.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Listen to a short piece on the radio or a podcast, then say its three main points out loud.",
+   "note": "Pick something three to five minutes long: a news item, a talk, a story. Listen once, no rewinding, then say the three points to the room or to somebody nearby. This is the practice for the next rung, without a person waiting on you.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Say back what somebody told you, in your own words, and ask \"Have I got that right?\"",
+   "note": "\"So the bus was late and you missed the start, have I got that right?\" If they correct you, say the corrected version back. Getting it right on the second go still counts.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "When somebody tells you something, ask one question about it instead of telling a story of your own.",
+   "note": "They say they went to the beach; you ask which beach, not tell them about your beach. Wanting to tell your own story is normal. Noticing the moment you want to is half of this rung.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Keep somebody you know talking for five minutes, using only questions about what they have just said.",
+   "note": "A parent, a friend, a brother or sister. \"What happened then?\" \"Why do you think that was?\" \"What was the best bit?\" Use a timer if it helps. If you did the two minutes in Meeting people, this is the same thing, longer, with somebody you know.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Notice when somebody has stopped listening to you, and finish what you are saying in one sentence.",
+   "note": "The signs: they look away, check a phone, say \"mm\" a lot, start moving. When you see one, finish your point in a sentence and ask them something. Then it is their turn.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Listen to a talk of about thirty minutes, then write down its main points from memory.",
+   "note": "A lecture online, a sermon, a talk at the library, a long radio programme. No notes while you listen. Three to five points afterwards is a good result.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Ask somebody close to you how they are, and if they say \"fine\", ask once more and wait.",
+   "note": "\"Fine, and how are you really?\" Then say nothing for a few seconds. Most of the time it is fine, and that is good to know. Sometimes the second answer is the real one.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 11,
+   "test": "Listen to somebody who is upset until they have finished, without giving any advice.",
+   "note": "A friend after a bad day, a child whose game went wrong, a parent who is tired. No \"you should\", no \"at least\". \"That sounds hard\" and \"What happened?\" are enough. The urge to fix it is kind, and it is also what stops people talking.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 12,
+   "test": "Ask somebody \"Do you want help with this, or do you want me to listen?\", and do what they choose.",
+   "note": "Use it the next time somebody brings you a problem. If they want help, help. If they want you to listen, the last rung was the practice.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 13,
+   "test": "Listen to somebody who disagrees with you about something that matters to them, all the way through, without interrupting.",
+   "note": "Pick something real but not bitter: whether children should have phones, which school is best, whether the town needs a new road, which team is better. Your turn to talk comes after. Do not argue it back in your head while they speak; that is not listening.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 14,
+   "test": "Say their side back so well that they say \"Yes, that is what I mean.\"",
+   "note": "Same person, or another disagreement. You do not have to agree with it; you have to say it fairly. If they say \"not quite\", try again. When they say yes, the rung is done.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 15,
+   "test": "When two people are disagreeing about something small, say each side back to them fairly, without taking a side.",
+   "note": "Where to go on Saturday, what to watch, whose turn it is. \"So you want the park because it is dry, and you want the cinema because you have been waiting all week.\" Small things only; a serious row is for grown-ups to handle, not for this rung.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 16,
+   "test": "Let somebody talk through a small problem for ten minutes while you ask only questions, until they say what they will do.",
+   "note": "What to make for tea, how to fit in a job, what to say to a friend. Questions like \"What have you tried?\" and \"What would make it easier?\" No suggestions. It feels slow; that is fine.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 17,
+   "test": "Help somebody think through a real decision for twenty minutes, using only questions, until they tell you their next step.",
+   "note": "A job, a move, a course, a hard conversation they need to have; for a child, which club to join or how to make up with a friend. \"What matters most to you here?\" \"What would you do if you were not afraid of getting it wrong?\" \"What is the first thing you could do?\" The answer is theirs, and that is why they will act on it. That is the far end of this ladder.",
+   "how": [
+    "Ask what the decision is, and what they have thought of so far.",
+    "Ask what matters most, and what worries them.",
+    "Ask what they could do first.",
+    "Say their next step back to them, and stop."
+   ],
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

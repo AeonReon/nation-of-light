@@ -560,3 +560,24 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   the Back button sat top left beside the Day pill and went unseen. While the band is open it is now a "Back" pill
   at the foot of the band on the left, under Aurelia (`.stage.school:not(.tucked) .backbtn`); tucked, it returns to
   the top-left circle.
+- **v76 (2026-09-17, Opus session): the rewrite continues — two ladders in each of the other nine areas.**
+  His: "at least two for every one of the life areas; make sure the order makes sense, it is doable, no weird
+  language, and it is clear whether it is for children, adults, or both." 18 ladders, 301 rungs, every rung with a
+  note, to the v73 standard (tools/health/lib.py) plus a who rule (`tools/areas/BRIEF.md`): Relationships
+  speak.listen, care.giving · Community speak.strangers (now asking people what they know, ending in an interview),
+  care.place (permission BEFORE planting) · Prosperity money.handling (child with pocket money and grown-up side by
+  side), deal.price · Knowledge mind.findout (checking sources, AI answers included), words.books · Home
+  order.bedroom (12 rungs; its evening extras are now rungs 1, 3, 4, 5), home.mend (the never-yourself list —
+  gas, mains, roofs — comes before any tool) · Fun and creativity make.draw, music.sing · New experiences
+  wild.weather (tide rules, hypothermia signs, turn-back time), sky.stars (all NI-latitude facts checked) ·
+  Spirituality calm.gratitude, calm.attention · Emotions nerve.asking, belong.chair (renamed "Grand places, from
+  home": the old name was a figure of speech). **`who` on a ladder** = a short plain label ("From about eight; a
+  child and a grown-up side by side", "Grown-ups and teenagers") drawn under the line on the row (`.swho`) and on the
+  ladder page (`.tk-who`); `from: n` is set too where an age applies. Health says it in its `line` instead ("For
+  grown-ups."); give the rest of Health a `who` when convenient. Process: three writers in parallel against the
+  brief, every rung read; `tools/areas/apply_v76.py` holds the fixes (a wrong sky fact — two hours is a twelfth of
+  a circle, not a sixth — the rename, three wording fixes), asserts the fields, and keeps
+  tools/daily/first_mins.py and order_extras.py in step so re-running patch_v74 cannot undo it. Writers' notes on
+  the order of each ladder: tools/areas/A-/B-/C-notes.md. Unverified at source: NI gas emergency 0800 002 001
+  (believed right), Stormont free tours ("has run"), council litter-pick support, Keep Northern Ireland Beautiful.
+  Quick pool now 192. Next: the remaining ladders area by area, same brief.

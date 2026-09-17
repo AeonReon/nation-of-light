@@ -1,0 +1,151 @@
+{
+ "id": "sky.stars",
+ "name": "Stars and planets",
+ "line": "From finding the Plough to an hour under the stars showing family or friends ten things by name.",
+ "size": "months",
+ "strand": "get-strong-outside",
+ "about": "For everybody: a child and a grown-up can climb it side by side, and a grown-up is always with a child out in the dark. It starts with the one shape you can see from Northern Ireland on every clear night of the year, the Plough, and uses it to find the North Star and Cassiopeia. Then the sky turning through the night, the big pattern of the season, a planet, the space station, shooting stars and the Moon's craters. It finishes somewhere properly dark with the Milky Way and the Andromeda galaxy, and then an hour of showing other people what you know. Most of it needs nothing but a clear night and a doorstep, and it is one of the best things to share with a child.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "On a clear night, go outside or to a dark window and find the Plough.",
+   "note": "The Plough is seven bright stars in the shape of a saucepan: four make the pan and three make the handle. From Northern Ireland it never sets, so it is up on every clear night of the year, somewhere in the northern half of the sky. Turn off the lights behind you. A free sky map such as Stellarium Web can show you where to look, then put the phone away.",
+   "ctx": "out",
+   "kind": "attention",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Follow the two end stars of the Plough's pan to the North Star, and point north.",
+   "note": "Take the two stars on the side of the pan furthest from the handle. Follow the line they make out of the top of the pan, about five times the gap between them, to a star on its own that is not especially bright. That is the North Star. Face it and you are facing north; check with a compass app if you like. From here it sits a little over halfway up the sky, and it hardly moves.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Find Cassiopeia, the W of five stars on the far side of the North Star from the Plough.",
+   "note": "Draw an imaginary line from the Plough through the North Star and keep going about the same distance again. Cassiopeia looks like a W or an M depending on the time of year and night. Like the Plough, it never sets from Northern Ireland.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 4,
+   "test": "Look for the faint star beside the middle star of the Plough's handle, and say whether you can see it.",
+   "note": "The middle star of the handle is called Mizar, and right beside it is a fainter one called Alcor. Some people can see the pair at once, some after a minute of looking, and from a bright street some cannot see Alcor at all. Whatever you see, say it; it is a good test of your eyes and of how dark your sky is.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Look through a kitchen-roll tube at one patch of sky, count the stars, then count again after twenty minutes in the dark.",
+   "note": "No torch and no phone screen for the twenty minutes; eyes keep getting better in the dark for twenty minutes or more, and one look at a bright screen sets them back. Write down both numbers. A red light, such as a bike light or a torch with red sweet wrapper over it, lets you see the paper without losing your dark eyes. Dress warmly: standing still gets cold fast.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Draw the Plough, the North Star and Cassiopeia from memory, then go out and check your drawing against the sky.",
+   "note": "Pencil and the back of an envelope. Put the North Star in the middle and the other two either side. Then compare with the real thing and fix what was wrong. A child and a grown-up can each draw one and see whose is closer.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Note where the Plough is against a rooftop or tree, look again two hours later, and say which way the sky has turned.",
+   "note": "The whole sky turns around the North Star once a day, anticlockwise as you face north. In two hours the Plough will have swung round by about a sixth of a circle. The North Star is the one that stays put, which is why people steered by it.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Find the big pattern of the season: Orion in winter, bright Arcturus in spring and early summer, or the Summer Triangle in late summer and autumn.",
+   "note": "November to March evenings: Orion, low in the south, with three stars in a short straight line for his belt, an orange star above them and a white one below. April to July: follow the curve of the Plough's handle away from the pan to a bright orange star, Arcturus. August to October: three bright stars high overhead, Vega, Deneb and Altair, make the Summer Triangle. In June and early July the sky here never gets fully dark, so try late in the evening.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Find a bright point that does not twinkle as much as the stars around it, and use a free sky map to name the planet.",
+   "note": "Planets tend to shine with a steadier light than stars, especially higher up. Venus and Jupiter are the brightest; Venus is only ever seen in the west after sunset or the east before sunrise. Point Stellarium Web or another free sky map at it to check. Some weeks there is no bright planet in the evening; if so, do the next rung and come back to this one.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Look up when the space station will next pass over, and watch it cross the sky.",
+   "note": "NASA's free \"Spot the Station\" website gives the times and where in the sky to look. It looks like a very bright star moving steadily across the sky for a few minutes, with no flashing lights; a plane has flashing lights. Passes come in runs of a few weeks, so if there are none this week, check again next week.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Lie back somewhere safe on a clear night and count shooting stars for thirty minutes.",
+   "note": "A few can be seen in an hour on most clear nights away from lights. Around 12 August (the Perseids) and 14 December (the Geminids) there can be many more. A garden, a back yard or a car park with a grown-up. Blankets, hats, a flask, and the whole sky in view; do not stare at one spot.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Look at the Moon through binoculars when it is half lit, and find three craters along the line between light and dark.",
+   "note": "Craters show up best near that line, where shadows are long. Rest your elbows on a wall or a car roof to keep the view still. No binoculars? Borrow a pair; many households have one somewhere. Never point binoculars anywhere near the Sun, and a grown-up hands them to a child only once the Sun has set.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Stay out two hours later than usual and find the pattern of the next season rising in the east.",
+   "note": "The stars rise about four minutes earlier each night, which adds up to about two hours a month. So the next season's stars are already up late in the evening: Orion rises in the east late on autumn nights, and the Summer Triangle is up in the east late on spring nights. Name the one you find.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "With a lamp and a ball, show somebody why Orion is not in the summer evening sky.",
+   "note": "The lamp is the Sun, the ball is the Earth, and the far walls of the room are the stars. Night is the side of the ball facing away from the lamp. Walk the ball halfway round the lamp and the night side now faces the opposite wall: different stars. In summer Orion is on the same side of the sky as the Sun, so he is up in the daytime, where we cannot see him.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 15,
+   "test": "Plan a trip to a dark place: pick a night near new moon, check the forecast, and pack for the cold.",
+   "note": "A dark place means away from town lights: a forest car park, a quiet beach, the hills. Davagh Forest in County Tyrone is an official Dark Sky Park. The best nights are the week either side of new moon, which the Met Office and most calendars show. Pack warm layers, a hat, a flask, a blanket and a red light, and tell somebody where you are going.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 16,
+   "test": "From your dark place, find the Milky Way.",
+   "note": "It is a pale band of light, like thin cloud that does not move, running across the sky; it is the light of millions of stars in our own galaxy. From Northern Ireland it is best from August to October in the evening, passing high overhead through Cassiopeia and the Summer Triangle. Give your eyes twenty minutes first. A grown-up with any child, and stay near the car or the path.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 17,
+   "test": "Find the Andromeda galaxy, another galaxy far beyond our own.",
+   "note": "It looks like a faint, fuzzy oval smudge, not a point. It is well placed in the evening from about August to February. Find the Great Square of Pegasus, four stars in a big square below Cassiopeia on autumn evenings. From its corner nearest Cassiopeia, count two stars along the curving line that leads away from the Square. At the second, turn towards Cassiopeia, pass one fainter star, and look about the same distance again. Binoculars make it much easier. Its light left it about two and a half million years ago.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 18,
+   "test": "On one clear night, without a phone or a book, find and name ten things in the sky.",
+   "note": "Stars, patterns, planets, the Moon, the Milky Way, all count. For example: the Plough, the North Star, Mizar and Alcor, Cassiopeia, Orion, his orange star Betelgeuse, Arcturus, Vega, a planet, the Moon. Write the ten down when you come in.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 19,
+   "test": "Take one person out and show them three things, then let them find one of those three by themselves.",
+   "note": "A child, a parent, a friend, a neighbour. Start with the Plough, because they will be able to find it again on their own for the rest of their life. Point with your arm held straight next to their eye line, and wait while they look.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 20,
+   "test": "Lead an hour under the stars for family or friends, and show them ten things by name.",
+   "note": "A back garden or a dark car park, blankets and a flask. Start with what never sets, then the season's pattern, a planet if there is one, and finish with something faint that needs dark eyes. Let the children spot the space station or a shooting star. This is the end of the ladder: the sky is something you can give to other people now.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

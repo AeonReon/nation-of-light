@@ -1,0 +1,151 @@
+{
+ "id": "words.books",
+ "name": "Reading books",
+ "line": "From one page tonight to a whole book of about two hundred pages in one day.",
+ "size": "months",
+ "strand": "say-what-you-mean",
+ "about": "For grown-ups, and for any child who can already read a chapter book on their own (the Reading ladder comes before this one). The climb starts with one page at bedtime and a book you actually want, then builds the habit a few days a week, then the length of a sitting, from ten pages to an hour, then a hundred and fifty pages in a day. It ends with a whole book of about two hundred pages read between getting up and going to bed. Nothing to buy: joining Libraries NI is free, and you can ask a library to get in a book it does not have on the shelf.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Read one page of a book tonight before you sleep.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 3,
+   "note": "Any book in the house counts: a novel, a cookbook, a book a child left lying about. One page is the whole rung, and reading on is allowed. If you already read in bed most nights, do it on purpose tonight and count it."
+  },
+  {
+   "n": 2,
+   "test": "Get one book you want to read and put it beside your bed.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Want is the important word: not one you think you ought to read. Take it from your own shelf, borrow it from a friend, or get it free from the library. Putting it where you will see it at bedtime is half of this rung."
+  },
+  {
+   "n": 3,
+   "test": "Read ten pages of that book in one sitting.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Ten pages is usually fifteen to twenty minutes. Sit somewhere you will not be interrupted and put the phone face down or in another room. If you stop at eight, read the last two before bed and count it."
+  },
+  {
+   "n": 4,
+   "test": "Read on three separate days in one week.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Any amount on each day, even a page. Tie it to something you already do, like the first cup of tea or getting into bed. Tick the days off somewhere you can see them."
+  },
+  {
+   "n": 5,
+   "test": "Read for thirty minutes, count the pages, and write the number down.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "That number is your reading speed for this kind of book, and the rungs further up are measured against it. Do not hurry to make it bigger; read the way you normally read. Write the date beside it so you can compare in a couple of months."
+  },
+  {
+   "n": 6,
+   "test": "Read something every day for a week, even if it is one page.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Seven days, no gaps. On a busy day one page before sleep keeps the week going. If you miss a day, start the seven again from the next day; nothing is lost."
+  },
+  {
+   "n": 7,
+   "test": "Read twenty-five pages in one sitting.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "At the speed from rung five, work out roughly how long this will take and put that time aside. A weekend morning or a quiet evening is ideal. Get up and stretch at the halfway point if you need to, but stay with the book."
+  },
+  {
+   "n": 8,
+   "test": "Finish the book you chose on rung two.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "If you no longer like it, you are allowed to stop and choose another one you want more. Then finish that one. Finishing a book is the rung, whatever the book and however long it took."
+  },
+  {
+   "n": 9,
+   "test": "Ask somebody who reads a lot what you should read next, and start it within a week.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "A friend who always has a book, a librarian, a bookseller, a relative. Tell them one book you liked and ask for something like it. Having the next book ready means there is never a gap after finishing one."
+  },
+  {
+   "n": 10,
+   "test": "Read fifty pages in one day.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Split it however you like: twenty in the morning, thirty in the evening. A day off is easiest for the first go. If you are already past fifty pages a day, read fifty on purpose today and count it."
+  },
+  {
+   "n": 11,
+   "test": "Read for a whole hour without stopping.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Set a timer and put it out of sight so you are not checking it. Phone in another room, a drink beside you before you start. An hour is a good length to get properly into a book."
+  },
+  {
+   "n": 12,
+   "test": "Take your book out and read twenty pages somewhere other than your home.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "On the bus or train, on a park bench, in a café, in the library, in the car while waiting at a school gate. If it is cold, a library or a café is fine. Noticing that you can read in any spare twenty minutes is the point."
+  },
+  {
+   "n": 13,
+   "test": "Read a hundred pages in one day.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "At most speeds this is between two and four hours of reading, spread through the day. Choose a book you are enjoying and a day with nothing much in it. Plan three or four sittings with breaks for food and a walk."
+  },
+  {
+   "n": 14,
+   "test": "Read every day for a month without missing a day.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Any amount each day, as on rung six, but for about thirty days. Keep the book with you, so a queue or a wait becomes a few pages. If you miss one, carry on the next day and add a day at the end."
+  },
+  {
+   "n": 15,
+   "test": "Read two books inside one month.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Pick two you want to read before the month starts, so you are never stuck choosing. Shorter books are allowed; this rung is about keeping going. The library can have both ready for you to collect."
+  },
+  {
+   "n": 16,
+   "test": "Finish a book of a kind you never read.",
+   "ctx": "long",
+   "kind": "courage",
+   "note": "If you read stories, choose a history or a biography. If you read facts, choose a novel. Poetry, a play or a book of letters all count too. Ask a librarian for a good first one of that kind."
+  },
+  {
+   "n": 17,
+   "test": "Tell somebody about a book you finished, well enough that they ask to borrow it.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Say what it is about in two sentences, then the one part you remember most, without giving the ending away. Then offer to lend it. If they ask for it, you have done the rung."
+  },
+  {
+   "n": 18,
+   "test": "Read a hundred and fifty pages in one day.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "The same plan as the hundred-page day, with one more sitting. Choose a book you are enjoying and want to keep reading, not the hardest one on the shelf. Short walks and proper meals between sittings help more than coffee."
+  },
+  {
+   "n": 19,
+   "test": "Read one book a week for four weeks in a row.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Four books in about a month. Have the next one ready before you finish the one you are on. Choose books of a length you can honestly finish in a week at your speed from rung five."
+  },
+  {
+   "n": 20,
+   "test": "Read a whole book of about two hundred pages in one day.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "From getting up to going to bed, with meals, walks and rests in between. Choose a book you are looking forward to and a day with nothing else planned. Plenty of people do not believe they can do this until they have. Write the title and the date on the first page of your notebook."
+  }
+ ]
+}

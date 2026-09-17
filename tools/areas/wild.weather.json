@@ -1,0 +1,159 @@
+{
+ "id": "wild.weather",
+ "name": "Weather and tide",
+ "line": "From dressing for the weather you can feel to leading a walk in wind and rain that brings everybody home warm.",
+ "size": "months",
+ "strand": "get-strong-outside",
+ "about": "For everybody: a child and a grown-up can climb it side by side, and the rungs at the shore are always done with a grown-up. It starts at the front door, dressing for what is really outside, then reading a forecast properly: the hour-by-hour, the \"feels like\" number, the rain map and the warnings. Then daylight, layers, getting dry again, the early signs of somebody getting too cold, and a turn-back time you keep. The middle rungs are the tide: reading a tide table, knowing the dangers, watching the water, and planning a shore walk around it. It ends with you deciding the weather plan for a family day out and leading a walk in wind and rain that everybody enjoys. In Northern Ireland the weather changes by the hour, so this is the skill that gets people out of the door more often, not less.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Step outside the front door for one minute, then choose what to wear for what you felt.",
+   "note": "Not what the window suggested and not what yesterday was like. Feel the air on your face and hands, check for wind and damp, then dress. A child can do this before school with a grown-up asking \"coat or no coat?\". If you already do this every morning, do it on purpose today and count it.",
+   "ctx": "home",
+   "kind": "attention",
+   "mins": 3
+  },
+  {
+   "n": 2,
+   "test": "Open today's forecast and say, hour by hour, what to bring if you go out at ten, at two and at six.",
+   "note": "Use the hour-by-hour view on the Met Office website or app, both free. For each time, name the actual things: a coat, a hat, sun cream, gloves, nothing extra. The point is that a day in Northern Ireland is often three different days.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Look out at ten, at two and at six today, and write down whether the forecast was right each time.",
+   "note": "Three ticks or crosses on a scrap of paper, with a word each: \"dry, as said\", \"rain an hour early\". Wrong forecasts are useful: they teach you how much to trust them. A child can keep the paper on the fridge.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Find the \"feels like\" temperature in the forecast, go out for ten minutes, and say which number was closer to the truth.",
+   "note": "Forecasts show two numbers: the air temperature and what it feels like with the wind and damp. On a windy day they can be several degrees apart. After ten minutes out, say which one your hands agreed with. Dress by that one from now on.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Open a free rain radar map, find the nearest shower, say when it will reach you, and check.",
+   "note": "The Met Office has a free rain map that moves forward through the next few hours. Find where you are, watch the blue patches, and say a time: \"about twenty past three\". Then look out at that time. Within half an hour is a good result.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Look up the weather warnings for Northern Ireland today, and say what yellow, amber and red each mean.",
+   "note": "The Met Office website lists them by region. Roughly: yellow means be aware and plan around it, amber means be prepared for real disruption, red means take action and avoid travel if you can. If there are no warnings today, that counts: say so, and say what each colour would mean.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Look up today's sunset time, then go for a walk that finishes half an hour before it.",
+   "note": "In Northern Ireland the sun sets around four o'clock in December and after ten in June, so \"before dark\" means very different things. Pick a walk, work back from the sunset time, and be home or back at the car with half an hour to spare.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 8,
+   "test": "Go out on a cold day in three thin layers instead of one thick coat, and take one off when you warm up.",
+   "note": "For example a T-shirt, a jumper and a waterproof, all things you already own. Take the middle layer off before you start to sweat, not after, and put it back on when you stop. Sweat that goes cold is what makes people shiver.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "After the next wet walk, get everything dry within fifteen minutes of getting home.",
+   "note": "Newspaper or kitchen roll stuffed into wet shoes, coat hung up, not in a heap, wet things out of the bag, and a dry pair of socks on you. A child can be in charge of the shoes. It is the difference between wanting to go out again tomorrow and not.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "Learn the early signs that somebody is getting too cold, and say them out loud to somebody else.",
+   "note": "The NHS lists them: shivering, pale cold skin, being tired or muddled, clumsy hands, and slurred words. What to do first: out of the wind and wet, dry layers on, a hat, a warm drink if they are fully awake, and 999 if they stop shivering but are still cold or seem confused. A child can learn it as \"shivering, slow and muddled\".",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "On your next cold walk with other people, check on each of them every half hour and fix the first one who is cold.",
+   "note": "Ask plainly: \"Warm enough? Hands?\" Children and older people often do not say. The fix is usually small: a hat from your bag, a layer swapped, a hot drink from a flask, or just moving faster for a while.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 12,
+   "test": "Before a walk, pick a turn-back time, and turn back at it even if you feel fine.",
+   "note": "Say it out loud at the start: \"we turn round at half two, wherever we are\". Then do it, even when the top is in sight. This is how you learn that turning back is part of a good day, not a failure of it.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 13,
+   "test": "Look up the tide times for the beach or shore nearest you, and say when high water and low water are today.",
+   "note": "Free tide times come from the Admiralty EasyTide website, and harbours and shops by the sea often have printed tide tables. There are usually two high tides and two low tides a day, a little over six hours apart, and they come later each day. Write today's four times down.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 14,
+   "test": "Learn the four rules for the shore, and tell them to whoever you would go with.",
+   "note": "One: stay off sandbanks, mudflats, rocks and paths to islands when the tide is coming in; it can come round behind you faster than you can walk. Two: know the time of high water before you set off. Three: if somebody is in trouble in the sea, ring 999 and ask for the Coastguard; do not go in after them. Four: if you fall in, float on your back until you get your breath, which is the RNLI's \"Float to Live\" advice.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 15,
+   "test": "At the shore, watch the edge of the water against one rock for ten minutes and say whether the tide is coming in or going out.",
+   "note": "Pick a rock, a post or a line of seaweed right at the water's edge. After ten minutes, is the water further up it or further down? Wet, shiny sand above the waterline often means it is going out. Then check against the tide times. A grown-up stays with any child at the water.",
+   "ctx": "out",
+   "kind": "attention",
+   "place": "coast"
+  },
+  {
+   "n": 16,
+   "test": "Plan a shore walk around the tide: set off after high water and be back well before the next one, and do it.",
+   "how": [
+    "Look up today's high water times.",
+    "Set off within an hour after the first one.",
+    "Turn back at your set time, wherever you have got to.",
+    "Be off the sand and rocks at least two hours before the next high water."
+   ],
+   "note": "Starting as the tide goes out gives you the most beach for the longest time. Pick a turn-back time at least two hours before the next high water, and keep it. Tell somebody at home where you are going and when you will be back.",
+   "ctx": "out",
+   "kind": "skill",
+   "place": "coast"
+  },
+  {
+   "n": 17,
+   "test": "Read or listen to the inshore waters forecast for Northern Ireland, and say what it means for a walk on the coast tomorrow.",
+   "note": "It is free on the Met Office website and read out on the radio. It gives the wind strength on a scale of numbers, the sea state and the visibility. A wind of 6 or more, or a \"rough\" sea, means a walk well back from the edge of the water, or a walk inland instead.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 18,
+   "test": "The next time the forecast turns against a plan, change it and say why in one sentence.",
+   "note": "Change the place, the time or the day: the forest instead of the cliff path, the morning instead of the afternoon, next Saturday instead. The sentence is for the others: \"Amber warning for wind, so the woods, not the coast.\" Changing a plan is harder than going anyway, and it is usually the right choice.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 19,
+   "test": "Decide the weather plan for a family or friends' day out: where, when, and what everybody brings, and have it go well.",
+   "note": "Use everything so far: the hour-by-hour forecast, the warnings, the sunset time, and the tide if it is the coast. Tell people the plan the night before, with the list of what to bring. \"Go well\" means nobody was caught cold, wet or in the dark.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 20,
+   "test": "Lead a walk of an hour or more in wind and rain, and bring everybody home warm and glad they went.",
+   "note": "Pick a day with rain and wind but no amber or red warning. Layers, hats, a flask, a turn-back time, a check on everybody every half hour, and something good at the end: a hot drink, a chip shop, a fire. This is the end of the ladder: other people trusting you with the weather.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

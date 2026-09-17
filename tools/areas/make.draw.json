@@ -1,0 +1,150 @@
+{
+ "id": "make.draw",
+ "name": "Drawing",
+ "line": "From three kitchen things in two minutes each to a drawing of somebody's favourite thing, given to them to keep.",
+ "size": "months",
+ "strand": "make-things",
+ "about": "For everybody from about six: a child and a grown-up can climb it side by side, and a grown-up who finds a rung easy can do it with the other hand. The climb starts with quick drawings of real things in front of you, then teaches looking: one continuous line, the simple shapes underneath, light and shade, the space around a chair, your own hand, measuring with a pencil. It ends with people, a view from a window, and a careful drawing of something a person loves, given to them. Drawing is mostly looking, and it improves with practice the way handwriting does; a pencil and any paper is all you need.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Draw three things from the kitchen, two minutes each, looking at them while you draw.",
+   "ctx": "room",
+   "kind": "skill",
+   "mins": 6,
+   "note": "A mug, a spoon, a key, a tin: whatever is on the table. Look at the thing more than at the paper. Wobbly lines are fine; the rung is three honest two-minute drawings. The back of an envelope and a biro will do.",
+   "twist": "Other hand."
+  },
+  {
+   "n": 2,
+   "test": "Draw the same thing three times and pick the best one.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Choose one of the three from rung one. Each time, look for one thing you got wrong last time and fix it: the handle too small, the lid too flat. Write \"best\" on the one you choose.",
+   "twist": "Other hand, all three."
+  },
+  {
+   "n": 3,
+   "test": "Draw something in front of you without lifting the pencil off the paper.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "A shoe, a plant, a bunch of keys. One line from start to finish, going slowly round every edge you can see. It will look strange; it is training your eye to follow an edge, not making a picture.",
+   "twist": "Other hand."
+  },
+  {
+   "n": 4,
+   "test": "Draw an object by starting with the simple shapes underneath it.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "A kettle is a box with a cylinder spout; a cat is a circle on an oval. Draw the shapes lightly first, then draw the real edges over them, then rub out the shapes or leave them faint. A teapot, a lamp or a cuddly toy is a good one.",
+   "twist": "Other hand."
+  },
+  {
+   "n": 5,
+   "test": "Draw a cereal box, a tin and an orange so each one looks solid, not flat.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "For the box, draw the top as a slanted shape so you can see two sides at once. For the tin, the top is an oval, not a circle, and the bottom curves the same way. The orange comes next rung. If you do not have these, any box, anything round and any ball will do."
+  },
+  {
+   "n": 6,
+   "test": "Shade a round thing so it looks round, with the light coming from one side.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Put the orange or a ball beside a window or a lamp. Leave the part nearest the light white, press gradually harder as you go round to the far side, and add a darker shadow on the table on the side away from the light. Squinting at it helps you see the light and dark."
+  },
+  {
+   "n": 7,
+   "test": "Draw something small every day for a week in the same notebook.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Five or ten minutes a day: your breakfast, your shoes, a houseplant, the view from a chair. A cheap notebook or a few sheets of paper folded and stapled is enough. Keep them all, including the ones you do not like."
+  },
+  {
+   "n": 8,
+   "test": "Draw only the empty spaces around and between the legs of a chair.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Look at the gaps between the legs and the bars as if they were shapes, and draw those shapes, not the chair. When you have drawn the gaps, the chair appears. Your eye stops drawing what it expects and starts drawing what is there."
+  },
+  {
+   "n": 9,
+   "test": "Draw a whole chair, with the legs going the right way.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Use what the last rung showed you: the gaps between the legs tell you where each leg goes. The back legs look shorter and higher on the page than the front ones. Check each leg against the gap beside it before you move on."
+  },
+  {
+   "n": 10,
+   "test": "Draw your own hand from life.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Rest the hand you do not draw with on the table in a relaxed position. Start with the shape of the whole hand, then the fingers, then the creases. Hands are hard for everybody, so ten minutes and an honest attempt is the rung.",
+   "twist": "Draw the hand you draw with, using the other one."
+  },
+  {
+   "n": 11,
+   "test": "Fill one page with small drawings of the same thing from different sides.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "A shoe works well: from the front, the side, the back, from above, lying down. Aim for eight to ten small drawings. Turning an object round teaches you more about its shape than one big drawing.",
+   "twist": "Half of them with the other hand."
+  },
+  {
+   "n": 12,
+   "test": "Measure with your pencil held at arm's length, and draw a door or a window with its height and width the right size against each other.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Close one eye, hold the pencil straight out with your arm locked, and line the tip up with the top of the door. Put your thumb where the bottom is. Then turn the pencil sideways and see how many of those widths fit into the height. Draw it to match."
+  },
+  {
+   "n": 13,
+   "test": "Copy a drawing by an artist you admire, line for line.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Libraries have books of drawings, and many museums put old drawings online free: search a name like Rembrandt, Dürer or Beatrix Potter with the word \"drawings\". Copy slowly and look at where each line starts and stops. Artists have always learned this way."
+  },
+  {
+   "n": 14,
+   "test": "Draw for ten minutes a day for two weeks without missing a day.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "The same as the notebook week, twice as long. Mix it up: an object, a shaded ball, your hand, a copy. If you miss a day, carry on the next and add a day at the end."
+  },
+  {
+   "n": 15,
+   "test": "Draw a view from a window, with near things bigger and lower on the page than far things.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "The window frame is your edge. A fence post near you is tall on the page; the same kind of post far away is small and higher up. Things in front hide part of what is behind them, so draw the front things first."
+  },
+  {
+   "n": 16,
+   "test": "Draw five quick one-minute drawings of somebody while they move about.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Somebody washing up, playing a game, reading on the sofa. One minute each: just the shape of the body and which way it leans, no faces or details. Set a timer. Most people are happy to be drawn if you ask first."
+  },
+  {
+   "n": 17,
+   "test": "Draw somebody sitting still in front of you, head to feet, in fifteen minutes.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Somebody watching television or reading is ideal. Use the pencil-measuring from rung twelve: see how many heads fit into their whole height and draw it that way. Leave the face simple; the rung is the whole body in the right proportions."
+  },
+  {
+   "n": 18,
+   "test": "Draw one place from life for an hour, with shading and near and far things.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "A corner of your kitchen, the view down the garden or the street from a window, a café table if you are out. Start with light lines for the big shapes, then the edges, then the shading last. Take breaks, but stay with the same drawing."
+  },
+  {
+   "n": 19,
+   "test": "Draw the favourite thing of somebody you know, as carefully as you can, and give it to them.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Their dog, their bike, their house, their teapot: from life if you can, or from a photograph they send you. Take several sittings if you need them, and use everything from this ladder: shapes first, measuring, light and shade. Write their name and the date on the back. When they keep it, you have finished this ladder."
+  }
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "id": "calm.gratitude",
+ "name": "Noticing the good",
+ "line": "From one good thing said out loud to a daily habit you have started at somebody else's table.",
+ "size": "weeks",
+ "strand": "look-after-yourself",
+ "about": "For everybody: a child and a grown-up can climb it side by side, and a family can climb it together. It starts with saying one good thing about today out loud, then making it specific, then doing it three days running. Then it turns outwards: thanking the person at home whose work nobody mentions, and the people outside who are rarely thanked at all. A jar of good things for a week, a letter by post, thirty days, and reading the month back. It ends with you starting the same habit at somebody else's table. What you notice every day tends to become what you expect, so this is worth the one minute it takes.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Say out loud one good thing that happened today, to whoever is in the room.",
+   "note": "Small is best: the bus was on time, the soup was good, a dog was glad to see you. At the tea table works well for a family. On your own, say it out loud anyway, or send it to one person as a message. If this is already part of your day, do it on purpose today and count it.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 1
+  },
+  {
+   "n": 2,
+   "test": "Say today's good thing with one detail: what it was, when, and who was there.",
+   "note": "Not \"it was a good day\" but \"at lunch Sam gave me half his chips without being asked\". The detail is what makes you notice it and remember it. A child can be asked \"what exactly?\" until there is a detail.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Say one good thing, with its detail, three days running.",
+   "note": "Same time each day helps: tea, bedtime, the drive home from school. If you miss a day, the three start again, with no fuss.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Make today's good thing about a person, not a thing.",
+   "note": "Somebody who did something, said something, or was simply there: a teacher, a neighbour, a stranger who held a door, somebody at home. Say their name and what they did.",
+   "ctx": "room",
+   "kind": "kindness"
+  },
+  {
+   "n": 5,
+   "test": "Thank somebody at home for one job they do that nobody mentions.",
+   "note": "The bins, the washing, the packed lunches, the lifts, walking the dog, fixing the wifi. Name the job and say what it saves you: \"Thanks for always doing the bins. I never have to think about Tuesday.\" Children can thank grown-ups and grown-ups can thank children.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 6,
+   "test": "Thank somebody outside who is rarely thanked for what they do.",
+   "note": "The bin crew, the lollipop person, the bus driver as you get off, the cleaner at the leisure centre, the person stacking shelves. Short and clear: \"Thanks, you keep this place lovely.\" If you already do this, do it on purpose today and count it.",
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 7,
+   "test": "Think of the hardest day you had this month, and find one good thing in it.",
+   "note": "Somebody who helped, something you learned, something that went right in the middle of it, or simply that it ended and you got through it. Write the one thing down or say it to somebody. This is not pretending the day was good; it is finding the good that was there.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 8,
+   "test": "Keep a jar of good things for a week: one slip of paper from each person, every evening.",
+   "note": "Any clean jar, box or bowl and scraps of paper. Each evening, everybody writes one good thing from the day with the date and drops it in. Children who cannot write yet can draw it or say it for a grown-up to write. On your own, one slip a day is plenty. Do not read them yet.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Write a thank-you letter by hand to somebody who helped you this year, and post it.",
+   "note": "A coach, a neighbour, a nurse, a colleague, a grandparent. Say what they did and what difference it made, in five or six sentences. A letter by post is kept in a way a message is not. A stamp costs money; if that is a problem, hand-deliver it or leave it where they will find it.",
+   "ctx": "home",
+   "kind": "kindness"
+  },
+  {
+   "n": 10,
+   "test": "Keep the jar going every day for thirty days.",
+   "note": "Same jar, same time, one slip each. If a day is missed, add it the next morning and carry on; the thirty is days with a slip, not days in a row.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Empty the jar, read every slip out loud, and pick the three best.",
+   "note": "A family can take turns reading. Notice what kinds of things came up most often: people, food, being outside, something funny. Keep the three best somewhere you will see them, like the fridge door.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Start the good-thing habit at a table where nobody was doing it before.",
+   "note": "Grandparents' Sunday dinner, a meal with friends, a club or team night, a break at work. Go first, keep it to one sentence, and then ask the person beside you. The end of the ladder is somebody else carrying on doing it after you have gone.",
+   "ctx": "with",
+   "kind": "courage"
+  }
+ ]
+}

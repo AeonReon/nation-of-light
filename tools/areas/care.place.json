@@ -1,0 +1,136 @@
+{
+ "id": "care.place",
+ "name": "Your own patch",
+ "line": "From choosing one small public place to keeping it cared for every week for twelve weeks, with something planted in it.",
+ "size": "months",
+ "strand": "look-after-the-place",
+ "about": "For everybody: a child and a grown-up can climb it side by side, and a child never picks up anything sharp or strange. You choose one small public place near home (a verge, a bus shelter, a path, the corner of a play park) and make it yours to look after. The rungs go from clearing it once, to reporting what you cannot fix, to finding out who owns it, getting permission, planting something, and bringing other people to help. It ends with twelve weeks of looking after it every week. One small place that is plainly cared for changes how a whole street feels.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Choose one small public place you pass often, and write down that it is your patch.",
+   "note": "The verge at the end of your road, the bus shelter, the path to school, the bench by the river, one corner of the play park. Small enough to clear in twenty minutes, and away from fast traffic. Write its name and today's date on paper or in your phone.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 2
+  },
+  {
+   "n": 2,
+   "test": "Go to your patch and write down everything that needs doing there, and one thing that is good.",
+   "note": "Litter, weeds through the paving, a broken sign, a blocked drain, graffiti, a bench that needs a wipe. The good thing matters too: a tree, a view, a wall somebody built well.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Pick up every piece of litter on your patch.",
+   "note": "If you did the ten-minute street in Your town, this is the same job, in your own place, done again and again. Never touch needles, broken glass or anything you do not recognise: leave it and report it on rung five. Gardening gloves or a bag over your hand if you have no picker.",
+   "how": [
+    "Take a bag, and gloves if you have them.",
+    "Work from one end to the other so nothing is missed.",
+    "Leave anything sharp or strange where it is and note where it is.",
+    "Children: a grown-up checks each thing before it is picked up."
+   ],
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 4,
+   "test": "Sort what you collected into the right bins at home.",
+   "note": "Your council's website says what goes in which bin. Rinse cans and bottles. Notice what most of it was: that tells you where it is coming from.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Report one thing on your patch that you cannot fix yourself, to whoever is responsible.",
+   "note": "A broken street light, a pothole, dumped rubbish, a needle, graffiti. Your council website takes most reports; roads and street lights can be reported through nidirect. Write down the date and what you reported.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 6,
+   "test": "Go back a week later, clear your patch again, and write down how much had come back.",
+   "note": "A handful or a bag. Also check whether anything from your list on rung two has changed. This is the rung that shows you what the patch needs every week.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Find out who owns or looks after your patch.",
+   "note": "Usually the council's parks or cleansing department, but it might be the Housing Executive, a housing association, the Department for Infrastructure for a roadside verge, a church, or a business. Ask the council by email or phone if the map does not make it clear. Write down a name and a way to reach them.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Check whether the thing you reported has been fixed, and if not, report it again, giving the date of your first report.",
+   "note": "Polite and plain: \"I reported this on the 3rd and it is still there.\" Most things get fixed on the second report.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 9,
+   "test": "Do one job on your patch that is not litter.",
+   "note": "Wipe down the bench, sweep the leaves off the path, pull the weeds from round the bench or the sign. Nothing that needs tools or permission yet.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "Look after your patch every week for four weeks running, and mark each visit on a calendar.",
+   "note": "Twenty minutes a week is enough. The same day each week makes it easy to remember. In heavy rain, go the next dry day that week.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Bring one person with you on one visit, and give them a job.",
+   "note": "A friend, a child, a neighbour who saw you there. Hand them the bag or the brush. Two people take half the time and it is better company.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "Ask the owner of your patch for permission to plant something there.",
+   "note": "Use the name from rung seven. Say what, where and when: \"May I plant daffodil bulbs along the verge at the end of Main Street this autumn?\" Many councils are glad to be asked. If they say no, ask what they would allow.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 13,
+   "test": "With permission, plant something on your patch.",
+   "note": "Bulbs in autumn, wildflower seed in spring, a few plants split from a garden. Free: ask a neighbour or a gardening friend for spare bulbs or seed. Plant only what the owner agreed to.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Tell your council the date you will do a bigger tidy with helpers, and ask whether they will collect the bags or lend equipment.",
+   "note": "Many councils will collect bagged litter from a clean-up if they know in advance, and some lend pickers and bags. Keep Northern Ireland Beautiful also supports local clean-ups. Do this at least two weeks ahead.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 15,
+   "test": "Get three other people to your patch for the tidy on the day you chose.",
+   "note": "Neighbours, family, a school group, people from a local group you know. Tell them the time, how long (an hour is plenty), and to bring gloves if they have them. A child invites their friends through the friends' grown-ups.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 16,
+   "test": "Count the bags you filled, and tell people what the tidy did.",
+   "note": "A thank-you message to the helpers with a photo of the patch, and a note on a local noticeboard or community group. Say who helped; do not say who dropped it.",
+   "ctx": "room",
+   "kind": "kindness"
+  },
+  {
+   "n": 17,
+   "test": "Look after your patch every week for twelve weeks running, with what you planted still cared for.",
+   "note": "The twelve weeks count from rung ten, so you are some of the way there. Water the planting in a dry spell, clear round it, and keep your calendar. That is the far end of this ladder: one place in your town that is plainly looked after, by you.",
+   "ctx": "long",
+   "kind": "kindness"
+  }
+ ]
+}

@@ -1,0 +1,137 @@
+{
+ "id": "care.giving",
+ "name": "Giving",
+ "line": "From sharing what is in your hand, to twelve weeks of giving with somebody else now giving beside you.",
+ "size": "months",
+ "strand": "be-useful-to-somebody",
+ "about": "For everybody: a child and a grown-up can climb it side by side. It starts at home with the small things (the bigger half, somebody else's job done quietly, half an hour of your time) and moves out to a local group: finding out what they actually need, giving exactly that, and getting other people to add to it. It ends with twelve weeks of giving something every week, with at least one other person giving alongside you. Most rungs cost nothing, and where money comes in, time given counts just as well.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Share something you are eating or using with the person nearest you, before they ask.",
+   "note": "Half your orange, the last biscuit, the good pen, your phone charger. Offer it first, not after they have looked at it. If you live alone, a colleague or a neighbour counts.",
+   "ctx": "with",
+   "kind": "kindness",
+   "mins": 2
+  },
+  {
+   "n": 2,
+   "test": "When something is split, give somebody else the bigger half, or the better one, and say nothing about it.",
+   "note": "The bigger slice of cake, the chair by the window, the unbroken biscuit. The saying nothing is the part that counts.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 3,
+   "test": "Do one job at home that is normally somebody else's, without being asked and without mentioning it.",
+   "note": "Empty the bin, make their bed, put their washing away, clean their shoes, make their tea before they get in. If they find out and thank you, that is fine; you did not tell them.",
+   "ctx": "home",
+   "kind": "kindness"
+  },
+  {
+   "n": 4,
+   "test": "Give somebody half an hour of your time when you had planned to spend it on yourself.",
+   "note": "Play the game they want, help with the homework, go on their walk instead of watching your programme. Put the phone away for the half hour, or it does not count.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 5,
+   "test": "Give one thing you still like to somebody who will like it more.",
+   "note": "A book you enjoyed, a toy, a jumper, a cutting from a plant, a game. Not something you wanted rid of anyway: this rung is about letting go of something you would have kept.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 6,
+   "test": "Make something small for one person and give it to them.",
+   "note": "A card, a drawing, a bookmark, a pot of soup, a note saying what they mean to you. Paper and a pen are enough. Finish it properly, then hand it over.",
+   "ctx": "home",
+   "kind": "kindness"
+  },
+  {
+   "n": 7,
+   "test": "The next time somebody gives you something, say thank you and nothing else.",
+   "note": "No \"you should not have\", no \"I will pay you back\", no handing something straight back. Being good at receiving makes giving easier for everybody around you, and it is harder than it sounds.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 8,
+   "test": "Do one kind thing that nobody will ever find out was you.",
+   "note": "Clear the frost off a neighbour's car, bring in their bin, leave a thank-you note for the postie, put a coin back in the trolley for the next person. Tell nobody, including here: just tap Done.",
+   "ctx": "home",
+   "kind": "kindness"
+  },
+  {
+   "n": 9,
+   "test": "Give up your turn, your seat, or the last one of something, so somebody else can have it.",
+   "note": "The front seat, the last slice, your go on the swing, your place in a queue for somebody in a hurry. Choose it; do not wait to be asked.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 10,
+   "test": "Choose a small amount to give each week and put this week's aside in a jar or envelope.",
+   "note": "A child might choose 20p from pocket money; a grown-up might choose a pound or five. The size does not matter; choosing it on purpose does. If money is tight, choose an hour of your time a week instead, and write that on the jar.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Find out what one local charity or group needs most right now, by asking them.",
+   "note": "A food bank, an animal rescue, the hospice shop, a school, a church hall, a playgroup. Look for a \"most needed\" list on their website, or ring or email and ask. Write the answer down; the next rung uses it.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Give that group exactly the thing they said they need.",
+   "note": "If the food bank said tinned fish and toilet roll, give those, not what you had in the cupboard. Your jar from rung ten can pay for it. No money: ask whether they need something you already have, or an hour of help.",
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 13,
+   "test": "Give an hour of your time to that group, or another local one.",
+   "note": "Sorting donations, packing bags, helping at a coffee morning, walking a rescue dog. Ask what an hour could do. A child does this with a grown-up beside them.",
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 14,
+   "test": "Ask three people to add something to a collection you are making for that group.",
+   "note": "A box at work, a box at school with the teacher's say-so, a message to family: \"I am collecting tins for the food bank until Friday, can you add one?\" Three people saying yes finishes the rung.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 15,
+   "test": "Deliver the collection, then tell the people who gave what it was used for.",
+   "note": "Ask the group when you hand it in: \"Where will this go?\" Then send one message to everybody who added something. People give again when they know it arrived.",
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 16,
+   "test": "Give something every week for four weeks running, and mark each week on a calendar.",
+   "note": "Money from your jar, an hour of time, a bag for the collection, a meal for a neighbour. It can be different each week. The calendar is what keeps it going.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 17,
+   "test": "Invite one person to give alongside you for one week, and do it together.",
+   "note": "A friend, a brother or sister, a parent, a colleague. \"I give something every week; do you want to do this one with me?\" Show them what you do and do it side by side.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 18,
+   "test": "Keep giving every week until you reach twelve weeks, with at least one other person giving alongside you by the end.",
+   "note": "The twelve weeks count from the start of rung sixteen, so you are already four in. The other person can be the one from the last rung, or somebody new. That is the far end of this ladder: giving is part of your week, and somebody else now does it with you.",
+   "ctx": "long",
+   "kind": "kindness"
+  }
+ ]
+}

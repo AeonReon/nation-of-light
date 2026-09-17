@@ -1,0 +1,102 @@
+{
+ "id": "order.bedroom",
+ "name": "The bedroom",
+ "line": "From one cleared surface to a bedroom that stays right for a fortnight.",
+ "size": "afternoon",
+ "strand": "look-after-the-place",
+ "about": "For everybody: a child and a grown-up can each do their own bedroom, side by side. The climb starts with the surfaces and the piles, takes out what does not belong, cleans and washes what does, and then turns the room into a habit: a bed made properly each morning, clothes ready the night before, a place for every thing. It ends with the room kept right for two weeks. The bedroom is where the day starts and ends, and a clear one makes both easier; renting or sharing counts exactly the same.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Clear every surface in the bedroom and put back only what you used this week.",
+   "ctx": "home",
+   "kind": "attention",
+   "mins": 20,
+   "extra": true,
+   "note": "Bedside table, chest of drawers, windowsill, the top of the wardrobe you can reach. Everything off, then back only what you picked up in the last seven days. The rest goes where it lives, or into one bag to decide about at the weekend."
+  },
+  {
+   "n": 2,
+   "test": "Deal with the chair or corner where clothes pile up, until there is nothing on it.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Every piece gets one answer: the wash basket, a hanger, or folded into a drawer. Clothes worn once and fine to wear again go on a hook, not back on the chair. A child can do their own with a grown-up saying where things go."
+  },
+  {
+   "n": 3,
+   "test": "Empty the box or bag where things wait to be dealt with: bin it, give it, or find each thing a real home.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 15,
+   "extra": true,
+   "note": "Every house has one: the box, bag or corner where things wait. Tip it out. Each thing gets one of three answers: bin, give, or a real home. No fourth pile."
+  },
+  {
+   "n": 4,
+   "test": "Take out anything that is not for sleeping or dressing.",
+   "ctx": "home",
+   "kind": "courage",
+   "mins": 15,
+   "extra": true,
+   "note": "The bedroom is for sleeping and dressing. The ironing pile, the exercise bike used as a rail, the work bag, the laptop charger: take one of them out and find it a better place tonight. If your bedroom is also where you study or work, give that one corner and keep it there."
+  },
+  {
+   "n": 5,
+   "test": "Clean the bedroom to a close look: under the bed, the skirting, the corners, the light switch.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 20,
+   "extra": true,
+   "note": "Look where you never look: under the bed with a torch, along the skirting, into the corners, and the light switch that everybody touches. A damp cloth does all of it. The phone torch is enough light."
+  },
+  {
+   "n": 6,
+   "test": "Wash the bedding and pillow covers, and wash the curtains or wipe down the blind.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Check the label on the curtains before they go in the machine; if they cannot be washed, shake them out of a window and hoover them. A blind wipes clean with a damp cloth, one slat at a time. If you did the bedding this week already, do the curtains and count it. A grown-up takes curtains down, not a child on a chair."
+  },
+  {
+   "n": 7,
+   "test": "Make the bed properly once: bottom sheet tight, pillows shaken, covers straight and turned down.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Pull the bottom sheet tight at all four corners so there are no wrinkles, shake the pillows and put them straight at the top, and pull the duvet or covers flat and even on both sides. Then fold the top back a hand width. Once, as well as you can, is the rung."
+  },
+  {
+   "n": 8,
+   "test": "Make the bed properly every morning for a week.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "The same way as the last rung, as soon as you get up, before the phone. It takes about two minutes. If you already make your bed every day, do it to the proper standard on purpose this week and count it."
+  },
+  {
+   "n": 9,
+   "test": "Put out tomorrow's clothes the night before, three nights running.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Everything, down to the socks, on the chair you cleared on rung two, or on a hook. Check the weather forecast when you do it. A child can choose theirs and lay them out with a grown-up."
+  },
+  {
+   "n": 10,
+   "test": "Walk round the bedroom and choose a place for every thing that does not have one.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "The things that end up anywhere: chargers, hair things, the book you are reading, glasses, jewellery, the bag you use every day. Give each one a spot, like a hook, a small dish, or one drawer. A shoebox or a mug is a perfectly good home."
+  },
+  {
+   "n": 11,
+   "test": "Sit in the finished room for ten minutes with nothing in your hands and notice how it feels.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "No phone, no book. Sit on the bed or a chair and look round slowly. Notice what your eye goes to first and whether anything still bothers you; if something does, that is the next job, not today's."
+  },
+  {
+   "n": 12,
+   "test": "Keep the finished bedroom right for two weeks: surfaces clear, bed made, clothes put away, every thing in its place.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Five minutes before bed puts back whatever the day moved. Check it each morning when you make the bed. If one day slips, put it right the next morning and carry on; the fortnight does not start again."
+  }
+ ]
+}

@@ -1,0 +1,115 @@
+{
+ "id": "mind.findout",
+ "name": "Finding things out",
+ "line": "From three questions written down to a week spent answering one, with the sources shown to somebody else.",
+ "size": "weeks",
+ "strand": "say-what-you-mean",
+ "from": 12,
+ "about": "For grown-ups and anybody from about twelve. The climb starts with writing down what you wonder about and asking the people around you, then moves to searching well, checking one source against another, finding where a saying really came from, and ringing the person who would actually know. It ends with one bigger question answered properly over a week, written on a page with the three places the answer came from, and shown to somebody so they can check it for themselves. Everything answers confidently now, from websites to AI tools, and being able to tell a checked answer from a guess is a skill you use every day.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Write down three questions you have wondered about this week, each one ending with a question mark.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 3,
+   "note": "Real ones, not quiz questions: why does the kettle switch itself off, when was my street built, what does the name of my town mean. A note on your phone or the back of an envelope is fine. If you already keep a list like this, add three today and count it. You will use these questions for the next few rungs."
+  },
+  {
+   "n": 2,
+   "test": "Ask somebody one of your three questions, and keep asking until you understand the answer or you are both sure they do not know.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Somebody in the house, a friend, a grandparent, a colleague at the tea break. Useful follow-ups are \"How do you know?\" and \"What do you mean by that?\". Finding out that they do not know is a proper finish too: it tells you where to look next."
+  },
+  {
+   "n": 3,
+   "test": "Search for one of your questions online using three or four key words, and find the answer on the first page of results.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Type the words that matter, not the whole sentence: \"kettle switch off how\" works better than \"why does my kettle turn itself off\". If the first page has nothing useful, change one word and try again. Any free search engine will do.",
+   "how": [
+    "Pick the three or four words that carry the question.",
+    "Read the page titles and the short text under each before you open one.",
+    "Open the most likely one and find the sentence that answers it."
+   ]
+  },
+  {
+   "n": 4,
+   "test": "Read the answer to that question on two different websites, and write down whether they agree.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Choose two that are not copying each other: a museum or a university page and a newspaper, or a council page and an encyclopaedia. If they agree, good. If they do not, write down what each one says; that is the start of the next rung."
+  },
+  {
+   "n": 5,
+   "test": "For one of those pages, find who wrote it and when, and write both down.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Look at the top and the bottom of the page, or an \"About us\" link. A named person or organisation and a date make a page easier to trust. If you cannot find either, write that down too, and trust the page a little less."
+  },
+  {
+   "n": 6,
+   "test": "Find out how to do one practical thing you have never done, and do it the same day.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Fold a fitted sheet, tie a tie, restart the internet router, set the timer on the oven, or plant a potato. Written steps, a video or a person all count. The finish line is the thing done, not the thing read about. A younger teenager chooses the job with a grown-up."
+  },
+  {
+   "n": 7,
+   "test": "Ask an AI chat tool one question with who you are, what you need and why written into it, and get a useful first answer.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Compare \"radiator cold\" with \"I rent a flat in Northern Ireland and one radiator is cold at the top and warm at the bottom. What can I safely check myself before I ring the landlord?\" The second one gets a better answer first time. If you do not use them, put the same full question to a search engine or a person and count it."
+  },
+  {
+   "n": 8,
+   "test": "Check one answer from an AI tool or a website against a second, better source, and write down whether it was right.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "A better source is one closer to the facts: the official page of the council, the maker of the product, the museum that holds the thing. Answers can sound certain and still be wrong, so this is worth doing even when the first answer looks fine. Right or wrong, you have done the rung once you have checked."
+  },
+  {
+   "n": 9,
+   "test": "Take one saying that is shared under a famous name, and find where it first appeared or that there is no record of it.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Sayings passed around as Einstein, Churchill or Abraham Lincoln are good ones to try. Search the exact words in quotation marks along with the word \"quote\" or \"source\", and look for a page that names the book, speech or letter it came from. Sometimes the honest answer is that nobody can find it, and that counts."
+  },
+  {
+   "n": 10,
+   "test": "Read the original of one thing people are talking about, rather than somebody talking about it.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "A council planning application instead of the local Facebook post about it, the report itself instead of the news story, or the actual letter from school instead of what another parent said. Then write one sentence on what the original says that the talk left out. Most originals are free to read online or at a library."
+  },
+  {
+   "n": 11,
+   "test": "Ring or email the place that would actually know, and ask one clear question.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "The council about bin days, the library about an old photograph of your street, a museum about an object, a shop about a product. Write the question down before you ring, and write the answer down while they are talking. A younger teenager can do this with a grown-up sitting beside them."
+  },
+  {
+   "n": 12,
+   "test": "Write down what you believe about one thing, look it up properly in two good sources, and write down what you believe now.",
+   "ctx": "room",
+   "kind": "courage",
+   "note": "Pick something you are fairly sure of, not something you care a lot about, for the first go: how long a goldfish remembers, whether cracking your knuckles does any harm, how old your town is. Sometimes your view stays the same and sometimes it changes. The rung is being willing to write the second line honestly."
+  },
+  {
+   "n": 13,
+   "test": "Spend a week answering one bigger question, and write the answer on one page with the three places you got it from.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Bigger means it needs more than one search: when was my house built and who lived there first, where does our tap water come from, why is my town where it is. Ten minutes a day is enough. Use at least one source that is not a website, like a person, a library book or an old map."
+  },
+  {
+   "n": 14,
+   "test": "Show somebody how you found the answer to your bigger question, step by step, so they could check it themselves.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Go through your page with them: the question, where you looked first, what did not work, and the three sources. Let them ask questions. If they could follow the same steps and reach the same answer, you have finished this ladder."
+  }
+ ]
+}

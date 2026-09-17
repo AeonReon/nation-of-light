@@ -1915,136 +1915,162 @@
     {
      "id": "wild.weather",
      "name": "Weather and tide",
-     "line": "Reading the day before it happens.",
+     "line": "From dressing for the weather you can feel to leading a walk in wind and rain that brings everybody home warm.",
      "size": "months",
      "strand": "get-strong-outside",
+     "about": "For everybody: a child and a grown-up can climb it side by side, and the rungs at the shore are always done with a grown-up. It starts at the front door, dressing for what is really outside, then reading a forecast properly: the hour-by-hour, the \"feels like\" number, the rain map and the warnings. Then daylight, layers, getting dry again, the early signs of somebody getting too cold, and a turn-back time you keep. The middle rungs are the tide: reading a tide table, knowing the dangers, watching the water, and planning a shore walk around it. It ends with you deciding the weather plan for a family day out and leading a walk in wind and rain that everybody enjoys. In Northern Ireland the weather changes by the hour, so this is the skill that gets people out of the door more often, not less.",
      "steps": [
       {
        "n": 1,
-       "test": "Dress yourself right for the weather that is actually outside.",
-       "ctx": "out",
+       "test": "Step outside the front door for one minute, then choose what to wear for what you felt.",
+       "note": "Not what the window suggested and not what yesterday was like. Feel the air on your face and hands, check for wind and damp, then dress. A child can do this before school with a grown-up asking \"coat or no coat?\". If you already do this every morning, do it on purpose today and count it.",
+       "ctx": "home",
        "kind": "attention",
        "mins": 3
       },
       {
        "n": 2,
-       "test": "Read a forecast and say what everybody should bring.",
+       "test": "Open today's forecast and say, hour by hour, what to bring if you go out at ten, at two and at six.",
+       "note": "Use the hour-by-hour view on the Met Office website or app, both free. For each time, name the actual things: a coat, a hat, sun cream, gloves, nothing extra. The point is that a day in Northern Ireland is often three different days.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 3,
-       "test": "Look at the sky and say whether the forecast looks right.",
-       "ctx": "out",
+       "test": "Look out at ten, at two and at six today, and write down whether the forecast was right each time.",
+       "note": "Three ticks or crosses on a scrap of paper, with a word each: \"dry, as said\", \"rain an hour early\". Wrong forecasts are useful: they teach you how much to trust them. A child can keep the paper on the fridge.",
+       "ctx": "home",
        "kind": "attention"
       },
       {
        "n": 4,
-       "test": "Know what wind chill is and dress for it, not for the number.",
+       "test": "Find the \"feels like\" temperature in the forecast, go out for ten minutes, and say which number was closer to the truth.",
+       "note": "Forecasts show two numbers: the air temperature and what it feels like with the wind and damp. On a windy day they can be several degrees apart. After ten minutes out, say which one your hands agreed with. Dress by that one from now on.",
        "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 5,
-       "test": "Pack a bag for a day out where the weather might turn.",
-       "ctx": "home",
+       "test": "Open a free rain radar map, find the nearest shower, say when it will reach you, and check.",
+       "note": "The Met Office has a free rain map that moves forward through the next few hours. Find where you are, watch the blue patches, and say a time: \"about twenty past three\". Then look out at that time. Within half an hour is a good result.",
+       "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 6,
-       "test": "Read a tide table and say when the beach will be gone.",
-       "ctx": "out",
-       "kind": "attention",
-       "place": "coast"
-      },
-      {
-       "n": 7,
-       "test": "Know which way the tide is going right now, by looking.",
-       "ctx": "out",
-       "kind": "attention",
-       "place": "coast"
-      },
-      {
-       "n": 8,
-       "test": "Plan a beach walk around the tide and get it right.",
-       "ctx": "out",
-       "kind": "skill",
-       "place": "coast"
-      },
-      {
-       "n": 9,
-       "test": "Say what time it gets dark today, without looking it up.",
-       "ctx": "out",
+       "test": "Look up the weather warnings for Northern Ireland today, and say what yellow, amber and red each mean.",
+       "note": "The Met Office website lists them by region. Roughly: yellow means be aware and plan around it, amber means be prepared for real disruption, red means take action and avoid travel if you can. If there are no warnings today, that counts: say so, and say what each colour would mean.",
+       "ctx": "room",
        "kind": "attention"
       },
       {
-       "n": 10,
-       "test": "Plan a walk that finishes before dark, and finish before dark.",
+       "n": 7,
+       "test": "Look up today's sunset time, then go for a walk that finishes half an hour before it.",
+       "note": "In Northern Ireland the sun sets around four o'clock in December and after ten in June, so \"before dark\" means very different things. Pick a walk, work back from the sunset time, and be home or back at the car with half an hour to spare.",
        "ctx": "out",
        "kind": "skill"
       },
       {
-       "n": 11,
-       "test": "Spot weather coming in and say how long you have.",
+       "n": 8,
+       "test": "Go out on a cold day in three thin layers instead of one thick coat, and take one off when you warm up.",
+       "note": "For example a T-shirt, a jumper and a waterproof, all things you already own. Take the middle layer off before you start to sweat, not after, and put it back on when you stop. Sweat that goes cold is what makes people shiver.",
        "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 9,
+       "test": "After the next wet walk, get everything dry within fifteen minutes of getting home.",
+       "note": "Newspaper or kitchen roll stuffed into wet shoes, coat hung up, not in a heap, wet things out of the bag, and a dry pair of socks on you. A child can be in charge of the shoes. It is the difference between wanting to go out again tomorrow and not.",
+       "ctx": "home",
+       "kind": "skill"
+      },
+      {
+       "n": 10,
+       "test": "Learn the early signs that somebody is getting too cold, and say them out loud to somebody else.",
+       "note": "The NHS lists them: shivering, pale cold skin, being tired or muddled, clumsy hands, and slurred words. What to do first: out of the wind and wet, dry layers on, a hat, a warm drink if they are fully awake, and 999 if they stop shivering but are still cold or seem confused. A child can learn it as \"shivering, slow and muddled\".",
+       "ctx": "room",
        "kind": "attention"
       },
       {
+       "n": 11,
+       "test": "On your next cold walk with other people, check on each of them every half hour and fix the first one who is cold.",
+       "note": "Ask plainly: \"Warm enough? Hands?\" Children and older people often do not say. The fix is usually small: a hat from your bag, a layer swapped, a hot drink from a flask, or just moving faster for a while.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
        "n": 12,
-       "test": "Turn back early, on purpose, and be glad you did.",
+       "test": "Before a walk, pick a turn-back time, and turn back at it even if you feel fine.",
+       "note": "Say it out loud at the start: \"we turn round at half two, wherever we are\". Then do it, even when the top is in sight. This is how you learn that turning back is part of a good day, not a failure of it.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 13,
-       "test": "Change or call off a plan because of the weather, and explain why.",
-       "note": "Calling it off is the hardest and most useful of these. Anybody can go anyway.",
+       "test": "Look up the tide times for the beach or shore nearest you, and say when high water and low water are today.",
+       "note": "Free tide times come from the Admiralty EasyTide website, and harbours and shops by the sea often have printed tide tables. There are usually two high tides and two low tides a day, a little over six hours apart, and they come later each day. Write today's four times down.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 14,
+       "test": "Learn the four rules for the shore, and tell them to whoever you would go with.",
+       "note": "One: stay off sandbanks, mudflats, rocks and paths to islands when the tide is coming in; it can come round behind you faster than you can walk. Two: know the time of high water before you set off. Three: if somebody is in trouble in the sea, ring 999 and ask for the Coastguard; do not go in after them. Four: if you fall in, float on your back until you get your breath, which is the RNLI's \"Float to Live\" advice.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 15,
+       "test": "At the shore, watch the edge of the water against one rock for ten minutes and say whether the tide is coming in or going out.",
+       "note": "Pick a rock, a post or a line of seaweed right at the water's edge. After ten minutes, is the water further up it or further down? Wet, shiny sand above the waterline often means it is going out. Then check against the tide times. A grown-up stays with any child at the water.",
+       "ctx": "out",
+       "kind": "attention",
+       "place": "coast"
+      },
+      {
+       "n": 16,
+       "test": "Plan a shore walk around the tide: set off after high water and be back well before the next one, and do it.",
+       "how": [
+        "Look up today's high water times.",
+        "Set off within an hour after the first one.",
+        "Turn back at your set time, wherever you have got to.",
+        "Be off the sand and rocks at least two hours before the next high water."
+       ],
+       "note": "Starting as the tide goes out gives you the most beach for the longest time. Pick a turn-back time at least two hours before the next high water, and keep it. Tell somebody at home where you are going and when you will be back.",
+       "ctx": "out",
+       "kind": "skill",
+       "place": "coast"
+      },
+      {
+       "n": 17,
+       "test": "Read or listen to the inshore waters forecast for the stretch of coast you would walk, and say what it means for a walk on the coast tomorrow.",
+       "note": "It is free on the Met Office website and read out on the radio. It gives the wind strength on a scale of numbers, the sea state and the visibility. A wind of 6 or more, or a \"rough\" sea, means a walk well back from the edge of the water, or a walk inland instead.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 18,
+       "test": "The next time the forecast turns against a plan, change it and say why in one sentence.",
+       "note": "Change the place, the time or the day: the forest instead of the cliff path, the morning instead of the afternoon, next Saturday instead. The sentence is for the others: \"Amber warning for wind, so the woods, not the coast.\" Changing a plan is harder than going anyway, and it is usually the right choice.",
        "ctx": "room",
        "kind": "courage"
       },
       {
-       "n": 14,
-       "test": "Get somebody warm and dry again who got cold and wet.",
-       "ctx": "with",
-       "kind": "kindness"
-      },
-      {
-       "n": 15,
-       "test": "Know the signs of somebody getting too cold, and what to do first.",
-       "ctx": "room",
-       "kind": "attention"
-      },
-      {
-       "n": 16,
-       "test": "Carry the right kit for the day without carrying everything.",
-       "ctx": "out",
-       "kind": "attention"
-      },
-      {
-       "n": 17,
-       "test": "Lead a short walk in weather that was not ideal, and keep it cheerful.",
-       "ctx": "out",
-       "kind": "kindness"
-      },
-      {
-       "n": 18,
-       "test": "Read a shipping or mountain forecast and say what it means for tomorrow.",
-       "ctx": "room",
-       "kind": "attention"
-      },
-      {
        "n": 19,
-       "test": "Make the call on a day out for other people, and be right.",
+       "test": "Decide the weather plan for a family or friends' day out: where, when, and what everybody brings, and have it go well.",
+       "note": "Use everything so far: the hour-by-hour forecast, the warnings, the sunset time, and the tide if it is the coast. Tell people the plan the night before, with the list of what to bring. \"Go well\" means nobody was caught cold, wet or in the dark.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 20,
-       "test": "Keep a group safe and cheerful through genuinely bad weather.",
-       "ctx": "out",
+       "test": "Lead a walk of an hour or more in wind and rain, and bring everybody home warm and glad they went.",
+       "note": "Pick a day with rain and wind but no amber or red warning. Layers, hats, a flask, a turn-back time, a check on everybody every half hour, and something good at the end: a hot drink, a chip shop, a fire. This is the end of the ladder: other people trusting you with the weather.",
+       "ctx": "with",
        "kind": "kindness"
       }
-     ]
+     ],
+     "who": "For everybody; always a grown-up at the shore"
     },
     {
      "id": "wild.living",
@@ -5741,133 +5767,154 @@
     {
      "id": "sky.stars",
      "name": "Stars and planets",
-     "line": "One constellation to knowing the sky.",
+     "line": "From finding the Plough to an hour under the stars showing family or friends ten things by name.",
      "size": "months",
      "strand": "get-strong-outside",
+     "about": "For everybody: a child and a grown-up can climb it side by side, and a grown-up is always with a child out in the dark. It starts with the one shape you can see from Northern Ireland on every clear night of the year, the Plough, and uses it to find the North Star and Cassiopeia. Then the sky turning through the night, the big pattern of the season, a planet, the space station, shooting stars and the Moon's craters. It finishes somewhere properly dark with the Milky Way and the Andromeda galaxy, and then an hour of showing other people what you know. Most of it needs nothing but a clear night and a doorstep, and it is one of the best things to share with a child.",
      "steps": [
       {
        "n": 1,
-       "test": "Find the Plough and the North Star.",
+       "test": "On a clear night, go outside or to a dark window and find the Plough.",
+       "note": "The Plough is seven bright stars in the shape of a saucepan: four make the pan and three make the handle. From Northern Ireland it never sets, so it is up on every clear night of the year, somewhere in the northern half of the sky. Turn off the lights behind you. A free sky map such as Stellarium Web can show you where to look, then put the phone away.",
        "ctx": "out",
        "kind": "attention",
-       "mins": 10
+       "mins": 5
       },
       {
        "n": 2,
-       "test": "Use the Plough to find north, and check it against a compass.",
+       "test": "Follow the two end stars of the Plough's pan to the North Star, and point north.",
+       "note": "Take the two stars on the side of the pan furthest from the handle. Follow the line they make out of the top of the pan, about five times the gap between them, to a star on its own that is not especially bright. That is the North Star. Face it and you are facing north; check with a compass app if you like. From here it sits a little over halfway up the sky, and it hardly moves.",
        "ctx": "out",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 3,
-       "test": "Name three constellations and find them on your own.",
+       "test": "Find Cassiopeia, the W of five stars on the far side of the North Star from the Plough.",
+       "note": "Draw an imaginary line from the Plough through the North Star and keep going about the same distance again. Cassiopeia looks like a W or an M depending on the time of year and night. Like the Plough, it never sets from Northern Ireland.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 4,
-       "test": "Go out on a clear night and just look up for ten minutes.",
+       "test": "Look for the faint star beside the middle star of the Plough's handle, and say whether you can see it.",
+       "note": "The middle star of the handle is called Mizar, and right beside it is a fainter one called Alcor. Some people can see the pair at once, some after a minute of looking, and from a bright street some cannot see Alcor at all. Whatever you see, say it; it is a good test of your eyes and of how dark your sky is.",
        "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 5,
-       "test": "Find Orion, and the three stars of his belt.",
+       "test": "Look through a kitchen-roll tube at one patch of sky, count the stars, then count again after twenty minutes in the dark.",
+       "note": "No torch and no phone screen for the twenty minutes; eyes keep getting better in the dark for twenty minutes or more, and one look at a bright screen sets them back. Write down both numbers. A red light, such as a bike light or a torch with red sweet wrapper over it, lets you see the paper without losing your dark eyes. Dress warmly: standing still gets cold fast.",
        "ctx": "out",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 6,
-       "test": "Find Cassiopeia.",
+       "test": "Draw the Plough, the North Star and Cassiopeia from memory, then go out and check your drawing against the sky.",
+       "note": "Pencil and the back of an envelope. Put the North Star in the middle and the other two either side. Then compare with the real thing and fix what was wrong. A child and a grown-up can each draw one and see whose is closer.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 7,
-       "test": "Tell the difference between a star and a planet by eye.",
-       "note": "Stars twinkle. Planets hold steady. Once you have seen it you cannot unsee it.",
+       "test": "Note where the Plough is against a rooftop or tree, look again two hours later, and say which way the sky has turned.",
+       "note": "The whole sky turns around the North Star once a day, anticlockwise as you face north. In two hours the Plough will have swung round by about a twelfth of a circle. The North Star is the one that stays put, which is why people steered by it.",
        "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 8,
-       "test": "Find a planet with your own eyes and know which one it is.",
+       "test": "Find the big pattern of the season: Orion in winter, bright Arcturus in spring and early summer, or the Summer Triangle in late summer and autumn.",
+       "note": "November to March evenings: Orion, low in the south, with three stars in a short straight line for his belt, an orange star above them and a white one below. April to July: follow the curve of the Plough's handle away from the pan to a bright orange star, Arcturus. August to October: three bright stars high overhead, Vega, Deneb and Altair, make the Summer Triangle. In June and early July the sky here never gets fully dark, so try late in the evening.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 9,
-       "test": "Watch the moon on five nights and draw what it looked like.",
-       "ctx": "long",
+       "test": "Find a bright point that does not twinkle as much as the stars around it, and use a free sky map to name the planet.",
+       "note": "Planets tend to shine with a steadier light than stars, especially higher up. Venus and Jupiter are the brightest; Venus is only ever seen in the west after sunset or the east before sunrise. Point Stellarium Web or another free sky map at it to check. Some weeks there is no bright planet in the evening; if so, do the next rung and come back to this one.",
+       "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 10,
-       "test": "Know what the moon will look like tomorrow, and be right.",
-       "ctx": "long",
+       "test": "Look up when the space station will next pass over, and watch it cross the sky.",
+       "note": "NASA's free \"Spot the Station\" website gives the times and where in the sky to look. It looks like a very bright star moving steadily across the sky for a few minutes, with no flashing lights; a plane has flashing lights. Passes come in runs of a few weeks, so if there are none this week, check again next week.",
+       "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 11,
-       "test": "Spot a satellite crossing the sky.",
+       "test": "Lie back somewhere safe on a clear night and count shooting stars for thirty minutes.",
+       "note": "A few can be seen in an hour on most clear nights away from lights. Around 12 August (the Perseids) and 14 December (the Geminids) there can be many more. A garden, a back yard or a car park with a grown-up. Blankets, hats, a flask, and the whole sky in view; do not stare at one spot.",
        "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 12,
-       "test": "Find the Milky Way from somewhere dark.",
-       "ctx": "out",
+       "test": "Look at the Moon through binoculars when it is half lit, and find three craters along the line between light and dark.",
+       "note": "Craters show up best near that line, where shadows are long. Rest your elbows on a wall or a car roof to keep the view still. No binoculars? Borrow a pair; many households have one somewhere. Never point binoculars anywhere near the Sun, and a grown-up hands them to a child only once the Sun has set.",
+       "ctx": "kit",
        "kind": "skill"
       },
       {
        "n": 13,
-       "test": "Watch a meteor shower and count what you see.",
+       "test": "Stay out two hours later than usual and find the pattern of the next season rising in the east.",
+       "note": "The stars rise about four minutes earlier each night, which adds up to about two hours a month. So the next season's stars are already up late in the evening: Orion rises in the east late on autumn nights, and the Summer Triangle is up in the east late on spring nights. Name the one you find.",
        "ctx": "out",
-       "kind": "attention"
+       "kind": "skill"
       },
       {
        "n": 14,
-       "test": "Find five constellations without help.",
-       "ctx": "out",
-       "kind": "skill"
+       "test": "With a lamp and a ball, show somebody why Orion is not in the summer evening sky.",
+       "note": "The lamp is the Sun, the ball is the Earth, and the far walls of the room are the stars. Night is the side of the ball facing away from the lamp. Walk the ball halfway round the lamp and the night side now faces the opposite wall: different stars. In summer Orion is on the same side of the sky as the Sun, so he is up in the daytime, where we cannot see him.",
+       "ctx": "home",
+       "kind": "attention"
       },
       {
        "n": 15,
-       "test": "Look at the moon through binoculars and find one crater.",
-       "ctx": "out",
-       "kind": "skill"
-      },
-      {
-       "n": 16,
-       "test": "Find the Andromeda galaxy.",
-       "ctx": "out",
-       "kind": "skill"
-      },
-      {
-       "n": 17,
-       "test": "Know which constellations belong to which season, and say why they move.",
+       "test": "Plan a trip to a dark place: pick a night near new moon, check the forecast, and pack for the cold.",
+       "note": "A dark place means away from town lights: a forest car park, a quiet beach, the hills. Davagh Forest in County Tyrone is an official Dark Sky Park. The best nights are the week either side of new moon, which the Met Office and most calendars show. Pack warm layers, a hat, a flask, a blanket and a red light, and tell somebody where you are going.",
        "ctx": "room",
        "kind": "attention"
       },
       {
+       "n": 16,
+       "test": "From your dark place, find the Milky Way.",
+       "note": "It is a pale band of light, like thin cloud that does not move, running across the sky; it is the light of millions of stars in our own galaxy. From Northern Ireland it is best from August to October in the evening, passing high overhead through Cassiopeia and the Summer Triangle. Give your eyes twenty minutes first. A grown-up with any child, and stay near the car or the path.",
+       "ctx": "out",
+       "kind": "attention"
+      },
+      {
+       "n": 17,
+       "test": "Find the Andromeda galaxy, another galaxy far beyond our own.",
+       "note": "It looks like a faint, fuzzy oval smudge, not a point. It is well placed in the evening from about August to February. Find the Great Square of Pegasus, four stars in a big square below Cassiopeia on autumn evenings. From its corner nearest Cassiopeia, count two stars along the curving line that leads away from the Square. At the second, turn towards Cassiopeia, pass one fainter star, and look about the same distance again. Binoculars make it much easier. Its light left it about two and a half million years ago.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
        "n": 18,
-       "test": "Find eight constellations without help.",
+       "test": "On one clear night, without a phone or a book, find and name ten things in the sky.",
+       "note": "Stars, patterns, planets, the Moon, the Milky Way, all count. For example: the Plough, the North Star, Mizar and Alcor, Cassiopeia, Orion, his orange star Betelgeuse, Arcturus, Vega, a planet, the Moon. Write the ten down when you come in.",
        "ctx": "out",
        "kind": "skill"
       },
       {
        "n": 19,
-       "test": "Take somebody out and show them three things in the sky.",
+       "test": "Take one person out and show them three things, then let them find one of those three by themselves.",
+       "note": "A child, a parent, a friend, a neighbour. Start with the Plough, because they will be able to find it again on their own for the rest of their life. Point with your arm held straight next to their eye line, and wait while they look.",
        "ctx": "with",
        "kind": "kindness"
       },
       {
        "n": 20,
-       "test": "Run a stargazing night and show people what is up there.",
+       "test": "Lead an hour under the stars for family or friends, and show them ten things by name.",
+       "note": "A back garden or a dark car park, blankets and a flask. Start with what never sets, then the season's pattern, a planet if there is one, and finish with something faint that needs dark eyes. Let the children spot the space station or a shooting star. This is the end of the ladder: the sky is something you can give to other people now.",
        "ctx": "with",
        "kind": "kindness"
       }
-     ]
+     ],
+     "who": "For everybody; a grown-up with any child in the dark"
     },
     {
      "id": "sky.birdsflight",
@@ -7210,85 +7257,118 @@
     {
      "id": "mind.findout",
      "name": "Finding things out",
-     "line": "Asking well, looking it up, checking it.",
+     "line": "From three questions written down to a week spent answering one, with the sources shown to somebody else.",
      "size": "weeks",
      "strand": "say-what-you-mean",
+     "from": 12,
+     "about": "For grown-ups and anybody from about twelve. The climb starts with writing down what you wonder about and asking the people around you, then moves to searching well, checking one source against another, finding where a saying really came from, and ringing the person who would actually know. It ends with one bigger question answered properly over a week, written on a page with the three places the answer came from, and shown to somebody so they can check it for themselves. Everything answers confidently now, from websites to AI tools, and being able to tell a checked answer from a guess is a skill you use every day.",
      "steps": [
       {
        "n": 1,
-       "test": "Ask somebody a question you do not know the answer to, and get an answer you understand.",
-       "ctx": "with",
-       "kind": "courage",
-       "mins": 5
+       "test": "Write down three questions you have wondered about this week, each one ending with a question mark.",
+       "ctx": "room",
+       "kind": "attention",
+       "mins": 3,
+       "note": "Real ones, not quiz questions: why does the kettle switch itself off, when was my street built, what does the name of my town mean. A note on your phone or the back of an envelope is fine. If you already keep a list like this, add three today and count it. You will use these questions for the next few rungs."
       },
       {
        "n": 2,
-       "test": "Ask a second question because the first answer was not enough.",
+       "test": "Ask somebody one of your three questions, and keep asking until you understand the answer or you are both sure they do not know.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "note": "Somebody in the house, a friend, a grandparent, a colleague at the tea break. Useful follow-ups are \"How do you know?\" and \"What do you mean by that?\". Finding out that they do not know is a proper finish too: it tells you where to look next."
       },
       {
        "n": 3,
-       "test": "Look something up on your own and explain it back to another person.",
-       "ctx": "with",
-       "kind": "attention"
+       "test": "Search for one of your questions online using three or four key words, and find the answer on the first page of results.",
+       "ctx": "room",
+       "kind": "skill",
+       "note": "Type the words that matter, not the whole sentence: \"kettle switch off how\" works better than \"why does my kettle turn itself off\". If the first page has nothing useful, change one word and try again. Any free search engine will do.",
+       "how": [
+        "Pick the three or four words that carry the question.",
+        "Read the page titles and the short text under each before you open one.",
+        "Open the most likely one and find the sentence that answers it."
+       ]
       },
       {
        "n": 4,
-       "test": "Find out how to do something you have never done, then do it the same day.",
+       "test": "Read the answer to that question on two different websites, and write down whether they agree.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "note": "Choose two that are not copying each other: a museum or a university page and a newspaper, or a council page and an encyclopaedia. If they agree, good. If they do not, write down what each one says; that is the start of the next rung."
       },
       {
        "n": 5,
-       "test": "Ask an AI a question so clear that the first answer is actually useful.",
+       "test": "For one of those pages, find who wrote it and when, and write both down.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "note": "Look at the top and the bottom of the page, or an \"About us\" link. A named person or organisation and a date make a page easier to trust. If you cannot find either, write that down too, and trust the page a little less."
       },
       {
        "n": 6,
-       "test": "Catch an answer that was wrong, and find out that it was.",
-       "note": "Everything answers confidently. Confident and right are different things.",
-       "ctx": "room",
-       "kind": "attention"
+       "test": "Find out how to do one practical thing you have never done, and do it the same day.",
+       "ctx": "home",
+       "kind": "skill",
+       "note": "Fold a fitted sheet, tie a tie, restart the internet router, set the timer on the oven, or plant a potato. Written steps, a video or a person all count. It is done when the thing is done, not when you have read about it. A younger teenager chooses the job with a grown-up."
       },
       {
        "n": 7,
-       "test": "Check one fact in two different places and say which you trust more, and why.",
+       "test": "Ask an AI chat tool one question with who you are, what you need and why written into it, and get a useful first answer.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "skill",
+       "note": "Compare \"radiator cold\" with \"I rent a flat in Northern Ireland and one radiator is cold at the top and warm at the bottom. What can I safely check myself before I ring the landlord?\" The second one gets a better answer first time. If you do not use them, put the same full question to a search engine or a person and count it."
       },
       {
        "n": 8,
-       "test": "Find who first said a thing everybody repeats.",
+       "test": "Check one answer from an AI tool or a website against a second, better source, and write down whether it was right.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "note": "A better source is one closer to the facts: the official page of the council, the maker of the product, the museum that holds the thing. Answers can sound certain and still be wrong, so this is worth doing even when the first answer looks fine. Right or wrong, you have done the rung once you have checked."
       },
       {
        "n": 9,
-       "test": "Find the original of something, not somebody talking about it.",
+       "test": "Take one saying that is shared under a famous name, and find where it first appeared or that there is no record of it.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "note": "Sayings passed around as Einstein, Churchill or Abraham Lincoln are good ones to try. Search the exact words in quotation marks along with the word \"quote\" or \"source\", and look for a page that names the book, speech or letter it came from. Sometimes the honest answer is that nobody can find it, and that counts."
       },
       {
        "n": 10,
-       "test": "Ask the person who would actually know, rather than looking it up.",
-       "ctx": "with",
-       "kind": "courage"
+       "test": "Read the original of one thing people are talking about, rather than somebody talking about it.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "A council planning application instead of the local Facebook post about it, the report itself instead of the news story, or the actual letter from school instead of what another parent said. Then write one sentence on what the original says that the talk left out. Most originals are free to read online or at a library."
       },
       {
        "n": 11,
-       "test": "Change your mind about something because of what you found.",
-       "ctx": "room",
-       "kind": "courage"
+       "test": "Ring or email the place that would actually know, and ask one clear question.",
+       "ctx": "with",
+       "kind": "courage",
+       "note": "The council about bin days, the library about an old photograph of your street, a museum about an object, a shop about a product. Write the question down before you ring, and write the answer down while they are talking. A younger teenager can do this with a grown-up sitting beside them."
       },
       {
        "n": 12,
-       "test": "Teach somebody else how you go about finding things out.",
+       "test": "Write down what you believe about one thing, look it up properly in two good sources, and write down what you believe now.",
+       "ctx": "room",
+       "kind": "courage",
+       "note": "Pick something you are fairly sure of, not something you care a lot about, for the first go: how long a goldfish remembers, whether cracking your knuckles does any harm, how old your town is. Sometimes your view stays the same and sometimes it changes. The rung is being willing to write the second line honestly."
+      },
+      {
+       "n": 13,
+       "test": "Spend a week answering one bigger question, and write the answer on one page with the three places you got it from.",
+       "ctx": "long",
+       "kind": "attention",
+       "note": "Bigger means it needs more than one search: when was my house built and who lived there first, where does our tap water come from, why is my town where it is. Ten minutes a day is enough. Use at least one source that is not a website, like a person, a library book or an old map."
+      },
+      {
+       "n": 14,
+       "test": "Show somebody how you found the answer to your bigger question, step by step, so they could check it themselves.",
        "ctx": "with",
-       "kind": "kindness"
+       "kind": "kindness",
+       "note": "Go through your page with them: the question, where you looked first, what did not work, and the three sources. Let them ask questions. If they could follow the same steps and reach the same answer, you have finished this ladder."
       }
-     ]
+     ],
+     "who": "Grown-ups and anybody from about twelve"
     },
     {
      "id": "mind.maps",
@@ -7782,137 +7862,154 @@
     {
      "id": "words.books",
      "name": "Reading books",
-     "strand": "say-what-you-mean",
-     "line": "One page tonight to a whole book in a day.",
+     "line": "From one page tonight to a whole book of about two hundred pages in one day.",
      "size": "months",
+     "strand": "say-what-you-mean",
+     "about": "For grown-ups, and for any child who can already read a chapter book on their own (the Reading ladder comes before this one). The climb starts with one page at bedtime and a book you actually want, then builds the habit a few days a week, then the length of a sitting, from ten pages to an hour, then a hundred and fifty pages in a day. It ends with a whole book of about two hundred pages read between getting up and going to bed. Nothing to buy: joining Libraries NI is free, and you can ask a library to get in a book it does not have on the shelf.",
      "steps": [
       {
        "n": 1,
        "test": "Read one page of a book tonight before you sleep.",
        "ctx": "room",
        "kind": "attention",
-       "mins": 3
+       "mins": 3,
+       "note": "Any book in the house counts: a novel, a cookbook, a book a child left lying about. One page is the whole rung, and reading on is allowed. If you already read in bed most nights, do it on purpose tonight and count it."
       },
       {
        "n": 2,
-       "test": "Read ten pages in one sitting.",
-       "ctx": "room",
-       "kind": "attention"
+       "test": "Get one book you want to read and put it beside your bed.",
+       "ctx": "home",
+       "kind": "attention",
+       "note": "Want is the important word: not one you think you ought to read. Take it from your own shelf, borrow it from a friend, or get it free from the library. Putting it where you will see it at bedtime is half of this rung."
       },
       {
        "n": 3,
-       "test": "Read on three separate days in one week.",
-       "ctx": "long",
-       "kind": "attention"
+       "test": "Read ten pages of that book in one sitting.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Ten pages is usually fifteen to twenty minutes. Sit somewhere you will not be interrupted and put the phone face down or in another room. If you stop at eight, read the last two before bed and count it."
       },
       {
        "n": 4,
-       "test": "Read for twenty minutes without once picking up your phone.",
-       "note": "Phone in another room. Twenty minutes. That is the whole test.",
-       "ctx": "room",
-       "kind": "attention"
+       "test": "Read on three separate days in one week.",
+       "ctx": "long",
+       "kind": "attention",
+       "note": "Any amount on each day, even a page. Tie it to something you already do, like the first cup of tea or getting into bed. Tick the days off somewhere you can see them."
       },
       {
        "n": 5,
-       "test": "Finish a book you chose yourself. Any book, any length.",
-       "note": "Chose yourself matters. Nobody set it, nobody recommended it, you are not being examined on it.",
-       "ctx": "long",
-       "kind": "skill"
+       "test": "Read for thirty minutes, count the pages, and write the number down.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "That number is your reading speed for this kind of book, and the rungs further up are measured against it. Do not hurry to make it bigger; read the way you normally read. Write the date beside it so you can compare in a couple of months."
       },
       {
        "n": 6,
        "test": "Read something every day for a week, even if it is one page.",
        "ctx": "long",
-       "kind": "attention"
+       "kind": "attention",
+       "note": "Seven days, no gaps. On a busy day one page before sleep keeps the week going. If you miss a day, start the seven again from the next day; nothing is lost."
       },
       {
        "n": 7,
-       "test": "Read for thirty minutes, count the pages, and write the number down.",
-       "note": "That number is your speed. Everything after this is measured against it.",
+       "test": "Read twenty-five pages in one sitting.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "note": "At the speed from rung five, work out roughly how long this will take and put that time aside. A weekend morning or a quiet evening is ideal. Get up and stretch at the halfway point if you need to, but stay with the book."
       },
       {
        "n": 8,
-       "test": "Ask somebody what you should read next, and start it that week.",
-       "note": "Not knowing what to read next is the commonest reason people stop. Ask somebody who reads.",
-       "ctx": "with",
-       "kind": "skill"
+       "test": "Finish the book you chose on rung two.",
+       "ctx": "long",
+       "kind": "skill",
+       "note": "If you no longer like it, you are allowed to stop and choose another one you want more. Then finish that one. Finishing a book is the rung, whatever the book and however long it took."
       },
       {
        "n": 9,
-       "test": "Read twenty-five pages in one sitting.",
-       "ctx": "room",
-       "kind": "skill"
+       "test": "Ask somebody who reads a lot what you should read next, and start it within a week.",
+       "ctx": "with",
+       "kind": "courage",
+       "note": "A friend who always has a book, a librarian, a bookseller, a relative. Tell them one book you liked and ask for something like it. Having the next book ready means there is never a gap after finishing one."
       },
       {
        "n": 10,
        "test": "Read fifty pages in one day.",
-       "ctx": "long",
-       "kind": "skill"
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Split it however you like: twenty in the morning, thirty in the evening. A day off is easiest for the first go. If you are already past fifty pages a day, read fifty on purpose today and count it."
       },
       {
        "n": 11,
-       "test": "Read two books inside one month.",
-       "ctx": "long",
-       "kind": "skill"
+       "test": "Read for a whole hour without stopping.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Set a timer and put it out of sight so you are not checking it. Phone in another room, a drink beside you before you start. An hour is a good length to get properly into a book."
       },
       {
        "n": 12,
-       "test": "Read for a whole hour without stopping.",
-       "ctx": "room",
-       "kind": "attention"
+       "test": "Take your book out and read twenty pages somewhere other than your home.",
+       "ctx": "out",
+       "kind": "attention",
+       "note": "On the bus or train, on a park bench, in a café, in the library, in the car while waiting at a school gate. If it is cold, a library or a café is fine. Noticing that you can read in any spare twenty minutes is the point."
       },
       {
        "n": 13,
-       "test": "Read in three different places — outside, on a journey, and somewhere you never have.",
-       "ctx": "out",
-       "kind": "skill"
+       "test": "Read a hundred pages in one day.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "At most speeds this is between two and four hours of reading, spread through the day. Choose a book you are enjoying and a day with nothing much in it. Plan three or four sittings with breaks for food and a walk."
       },
       {
        "n": 14,
-       "test": "Read a hundred pages in one day.",
+       "test": "Read every day for a month without missing a day.",
        "ctx": "long",
-       "kind": "skill"
+       "kind": "attention",
+       "note": "Any amount each day, as on rung six, but for about thirty days. Keep the book with you, so a queue or a wait becomes a few pages. If you miss one, carry on the next day and add a day at the end."
       },
       {
        "n": 15,
-       "test": "Finish a book you would have said was too hard for you.",
+       "test": "Read two books inside one month.",
        "ctx": "long",
-       "kind": "courage"
+       "kind": "attention",
+       "note": "Pick two you want to read before the month starts, so you are never stuck choosing. Shorter books are allowed; this rung is about keeping going. The library can have both ready for you to collect."
       },
       {
        "n": 16,
-       "test": "Tell somebody what a book was about, well enough that they want to read it.",
-       "ctx": "with",
-       "kind": "kindness"
+       "test": "Finish a book of a kind you never read.",
+       "ctx": "long",
+       "kind": "courage",
+       "note": "If you read stories, choose a history or a biography. If you read facts, choose a novel. Poetry, a play or a book of letters all count too. Ask a librarian for a good first one of that kind."
       },
       {
        "n": 17,
-       "test": "Read a hundred and fifty pages in one day.",
-       "ctx": "long",
-       "kind": "skill"
+       "test": "Tell somebody about a book you finished, well enough that they ask to borrow it.",
+       "ctx": "with",
+       "kind": "kindness",
+       "note": "Say what it is about in two sentences, then the one part you remember most, without giving the ending away. Then offer to lend it. If they ask for it, you have done the rung."
       },
       {
        "n": 18,
-       "test": "Read every day for a month without missing a day.",
-       "ctx": "long",
-       "kind": "attention"
+       "test": "Read a hundred and fifty pages in one day.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "The same plan as the hundred-page day, with one more sitting. Choose a book you are enjoying and want to keep reading, not the hardest one on the shelf. Short walks and proper meals between sittings help more than coffee."
       },
       {
        "n": 19,
-       "test": "Read a two-hundred-page book inside one day, in under eight hours of reading.",
-       "note": "A whole book between getting up and going to bed. It is an ordinary Saturday, and almost nobody believes it until they do it.",
+       "test": "Read one book a week for four weeks in a row.",
        "ctx": "long",
-       "kind": "skill"
+       "kind": "attention",
+       "note": "Four books in about a month. Have the next one ready before you finish the one you are on. Choose books of a length you can honestly finish in a week at your speed from rung five."
       },
       {
        "n": 20,
-       "test": "Read a book a week for a month, and give one of them to somebody who needs it.",
-       "ctx": "long",
-       "kind": "kindness"
+       "test": "Read a whole book of about two hundred pages in one day.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "From getting up to going to bed, with meals, walks and rests in between. Choose a book you are looking forward to and a day with nothing else planned. Plenty of people do not believe they can do this until they have. Write the title and the date on the first page of your notebook."
       }
-     ]
+     ],
+     "who": "Grown-ups, and children who read chapter books alone"
     },
     {
      "id": "words.hand",
@@ -8658,132 +8755,141 @@
     {
      "id": "speak.strangers",
      "name": "Talking to people you do not know",
-     "line": "Hello, to interviewing anybody.",
+     "line": "From ordering at a counter yourself, to a half-hour interview with somebody you had never met.",
      "size": "months",
      "strand": "say-what-you-mean",
+     "from": 8,
+     "about": "For anybody from about eight, and for grown-ups; a child does every rung with a grown-up beside them. Where Meeting people is about making friends, this ladder is about asking people you do not know for what you need, and then for what they know: ordering, asking for things that are not on show, asking for advice, and finally interviewing people about their work. It ends with a half-hour interview with somebody you had never met, written up and given back to them. Everybody you meet knows something you do not; this is how you find out what.",
      "steps": [
       {
        "n": 1,
-       "test": "Say hello and your name to somebody you have never met.",
+       "test": "Order something for yourself at a counter, out loud, and say thank you at the end.",
+       "note": "A chippy, a bakery, a café, a post office. A child does the talking while the grown-up stands beside them and says nothing. No money to spend: ask at the library to renew a book, or at a station for a timetable. If you do this every day already, do it today with your eyes on theirs and count it.",
        "ctx": "out",
        "kind": "courage",
-       "mins": 2
+       "mins": 3
       },
       {
        "n": 2,
-       "test": "Say good morning to somebody passing, and mean it.",
+       "test": "Ask somebody at a desk or counter for something that is not on show.",
+       "note": "A free map at the tourist office, a glass of tap water, a library card form, a bus timetable, a spare bag. You are asking for something they have and you cannot see. A yes or a no both finish the rung.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 3,
-       "test": "Ask somebody behind a counter a question, out loud, on your own.",
+       "test": "Ask the person serving you one question that is not about what you are buying.",
+       "note": "\"Is it always this busy on a Saturday?\" \"Do you bake these here?\" \"How long have you worked here?\" Pick a quiet moment, not when there is a queue behind you.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 4,
-       "test": "Ask a stranger for the time or for directions.",
+       "test": "Ask somebody working in a public place what they are doing today.",
+       "note": "A park keeper, a market trader setting up, a lifeguard, somebody painting railings, a librarian shelving. Only ask somebody who can stop safely: never somebody working near traffic or with machines running.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 5,
-       "test": "Pay for something yourself and say thank you at the end.",
+       "test": "Ask somebody at work two questions in a row, where the second comes from their first answer.",
+       "note": "They say they start at six; you ask what the first job of the morning is. The second question shows you were listening, and that is when people start to tell you more.",
        "ctx": "out",
-       "kind": "courage"
+       "kind": "attention"
       },
       {
        "n": 6,
-       "test": "Ask a shop assistant to find you something.",
+       "test": "Ask somebody who knows their trade for advice on a real problem you have, then follow it.",
+       "note": "A butcher on how to cook a cheap cut, a hardware shop on which screw holds a shelf, a garden centre on why a plant is dying, a librarian for a book like the last one you loved. You do not have to buy anything to ask.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 7,
-       "test": "Walk into a cafe, ask for a table and order your own food.",
+       "test": "Go back to the person who gave you the advice and tell them how it went.",
+       "note": "\"You told me to cook it slowly; it was brilliant.\" People who give advice almost never hear what happened. This is often the start of being known in a place.",
        "ctx": "out",
-       "kind": "courage"
+       "kind": "kindness"
       },
       {
        "n": 8,
-       "test": "Ask somebody a second question, because you were actually interested.",
+       "test": "Ask somebody who has run a local shop or business for years how they started, and listen to the whole story.",
+       "note": "The shoe mender, the family butcher, the hairdresser, the person at the market stall. Pick a quiet time of day. Five minutes of their story is plenty.",
        "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 9,
-       "test": "Learn one thing about somebody you did not know before, in a queue.",
-       "ctx": "out",
-       "kind": "courage"
+       "test": "Write down ten questions you could ask anybody about their work or their life.",
+       "note": "\"How did you get into this?\" \"What does a normal day look like?\" \"What is the hardest part?\" \"What do people get wrong about your job?\" \"What would you tell somebody starting?\" Questions that cannot be answered with yes or no.",
+       "ctx": "room",
+       "kind": "attention"
       },
       {
        "n": 10,
-       "test": "Start a conversation with somebody your own age you have never met.",
-       "ctx": "out",
-       "kind": "courage"
+       "test": "Try three of your questions on somebody you already know, and mark which gave the longest answers.",
+       "note": "A grandparent, a neighbour, a friend's parent, a colleague. Cross out any question that got a one-word answer and write a better one.",
+       "ctx": "with",
+       "kind": "attention"
       },
       {
        "n": 11,
-       "test": "Ask somebody at work what their job is actually like.",
+       "test": "Ask somebody at work if they could answer three of your questions now, and ask them.",
+       "note": "\"I am practising asking people about their jobs; could I ask you three quick questions?\" A shop worker in a quiet moment, a librarian, a postie. If they say not now, thank them; asking was the rung, and try somebody else.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 12,
-       "test": "Write ten questions you would ask anybody.",
-       "ctx": "room",
-       "kind": "attention"
+       "test": "Ask somebody if you could come back another day for ten minutes of questions about their work, and fix a time.",
+       "note": "Somebody from the last few rungs is ideal. Agree a day, a time and a place they choose, and write it down. A child asks with their grown-up there, and the grown-up is at the interview too.",
+       "ctx": "out",
+       "kind": "courage"
       },
       {
        "n": 13,
-       "test": "Interview an adult with those ten questions.",
-       "ctx": "out",
-       "kind": "courage"
-      },
-      {
-       "n": 14,
-       "test": "Interview somebody you have never met and get a real answer.",
-       "ctx": "out",
-       "kind": "courage"
-      },
-      {
-       "n": 15,
-       "test": "Ask somebody about the thing they know most about, and keep them talking ten minutes.",
-       "ctx": "out",
+       "test": "Do that ten-minute interview with your questions, and write notes as they talk.",
+       "note": "Arrive on time, say thank you first, ask your questions, and let them wander off the list if they want to; that is often the best part. Stop at ten minutes unless they want to keep going.",
+       "ctx": "with",
        "kind": "attention"
       },
       {
-       "n": 16,
-       "test": "Introduce two people who do not know each other.",
-       "ctx": "with",
+       "n": 14,
+       "test": "Write up what they told you on one page, and give or send them a copy.",
+       "note": "Their name, their work, the best things they said, in your words. Let them correct anything. Very few people have ever had their story written down.",
+       "ctx": "room",
        "kind": "kindness"
       },
       {
+       "n": 15,
+       "test": "Ask somebody whose work you know nothing about for twenty minutes of questions, and fix a time.",
+       "note": "A farmer, a bus driver, a nurse, a vet, a baker who starts at four in the morning, a boat builder. Ask through somebody you know, or at their place of work. A no is fine; ask the next one.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 16,
+       "test": "Do the twenty-minute interview, and ask their permission before you record or write it down.",
+       "note": "\"Is it all right if I take notes?\" A phone can record the sound if they agree. Use your questions, then ask one you had not planned, about the part that surprised you.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
        "n": 17,
-       "test": "Ring somewhere and ask a question on the telephone.",
-       "ctx": "room",
+       "test": "At the end of an interview, ask \"Who else should I talk to?\", and ask them to introduce you.",
+       "note": "People almost always know somebody. Ask for one name and whether they would send a message or tell that person you will be in touch.",
+       "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 18,
-       "test": "Go somewhere on your own and come back knowing one person's name.",
-       "ctx": "out",
+       "test": "Interview the person you were introduced to, somebody you had never met, for half an hour, and give them a written copy.",
+       "note": "Fix the time, bring your questions, write it up afterwards and send it to them, and a note of thanks to whoever introduced you. That is the far end of this ladder: you can walk up to a stranger and come away knowing their story.",
+       "ctx": "with",
        "kind": "courage"
-      },
-      {
-       "n": 19,
-       "test": "Bring somebody standing on their own into a conversation.",
-       "ctx": "with",
-       "kind": "kindness"
-      },
-      {
-       "n": 20,
-       "test": "Teach another child to order their own meal, and stand back.",
-       "ctx": "with",
-       "kind": "kindness"
       }
-     ]
+     ],
+     "who": "From about eight, with a grown-up beside a child"
     },
     {
      "id": "speak.stage",
@@ -8919,85 +9025,140 @@
     {
      "id": "speak.listen",
      "name": "Listening",
-     "line": "Not interrupting, to coaching somebody.",
+     "line": "From putting your phone down when somebody talks, to helping somebody reach their own answer with only questions.",
      "size": "weeks",
      "strand": "be-useful-to-somebody",
+     "from": 8,
+     "about": "For anybody from about eight: a child and a grown-up can climb it side by side. It starts with the plain things (phone down, face the person, let them finish) and moves to saying back what you heard, asking instead of telling, and staying quiet when somebody is upset. The last rungs are listening to people you disagree with, and helping somebody think a real decision through using nothing but questions. Being properly listened to is rare, and the people who can do it are the people others come back to.",
      "steps": [
       {
        "n": 1,
-       "test": "Listen to a whole story without needing to be the one talking.",
+       "test": "Put down whatever is in your hands and turn to face the next person who talks to you.",
+       "note": "Your phone, the remote, a book, a pen. Turn your shoulders, not just your head, and look at them until they have finished. That is the whole rung, and it changes the conversation more than you would expect.",
        "ctx": "with",
        "kind": "attention",
-       "mins": 10
+       "mins": 2
       },
       {
        "n": 2,
-       "test": "Let somebody finish a sentence you already knew the end of.",
+       "test": "Let somebody tell you about their day, and say nothing until they have stopped.",
+       "note": "At tea, in the car, on the walk home from school. Nods are allowed; words are not. If you live alone, ring somebody and ask about their day. If you find you already do this, do it on purpose tonight and count it.",
        "ctx": "with",
        "kind": "attention"
       },
       {
        "n": 3,
-       "test": "Say back what somebody told you, in your own words, correctly.",
+       "test": "Let somebody finish every sentence for a whole conversation, even when you know how it ends.",
+       "note": "Catch yourself when you want to jump in and finish it for them. Wait for the full stop. A conversation of five minutes is enough.",
        "ctx": "with",
        "kind": "attention"
       },
       {
        "n": 4,
-       "test": "Ask one follow-up question instead of telling your own story.",
-       "note": "The commonest thing people do instead of listening is wait to say their version.",
-       "ctx": "with",
+       "test": "Listen to a short piece on the radio or a podcast, then say its three main points out loud.",
+       "note": "Pick something three to five minutes long: a news item, a talk, a story. Listen once, no rewinding, then say the three points to the room or to somebody nearby. This is the practice for the next rung, without a person waiting on you.",
+       "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 5,
-       "test": "Ask three good follow-up questions and get somebody talking.",
+       "test": "Say back what somebody told you, in your own words, and ask \"Have I got that right?\"",
+       "note": "\"So the bus was late and you missed the start, have I got that right?\" If they correct you, say the corrected version back. Getting it right on the second go still counts.",
        "ctx": "with",
        "kind": "attention"
       },
       {
        "n": 6,
-       "test": "Notice when somebody has stopped listening to you, and stop.",
+       "test": "When somebody tells you something, ask one question about it instead of telling a story of your own.",
+       "note": "They say they went to the beach; you ask which beach, not tell them about your beach. Wanting to tell your own story is normal. Noticing the moment you want to is half of this rung.",
        "ctx": "with",
        "kind": "attention"
       },
       {
        "n": 7,
-       "test": "Listen to somebody you disagree with, all the way through.",
+       "test": "Keep somebody you know talking for five minutes, using only questions about what they have just said.",
+       "note": "A parent, a friend, a brother or sister. \"What happened then?\" \"Why do you think that was?\" \"What was the best bit?\" Use a timer if it helps. If you did the two minutes in Meeting people, this is the same thing, longer, with somebody you know.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "attention"
       },
       {
        "n": 8,
-       "test": "Say back their side well enough that they agree that is what they meant.",
+       "test": "Notice when somebody has stopped listening to you, and finish what you are saying in one sentence.",
+       "note": "The signs: they look away, check a phone, say \"mm\" a lot, start moving. When you see one, finish your point in a sentence and ask them something. Then it is their turn.",
        "ctx": "with",
        "kind": "attention"
       },
       {
        "n": 9,
-       "test": "Listen to somebody much older for an hour, then tell somebody what you learned.",
-       "ctx": "long",
+       "test": "Listen to a talk of about thirty minutes, then write down its main points from memory.",
+       "note": "A lecture online, a sermon, a talk at the library, a long radio programme. No notes while you listen. Three to five points afterwards is a good result.",
+       "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 10,
-       "test": "Sit with somebody who is upset without trying to fix it.",
+       "test": "Ask somebody close to you how they are, and if they say \"fine\", ask once more and wait.",
+       "note": "\"Fine, and how are you really?\" Then say nothing for a few seconds. Most of the time it is fine, and that is good to know. Sometimes the second answer is the real one.",
        "ctx": "with",
        "kind": "kindness"
       },
       {
        "n": 11,
-       "test": "Help two people who are arguing sort it out, without taking a side.",
+       "test": "Listen to somebody who is upset until they have finished, without giving any advice.",
+       "note": "A friend after a bad day, a child whose game went wrong, a parent who is tired. No \"you should\", no \"at least\". \"That sounds hard\" and \"What happened?\" are enough. The urge to fix it is kind, and it is also what stops people talking.",
        "ctx": "with",
        "kind": "kindness"
       },
       {
        "n": 12,
-       "test": "Coach somebody through a problem without solving it for them.",
+       "test": "Ask somebody \"Do you want help with this, or do you want me to listen?\", and do what they choose.",
+       "note": "Use it the next time somebody brings you a problem. If they want help, help. If they want you to listen, the last rung was the practice.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 13,
+       "test": "Listen to somebody who disagrees with you about something that matters to them, all the way through, without interrupting.",
+       "note": "Pick something real but not bitter: whether children should have phones, which school is best, whether the town needs a new road, which team is better. Your turn to talk comes after. Do not argue it back in your head while they speak; that is not listening.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
+       "n": 14,
+       "test": "Say their side back so well that they say \"Yes, that is what I mean.\"",
+       "note": "Same person, or another disagreement. You do not have to agree with it; you have to say it fairly. If they say \"not quite\", try again. When they say yes, the rung is done.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 15,
+       "test": "When two people are disagreeing about something small, say each side back to them fairly, without taking a side.",
+       "note": "Where to go on Saturday, what to watch, whose turn it is. \"So you want the park because it is dry, and you want the cinema because you have been waiting all week.\" Small things only; a serious row is for grown-ups to handle, not for this rung.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 16,
+       "test": "Let somebody talk through a small problem for ten minutes while you ask only questions, until they say what they will do.",
+       "note": "What to make for tea, how to fit in a job, what to say to a friend. Questions like \"What have you tried?\" and \"What would make it easier?\" No suggestions. It feels slow; that is fine.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 17,
+       "test": "Help somebody think through a real decision for twenty minutes, using only questions, until they tell you their next step.",
+       "note": "A job, a move, a course, a hard conversation they need to have; for a child, which club to join or how to make up with a friend. \"What matters most to you here?\" \"What would you do if you were not afraid of getting it wrong?\" \"What is the first thing you could do?\" The answer is theirs, and that is why they will act on it. That is the far end of this ladder.",
+       "how": [
+        "Ask what the decision is, and what they have thought of so far.",
+        "Ask what matters most, and what worries them.",
+        "Ask what they could do first.",
+        "Say their next step back to them, and stop."
+       ],
        "ctx": "with",
        "kind": "kindness"
       }
-     ]
+     ],
+     "who": "From about eight; a child and a grown-up side by side"
     },
     {
      "id": "speak.hardthing",
@@ -10328,142 +10489,153 @@
     {
      "id": "make.draw",
      "name": "Drawing",
-     "line": "Recognisable, then good.",
+     "line": "From three kitchen things in two minutes each to a drawing of somebody's favourite thing, given to them to keep.",
      "size": "months",
      "strand": "make-things",
+     "about": "For everybody from about six: a child and a grown-up can climb it side by side, and a grown-up who finds a rung easy can do it with the other hand. The climb starts with quick drawings of real things in front of you, then teaches looking: one continuous line, the simple shapes underneath, light and shade, the space around a chair, your own hand, measuring with a pencil. It ends with people, a view from a window, and a careful drawing of something a person loves, given to them. Drawing is mostly looking, and it improves with practice the way handwriting does; a pencil and any paper is all you need.",
      "steps": [
       {
        "n": 1,
-       "test": "Draw something and have somebody name it without being told.",
+       "test": "Draw three things from the kitchen, two minutes each, looking at them while you draw.",
        "ctx": "room",
        "kind": "skill",
-       "twist": "Other hand.",
-       "mins": 5
+       "mins": 6,
+       "note": "A mug, a spoon, a key, a tin: whatever is on the table. Look at the thing more than at the paper. Wobbly lines are fine; the rung is three honest two-minute drawings. The back of an envelope and a biro will do.",
+       "twist": "Other hand."
       },
       {
        "n": 2,
        "test": "Draw the same thing three times and pick the best one.",
        "ctx": "room",
        "kind": "skill",
+       "note": "Choose one of the three from rung one. Each time, look for one thing you got wrong last time and fix it: the handle too small, the lid too flat. Write \"best\" on the one you choose.",
        "twist": "Other hand, all three."
       },
       {
        "n": 3,
-       "test": "Draw for ten minutes a day for five days.",
-       "ctx": "long",
-       "kind": "attention"
+       "test": "Draw something in front of you without lifting the pencil off the paper.",
+       "ctx": "room",
+       "kind": "skill",
+       "note": "A shoe, a plant, a bunch of keys. One line from start to finish, going slowly round every edge you can see. It will look strange; it is training your eye to follow an edge, not making a picture.",
+       "twist": "Other hand."
       },
       {
        "n": 4,
-       "test": "Draw something in front of you without lifting the pencil off the paper.",
-       "note": "It will look strange. It is about looking, not about the drawing.",
+       "test": "Draw an object by starting with the simple shapes underneath it.",
        "ctx": "room",
        "kind": "skill",
+       "note": "A kettle is a box with a cylinder spout; a cat is a circle on an oval. Draw the shapes lightly first, then draw the real edges over them, then rub out the shapes or leave them faint. A teapot, a lamp or a cuddly toy is a good one.",
        "twist": "Other hand."
       },
       {
        "n": 5,
-       "test": "Draw an object by starting with the simple shapes underneath it.",
+       "test": "Draw a cereal box, a tin and an orange so each one looks solid, not flat.",
        "ctx": "room",
        "kind": "skill",
-       "twist": "Other hand."
+       "note": "For the box, draw the top as a slanted shape so you can see two sides at once. For the tin, the top is an oval, not a circle, and the bottom curves the same way. The orange comes next rung. If you do not have these, any box, anything round and any ball will do."
       },
       {
        "n": 6,
-       "test": "Draw a cube, a cylinder and a ball so that they look solid.",
+       "test": "Shade a round thing so it looks round, with the light coming from one side.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "Put the orange or a ball beside a window or a lamp. Leave the part nearest the light white, press gradually harder as you go round to the far side, and add a darker shadow on the table on the side away from the light. Squinting at it helps you see the light and dark."
       },
       {
        "n": 7,
-       "test": "Shade a ball so it looks round, with the light coming from one side.",
-       "ctx": "room",
-       "kind": "skill"
+       "test": "Draw something small every day for a week in the same notebook.",
+       "ctx": "long",
+       "kind": "attention",
+       "note": "Five or ten minutes a day: your breakfast, your shoes, a houseplant, the view from a chair. A cheap notebook or a few sheets of paper folded and stapled is enough. Keep them all, including the ones you do not like."
       },
       {
        "n": 8,
-       "test": "Draw the same object twice, lit from two different sides.",
+       "test": "Draw only the empty spaces around and between the legs of a chair.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "attention",
+       "note": "Look at the gaps between the legs and the bars as if they were shapes, and draw those shapes, not the chair. When you have drawn the gaps, the chair appears. Your eye stops drawing what it expects and starts drawing what is there."
       },
       {
        "n": 9,
-       "test": "Draw your own hand, from life.",
+       "test": "Draw a whole chair, with the legs going the right way.",
        "ctx": "room",
        "kind": "skill",
-       "twist": "Draw the hand you draw with, using the other one."
+       "note": "Use what the last rung showed you: the gaps between the legs tell you where each leg goes. The back legs look shorter and higher on the page than the front ones. Check each leg against the gap beside it before you move on."
       },
       {
        "n": 10,
-       "test": "Draw the chair you are sitting on, with the legs going the right way.",
+       "test": "Draw your own hand from life.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "Rest the hand you do not draw with on the table in a relaxed position. Start with the shape of the whole hand, then the fingers, then the creases. Hands are hard for everybody, so ten minutes and an honest attempt is the rung.",
+       "twist": "Draw the hand you draw with, using the other one."
       },
       {
        "n": 11,
-       "test": "Draw the gap around an object instead of the object.",
-       "note": "Draw only the shape of the empty space. Your eye stops guessing and starts looking.",
-       "ctx": "room",
-       "kind": "attention"
-      },
-      {
-       "n": 12,
-       "test": "Fill a whole page with small drawings of one thing.",
+       "test": "Fill one page with small drawings of the same thing from different sides.",
        "ctx": "room",
        "kind": "skill",
+       "note": "A shoe works well: from the front, the side, the back, from above, lying down. Aim for eight to ten small drawings. Turning an object round teaches you more about its shape than one big drawing.",
        "twist": "Half of them with the other hand."
       },
       {
+       "n": 12,
+       "test": "Measure with your pencil held at arm's length, and draw a door or a window with its height and width the right size against each other.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Close one eye, hold the pencil straight out with your arm locked, and line the tip up with the top of the door. Put your thumb where the bottom is. Then turn the pencil sideways and see how many of those widths fit into the height. Draw it to match."
+      },
+      {
        "n": 13,
-       "test": "Draw for ten minutes a day for two weeks without missing a day.",
-       "ctx": "long",
-       "kind": "attention"
+       "test": "Copy a drawing by an artist you admire, line for line.",
+       "ctx": "room",
+       "kind": "skill",
+       "note": "Libraries have books of drawings, and many museums put old drawings online free: search a name like Rembrandt, Dürer or Beatrix Potter with the word \"drawings\". Copy slowly and look at where each line starts and stops. Artists have always learned this way."
       },
       {
        "n": 14,
-       "test": "Copy a drawing you admire, line for line.",
-       "ctx": "room",
-       "kind": "skill"
+       "test": "Draw for ten minutes a day for two weeks without missing a day.",
+       "ctx": "long",
+       "kind": "attention",
+       "note": "The same as the notebook week, twice as long. Mix it up: an object, a shaded ball, your hand, a copy. If you miss a day, carry on the next and add a day at the end."
       },
       {
        "n": 15,
-       "test": "Draw a face with the eyes halfway down the head, not near the top.",
-       "note": "Almost everybody puts the eyes too high. Halfway down is right, and it fixes a face on its own.",
+       "test": "Draw a view from a window, with near things bigger and lower on the page than far things.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "The window frame is your edge. A fence post near you is tall on the page; the same kind of post far away is small and higher up. Things in front hide part of what is behind them, so draw the front things first."
       },
       {
        "n": 16,
-       "test": "Draw a face from a photograph.",
-       "ctx": "room",
-       "kind": "skill"
+       "test": "Draw five quick one-minute drawings of somebody while they move about.",
+       "ctx": "with",
+       "kind": "skill",
+       "note": "Somebody washing up, playing a game, reading on the sofa. One minute each: just the shape of the body and which way it leans, no faces or details. Set a timer. Most people are happy to be drawn if you ask first."
       },
       {
        "n": 17,
-       "test": "Draw the same face again and get the eyes level and the right size.",
-       "ctx": "room",
-       "kind": "skill"
+       "test": "Draw somebody sitting still in front of you, head to feet, in fifteen minutes.",
+       "ctx": "with",
+       "kind": "skill",
+       "note": "Somebody watching television or reading is ideal. Use the pencil-measuring from rung twelve: see how many heads fit into their whole height and draw it that way. Leave the face simple; the rung is the whole body in the right proportions."
       },
       {
        "n": 18,
-       "test": "Draw somebody sitting in front of you, in ten minutes.",
-       "ctx": "with",
-       "kind": "skill"
+       "test": "Draw one place from life for an hour, with shading and near and far things.",
+       "ctx": "room",
+       "kind": "skill",
+       "note": "A corner of your kitchen, the view down the garden or the street from a window, a café table if you are out. Start with light lines for the big shapes, then the edges, then the shading last. Take breaks, but stay with the same drawing."
       },
       {
        "n": 19,
-       "test": "Draw somebody you know, and have a third person say who it is.",
+       "test": "Draw the favourite thing of somebody you know, as carefully as you can, and give it to them.",
        "ctx": "with",
-       "kind": "skill"
-      },
-      {
-       "n": 20,
-       "test": "Draw something somebody asks to keep.",
-       "ctx": "with",
-       "kind": "kindness"
+       "kind": "kindness",
+       "note": "Their dog, their bike, their house, their teapot: from life if you can, or from a photograph they send you. Take several sittings if you need them, and use everything from this ladder: shapes first, measuring, light and shade. Write their name and the date on the back. When they keep it, you have finished this ladder."
       }
      ],
-     "about": "Drawing is looking, written down, and it can be learned like handwriting. The rungs go from ten minutes of drawing a mug to a face that looks like the person. A week of practice makes a difference you can see on the page, and that page is proof you can show anybody. A pencil and paper."
+     "who": "For everybody from about six, side by side"
     },
     {
      "id": "make.electric",
@@ -11187,133 +11359,160 @@
     {
      "id": "music.sing",
      "name": "Singing",
-     "line": "A voice warm-up to singing in front of people.",
+     "line": "From one steady hummed note to starting a song that everybody in the room joins in with.",
      "size": "months",
      "strand": "say-what-you-mean",
+     "about": "For everybody: a child and a grown-up can climb it side by side. The climb starts on your own with one long hummed note and a two-minute warm-up, then learns to breathe low, to match a note, and to sing a song through with the recording turned off. Only then does anybody else hear you: one person, then a round with somebody, then a group. It ends with you starting a song that the whole room joins in with. Nothing to buy; a free piano app or website gives you the notes, and no rung asks anybody to listen until you have practised alone.",
      "steps": [
       {
        "n": 1,
-       "test": "Sing one whole song out loud where somebody can hear you.",
-       "ctx": "home",
-       "kind": "courage",
-       "mins": 4
+       "test": "Hum one long, steady note for as long as one breath lasts, and time it.",
+       "ctx": "room",
+       "kind": "attention",
+       "mins": 2,
+       "note": "Pick a comfortable note in the middle of your voice, not high or low. Keep it the same, without wobbling up or down, until the breath runs out. Write down the seconds; you will beat it on rung three."
       },
       {
        "n": 2,
-       "test": "Do a voice warm-up in the morning, three days running.",
-       "ctx": "long",
-       "kind": "skill"
+       "test": "Do a two-minute voice warm-up: humming, a lip buzz, and slides from low to high.",
+       "ctx": "room",
+       "kind": "skill",
+       "note": "It loosens the voice before singing, the way a stretch does before running. Do it quietly; it does not need to be loud.",
+       "how": [
+        "Hum gently on a comfortable note for thirty seconds.",
+        "Blow air through loose closed lips so they buzz, and slide the note up and down, for thirty seconds.",
+        "Sing \"oo\" sliding slowly from your lowest comfortable note to your highest and back, four times.",
+        "Finish with a long, easy hum."
+       ]
       },
       {
        "n": 3,
-       "test": "Hum a note somebody plays or sings, and match it.",
-       "ctx": "with",
-       "kind": "attention"
+       "test": "Breathe in so your stomach moves out and your shoulders stay still, then hum one note for longer than on rung one.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Put one hand on your stomach and one on your chest. Breathe in through your nose so the lower hand moves and the upper hand hardly moves. Let the breath out slowly on the hum. If your shoulders rise, start again, slower."
       },
       {
        "n": 4,
-       "test": "Match five notes in a row.",
-       "ctx": "with",
-       "kind": "attention"
+       "test": "Do the warm-up three mornings running.",
+       "ctx": "long",
+       "kind": "skill",
+       "note": "In the shower, making breakfast, or in the car. The same two minutes as rung two. Tick off the three mornings."
       },
       {
        "n": 5,
-       "test": "Do a voice warm-up every morning for one week.",
-       "ctx": "long",
-       "kind": "skill"
+       "test": "Match one note: play it on a free piano app or website, and hum it until your note and that note sound the same.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Search \"online piano\" for a free keyboard. Pick a note in the middle, play it, and hum. When you are slightly off you hear a wobble or a buzz between the two sounds; when you match, the two sounds blend into one. Slide your hum slowly up or down until the wobble stops, or ask somebody to sing you the note instead."
       },
       {
        "n": 6,
-       "test": "Sing a whole song in tune, on your own, to one person.",
-       "ctx": "with",
-       "kind": "courage"
+       "test": "Match five different notes in a row on the piano app.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Choose five notes close together, one at a time. Play, listen, then hum. If one goes wrong, play it again and slide to it before moving on."
       },
       {
        "n": 7,
-       "test": "Sing standing up, breathing from low down instead of your shoulders.",
+       "test": "Sing the first five notes of a scale up and back down, in tune with the piano app.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "skill",
+       "note": "On the piano app, start on any white key and play the next four white keys to the right; that is five notes going up. Sing them on \"la\", one per note, then back down. Play each note first if you need to, then try singing all five without it."
       },
       {
        "n": 8,
-       "test": "Sing the same song louder without it going shouty.",
+       "test": "Write out the words of one song you like from memory, check them, and sing it through without looking.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "A song you already half know is easiest: a hymn, a football song, a song from a film, a folk song. Fix the lines you got wrong, then sing it all through at a normal speaking volume. Nobody else needs to hear this one."
       },
       {
        "n": 9,
-       "test": "Learn a second song properly, words and all.",
+       "test": "Record yourself singing that song on your phone, and listen back to all of it once.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "courage",
+       "note": "Many people do not like hearing their own recorded voice at first, and that is normal. Listen once to the end and write down one part that was in tune and one that was not. The recording is only for you; delete it afterwards if you like."
       },
       {
        "n": 10,
-       "test": "Do a voice warm-up every morning for thirty days.",
+       "test": "Do the warm-up every morning for one week.",
        "ctx": "long",
-       "kind": "attention"
+       "kind": "skill",
+       "note": "The same two minutes, seven days. Add rung seven's five notes at the end. If you miss a day, carry on the next."
       },
       {
        "n": 11,
-       "test": "Sing a song to a group.",
-       "ctx": "with",
-       "kind": "courage"
+       "test": "Sing along with the recording of your song, turn the sound off halfway, and still be in time and in tune when you turn it back on.",
+       "ctx": "room",
+       "kind": "skill",
+       "note": "Use a music app or a video. Sing with it for the first verse, mute it, keep singing, and unmute at the chorus. If you have drifted away, try again; it usually takes a few goes. This is what singing without backing feels like."
       },
       {
        "n": 12,
-       "test": "Sing one round with somebody else.",
-       "ctx": "with",
-       "kind": "skill"
+       "test": "Sing the same song louder, without it going shouty.",
+       "ctx": "home",
+       "kind": "skill",
+       "note": "Loud singing comes from breathing low, as on rung three, not from squeezing your throat. Stand up, open your mouth wider, and let the sound out on each breath. If your throat hurts, stop and try again quieter tomorrow. Pick a time when nobody in the house is sleeping."
       },
       {
        "n": 13,
-       "test": "Hold your own line while somebody sings a different one.",
-       "ctx": "with",
-       "kind": "skill"
+       "test": "Learn a second song properly, words and all.",
+       "ctx": "room",
+       "kind": "skill",
+       "note": "A different kind from the first: if the first was slow, make this one quicker. Use the same method: write the words out, check them, sing it with and then without the recording."
       },
       {
        "n": 14,
-       "test": "Sing a harmony line with somebody else.",
+       "test": "Sing one of your two songs all the way through to one person.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "note": "Somebody in your family, a friend, a grandparent on a phone call. Tell them you are practising singing and ask them to just listen. Stand up, breathe low, and do not stop to apologise; carry on to the end."
       },
       {
        "n": 15,
-       "test": "Sing something unaccompanied, with nothing to hide behind.",
+       "test": "Sing a round with somebody else, each of you holding your own part.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "skill",
+       "note": "\"Row, Row, Row Your Boat\", \"London's Burning\" and \"Frère Jacques\" are rounds. One person starts, and the second starts from the beginning when the first reaches the end of the first line. Keep going until you can each sing through twice without joining the other person's part."
       },
       {
        "n": 16,
-       "test": "Learn a song in another language.",
-       "ctx": "room",
-       "kind": "skill"
+       "test": "Do the warm-up every morning for thirty days.",
+       "ctx": "long",
+       "kind": "attention",
+       "note": "Two or three minutes each morning for a month. By now it is warm-up, five notes up and down, and one song. If you miss a day, carry on the next and add a day at the end."
       },
       {
        "n": 17,
-       "test": "Sing three songs from memory, back to back.",
-       "ctx": "with",
-       "kind": "skill"
+       "test": "Sing three songs from memory, back to back, with no words in front of you.",
+       "ctx": "room",
+       "kind": "skill",
+       "note": "Your two songs and one more. Sing them standing up, one straight after the other, as if somebody were listening. If you forget a line, keep the tune going on \"la\" until the words come back."
       },
       {
        "n": 18,
-       "test": "Sing something to somebody who needed cheering up.",
-       "ctx": "with",
-       "kind": "kindness"
+       "test": "Join in with a group singing, and sing every word out loud from beginning to end.",
+       "ctx": "out",
+       "kind": "courage",
+       "note": "A church service, a choir's open rehearsal, a carol service, a match, a singing session in a pub or community hall, a birthday. Many choirs welcome a newcomer who wants to listen or try; ask before you go. Sing at full voice, not mouthing along."
       },
       {
        "n": 19,
-       "test": "Lead a song that everybody joins in with.",
+       "test": "Sing one song on your own to a group of three or more people.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "note": "A family gathering, a friend's birthday, a car full of people. Say what you are going to sing, stand up if you can, and sing the whole thing. A child can sing to the family at teatime."
       },
       {
        "n": 20,
-       "test": "Get somebody who says they cannot sing to sing one whole song.",
+       "test": "Start a song yourself and get everybody in the room singing along with you.",
        "ctx": "with",
-       "kind": "kindness"
+       "kind": "courage",
+       "note": "Happy Birthday at a party, a round at a family gathering, a song everybody knows on a long car journey. Start clearly on a note that suits most voices, not too high, and keep singing loudly so others can follow. When the whole room is singing, you have finished this ladder."
       }
      ],
-     "about": "Everybody can sing; most people have just never been allowed to. The rungs go from a song sung alone to one sung for people, in tune, with your own voice. Nothing to buy. This one changes how you feel about yourself faster than almost any other."
+     "who": "For everybody; a child and a grown-up side by side"
     },
     {
      "id": "music.instrument",
@@ -14535,84 +14734,127 @@
     {
      "id": "money.handling",
      "name": "Handling money",
-     "line": "Naming coins to a weekly shop.",
+     "line": "From putting the coins in order to doing a whole week's shop under budget, receipt checked.",
      "size": "weeks",
      "strand": "be-useful-to-somebody",
+     "from": 7,
+     "about": "For everybody from about seven: a child with pocket money and a grown-up can climb it side by side. For a child it is the real basics, coins, change and value; a grown-up does the same rungs faster, and the notes say what the grown-up version looks like. It goes from coins in order, to change in your head, to price per gram on the shelf, to a week of money written down, and ends with a whole week's shop planned on paper and done under budget. None of it needs any money beyond what the household already spends.",
      "steps": [
       {
        "n": 1,
-       "test": "Name every coin and note when somebody holds one up.",
-       "ctx": "kit",
+       "test": "Put one of each coin on the table and put them in order of value, smallest first.",
+       "note": "1p, 2p, 5p, 10p, 20p, 50p, £1, £2. A child names each one out loud. No coins in the house: use the pictures on the Royal Mint website. Already easy? Tip out a purse or a jar of mixed coins and total it in your head, then count to check.",
+       "ctx": "home",
        "kind": "attention",
        "mins": 3
       },
       {
        "n": 2,
-       "test": "Count out one pound in three different ways.",
-       "ctx": "kit",
+       "test": "Make one pound out of coins in three different ways.",
+       "note": "Two 50ps; five 20ps; a 50p, two 20ps and a 10p. A grown-up can make £3.85 in the fewest coins possible, then in the most.",
+       "ctx": "home",
        "kind": "skill"
       },
       {
        "n": 3,
-       "test": "Work out what two things cost together, before the till says.",
+       "test": "In a shop, add up the prices of three things in your head before you reach the till.",
+       "note": "Round each price to the nearest ten pence to make it easier, then check your answer against the till. No trip to a shop today: do it with a receipt from the bin or three prices on a supermarket website.",
        "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 4,
-       "test": "Pay for something yourself and check the change is right.",
+       "test": "Pay for something small with cash, and count your change before you walk away.",
+       "note": "Use something the house needs anyway: milk, bread, a stamp. A child hands over the money and counts the change while the grown-up waits. If it is wrong, say so politely at the counter; that is part of the rung.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 5,
-       "test": "Say what something costs in a whole hour of somebody working.",
-       "ctx": "room",
-       "kind": "attention"
+       "test": "Play shop at home: one person buys, the other gives change from a £5 note, five times in a row with no mistakes.",
+       "note": "Real coins or paper ones. Prices under £5, like £3.40 or £1.85. Count up from the price to £5, the way shops used to. A grown-up on their own can do five from old receipts on paper.",
+       "ctx": "with",
+       "kind": "skill"
       },
       {
        "n": 6,
-       "test": "Give correct change from a five-pound note, five times running.",
+       "test": "Work out, in your head, the change from £10 and from £20 for five different prices, and get all five right.",
+       "note": "Take prices from a receipt or a supermarket leaflet: £7.35 from £10 is £2.65. Write your answers first, then check on a calculator.",
        "ctx": "room",
        "kind": "skill"
       },
       {
        "n": 7,
-       "test": "Compare two sizes of the same thing and say which is better value.",
+       "test": "Compare two sizes of the same thing on a shop shelf, using the price per 100 grams, and say which is better value.",
+       "note": "The smaller numbers on the shelf label give the price per 100g, per kilo or per item. Cereal, rice, washing-up liquid. No shop today: the same numbers are on a supermarket website.",
        "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 8,
-       "test": "Write down every penny you spend for one week.",
-       "ctx": "long",
+       "test": "Find one thing where the bigger pack costs more per 100 grams than the smaller one.",
+       "note": "It happens more often than people expect, especially with offers. Write down what it was. That is the reason to read the price per 100g line every time.",
+       "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 9,
-       "test": "Look at that week and say where it actually went.",
+       "test": "Check every card or phone payment from the last seven days against what you remember buying.",
+       "note": "On the banking app or a paper statement. Tick each one. A child with no card sits with a grown-up and finds three of the grown-up's payments on the list. Anything you do not recognise, ask the bank about it.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 10,
-       "test": "Keep a written record of money in and out for a month, and balance it.",
+       "test": "Write down all the money that comes in and all the money that goes out, for seven days in a row.",
+       "note": "Pocket money and what it was spent on; or wages, bills, shopping and every coffee. If you did one day in Money and value, this is the same, for a whole week. A page in a notebook is enough.",
        "ctx": "long",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 11,
-       "test": "Plan a week's shopping on paper with a budget on it.",
+       "test": "Sort that week's spending into three lists: needed, wanted, and did not notice spending.",
+       "note": "The third list is the interesting one: the snack on the way home, the app, the small things that added up. No judging, just sorting.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
+       "test": "Put a fixed amount of spending money in an envelope or pot for one week, and make it last to the end of the week.",
+       "note": "A child uses their pocket money. A grown-up uses a week's money for extras (coffees, snacks, treats), taken out as cash or written as a number on the envelope. If it runs out on Thursday, that is useful to know; do the week again.",
+       "ctx": "long",
+       "kind": "attention"
+      },
+      {
+       "n": 13,
+       "test": "Plan one meal on paper: the ingredients, a price beside each, and a total.",
+       "note": "Spaghetti, a stew, a packed lunch for three days. Prices from a supermarket website or last week's receipt. Count only what you need to buy, not what is already in the cupboard.",
        "ctx": "room",
        "kind": "skill"
       },
       {
-       "n": 12,
-       "test": "Do a full weekly shop to that budget and come in under it.",
+       "n": 14,
+       "test": "Shop for that meal with a budget just over your total, keeping a running total as you go, and come in under it.",
+       "note": "Round each item up as you put it in the basket and add it in your head or on your phone. A child does this with a grown-up and family money; the grown-up only helps if asked.",
+       "ctx": "out",
+       "kind": "skill"
+      },
+      {
+       "n": 15,
+       "test": "Plan a whole week's food shop on paper, with a price beside each item and a budget at the bottom.",
+       "note": "Plan the meals first, then write the list from the meals, then price it. For a child, this is a week of their own packed lunches or breakfasts, worked out with a grown-up.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 16,
+       "test": "Do that week's shop, come in under budget, and check the receipt against the shelf prices.",
+       "note": "Keep your running total, swap an item if you go over, and check the receipt before you leave the shop. A child does it with a grown-up beside them, holding the list and the total. That is the far end of this ladder.",
        "ctx": "out",
        "kind": "skill"
       }
-     ]
+     ],
+     "who": "From about seven; a child and a grown-up side by side"
     },
     {
      "id": "money.earn",
@@ -16612,85 +16854,100 @@
     {
      "id": "nerve.asking",
      "name": "Asking out loud",
-     "line": "From the time of day to the thing you actually want.",
+     "line": "From asking somebody to say that again to asking for something you really want from somebody who can say yes.",
      "size": "weeks",
      "strand": "be-useful-to-somebody",
+     "from": 10,
+     "about": "For grown-ups and anybody from about ten; a child has a grown-up close by for any ask of a stranger. It starts with the smallest ask there is, \"Sorry, could you say that again?\", then free things in a café, a shop checking the back, a hand from a stranger, and a question in front of a group. In the middle you learn to ask and then wait in silence for the answer, and to ask for a better price and take no cheerfully. It ends with asking somebody for half an hour of their time, then asking for something you really want from somebody who can say yes, and then helping somebody else make their first ask. Many of the things people want, they would get simply by asking.",
+     "pic": 2,
      "steps": [
       {
        "n": 1,
-       "test": "Ask a stranger the time, or for directions you do not really need.",
-       "ctx": "out",
+       "test": "The next time you do not catch what somebody said, ask them to say it again instead of nodding.",
+       "note": "\"Sorry, could you say that again?\" At a counter, on the phone, in class, at the table. Most people nod and guess. Today you ask, and you listen to the whole answer the second time.",
+       "ctx": "with",
        "kind": "courage",
-       "mins": 3
+       "mins": 1
       },
       {
        "n": 2,
-       "test": "Ask a second stranger the same day.",
+       "test": "In a café or shop, ask for something small that is free.",
+       "note": "A glass of tap water, an extra napkin, a spoon, the wifi password, a pen to borrow. Ask clearly and say thank you. If you already do this without thinking, do it on purpose today and count it.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 3,
-       "test": "Ask for something small in a shop — a bag, a glass of water, what they would recommend.",
+       "test": "Ask a shop assistant to check whether they have something in a different size or colour.",
+       "note": "Shoes in the next size up, a jumper in another colour, the last one of something in the back. You do not have to buy it when they bring it; \"thanks, I will think about it\" is fine.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 4,
-       "test": "Ask somebody to repeat something you did not catch.",
-       "ctx": "with",
+       "test": "Ask a stranger for a hand with something.",
+       "note": "Reaching a high shelf in a supermarket, taking a photo of your family, holding a door while you get a buggy through, which platform the next train goes from. A child asks with a grown-up standing beside them.",
+       "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 5,
-       "test": "Ask for help carrying, reaching or finding something.",
+       "test": "Ask one question out loud in front of a group.",
+       "note": "In a class, at a club, on a guided tour, at a parents' evening, at the end of a talk. Have the question ready before the moment comes. One sentence is enough.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 6,
-       "test": "Ask politely for a discount, and take no cheerfully.",
+       "test": "Ask for a small change to what you have been given: a different table, a different seat, or a swap on a plate.",
+       "note": "A table by the window instead of by the door, salad instead of chips, a seat that is not in the draught. Politely, without a reason if you do not have one. Most places say yes when they can.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 7,
-       "test": "Ask somebody for a recommendation and then act on it.",
-       "ctx": "out",
-       "kind": "courage"
-      },
-      {
-       "n": 8,
-       "test": "Ask somebody for a favour you would normally talk yourself out of asking for.",
-       "ctx": "with",
-       "kind": "courage"
-      },
-      {
-       "n": 9,
-       "test": "Ask, and then say nothing until they answer.",
+       "test": "Ask for something today, then say nothing at all until the other person answers.",
+       "note": "The hard part is the pause. Most people fill it with \"it is fine if not\" and answer for the other person. Ask, close your mouth, and count slowly in your head. Any ask counts: a lift, a favour, a question at a counter.",
        "ctx": "with",
        "kind": "attention"
       },
       {
+       "n": 8,
+       "test": "Ask politely for a better price, and take no cheerfully if that is the answer.",
+       "note": "A stall at a market or a car boot sale (\"would you take eight for it?\"), a quote from a tradesperson, or a phone or broadband contract when it is due to renew (\"is that the best you can do for me?\"). Smile, ask once, and say thank you either way. A child can do the car boot with a grown-up.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 9,
+       "test": "Ask a neighbour, friend or relative for a favour you would normally talk yourself out of asking for.",
+       "note": "Borrowing a ladder or a drill, a lift to the station, somebody to water the plants while you are away, a hand moving a sofa. Say exactly what you need and when, and make it easy to say no.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
        "n": 10,
-       "test": "Ask somebody for their time — half an hour of it — and say what for.",
+       "test": "Ask somebody who knows how to do something for half an hour of their time, and say what it is for.",
+       "note": "A neighbour who grows vegetables, a relative who fixes cars, somebody who does a job you are curious about. \"Could I have half an hour one evening to ask how you started? I would like to try it.\" Offer a cup of tea or help with a job in return.",
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 11,
-       "test": "Ask for something you genuinely want, from somebody who could actually say yes.",
+       "test": "Ask for something you really want from the person who can say yes to it.",
+       "note": "Extra hours or a change of hours from a manager, a place on a course or a team, a stall at a local fair, a trial day somewhere you would like to work, more pocket money for a job done at home. Say what you want, why, and then wait for the answer. A no today is still the ask done.",
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 12,
-       "test": "Take somebody else out and get them to do their first ask.",
+       "test": "Stand beside somebody while they make their first ask of a stranger.",
+       "note": "A child asking for tap water, a friend asking for a size in the back, a teenager asking a question at a counter. Let them choose the ask, stay close, and say nothing unless they look at you for help. Afterwards, tell them what they did well.",
        "ctx": "with",
        "kind": "kindness"
       }
      ],
-     "pic": 2
+     "who": "Grown-ups and anybody from about ten"
     },
     {
      "id": "nerve.walkin",
@@ -17115,84 +17372,113 @@
     {
      "id": "deal.price",
      "name": "Asking for a better price",
-     "line": "From asking at home to shifting a printed price tag.",
+     "line": "From knowing the usual price to getting money off something with a printed price tag.",
      "size": "weeks",
      "strand": "be-useful-to-somebody",
+     "from": 10,
+     "about": "For grown-ups and teenagers, and for a child from about ten spending their own pocket money, with a grown-up beside them for every rung in a shop or at a stall. Every rung is done on something you were going to buy anyway, so it needs no extra money. It starts with finding out what a thing usually costs, then saying a lower number for something second-hand, then asking a shop to match a price, asking about discounts, marked goods and quotes, and ends with money off something that had a printed price tag on it. Asking politely is always allowed, and the worst answer is the price you were going to pay anyway.",
      "steps": [
       {
        "n": 1,
-       "test": "Ask somebody at home for something you want, and give one good reason why.",
-       "ctx": "with",
-       "kind": "courage",
-       "mins": 3
+       "test": "Pick one thing you are going to buy soon, and write down what you expect to pay for it.",
+       "note": "School shoes, a bike, a game, a tank of heating oil, a haircut, a second-hand pram. Just your guess, written down. The next rung checks it.",
+       "ctx": "room",
+       "kind": "attention",
+       "mins": 2
       },
       {
        "n": 2,
-       "test": "Find out what somebody else pays for something you pay for.",
-       "ctx": "long",
+       "test": "Find three prices for that exact thing: from shops, websites, or second-hand.",
+       "note": "Same make, same size, same model. Write down where each price was and the date. Compare with your guess from rung one. This list is what you bring to the later rungs.",
+       "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 3,
-       "test": "Ask, in a shop or at a market, whether that is the best they can do.",
-       "ctx": "out",
-       "kind": "courage"
+       "test": "Ask somebody you know what they paid for something like it, and where they got it.",
+       "note": "A parent, a neighbour, a friend at school, a colleague. \"What did you pay for your bike?\" People are often glad to tell you, especially when they got a good deal.",
+       "ctx": "with",
+       "kind": "attention"
       },
       {
        "n": 4,
-       "test": "Ask a second time somewhere else the same day.",
-       "ctx": "out",
+       "test": "Write down the one sentence you will use to ask for a lower price, and say it out loud three times.",
+       "note": "\"Would you take £30 for it?\" or \"I have seen this for £45 elsewhere; can you do that?\" Saying it at home first makes it much easier to say in front of somebody. Keep it short and friendly.",
+       "ctx": "room",
        "kind": "courage"
       },
       {
        "n": 5,
-       "test": "Get three different prices for the same thing before you buy anything.",
-       "ctx": "long",
-       "kind": "attention"
+       "test": "Offer a lower price for something second-hand: at a car boot sale, a market stall, or on an online listing.",
+       "note": "Say a number, about a quarter under the asking price: for a £20 item, £15. You do not need a yes; the rung is saying the number. Only offer on something you would actually buy at your price. A child does this with a grown-up beside them.",
+       "ctx": "out",
+       "kind": "courage"
       },
       {
        "n": 6,
-       "test": "Ask what it would cost if you bought two.",
+       "test": "Get a second-hand price lowered by agreeing a number between yours and theirs.",
+       "note": "They ask £20, you offer £15, they say £18, you say \"£17 and it is a deal\". Then pay and say thank you. If they will not move at all, that is their right; try somewhere else another day.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 7,
-       "test": "Ask what it would cost in cash, or today.",
+       "test": "Write down the exact words that got you the lower price.",
+       "note": "The words you said, what they said back, and what you paid. Keep it with the sentence from rung four. Next time you use the words that worked.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 8,
+       "test": "In a shop, show a lower price you found somewhere else, and ask whether they will match it.",
+       "note": "Use the list from rung two, on your phone. \"I have seen this for £45 in another shop; will you match that?\" Some large shops have a rule that they will. Never say you saw a price you did not see.",
        "ctx": "out",
        "kind": "courage"
       },
       {
-       "n": 8,
-       "test": "Get money off by asking, then write down the exact words that worked.",
-       "ctx": "home",
-       "kind": "attention"
-      },
-      {
        "n": 9,
-       "test": "Ask somebody who does not look like they can move the price.",
+       "test": "Ask what the price would be if you bought two or more.",
+       "note": "Plants at a garden centre, eggs at a farm gate, tins of paint, a second ticket, two haircuts for brothers. Only ask about things you would use two of.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 10,
-       "test": "Ask for the person who can.",
+       "test": "Ask whether there is a discount you might be able to get.",
+       "note": "\"Do you do a discount for students, or for pensioners, or for families, or for a first order?\" Many places have one and do not put it on the sign. On the phone counts too.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 11,
-       "test": "Ask about something second-hand and settle in the middle.",
+       "test": "Ask for money off something marked, scuffed, the last one, or on display.",
+       "note": "A dented box, a scratched table, the floor model, the last pair in your size. \"Would you take something off for the mark?\" Check it still works before you ask.",
        "ctx": "out",
        "kind": "courage"
       },
       {
        "n": 12,
-       "test": "Get a better price on something that had a printed price tag on it.",
+       "test": "For a job you need done, get two written quotes, and ask the dearer one whether they can come down.",
+       "note": "Cutting a hedge, fixing a car, clearing gutters, repairing a bike. Written means an email or a text with the price. Tell them honestly what the other quote was. A teenager can make the calls for a grown-up's job, with the grown-up's say-so.",
+       "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 13,
+       "test": "When the person serving you says they cannot change a price, ask politely who can.",
+       "note": "\"I understand. Is there somebody who can decide on the price?\" A manager, the owner, a supervisor. Wait while they fetch them, then ask again.",
+       "ctx": "out",
+       "kind": "courage"
+      },
+      {
+       "n": 14,
+       "test": "Get money off something that had a printed price tag on it, in an ordinary shop.",
+       "note": "Use anything you have learned: a lower price elsewhere, buying two, a mark, a discount, asking the manager. Only on something you came in to buy. That is the far end of this ladder: a printed price is one you can ask about.",
        "ctx": "out",
        "kind": "courage"
       }
-     ]
+     ],
+     "who": "Grown-ups and teenagers; from ten with a grown-up"
     },
     {
      "id": "deal.more",
@@ -17792,85 +18078,100 @@
     },
     {
      "id": "belong.chair",
-     "name": "From where you are sitting",
-     "line": "All of this can start today, at home.",
+     "name": "Grand places, from home",
+     "line": "From looking up opening times at home to booking the visit you would have talked yourself out of.",
      "size": "weeks",
      "strand": "say-what-you-mean",
+     "from": 14,
+     "about": "For grown-ups and teenagers. Every rung but one is done from a chair at home with a phone or a computer. It starts with finding out which grand buildings near you are open and when, what a free way in looks like, and what good things really cost, which is often less than people assume. Then a list of places you had assumed were not for you, an email and a phone call to one of them, a free tour booked, a date in the diary, and one person told. It ends with booking the visit you most doubted was for you. Many of the places people feel shut out of are open to anybody who asks.",
      "steps": [
       {
        "n": 1,
-       "test": "Look up a grand building near you that is open to the public, and find its opening times.",
+       "test": "Look up one grand building near you that is open to the public, and write down its opening times and whether it is free.",
+       "note": "A city hall, a cathedral, an old library, a big country house, a grand hotel lobby. Belfast City Hall, for example, has free public tours. Check the building's own website for the times. Write them down with the date you looked.",
        "ctx": "room",
        "kind": "attention",
        "mins": 5
       },
       {
        "n": 2,
-       "test": "Look up the real price of something you would never normally price.",
+       "test": "Find one grand place within an hour of you that has a free way in, such as a free tour, a free day or an open day.",
+       "note": "European Heritage Open Days in September open many buildings in Northern Ireland that are usually closed, for free. Some country houses have free gardens or grounds even when the house costs money. Parliament Buildings at Stormont has run free tours. Check the dates before you plan anything.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 3,
-       "test": "Look up what one night somewhere very good actually costs.",
+       "test": "Look up the real price of something you would never normally look up.",
+       "note": "A made-to-measure suit, a good watch, a grand piano, a week on a sailing boat, a meal in the best restaurant in your county. Write the price down. Some will be what you expected and some will not be; either way you now know instead of guessing.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 4,
-       "test": "Find out that something you assumed was closed to you is not.",
+       "test": "Look up what afternoon tea or a coffee costs in the grandest hotel near you.",
+       "note": "Many good hotels let anybody sit in the lounge for a coffee, not only people staying there. Write down the price of a coffee and of afternoon tea. It is often much less than people assume.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 5,
-       "test": "Phone a dealership and ask two questions about a model.",
-       "ctx": "out",
-       "kind": "courage"
+       "test": "Look up what one night in the best hotel within an hour of you costs, and what is included.",
+       "note": "Pick a date a few months ahead. Write down the cheapest room price and what comes with it: breakfast, the spa, parking. You are not booking; you are replacing a guess with a number.",
+       "ctx": "room",
+       "kind": "attention"
       },
       {
        "n": 6,
-       "test": "Phone a fine hotel and ask what is included in a room.",
-       "ctx": "out",
-       "kind": "courage"
+       "test": "Write down three places near you that you had assumed were not for you, and one fact you found about each.",
+       "note": "For example: \"The hotel lounge: anybody can have a coffee, about four pounds.\" \"City Hall: free tours, times on its website.\" \"The golf club restaurant: open to non-members.\" Keep the list; the next rungs use it.",
+       "ctx": "room",
+       "kind": "attention"
       },
       {
        "n": 7,
-       "test": "Email somewhere you assume would never reply.",
+       "test": "Email one place on your list with a real question.",
+       "note": "A real question is one you want the answer to: \"Can I look round the ballroom when there is no event on?\", \"Is there a dress code in the lounge?\", \"Do you run tours for families?\" Keep it to three or four lines, sign with your name, and send it.",
        "ctx": "room",
        "kind": "courage"
       },
       {
        "n": 8,
-       "test": "Ask a real question in it, not a polite one.",
+       "test": "Phone another place on your list and ask two questions.",
+       "note": "Write the two questions down first. For example, to a hotel: \"Can non-residents have afternoon tea, and do I need to book?\" To a car showroom: \"Can I come in and sit in one without booking a test drive?\" Say thank you, and write the answers down.",
        "ctx": "room",
        "kind": "courage"
       },
       {
        "n": 9,
-       "test": "Book a viewing, a tasting or a trial of something.",
+       "test": "Book a place on something free at one of the places you found: a tour, an open day or a talk.",
+       "note": "From your list or from what you found on rung two. Many are booked online in a couple of minutes. If nothing free is coming up, put your name on the mailing list so you hear about the next one.",
        "ctx": "room",
        "kind": "courage"
       },
       {
        "n": 10,
-       "test": "Put a date in the diary for something you have always put off.",
+       "test": "Put the date in your diary, and work out how you will get there and back.",
+       "note": "Bus or train times, parking, how long it takes, what time to leave. Write it on the calendar where the house can see it, not only in your head.",
        "ctx": "room",
-       "kind": "courage"
+       "kind": "attention"
       },
       {
        "n": 11,
-       "test": "Tell one person you are going.",
+       "test": "Tell one person you are going, and ask whether they would like to come.",
+       "note": "A friend, a parent, a partner, a grandparent. Saying it out loud makes it real. If they say no, you are still going.",
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 12,
-       "test": "Book something in advance that you would normally have talked yourself out of.",
-       "ctx": "home",
+       "test": "Book, in advance, a visit to the place on your list you most doubted was for you.",
+       "note": "The lounge for afternoon tea, the guided tour of the big house, a concert in the grand hall, a meal in the good restaurant. If money is tight, pick the free or cheapest way in: a coffee instead of afternoon tea, the free lunchtime recital instead of the evening concert. The end of the ladder is the booking made and the date in the diary.",
+       "ctx": "room",
        "kind": "courage"
       }
-     ]
+     ],
+     "who": "Grown-ups and teenagers"
     },
     {
      "id": "belong.shops",
@@ -18625,132 +18926,160 @@
     {
      "id": "home.mend",
      "name": "Mending",
-     "line": "A screw to fixing things for other people.",
+     "line": "From fresh batteries in something that stopped to teaching somebody else a repair, hands off.",
      "size": "months",
      "strand": "make-things",
+     "about": "For grown-ups and teenagers; a child from about eight can do many of the rungs with a grown-up beside them, and each note says where a grown-up is needed. The climb starts with batteries and the right screwdriver, then learns where the line is (gas, mains electrics and roofs are always for a qualified person), then glue, cloth, zips, a sink trap, a sticking door, a hole in a wall, and a part replaced rather than the whole thing. It ends with fixing something for somebody else, and then teaching them to fix one thing themselves. Most of it needs only what is already in a drawer at home, and every repair is one less thing bought.",
      "steps": [
       {
        "n": 1,
-       "test": "Tighten a loose screw with the right screwdriver.",
-       "ctx": "kit",
+       "test": "Change the batteries in something that has stopped working, and put the cover back on properly.",
+       "ctx": "home",
        "kind": "skill",
-       "mins": 5
+       "mins": 5,
+       "note": "A remote control, a torch, a kitchen scales, a toy, a bathroom scale. Match the size printed on the old batteries (AA, AAA, a round button cell) and the plus and minus marks inside. Old batteries go to the battery box at a supermarket, not the bin. Button batteries are dangerous if swallowed, so keep them well away from small children."
       },
       {
        "n": 2,
-       "test": "Know which screwdriver is the right one, and why.",
-       "ctx": "room",
-       "kind": "attention"
+       "test": "Find three screws in the house and the screwdriver that fits each one with no wobble.",
+       "ctx": "home",
+       "kind": "attention",
+       "note": "Try a cupboard hinge, a battery cover on a toy, or a door handle; screw heads are either a straight slot or a cross, and they come in sizes; the right one sits deep in the head and does not slip. With no screwdriver, a coin often fits a straight slot. Leave the screws on light switches and sockets alone."
       },
       {
        "n": 3,
-       "test": "Glue something so it stays fixed a month later.",
-       "ctx": "long",
-       "kind": "skill"
+       "test": "Write down the repairs in your home you should never do yourself, and who you would ring for each.",
+       "ctx": "room",
+       "kind": "attention",
+       "note": "Anything to do with gas, the fixed mains electrics (sockets, switches, the fuse box wiring), and anything on a roof or up a tall ladder. Gas work in Northern Ireland needs a Gas Safe registered engineer; wiring needs a qualified electrician. If you smell gas, open windows, do not touch switches, and ring the Northern Ireland gas emergency number, 0800 002 001. Keep the list on the fridge or in your phone."
       },
       {
        "n": 4,
-       "test": "Sew or patch something back into use.",
-       "ctx": "home",
-       "kind": "skill"
+       "test": "Glue one broken thing with the right glue, leave it the full time on the tube, and check it still holds a week later.",
+       "ctx": "long",
+       "kind": "skill",
+       "note": "A plant pot, an ornament, a toy, the sole of an old shoe. Read the tube: some glues are for paper and wood, some for ceramics, some for shoes. Hold or clamp it (rubber bands, a pile of books) for the whole time the tube says. A grown-up handles superglue, which sticks skin in seconds; anything used for hot food or drink is better replaced than glued."
       },
       {
        "n": 5,
-       "test": "Fix something rather than replacing it.",
+       "test": "Mend a book: glue a loose page back in, or tape a torn page from the back.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "A thin line of white PVA glue along the edge of a loose page, pushed back in, then the book closed under something heavy overnight. For a tear, clear tape on the side with less printing, or thin paper and glue. A child can do this one alone with a glue stick."
       },
       {
        "n": 6,
-       "test": "Look up how to fix something and then do it.",
+       "test": "Fix a screw that just spins in its hole, so it holds tight.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "Common on cupboard hinges and door handles. Take the screw out, push two or three wooden matchsticks or cocktail sticks dipped in wood glue into the hole, snap them off level, leave it an hour, then put the screw back in. If you have no wood glue, the sticks alone often work for something light.",
+       "how": [
+        "Take the loose screw out.",
+        "Push glued matchsticks into the hole until it is full.",
+        "Snap or cut them off level with the surface and wait an hour.",
+        "Drive the screw back in gently until it is firm."
+       ]
       },
       {
        "n": 7,
-       "test": "Change a fuse, a plug or a battery in something that needed it.",
-       "ctx": "home",
-       "kind": "skill"
+       "test": "Patch or darn one hole in a piece of clothing so it can be worn again.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "A sock heel, a jumper elbow, the knee of a child's trousers. For a small hole, sew back and forth across it, then across those stitches the other way, like weaving. For a bigger one, sew a piece of fabric from an old garment over it. A needle and thread are the only kit; a sewing kit from a hotel or a cracker is enough."
       },
       {
        "n": 8,
-       "test": "Unblock a sink.",
+       "test": "Put a zip back on its track, or give a zip with a broken pull a new one.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "If one side has come out, open the zip fully, ease the slider back over both rows of teeth at the bottom, and pull up gently. If the pull tab has snapped off, a key ring, a paper clip or a loop of string through the hole works. Coats, bags and pencil cases are good places to find one."
       },
       {
        "n": 9,
-       "test": "Fill and sand a hole in a wall.",
+       "test": "Clear a slow sink: take the hair out of the plughole, then undo and clean the U-bend underneath and put it back without drips.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "Put a basin under the curved pipe under the sink first, because it is full of water. Unscrew the two plastic rings by hand, rinse the bend out in a bucket (not in the same sink), and screw it back hand-tight. Run the tap for a minute and check for drips. Wear rubber gloves, never mix drain cleaners, and a child does this one with a grown-up."
       },
       {
        "n": 10,
-       "test": "Paint something so the edges are clean.",
+       "test": "Fix a door that sticks or a drawer that does not run smoothly.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "For a door: tighten every hinge screw first, since a loose hinge is the usual cause, then rub chalk on the edge, close it, and look where the chalk has rubbed off. For a drawer: take it out, clean the runners, and rub a candle or a bar of dry soap along them. If a door needs planing, that is a job to watch somebody do first."
       },
       {
        "n": 11,
-       "test": "Fix three things in one day.",
+       "test": "Take one small thing apart to fix it, keep the screws in order, and put it back together so it works.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "attention",
+       "note": "A pepper grinder, a torch, a toy, a stapler, a pair of glasses with a loose arm. Photograph each stage with your phone and put the screws in an egg box, one cup per stage. Never open anything that plugs into the mains, a microwave, a television or a phone charger: they can hold a dangerous charge even when unplugged. A child does this with a grown-up."
       },
       {
        "n": 12,
-       "test": "Put up a shelf that is level and holds weight.",
-       "ctx": "home",
-       "kind": "skill"
+       "test": "Fill a small hole or crack in a wall and sand it flat.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "A screw hole from an old picture or a dent from a door handle. Scrape out loose bits, press ready-mixed filler in with a knife so it stands a little above the wall, leave it as long as the tub says, then sand it smooth with sandpaper wrapped round a block. Filler is a few pounds; ask a neighbour or a relative for the end of a tub. If you rent, ask the landlord first, and wear a dust mask when sanding."
       },
       {
        "n": 13,
-       "test": "Find a stud or a joist before you drill into a wall.",
-       "ctx": "home",
-       "kind": "attention"
+       "test": "Paint over the patch you filled so the edges cannot be seen.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "Use leftover paint from that wall; many houses have the tin in a shed or under the stairs. Paint a little wider than the patch and spread the edges out thin with an almost dry brush. Let it dry, then look from across the room in daylight. A child can do this with a small brush and a grown-up nearby."
       },
       {
        "n": 14,
-       "test": "Fix a door that sticks or a drawer that does not run.",
+       "test": "Fix three broken things in one day.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "Walk round the house first and write down every small broken thing you have been meaning to fix, then pick three you now know how to do. A loose handle, a stuck drawer, a torn page all count. Tick them off as they are done."
       },
       {
        "n": 15,
-       "test": "Take something apart to fix it, and keep the screws in order.",
-       "ctx": "home",
-       "kind": "attention"
+       "test": "Replace one worn-out part instead of replacing the whole thing.",
+       "ctx": "kit",
+       "kind": "skill",
+       "note": "A shower hose, a vacuum cleaner belt, a cupboard handle, a toilet seat, the rubber feet on a chair. Take the old part with you to the shop, or search the model number printed on the thing for the exact part. For free, take a part from a broken one of the same kind, or ask at a repair café."
       },
       {
        "n": 16,
-       "test": "Fix something that two people had already given up on.",
-       "ctx": "home",
-       "kind": "courage"
+       "test": "Watch somebody who knows how to mend something, and ask them to explain each step while they do it.",
+       "ctx": "with",
+       "kind": "attention",
+       "note": "A grandparent who darns, a neighbour who fixes bikes, a relative who does DIY. A repair café is ideal if there is one near you: search \"repair café\" and the name of your town. Bring one of your own broken things if you can, and write down one thing you learned."
       },
       {
        "n": 17,
-       "test": "Say honestly when something is beyond you, and get the right person.",
+       "test": "Put together one box of the things you kept needing on this ladder.",
        "ctx": "home",
-       "kind": "attention"
+       "kind": "attention",
+       "note": "Look back at what you used: two screwdrivers, glue, a needle and thread, tape, sandpaper, a few spare screws, matchsticks, a torch. One shoebox is enough. Keep it somewhere everybody in the house knows about."
       },
       {
        "n": 18,
-       "test": "Keep a small kit of the things you always end up needing.",
+       "test": "Fix one thing that somebody in the house had already given up on and put aside to throw out.",
        "ctx": "home",
-       "kind": "attention"
+       "kind": "courage",
+       "note": "Ask around: there is usually something in a cupboard or a bag by the door. Look it up, try, and if it cannot be fixed, find out why before it goes. Working again is the rung; learning exactly why it cannot be fixed also counts."
       },
       {
        "n": 19,
-       "test": "Fix something for somebody else who could not.",
+       "test": "Fix something for somebody else who could not fix it themselves.",
        "ctx": "with",
-       "kind": "kindness"
+       "kind": "kindness",
+       "note": "A neighbour's sticking door, a grandparent's torch, a friend's coat zip. Take your box from rung seventeen. Only take on repairs you have already done on this ladder, and say so if it is beyond you."
       },
       {
        "n": 20,
-       "test": "Teach somebody to fix one thing themselves, hands off.",
+       "test": "Teach somebody to fix one thing themselves, with your hands off it the whole time.",
        "ctx": "with",
-       "kind": "kindness"
+       "kind": "kindness",
+       "note": "Pick a repair from this ladder that you are sure of: a patch, a spinning screw, a stuck drawer. Talk them through it and keep your hands in your pockets, even when it is slow. It is finished when the thing works and they did every part of it."
       }
-     ]
+     ],
+     "who": "Grown-ups and teenagers; from eight with a grown-up"
     },
     {
      "id": "home.tools",
@@ -19711,262 +20040,277 @@
     {
      "id": "care.giving",
      "name": "Giving",
-     "line": "Sharing to a habit other people copy.",
+     "line": "From sharing what is in your hand, to twelve weeks of giving with somebody else now giving beside you.",
      "size": "months",
      "strand": "be-useful-to-somebody",
+     "about": "For everybody: a child and a grown-up can climb it side by side. It starts at home with the small things (the bigger half, somebody else's job done quietly, half an hour of your time) and moves out to a local group: finding out what they actually need, giving exactly that, and getting other people to add to it. It ends with twelve weeks of giving something every week, with at least one other person giving alongside you. Most rungs cost nothing, and where money comes in, time given counts just as well.",
      "steps": [
       {
        "n": 1,
-       "test": "Share something you actually wanted, before being asked.",
+       "test": "Share something you are eating or using with the person nearest you, before they ask.",
+       "note": "Half your orange, the last biscuit, the good pen, your phone charger. Offer it first, not after they have looked at it. If you live alone, a colleague or a neighbour counts.",
        "ctx": "with",
        "kind": "kindness",
        "mins": 2
       },
       {
        "n": 2,
-       "test": "Give away something you liked.",
+       "test": "When something is split, give somebody else the bigger half, or the better one, and say nothing about it.",
+       "note": "The bigger slice of cake, the chair by the window, the unbroken biscuit. The saying nothing is the part that counts.",
        "ctx": "with",
        "kind": "kindness"
       },
       {
        "n": 3,
-       "test": "Give somebody the bigger half.",
-       "ctx": "with",
+       "test": "Do one job at home that is normally somebody else's, without being asked and without mentioning it.",
+       "note": "Empty the bin, make their bed, put their washing away, clean their shoes, make their tea before they get in. If they find out and thank you, that is fine; you did not tell them.",
+       "ctx": "home",
        "kind": "kindness"
       },
       {
        "n": 4,
-       "test": "Do something kind that nobody asked you to do.",
-       "ctx": "home",
+       "test": "Give somebody half an hour of your time when you had planned to spend it on yourself.",
+       "note": "Play the game they want, help with the homework, go on their walk instead of watching your programme. Put the phone away for the half hour, or it does not count.",
+       "ctx": "with",
        "kind": "kindness"
       },
       {
        "n": 5,
-       "test": "Do something kind that nobody found out about.",
-       "ctx": "home",
+       "test": "Give one thing you still like to somebody who will like it more.",
+       "note": "A book you enjoyed, a toy, a jumper, a cutting from a plant, a game. Not something you wanted rid of anyway: this rung is about letting go of something you would have kept.",
+       "ctx": "with",
        "kind": "kindness"
       },
       {
        "n": 6,
-       "test": "Give something to somebody who cannot give anything back.",
-       "ctx": "out",
+       "test": "Make something small for one person and give it to them.",
+       "note": "A card, a drawing, a bookmark, a pot of soup, a note saying what they mean to you. Paper and a pen are enough. Finish it properly, then hand it over.",
+       "ctx": "home",
        "kind": "kindness"
       },
       {
        "n": 7,
-       "test": "Give somebody your time when you wanted it for yourself.",
+       "test": "The next time somebody gives you something, say thank you and nothing else.",
+       "note": "No \"you should not have\", no \"I will pay you back\", no handing something straight back. Being good at receiving makes giving easier for everybody around you, and it is harder than it sounds.",
        "ctx": "with",
        "kind": "kindness"
       },
       {
        "n": 8,
-       "test": "Make something for somebody and give it away.",
+       "test": "Do one kind thing that nobody will ever find out was you.",
+       "note": "Clear the frost off a neighbour's car, bring in their bin, leave a thank-you note for the postie, put a coin back in the trolley for the next person. Tell nobody, including here: just tap Done.",
        "ctx": "home",
        "kind": "kindness"
       },
       {
        "n": 9,
-       "test": "Give away a share of what you earned, on purpose.",
-       "ctx": "room",
+       "test": "Give up your turn, your seat, or the last one of something, so somebody else can have it.",
+       "note": "The front seat, the last slice, your go on the swing, your place in a queue for somebody in a hurry. Choose it; do not wait to be asked.",
+       "ctx": "with",
        "kind": "kindness"
       },
       {
        "n": 10,
-       "test": "Raise money for something that is not for you.",
-       "ctx": "out",
-       "kind": "courage"
-      },
-      {
-       "n": 11,
-       "test": "Ask other people to give too.",
-       "ctx": "out",
-       "kind": "courage"
-      },
-      {
-       "n": 12,
-       "test": "Give something regularly for three months.",
-       "ctx": "long",
-       "kind": "kindness"
-      },
-      {
-       "n": 13,
-       "test": "Find out where it actually went.",
+       "test": "Choose a small amount to give each week and put this week's aside in a jar or envelope.",
+       "note": "A child might choose 20p from pocket money; a grown-up might choose a pound or five. The size does not matter; choosing it on purpose does. If money is tight, choose an hour of your time a week instead, and write that on the jar.",
        "ctx": "room",
        "kind": "attention"
       },
       {
-       "n": 14,
-       "test": "Give to somebody near you rather than far away.",
+       "n": 11,
+       "test": "Find out what one local charity or group needs most right now, by asking them.",
+       "note": "A food bank, an animal rescue, the hospice shop, a school, a church hall, a playgroup. Look for a \"most needed\" list on their website, or ring or email and ask. Write the answer down; the next rung uses it.",
+       "ctx": "room",
+       "kind": "attention"
+      },
+      {
+       "n": 12,
+       "test": "Give that group exactly the thing they said they need.",
+       "note": "If the food bank said tinned fish and toilet roll, give those, not what you had in the cupboard. Your jar from rung ten can pay for it. No money: ask whether they need something you already have, or an hour of help.",
        "ctx": "out",
        "kind": "kindness"
       },
       {
+       "n": 13,
+       "test": "Give an hour of your time to that group, or another local one.",
+       "note": "Sorting donations, packing bags, helping at a coffee morning, walking a rescue dog. Ask what an hour could do. A child does this with a grown-up beside them.",
+       "ctx": "out",
+       "kind": "kindness"
+      },
+      {
+       "n": 14,
+       "test": "Ask three people to add something to a collection you are making for that group.",
+       "note": "A box at work, a box at school with the teacher's say-so, a message to family: \"I am collecting tins for the food bank until Friday, can you add one?\" Three people saying yes finishes the rung.",
+       "ctx": "with",
+       "kind": "courage"
+      },
+      {
        "n": 15,
-       "test": "Give without deciding whether they deserved it.",
+       "test": "Deliver the collection, then tell the people who gave what it was used for.",
+       "note": "Ask the group when you hand it in: \"Where will this go?\" Then send one message to everybody who added something. People give again when they know it arrived.",
        "ctx": "out",
        "kind": "kindness"
       },
       {
        "n": 16,
-       "test": "Let somebody give you something, and take it well.",
-       "ctx": "with",
-       "kind": "kindness"
+       "test": "Give something every week for four weeks running, and mark each week on a calendar.",
+       "note": "Money from your jar, an hour of time, a bag for the collection, a meal for a neighbour. It can be different each week. The calendar is what keeps it going.",
+       "ctx": "long",
+       "kind": "attention"
       },
       {
        "n": 17,
-       "test": "Give something up so that somebody else could have it.",
+       "test": "Invite one person to give alongside you for one week, and do it together.",
+       "note": "A friend, a brother or sister, a parent, a colleague. \"I give something every week; do you want to do this one with me?\" Show them what you do and do it side by side.",
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 18,
-       "test": "Give somebody a chance rather than a thing.",
-       "ctx": "with",
-       "kind": "kindness"
-      },
-      {
-       "n": 19,
-       "test": "Keep it going for a season without being reminded.",
-       "ctx": "long",
-       "kind": "attention"
-      },
-      {
-       "n": 20,
-       "test": "Make giving a habit that somebody else starts copying.",
+       "test": "Keep giving every week until you reach twelve weeks, with at least one other person giving alongside you by the end.",
+       "note": "The twelve weeks count from the start of rung sixteen, so you are already four in. The other person can be the one from the last rung, or somebody new. That is the far end of this ladder: giving is part of your week, and somebody else now does it with you.",
        "ctx": "long",
        "kind": "kindness"
       }
-     ]
+     ],
+     "who": "For everybody; a child and a grown-up side by side"
     },
     {
      "id": "care.place",
      "name": "Your own patch",
-     "line": "One bit of litter to a whole shore.",
+     "line": "From choosing one small public place to keeping it cared for every week for twelve weeks, with something planted in it.",
      "size": "months",
      "strand": "look-after-the-place",
+     "about": "For everybody: a child and a grown-up can climb it side by side, and a child never picks up anything sharp or strange. You choose one small public place near home (a verge, a bus shelter, a path, the corner of a play park) and make it yours to look after. The rungs go from clearing it once, to reporting what you cannot fix, to finding out who owns it, getting permission, planting something, and bringing other people to help. It ends with twelve weeks of looking after it every week. One small place that is plainly cared for changes how a whole street feels.",
      "steps": [
       {
        "n": 1,
-       "test": "Pick up litter you walk past, without being asked.",
-       "ctx": "out",
-       "kind": "kindness",
-       "mins": 5
+       "test": "Choose one small public place you pass often, and write down that it is your patch.",
+       "note": "The verge at the end of your road, the bus shelter, the path to school, the bench by the river, one corner of the play park. Small enough to clear in twenty minutes, and away from fast traffic. Write its name and today's date on paper or in your phone.",
+       "ctx": "room",
+       "kind": "attention",
+       "mins": 2
       },
       {
        "n": 2,
-       "test": "Pick up three things on one walk.",
-       "ctx": "out",
-       "kind": "kindness"
-      },
-      {
-       "n": 3,
-       "test": "Carry a bag with you on purpose.",
+       "test": "Go to your patch and write down everything that needs doing there, and one thing that is good.",
+       "note": "Litter, weeds through the paving, a broken sign, a blocked drain, graffiti, a bench that needs a wipe. The good thing matters too: a tree, a view, a wall somebody built well.",
        "ctx": "out",
        "kind": "attention"
       },
       {
-       "n": 4,
-       "test": "Fill a bag from one beach or one path.",
+       "n": 3,
+       "test": "Pick up every piece of litter on your patch.",
+       "note": "If you did the ten-minute street in Your town, this is the same job, in your own place, done again and again. Never touch needles, broken glass or anything you do not recognise: leave it and report it on rung five. Gardening gloves or a bag over your hand if you have no picker.",
+       "how": [
+        "Take a bag, and gloves if you have them.",
+        "Work from one end to the other so nothing is missed.",
+        "Leave anything sharp or strange where it is and note where it is.",
+        "Children: a grown-up checks each thing before it is picked up."
+       ],
        "ctx": "out",
        "kind": "kindness"
       },
       {
-       "n": 5,
-       "test": "Sort what you picked up and put it in the right bins.",
+       "n": 4,
+       "test": "Sort what you collected into the right bins at home.",
+       "note": "Your council's website says what goes in which bin. Rinse cans and bottles. Notice what most of it was: that tells you where it is coming from.",
        "ctx": "home",
        "kind": "attention"
       },
       {
-       "n": 6,
-       "test": "Find out where your own rubbish actually goes.",
+       "n": 5,
+       "test": "Report one thing on your patch that you cannot fix yourself, to whoever is responsible.",
+       "note": "A broken street light, a pothole, dumped rubbish, a needle, graffiti. Your council website takes most reports; roads and street lights can be reported through nidirect. Write down the date and what you reported.",
        "ctx": "room",
+       "kind": "courage"
+      },
+      {
+       "n": 6,
+       "test": "Go back a week later, clear your patch again, and write down how much had come back.",
+       "note": "A handful or a bag. Also check whether anything from your list on rung two has changed. This is the rung that shows you what the patch needs every week.",
+       "ctx": "out",
        "kind": "attention"
       },
       {
        "n": 7,
-       "test": "Look after one small public place for a month.",
-       "ctx": "long",
-       "kind": "skill"
+       "test": "Find out who owns or looks after your patch.",
+       "note": "Usually the council's parks or cleansing department, but it might be the Housing Executive, a housing association, the Department for Infrastructure for a roadside verge, a church, or a business. Ask the council by email or phone if the map does not make it clear. Write down a name and a way to reach them.",
+       "ctx": "room",
+       "kind": "attention"
       },
       {
        "n": 8,
-       "test": "Report something broken to whoever can fix it.",
+       "test": "Check whether the thing you reported has been fixed, and if not, report it again, giving the date of your first report.",
+       "note": "Polite and plain: \"I reported this on the 3rd and it is still there.\" Most things get fixed on the second report.",
        "ctx": "room",
        "kind": "courage"
       },
       {
        "n": 9,
-       "test": "Plant something in a place that is not yours to keep.",
+       "test": "Do one job on your patch that is not litter.",
+       "note": "Wipe down the bench, sweep the leaves off the path, pull the weeds from round the bench or the sign. Nothing that needs tools or permission yet.",
        "ctx": "out",
-       "kind": "kindness"
+       "kind": "skill"
       },
       {
        "n": 10,
-       "test": "Get one other person to help you.",
-       "ctx": "with",
-       "kind": "courage"
+       "test": "Look after your patch every week for four weeks running, and mark each visit on a calendar.",
+       "note": "Twenty minutes a week is enough. The same day each week makes it easy to remember. In heavy rain, go the next dry day that week.",
+       "ctx": "long",
+       "kind": "attention"
       },
       {
        "n": 11,
-       "test": "Get three other people to help you.",
+       "test": "Bring one person with you on one visit, and give them a job.",
+       "note": "A friend, a child, a neighbour who saw you there. Hand them the bag or the brush. Two people take half the time and it is better company.",
        "ctx": "with",
        "kind": "courage"
       },
       {
        "n": 12,
-       "test": "Organise a clean-up for the group.",
-       "ctx": "with",
+       "test": "Ask the owner of your patch for permission to plant something there.",
+       "note": "Use the name from rung seven. Say what, where and when: \"May I plant daffodil bulbs along the verge at the end of Main Street this autumn?\" Many councils are glad to be asked. If they say no, ask what they would allow.",
+       "ctx": "room",
        "kind": "courage"
       },
       {
        "n": 13,
-       "test": "Weigh or count what you collected and tell people.",
+       "test": "With permission, plant something on your patch.",
+       "note": "Bulbs in autumn, wildflower seed in spring, a few plants split from a garden. Free: ask a neighbour or a gardening friend for spare bulbs or seed. Plant only what the owner agreed to.",
        "ctx": "out",
-       "kind": "attention"
+       "kind": "skill"
       },
       {
        "n": 14,
-       "test": "Do it again in the same place a month later.",
-       "ctx": "long",
+       "test": "Tell your council the date you will do a bigger tidy with helpers, and ask whether they will collect the bags or lend equipment.",
+       "note": "Many councils will collect bagged litter from a clean-up if they know in advance, and some lend pickers and bags. Keep Northern Ireland Beautiful also supports local clean-ups. Do this at least two weeks ahead.",
+       "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 15,
-       "test": "Look after something living — a tree, a verge, a pond.",
-       "ctx": "long",
-       "kind": "kindness"
-      },
-      {
-       "n": 16,
-       "test": "Get permission to do something properly, from whoever owns it.",
-       "ctx": "out",
+       "test": "Get three other people to your patch for the tidy on the day you chose.",
+       "note": "Neighbours, family, a school group, people from a local group you know. Tell them the time, how long (an hour is plenty), and to bring gloves if they have them. A child invites their friends through the friends' grown-ups.",
+       "ctx": "with",
        "kind": "courage"
       },
       {
+       "n": 16,
+       "test": "Count the bags you filled, and tell people what the tidy did.",
+       "note": "A thank-you message to the helpers with a photo of the patch, and a note on a local noticeboard or community group. Say who helped; do not say who dropped it.",
+       "ctx": "room",
+       "kind": "kindness"
+      },
+      {
        "n": 17,
-       "test": "Leave every place you go a little better than you found it, for a week.",
-       "ctx": "long",
-       "kind": "kindness"
-      },
-      {
-       "n": 18,
-       "test": "Get younger children doing it with you.",
-       "ctx": "with",
-       "kind": "kindness"
-      },
-      {
-       "n": 19,
-       "test": "Keep one place right through a whole season.",
-       "ctx": "long",
-       "kind": "skill"
-      },
-      {
-       "n": 20,
-       "test": "Make it happen every season for a year.",
+       "test": "Look after your patch every week for twelve weeks running, with what you planted still cared for.",
+       "note": "The twelve weeks count from rung ten, so you are some of the way there. Water the planting in a dry spell, clear round it, and keep your calendar. That is the far end of this ladder: one place in your town that is plainly looked after, by you.",
        "ctx": "long",
        "kind": "kindness"
       }
-     ]
+     ],
+     "who": "For everybody; a child and a grown-up side by side"
     },
     {
      "id": "care.welcome",
@@ -20428,132 +20772,155 @@
     {
      "id": "calm.attention",
      "name": "Attention",
-     "line": "One task to deep work.",
+     "line": "From ten minutes on one thing to three hours on one thing, once a week, three weeks running.",
      "size": "months",
      "strand": "look-after-yourself",
+     "from": 12,
+     "about": "For grown-ups and anybody from about twelve: schoolwork, a job, a hobby, reading or a practical task all count as \"the thing\". It starts with ten minutes on one task with a timer, then a written aim, the phone in another room, and counting the times your mind wanders. Twenty-five minutes, then two of them, then forty, an hour and ninety, with the things that pull you away found and removed along the way. It ends with a three-hour stretch on one thing, once a week, three weeks running. Being able to stay with one thing is behind almost every other skill in this school.",
      "steps": [
       {
        "n": 1,
-       "test": "Do one thing for ten minutes with nothing else going on.",
+       "test": "Pick one task, set a timer for ten minutes, and do only that task until it rings.",
+       "note": "Anything real: homework, an email you have been putting off, sorting a drawer, practising a tune. When your hand goes to the phone, put it back and carry on. If ten minutes on one thing is already easy for you, do it on purpose today and count it.",
        "ctx": "room",
        "kind": "attention",
        "mins": 10
       },
       {
        "n": 2,
-       "test": "Put the phone in a different room first.",
-       "ctx": "home",
+       "test": "Before you start, write down in one line what you will do and what finished looks like, then do it.",
+       "note": "For example: \"Maths sheet, questions 1 to 8, checked.\" or \"Reply to the three emails from Monday.\" A line on paper stops you drifting into something else, because you can see what you said you would do.",
+       "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 3,
-       "test": "Do one thing for twenty-five minutes without stopping.",
-       "ctx": "room",
-       "kind": "skill"
+       "test": "Put your phone in a different room, then spend fifteen minutes on one task.",
+       "note": "Not face down on the desk: in another room, where getting it means standing up. If you need it for the task, turn off everything else on it. Notice how often you reach for where it would normally be.",
+       "ctx": "home",
+       "kind": "attention"
       },
       {
        "n": 4,
-       "test": "Notice yourself drifting and come back, on purpose, five times.",
+       "test": "During fifteen minutes on one task, make a mark on paper every time your mind wanders, then bring it back.",
+       "note": "A tally mark, no judging. Twenty marks is a perfectly normal first number. The skill is not the wandering stopping; it is noticing sooner and coming back. Keep the paper to compare later.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 5,
-       "test": "Write down what you will do before you start, in one line.",
+       "test": "Work on one task for twenty-five minutes without stopping, then take a five-minute break away from any screen.",
+       "note": "Timer on, the one-line aim written, phone away. In the break stand up, get a drink, look out of a window. If a thought about something else comes, write it on a scrap and go back to the task.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "skill"
       },
       {
        "n": 6,
-       "test": "Finish the thing you started before starting another.",
+       "test": "Turn off notifications on your phone and computer for one whole session of work.",
+       "note": "Most phones have a \"do not disturb\" or focus setting in the quick menu. Turn it back on afterwards if you want to. People who might need you urgently can usually still get through by phone call.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 7,
-       "test": "Do two twenty-five minute stretches in one morning.",
+       "test": "Keep a \"later\" list beside you, and write down every urge to check something instead of checking it.",
+       "note": "Messages, the news, what that actor was in, the price of something. Write it down and carry on. At the end of the session, look at the list: most of it will not matter any more, and the rest takes five minutes.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "courage"
       },
       {
        "n": 8,
-       "test": "Work for an hour with no screen near you.",
+       "test": "Finish three tasks today, one at a time, each one completely before you start the next.",
+       "note": "Small ones are fine: a form, a load of washing hung out, one piece of homework. Completely means done, checked and put away. Starting a second before the first is finished is the habit this rung is breaking.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 9,
-       "test": "Notice the moment you want to check something, and do not.",
+       "test": "Do two twenty-five-minute stretches in one morning or afternoon, with a five-minute break between them.",
+       "note": "Same task or two different ones. In the break, do not open anything on a screen; that is what makes the second stretch hard to start.",
        "ctx": "room",
-       "kind": "courage"
+       "kind": "skill"
       },
       {
        "n": 10,
-       "test": "Do the hardest thing on your list first.",
+       "test": "After three sessions, write down the three things that pulled you away most.",
+       "note": "Look at your tally marks and your later lists. For example: \"messages\", \"hungry\", \"people talking in the kitchen\". Be honest and specific.",
        "ctx": "room",
-       "kind": "courage"
+       "kind": "attention"
       },
       {
        "n": 11,
-       "test": "Work with the notifications off, for a whole session.",
+       "test": "Remove or fix one of those three before your next session.",
+       "note": "Messages: phone in another room. Hungry: eat first. Noise: a different room or a quieter time of day. Tabs open: close them all before you start. Pick the easiest one to fix.",
        "ctx": "home",
        "kind": "attention"
       },
       {
        "n": 12,
-       "test": "Do a whole morning of one thing.",
+       "test": "Read something difficult for forty minutes without stopping.",
+       "note": "Difficult means it needs your full attention: an old novel, a history book, a manual, a long article about something you care about. Phone away, a pencil to mark what you do not understand, no looking things up until the forty minutes are over.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 13,
-       "test": "Read something difficult for forty minutes without stopping.",
+       "test": "Spend one hour on one task with no screen within reach.",
+       "note": "Work that does not need a screen: writing by hand, drawing, reading on paper, fixing something, practising an instrument, planning on paper. If your work needs a computer, turn off everything on it except the one thing you are using.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "skill"
       },
       {
        "n": 14,
-       "test": "Notice what actually pulls you away, and write down the top three.",
-       "ctx": "room",
+       "test": "Sit down to the same task at the same time on three days in one week.",
+       "note": "For example 7 to 8 in the evening on Monday, Wednesday and Friday. The same time and place mean you spend less effort getting started, because the start becomes a habit.",
+       "ctx": "long",
        "kind": "attention"
       },
       {
        "n": 15,
-       "test": "Remove one of those three from the room.",
-       "ctx": "home",
-       "kind": "attention"
-      },
-      {
-       "n": 16,
-       "test": "Work at the same time on three days in one week.",
-       "ctx": "long",
-       "kind": "attention"
-      },
-      {
-       "n": 17,
-       "test": "Do a whole morning of one thing, three weeks running.",
-       "ctx": "long",
-       "kind": "attention"
-      },
-      {
-       "n": 18,
-       "test": "Do something boring all the way to the end.",
+       "test": "Do one boring task all the way to the end in one go.",
+       "note": "The ironing pile, filing papers, cleaning out the car, copying notes up, a long form. Boring tasks are the best practice because nothing about them holds you there except you. Write the one-line aim first and tick it at the end.",
        "ctx": "room",
        "kind": "courage"
       },
       {
-       "n": 19,
-       "test": "Notice one thing you can now do that you could not concentrate on before.",
+       "n": 16,
+       "test": "Work on one thing for ninety minutes, with one short break at most.",
+       "note": "Two forty-five-minute halves work well. Water and a snack on the desk before you start. Aim written, notifications off, later list beside you.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "skill"
+      },
+      {
+       "n": 17,
+       "test": "Spend two hours on one thing, with a five-minute break every forty-five minutes.",
+       "note": "The same thing you did for ninety minutes, or a new one. Before you start, fill the water glass and write the one-line aim. In the breaks, stand up and move; do not open anything on a screen.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 18,
+       "test": "Spend three hours of one morning or afternoon on one thing, with short breaks.",
+       "note": "One project, not one task list: a chapter, a garden bed, a piece of music, a big piece of schoolwork, a room decorated. Take a five-minute break about every forty-five minutes, away from screens.",
+       "ctx": "room",
+       "kind": "skill"
+      },
+      {
+       "n": 19,
+       "test": "Tell somebody else exactly how you get yourself to concentrate, and help them try one thing from it.",
+       "note": "A friend, a teenager with exams, a colleague. Give them the one thing that made the most difference for you, for example the phone in another room or the later list, and ask how it went a few days later. Explaining it also shows you what you actually do.",
+       "ctx": "with",
+       "kind": "kindness"
       },
       {
        "n": 20,
-       "test": "Explain to somebody else how you get yourself to concentrate.",
-       "ctx": "with",
-       "kind": "kindness"
+       "test": "Set a three-hour stretch on one thing, on the same day each week, for the next three weeks, and do all three.",
+       "note": "For example every Saturday morning from nine to twelve. Put it in the calendar and tell the people you live with. This is the end of the ladder: three hours of real attention is enough to learn, make or finish almost anything worth doing.",
+       "ctx": "long",
+       "kind": "attention"
       }
-     ]
+     ],
+     "who": "Grown-ups and anybody from about twelve"
     },
     {
      "id": "calm.sleep",
@@ -20841,84 +21208,98 @@
     {
      "id": "calm.gratitude",
      "name": "Noticing the good",
-     "line": "One thing to a habit.",
+     "line": "From one good thing said out loud to a daily habit you have started at somebody else's table.",
      "size": "weeks",
      "strand": "look-after-yourself",
+     "about": "For everybody: a child and a grown-up can climb it side by side, and a family can climb it together. It starts with saying one good thing about today out loud, then making it specific, then doing it three days running. Then it turns outwards: thanking the person at home whose work nobody mentions, and the people outside who are rarely thanked at all. A jar of good things for a week, a letter by post, thirty days, and reading the month back. It ends with you starting the same habit at somebody else's table. What you notice every day tends to become what you expect, so this is worth the one minute it takes.",
      "steps": [
       {
        "n": 1,
-       "test": "Say one good thing about today, out loud, at tea.",
-       "ctx": "with",
+       "test": "Say out loud one good thing that happened today, to whoever is in the room.",
+       "note": "Small is best: the bus was on time, the soup was good, a dog was glad to see you. At the tea table works well for a family. On your own, say it out loud anyway, or send it to one person as a message. If this is already part of your day, do it on purpose today and count it.",
+       "ctx": "room",
        "kind": "attention",
        "mins": 1
       },
       {
        "n": 2,
-       "test": "Do it three days running.",
-       "ctx": "long",
+       "test": "Say today's good thing with one detail: what it was, when, and who was there.",
+       "note": "Not \"it was a good day\" but \"at lunch Sam gave me half his chips without being asked\". The detail is what makes you notice it and remember it. A child can be asked \"what exactly?\" until there is a detail.",
+       "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 3,
-       "test": "Do it every day for a week.",
+       "test": "Say one good thing, with its detail, three days running.",
+       "note": "Same time each day helps: tea, bedtime, the drive home from school. If you miss a day, the three start again, with no fuss.",
        "ctx": "long",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 4,
-       "test": "Say one that is about a person, not a thing.",
-       "ctx": "with",
+       "test": "Make today's good thing about a person, not a thing.",
+       "note": "Somebody who did something, said something, or was simply there: a teacher, a neighbour, a stranger who held a door, somebody at home. Say their name and what they did.",
+       "ctx": "room",
        "kind": "kindness"
       },
       {
        "n": 5,
-       "test": "Thank somebody properly, to their face, for something specific.",
+       "test": "Thank somebody at home for one job they do that nobody mentions.",
+       "note": "The bins, the washing, the packed lunches, the lifts, walking the dog, fixing the wifi. Name the job and say what it saves you: \"Thanks for always doing the bins. I never have to think about Tuesday.\" Children can thank grown-ups and grown-ups can thank children.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "kindness"
       },
       {
        "n": 6,
-       "test": "Thank somebody who is never thanked for it.",
+       "test": "Thank somebody outside who is rarely thanked for what they do.",
+       "note": "The bin crew, the lollipop person, the bus driver as you get off, the cleaner at the leisure centre, the person stacking shelves. Short and clear: \"Thanks, you keep this place lovely.\" If you already do this, do it on purpose today and count it.",
        "ctx": "out",
        "kind": "kindness"
       },
       {
        "n": 7,
-       "test": "Find something good on a day that was bad.",
+       "test": "Think of the hardest day you had this month, and find one good thing in it.",
+       "note": "Somebody who helped, something you learned, something that went right in the middle of it, or simply that it ended and you got through it. Write the one thing down or say it to somebody. This is not pretending the day was good; it is finding the good that was there.",
        "ctx": "room",
        "kind": "courage"
       },
       {
        "n": 8,
-       "test": "Write down three each night for a week.",
+       "test": "Keep a jar of good things for a week: one slip of paper from each person, every evening.",
+       "note": "Any clean jar, box or bowl and scraps of paper. Each evening, everybody writes one good thing from the day with the date and drops it in. Children who cannot write yet can draw it or say it for a grown-up to write. On your own, one slip a day is plenty. Do not read them yet.",
        "ctx": "long",
        "kind": "attention"
       },
       {
        "n": 9,
-       "test": "Write a thank-you letter that somebody keeps.",
+       "test": "Write a thank-you letter by hand to somebody who helped you this year, and post it.",
+       "note": "A coach, a neighbour, a nurse, a colleague, a grandparent. Say what they did and what difference it made, in five or six sentences. A letter by post is kept in a way a message is not. A stamp costs money; if that is a problem, hand-deliver it or leave it where they will find it.",
        "ctx": "home",
        "kind": "kindness"
       },
       {
        "n": 10,
-       "test": "Do the daily one for thirty days.",
+       "test": "Keep the jar going every day for thirty days.",
+       "note": "Same jar, same time, one slip each. If a day is missed, add it the next morning and carry on; the thirty is days with a slip, not days in a row.",
        "ctx": "long",
        "kind": "attention"
       },
       {
        "n": 11,
-       "test": "Read back a month of them.",
+       "test": "Empty the jar, read every slip out loud, and pick the three best.",
+       "note": "A family can take turns reading. Notice what kinds of things came up most often: people, food, being outside, something funny. Keep the three best somewhere you will see them, like the fridge door.",
        "ctx": "room",
        "kind": "attention"
       },
       {
        "n": 12,
-       "test": "Start it at a table where nobody was doing it.",
+       "test": "Start the good-thing habit at a table where nobody was doing it before.",
+       "note": "Grandparents' Sunday dinner, a meal with friends, a club or team night, a break at work. Go first, keep it to one sentence, and then ask the person beside you. The end of the ladder is somebody else carrying on doing it after you have gone.",
        "ctx": "with",
        "kind": "courage"
       }
-     ]
+     ],
+     "who": "For everybody; a family can do it together"
     },
     {
      "id": "calm.fast",
@@ -21186,9 +21567,10 @@
     {
      "id": "order.bedroom",
      "name": "The bedroom",
-     "line": "Where the day starts and ends.",
+     "line": "From one cleared surface to a bedroom that stays right for a fortnight.",
      "size": "afternoon",
      "strand": "look-after-the-place",
+     "about": "For everybody: a child and a grown-up can each do their own bedroom, side by side. The climb starts with the surfaces and the piles, takes out what does not belong, cleans and washes what does, and then turns the room into a habit: a bed made properly each morning, clothes ready the night before, a place for every thing. It ends with the room kept right for two weeks. The bedroom is where the day starts and ends, and a clear one makes both easier; renting or sharing counts exactly the same.",
      "steps": [
       {
        "n": 1,
@@ -21197,31 +21579,32 @@
        "kind": "attention",
        "mins": 20,
        "extra": true,
-       "note": "Bedside table, chest of drawers, windowsill, the chair that collects clothes. Everything off, then back only what you picked up in the last seven days. The rest goes where it lives, or into one bag to decide about at the weekend."
+       "note": "Bedside table, chest of drawers, windowsill, the top of the wardrobe you can reach. Everything off, then back only what you picked up in the last seven days. The rest goes where it lives, or into one bag to decide about at the weekend."
       },
       {
        "n": 2,
-       "test": "Make the bed properly every morning for a week.",
-       "ctx": "long",
-       "kind": "skill"
+       "test": "Deal with the chair or corner where clothes pile up, until there is nothing on it.",
+       "ctx": "home",
+       "kind": "skill",
+       "note": "Every piece gets one answer: the wash basket, a hanger, or folded into a drawer. Clothes worn once and fine to wear again go on a hook, not back on the chair. A child can do their own with a grown-up saying where things go."
       },
       {
        "n": 3,
-       "test": "Empty the box by the door: bin it, give it, or find each thing a real home.",
+       "test": "Empty the box or bag where things wait to be dealt with: bin it, give it, or find each thing a real home.",
        "ctx": "home",
        "kind": "skill",
        "mins": 15,
        "extra": true,
-       "note": "Every house has one: the box, bag or corner where things wait to be dealt with. Tip it out. Each thing gets one of three answers: bin, give, or a real home. No fourth pile."
+       "note": "Every house has one: the box, bag or corner where things wait. Tip it out. Each thing gets one of three answers: bin, give, or a real home. No fourth pile."
       },
       {
        "n": 4,
-       "test": "Get everything off the floor.",
+       "test": "Take out anything that is not for sleeping or dressing.",
        "ctx": "home",
-       "kind": "skill",
-       "mins": 10,
+       "kind": "courage",
+       "mins": 15,
        "extra": true,
-       "note": "Clothes into the wash basket or back on a hanger, shoes in a pair, bags on a hook, anything else into its place. Set a timer for ten minutes and see how much of the floor comes back."
+       "note": "The bedroom is for sleeping and dressing. The ironing pile, the exercise bike used as a rail, the work bag, the laptop charger: take one of them out and find it a better place tonight. If your bedroom is also where you study or work, give that one corner and keep it there."
       },
       {
        "n": 5,
@@ -21230,30 +21613,59 @@
        "kind": "skill",
        "mins": 20,
        "extra": true,
-       "note": "Look where you never look: under the bed with a torch, along the skirting, into the corners, and the light switch that everybody touches. A damp cloth does all of it."
+       "note": "Look where you never look: under the bed with a torch, along the skirting, into the corners, and the light switch that everybody touches. A damp cloth does all of it. The phone torch is enough light."
       },
       {
        "n": 6,
-       "test": "Wash the bedding, the pillow covers, and the curtains or blind.",
+       "test": "Wash the bedding and pillow covers, and wash the curtains or wipe down the blind.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "Check the label on the curtains before they go in the machine; if they cannot be washed, shake them out of a window and hoover them. A blind wipes clean with a damp cloth, one slat at a time. If you did the bedding this week already, do the curtains and count it. A grown-up takes curtains down, not a child on a chair."
       },
       {
        "n": 7,
-       "test": "Take out anything that is not for sleeping or dressing.",
+       "test": "Make the bed properly once: bottom sheet tight, pillows shaken, covers straight and turned down.",
        "ctx": "home",
-       "kind": "courage",
-       "mins": 15,
-       "extra": true,
-       "note": "The bedroom is for sleeping and dressing. The ironing pile, the exercise bike used as a rail, the work bag, the laptop charger: take one of them out and find it a better place tonight."
+       "kind": "skill",
+       "note": "Pull the bottom sheet tight at all four corners so there are no wrinkles, shake the pillows and put them straight at the top, and pull the duvet or covers flat and even on both sides. Then fold the top back a hand width. Once, as well as you can, is the rung."
       },
       {
        "n": 8,
+       "test": "Make the bed properly every morning for a week.",
+       "ctx": "long",
+       "kind": "skill",
+       "note": "The same way as the last rung, as soon as you get up, before the phone. It takes about two minutes. If you already make your bed every day, do it to the proper standard on purpose this week and count it."
+      },
+      {
+       "n": 9,
+       "test": "Put out tomorrow's clothes the night before, three nights running.",
+       "ctx": "long",
+       "kind": "attention",
+       "note": "Everything, down to the socks, on the chair you cleared on rung two, or on a hook. Check the weather forecast when you do it. A child can choose theirs and lay them out with a grown-up."
+      },
+      {
+       "n": 10,
+       "test": "Walk round the bedroom and choose a place for every thing that does not have one.",
+       "ctx": "home",
+       "kind": "attention",
+       "note": "The things that end up anywhere: chargers, hair things, the book you are reading, glasses, jewellery, the bag you use every day. Give each one a spot, like a hook, a small dish, or one drawer. A shoebox or a mug is a perfectly good home."
+      },
+      {
+       "n": 11,
        "test": "Sit in the finished room for ten minutes with nothing in your hands and notice how it feels.",
        "ctx": "home",
-       "kind": "attention"
+       "kind": "attention",
+       "note": "No phone, no book. Sit on the bed or a chair and look round slowly. Notice what your eye goes to first and whether anything still bothers you; if something does, that is the next job, not today's."
+      },
+      {
+       "n": 12,
+       "test": "Keep the finished bedroom right for two weeks: surfaces clear, bed made, clothes put away, every thing in its place.",
+       "ctx": "long",
+       "kind": "attention",
+       "note": "Five minutes before bed puts back whatever the day moved. Check it each morning when you make the bed. If one day slips, put it right the next morning and carry on; the fortnight does not start again."
       }
-     ]
+     ],
+     "who": "For everybody; each person does their own room"
     },
     {
      "id": "order.desk",
