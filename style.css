@@ -1453,3 +1453,9 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
 .xmonth i{aspect-ratio:1;border-radius:6px;background:var(--ivory-2);box-shadow:inset 0 0 0 1px var(--line)}
 .xmonth i.on{background:linear-gradient(180deg,#FFE9A0,#C9A227);box-shadow:none}
 .xmonth i.td{box-shadow:inset 0 0 0 1.5px var(--gold-deep)}
+/* v75, his: on an area or room page the Back button sat top left beside the day pill, where nobody
+   looks. While the two of them are showing it stands at the foot of the band on the left, under
+   them, with its word; with the band tucked away the top left is right again. */
+.stage.school:not(.tucked) .backbtn{top:calc(34dvh + env(safe-area-inset-top,0px) - 50px);width:auto;height:38px;padding:0 14px 0 8px;border-radius:19px;gap:2px;display:flex;align-items:center;font-size:14px;font-weight:700}
+.stage.school:not(.tucked) .backbtn[hidden]{display:none}
+.stage.school:not(.tucked) .backbtn::after{content:"Back"}

@@ -868,9 +868,15 @@
     S.school.celebrated = t; save(); paintDay();
     setTimeout(() => { hush(); dayCelebrate(() => {
       const ask = () => { const tm = S.school.tomorrow; if (!tm || tm.on !== t) setTimeout(askPromise, 800); };
-      if (saySlot('dayDone', ask) || quietFolk()) return;
-      const hers = (S.school.visits || 0) % 2 === 0;
-      speakSchool(hers ? [{ who: 'aurelia', id: 'ui-day', t: C.voice['day'] }] : [{ who: 'marcus', id: 'c-day' }], ask);
+      /* v75, his: the celebration must ALWAYS say something, and something congratulatory. A line that
+         named the run ("three days of three") read wrong on his day ten, so she opens with a plain
+         "Another day of three. Well done…" (in turn), and Marcus answers from the pool when it has
+         one of his, or with his own day line. */
+      const CH = (C.school.goal || {}).cheers || [], i = S.school.cheerN = ((S.school.cheerN || 0) + 1);
+      const seq = CH.length ? [{ who: 'aurelia', id: 'ui-' + CH[i % CH.length], t: C.voice[CH[i % CH.length]] }] : [{ who: 'aurelia', id: 'ui-day', t: C.voice['day'] }];
+      const ln = pickSay('dayDone');
+      if (ln && ln.who === 'marcus') seq.push(asLine(ln)); else seq.push({ who: 'marcus', id: 'c-day' });
+      save(); speakSchool(seq, ask);
     }); }, 700);
   }
   /* ---- the third torch: the celebration ----
@@ -886,7 +892,7 @@
     if (sc) { PORTICO.glideTo(1, 3200); sparks(); PORTICO.flare(); RIG.cheer(); if (ARIG && !ARIG.hidden) setTimeout(() => ARIG.cheer(), 160); }
     fireworks(host, 4600);
     setTimeout(() => {
-      const sub = run > 1 ? (G.hailRun || 'Day {n} in a row').replace('{n}', run) : (G.hailFirst || '');
+      const sub = '';   // v75: no run count on the hail; the day pill and the streak card carry the numbers
       const h = document.createElement('div'); h.className = 'dayhail' + (sc ? '' : ' plate'); h.innerHTML = `<span class="eyebrow">${G.hail || 'That is today'}${sub ? ' · ' + sub : ''}</span><h2>${G.hailBig || 'Three of three'}</h2>`;
       host.appendChild(h); setTimeout(() => { h.classList.add('out'); setTimeout(() => h.remove(), 800); }, 4200);
     }, 900);

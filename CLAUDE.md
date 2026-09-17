@@ -551,3 +551,12 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   Spot the Station, Merlin, Seek, Stellarium Web) and "a large share of the tea drunk here is grown in Kenya".
   (5) Tiles for `fit.body1`, `fit.body2` and `calm.fast` (Fasting had the Calm candle) drawn with
   `tools/daily/tiles-v74.mjs` (the order-draw recipe, no people).
+- **v75 (2026-09-17, Opus session): the celebration always congratulates; Back under the two of them.**
+  (1) His: the day-done moment said "Three days of three" on his day ten. The run lines were right about the run
+  but read as wrong beside the Day pill. Now `checkDay` ALWAYS speaks: Aurelia opens with one of
+  `goal.cheers` in turn (`ui-dd-another1..6`, "Another day of three. Well done…", Kokoro via gen_voice.py), then
+  Marcus answers with a pool `dayDone` line if it is his, else `c-day`. The two run-count lines (s-m-day2,
+  s-a-day4) left the pool; the hail is "Another day of three · Well done" with no count. (2) On an area/room page
+  the Back button sat top left beside the Day pill and went unseen. While the band is open it is now a "Back" pill
+  at the foot of the band on the left, under Aurelia (`.stage.school:not(.tucked) .backbtn`); tucked, it returns to
+  the top-left circle.

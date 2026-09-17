@@ -1869,7 +1869,13 @@
   "s-rn2": "Days in a row is the only thing in this school that cannot be rushed.",
   "s-rn4": "I have watched this one build up stone by stone. Look at it.",
   "s-fn0": "That is a whole ladder finished. There will not be many days like this one.",
-  "s-fn2": "Somebody who has finished one of these finds the next one easier. That is not encouragement, it is what happens."
+  "s-fn2": "Somebody who has finished one of these finds the next one easier. That is not encouragement, it is what happens.",
+  "dd-another1": "Another day of three. Well done, that is a good day.",
+  "dd-another2": "Another day of three. Congratulations, you should be proud of that.",
+  "dd-another3": "Well done. Another day of three, and every one of them yours.",
+  "dd-another4": "Another day of three. That is brilliant. Well done.",
+  "dd-another5": "Congratulations. Another day of three, all done.",
+  "dd-another6": "Another day of three. Well done, I am really pleased for you."
  },
  "cover": {
   "em": "Nation of",
@@ -2847,10 +2853,18 @@
    "over": "Blazing",
    "overAt": 7,
    "lede": "Three things a day: quick ones, practice, any mix.",
-   "hail": "That is today",
-   "hailBig": "Three of three",
+   "hail": "Another day of three",
+   "hailBig": "Well done",
    "hailRun": "Day {n} in a row",
-   "hailFirst": "The first day of many"
+   "hailFirst": "The first day of many",
+   "cheers": [
+    "dd-another1",
+    "dd-another2",
+    "dd-another3",
+    "dd-another4",
+    "dd-another5",
+    "dd-another6"
+   ]
   },
   "twoTitle": "Level two: ladders you have started",
   "twoLede": "You did the first step. The second is here when you want it. Nothing is owed.",
@@ -3320,24 +3334,6 @@
     "t": "Three again. I am beginning to look forward to seeing what you pick.",
     "when": {
      "runMin": 3
-    }
-   },
-   {
-    "id": "s-m-day2",
-    "who": "marcus",
-    "slot": "dayDone",
-    "t": "Three days of three. You are not trying any more. You are just doing it.",
-    "when": {
-     "runMin": 3
-    }
-   },
-   {
-    "id": "s-a-day4",
-    "who": "aurelia",
-    "slot": "dayDone",
-    "t": "That is a week of days you did not let go of.",
-    "when": {
-     "runMin": 7
     }
    },
    {
