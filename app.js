@@ -115,7 +115,8 @@
     const master = ctx.createGain(); master.gain.value = 0; master.connect(ctx.destination); AMB.master = master;
     master.gain.linearRampToValueAtTime(1, ctx.currentTime + 4);
     ambLayer(ambBird, 1);
-    if (C.amb.water) ambLayer(() => C.amb.water, 1);
+    /* flowing water: a second layer under the birds, there on one visit in `visits` so the room is not the same twice running */
+    const W = C.amb.water; if (W && AMB.off % (W.visits || 1) === 0) ambLayer(() => W, 1);
     AMB.fire = ambLayer(() => AMB.fireOn ? C.amb.fire : null, AMB.fireOn ? 1 : 0).out;
     AMB.layers.forEach(ambFeed); AMB.tick = setInterval(() => AMB.layers.forEach(ambFeed), 1000);
   }

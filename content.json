@@ -6420,8 +6420,20 @@
     "gain": 0.16
    },
    {
+    "id": "birds-brook",
+    "gain": 0.26
+   },
+   {
     "id": "birds-garden",
     "gain": 0.14
+   },
+   {
+    "id": "birds-forest",
+    "gain": 0.12
+   },
+   {
+    "id": "birds-river",
+    "gain": 0.95
    }
   ],
   "evening": [
@@ -6430,7 +6442,11 @@
     "gain": 0.25
    }
   ],
-  "water": null,
+  "water": {
+   "id": "water",
+   "gain": 0.21,
+   "visits": 2
+  },
   "fire": {
    "id": "brazier",
    "gain": 0.7
@@ -6458,6 +6474,46 @@
    {
     "id": "nocturne-15-2",
     "name": "Chopin, Nocturne in F sharp, Op. 15 no. 2"
+   },
+   {
+    "id": "tristesse",
+    "name": "Chopin, Etude in E, Op. 10 no. 3"
+   },
+   {
+    "id": "aeolian-harp",
+    "name": "Chopin, Etude in A flat, Op. 25 no. 1, the Aeolian Harp"
+   },
+   {
+    "id": "nocturne-32-1",
+    "name": "Chopin, Nocturne in B, Op. 32 no. 1"
+   },
+   {
+    "id": "nocturne-55-2",
+    "name": "Chopin, Nocturne in E flat, Op. 55 no. 2"
+   },
+   {
+    "id": "nocturne-37-2",
+    "name": "Chopin, Nocturne in G, Op. 37 no. 2"
+   },
+   {
+    "id": "nocturne-62-2",
+    "name": "Chopin, Nocturne in E, Op. 62 no. 2"
+   },
+   {
+    "id": "farewell-waltz",
+    "name": "Chopin, Waltz in A flat, Op. 69 no. 1"
+   },
+   {
+    "id": "prelude-17",
+    "name": "Chopin, Prelude in A flat, Op. 28 no. 17"
+   },
+   {
+    "id": "andante-spianato",
+    "name": "Chopin, Andante spianato, Op. 22"
+   },
+   {
+    "id": "prelude-23",
+    "name": "Chopin, Prelude in F, Op. 28 no. 23"
    }
   ]
  },

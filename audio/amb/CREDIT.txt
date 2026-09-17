@@ -5,6 +5,13 @@ high-passed to take the rumble out, mp3. The app crossfades each into the next, 
 
 birds-morning, birds-garden = Mixkit #2472 "Morning birds" (two different minutes of it)
 birds-evening = Mixkit #1220 "Quiet forest ambience"
+birds-brook = Mixkit #61 "Natural ambience with flowing water and birds" (v83)
+birds-river = Mixkit #2473 "Birds chirping near the river" (v83)
+birds-forest = Mixkit #1239 "Birds in forest loop" (v83)
+water = Mixkit #3126 "Water flowing ambience loop", low-passed at 4.5 kHz so it trickles and never hisses (v83)
 brazier = Mixkit #1329 "Campfire burning crackles"
 
 Never ship synthesised ambience: the coded wind and fire pops were heard as "fuzz" and "a frog clicking".
+
+Checked by spectrogram before use (nobody can listen from a terminal): a good bed shows distinct calls over a dark floor.
+Rejected: #2455 and storyreel's river.wav (flat roar), #1216 (hissy), #2453 (a constant tone), #2464 (a repeating insect beep: the frog again).

@@ -702,3 +702,11 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   extras have one health item in 85 and nothing at all for emotions, spirituality or prosperity; quick things
   have three or four each for community, new experiences and spirituality against 34 for knowledge.
   Apply order: apply_v76 → v78 → v79 → v80 → **v82**. (v81 was the other session's audio wave.)
+- **v83 (2026-09-17, Fable session): flowing water, three more birdsong beds, ten more pieces.** He said yes to
+  downloading. Beds (Mixkit, see audio/amb/CREDIT.txt, which also lists what was REJECTED and why): `birds-brook`
+  (a brook with birds), `birds-river`, `birds-forest` join the day rotation (five now); `water` is a trickling second
+  layer under the birds on one visit in `amb.water.visits` (2), so the room is never the same twice running. Music:
+  ten more Chopin excerpts (Musopen CC0, all major keys, cut at a breath between phrases by the quietest-window
+  rule in the v83 CREDIT note) → fifteen in the room's turn, fourteen on the lyre. Gains were set by measured
+  loudness (beds about -38 LUFS, water -44, music files -20), not by ear: if he says a bed is loud or thin, change
+  its `gain` in content.json, nothing else.

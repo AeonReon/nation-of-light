@@ -2,3 +2,5 @@ Chopin, Nocturne in E flat major, Op. 9 no. 2. Recording from the Musopen Chopin
 
 The lyre's pieces (v26), all from the same Musopen Chopin project, CC0 / public domain, trimmed to about seventy seconds and faded:
 nocturne-27-2 = Nocturne in D flat major, Op. 27 no. 2 · raindrop = Prelude Op. 28 no. 15 "Raindrop" · berceuse = Berceuse in D flat major, Op. 57 · nocturne-15-2 = Nocturne in F sharp major, Op. 15 no. 2.
+
+v83, ten more from the same Musopen Chopin project (CC0 / public domain), each cut from the start to a breath between phrases at about 70-90 seconds, faded, levelled to -20 LUFS: tristesse = Etude Op. 10 no. 3 · aeolian-harp = Etude Op. 25 no. 1 · nocturne-32-1 · nocturne-55-2 · nocturne-37-2 · nocturne-62-2 · farewell-waltz = Waltz Op. 69 no. 1 · prelude-17 and prelude-23 = Preludes Op. 28 (no. 23 whole) · andante-spianato = Op. 22, the Andante only. All in major keys on purpose. The room plays all fifteen in turn; the lyre plays the fourteen in content.json `music.pieces`.
