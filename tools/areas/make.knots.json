@@ -1,0 +1,108 @@
+{
+ "id": "make.knots",
+ "name": "Knots and rope",
+ "line": "From a stopper knot in a dressing-gown cord to five sticks lashed into a firm square frame.",
+ "size": "weeks",
+ "strand": "make-things",
+ "who": "From about seven; a child and a grown-up side by side",
+ "about": "For everybody from about seven: a child and a grown-up can climb it side by side. It starts with the knot that stops a rope pulling through a hole, then the handful of knots that do most everyday jobs: tying up a bundle, tying to a post, a loop that does not close up, joining two ropes and pulling a line tight. Then you tie them all with your eyes closed, stop a rope end fraying, and lash sticks together into a frame that holds its shape. Any rope or cord about two metres long will do, such as a dressing-gown cord, a skipping rope or an old washing line. These knots are for everyday jobs, never for climbing or for holding a person's weight.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Tie a figure-of-eight knot in the end of a rope, pull it tight, and undo it.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 5,
+   "note": "Make a loop, take the end round behind the rope and back down through the loop: before you pull it tight it looks like the number eight. It is a stopper knot, the one that stops a rope pulling through a hole or a ring. If you know it already, tie it three times quickly and count it."
+  },
+  {
+   "n": 2,
+   "test": "Tie a reef knot round a rolled-up towel, then tie a granny knot and see which one slips.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Right over left and under, then left over right and under: the two ends come out lying flat beside the rope. Do the second half the same way as the first and you get a granny knot, which twists and slides when you pull the ends. A reef knot is for tying up a bundle or a bandage, not for joining two ropes that will be pulled hard."
+  },
+  {
+   "n": 3,
+   "test": "Tie a clove hitch round a chair leg, pull the long end, and check that it grips.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Wrap the rope round the leg, cross over the first turn, wrap round again and tuck the end under that second turn. It grips when pulled and slides off easily when loose, which is why it starts the lashings at the end of this ladder. A table leg, a banister or a fence post all work."
+  },
+  {
+   "n": 4,
+   "test": "Tie a rope to the back of a heavy chair with a round turn and two half hitches, and hang a bag with a few books in it from the rope.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Wrap the rope twice round the bar of the chair (the round turn), then take the end round the long part of the rope and back through itself, twice. The two wraps take the pull and the two hitches hold them there. Lift the bag just off the floor and check the knot does not slide."
+  },
+  {
+   "n": 5,
+   "test": "Tie a bowline, a loop that stays the same size however hard you pull it, five times.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Many people learn it with a little story: the rabbit comes up out of the hole, runs round the back of the tree and goes back down the hole. The loop holds its size under a hard pull and still unties easily afterwards. Five in a row with no mistakes is the rung.",
+   "how": [
+    "Make a small loop in the rope, with the long part underneath it.",
+    "Bring the end up through the small loop.",
+    "Take it round behind the long part of the rope.",
+    "Send it back down through the small loop, and pull tight."
+   ]
+  },
+  {
+   "n": 6,
+   "test": "Tie a bowline round your own waist, pull on the long end hard, and check the loop does not get tighter.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "This is harder than rung five because you are tying it from the other side, against your own body. Use a rope long enough to go round you with an arm's length to spare. It trains you to tie a loop round something you cannot see well, like a post or a tree trunk; a knot learned from an app is never for climbing or lifting a person."
+  },
+  {
+   "n": 7,
+   "test": "Join two ropes of different thicknesses with a sheet bend, and pull hard on both ends.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Make a U shape in the thicker rope. Push the thin rope up through the U, round behind both sides of it, and tuck it under itself. A shoelace joined to a dressing-gown cord is a good test: a reef knot slips here, and the sheet bend holds."
+  },
+  {
+   "n": 8,
+   "test": "Tie a line between two chairs with a taut-line hitch, and slide the knot to make the line tight.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Tie one end to the first chair with a bowline. Take the other end round the second chair leg and back towards the line, wrap it twice round the line inside the loop, then once more round the line outside the loop, and pull it snug. Slide the knot and the line tightens; let go and it stays. It is the knot for a tent rope or a washing line."
+  },
+  {
+   "n": 9,
+   "test": "Tie all seven knots from this ladder from memory, then tie them again with your eyes closed.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Figure of eight, reef knot, clove hitch, round turn and two half hitches, bowline, sheet bend, taut-line hitch. Say each name before you tie it, and if one fails with your eyes closed, tie it three times with your eyes open and try again. Tying by feel is what you need in the dark, in the rain or behind your back."
+  },
+  {
+   "n": 10,
+   "test": "Stop the end of a rope fraying by winding strong thread tightly round it and tucking the thread in.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Lay a loop of thread along the rope end, wind the thread tightly round the rope and over the loop for about as far as the rope is wide, then push the thread end through the loop and pull the loop back under the windings. Trim both ends. Tape wound tightly round the end also works as a quick fix, but do the thread version at least once."
+  },
+  {
+   "n": 11,
+   "test": "Lash two sticks into a cross with a square lashing so they do not twist when you turn them.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Garden canes, old broom handles or straight sticks found on the ground all work; about as thick as a thumb is easiest. Wind the rope round the two sticks three or four times, then wind it two or three times between the sticks, round the wraps, to pull everything tight.",
+   "how": [
+    "Tie a clove hitch on the upright stick, just below where the cross stick sits.",
+    "Wrap over the cross stick, behind the upright, over the cross stick and behind the upright, three or four times.",
+    "Wind two or three turns between the sticks, round all the wraps, pulling hard.",
+    "Finish with a clove hitch on the cross stick."
+   ]
+  },
+  {
+   "n": 12,
+   "test": "Lash five sticks into a square frame with the fifth stick across the diagonal, so it does not lean when you push a corner.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Four square lashings make the corners, then lash the diagonal stick to two opposite corners; without it, a square frame leans over into a diamond. Use it to hold up a climbing plant, as the side of a play den or as a frame on a wall. If you push a corner and it keeps its shape, this ladder is done."
+  }
+ ]
+}

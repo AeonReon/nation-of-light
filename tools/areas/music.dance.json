@@ -1,0 +1,152 @@
+{
+ "id": "music.dance",
+ "name": "Dance",
+ "line": "From stepping in time to one song to teaching a group of five or more a dance and leading them through it.",
+ "size": "months",
+ "strand": "get-strong-outside",
+ "who": "For everybody; a child and a grown-up side by side",
+ "about": "For everybody: a child and a grown-up can climb it side by side. It starts with stepping in time to one song at home, then single steps and a short group dance learned from free videos, done without the video and without stopping after a mistake. After that come a dance from another part of the world, a dance of your own, a partner step, and joining in where other people are dancing. It ends with you teaching a dance to five or more people and leading them through it. Any style counts, from a circle dance to salsa to a line dance, and all you need is a clear space and music.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Put on a song and step from one foot to the other on every beat, all the way to the end.",
+   "ctx": "room",
+   "kind": "skill",
+   "mins": 4,
+   "note": "Clear a space and wear bare feet or shoes that grip; socks slip on a smooth floor. The beat is the steady pulse you would tap your foot to. Let your arms move however they want. If you already dance, do it to a song you would not normally choose and count it."
+  },
+  {
+   "n": 2,
+   "test": "Learn one basic step from a free video and do it eight times in a row in time with music.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Search the name of a step with the word \"beginner\": a side-together step, the grapevine, a box step, or the salsa basic step. Watch it through once, then copy it slowly with the video. Count the eight out loud."
+  },
+  {
+   "n": 3,
+   "test": "Do that step all the way through one song without counting out loud.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Count in your head for the first few times through, then let the music tell your feet. If you lose the step, stand still, find the beat, and start again on a \"1\"."
+  },
+  {
+   "n": 4,
+   "test": "Learn a second step and switch between the two every eight counts for a whole song.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Choose a step that ends on the foot the first one starts with, so the change is smooth; a beginner video usually says. Count \"1 to 8\" for each, switching on every new \"1\"."
+  },
+  {
+   "n": 5,
+   "test": "Learn a short group dance of three or four moves from a free video and dance it through once with the video.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "For example a line dance, a circle dance from Greece or the Balkans, or a beginner routine from a Bollywood film. Each is danced in a group, but you can learn it alone. Learn one move at a time with the video slowed down, then join them together."
+  },
+  {
+   "n": 6,
+   "test": "Dance that group dance to the music alone, with the video turned off.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Play the song on its own. If you forget a move, keep stepping on the beat until the part you remember comes back. Then check the video once for the part you forgot."
+  },
+  {
+   "n": 7,
+   "test": "Dance it through three times in a row, and each time you go wrong, carry on from the next count instead of stopping.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Stopping is the habit to lose. Keep your feet moving on the beat through the mistake and join the next move when its count comes round. Nobody watching notices a wrong step as much as a stop."
+  },
+  {
+   "n": 8,
+   "test": "Record yourself dancing it once on your phone, watch it back, and choose one move to tidy up.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Prop the phone where it sees all of you. Many people dislike watching themselves at first, and that passes. Look for one thing only, such as a step too small or arms held stiff, practise that move ten times, and delete the video afterwards if you like."
+  },
+  {
+   "n": 9,
+   "test": "Dance the group dance all the way through for one person at home.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "A family member, a friend, or somebody on a video call. Tell them what it is first. Afterwards, offer to show them the first move."
+  },
+  {
+   "n": 10,
+   "test": "Dance for a whole song you have never heard before, using only the steps you already know.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Ask somebody to choose the song, or play a radio station or a playlist you do not know. Listen for the beat in the first few seconds, start with your basic step, and change steps when the music changes."
+  },
+  {
+   "n": 11,
+   "test": "Learn a dance from a different part of the world from your first one, using free videos, over a week.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "If your first was a line dance, try a West African dance class, a Scottish or Irish folk dance, merengue from the Dominican Republic, or a Korean pop routine; if it was a Latin dance, try a circle dance. Read a few lines about where it comes from and when people dance it. A little each day for a week."
+  },
+  {
+   "n": 12,
+   "test": "Make up a dance of your own to one song: four sets of eight counts, using steps you know.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Choose a part of the song, such as the chorus. Give each set of eight counts one step or move, and write the four down in order on paper so you remember them. Simple is fine; the rung is a dance you can repeat."
+  },
+  {
+   "n": 13,
+   "test": "Do your own dance the same way on two different days, from your written list.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "On the second day, read the list once, then put it away and dance. If it came out differently, decide which way you like and fix the list."
+  },
+  {
+   "n": 14,
+   "test": "Learn a short dance together with one other person from a free video, and dance it side by side in time.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "A child and a grown-up, two friends, or two family members. Learn it at the same time so neither of you is the teacher. Count \"5, 6, 7, 8\" out loud to start together."
+  },
+  {
+   "n": 15,
+   "test": "Learn the basic step of a partner dance, such as a waltz, salsa or swing, and dance it through one song holding hands with a partner.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "A family member or friend of any age. Stand facing each other holding both hands, arms relaxed, and step the basic from a beginner video. The aim is to stay together on the beat and not tread on each other's feet; going slowly is how you get there."
+  },
+  {
+   "n": 16,
+   "test": "Dance the partner step through one song leading, and through another following.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "The leader chooses when to start, turn or change, and shows it with a gentle push or pull of the hands; the follower feels it and goes with it. Both roles are skills and both people can learn each. Talk after each song about what was clear."
+  },
+  {
+   "n": 17,
+   "test": "Join in a dance where other people are already dancing, for at least one whole song.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "A family party, a wedding, a festival, a community dance evening, or a free dance event in a park. Many places run beginner dance classes, and the first one is often free to try. At a party, you can start with the steps from rung two."
+  },
+  {
+   "n": 18,
+   "test": "Teach your own dance from rung twelve to one person until they can dance it with the music.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Teach one set of eight counts at a time, slowly and without music, then add the music at half effort. Praise what they get right before correcting anything."
+  },
+  {
+   "n": 19,
+   "test": "Teach a dance to two or three people together and get them dancing it through to the music.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Your own dance or the group dance from rung five. Stand in front of them facing the same way, so your right is their right. Count them in with \"5, 6, 7, 8\", and run it three times before you stop."
+  },
+  {
+   "n": 20,
+   "test": "Teach a dance to a group of five or more at a gathering, and lead them through it to the music.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "A birthday, a family meal, a class, or a club evening. Ask the host first. Choose a simple dance, teach it in two or three short parts, then start the music and dance at the front. It does not need to be perfect; a room of people dancing together is the aim."
+  }
+ ]
+}

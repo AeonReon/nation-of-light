@@ -1,0 +1,138 @@
+{
+ "id": "make.clay",
+ "name": "Clay and carving",
+ "line": "From a pinch pot the size of an egg cup to a butter spreader you carved, oiled and used at a meal.",
+ "size": "months",
+ "strand": "make-things",
+ "who": "From about five; knife rungs teens with a grown-up",
+ "about": "For everybody from about five for the clay rungs; the knife rungs are for grown-ups, and for teenagers with a grown-up beside them, and each of those rungs gives younger children another way to do it. The climb starts with a pinch pot, a coil, a proper join and slow drying, then a patterned slab, a model animal, a painted and sealed piece, a box and a pot with a lid that fits. Then it turns to carving: a block of clay, a whittled stick, and a wooden butter spreader you sand, oil and use at the table. Clay is forgiving, because if it goes wrong you squash it and start again. Air-drying clay needs no kiln, only a table and a little water, and what you make from it is for keeping and looking at, not for food or for holding water.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Roll a lump of clay into a smooth ball and press it into a pinch pot about the size of an egg cup.",
+   "ctx": "kit",
+   "kind": "skill",
+   "mins": 15,
+   "note": "Use a lump the size of a small egg. Push your thumb into the middle, then pinch gently between thumb and fingers while you turn the ball round in your other hand. Air-drying clay costs little; for the first few rungs, a dough of two cups of flour, one cup of salt and about one cup of water works too."
+  },
+  {
+   "n": 2,
+   "test": "Make a second pinch pot, cut it in half with a piece of thread, and check the walls are the same thickness all the way round.",
+   "ctx": "kit",
+   "kind": "attention",
+   "note": "Hold the thread tight between two hands and pull it down through the pot. Where the wall is thick, pinch more next time; where it is thin, pinch less. Aim for walls about as thick as a pencil, then squash both halves back into a ball to use again."
+  },
+  {
+   "n": 3,
+   "test": "Roll a coil as even as a pencil and as long as your forearm, without it cracking.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Roll with flat hands from the middle outwards, moving your hands apart as you go. If it goes flat, turn it a quarter and roll again; if it cracks, the clay is too dry, so wet your hands a little. Make three and keep the best."
+  },
+  {
+   "n": 4,
+   "test": "Add a handle to a pinch pot by scratching both joining faces, wetting them, and pressing them together.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Score both faces and wet them: scratch criss-cross lines with a fork or a cocktail stick, dab on a little water, press together with a small wiggle and smooth the join with a damp finger. Clay that is only pressed together usually comes apart as it dries. This join is used on nearly every rung after this one."
+  },
+  {
+   "n": 5,
+   "test": "Build a small pot from a flat base and four or five coils, each one scratched, wetted and smoothed onto the one below.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Make the base a flat round about the size of the palm of your hand. Lay each coil round the edge, then smooth clay down from each coil onto the one below, inside and outside, until no gaps show. Keep the walls upright by turning the pot as you go rather than reaching round it."
+  },
+  {
+   "n": 6,
+   "test": "Dry a pot slowly over three days so it does not crack.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Put it somewhere cool, away from sun and heaters, with a loose plastic bag or a damp cloth over it for the first day, and turn it upside down on the second day so the base dries too. In a hot, dry place, keep it covered for longer. Most cracks come from drying too fast or from joins that were not scratched and wetted."
+  },
+  {
+   "n": 7,
+   "test": "Roll a flat slab between two guide sticks so it is the same thickness everywhere, press a pattern into it, and cut it into a neat square tile.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Lay two pencils or two strips of thick card either side of the clay and roll a rolling pin or a bottle across them: the sticks set the thickness. Press in a leaf, a fork, a piece of lace or a shell. Cut the square with a blunt table knife against a ruler."
+  },
+  {
+   "n": 8,
+   "test": "Model an animal from one lump of clay, pulling the legs, head and tail out of the lump rather than sticking them on.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "A cat, a hedgehog, a bird or a tortoise is a good first animal. Pulled-out parts stay on when the clay dries; anything you have to add, join by scratching and wetting. Keep it small and chunky, because thin legs snap."
+  },
+  {
+   "n": 9,
+   "test": "Write down one thing to fix on your animal, then make it again with that thing fixed.",
+   "ctx": "kit",
+   "kind": "attention",
+   "note": "One sentence is enough: the head too big, the legs too thin, a crack at the neck. Make the second animal with that one thing put right. Keep both side by side so you can see the difference."
+  },
+  {
+   "n": 10,
+   "test": "Smooth a dry piece with a barely damp sponge, paint it, and seal it with clear varnish or watered-down white glue.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Wipe rough edges with the sponge rather than sanding them, which makes dust. Any water-based paint works; when it is dry, brush on varnish or white PVA glue mixed with a little water. Sealed air-drying clay is still not safe for food or for holding water, so it is for keeping things like rings, pens or seeds."
+  },
+  {
+   "n": 11,
+   "test": "Carve a repeating pattern into a half-dry pot with a cocktail stick, with clean lines that do not tear the clay.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Clay that has dried for about half a day is firm but not hard, and that is when it carves cleanly. Draw the pattern very lightly first, then cut over it. One simple shape repeated all round, such as waves, dots or leaves, looks planned rather than accidental."
+  },
+  {
+   "n": 12,
+   "test": "Build a small open box from five slabs, four sides and a base, with every corner scratched, wetted and smoothed.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Let the slabs firm up for an hour first so they stand up on their own. Cut them against a ruler, join every edge that touches, and press a thin coil into each inside corner to make it strong. A box big enough for paper clips or a few coins is plenty."
+  },
+  {
+   "n": 13,
+   "test": "Make a pot with a lid that sits on it without sliding off, and let the two dry together.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Make the pot, then roll a round slab a little wider than its top, and join a ring of thin coil under the lid so it fits just inside the rim. Dry the lid sitting on the pot with a scrap of kitchen paper between them, so both shrink together. A small knob on top makes it easy to lift."
+  },
+  {
+   "n": 14,
+   "test": "Press clay into a thick block, let it firm up for a day, and carve a fish out of it by cutting away everything that is not the fish.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Draw the outline on the top with a cocktail stick, then take off thin slices with a lolly stick, a teaspoon or a blunt table knife, working from the outside in. Take a little at a time, because clay you cut away cannot go back. Carving in wood works the same way, only slower."
+  },
+  {
+   "n": 15,
+   "test": "Whittle a green stick into a point, then cut a notch and a flat face into it, always cutting away from your body.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "For grown-ups, and for teenagers with a grown-up beside them; younger children carve a second clay block into a different animal and count it. Use a small knife with a blade that locks open, and a freshly cut stick as thick as a thumb, which is softer than dry wood. Sit down with your elbows on your knees, keep the blade moving away from you and your other hand behind it, and close the knife whenever you stop."
+  },
+  {
+   "n": 16,
+   "test": "Carve a flat butter spreader from a piece of soft wood, down to a pencil outline drawn on both sides.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "A flat piece of soft wood about as long as your hand and as thick as a finger: lime (also called basswood), birch, or a soft offcut, which timber yards often give away. A grown-up saws off the big waste, then whittle thin shavings down to the line; if you are pushing hard, the cuts are too big. Younger children: a grown-up does the knife cuts while you draw the shape, and you do the next two rungs yourself."
+  },
+  {
+   "n": 17,
+   "test": "Sand the spreader with coarse and then fine sandpaper until you cannot feel any knife marks.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Wrap sandpaper round a scrap of wood for the flat parts and hold it loose over a finger for the curves. Sand along the grain, the lines in the wood, not across them. Wet the spreader lightly, let it dry and sand once more, so the tiny fibres that water lifts are gone before its first wash."
+  },
+  {
+   "n": 18,
+   "test": "Rub oil into the spreader, leave it overnight, and use it to spread butter at a meal.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Use an oil sold as safe for wooden chopping boards, or a little cooking oil if that is what you have. Rub on a thin coat, wait twenty minutes, wipe off what has not soaked in, and leave it overnight; wash it by hand afterwards and dry it straight away. When it spreads butter on bread at a meal, this ladder is done."
+  }
+ ]
+}

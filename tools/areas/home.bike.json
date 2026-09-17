@@ -1,0 +1,146 @@
+{
+ "id": "home.bike",
+ "name": "Bike mechanics",
+ "line": "From reading the pressure on a tyre to teaching somebody to mend their own puncture, with your hands off.",
+ "size": "months",
+ "strand": "make-things",
+ "from": 8,
+ "who": "From about eight with a grown-up; teens and grown-ups",
+ "about": "For grown-ups and teenagers, and for children from about eight with a grown-up beside them. You need a bike, and a borrowed one is fine. The climb starts with the tyre pressure and a check before every ride, then the saddle, the chain, taking the wheels out, a puncture found and mended at home and then away from it, the brakes, and the gears. It ends with teaching somebody to mend their own puncture while you keep your hands off. Every time the brakes or a wheel have been touched, a grown-up who knows bikes checks the brakes before anybody rides it, and a bike that fails that check is not ridden.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Find the tyre pressure printed on the side of a bike tyre, and write it down.",
+   "ctx": "kit",
+   "kind": "attention",
+   "mins": 5,
+   "note": "Look round the side of the tyre for small raised writing such as \"40-65 PSI\" or \"2.8-4.5 bar\": that is the range the tyre is made for. While you are there, look at the valve: a fat one like a car's, a thin one with a tiny nut on the top, or an older type with a cap and a collar. Note which it is, because the pump has to fit it."
+  },
+  {
+   "n": 2,
+   "test": "Pump both tyres to within the pressure range written on them.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "A pump with a gauge is best; many bike shops let you use theirs for free. For the thin valve, unscrew the tiny nut first, and screw it back after. With no gauge, pump until the tyre is firm and your thumb only just dents it, and never go over the top number on the tyre."
+  },
+  {
+   "n": 3,
+   "test": "Do the check before a ride: tyres firm, both brakes stopping the wheels, the chain on and oiled, and the wheels tight.",
+   "ctx": "kit",
+   "kind": "attention",
+   "note": "Squeeze each brake lever and push the bike forwards: the wheel should not roll, and the lever should stop well before it touches the handlebar. Lift each end and spin the wheel: it should turn freely and not wobble, and any quick-release lever should be closed firmly. A child does this with a grown-up, who checks the brakes again. Do it before every ride from now on."
+  },
+  {
+   "n": 4,
+   "test": "Set the saddle height so the rider's leg is almost straight with their heel on the pedal at its lowest point.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Loosen the saddle clamp, a lever or a bolt under the saddle, set the height, and tighten it so the saddle cannot twist. Never raise it above the line marked on the seat post. When the rider pedals normally with the ball of the foot, the knee will then be slightly bent at the bottom, which is comfortable. A child still learning may want it lower, so both feet can touch the ground."
+  },
+  {
+   "n": 5,
+   "test": "Clean the chain with a rag and oil it, one drop on each link while you turn the pedals backwards, then wipe off what is left on the outside.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Hold a rag round the chain and turn the pedals backwards to wipe it. Use oil made for bike chains, borrowed if you have none; cooking oil goes sticky and holds dirt. The oil is needed inside the links, not on the outside, so wiping the outside afterwards stops grit sticking to it. Lean the bike against a wall; keep fingers away from where the chain meets the teeth."
+  },
+  {
+   "n": 6,
+   "test": "Lift the chain off the front ring on purpose, put it back on, and wash your hands.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "With the bike still, lift the chain off the teeth of the big front ring and let it hang. To put it back, hook it over the top teeth of the front ring and slowly turn the pedal by hand so the chain climbs back on. If there is a gear mechanism at the back, pushing it forwards gives the chain some slack. Turn the pedal, never the chain, so fingers stay clear of the teeth."
+  },
+  {
+   "n": 7,
+   "test": "Take the front wheel out and put it back, centred, with the brake working again, and have a grown-up check the brake.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "If the brakes grip the rim, open the small release on the brake first (on V-brakes, unhook the curved metal pipe from its holder) so the tyre fits past the pads, and close it again at the end: this is the step people forget. Undo the quick-release lever or the nuts (a spanner that fits exactly), drop the wheel out, then put it back fully into the slots and tighten. With disc brakes, do not squeeze the brake lever while the wheel is out. Spin the wheel to check it is centred, and squeeze the brake."
+  },
+  {
+   "n": 8,
+   "test": "Take the back wheel out and put it back, with the chain on the smallest back gear and the wheel straight in the frame, and have a grown-up check the brake.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Change to the smallest back gear before you start, which makes it easier. Open the rim brake release, undo the lever or nuts, push the gear mechanism back and let the wheel drop out. Going back, lay the chain over the smallest gear, pull the wheel into the slots, check it sits straight, tighten, and close the brake release."
+  },
+  {
+   "n": 9,
+   "test": "Take the tyre off the rim with tyre levers, take the tube out, put both back and pump the tyre up.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Let all the air out, push the tyre edges into the middle of the rim all round, then hook a tyre lever under one edge and lever it over; a second lever a hand's width along does the rest. Never use a screwdriver, which cuts tubes. Many tyres go back on by thumbs alone: start at the valve and finish opposite it. Before pumping, check all round that no tube is caught between the tyre and the rim, or it will burst."
+  },
+  {
+   "n": 10,
+   "test": "Find the hole in an inner tube, then find what made it in the tyre.",
+   "ctx": "kit",
+   "kind": "attention",
+   "note": "Pump the tube up a little and listen and feel for the hiss, or push it through a bowl of water a bit at a time and watch for bubbles. Mark the hole with a pen. Line the tube up with the tyre to see where the hole was, and look slowly inside the tyre there for a thorn or a bit of glass; wipe with a cloth rather than bare fingers. Bike shops often have old punctured tubes to practise on for free if you ask."
+  },
+  {
+   "n": 11,
+   "test": "Mend a puncture with a patch kit, and check the next day that the tube still holds its air.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "Rub the area round the hole with the sandpaper in the kit, spread a thin layer of the glue wider than the patch, and wait until it looks dry, usually a few minutes. Press the patch on hard, from the middle out, for a minute. Self-adhesive patches skip the glue but still need the sanding. Pump the tube up a little, leave it overnight, and check it is still firm."
+  },
+  {
+   "n": 12,
+   "test": "Away from home, replace an inner tube using only what you carried, and ride home.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Carry tyre levers, a spare tube or patches, and a pump that fits your valve, in a small bag or tied under the saddle. To practise, choose a safe spot such as a park path, let the air out on purpose, and swap the tube. Before riding home, check the wheel is tight and the brake works, and a child has a grown-up do that check."
+  },
+  {
+   "n": 13,
+   "test": "Look at all the brake pads on a bike and say whether each one needs replacing.",
+   "ctx": "kit",
+   "kind": "attention",
+   "note": "Rim brake pads have grooves: when the grooves have worn away, the pad needs replacing. Disc brake pads are small and sit inside the brake; look through the gap with a torch, and when the pad material is thinner than the metal plate behind it, it needs replacing, though the maker's instructions give the exact limit. Check too that rim pads hit the rim squarely, not the tyre."
+  },
+  {
+   "n": 14,
+   "test": "Adjust a rim brake with its small barrel adjuster so the lever stops well before it touches the handlebar, and have a grown-up check it.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "The barrel adjuster is the small round part where the cable goes into the brake or the lever. Turning it anticlockwise pulls the cable tighter and brings the pads closer to the rim; clockwise lets them move away. Turn half a turn at a time, then squeeze and spin the wheel: the pads should grip firmly and not rub when you let go. Brakes that work by oil in a pipe (hydraulic) are for a bike shop or somebody experienced."
+  },
+  {
+   "n": 15,
+   "test": "Take the brake pads out of one rim brake and put them back lined up so they hit the rim squarely, and have a grown-up check before riding.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Loosen the nut holding the pad, set it so the whole pad meets the rim flat and does not touch the tyre, and tighten it while holding the pad in place. If the pads are worn out, this is when new ones go in, and new pads usually cost little; putting the old ones back lined up counts for this rung. Squeeze the lever hard afterwards and check nothing has moved."
+  },
+  {
+   "n": 16,
+   "test": "Adjust the back gears with the barrel adjuster so the chain moves cleanly onto every gear, up and down.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Lift the back wheel off the ground and turn the pedals while you change gear. If the chain is slow to climb to the bigger gears, turn the barrel adjuster on the gear mechanism or the shifter a quarter turn anticlockwise; if it is slow to drop to the smaller ones, turn it clockwise. Leave the two small screws marked H and L alone: they stop the chain falling off the ends. You need a borrowed bike with gears on the outside for this rung."
+  },
+  {
+   "n": 17,
+   "test": "Find where a noise on a bike is coming from, and fix it.",
+   "ctx": "kit",
+   "kind": "attention",
+   "note": "A squeak from a dry chain wants oil; a rub on every turn of the wheel is often a brake pad touching or a wheel sitting crooked; a click with every pedal turn can be a loose pedal or a loose bottle cage. Lift the bike and turn one part at a time to narrow it down, and ask the rider when it happens: going uphill, over bumps, when braking."
+  },
+  {
+   "n": 18,
+   "test": "Get a bike that nobody has ridden for a long time ready to ride again, and have a grown-up check the brakes before it goes out.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Borrow one from a relative, a neighbour or a shed. Pump the tyres and look for cracks in the rubber, which mean new tyres; clean and oil the chain; check every brake and gear; tighten the saddle, handlebars and wheels. Write a list of anything it needs that you cannot fix, such as a rusted cable, and give that list to the owner."
+  },
+  {
+   "n": 19,
+   "test": "Teach somebody to mend their own puncture, with your hands off the bike the whole time.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Choose a friend, a child with their grown-up, or anybody who has never done it. Tell them each step and let them get it wrong and try again; you may point but not touch. It is done when their tube holds air and the wheel is back in, with the brake checked."
+  }
+ ]
+}

@@ -1,0 +1,126 @@
+{
+ "id": "magic.mime",
+ "name": "Mime and clowning",
+ "line": "From one action mimed at a mirror, to a two-minute silent piece for five or more people.",
+ "size": "weeks",
+ "strand": "say-what-you-mean",
+ "who": "Everybody; a child and a grown-up side by side",
+ "about": "For everybody: a child and a grown-up can climb it side by side. Mime is showing things with your body and face and no words; clowning is making people laugh at a clown's own small troubles. It starts with miming a cup at a mirror, builds the classic skills of the invisible wall, the rope pull and the walk on the spot, and ends with a two-minute silent piece for five or more people. It needs no kit at all, only a clear space, and it teaches you to notice how people really move. One rule runs through every rung: the joke is always on you, never on anybody watching or any real person.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "At a mirror, mime drinking from a cup, keeping your hand the shape of a real cup the whole time.",
+   "note": "Hold a real cup first and look at the shape of your hand, then put it down and make the same shape with nothing in it. Lift it, tip it, swallow, and put it down. The cup must not change size while you hold it.",
+   "ctx": "room",
+   "kind": "skill",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Mime five everyday actions for one person, and have all five named.",
+   "note": "For example: brushing your teeth, opening a door, putting on a coat, reading a book, eating an apple. Do each slowly, with real sizes and weights. If one is not guessed, do it again more slowly instead of adding sounds.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 3,
+   "test": "Mime putting a cup down on a table, walk away, come back, and pick it up from exactly the same spot.",
+   "note": "Invisible things only seem real if they stay where you left them. Look at the spot as you put the cup down and again as you come back. A helper can watch and tell you if it moved.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Hold the invisible wall at the mirror for thirty seconds, moving one hand at a time to new places on it.",
+   "how": [
+    "Hold both hands up, fingers together, as if touching a window.",
+    "Let each hand arrive with a tiny stop, as if it has just touched glass.",
+    "Move one hand to a new spot on the wall while the other stays still, then move the other."
+   ],
+   "note": "Keep your palms flat and fingers straight while touching, and relax the hand as it comes off. Keep the wall the same distance from your body all the time. Look at the wall as if you can almost see it.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 5,
+   "test": "Keep the invisible wall in exactly the same place for a whole minute while your head and shoulders move behind it.",
+   "note": "The whole effect depends on the invisible thing not moving; if it moves once, it is gone. Lean left and right, and look through the wall, while your hands stay fixed in the air. Watch your hands in the mirror, not your face.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Mime lifting a heavy suitcase, then a feather, and have a watcher say which looked heavier and why.",
+   "note": "A heavy thing changes the whole body: the knees bend, the breath is held, and the hand is pulled down by the weight. A feather needs only fingertips and a light face. Bend your knees for the pretend lift too, the same as for a real one.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Do the rope pull for thirty seconds, pulling an invisible rope towards you.",
+   "how": [
+    "Grip the rope with both fists, one in front of the other, at chest height.",
+    "Pull both fists in towards your chest, leaning back a little.",
+    "Let go with the back hand, reach it forward past the front hand, grip, and pull again."
+   ],
+   "note": "The rope seems real when both fists grip the same straight line each time. Lean back as if the rope is heavy, and let your face show the effort. Do it in a clear space with nothing behind you.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 8,
+   "test": "Walk on the spot for thirty seconds so that you look as if you are walking forward.",
+   "how": [
+    "Lift your right foot and put it down flat a short step ahead.",
+    "As it lands, slide your left foot back along the floor, keeping it flat.",
+    "Lift the left foot and put it down a short step ahead, and slide the right foot back.",
+    "Swing your arms as in a normal walk, and keep your head at one height."
+   ],
+   "note": "Practise slowly at the mirror, standing side-on, because that is how it looks best. It takes many tries before it looks smooth. Socks on a smooth floor make sliding easier, so go carefully and keep your weight over your feet.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Mime a short story with a beginning, a middle and an end, with no words, twice at the mirror.",
+   "note": "For example: you open a present, find a smaller present inside, then a smaller one, and at last a tiny one that makes you smile. Or you plant a seed, water it, wait, and pick the flower. Plan the three parts before you start.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "Practise a clown double-take ten times: look at something, look away calmly, then turn back quickly with a surprised face.",
+   "note": "Clowns show what they are thinking before they do anything. The first look must be calm, so the second one is a surprise. Try it with an odd thing on a table, such as a shoe on a plate. Turn your head gently; the surprise is in your eyes and mouth, not in your neck.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 11,
+   "test": "Make one person laugh with no words by having a small pretend trouble with an invisible object.",
+   "note": "For example, an umbrella that will not open and then pulls you along, or a door that keeps swinging back at you. The laugh comes from you trying hard and staying cheerful. The trouble is always with a thing or with yourself, never with the person watching.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "Put three of your skills into a two-minute silent piece, and run it at the mirror three times with a timer.",
+   "note": "For example: walk on the spot to a door, find an invisible wall, pull it open with the rope, then have trouble with an umbrella outside. Plan where each part starts and ends. Music with no words can play in the background if you like.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Run a mime-guessing game for three or more younger children, giving each a turn to mime and a turn to guess.",
+   "note": "Whisper each child an easy action: brushing teeth, eating a banana, being a cat. Clap for every try, guessed or not. Keep turns short so nobody waits long.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 14,
+   "test": "Perform your two-minute silent piece for five or more people.",
+   "note": "A family gathering, a birthday or a school or club event all work; ask the host first. Clear a space with nothing to trip on. Stay silent all the way to your bow at the end.",
+   "ctx": "with",
+   "kind": "courage"
+  }
+ ]
+}

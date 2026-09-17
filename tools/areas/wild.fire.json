@@ -1,0 +1,138 @@
+{
+ "id": "wild.fire",
+ "name": "Fire",
+ "line": "From finding out where a fire is allowed to teaching somebody else to lay, light and put out a fire safely.",
+ "size": "weeks",
+ "strand": "look-after-the-place",
+ "from": 12,
+ "who": "Grown-ups, and teenagers with a grown-up",
+ "about": "For grown-ups, and for teenagers with a grown-up beside them at every lit fire; a child never lights a fire alone. The climb starts before any match: finding out where a fire is allowed today, setting up a safe spot with water ready, and gathering and sorting dry wood. Then laying a fire, lighting it, keeping it small and steady, and putting it out until the ashes are cold, leaving the place as you found it. The later rungs are one match, wind, damp wood and a spark striker, and it ends with you teaching somebody else the whole thing. A fire lit well and put out properly is an old, useful skill, and the care it takes is most of the skill.",
+ "place": "outdoors",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Find out whether you may light a fire in one place you could go, and whether there is a fire ban or high fire danger today.",
+   "note": "Many parks, woods and beaches do not allow fires at all, and in dry, hot or windy weather there are often bans everywhere. Check the rules for the place (the landowner, the park's website, your local council, a campsite's rules) and your national or regional fire danger rating. A garden fire bowl or a campsite fire pit is often the simplest legal place. If the answer is no, the answer is no; this rung still counts.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 10
+  },
+  {
+   "n": 2,
+   "test": "In a place where a fire is allowed, set up a fire spot with three metres clear all round and a full bucket or bottle of water beside it.",
+   "note": "Use a fire pit, a fire ring, a fire bowl or a barbecue if there is one. Clear dry leaves and grass, look up for low branches, and keep it well away from tents, fences and hedges. Never set a fire on peat or deep dry leaves, where it can creep underground. The water is ready before the first match, every time from now on.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Gather an armful of dead, dry sticks from the ground that snap cleanly when you bend them.",
+   "note": "If a stick bends instead of snapping, it is too wet or still alive. Take only wood that is already lying on the ground, and never break branches off living trees. Where collecting wood is not allowed, use wood you bring from home.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Sort what you gathered into three piles: tinder, kindling, and fuel wood.",
+   "note": "Tinder catches a flame: dry grass, the thin curls of dead bark, pine needles, or a little scrunched newspaper. Kindling is sticks about as thick as a pencil. Fuel wood is thumb-thick to wrist-thick. Make the kindling pile twice as big as you think you need; running out of it is why most fires fail.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Lay a small fire in your fire spot, without lighting it, and have your grown-up or a friend check it would light.",
+   "note": "A simple way: a fist-sized ball of tinder in the middle, kindling leaned over it in a small cone with a gap on the side the wind comes from, and fuel wood kept to one side for later. Leave spaces for air; a tightly packed fire goes out.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Strike five matches, one at a time, away from your body, holding each over a bowl of water until it has nearly burnt down.",
+   "note": "Hold the box low, strike away from you, and tip the match slightly down so the flame climbs the stick. Drop each one into the water. A teenager does this with a grown-up beside them. If you already strike matches without thinking, do it on purpose today and count it.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Light the fire you laid with a match, and feed it from small wood to bigger wood until the fuel wood has caught.",
+   "note": "Light the tinder on the side the wind is coming from, so the wind blows the flame into the fire. Add kindling a few sticks at a time, then fuel wood once the kindling is burning well. Keep it small: a fire the size of a dinner plate is plenty. Somebody stays with a lit fire at all times.",
+   "how": [
+    "Water ready, fire spot clear.",
+    "Light the tinder low down, on the side the wind comes from.",
+    "Add kindling a few sticks at a time.",
+    "Add fuel wood once the kindling is burning well."
+   ],
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 8,
+   "test": "Put a fire out until the ashes are cold to your hand.",
+   "note": "Pour water on slowly, stir the ashes with a stick, pour again, and stir again. Hold the back of your hand just above the ashes; if you feel any warmth it is not out. Only then touch them. Warm is not out. If you ever get a burn, cool it under cool running water for at least twenty minutes, as in the First aid ladder.",
+   "how": [
+    "Pour water slowly over everything.",
+    "Stir the ashes with a stick.",
+    "Pour again and stir again.",
+    "Back of the hand above, then touch: cold."
+   ],
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "After a fire, leave the spot so the next person finds it as you did.",
+   "note": "Take home every scrap of rubbish, including anything that did not burn. Never burn plastic, foil or painted wood. If there was no fire ring, scatter the cold ashes widely and put back any stones or turf you moved. Leave no trace of the fire at all: that is the rule wherever you go.",
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 10,
+   "test": "Keep a small fire going for thirty minutes, adding wood before it needs it, and put it out cold at the end.",
+   "note": "Add one or two pieces at a time when the flames start to drop, not when the fire is nearly out. Watch how long a piece of fuel wood lasts. The fire should stay the same size the whole time, and never be left alone.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Lay and light a fire using a single match.",
+   "note": "Everything is ready before you strike: tinder dry and fluffed up, plenty of kindling, fuel wood to hand. If it fails, lay it again better and try another day; the one match is the rung.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 12,
+   "test": "On a breezy day, when there is no fire ban, light a fire in a sheltered fire spot, using your body or a bag as a windbreak.",
+   "note": "Crouch with your back to the wind and strike the match inside the shelter of your hands. In strong wind, do not light a fire at all: sparks can carry a long way. Saying no on a windy day counts as doing the rung well.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "After rain, find dry wood and tinder and light a fire with it.",
+   "note": "Look for dead sticks still hanging in bushes rather than lying on wet ground, and snap them; the inside is often dry. Peel thin curls of bark from fallen dead wood only, never from a living tree. Bringing a little dry tinder from home in a bag is good planning, not cheating.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Light a fire with a spark from a fire striker instead of a match.",
+   "note": "A fire striker (a metal rod and a scraper) throws hot sparks onto very fine tinder: fluffed cotton wool, dry grass rubbed between your hands, or thin bark shavings. Scrape the rod, not the scraper, and hold it close to the tinder. If you do not have one, borrow one from a friend or an outdoor group, or do this rung with matches and a single strike on the finest tinder you can make.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 15,
+   "test": "Run a fire for a whole evening with other people round it, from checking the rules to putting it out cold.",
+   "note": "You are the one who checks the fire danger, sets up the spot, puts the water beside it, keeps the fire the right size, and puts it out at the end. Tell everybody the simple rules first: no running near the fire, no throwing things into it.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 16,
+   "test": "Teach somebody else to lay, light and put out a fire, with you beside them the whole time.",
+   "note": "Go through the rungs in order with them: the rules, the spot, the water, the three piles, laying, lighting, and putting it out cold. Let them do it with their own hands while you watch and only step in for safety. If they are a child, you are the grown-up beside them. That is the far end of this ladder.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

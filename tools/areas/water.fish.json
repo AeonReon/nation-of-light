@@ -1,0 +1,136 @@
+{
+ "id": "water.fish",
+ "name": "Fishing",
+ "line": "From finding out the fishing rules where you live, to teaching a beginner to catch a fish and put it back kindly.",
+ "size": "weeks",
+ "strand": "get-strong-outside",
+ "who": "Everybody; children with a grown-up for hooks and water",
+ "about": "For everybody: a child and a grown-up can climb it side by side, and a grown-up is with a child for anything with a hook and at any water. It starts at home: the rules where you live, the parts of the kit, the knot that holds a hook, and casting practice in a garden or park with no hook on. Then the safety rules and the right way to put a fish back, before a net at a pond or rock pool, and a first hour at the water. It ends with catching fish, handling them kindly and correctly, and teaching a beginner to do the same. You do not need to buy a rod to start: many angling clubs run free or low-cost try-fishing days and lend the kit.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Find out, from the fishing rules for your country or area, whether you need a licence or permit to fish in fresh water and in the sea, and write both answers down.",
+   "note": "Rules are different in every country and often on each river or lake: a licence, a permit from the owner or a club, a closed season, how big a fish must be to keep it, and fish you must always put back. Search for your government's fishing or fisheries rules, or ask at a fishing tackle shop or club. Sea fishing is free in many places but not all. If you already know the rules, write them down anyway and count it.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 10
+  },
+  {
+   "n": 2,
+   "test": "Find a picture of a rod set up for fishing and point to the rod, the reel, the line, the float or weight, and the hook, saying what each does.",
+   "note": "The rod lets you cast and feel a bite, and the reel holds the line and winds it in. The float sits on the top of the water and dips when a fish bites; a weight takes the bait down. The hook holds the bait. If somebody you know has a rod, look at the real thing with them.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Tie the improved clinch knot through a key ring with string, five times in a row, until it holds when you pull hard.",
+   "note": "This is the knot most people use to tie a hook on. A shoelace and a key ring are fine for learning. When it holds five times in a row, you are ready for real line.",
+   "how": [
+    "Put the end of the string through the ring and pull through a hand's length.",
+    "Wrap the end round the long part five times.",
+    "Push the end back through the small loop next to the ring, then through the big loop you just made.",
+    "Wet it, pull it tight slowly, and trim the end."
+   ],
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 4,
+   "test": "With a grown-up, tie the same knot with fishing line onto a real hook, holding the hook by its straight part, then put it away with the point covered.",
+   "note": "Hooks are sharp and have a barb that makes them hard to pull out of skin, so a child always does this with a grown-up. Hold the hook by the straight part, with the point facing away from you. Many anglers squeeze the barb flat with pliers, which makes a hook far easier to take out of a fish or a finger, and some waters require it. Stick the point into a cork or a hook holder when you are done.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 5,
+   "test": "In a garden or park, with no hook on, cast a small practice weight onto a coat laid on the grass ten metres away.",
+   "note": "Tie on a small practice weight, or a rolled-up sock, instead of a hook. Before every cast, look behind you and above you, and make sure nobody is within two rod lengths. Wear glasses or sunglasses to protect your eyes. No rod of your own: many angling clubs lend one on a try-fishing day, and this rung can be done there.",
+   "how": [
+    "Let about a rod's length of line hang down and hold it against the rod with a finger.",
+    "Look behind and above you.",
+    "Bring the rod back over your shoulder, then forward, letting go of the line as the rod points at the target."
+   ],
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Cast ten times at the coat and land at least eight of them on it or within a step of it.",
+   "note": "Count out loud. If the weight goes too high, let go of the line a little later; if it hits the ground in front of you, let go a little earlier. Look behind and above you before every single cast. If you already cast well, do the ten on purpose today and count it.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Before your first time at the water, say the fishing safety rules out loud to the person you will go with.",
+   "note": "Never fish alone, and a grown-up is always with a child; look up before casting: power lines and fishing rods do not mix, because a rod can carry electricity without touching the wire. Wear a life jacket on rocks, a pier, a harbour wall or in a boat, and stay back from slippery or crumbling edges. If anybody falls in, nobody goes in after them: ring your emergency number and throw something that floats. Take every bit of line, hook and bait bag home, because birds and animals get tangled in them.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Learn the five rules for putting a fish back, and say them to the grown-up or friend you fish with.",
+   "note": "One, wet your hands or use a wet cloth, because dry hands damage a fish's skin; two, keep it in or just above the water, and out of it for well under a minute; three, never squeeze it or touch its gills. Four, take the hook out with forceps or a hook remover, and if the hook is deep inside, cut the line close to the mouth instead of pulling. Five, hold it upright in the water, facing into any flow, until it swims away on its own.",
+   "ctx": "room",
+   "kind": "kindness"
+  },
+  {
+   "n": 9,
+   "test": "With a grown-up, catch something with a net in a pond or rock pool, look at it in a tub of the same water, and put it back where you found it within five minutes.",
+   "note": "A pond with a safe edge, a slow stream, or a rock pool at low tide. Crouch or kneel rather than stand at the edge, and keep the tub in the shade. This is practice for everything on rung 8: wet hands, gentle, quick, and back where it came from. A life jacket if the edge drops into deep water.",
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 10,
+   "test": "Find a place near you where beginners fish, go there, watch people fishing for twenty minutes, and ask one of them what they are catching and with what bait.",
+   "note": "A club's try-fishing day, a lake with day tickets, a canal, or a pier. Most people fishing are glad to be asked, as long as you keep your voice low and stand back from their line. Write down the bait they use. Ask them, too, about the rules for that water.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 11,
+   "test": "With a grown-up or a club coach, fish for one hour at that place, baiting the hook and casting yourself, whether or not you catch anything.",
+   "note": "Bread, sweetcorn or worms are simple baits in fresh water; ask what works there. Sitting quietly and watching the float for an hour is a skill in itself, so an hour with no fish counts. Check the rules for that water first, and wear a life jacket if you fish from a pier, rocks, a wall or a boat. Take all your line and rubbish home.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Catch a fish, take the hook out yourself with the grown-up beside you, and put it back so it swims away.",
+   "note": "Follow the five rules from rung 8. Have the forceps or hook remover and a wet cloth ready before you cast, not after the bite. If you are not sure how to hold this kind of fish, ask the grown-up or the coach before you lift it. A fish that swims away strongly is the good result.",
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 13,
+   "test": "Catch and put back three fish in one outing, each out of the water for less than thirty seconds.",
+   "note": "The grown-up can count the seconds out loud. If a fish is taking longer, put it back in the water to rest before you finish. Three fish take more than an hour on most days, so plan a morning or an afternoon. Life jacket where the water is deep, a grown-up with any child.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Keep a fishing notebook for five outings: the date, the place, the weather, the bait, and what you caught or saw.",
+   "note": "One short line for each is enough: \"Saturday, canal, cloudy and still, sweetcorn, two small fish, a heron\". After five outings, read it back and look for what the good days had in common. A notes app on a phone works as well as paper.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 15,
+   "test": "Where the rules let you keep a fish, keep one, and with a grown-up clean it and cook it for a meal.",
+   "note": "A grown-up kills the fish straight away, quickly and correctly, the way an experienced angler or club shows them; a fish is never left to die in a bucket or on the bank. Then gut it, rinse it, and cook it simply, for example in a pan with a little oil. If you would rather not keep a fish, or you only fish where everything goes back, learn to clean and cook a whole fish from a fish counter instead and count it. If neither suits you, cook a meal for the people you fish with and count that.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 16,
+   "test": "Take a beginner fishing, with a grown-up there if either of you is a child, and teach them to cast, catch a fish and put it back kindly.",
+   "note": "A friend, a younger cousin, a parent who never learnt. Teach in the order you learnt: the rules, the knot, casting with no hook, the safety rules, the five rules for putting a fish back. Let them do every part themselves while you stay beside them. The end of the ladder is a beginner who does it right without you telling them.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ],
+ "place": "water"
+}

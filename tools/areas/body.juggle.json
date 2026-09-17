@@ -1,0 +1,170 @@
+{
+ "id": "body.juggle",
+ "name": "Juggling",
+ "line": "From one ball thrown hand to hand, to juggling three balls for two whole minutes.",
+ "size": "months",
+ "strand": "make-things",
+ "from": 8,
+ "who": "From about eight, and grown-ups",
+ "about": "For anybody from about eight, and for grown-ups. It starts with one rolled sock thrown from hand to hand, then two balls passing each other in the air, then the first wild throw of three. From there it is counting catches, five, ten, twenty, until three balls stay up for thirty seconds, a minute, and at the end two whole minutes. Most people who practise a few minutes most days get three balls going within a month or two, and it is one of the clearest proofs there is that a thing you could not do before is now yours. Three pairs of rolled socks will do from the first rung to the last.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Throw one ball from hand to hand ten times without dropping it.",
+   "how": [
+    "One ball only. A rolled pair of socks works.",
+    "Throw it from one hand to the other, up to about eye height.",
+    "Aim for the same arc every time rather than for speed.",
+    "Ten throws without a drop."
+   ],
+   "note": "The ball should go up and across in front of your face, not straight across between your hands. A rolled pair of socks is better than a real ball at first, because it does not bounce away when you drop it. If you can already do this, count it and go straight on.",
+   "ctx": "room",
+   "kind": "skill",
+   "mins": 3
+  },
+  {
+   "n": 2,
+   "test": "Throw one ball from hand to hand twenty times, with every throw reaching the same height.",
+   "note": "Pick a spot on the wall at about eye height, such as a picture corner or a light switch, and make every throw peak level with it. It is slow and it is the whole skill: three balls only work when every throw is the same.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 3,
+   "test": "Throw one ball from hand to hand twenty times, keeping your eyes on the top of the arc and not on your hands.",
+   "note": "Look at the spot where the ball turns over at the top. Your hands learn to be in the right place without you watching them. This is the rung that makes three balls possible later, because with three there is no time to look down.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Throw one ball twenty times, every throw starting from your weaker hand.",
+   "note": "The weaker hand is the one you do not write with. Its throws will go wild at first; slow down until they match the other hand. Both hands do exactly the same job in juggling, so the weaker one has to catch up now.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 5,
+   "test": "Do the two-ball exchange five times, drops allowed.",
+   "how": [
+    "One ball in each hand.",
+    "Throw from your right hand. When that ball reaches the top, throw from your left, under it.",
+    "Catch the first ball in your left hand, then the second in your right.",
+    "That is one exchange. Pick up whatever falls and go again."
+   ],
+   "note": "Throw, throw, catch, catch. The second throw has to go before the first ball lands, and that feels wrong for a while. Clear a space away from anything breakable; a bed behind you saves a lot of bending down.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Do the two-ball exchange ten times in a row, catching both balls every time.",
+   "note": "Throw, throw, catch, catch, then stop, and start the next one. If the second throw keeps going straight across instead of up, you are throwing it too early: wait for the first ball to reach the top.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Do the two-ball exchange twenty times in a row, starting each one from your weaker hand.",
+   "note": "Same as before with the order turned round: the weaker hand throws first. Juggling three balls starts from either hand, so both have to lead.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 8,
+   "test": "Do the two-ball exchange twenty times in a row without your feet moving.",
+   "note": "If you keep walking forwards to catch, your throws are drifting forwards. Stand with your toes against the edge of a rug or a line on the floor and throw straight up in front of your face until you stop needing to move.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Hold three balls, throw all three once each, and catch at least one.",
+   "how": [
+    "Two balls in your stronger hand, one in the other.",
+    "Throw from the hand with two. At the top, throw from the other hand. At the top of that one, throw the last ball.",
+    "Throw, throw, throw, and catch whatever you can."
+   ],
+   "note": "It will go everywhere the first few times, and that is the rung. Everybody who juggles went through this. Count it once all three have left your hands in the right order and one has landed in a hand.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "Throw all three balls once each and catch all three, so you finish with two in one hand and one in the other.",
+   "note": "Three throws, three catches, then stop. The balls cross over in front of you in a figure eight, and that pattern is called the cascade. A soft thud on the bed is much better than chasing balls round the room, so practise over one.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 11,
+   "test": "Juggle three balls for five catches before you stop or drop.",
+   "note": "Carry on past the third throw: every time a ball reaches the top, the next one goes. Count catches out loud. Five is when it stops being a single burst and starts being juggling.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 12,
+   "test": "Practise three balls for ten minutes on the clock, picking them up every time they drop.",
+   "note": "Set a timer and keep going until it rings, however many drops. People who can juggle dropped the balls hundreds of times on the way. Ten minutes like this does more than an hour of starting and giving up, and if you already practise this long, set the timer and count it.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 13,
+   "test": "Juggle three balls for ten catches.",
+   "note": "Most drops at this stage come from one throw going too far forward or too low. Watch which hand it comes from and give that hand a few one-ball throws before you start again.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Juggle three balls for twenty catches.",
+   "note": "Twenty catches is about ten seconds. Breathe out and let your shoulders drop; tense arms throw unevenly. If it falls apart at fifteen, stop at twelve on purpose a few times, then try for twenty again.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 15,
+   "test": "Juggle three balls for thirty seconds without a drop.",
+   "note": "Use a phone timer or have somebody count. By now the balls should be going round at the same height as the spot on the wall from rung two. If they creep higher and higher, bring them back down.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 16,
+   "test": "Juggle three balls for one full minute without a drop.",
+   "note": "A minute is well over a hundred catches. It is more about staying calm than about skill now. Pick a steady rhythm in the first ten seconds and do not speed up.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 17,
+   "test": "Juggle two balls in one hand for twenty throws, the balls going round in a circle.",
+   "note": "Both balls in the same hand: throw one up, and as it turns over at the top, throw the second up beside it, catching each as it comes down. It is a new move, not a step back, and it makes your weaker hand much steadier. Do the stronger hand first, then the weaker.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 18,
+   "test": "Juggle three balls while you walk twenty slow steps forward.",
+   "note": "Walk slowly in a clear room or on grass, and throw a little further forward than usual so the balls move with you. Keep your eyes on the top of the arc and trust your feet. Stop if you get near furniture or a step.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 19,
+   "test": "Teach somebody the one-ball throw and the two-ball exchange, until they can do five exchanges without you.",
+   "note": "A friend, a brother or sister, a parent, a child from about eight. Hand them rolled socks, show them rungs one to six in order, and hold back from taking the balls off them. It may take two or three short sessions on different days.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 20,
+   "test": "Juggle three balls for two whole minutes without a drop.",
+   "note": "Two minutes is well over two hundred catches. Build to it the way you built to one minute: a steady rhythm, the same height every throw, eyes on the top. Once you can do this, juggling is a thing your hands keep, even after a year without practice.",
+   "ctx": "home",
+   "kind": "skill"
+  }
+ ]
+}

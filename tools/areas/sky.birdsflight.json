@@ -1,0 +1,148 @@
+{
+ "id": "sky.birdsflight",
+ "name": "Things that fly",
+ "line": "From one paper aeroplane across a room to a flying afternoon where you help everybody's plane glide.",
+ "size": "months",
+ "strand": "make-things",
+ "who": "Everybody; a child and a grown-up side by side",
+ "about": "For everybody: a child and a grown-up can climb it side by side, with a grown-up handling any scissors or craft knife for younger children. The climb starts with a folded paper aeroplane, then learns what the bent edges of a wing do, what really holds a plane up, a paper helicopter, a card glider balanced and measured, and a propeller driven by a rubber band. It ends with a flying afternoon where you help everybody there get a plane to glide. Almost all of it needs only paper, card from a cereal box, tape and paper clips, and each rung shows you something real aeroplanes and birds do.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Fold a paper aeroplane and throw it gently so it glides across a room.",
+   "ctx": "room",
+   "kind": "skill",
+   "mins": 5,
+   "note": "Any sheet of printer paper works. Throw it level and gently, as if sliding it off your hand, not hard. If you already fold paper aeroplanes, fold one on purpose today and count it.",
+   "how": [
+    "Fold the sheet in half the long way, then open it flat.",
+    "Fold the two top corners in to the centre line, then fold the new slanted edges in to the centre line again.",
+    "Fold it in half along the centre line, then fold each side down to make the wings, level with the bottom edge."
+   ]
+  },
+  {
+   "n": 2,
+   "test": "Throw the same aeroplane ten times and write down how you held and threw it on the furthest flight.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Try a gentle push, a harder throw, the nose a little up, the nose a little down. Mark where it lands each time with a shoe or a coin, and pace out the distance in steps if you have no tape measure. Most paper aeroplanes fly furthest from a smooth, fairly gentle throw with the wings level."
+  },
+  {
+   "n": 3,
+   "test": "Fold two more designs, fly each one five times, and write down which flies furthest on average.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Try a wide-winged glider with the nose folded back to make it blunt, or a design from a library book or a free folding website. Add up the five distances for each design and divide by five: that is the average. One lucky flight does not make a design the best."
+  },
+  {
+   "n": 4,
+   "test": "Bend the back edges of both wings up a little and fly it, then bend them down and fly it, and say what each change did.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Bent up, the nose usually lifts, so the plane climbs, slows and may swoop or drop. Bent down, it dives. The moving air pushes on the bent edges and tips the whole plane, and on a real aeroplane the flaps that do this are called elevators, on the tail. Flatten the edges again after each try."
+  },
+  {
+   "n": 5,
+   "test": "Bend the back edge of one wing up and the other down, and make the plane turn left and then right on purpose.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "The air pushes the wing with its edge bent up downwards and the other wing upwards, so the plane leans and turns towards the side bent up. Real aeroplanes do this with flaps near the wing tips called ailerons. Use small bends: a big bend makes it spin to the floor."
+  },
+  {
+   "n": 6,
+   "test": "Sweep a flat piece of card through the air, then sweep it again with the front edge tilted up a little, and feel the difference.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Hold the card by its back edge, like a small tray, and move your arm quickly sideways. Flat, it slides through easily. Tilted, you feel the card pushed upwards and backwards, because it is pushing air down and the air pushes back. The upward part of that push is what a wing uses, and the backward part is drag."
+  },
+  {
+   "n": 7,
+   "test": "Explain out loud in four sentences what holds an aeroplane up, and answer one question about it from somebody.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "A wing meets the air tilted slightly up at the front, and its shape turns the air that flows over and under it downwards behind it. Pushing that air down pushes the wing up, and the same thing can be described as the air pressure being lower above the wing than below it. This push, called lift, only comes while air flows over the wing fast enough, which is why a plane needs speed and why the engines (or, for a glider, gravity) keep it moving forward. A common explanation says the air over the top must go faster to meet the air underneath at the back edge, but the air does not have to meet again, and that part of the story is wrong."
+  },
+  {
+   "n": 8,
+   "test": "Make a paper helicopter, drop it five times from the same height, and time each fall.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Cut a strip of paper about 20 centimetres by 5, cut down the middle of the top half to make two blades, fold the blades opposite ways, and put a paper clip on the bottom. Drop it from your raised hand while standing on the floor, and use the stopwatch on a phone. It spins because the falling air pushes on the angled blades, and the spinning blades work like wings and slow the fall, the same way a sycamore or maple seed falls. A child uses scissors with a grown-up close by."
+  },
+  {
+   "n": 9,
+   "test": "Change one thing on your paper helicopter, drop it five times again, and say whether it now falls more slowly.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Change only one thing: longer blades, shorter blades, or two paper clips instead of one. Longer blades usually fall more slowly, and more weight usually falls faster but steadier. Changing one thing at a time is the only way to know which change did it."
+  },
+  {
+   "n": 10,
+   "test": "Build a card glider with a body, a wing, a flat tail and an upright fin, using card from a cereal box and tape.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "A cereal box, tape, scissors and a ruler are all it takes; balsa wood works too if you have it, and a library book or a free website will have plans. Fold a strip for the body so it is stiff, and tape the wing a little way back from the front. Bend the two halves of the wing up very slightly at the tips, which helps it stay level. It will not fly well yet; the next rung sorts that out.",
+   "how": [
+    "Body: a strip of card about 25 by 3 centimetres, folded in half the long way.",
+    "Wing: about 20 by 4 centimetres, taped across the body about a third of the way back.",
+    "Tail: about 8 by 3 centimetres flat across the back end, with a fin of about 3 by 3 centimetres standing up from it."
+   ]
+  },
+  {
+   "n": 11,
+   "test": "Add weight to the nose of your glider until a gentle launch gives a smooth glide, not a swoop up or a dive.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Use paper clips or a little modelling clay or reusable putty on the nose. If it swoops up, slows and drops, add weight; if it dives straight down, take some off. The balance point should end up under the front part of the wing: rest the glider on two fingertips to find it. A plane balanced like this is stable, because the weight sits ahead of where the lift pushes up."
+  },
+  {
+   "n": 12,
+   "test": "Launch your glider from standing height, measure how far forward it travels, and work out how many times further that is than the height it started from.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Use a long hallway, a hall, or outside on a still day. If you launched from 1.5 metres and it travelled 6 metres before landing, it glides four times further than it drops. This number is called the glide ratio: a paper dart may manage three or four, and a well-balanced glider more. Launch it gently and level each time, so you measure the glider and not your throw."
+  },
+  {
+   "n": 13,
+   "test": "Make your glider fly a wide curve to the left and then to the right, by bending the back edge of the fin a little.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Bend the back of the fin to the left and the air pushes the tail to the right, so the nose swings left. This moving part on a real aeroplane is the rudder. Make small bends and test after each one, and straighten it again when you are done."
+  },
+  {
+   "n": 14,
+   "test": "Fly your glider outside on a calm day and again in a light breeze, launching into the breeze, and write down what changed.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "Launched into a breeze, air flows over the wing even at a slow launch, so the glider is often steadier but covers less ground; with the breeze behind, it may drop quickly at first and then travel further over the ground. Choose an open space away from roads, trees and overhead power lines. If a glider lands on a roof, in a tree near cables or on a road, leave it there and make another."
+  },
+  {
+   "n": 15,
+   "test": "Make a propeller from card on a rubber band, wind it up, let it spin in your hand, and feel which way it pushes the air.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Cut a propeller about 10 centimetres long from stiff card, twist the two blades opposite ways, and push a straightened paper clip through the middle as the shaft. Hook a rubber band to the shaft, hold the other end, wind the propeller, and let go of the propeller while holding the band. A propeller is a spinning wing: its blades push air backwards, and the air pushes the propeller forwards. That push is called thrust. Keep faces back from anything wound up."
+  },
+  {
+   "n": 16,
+   "test": "Fit a rubber-band propeller to a light glider and get it to fly forward for three metres under its own power.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Stretch the rubber band along the underside of a light body, hooked to the propeller shaft at the front and a paper clip at the back. Wind it fifty to a hundred turns, hold the propeller, then let the plane go gently level. Free plans for rubber-band paper and straw aeroplanes are easy to find, and it is fiddly: expect several afternoons. A cheap balsa kit also counts if you have one."
+  },
+  {
+   "n": 17,
+   "test": "Design a glider of your own on paper with measurements, build it, and balance it until it glides further than your first card glider.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "Change something on purpose: a longer, narrower wing, a lighter body, a bigger tail. Draw it first with every size written on. Use the glide-ratio rung to compare it with your first card glider, and write down what you changed and what it did. Longer, narrower wings usually glide further, which is why gliders and albatrosses have them."
+  },
+  {
+   "n": 18,
+   "test": "Run a flying afternoon where everybody there folds a paper aeroplane and gets it to glide across a room, with your help where a plane dives or swoops.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Three or more people is enough: family, friends, children from next door with their grown-ups. Show the fold from the first rung, then help each person bend the back edges or add a paper clip until their plane glides. Finish with a longest-glide contest and a paper helicopter drop. The finish is when every person's plane has glided across the room at least once."
+  }
+ ]
+}

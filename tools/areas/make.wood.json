@@ -1,0 +1,145 @@
+{
+ "id": "make.wood",
+ "name": "Wood",
+ "line": "From sanding a scrap of wood to a low step stool you planned, built with halving joints, and stood on.",
+ "size": "months",
+ "strand": "make-things",
+ "from": 8,
+ "who": "From about eight with a grown-up; hand tools only",
+ "about": "For anybody from about eight with a grown-up beside them for every saw and chisel rung, and for grown-ups and teenagers learning woodwork for the first time. Everything is done with hand tools: sandpaper, a hand saw, a try square, a hand drill, a screwdriver, clamps and a chisel, and no power tools for children. The climb goes from sanding and reading the grain, to marking and sawing square, to screws and glue, a plan and a small box, then a chisel, a sharp edge and a proper joint. It ends with a low step stool you planned and built yourself, standing on it. Offcuts from a timber yard or a builder are often free, and borrowed tools are enough to start.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Sand a scrap of wood smooth along the grain with sandpaper wrapped round a small block.",
+   "ctx": "kit",
+   "kind": "skill",
+   "mins": 15,
+   "note": "Any clean offcut works, such as a piece of old shelf or a length of plain timber; avoid old painted wood and pallet wood, which can carry lead paint or chemicals. Wrap the paper round a block so the surface stays flat. Keep going until your fingers find no rough patches."
+  },
+  {
+   "n": 2,
+   "test": "Sand one patch across the grain and one along it, first with coarse paper and then with fine, and feel the difference.",
+   "ctx": "kit",
+   "kind": "attention",
+   "note": "The grain is the lines that run along the wood. Sanding across it leaves scratches that show when the wood is oiled; sanding along it hides them. Coarse paper has a low number on the back, such as 80, and fine paper a higher one, such as 180: always go from coarse to fine."
+  },
+  {
+   "n": 3,
+   "test": "Measure a length twice, then mark a line square all the way round the wood with a try square and a sharp pencil.",
+   "ctx": "kit",
+   "kind": "attention",
+   "note": "Hold the thick edge of the try square tight against the wood and draw along the metal blade, then carry the line round all four sides. If the line meets itself where it started, you held the square tight. Measuring twice catches most mistakes before they are cut into the wood."
+  },
+  {
+   "n": 4,
+   "test": "With the wood clamped down and a grown-up beside you, saw off a piece just on the waste side of your line.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Clamp the wood to a table or bench so both hands are clear of the saw's path; never hold it with your knee or your other hand near the blade. Start with two or three gentle backward strokes to make a groove, then long easy strokes using most of the blade. Saw beside the line on the side you will throw away, so the piece you keep is the right length."
+  },
+  {
+   "n": 5,
+   "test": "Saw a cut straight and square, and check the end with the try square.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Stand so your arm, the saw and the line are in one straight row, and look down on the line from above. Let the saw's own weight do most of the cutting. If light shows under the try square's blade, the end is not square, so cut another and compare."
+  },
+  {
+   "n": 6,
+   "test": "Saw three pieces to exactly the same length, and stand them side by side to check.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Mark all three from the same end of the tape or ruler, not each one from the last, so small errors do not add up. Stand them on end on a flat table and look along the tops. Within a millimetre of each other is good."
+  },
+  {
+   "n": 7,
+   "test": "Drill a straight hole right through a clamped piece of wood with a hand drill, with a scrap underneath so the back does not split.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "A hand drill with a turning handle, or a gimlet for small holes, is all you need; no power drill on this ladder. Make a small dent where the hole goes with a bradawl or a nail so the bit does not wander, then turn steadily while keeping the drill upright. The scrap underneath stops the wood breaking out as the bit comes through."
+  },
+  {
+   "n": 8,
+   "test": "Screw two pieces of wood together in an L shape, drilling a pilot hole first so neither piece splits.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "The pilot hole is a little narrower than the screw's thread and goes through the top piece into the bottom one. Use a screwdriver that fits the screw head exactly, press hard and turn slowly so the head does not get chewed. Stop when the head sits level with the wood."
+  },
+  {
+   "n": 9,
+   "test": "Glue two pieces of wood together, clamp them, leave them a full day, and check the joint holds.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "Spread a thin, even coat of wood glue on both faces, press them together and clamp until a little glue squeezes out, then wipe that off with a damp cloth. After a day, try to pull them apart by hand. A good glued joint along the grain is often stronger than the wood beside it."
+  },
+  {
+   "n": 10,
+   "test": "Draw a plan of a small open box with every size written on it, and a list of the pieces to cut.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "A box for pencils, seeds or small tools: a base and four sides. Draw it from the front, the side and above, and write the length, width and thickness of every piece, remembering that where sides overlap the ends, the lengths change. Check the plan against the wood you actually have before you cut anything."
+  },
+  {
+   "n": 11,
+   "test": "Build the box from your plan, glued and screwed, and write down everything the plan got wrong.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Cut all the pieces first and check each one against the list. Fix two sides to the base, then the two ends, drilling pilot holes as on rung eight. A plan is rarely right the first time, and that list of mistakes makes the stool plan at the end of this ladder better."
+  },
+  {
+   "n": 12,
+   "test": "With a grown-up beside you, cut thin shavings off the corner of a clamped piece of wood with a chisel, both hands behind the blade.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Clamp the wood so it cannot move. Hold the handle with one hand and the blade near its tip with the other, both behind the cutting edge, and push away from your body in small cuts. Never hold the wood in one hand while you chisel with the other, and wear safety glasses if you have them."
+  },
+  {
+   "n": 13,
+   "test": "Sharpen a chisel on fine sandpaper laid on a flat tile, and cut the end of a piece of wood before and after to feel the difference.",
+   "ctx": "kit",
+   "kind": "attention",
+   "note": "Hold the slanted face of the blade flat on the paper and rub back and forth until you can feel a tiny rough edge along the flat back, then rub the flat back on the paper once or twice to remove it. A blunt chisel needs pushing hard and slips; a sharp one cuts with less force, which is safer. Younger children watch a grown-up sharpen it, then feel the difference themselves."
+  },
+  {
+   "n": 14,
+   "test": "Cut a halving joint so two pieces of wood cross each other with their faces level and no gap.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Tight is better than loose, because a tight joint can be pared down to fit and a loose one cannot be made bigger. A grown-up stays beside younger children for the saw and the chisel.",
+   "how": [
+    "Lay one piece across the other and mark both its edges.",
+    "Mark half the thickness down each side with the try square.",
+    "Saw down to that line at both edges, plus a few cuts in between.",
+    "Chisel out the waste, working in from both sides towards the middle."
+   ]
+  },
+  {
+   "n": 15,
+   "test": "Mend a gap or a mistake in one of your joints instead of starting again.",
+   "ctx": "kit",
+   "kind": "attention",
+   "note": "Glue a thin sliver of wood into a gap, glue and clamp a small split, or fill a hole with glue mixed with fine sawdust from the same wood and sand it flat when dry. Most old furniture has a mended mistake somewhere in it. If all your joints fit, cut one loose on a scrap on purpose and mend that."
+  },
+  {
+   "n": 16,
+   "test": "Finish one thing you have made with two thin coats of oil or wax, a day apart, so the grain shows.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Sand to fine paper first, rub on a thin coat, wait a quarter of an hour and wipe off whatever has not soaked in. Cloths used with linseed oil and similar oil finishes can catch fire on their own as they dry, so lay them out flat outdoors to dry, or soak them in water, before you throw them away. Wax needs no such care and is fine for a first finish."
+  },
+  {
+   "n": 17,
+   "test": "Draw a plan for a low step stool with halving joints, check it with a grown-up, and cut every piece on the list.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "A simple design: two end frames, each two legs joined by a rail near the floor with halving joints, and a top board screwed and glued across them, about 20 to 25 centimetres high. Use wood at least as thick as your thumb, mark every piece with its name in pencil, and use the list of mistakes from your box. Spread it over several days."
+  },
+  {
+   "n": 18,
+   "test": "Build the step stool, finish it, and stand on it on a flat floor after a grown-up has checked it.",
+   "ctx": "long",
+   "kind": "courage",
+   "note": "Put the frames together without glue first to check the fit, then glue and screw them and leave the glue a full day before the finish. A grown-up checks every joint and pushes it for any wobble, then you step on in the middle with both feet. When it holds you without moving, this ladder is done."
+  }
+ ]
+}

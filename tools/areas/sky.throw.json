@@ -1,0 +1,131 @@
+{
+ "id": "sky.throw",
+ "name": "Throwing",
+ "line": "From a paper ball into a bin, to hitting a target four times out of five from twenty paces, and teaching the throw to somebody else.",
+ "size": "weeks",
+ "strand": "get-strong-outside",
+ "who": "Everybody; a child and a grown-up side by side",
+ "about": "For everybody: a child and a grown-up can climb it side by side. It starts indoors with a scrunched-up paper ball into a bin, then catching, then an overarm throw at a target outdoors from ten and twenty paces, a long throw, and skimming a stone where there is water. It ends with hitting a target four times out of five from twenty paces, and teaching the throw to somebody else. A soft ball, rolled socks or a beanbag are all it needs. Always throw where nobody is in the way, and never at people, animals, windows or cars.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Scrunch a sheet of paper into a ball and throw it into a bin from five paces.",
+   "note": "A pace is one ordinary walking step. Underarm or overarm, whichever you like. Keep going until one goes in, and if you do this every day at a desk already, count it.",
+   "ctx": "room",
+   "kind": "skill",
+   "twist": "Other hand.",
+   "mins": 2
+  },
+  {
+   "n": 2,
+   "test": "Throw the paper ball into the bin from five paces, five throws out of five.",
+   "note": "Five in a row, starting the count again after any miss. Stand the same way each time and look at the bin, not the ball, as you let go.",
+   "ctx": "room",
+   "kind": "skill",
+   "twist": "Other hand."
+  },
+  {
+   "n": 3,
+   "test": "Throw a soft ball against a wall and catch it as it comes back, ten times in a row.",
+   "note": "A tennis ball, a small rubber ball or a rolled pair of socks. Use a wall with no window in it, such as your own garden wall, the side of a garage or a ball wall in a park, and never a neighbour's wall without asking. Watch the ball all the way into your hands.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 4,
+   "test": "Catch ten in a row thrown gently to you from five paces.",
+   "note": "Ask a friend, a parent or a child to throw underarm. Hands out in front, soft, pulling the ball in towards you as it arrives. Step back a pace once ten is easy.",
+   "ctx": "with",
+   "kind": "skill",
+   "twist": "One hand, the other one."
+  },
+  {
+   "n": 5,
+   "test": "Throw overarm and hit a target about the size of a bin lid from ten paces.",
+   "how": [
+    "Stand side-on to the target, throwing arm at the back.",
+    "Point your other hand at the target.",
+    "Step towards it with the opposite foot as you throw, and let your arm follow through.",
+    "Mark the target with chalk on a wall, a bucket on its side, or a hoop on the grass."
+   ],
+   "note": "Overarm is the throw used for distance and aim in almost every sport. Stepping with the opposite foot is the part most people miss, and it is where the power comes from. Check nobody is behind the target before each throw.",
+   "ctx": "out",
+   "kind": "skill",
+   "twist": "Other hand."
+  },
+  {
+   "n": 6,
+   "test": "Hit the same target from ten paces, five throws out of five.",
+   "note": "Start the count again after any miss. If the misses go left or right, look at where your hand points after you let go: it should point at the target.",
+   "ctx": "out",
+   "kind": "skill",
+   "twist": "Other hand."
+  },
+  {
+   "n": 7,
+   "test": "Hit the target from twenty paces.",
+   "note": "Further away the ball has to go up a little, not only forwards. Aim slightly above the target and let it drop in. One hit counts for this rung.",
+   "ctx": "out",
+   "kind": "skill",
+   "twist": "Other hand."
+  },
+  {
+   "n": 8,
+   "test": "Hit the target from ten paces with your other hand, three throws out of five.",
+   "note": "Everything you learnt for the first hand, from the start: side-on, point, step with the opposite foot. It will feel clumsy for a few days. This is how you find out how much of throwing is practice.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Throw a ball back and forth with somebody from ten paces, twenty throws without a drop between you.",
+   "note": "Count every catch out loud together. Throw to the other person's chest, not over their head. A drop by either of you starts the count again.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "Throw a ball as far as you can in an open space, mark where it lands, and beat that mark by five paces.",
+   "note": "Use a field or a large park with nobody in front of you, and a soft ball. Mark the first landing with a stick or a jumper. A longer run-up of three steps and a higher throw are the two things that add distance.",
+   "ctx": "out",
+   "kind": "skill",
+   "twist": "Other hand, then beat that too."
+  },
+  {
+   "n": 11,
+   "test": "Skim a flat stone across calm water so it bounces three times.",
+   "how": [
+    "Find a flat, round stone about the size of your palm.",
+    "Hold it between thumb and middle finger, first finger along the edge.",
+    "Crouch low, throw side-arm, and spin it off your first finger so it lands nearly flat."
+   ],
+   "note": "Only on calm water where nobody is swimming, fishing or boating, and away from birds. Stand on a flat shore, never on a slippery rock or a high edge, and a grown-up is with a child near water. If there is no lake, river or sea near you, this rung and the next wait for a day out.",
+   "ctx": "out",
+   "kind": "skill",
+   "twist": "Other hand.",
+   "place": "water"
+  },
+  {
+   "n": 12,
+   "test": "Skim a stone so it bounces six times.",
+   "note": "Lower and faster. The angle where the stone meets the water matters more than strength: nearly flat to the water, with plenty of spin. Choose the flattest stones you can find and keep them for your best throws.",
+   "ctx": "out",
+   "kind": "skill",
+   "place": "water"
+  },
+  {
+   "n": 13,
+   "test": "Hit the bin-lid target from twenty paces, four throws out of five.",
+   "note": "This is the whole ladder in one test: side-on, point, step, follow through, and a little height. Do a few throws from ten paces first. If you already play a throwing sport, count four out of five on your first try.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Teach somebody the overarm throw until they hit the target from ten paces, three times out of five.",
+   "note": "A child, a friend or a parent. Show them one thing at a time: side-on, point at the target, step with the opposite foot. Stand beside them rather than behind the target, and let them take as many throws as they like.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

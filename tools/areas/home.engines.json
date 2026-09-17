@@ -1,0 +1,131 @@
+{
+ "id": "home.engines",
+ "name": "How things work",
+ "line": "From a ballpoint pen taken apart to a mechanical thing mended for somebody who was about to throw it out.",
+ "size": "months",
+ "strand": "make-things",
+ "from": 8,
+ "who": "From about eight with a grown-up; teens and grown-ups",
+ "about": "For grown-ups and teenagers, and for children from about eight with a grown-up beside them. You only ever take apart things that have no plug, no charger and no battery: pens, clothes pegs, staplers, a hand whisk, a clockwork toy, a mechanical kitchen timer, a bicycle pump. The climb starts with a pen and the safety rules, then levers, pulleys, gears and springs, a pump's one-way valve, how an engine turns fuel into movement, and finding why something stopped working. It ends with mending a mechanical thing that somebody was about to throw out. It is about the moving parts inside everyday things, and the habit of finding out why something stopped instead of guessing.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Take a clicking ballpoint pen apart, lay the parts out in the order they came out, and put it back together so it clicks.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 5,
+   "note": "Unscrew the barrel and you will usually find the ink tube, a small spring and the clicking part at the top. The clicking part turns a little each press, so it holds the tip out on one click and lets the spring push it back on the next. If you already take things apart, do this one on purpose and count it."
+  },
+  {
+   "n": 2,
+   "test": "Write the safety rules for what you may and may not take apart, and read them out to somebody.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "May: things that have never had a plug, a charger or a battery, such as pens, pegs, staplers, a hand whisk, a clockwork toy, a wind-up kitchen timer. Never: anything that plugs into the wall or charges, even when broken and unplugged, because parts inside some of them (called capacitors) can hold a charge that can kill long after unplugging; never a microwave, television, computer screen or power supply. Never anything with a battery, because a pierced or squashed battery can catch fire. Never big springs such as in garage doors, car parts or tape measures."
+  },
+  {
+   "n": 3,
+   "test": "Find a lever, a wedge, a screw and a wheel and axle in your home, and say what each one makes easier.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Lever: scissors, a bottle opener, a spoon lifting a tin lid. Wedge: a knife edge or a doorstop. Screw: a jar lid or a screw itself, which is a ramp wound round a rod. Wheel and axle: a door handle or a tap, where turning the big part a long way turns the small part with more force. Every one of them lets you use less force by moving further; none of them gives you something for nothing."
+  },
+  {
+   "n": 4,
+   "test": "Lift a heavy book with a ruler resting over a pencil, and move the pencil until the lift feels easiest.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Put the pencil under the ruler as the pivot, the book on one end, and press the other end down. The closer the pencil is to the book, the less you have to press, but the further your end has to move. Seesaws, crowbars and wheelbarrows all use this."
+  },
+  {
+   "n": 5,
+   "test": "Find two pulleys in use, such as a window blind cord, a flagpole or a washing line, and say which way you pull and which way the load moves.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "A single fixed wheel changes the direction: you pull down and the flag goes up. When the rope goes round several wheels, some of which move with the load, you pull more rope a longer way but need less force, which is how cranes lift heavy things. Look at building sites from outside the fence, boats, and lifts in pictures if there is nothing near you."
+  },
+  {
+   "n": 6,
+   "test": "Count the teeth on two gears that turn each other, and work out how many times the small one turns for one turn of the big one.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "A hand whisk has them, and so does a bicycle, where the chain joins the big front ring to a small back one and the same rule works. Divide the big number of teeth by the small number: 40 teeth driving 10 teeth means the small gear turns 4 times for each turn. The small gear spins faster; the big gear turns slower but with more turning force."
+  },
+  {
+   "n": 7,
+   "test": "Unscrew the end of a bicycle pump, find the rubber washer on the plunger, and explain how the pump pushes air only one way.",
+   "ctx": "kit",
+   "kind": "attention",
+   "note": "Pulling the handle out lets air slip past the soft washer into the pump. Pushing in presses the washer against the wall of the tube so the air cannot get back, and the squeezed air is forced out through the valve on the tyre, which lets air in but not out. Your heart has one-way valves that do a similar job for blood. Screw the end back on and check the pump still works."
+  },
+  {
+   "n": 8,
+   "test": "With a grown-up, take apart a clockwork toy or a wind-up kitchen timer, photographing each step, and find the spring and the gears.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Let it run down completely first, so the spring has no energy stored in it, and wear glasses in case a small spring jumps out. Winding it coils the spring tight and stores energy; the gears let that energy out slowly, and a part that catches and lets go, or a small fan, stops it all unwinding at once. Take a photo after every screw or part comes off, and keep the parts in a tray or egg box in order."
+  },
+  {
+   "n": 9,
+   "test": "Put the clockwork toy or timer back together using your photographs, so it works again.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Go backwards through the photographs, one part at a time. If a gear will not sit, turn it slightly so its teeth meet the next one. If it will not work at the end, go back to the last photograph where you are sure it was right. Getting it back together and working is the whole rung, however long it takes."
+  },
+  {
+   "n": 10,
+   "test": "Draw the four steps of a petrol car engine, and explain out loud how burning fuel ends up turning the wheels.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "A shaft turns the up-and-down of the pistons into round-and-round, the same way your knees going up and down turn a bicycle's pedals, and gears pass that turning to the wheels. A diesel engine has no spark: squeezing the air makes it hot enough to light the fuel. An electric car has no engine at all, only a battery and a motor.",
+   "how": [
+    "In: the piston moves down and pulls in air and fuel.",
+    "Squeeze: the piston moves up and squeezes them.",
+    "Bang: a spark lights the mixture, and the hot gas expands and pushes the piston down hard.",
+    "Out: the piston moves up and pushes the burnt gas out through the exhaust."
+   ]
+  },
+  {
+   "n": 11,
+   "test": "With a car's owner, open the bonnet with the engine off and cold, and find the engine oil dipstick, the coolant tank and the washer-fluid bottle.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "The engine should have been off for a few hours. Never open the coolant cap when the engine is warm, because the liquid inside is hot and under pressure, and keep hands clear of the fan, which on some cars can start by itself. On an electric car, never touch the orange cables. The car's handbook shows where everything is; if nobody you know has a car, find each part on a labelled drawing in the handbook for any car online and count it."
+  },
+  {
+   "n": 12,
+   "test": "Pick one mechanical thing at home that has stopped working, find out why, and write the cause down in one sentence.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "A stapler that jams, a clothes peg that will not grip, a pen that will not click, an umbrella that will not stay open, a door latch that sticks. Look before you guess: watch what moves and what does not. \"The spring has come off its hook\" is a good sentence; \"it is broken\" is not. It must have no plug and no battery."
+  },
+  {
+   "n": 13,
+   "test": "Fix one mechanical thing by trying one possible cause at a time, and write down each thing you tried and what happened.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "For a stapler that misses: first check the staples are the right size, then that the spring pushes them forward, then that the bent metal plate underneath lines up. Change only one thing before each test, so you know which change fixed it. The list you write is the method: it works on bikes, computers and cars."
+  },
+  {
+   "n": 14,
+   "test": "Draw from memory how one machine on this ladder works, with arrows for what moves, and then check your drawing against the real thing.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "The pen's click, the pump's washer, the gears in the whisk or the clockwork. Draw it first without looking, then take the real thing out and look, and correct your drawing in a different colour. The corrections show you what you had not really understood."
+  },
+  {
+   "n": 15,
+   "test": "Explain how one machine works to somebody, using your drawing, until they can draw it back to you correctly.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Choose somebody who does not know how it works, such as a child, a friend or a grandparent. Do not take the pen out of their hand: ask what they think happens next. If their drawing is wrong, the explanation needs changing, not them."
+  },
+  {
+   "n": 16,
+   "test": "Mend one mechanical thing, with no plug and no battery, that somebody was about to throw out, and give it back working.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Ask around: a stuck umbrella, a stapler, a hand whisk, a garden sprayer, a toy with wheels that no longer turn, a pepper mill. Use what you learned: look first, find the cause, try one thing at a time. Anything with a plug or battery goes to somebody qualified, not on this ladder."
+  }
+ ]
+}

@@ -1,0 +1,131 @@
+{
+ "id": "wild.camp",
+ "name": "Camping",
+ "line": "From putting up a tent with help to taking somebody camping for their first time and bringing them home happy.",
+ "size": "weeks",
+ "strand": "look-after-yourself",
+ "who": "Everybody; a child with a grown-up",
+ "about": "For everybody: a child and a grown-up can climb it side by side, and a child always camps with a grown-up. It starts with putting up and packing a tent, then a night in a garden, then choosing a good pitch, the rules of a campsite and a safety plan. The middle rungs are a night at a legal campsite with a hot meal, staying dry and warm, and leaving no trace. Then carrying everything on your back and two nights in a row. It ends with you taking somebody camping for their first time and bringing them home happy. Where wild camping is allowed is different in every country, so this ladder always says to check, and a borrowed tent is fine for every rung.",
+ "place": "garden",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Put up a tent with somebody helping, in a garden, a park where it is allowed, or a big room.",
+   "note": "Borrow a tent if you do not have one: friends, family and outdoor groups often lend them. Lay everything out first and read the instructions if there are any. Many tents stand up indoors without pegs, which is a good first go.",
+   "ctx": "kit",
+   "kind": "skill",
+   "mins": 30
+  },
+  {
+   "n": 2,
+   "test": "Take the tent down and pack it back in its bag, with every pole and peg counted.",
+   "note": "Count the pegs as they come out, fold the tent to the width of its bag, and roll it tightly towards the open end so the air escapes. If it is damp, hang it up to dry at home before it goes away, or it will smell and go mouldy.",
+   "ctx": "kit",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Put the same tent up on your own.",
+   "note": "Take your time: lay it out, find the door and point it where you want it, poles in, then pegs pushed in at a slant, leaning away from the tent. A child puts it up while the grown-up only watches.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 4,
+   "test": "Write a packing list for one night camping, and pack from it with every item ticked.",
+   "note": "Tent, sleeping bag, sleeping mat, warm layer and hat, waterproof, torch, water, food, a small first-aid kit, a phone, and a bag for rubbish. Tick each item as it goes in. Keep the list for every trip after.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Sleep a whole night in a tent in a garden.",
+   "note": "Your own garden, or a friend's or relative's with their permission. Bring a warm layer and a torch, and remember you can go indoors if you need to. A child's first night out has a grown-up in the tent or nearby. If there is no garden you can use, a night at a campsite later on counts for this rung.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 6,
+   "test": "Choose the best spot to pitch a tent in a garden or field, lie down on it, and say why you chose it.",
+   "note": "Flat, not in a dip where rain collects, not under dead branches, and with the door away from the wind. Lie on the ground where you would sleep: any lump or slope you feel now will feel bigger at night.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Find one campsite you could get to, and write down its rules on fires, quiet hours, water and toilets.",
+   "note": "Look on its website or ring and ask. At the same time, find out where wild camping (camping away from a campsite) is allowed where you live: in some countries it is allowed in many places, in others only with the landowner's permission, and in many not at all. Check before you ever try it.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Before a night away, write a safety plan and give it to somebody at home.",
+   "note": "Where you will be, when you will be back, the weather forecast for the night, the nearest place to get help, and your emergency number. Agree a time: if they have not heard from you by then, they call you. Check the forecast again on the day, as in the Weather and tide ladder.",
+   "how": [
+    "Where you are going and when you will be back.",
+    "Tonight's forecast.",
+    "Nearest help and your emergency number.",
+    "A time to check in."
+   ],
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Camp a night at a campsite and cook a simple hot meal on a camping stove or the site's barbecue, outside the tent.",
+   "note": "Something easy: pasta and sauce, soup and bread, or beans and sausages. Never cook, or bring a stove or barbecue, inside a tent or its porch, even to warm up: the fumes can kill. Set the stove on flat ground away from the tent and anything that burns.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "Stay warm through a cold night in a tent.",
+   "note": "A mat under your sleeping bag matters more than a thicker bag. Put on dry clothes for sleeping, wear a hat, eat something before bed, and go to the toilet before you get in. Keep tomorrow's clothes in the sleeping bag with you so they are warm in the morning.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 11,
+   "test": "Keep your sleeping bag and spare clothes completely dry through a wet or dewy night.",
+   "note": "Pack them in plastic bags inside your rucksack. Nothing touching the tent walls, as water comes through where things press. Wet coats and boots stay in the porch. In a dry place, the heavy dew of a clear night is the test.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Leave your pitch so that nobody could tell you were there.",
+   "note": "Every peg and every scrap of rubbish goes home with you, including tiny things like tea bags and wrappers. Walk over the whole pitch looking at the ground before you go. Leave no trace: that is the rule for every trip after this.",
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 13,
+   "test": "Pack everything for one night into one bag you can carry, and walk with it for thirty minutes.",
+   "note": "Heavy things close to your back and in the middle, light things at the top, waterproof where you can reach it. If it hurts after thirty minutes, take something out or move the weight. Borrowing a big rucksack is fine.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Camp a night at a campsite, or a place where it is allowed, that you reach by walking at least two kilometres carrying everything.",
+   "note": "Use your packing list and safety plan. A campsite with a walk from the bus stop or car park counts. A child does this with a grown-up, and carries only what is comfortable.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 15,
+   "test": "Camp two nights in a row, keeping yourself and your kit dry and warm the whole time.",
+   "note": "The second night is the real test: anything wet from the first night must be dried in the day. Hang damp things in the sun or wind, air your sleeping bag, and re-pack neatly each morning.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 16,
+   "test": "Take somebody camping for their first time, and bring them home happy.",
+   "note": "A younger child, a friend, or a grown-up who has never camped. Choose an easy place, a good forecast and a short trip. Let them put up the tent with you, cook together, and keep the safety plan yourself. A child never leads this; a grown-up does, with the child helping. That is the far end of this ladder.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

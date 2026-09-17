@@ -1,0 +1,121 @@
+{
+ "id": "magic.puppet",
+ "name": "Puppets",
+ "line": "From an old sock on your hand, to a five-minute puppet show for younger children.",
+ "size": "weeks",
+ "strand": "make-things",
+ "who": "Everybody; a child and a grown-up side by side",
+ "about": "For everybody: a child and a grown-up can climb it side by side. You make your own puppets free from an old sock and a paper bag, learn the small things that make a puppet seem alive, and end by putting on a five-minute show for younger children and letting each of them talk to a puppet. Puppets are a gentle way to practise voices, stories and speaking to an audience, because everybody looks at the puppet, not at you. A grown-up does the cutting with young children, and buttons or other small parts are only for puppets kept away from children under three.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Make a sock puppet by putting an old sock on your hand and giving it two eyes.",
+   "how": [
+    "Put your hand in the sock with your fingers in the toe and your thumb in the heel. The gap between is the mouth.",
+    "Mark where the eyes go, just above your knuckles.",
+    "Take the sock off and add the eyes: paper circles stuck on with glue or tape, or two sewn-on buttons."
+   ],
+   "note": "An odd sock that has lost its partner is perfect. Eyes drawn with a marker pen work too, but take the sock off your hand first. A grown-up helps with the needle if you sew buttons on.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 15
+  },
+  {
+   "n": 2,
+   "test": "Make the puppet count from one to ten out loud, opening its mouth for each word.",
+   "note": "Move your thumb down to open the mouth, rather than lifting your fingers; that looks like a real jaw. Open at the start of each word and close at the end, twice for \"seven\". Watch it in a mirror.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 3,
+   "test": "Make the puppet look at five things in the room, one at a time, stopping on each.",
+   "note": "Where the puppet looks is what makes it seem alive; nothing else comes close. Point its nose, not only your wrist, and hold still for a second on each thing, such as the window, a lamp or your own face.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Keep the puppet quiet for thirty seconds while it breathes, with a small, slow rise and fall of your hand.",
+   "note": "A puppet that freezes looks like a sock again. A small, slow movement every few seconds keeps it alive while it listens. Try it while somebody else is talking, or while music plays.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Give the puppet a name and a voice that is not your own, and have it talk about itself for two minutes.",
+   "note": "Try a voice higher, lower, slower or faster than yours. Let it say what it likes, what it does all day, and where it lives, for example at the bottom of the washing basket. Keep the voice the same the whole time; a timer helps.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Have the puppet ask one person three questions, and reply to each of their answers.",
+   "note": "Look at the person, and keep the puppet's mouth moving with the words. Easy questions work best: \"What is your favourite food?\" Children often answer a puppet more easily than a grown-up.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 7,
+   "test": "Make a paper-bag puppet with a talking mouth and paper arms.",
+   "how": [
+    "Lay a flat-bottomed paper bag down with the folded bottom on top, facing you.",
+    "Draw the eyes and nose on the folded flap, and the chin just below the flap.",
+    "Cut two strips of paper and tape one to each side as arms.",
+    "Put your hand inside with your fingers in the flap, and bend your fingers to make the mouth open and close."
+   ],
+   "note": "If you have no paper bag, make a second sock puppet and give it paper arms. A grown-up does the cutting with young children. Draw the face large and bold so it can be seen across a room.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 8,
+   "test": "Give the second puppet a voice clearly different from the first, and switch between the two voices ten times.",
+   "note": "If the first voice is high and quick, make this one low and slow. Give it a different mood too: one cheerful, one grumpy but kind. Switching back and forth checks that you never mix the two up.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "With one puppet on each hand, have them talk to each other for two minutes.",
+   "note": "Only the puppet that is talking moves its mouth; the other turns to look at it and breathes. A simple subject works: the sock has lost its partner, and the bag thinks it knows where to look.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "Plan a five-minute puppet story with a beginning, a problem and an ending, written as six short lines.",
+   "note": "For example: the sock wakes up alone; it cannot find its partner; it asks the bag for help; they look in funny places; they find the partner in the washing; they celebrate. Add one moment where a puppet asks the audience a question, such as \"Have you seen a sock?\" Six lines are enough; you make up the exact words as you go.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 11,
+   "test": "Make a stage you can kneel behind, from a table and a sheet or from a big cardboard box.",
+   "note": "The easiest stage is a table with a sheet hanging over the front to the floor, and you kneel behind it. A big box with a window cut in the front works too; a grown-up does the cutting. Check from the audience's side that the puppets show above the edge and your head does not.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 12,
+   "test": "Rehearse the whole show behind your stage twice, from start to end, without stopping.",
+   "note": "Lay the puppets where you can reach them without looking. Arms get tired, so rest your elbows on the edge between lines. If you have a helper, each of you can work one puppet.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Put on your show for two or more people.",
+   "note": "People in your family make a fine first audience. When a puppet asks its question, wait for the answers. Afterwards, ask what they liked best.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 14,
+   "test": "Put on your five-minute show for three or more younger children, then let each child talk to a puppet.",
+   "note": "Ask their grown-ups first, and keep it cheerful, with nothing frightening for small children. After the show, bring a puppet out and let it say hello to each child by name. If a child is shy, the puppet can simply wave.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

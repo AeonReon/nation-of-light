@@ -1,0 +1,131 @@
+{
+ "id": "make.photo",
+ "name": "Photography",
+ "line": "From one sharp photo of a cup to a small show of your ten best photographs for family or friends.",
+ "size": "months",
+ "strand": "make-things",
+ "who": "From about six; a child and a grown-up side by side",
+ "about": "For everybody from about six: a child and a grown-up can climb it side by side, sharing one phone. It starts with holding the camera still and getting the thing you meant in focus, then light, background, where things sit in the picture, height, low light, time of day and movement. Then come people, choosing your best, light editing, a week of one photo a day and a family occasion, and it ends with a small show of your ten best photographs for family or friends. A phone camera is all you need. Two rules run through every rung: ask before you photograph any person, and never photograph children you do not know.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Wipe the camera lens, hold the phone in both hands, and take a sharp photo of a cup on a table.",
+   "ctx": "room",
+   "kind": "skill",
+   "mins": 3,
+   "note": "Phone lenses collect fingerprints, and a soft cloth or a clean T-shirt corner fixes a lot of blurry photos straight away. Tuck your elbows against your body and press the button gently. Zoom into the photo afterwards: if the rim of the cup is crisp, it counts."
+  },
+  {
+   "n": 2,
+   "test": "Photograph a small thing close up, tapping it on the screen first so it is the sharpest part of the picture.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "A button, a leaf, the pattern on a spoon handle. Tap the thing on the screen and wait a moment for it to sharpen before you press. If the background comes out sharp and the thing is soft, tap and take it again."
+  },
+  {
+   "n": 3,
+   "test": "Photograph one object from where you stand, then walk closer until it fills the picture, and take it again.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "A plant, a shoe or a bowl of fruit. Walk closer rather than zooming, because zooming on many phones makes the picture softer. Compare the two: a great many disappointing photographs were simply taken from too far away."
+  },
+  {
+   "n": 4,
+   "test": "Photograph the same object by a window twice: once with the light falling on its side, once with the window behind it.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Turn the object or move yourself, not the window. Light from the side shows shape and texture; light from behind makes the object dark with a bright edge. Say which you like better and why; with no window, a lamp does the same job."
+  },
+  {
+   "n": 5,
+   "test": "Photograph a thing with a messy background, then move yourself until the background is plain, and take it again.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Crouch, step sideways or turn the thing round until behind it there is only a wall, the sky, a tablecloth or grass. Look at the edges of the screen as well as the middle before you press. The same care stops a lamp post or a plant appearing to stick out of somebody's head."
+  },
+  {
+   "n": 6,
+   "test": "Turn on the grid lines in your camera settings and take three photos with the main thing on a grid line, not in the middle.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "The grid splits the screen into nine boxes. Put a horizon along the top or bottom line, or a tree or a toy on one of the upright lines, with space on the side it faces. Then take the same photo with the thing exactly in the centre and compare them."
+  },
+  {
+   "n": 7,
+   "test": "Photograph one thing from three heights: lying on the ground, standing, and from straight above.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "A toy, a flower, a pair of shoes or a sleeping cat. From low down small things look big and important; from above you see patterns and shapes. Keep the one that shows the thing best."
+  },
+  {
+   "n": 8,
+   "test": "Take a sharp photo in a room lit by one lamp, with the phone resting on something steady and the flash off.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Rest the phone on a table, a pile of books or the back of a chair, tap to focus, and keep still for a second after pressing, because many phones take longer in low light. The flash makes everything look flat. Evening is the easiest time to try this."
+  },
+  {
+   "n": 9,
+   "test": "Photograph the same outdoor view in the hour after sunrise or before sunset, and again around the middle of the day.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "From a doorstep or through an open window is fine. Low sun makes long shadows and warm colours; high sun makes short shadows and flatter light. Near the equator the low-sun time is short, so be ready a little early; put the two photos side by side."
+  },
+  {
+   "n": 10,
+   "test": "Take a sharp photo of something moving, such as a ball in the air, a running dog or water pouring.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Hold the button down, or use burst mode, to take many photos in a row, then keep the sharpest one. Bright light helps, because the phone takes each picture faster. Or follow the moving thing with the phone as you press, so it stays sharp while the background blurs."
+  },
+  {
+   "n": 11,
+   "test": "Ask somebody in your home if you may photograph them, take their photo facing a window, and show it to them.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Ask first, every time, and if they say no, that is the answer. Stand them facing the window so the light falls on their face, come close enough that their face fills much of the picture, and tap on their eyes to focus. Show them straight away and delete it if they ask you to."
+  },
+  {
+   "n": 12,
+   "test": "Take twenty photos of things and places on one walk, pick the best three, and say one reason for each.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "Gates, puddles, clouds, a bird on a wall, a shadow on a path. This walk is for things, not people: ask before photographing any person, and never photograph children you do not know. Mark the three as favourites so you can find them again."
+  },
+  {
+   "n": 13,
+   "test": "Edit one photo on the phone: straighten it, crop it, and adjust the brightness, keeping the original.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Most phones have all three under the edit button, with nothing extra to buy. Straighten the horizon first, crop away what does not help, then brighten or darken a little. Put the edit next to the original, and if it looks edited, go back and do less."
+  },
+  {
+   "n": 14,
+   "test": "Take one photo a day for seven days of the same view or the same kind of thing, and keep all seven.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "The view from one window, your breakfast, or the sky at the same time each day. Keeping the place and the time the same makes the changes easy to see. At the end, lay them out in order and choose your favourite."
+  },
+  {
+   "n": 15,
+   "test": "Photograph a family meal or celebration so that everybody who was there appears in at least one good photo.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Tell everybody you are taking photos, and for anybody else's children, ask their parents first. Take a few of everybody together and some of people talking, not only posed ones. Send the best to the family afterwards, including one of the person who is usually the one holding the camera."
+  },
+  {
+   "n": 16,
+   "test": "Print one photo, or have it printed, and give it to the person who is in it.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Many libraries, chemists and photo counters print from a phone for a small price. If printing is not possible, send the photo to them on its own with a sentence about why you like it. A printed photograph is often kept for years."
+  },
+  {
+   "n": 17,
+   "test": "Choose your ten best photographs from this ladder and show them to family or friends, each with a short title.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Print them and pin them to a wall or peg them to a string, or show them one at a time on a laptop or a television. Put them in an order where each leads to the next, and write a title for each. When people have looked at all ten and you have answered their questions, this ladder is done."
+  }
+ ]
+}

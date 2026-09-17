@@ -1,0 +1,173 @@
+{
+ "id": "magic.juggleclub",
+ "name": "Circus skills",
+ "line": "From a sock swung in circles, to a two-minute circus routine to music for five or more people.",
+ "size": "months",
+ "strand": "get-strong-outside",
+ "from": 7,
+ "who": "From about seven; a child and a grown-up side by side",
+ "about": "For everybody from about seven: a child and a grown-up can climb it side by side. It uses soft, safe kit in this order: socks swung in circles like poi, a hoop, a plastic spinning plate on a stick, and a diabolo, with nothing that uses fire or anything hard thrown high. Ball juggling has its own ladder. It ends with a two-minute routine to music for five or more people. It builds timing, balance and patience, and every rung is practised in a clear space, away from windows, lights, other people and anything that can break.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Make a sock poi and swing it in circles beside your body twenty times with one hand.",
+   "how": [
+    "Push a rolled-up pair of socks into the toe of a long sock, and tie a knot above them.",
+    "Hold the open end, with your arm hanging by your side.",
+    "Swing it in big circles beside you, like a wheel turning next to your leg."
+   ],
+   "note": "Poi come from the Māori people of New Zealand, who swing them in dance; this soft version is for safe practice. Give yourself a clear circle of space bigger than your arm and the sock together. The socks are soft, so a knock on the leg does not hurt.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 10
+  },
+  {
+   "n": 2,
+   "test": "Swing the sock poi twenty times with your other hand, then twenty circles the opposite way round with each hand.",
+   "note": "The other hand feels clumsy at first, and it improves within a few days. Keep your wrist loose and your arm fairly straight. If you already swing both ways easily, do it on purpose today and count it.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 3,
+   "test": "Make a second sock poi and swing both at once, one on each side, the same way round, twenty times.",
+   "note": "Keep the two socks level with each other, like two wheels on a cart. If they bump, hold your hands a little further apart. Counting out loud keeps them in time.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 4,
+   "test": "Swing both poi twenty times so that one is at the top whenever the other is at the bottom.",
+   "note": "Start one sock swinging, then start the second half a circle later. If they keep matching up again, slow down and let one hand lead.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 5,
+   "test": "With one poi, swing ten figures of eight in front of you, one circle on your left side and then one on your right.",
+   "note": "Turn your wrist across your body to move from one side to the other, and keep each circle the same size. Go slowly at first; it looks good even at a gentle speed.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Spin a hoop around one wrist and forearm twenty times without it dropping.",
+   "note": "Hold your arm straight out, start the hoop turning with the other hand, and move your wrist in a small circle to keep it going. Any hula hoop works; if you do not have one, a school, youth club or friend may lend one.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Roll a hoop away across the floor so that it stops and rolls back to you, five times.",
+   "how": [
+    "Hold the hoop upright in front of you, with one hand on top.",
+    "Push it forward, and pull your hand down the back of it as you let go, so it spins backwards.",
+    "It moves away, stops, and rolls back towards you."
+   ],
+   "note": "Use grass or a long floor with nothing breakable at the far end. A sharper pull down gives more spin and a quicker return. Stop it with your hand when it comes back.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 8,
+   "test": "Keep a hoop turning round your waist for thirty seconds.",
+   "note": "Stand with one foot a little in front of the other. Push the hoop round against your back, and rock your weight forward and back in time with it, rather than moving your hips in circles. A bigger, heavier hoop turns more slowly and is easier to learn on.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Spin a hoop on one raised arm and pass it over to the other arm without it stopping.",
+   "note": "With the hoop turning on your right wrist and your arm up, bring your left hand up to touch your right hand, and let the hoop move across onto the left wrist. Keep both wrists circling while it passes. A lighter hoop makes it easier.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "Start a plastic spinning plate on its stick and keep it spinning for ten seconds.",
+   "how": [
+    "Hold the stick upright, with its tip inside the ring on the underside of the plate.",
+    "Move the stick in small, quick circles so the plate starts to turn with it.",
+    "When it spins well, hold the stick still and straight. Circle again to speed it up."
+   ],
+   "note": "Use only a plastic plate made for spinning, never a kitchen plate. They cost little, and schools, youth clubs and circus groups often lend them.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 11,
+   "test": "Keep the plate spinning for one minute, passing the stick from one hand to the other twice.",
+   "note": "Speed the plate up before each pass. Hold the stick near the bottom and pass it upright, with no tilt. If the plate slows, give it a few small circles again.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 12,
+   "test": "Toss the spinning plate a short way up off the stick and catch it back on the stick, five times.",
+   "note": "Spin it fast first. Flick the stick up so the plate rises about a hand's height, then bring the tip back under the middle as it falls. Practise over grass or a bed, and keep it well away from faces.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Get a diabolo spinning on its string and keep it going for ten seconds.",
+   "how": [
+    "Lay the diabolo on the ground in front of you, with the string under its middle.",
+    "Lift the right stick so the diabolo rolls along the ground to your right, then lift it into the air.",
+    "Keep it spinning by pulling the right stick up quickly and letting it down slowly, while the left stick stays nearly still."
+   ],
+   "note": "Borrow one if you can; many schools, youth clubs and circus groups have them. If you are left-handed, swap the work over to the left stick. If it starts to tip, turn your body slowly one way, then the other, until you find which way straightens it.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Keep the diabolo spinning and level for a whole minute.",
+   "note": "Keep the sticks at about waist height and the string fairly tight. A few quick pulls with the right stick every second or two keep the speed up. If it tips, move one stick a little towards you or away from you until it is level again.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 15,
+   "test": "Toss the diabolo a short way into the air and catch it back on the string, five times.",
+   "note": "Spin it fast, then pull the sticks apart quickly so the tight string throws it up, only a little way at first and never above your head. Watch it, and bring the tight string under it, letting the sticks move down a little as it lands. Use a soft rubber diabolo, and keep other people well back.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 16,
+   "test": "Choose your three best tricks from any of the props and join them into a one-minute routine without stopping.",
+   "note": "For example: poi circles into the figure of eight, then put the poi down and pick up the hoop for the waist spin. Lay the props out in order before you start. Plan your ending: a still pose with your arms up shows people it is over.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 17,
+   "test": "During practice, drop a prop on purpose, pick it up calmly, and go straight on with the routine.",
+   "note": "Choose what you will do: a small shrug and a smile, or a bow to the prop. Practise it three times. Audiences like a performer who carries on; they only mind if the performer does.",
+   "ctx": "home",
+   "kind": "courage"
+  },
+  {
+   "n": 18,
+   "test": "Make your routine two minutes long and do it to a piece of music three times, starting and ending with the music.",
+   "note": "Choose music with a clear, steady beat, suitable for children to hear. Plan one trick for each part of the music, and play it from a phone or any music player.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 19,
+   "test": "Teach somebody to swing a sock poi until they can do twenty circles on their own.",
+   "note": "Make them a sock poi first, and show them in a clear space. Stand beside them rather than facing them, so they can copy your arm. It counts when they do twenty circles without your help.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 20,
+   "test": "Perform your two-minute routine to music for five or more people.",
+   "note": "A garden, a park or a big room works; check the space is clear and people stand well back. Ask the host first if it is not your own home. Finish with your still pose and a bow.",
+   "ctx": "with",
+   "kind": "courage"
+  }
+ ]
+}

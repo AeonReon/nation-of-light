@@ -1,0 +1,164 @@
+{
+ "id": "body.upside",
+ "name": "Upside down",
+ "line": "From rocking on your back to a forward roll, a cartwheel and a three-second handstand with no wall, one after the other.",
+ "size": "months",
+ "strand": "get-strong-outside",
+ "who": "Everybody; a grown-up close by for a child",
+ "about": "For everybody: a child and a grown-up can climb it side by side, with a grown-up close by for a child's first tries at each new rung. It starts with rocking on a rounded back and a forward roll on something soft, builds strong arms with your hands on the floor and your feet up a wall, then learns a cartwheel and a safe way to step down out of a handstand. It ends with a forward roll, a cartwheel and a kick up to a handstand with no wall, held for three seconds, one after the other. Do it on grass, a rug or a mattress on the floor with space all round, warm your wrists first, and stop if anything hurts; if you have a neck, back, wrist or shoulder problem, high blood pressure or eye trouble, ask a doctor before going upside down. There are no headstands here and nothing puts your weight on your neck: a child learns headstands only with a trained coach.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Sit on a rug, hug your knees, tuck your chin in, and rock back onto your shoulders and up onto your feet, ten times.",
+   "note": "This is the shape of every roll: a round back and a tucked chin, so you roll over your shoulders and never onto the top of your head. Rock back far enough that your hips lift, then forward until your feet are on the floor. On a hard floor, fold a blanket under you. If you already roll easily, do ten slowly with the chin tucked on purpose and count it.",
+   "ctx": "room",
+   "kind": "skill",
+   "mins": 2
+  },
+  {
+   "n": 2,
+   "test": "Do one forward roll on something soft and come up onto your feet.",
+   "how": [
+    "Crouch with your hands flat on the floor in front of you, shoulder-width apart.",
+    "Tuck your chin to your chest and look at your tummy.",
+    "Push gently with your feet and lift your hips, so you roll over the back of your shoulders.",
+    "Hug your knees as you come round and rock up onto your feet."
+   ],
+   "note": "Use a mattress on the floor, a folded duvet or flat grass. The top of your head should never touch the ground; if it does, tuck the chin harder. A grown-up stays beside a child for the first few and stops them if the chin comes untucked.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 3,
+   "test": "Do three forward rolls in a row, in a straight line, coming up onto your feet each time.",
+   "note": "Put your hands down straight in front of you each time and push evenly with both feet, or you will roll off to one side. Stand up between rolls if you feel dizzy, and stop for a minute if you still do.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 4,
+   "test": "Do a forward roll starting from standing, and stand up at the end without a hand touching the floor.",
+   "note": "Crouch down from standing, roll, and reach your arms forward as you come round so your weight moves over your feet. Standing up without a hand needs the knees hugged tight until your feet are under you.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 5,
+   "test": "Crouch with your hands flat on the floor and kick both feet up behind you ten times, landing softly.",
+   "note": "Arms straight, fingers spread, hands shoulder-width apart; your feet only need to leave the floor a little. This teaches your arms to hold your weight while your hips go up, which is the start of a handstand. Warm your wrists first by circling them and pressing them gently back against the floor.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Put your hands on the floor and your feet up on a sofa seat or a low step, arms straight and body straight, and hold for twenty seconds.",
+   "note": "It is like the top of a press-up with your feet raised. Hands under your shoulders, tummy tight, hips in line. No sofa or step: a low sturdy box or the edge of a bed frame.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "With your feet on the same sofa seat or step, walk your hands back towards it until your hips are over your shoulders, and hold for twenty seconds.",
+   "note": "Your body makes an upside-down L, with your weight over your hands. Push the floor away so your shoulders are up by your ears. This is most of a handstand's work with your feet safely on something.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 8,
+   "test": "Start in a press-up position with your feet against a wall, walk your feet up the wall to hip height, hold for ten seconds, and walk back down.",
+   "note": "Clear space around you and something soft on the floor. Walk your hands in a little as your feet go up, so your body makes an L. To come down, walk your feet down the wall; if your arms tire, bend your knees and bring them to the floor.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Walk your feet up the wall and your hands in until your chest is close to the wall, hold for ten seconds, and walk back down.",
+   "note": "Hands about a hand's width from the wall, arms straight, looking at the floor between your hands. Go only as high as you can walk back down under control. A grown-up stays beside a child for this one.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "Hold that chest-to-the-wall handstand for thirty seconds.",
+   "note": "Build from ten seconds, a few more each time, on different days. Squeeze your legs together and push up tall through your shoulders. Come down before your arms shake badly, not after.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 11,
+   "test": "Do a cartwheel of any shape along a line on grass or a clear floor, and land on your feet.",
+   "how": [
+    "Stand facing along the line, one foot in front, arms up.",
+    "Reach down and put the hand on the same side as your front foot on the line, then the other hand beyond it.",
+    "Let your legs go over, one after the other, and land one foot then the other.",
+    "Bent legs, a small shape, a wobble: all fine for now."
+   ],
+   "note": "A strip of grass is best; indoors, you need a clear space longer than you are tall and soft underneath. Kick lightly at first; the hands on the ground are the part to learn.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 12,
+   "test": "Do a cartwheel with your legs straight and apart, with both hands and both feet landing on the line.",
+   "note": "Straight legs go over higher, so you need a stronger kick from the back leg. Imagine your body moving like a wheel along the line, hand, hand, foot, foot.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Do a straight-legged cartwheel the other way, leading with your other hand.",
+   "note": "Almost everybody has a side they always choose. The other side feels like starting again for a few days, and then it comes quicker than the first side did.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Kick up to a small handstand shape with no wall, move one hand, turn, and step down to the side, five times.",
+   "note": "This is the safe way out of any handstand that tips over: move one hand, turn your hips, and your feet come down beside you, like half a cartwheel. Learn it with small kicks, low down, before you go any higher. This ladder never uses a roll to come out of a handstand, because that can put weight on the neck.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 15,
+   "test": "Kick up to a handstand with your back to a wall and hold for ten seconds.",
+   "note": "Hands a hand's width from the wall, one foot in front, kick the back leg up and let your heels rest lightly against the wall. Look at the floor between your hands. Come down one foot at a time the way you went up, or step down to the side as you learnt.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 16,
+   "test": "Hold a handstand with your back to the wall for thirty seconds.",
+   "note": "Take one heel, then both, a little off the wall for a moment as you get steadier. That small balance with the wall behind you is the next rung starting.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 17,
+   "test": "Kick up with no wall, balance for one second, and step down.",
+   "note": "On grass or a mat with space all round. Kick gently: too hard and you go over, too soft and you come straight back. If you go over, move a hand and step down to the side, as in rung fourteen. Count the one second out loud.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 18,
+   "test": "Teach somebody to rock on their back and do a forward roll on something soft, until they can do three in a row.",
+   "note": "A child, a friend or a brother or sister. Show them rungs one to three in order, remind them to tuck the chin, and stay beside them. If the person is a child, a grown-up does the teaching.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 19,
+   "test": "Hold a handstand with no wall for three seconds, and step down to your feet.",
+   "note": "Fingers pressing into the ground keep you from falling forwards; pushing through the heels of your hands stops you falling back. Many short tries, a few a day, work better than long sessions. Stop when your wrists or arms are tired.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 20,
+   "test": "Do a forward roll, a cartwheel and a kick up to a handstand held for three seconds, one after the other without stopping.",
+   "note": "Roll, stand up, turn to face along your line, cartwheel, then lunge and kick up. Give yourself enough room on grass for all three. This is every part of the ladder in one go.",
+   "ctx": "out",
+   "kind": "skill"
+  }
+ ]
+}

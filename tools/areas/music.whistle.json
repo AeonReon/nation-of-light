@@ -1,0 +1,96 @@
+{
+ "id": "music.whistle",
+ "name": "Whistling",
+ "line": "From a first faint whistle to teaching somebody who could not whistle to make a clear note.",
+ "size": "afternoon",
+ "strand": "say-what-you-mean",
+ "who": "From about six; a child and a grown-up side by side",
+ "about": "For everybody from about six: a child and a grown-up can climb it side by side. It starts with any whistled sound at all, then one clear note, then moving the note up and down with your tongue. After that come real tunes, checked against a piano app and a recording, whistling while breathing in, and a loud whistle with two fingers. It ends with you teaching somebody who cannot whistle to make their first clear note. Nothing to buy, and a tune whistled well is a small, cheerful thing you carry everywhere.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Round your lips and blow gently until you hear any whistled sound at all, even a faint one.",
+   "ctx": "room",
+   "kind": "skill",
+   "mins": 3,
+   "note": "Shape your lips as if saying \"oo\", leaving a small round hole, and rest the tip of your tongue just behind your bottom teeth. Wet your lips and blow softly, not hard. Moving your lips a little tighter or looser finds the sound; a mirror helps. Some people get it in a minute and some take a few days of trying for a few minutes; if you already whistle, whistle one note on purpose and count it."
+  },
+  {
+   "n": 2,
+   "test": "Whistle one clear note and hold it for three seconds without the sound of rushing air drowning it.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Blow more gently than feels natural; too much air turns the note into a hiss. Count three slowly in your head. If the note keeps cutting out, make the hole in your lips a little smaller."
+  },
+  {
+   "n": 3,
+   "test": "Whistle one note, then a higher one, by moving your tongue while your lips stay still.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Keep your lips the same and slide your tongue slowly forward and up inside your mouth, as if moving from \"oo\" towards \"ee\", and listen for the note to rise. Moving it back brings the note down. Go slowly; the change is small."
+  },
+  {
+   "n": 4,
+   "test": "Slide slowly from your lowest whistled note to your highest and back down, without the sound cutting out.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Like a siren, but slow. If the sound stops at the top or the bottom, that is the edge of your range for now; slide up to just below it. Do it three times."
+  },
+  {
+   "n": 5,
+   "test": "Whistle the first five notes of a scale going up and down, checked against a free piano app.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Search \"online piano\" for a free keyboard. Start on any white key and play it and the next four white keys to the right, one at a time. Play a note, whistle it until the two sound the same, then move to the next. When a note is slightly off you hear a wobble between the two sounds; slide until it stops."
+  },
+  {
+   "n": 6,
+   "test": "Whistle a short tune everybody knows, such as \"Happy Birthday\" or \"Twinkle, Twinkle, Little Star\", all the way through.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Hum it once first so the tune is in your head. Whistle slowly; getting every note matters more than speed. If one jump is hard, whistle just those two notes a few times, then go back to the start."
+  },
+  {
+   "n": 7,
+   "test": "Whistle that tune to somebody without saying what it is, and see whether they can name it.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "A family member, a friend, or somebody on a video call. If they cannot name it, ask which part sounded wrong and try once more. If they name it, the tune is clear enough for other people to hear."
+  },
+  {
+   "n": 8,
+   "test": "Whistle along with a recording of a song and stay in tune with it from start to end.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Choose a slow song with a clear tune: a folk song, a hymn, a song from a film. Keep the recording quiet enough to hear yourself. Where you drift off the note, stop, listen for a line, and join in again."
+  },
+  {
+   "n": 9,
+   "test": "Whistle three different tunes from memory, one after another, without stopping.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "The tune from rung six, the song from rung eight, and one more you know well. Choose them before you start so there is no gap to think. If you already whistle many tunes, choose three you have never whistled before."
+  },
+  {
+   "n": 10,
+   "test": "Whistle a note while breathing in, then whistle out and in again without a break in the sound.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Keep the same lip shape and draw air in gently through the small hole. The breathed-in note is usually quieter and a little different; that is normal. Being able to whistle both ways lets a tune carry on while you breathe."
+  },
+  {
+   "n": 11,
+   "test": "Whistle one loud note with two fingers in your mouth.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Wash your hands first. Put the tips of your thumb and first finger, or two first fingers, together under your tongue, fold the tongue back, close your lips tightly round the fingers and blow hard through the gap. Practise outside or where a loud noise does not matter, never close to somebody's ear. It often takes a week or more of short tries; there are many free videos showing it slowly."
+  },
+  {
+   "n": 12,
+   "test": "Teach somebody who cannot whistle yet until they make one clear note.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "A child, a friend, or a grown-up who never learned. Show them rung one: the \"oo\" lips, the tongue behind the bottom teeth, blowing gently. Most people blow too hard, so tell them to blow as if cooling a spoonful of soup. It may take a few short sessions over several days; stay cheerful, and the note is theirs when it comes."
+  }
+ ]
+}

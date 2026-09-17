@@ -1,0 +1,145 @@
+{
+ "id": "body.ride",
+ "name": "Riding a bike",
+ "line": "From a helmet that fits to a ten-kilometre ride on a route you planned.",
+ "size": "weeks",
+ "strand": "get-strong-outside",
+ "who": "Anybody learning; a grown-up with any child near roads",
+ "about": "For anybody learning to ride a bike, from a small child to a grown-up who never learnt; a grown-up is with any child, always, on or near roads. It starts off the bike, with a helmet that fits and a bike that is safe. Then the order many children learn in: walking the bike along while sitting on it, braking, gliding with feet up, steering, and only then pedalling. Then starting, stopping on a line, weaving, looking behind and signalling, a hill, and three kilometres on quiet paths. Road rules differ from country to country, so there is a rung for learning yours before the first quiet road, and it ends with a ten-kilometre ride on a route you planned. A bike takes you much further than walking for almost no cost.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Put on a bike helmet and adjust it until it sits level and firm, with the straps done up.",
+   "ctx": "kit",
+   "kind": "skill",
+   "how": [
+    "Level on the head, the front edge about two fingers' width above the eyebrows.",
+    "The side straps make a V shape just under each ear.",
+    "Buckle it so only one finger fits between the chin strap and the chin.",
+    "Shake your head: the helmet should move with it, not slide."
+   ],
+   "note": "No helmet? Borrow one from a friend or a family with older children, or ask whether a school or cycling club near you lends them. A helmet that has been in a crash or is cracked should not be used again. If you already ride, check yours on purpose today and count it.",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Check a bike: both tyres firm, both brakes stop the wheels, and the seat low enough to put both feet flat on the ground.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Squeeze each tyre hard with your thumb; it should hardly dent. Push the bike forward and squeeze each brake in turn: that wheel should stop. Lower the seat with its lever or a spanner so the rider sits with both feet flat. No bike? Borrow one, or look for a free bike library or repair group near you. A grown-up uses the tools for a child."
+  },
+  {
+   "n": 3,
+   "test": "On flat ground with no traffic, sit on the bike and walk it along with your feet for twenty metres.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "A playground, a quiet car park, a park path or a big yard. A balance bike, or a bike with its pedals taken off, stops the pedals knocking your legs; the left pedal unscrews the opposite way to the right one. With the pedals on, keep your feet out to the sides. If you can already ride, do rungs three to ten in one session on purpose and count them."
+  },
+  {
+   "n": 4,
+   "test": "Walk the bike along while sitting on it, and stop with the brakes, not your feet, three times.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Squeeze both brakes gently and evenly, never just the front one hard. First practise squeezing them while walking beside the bike, so your hands know where they are. Stop at a mark on the ground each time: a crack, a shoe, a line of chalk."
+  },
+  {
+   "n": 5,
+   "test": "Push off with your feet and glide with both feet lifted for three seconds.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Walk it along faster, then lift both feet a little and count 'one, two, three'. Look ahead, not down at the front wheel: the bike tends to go where you look. A very gentle slope of short grass makes gliding easier and falling softer."
+  },
+  {
+   "n": 6,
+   "test": "Glide for ten seconds, steering in a gentle curve round a marker.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Put a shoe or a bottle down as the marker. Turn by leaning a little and turning the handlebars a little; big turns of the handlebars at slow speed tip you over. Go round it one way, then the other way."
+  },
+  {
+   "n": 7,
+   "test": "With the pedals on, pedal for ten metres with nobody holding the bike.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Start with a glide or a gentle slope, put your feet on the pedals and push. A grown-up helping a child holds the child's shoulders or the back of their top, not the seat or handlebars, lets go early, and says so. Raise the seat a little once pedalling works, so the knee is only slightly bent at the bottom of each push."
+  },
+  {
+   "n": 8,
+   "test": "Start off from standing still on your own, three times.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Stand over the bike with one foot on the ground. Lift the other pedal to just past the top, pointing forward. Push down on it hard and bring the other foot onto its pedal as you move. Look ahead. On a slight downhill slope it is easier, so start there if you need to."
+  },
+  {
+   "n": 9,
+   "test": "Ride towards a line on the ground and stop with your front wheel on it, three times in a row.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Chalk, a stick or a crack in the path. Slow down early with both brakes, then squeeze a little more to stop on the line, and put one foot down. Stopping exactly where you mean to is what will keep you out of trouble at road junctions later."
+  },
+  {
+   "n": 10,
+   "test": "Ride in a zigzag round five markers without putting a foot down.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Shoes, bottles or stones about three big steps apart in a line. Ride slowly and look at the next gap, not the marker. When it is easy, move them a step closer together."
+  },
+  {
+   "n": 11,
+   "test": "Ride in a straight line while you look back over your shoulder for two seconds.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "This is the skill that matters most on a road later: seeing what is behind you before you move out. Practise where there is no traffic. Turn your head, not the handlebars, and keep your arms loose. Ask somebody to stand behind you and hold up a number of fingers for you to call out."
+  },
+  {
+   "n": 12,
+   "test": "Ride in a straight line with one arm held straight out to the side for three seconds, on each side.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "This is the hand signal for turning. Take the hand off only once you are riding steadily, and keep the other hand near the brake. Look ahead, not at your arm. Some countries also use other signals, which you will learn on rung fifteen."
+  },
+  {
+   "n": 13,
+   "test": "Ride up a hill without getting off.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Choose a short, gentle slope first. If the bike has gears, change to an easier gear before the hill starts, not halfway up. Keep pedalling steadily, and stand up on the pedals for the steepest part if you need to.",
+   "place": "hill"
+  },
+  {
+   "n": 14,
+   "test": "Ride three kilometres on quiet, traffic-free paths without stopping.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Park paths, a traffic-free cycle path, a path along a river or an old railway line; check that bikes are allowed. Slow right down past people walking, and ring a bell or say hello early so nobody is startled. Take water. A grown-up rides with any child."
+  },
+  {
+   "n": 15,
+   "test": "Learn the cycling road rules where you live, and say them out loud to somebody: which side to ride on, the signals, lights, and where children may ride.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "They differ between countries: which side traffic keeps to, whether children may ride on the pavement, whether a helmet is required by law, and what lights a bike must have after dark. Your national road safety or transport authority publishes them free online. Many schools and councils run free cycling lessons for children and adults; take one if you can."
+  },
+  {
+   "n": 16,
+   "test": "Ride a short loop on a quiet road with an experienced rider, looking back and signalling before every turn.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Choose a time with little traffic, such as early on a weekend morning. Ride about a car door's width away from parked cars. With a child, a grown-up rides close behind on the traffic side, or as the local rules allow, and calls out the plan: 'left at the next corner: look back, signal'. Wear something bright in the day and use lights at dusk."
+  },
+  {
+   "n": 17,
+   "test": "Ride to a real place, such as a shop, a park or a friend's home, and back, on quiet roads and paths.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Plan the way before you go, choosing quiet streets and paths over main roads even if it is longer. Take a lock and lock the bike to something fixed. A grown-up rides with any child the whole way. If you already ride to places, choose one you have never cycled to and count it."
+  },
+  {
+   "n": 18,
+   "test": "Plan a ride of about ten kilometres on a map, with a stop halfway, and ride it.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Use a map app's cycling directions or a paper map to choose quiet roads and paths. Pack water, a snack, a warm layer and a charged phone, and tell somebody at home the route. Stop halfway to rest and eat. A child rides with a grown-up. This is the end of the ladder: the bike is now a way to get somewhere, not only something to practise on."
+  }
+ ]
+}

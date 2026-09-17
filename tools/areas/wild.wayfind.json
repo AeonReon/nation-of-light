@@ -1,0 +1,168 @@
+{
+ "id": "wild.wayfind",
+ "name": "Finding your way",
+ "line": "From pointing to where the sun rises to leading a group on a half-day route you planned and navigated.",
+ "size": "months",
+ "strand": "get-strong-outside",
+ "who": "Grown-ups and teenagers; children from ten with a grown-up",
+ "about": "For grown-ups and teenagers, and for children from about ten with a grown-up beside them. It starts with no tools at all: where the sun rises and sets, landmarks, and the turns on a route you already walk. Then direction from the sun at midday, from a stick's shadow and from a watch, written for both halves of the world. Then a compass: north, a bearing to something you can see, your own step count, a triangle walked by numbers, and a bearing taken from the map to a place you cannot see. After that come the ways walkers really avoid getting lost: following a wall or stream, aiming to one side on purpose, knowing where you are at any moment, and walking slowly in poor light. It ends with a written route plan left at home and a half-day walk you lead for other people. The Maps ladder teaches reading a map; this one teaches getting across the ground with one, or without one.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Stand at your front door and point to where the sun rises and where it sets, then check with a compass app.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "The sun rises roughly in the east and sets roughly in the west. It is close to due east and due west only around 21 March and 23 September. Around June it rises north of east and sets north of west; around December it rises south of east and sets south of west; that is true in both halves of the world. Most phones have a free compass app. Not sure where it rose today? Point, and check tomorrow morning.",
+   "mins": 3
+  },
+  {
+   "n": 2,
+   "test": "Before walking home from about a kilometre away, name three landmarks you will pass in order, then walk home by them without a map.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "Landmarks are things that do not move and are easy to see from a distance: a church tower, a tall tree, a bridge, a bright sign, a hill. Say them out loud first: 'the petrol station, then the school, then the big tree'. A child can lead while a grown-up walks behind and says nothing unless it goes wrong. If you walk this way every day, choose a way you use less."
+  },
+  {
+   "n": 3,
+   "test": "Write down every turn from home to a place you go often, with a landmark at each, then walk it and tick them off.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "Left or right, and what is there: 'right at the post box, left after the bakery'. Most people find they have missed a turn or two in the list, and that is the useful part: you start to notice. If you usually go by car or bus, write the route and walk the last part."
+  },
+  {
+   "n": 4,
+   "test": "Near the middle of the day, turn to face the sun's direction with your eyes on the ground, say which way you are facing, and check.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "North of the tropics (for example Europe, North America, Japan), the sun is in the south at midday. South of the tropics (for example South Africa, Argentina, most of Australia, New Zealand), it is in the north. Between the tropics it can be nearly overhead at midday, so use the next rung instead. Where clocks go forward for summer, the sun is highest nearer one o'clock. Never look straight at the sun."
+  },
+  {
+   "n": 5,
+   "test": "Push a stick into the ground, mark the tip of its shadow, wait fifteen minutes, mark it again, and say which way is north.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "The first mark is west and the second is east, because the shadow moves the opposite way to the sun. Stand with the first mark by your left foot and the second by your right: you are facing north. This works in both halves of the world on any sunny day. A pencil in a flowerpot of soil on a balcony works too. Check with a compass app."
+  },
+  {
+   "n": 6,
+   "test": "Find south or north with the sun and a watch that has hands, then check with a compass app.",
+   "ctx": "out",
+   "kind": "skill",
+   "how": [
+    "North of the tropics: hold the watch flat and turn it until the hour hand points at the sun; halfway between the hour hand and the 12 is south.",
+    "South of the tropics: point the 12 at the sun; halfway between the 12 and the hour hand is north.",
+    "Where clocks are forward for summer, use the 1 instead of the 12."
+   ],
+   "note": "No watch with hands? Draw a clock face on paper with the hour hand at the right time. This way is rough: it can be well off depending on the season and the time of day, and it is poor near midday in summer and between the tropics. That is why you check it."
+  },
+  {
+   "n": 7,
+   "test": "Hold a compass flat, away from metal and phones, and point to north, east, south and west from where you stand.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "A see-through baseplate compass, the kind walkers use, is best for the rest of this ladder; borrow one, or use a phone compass app until you have one. The red end of the needle points to magnetic north. Keys, a railing, a car or a phone in the same hand can pull the needle, so step away from them. The four points go round clockwise: north, east, south, west."
+  },
+  {
+   "n": 8,
+   "test": "Take a bearing to a landmark you can see, walk to it, then turn round and walk back on the opposite bearing.",
+   "ctx": "out",
+   "kind": "skill",
+   "how": [
+    "Point the arrow on the compass base at the landmark.",
+    "Turn the dial until its north arrow sits under the red end of the needle, and read the number.",
+    "At the landmark, add 180 to the number (or take 180 away if it is over 180): that is the way back."
+   ],
+   "note": "A bearing is a direction as a number of degrees, from 0 at north round to 360. Pick something a few hundred metres away across a park or a field with a path: a tree, a gate, a lamp post. Most phone compass apps also show the degrees you are facing."
+  },
+  {
+   "n": 9,
+   "test": "Count your double steps over a hundred metres, three times, and work out your own number.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Count one each time your left foot lands. Measure the hundred metres on a sports track, or between two points on a path using a map app's measuring tool. Many adults take somewhere around sixty to seventy double steps; children take more. Your number changes uphill, in mud and in long grass, so try one of those too and write both down."
+  },
+  {
+   "n": 10,
+   "test": "Walk a triangle of three bearings, 0, 120 and 240 degrees, for fifty double steps each, and see how close to your start you finish.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Mark the start with a coat or a stick on open ground such as a playing field. Walk 0 degrees for fifty, turn to 120 for fifty, then 240 for fifty. Finishing within a few metres of the coat means your compass work and your counting are good. Take turns: one walks, one watches."
+  },
+  {
+   "n": 11,
+   "test": "Lay the compass on the paper map, turn them together until the needle points to the top of the map, and name three things you can see.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "This turns the map to match the ground where there is no street to line it up with, such as in fields and woods. The Maps ladder turns the map by the streets; this is the way that works anywhere. The map's north and magnetic north differ by a few degrees in some places and by more than ten in others. The edge of a walking map usually says by how much; for this rung it does not matter."
+  },
+  {
+   "n": 12,
+   "test": "Take a bearing from the map to a place you cannot see from where you stand, walk it counting your steps, and arrive within twenty metres.",
+   "ctx": "out",
+   "kind": "skill",
+   "how": [
+    "Lay the edge of the compass on the map from where you are to where you are going.",
+    "Turn the dial until its lines run up and down the map, with its north arrow to the top of the map.",
+    "If the map gives a magnetic difference for your area, add or take it away as the map says.",
+    "Hold the compass flat, turn until the red needle sits over the dial's north arrow, and walk the way the base arrow points."
+   ],
+   "note": "Choose a target in a park or open woods with paths: a bridge beyond a rise, a gate behind a group of trees. On the way, pick something on your line a short distance ahead, walk to it, and take the bearing again. A grown-up is with any child."
+  },
+  {
+   "n": 13,
+   "test": "Walk a route that follows a wall, a stream or a path to your target, with something beyond it that tells you if you have gone too far.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Walkers call the thing you follow a handrail, and the thing beyond a catching feature: a road, a river, the edge of a wood. Plan it first: 'follow the stream to the footbridge; if we reach the road, we have gone past it'. Most good navigation is this, not bearings, because it is the easiest way not to get lost."
+  },
+  {
+   "n": 14,
+   "test": "To reach a gate or a bridge on a long wall or river, aim clearly to one side of it on purpose, so you know which way to turn when you arrive.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Aim straight at a gate in a long wall and miss it, and you cannot tell whether it is to the left or the right. Aim to the left of it, and when you reach the wall, turn right. Walkers call this aiming off. Try it where the target is a few hundred metres away across open ground."
+  },
+  {
+   "n": 15,
+   "test": "Partway round a walk, stop, point to where you are on the map, and give three reasons you are sure.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "The reasons: the last place you were certain of and how long you have walked since; what you can see (a stream on your left, a mast on the hill); and whether the ground under you rises or falls the way the contour lines say. If you cannot give three, walk back to the last place you were sure of. Turning back early is what careful walkers do."
+  },
+  {
+   "n": 16,
+   "test": "Walk a short route you know well at dusk or in mist, using the map and compass slowly, with somebody beside you.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Choose paths near home or in a park, never near cliffs, fast rivers or on open hills. Take a torch, warm layers and a turn-back time. Go slower than seems necessary and check the map at every junction. A grown-up is always with any child. No mist this season? Dusk counts."
+  },
+  {
+   "n": 17,
+   "test": "Write a route plan for a half-day walk: each part's bearing, distance and time, a turn-back time, and a shorter way home.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "One line per part on paper: 'gate to bridge, 110 degrees, 800 metres, 12 minutes'. Add about ten minutes for each hundred metres of climbing. Choose eight to twelve kilometres on paths you have not walked, with a shorter way back from about halfway. Check the forecast before you choose the day; the Weather and tide ladder covers that."
+  },
+  {
+   "n": 18,
+   "test": "Leave the route plan with somebody at home, walk it with a partner while you navigate every part, and tell them when you are back.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Tell the person at home the time you expect to be back and what to do if you are two hours late and not answering: ring your emergency number and read them the plan. Keep to your turn-back time. Write the real time for each part next to the plan; the difference shows you your own speed on real ground."
+  },
+  {
+   "n": 19,
+   "test": "Teach somebody to take a bearing and walk it, until they reach a target on their own.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "A friend, a partner, a teenager. Show them rung eight on something they can see, then let them do it with you saying nothing. Then the triangle from rung ten. Being able to explain it is the best test of whether you really know it."
+  },
+  {
+   "n": 20,
+   "test": "Lead a group on a half-day route you planned, navigating every part, and bring everybody back by the time you set.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Family or friends. Use everything: the route plan left at home, the forecast, handrails and catching features, the turn-back time, and stops to check that everybody is warm, fed and not too tired. Tell the group where you are at each stop. This is the end of the ladder: other people can trust you to get them there and back."
+  }
+ ]
+}

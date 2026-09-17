@@ -1,0 +1,153 @@
+{
+ "id": "wild.forage",
+ "name": "Wild food",
+ "line": "From writing down the safety rules to taking somebody else picking, with every plant checked by a person who is certain.",
+ "size": "months",
+ "strand": "get-strong-outside",
+ "who": "Everybody; a child only with a grown-up who is certain",
+ "about": "For everybody: a child and a grown-up can climb it side by side, and a child never eats anything wild without a grown-up who is certain what it is. The first rule comes before any picking: you never eat a plant unless a person who is certain, not fairly sure, has checked it. The climb stays with a very short list of plants that are easy to know: dandelion leaves, nettles and blackberries. On the way you learn the laws on picking, the dangerous plants where you live, clean places to pick, and the plants that look alike. There are no mushrooms on this ladder except looking at them with an expert in person. It ends with a meal from three things you picked and taking somebody else picking, with the same care. Seasons differ, so do each plant's rungs when it is ready where you live.",
+ "place": "countryside",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Write the four rules of wild food on a card and keep it in your coat or bag.",
+   "note": "One: never eat anything unless a person who is certain has checked it, and certain means certain, not fairly sure. Two: no mushrooms. Three: never pick beside roads, where dogs go, or on ground that may be sprayed. Four: pick only where it is allowed, and only a little. A child can write the card with a grown-up.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 10
+  },
+  {
+   "n": 2,
+   "test": "Find out the rules on picking wild plants where you live, and write down one thing you may do and one you may not.",
+   "note": "They differ by country. In many places you may pick a little fruit or a few leaves for yourself from public paths, but not in nature reserves, not on private land without permission, and never by pulling a plant up by its roots. Search for the rules from your country's nature or countryside body, or ask your local council.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Learn to recognise three plants that are dangerous where you live, from pictures in a trusted guide.",
+   "note": "Use a guide from your country's botanic garden, a wildlife charity or a poisons information service. In much of Europe, for example, the list includes hemlock, foxglove and giant hogweed, whose sap can burn skin in sunlight; elsewhere the plants are different. Learn what they look like and where they grow, and never touch them.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "On a walk, find one place that is clean enough to pick from and one that is not, and say why.",
+   "note": "Not clean: right beside a road, low down where dogs go, at the edge of farm fields, or park and roadside verges that may be sprayed with weedkiller (ask if you do not know). Clean: away from traffic, higher than a dog's height, on land you know is not sprayed.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "With a person who is certain, find a dandelion plant and say three things that tell it apart.",
+   "note": "Dandelion leaves grow in a flat circle from the ground and have deep, toothed edges; each flower sits alone on a smooth, hollow stem with no leaves on it; the stem has a milky sap when snapped. Several other yellow flowers look a little similar, so the person with you shows you the differences on real plants. The person who is certain might be a grown-up who has picked for years or a local wild food group.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Pick a small handful of young dandelion leaves from a clean spot, have them checked, wash them, and taste a few.",
+   "note": "Young leaves from the middle of the plant are the least bitter. Wash them well. Eat only a small amount the first time you try any new food, as anybody can react to something new. They can go in a salad or a sandwich.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 7,
+   "test": "With a person who is certain, find a patch of stinging nettles and learn how to tell them from plants that look like them.",
+   "note": "Stinging nettles have pointed, heart-shaped leaves with toothed edges, in pairs up the square stem, and fine stinging hairs. Some plants that look similar do not sting; the person with you shows you the difference. Wear long sleeves and gloves.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Wearing gloves, pick a bag of the top few leaves of young nettles from a clean spot, and have them checked.",
+   "note": "Take just the top four to six leaves of each stem, from plants that have not yet flowered. Young nettles are best in spring in many places; if it is not the season where you are, come back to this rung when it is. Gloves on all the way into the kitchen.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Cook the nettles into a soup or wilt them like spinach, and eat some.",
+   "note": "Cooking takes the sting away completely. A simple soup: soften an onion and a potato in a pan, add stock and the washed nettle leaves, simmer for five minutes, and blend or mash. Handle them with gloves or tongs until they are cooked.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "Learn one pair of plants in your area where a safe plant has a dangerous look-alike, and write down what tells them apart.",
+   "note": "For example, in much of Europe wild garlic grows near lily of the valley and lords-and-ladies, which are poisonous and have similar leaves; people have been badly poisoned by mixing them up. Find the pair that matters where you live in a trusted guide, and write the differences down. This is why rule one never changes.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "On a walk, find one plant that looks a little like something you have eaten, and leave it, saying out loud why you are not certain.",
+   "note": "\"The leaves look right but the stem is different, so no.\" Leaving a plant is the most important skill on this ladder, and the one that keeps experienced people safe. A child says it to the grown-up with them.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "With a person who is certain, find a blackberry bush and say how you know it is one.",
+   "note": "Arching, prickly stems; leaves in groups of three or five with toothed edges; white or pink flowers in early summer; berries that go from green to red to shiny black. Blackberries ripen in late summer: around August and September in the northern half of the world, and around February and March in the southern half. Where they do not grow, the person who is certain can show you a common, easy wild fruit that does.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 13,
+   "test": "Pick a small bowl of ripe blackberries from a clean spot, taking a few from each bush and leaving plenty.",
+   "note": "Pick only the black, soft ones that come away easily. Take from above a dog's height, leave most of the fruit for birds, animals and other people, and do not trample the plants. Have the first bowl checked.",
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 14,
+   "test": "Wash your blackberries and make something with them.",
+   "note": "Eaten with yoghurt, stirred into porridge, or baked in a crumble with some apple. Soak them in a bowl of cold water for a few minutes first, then drain, to let any tiny insects float out.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 15,
+   "test": "Go on a walk with an expert in person to look at wild mushrooms, and learn why they stay off this ladder.",
+   "note": "Many wildlife groups, nature reserves and natural history societies run fungi walks, often free. Look, photograph and listen; do not pick to eat. Some deadly mushrooms look very like ones people eat, and even experts check each one carefully. If there is no walk near you, read about why from a trusted guide and count it.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 16,
+   "test": "For three months, keep a picking diary: each plant you learn, where it grows, and when it is ready.",
+   "note": "One line per visit: \"Nettles by the old wall, young tops good, early spring.\" Next year, the diary tells you exactly where and when to go. A child can draw the plants beside each line.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 17,
+   "test": "Keep some of what you picked for later, using a method from the Keeping food ladder.",
+   "note": "Blackberries freeze well spread out on a tray and then tipped into a labelled bag. Cooked nettles can be frozen in portions. Blackberry jam from a trusted recipe works too.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 18,
+   "test": "Make one meal with three things you picked yourself, each one checked.",
+   "note": "For example: nettle soup, a salad with a few dandelion leaves, and blackberries with yoghurt or in a crumble. Frozen blackberries from earlier count. Tell the people eating what each wild thing is.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 19,
+   "test": "Give some of what you picked or made to somebody, labelled with what it is, where it came from and the date.",
+   "note": "A bag of frozen blackberries, a jar of jam, or a pot of nettle soup. Only give plants that a person who is certain has checked, and say what they are so the other person can decide.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 20,
+   "test": "Take somebody picking for their first time: teach them the four rules and one plant, with a person who is certain checking everything.",
+   "note": "Start with the card from rung one. Show them one easy plant, a clean place and how much to leave. If you are now the person who is certain about that plant, you can be the one checking; if not, bring somebody who is. That is the far end of this ladder.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

@@ -1,0 +1,152 @@
+{
+ "id": "wild.living",
+ "name": "Trees and birds",
+ "line": "From five fallen leaves to a walk where you show somebody ten trees and birds by name.",
+ "size": "months",
+ "strand": "get-strong-outside",
+ "who": "Everybody; a child and a grown-up side by side",
+ "about": "For everybody: a child and a grown-up can climb it side by side, and a street with trees and a window are enough for most of it. It starts with fallen leaves and one tree near home that becomes your tree, visited through the whole climb. Then ten trees by name and trees with no leaves, then birds: counting them, the commonest where you live, describing one you cannot name, ten on sight, songs by ear, water put out for them, and nests watched from a distance. Free apps such as Seek, Pl@ntNet and Merlin Bird ID, and a guide from the library, help with the naming; you do the remembering. Look and photograph, and never pick or dig up plants: many are protected by law. It ends with a walk where you show somebody else what lives on their own street.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Pick up five different leaves from the ground, lay them out side by side, and say one way each is different from the others.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "Only leaves that have already fallen; never pull them off a plant. A park, a street with trees or a garden. Look at the shape, the edge (smooth, toothed or wavy), and whether it is one leaf or several small leaflets on one stalk. In a season with no fallen leaves, photograph five leaves still on the trees instead. Leave alone any plant with berries, prickles or stinging hairs that you cannot name, and wash your hands afterwards.",
+   "mins": 15
+  },
+  {
+   "n": 2,
+   "test": "Photograph one tree's leaf, bark and whole shape, name it with a free app, and check the name in a second source.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Free apps such as Seek or Pl@ntNet suggest a name from a photo. They are often right and sometimes badly wrong, so check with a tree guide from your library or a free tree website for your country: do the leaf, the bark and the shape all match? If you have done the 'five trees on your street' extra, choose a tree it did not name."
+  },
+  {
+   "n": 3,
+   "test": "Choose one tree near home as your tree, and make its first page: its name, where it stands, a sketch or photo, and the date.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "A tree you pass often: on the street, in a park, a school yard or a garden. Write how tall it is compared with a house or a lamp post, how the bark feels, and what is on it now: leaves, flowers, buds, fruit or nothing. You will visit it once a week for the rest of the ladder. A child can add a bark rubbing: paper held against the trunk and the side of a crayon rubbed over it."
+  },
+  {
+   "n": 4,
+   "test": "Name five trees near home from their leaves and bark, with no app, a week after you first looked them up.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Look them up first, then leave it a week and walk past them saying the names. Find one thing that marks each one out: a leaf shape, peeling or deeply ridged bark, the smell of a crushed fallen leaf. Choose what is common where you live, since those are the trees you will see most. If you already know five trees, name ten and count it."
+  },
+  {
+   "n": 5,
+   "test": "Measure round your tree's trunk at the height of your chest, and write down a rough guess at its age.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "Wrap a piece of string round the trunk, then measure the string against a tape measure or a ruler. Some tree groups use a very rough guide of about two and a half centimetres round the trunk for each year, for a tree growing in the open. Trees in a wood, and slow-growing kinds, can be far older than that says, so write it down as a guess, not an answer."
+  },
+  {
+   "n": 6,
+   "test": "Name ten trees near home without any help.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "The five from rung four and five more. Walk the same route each week and learn one new tree on it each time. Write the ten down with where each one stands, so the walk itself becomes the test."
+  },
+  {
+   "n": 7,
+   "test": "Name three trees that have no leaves on, from the bark, the buds and the shape alone.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Where winters are cold, many trees drop their leaves; do this rung then, and if it is the wrong season now, go on and come back to it. Where trees keep their leaves all year, name three from the bark and the outline against the sky, without looking at the leaves. Buds help: their colour, their size, and whether they grow in pairs or one at a time along the twig."
+  },
+  {
+   "n": 8,
+   "test": "Sit still outside or at a window for ten minutes, and count how many birds you see and how many different kinds.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Count the most of each kind you see at one moment, not every visit, or one busy bird gets counted ten times. A kind you cannot name still counts: write 'small, brown, pale front'. Many countries run a yearly garden bird count done exactly this way, and you can send your numbers in. A child can keep the tally with marks on paper."
+  },
+  {
+   "n": 9,
+   "test": "Learn the five commonest birds where you live from pictures, then find and name each of them outdoors.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "The free Merlin Bird ID app shows the birds most likely where you are at this time of year, and a library bird guide has a map for each bird. Learn five from the pictures first, then go and find them. If you have done the 'five birds on your street' extra, learn five more than those."
+  },
+  {
+   "n": 10,
+   "test": "Watch one bird you cannot name, write down four things about it, and then find it in a guide or the app.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "The four things: its size compared with a bird you know (smaller than a pigeon, bigger than a sparrow), its main colours and any marks, the shape of its beak, and how it moves (hops, walks, climbs a trunk, flies in dips). Those four are usually enough for a guide or for the questions the app asks."
+  },
+  {
+   "n": 11,
+   "test": "Name ten birds on sight, outdoors.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "The five from rung nine and five more. Water birds, gulls, crows and pigeons all count: most people never learn to tell the different kinds apart. Write the list down with the place you saw each one."
+  },
+  {
+   "n": 12,
+   "test": "Name three birds by their song or call, first with an app and then with your eyes shut.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Merlin Bird ID's sound feature listens and shows a name while a bird sings. Pick three you hear every day and play each one's song a few times. Then stand outside, shut your eyes, and name them as they call. Many people remember a song as a few words that match its rhythm; make up your own."
+  },
+  {
+   "n": 13,
+   "test": "Get up at first light once, and name three birds singing, by ear.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "Where there is a spring, birds sing most at dawn in spring and early summer, starting before sunrise; in many warm countries first light is the busiest time all year. An open window counts, with a blanket round you. Ten minutes is enough. A child does it with a grown-up."
+  },
+  {
+   "n": 14,
+   "test": "Put out a shallow dish of water for birds, keep it clean for two weeks, and write down every kind that comes to it.",
+   "ctx": "long",
+   "kind": "kindness",
+   "note": "An old plate or a plant saucer, a few centimetres deep, with a stone in the middle to stand on, placed where a cat cannot hide close by. Empty and refill it every day or two and scrub it once a week, so it does not spread disease between birds. A balcony or a window ledge works. If you want to put out food too, check first which foods are safe for birds where you live."
+  },
+  {
+   "n": 15,
+   "test": "Name five birds by ear on a walk, with no app.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "The three from rung twelve and two more. As each one calls, say its name, and check with the app afterwards if you were unsure. Wind and traffic make it much harder, so choose a quiet morning."
+  },
+  {
+   "n": 16,
+   "test": "In the nesting season, watch from a distance for a bird carrying twigs or food, and see where it goes, without going near.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "Stay far enough back that the bird carries on as normal. If it stops, calls in alarm, or waits with food in its beak, you are too close: move away. Never touch or look into a nest and never take eggs; in many countries disturbing a nest is against the law. Where there is a winter, nesting is in spring, roughly March to July north of the equator and August to December south of it; in warm countries it often follows the rains."
+  },
+  {
+   "n": 17,
+   "test": "For one month, keep a list of every tree and bird you name, with the date and place you first saw each one.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "A page at the back of a notebook or a note on a phone. Add a line only when a name is new to the list. The first days fill quickly; later, a new name is a small event. A family can keep one shared list on the fridge. If you already keep a list like this, count the month."
+  },
+  {
+   "n": 18,
+   "test": "Visit your tree once a week for four weeks, and each time write down one thing that has changed.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Buds opening, leaves changing colour, flowers, fruit, seeds falling, a bird using it, a new crack or a fungus at the base. One line and the date, and a photo from the same spot if you have a phone. If you have been visiting it every week since rung three, count four of those weeks."
+  },
+  {
+   "n": 19,
+   "test": "Read back every page about your tree from the first one, and write a few sentences on how it changed while you watched it.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "By now it may be twelve weeks or more of notes. Lay the photos side by side if you have them. Write what happened first, what came next, and what you expect in the months ahead. Nobody else has a record of that tree."
+  },
+  {
+   "n": 20,
+   "test": "Take somebody on a half-hour walk, name ten trees and birds for them, and let them find and name one of each themselves.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "A child, a friend, a grandparent. Walk your usual route, stop at your tree first, and tell them one thing about each name, such as how to tell it apart. Then let them spot and name a tree and a bird you showed them. This is the end of the ladder: what lives on the street is now something you can show somebody else."
+  }
+ ]
+}

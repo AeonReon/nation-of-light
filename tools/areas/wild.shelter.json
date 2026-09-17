@@ -1,0 +1,130 @@
+{
+ "id": "wild.shelter",
+ "name": "Shelter",
+ "line": "From a den of chairs and a blanket to a night in a shelter you built, taken down in the morning.",
+ "size": "weeks",
+ "strand": "look-after-the-place",
+ "who": "Everybody; a child and a grown-up side by side",
+ "about": "For everybody: a child and a grown-up can climb it side by side, and a child always has a grown-up with them in the woods and for the night. It starts indoors with chairs and a blanket, then moves to a sheet or tarp between two trees, two useful knots, choosing a safe spot, and a frame of fallen branches covered in leaves. Then keeping out rain and wind, a warm layer under you, a shelter for two and an hour sitting in it in poor weather. It ends with a night in a shelter you built, taken down in the morning. Every shelter is built only from fallen wood, never from living trees, only where the owner allows it, and taken down afterwards.",
+ "place": "woodland",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Build a den indoors from chairs and a sheet or blanket, big enough to sit inside.",
+   "note": "Two chairs back to back with a gap between them, a blanket over the top, and books on the edges to hold it down. This is the same idea as every shelter after it: a frame, and a cover over it. If you have built plenty of these, build one on purpose today and count it.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 20
+  },
+  {
+   "n": 2,
+   "test": "Tie a two-half-hitches knot and a taut-line hitch, each three times, round a chair leg.",
+   "note": "Two half hitches hold a line to a tree or post. A taut-line hitch makes a loop you can slide to tighten a line without untying it. Any string or cord works. Look up a picture or a short video of each knot and copy it slowly.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 3,
+   "test": "Tie a line between two trees or posts and hang a sheet over it to make a tent shape, with the edges held down.",
+   "note": "In a garden, a park where it is allowed, or between two fence posts. Tie one end with two half hitches and the other with a taut-line hitch so you can tighten it. Hold the edges down with stones or sticks pushed through the corners. An old sheet, shower curtain or plastic sheet all work.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 4,
+   "test": "Find out where you may build a den outdoors, and ask if you need to.",
+   "note": "Many woods welcome den building; some nature reserves and private land do not. Look for signs, check the rules for the place online, or ask the landowner or the people who look after the wood. A child goes to the woods with a grown-up.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "In a wood where it is allowed, choose a safe spot for a shelter and say out loud why it is safe.",
+   "note": "Look up first: no dead branches hanging above you and no dead trees leaning nearby. Look down: not in a dip where rain collects, not beside fast water, not on an ants' nest. Flat, a little higher than the ground around, and near a strong tree is a good spot.",
+   "how": [
+    "Look up for dead branches.",
+    "Look down for dips, water and nests.",
+    "Say why this spot is safe."
+   ],
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Collect fallen branches for a frame, taking only wood already on the ground.",
+   "note": "Never cut, snap or pull branches off a living tree, and leave rotten logs where they are, as they are home to insects and fungi. You need one long, strong branch for the top and plenty of shorter ones to lean against it.",
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 7,
+   "test": "Build a lean-to frame that stands up on its own: a long branch against a tree or wedged in a low fork, with sticks leaned along one side.",
+   "note": "Push the leaning sticks close together, about a hand's width apart, all at the same slope. Give it a gentle shake: if it wobbles, move the base of the long branch or wedge it better. A child and a grown-up can do this together, the grown-up lifting the heavy branch.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 8,
+   "test": "Cover the frame with leaves, bracken or ferns until you can barely see daylight through it from inside.",
+   "note": "Start at the bottom and work upwards, so each layer overlaps the one below, like roof tiles. Use dead leaves from the ground rather than pulling green plants. Sit inside and look for bright gaps, then fill them.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Test how dry your shelter is: sit inside for ten minutes of rain, or while somebody pours a watering can over the roof.",
+   "note": "In a dry place or a dry season, the watering can is the test. Afterwards, feel your clothes and look at where water came in. Add more cover there, and make the roof steeper if water pooled on it.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "Work out which way the wind is blowing, and build or turn your shelter so the open side faces away from it.",
+   "note": "Watch leaves and grass move, drop a little dry grass, or wet a finger and hold it up: the cold side is where the wind comes from. Say out loud how you worked it out.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Take a shelter down and spread the branches and leaves back out so the place looks as it did.",
+   "note": "Lay the sticks back on the ground in different places, and scatter the leaves. If you used string, collect every piece. Leave nothing behind: not a knot, not a wrapper. This rung comes with every shelter from now on.",
+   "ctx": "out",
+   "kind": "kindness"
+  },
+  {
+   "n": 12,
+   "test": "Put up a tarp or sheet three ways: a tent shape, a sloping lean-to, and one corner high like a sail.",
+   "note": "A tarp with holes at the corners is easiest; an old sheet or plastic sheet works with the corners tied round small stones. Pull each shape tight so rain would run off rather than sit in a puddle.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Lay a thick bed of dry leaves or a sleeping mat in your shelter, then sit on it for twenty minutes and compare with sitting on bare ground.",
+   "note": "Cold ground draws warmth out of you faster than cool air does. A pile of dry leaves pressed down to the thickness of your hand, or a foam camping mat, keeps you much warmer. Notice the difference after twenty minutes.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Build a shelter two people can lie down in, side by side.",
+   "note": "The frame needs to be longer than the tallest person and wide enough at the base. Lie in it before you cover it, to check the size. Make the cover as thick as before.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 15,
+   "test": "Sit in your own shelter for an hour on a cool, wet or windy day, dressed for the weather.",
+   "note": "Dress as in the Weather and tide ladder, and bring a warm drink. A child does this with a grown-up in or beside the shelter. If you get cold and cannot warm up, stop and go home; that is the right choice.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 16,
+   "test": "Sleep a whole night in a shelter you built, in a garden or a place where it is allowed, and take it down in the morning.",
+   "note": "A garden is a good first place: a lean-to of tarp or branches, a mat and sleeping bag, warm clothes, a torch, and a way back indoors if you get too cold. A child always has a grown-up with them for the night. In the morning, take it down and leave no trace. That is the far end of this ladder.",
+   "ctx": "out",
+   "kind": "courage"
+  }
+ ]
+}

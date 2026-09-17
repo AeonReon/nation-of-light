@@ -1,0 +1,124 @@
+{
+ "id": "words.callig",
+ "name": "Beautiful writing",
+ "line": "From two pencils taped together to a quotation with a decorated capital, written well enough to hang on a wall.",
+ "size": "months",
+ "strand": "make-things",
+ "who": "From about nine; a child and a grown-up side by side",
+ "about": "For everybody from about nine: a child and a grown-up can climb it side by side. It starts with two pencils taped together, which show how a broad pen makes thick and thin strokes, then guide lines, a pen held at one angle, and the italic small letters in families. Then come spacing, capitals, a first quotation and a better second one, a planned page and a decorated letter, and it ends with a quotation beautiful enough to hang on a wall. Cheap pens and pencils are fine: two taped pencils, a chisel-tip marker or an inexpensive italic pen does everything here. Beautiful writing is slow writing, and many people find ten minutes of it one of the calmest parts of the day.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Tape two pencils together with their points level, and draw a row of zigzags and a row of circles without turning the pencils.",
+   "ctx": "room",
+   "kind": "skill",
+   "mins": 10,
+   "note": "Hold the pencils so the two points sit at a slant, and keep that slant the whole time. Where you move along the slant, the two lines come close together; where you move across it, they spread apart. That is exactly what a broad calligraphy pen does, and two pens taped together work too."
+  },
+  {
+   "n": 2,
+   "test": "Rule pairs of guide lines five pen-widths apart, and fill one line with downstrokes all the same length.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Make five short sideways marks with your pen, one stacked on top of the next, and measure the height: that is how tall a small letter such as a, n or o will be. For taped pencils, a pen-width is the distance across both points. Rule the lines lightly in pencil with a ruler, and leave the same gap again above and below for tall letters and tails."
+  },
+  {
+   "n": 3,
+   "test": "Write a whole line of the letter o and a whole line of n with the pen held at the same angle all the way.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Hold the flat edge of the pen at about halfway between flat and upright to the guide line. The pen makes the thick and thin parts for you; your only job is to stop it twisting. Check along the line: the thin parts of every letter should fall in the same places."
+  },
+  {
+   "n": 4,
+   "test": "Write a line each of i, l, t and j in italic, every letter leaning forward by the same small amount.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Italic leans forward only a little, about as much as a clock's minute hand at one minute past the hour. Rule a few faint slanting lines across the page to keep every letter at the same lean. Italic is used on this ladder because it is quick to learn, easy to read and works with a cheap pen."
+  },
+  {
+   "n": 5,
+   "test": "Write a line each of n, m, h, r, b and p in italic, with the arch starting high up the downstroke.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "In italic the arch comes out of the downstroke about two-thirds of the way up, not from the bottom, which gives the letters their narrow shape. Look at a printed italic alphabet, from a library book or found online, to check each shape. Get n right first and the rest follow from it."
+  },
+  {
+   "n": 6,
+   "test": "Write a line each of a, d, g, q, u and y in italic, all built on the same narrow slanting oval.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Each one starts at the top right of the oval and goes round to the left and down, then up again into a downstroke. Make u like an n turned upside down. If one letter looks wider than the others, its oval has usually become too round."
+  },
+  {
+   "n": 7,
+   "test": "Write the rest of the small letters, c, e, o, s, v, w, x, z, k and f, then the whole alphabet in one row.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "The whole row is the test: every letter the same height, the same lean and the same pen angle. Circle the three letters that look least like the others, write each one for a line, then write the alphabet once more."
+  },
+  {
+   "n": 8,
+   "test": "Practise italic letters for ten minutes a day for seven days, and date and keep every page.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Each day, write one line of a letter family and one line of words that use it, such as minimum, button, quiet or daylight. If you miss a day, carry on the next day and add a day at the end. On the seventh day lay the first page beside the last and write down what has changed."
+  },
+  {
+   "n": 9,
+   "test": "Write the word minimum five times, changing only the spacing, and pick the one where the gaps look most even.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Minimum is hard to space because it is nearly all upright strokes. Two straight strokes side by side need the most room, two round letters side by side the least, and a straight beside a round somewhere between. Even spacing is about how the gaps look, not measuring them with a ruler."
+  },
+  {
+   "n": 10,
+   "test": "Write the italic capitals A to Z, about one and a half times the height of the small letters, then your full name.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Keep the capitals plain: the same pen angle, the same lean, no swirls yet. The round ones, C, D, G, O and Q, are wider than the others, and that is correct. Rule an extra guide line for the capital height."
+  },
+  {
+   "n": 11,
+   "test": "Write out a quotation of about fifteen words in italic with no mistakes in letters or spelling.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Choose words you like: a line of a poem, a proverb, a sentence from a favourite book. Write it in pencil first to see where the lines break, rule your guide lines, then write it in pen. One mistake means starting that copy again, and that is part of the rung."
+  },
+  {
+   "n": 12,
+   "test": "Circle three faults in your quotation, then write it again with those three better.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Faults to look for: a letter taller than its neighbours, a lean that changes, a word crowded against the next one. Put both copies side by side when you finish. The second being better, however small the difference, is the rung."
+  },
+  {
+   "n": 13,
+   "test": "Draw three small rough plans of a page for your quotation, and choose the one with the best space around the words.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Draw three rectangles the shape of your paper, each about the size of a playing card, and draw lines where the words would go: centred, all on the left, or broken at different words. Leave a little more space at the bottom than at the top, which usually looks more settled. Mark the sizes of the plan you choose onto your real sheet."
+  },
+  {
+   "n": 14,
+   "test": "Draw the first letter of your quotation as a large decorated capital, and colour it in.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Draw it about five small letters high in pencil, give it a double outline, fill it with colour and add a simple pattern round it such as leaves, dots or a border. Old handwritten books, many of them shown free online by museums and libraries, are full of these for ideas. Coloured pencils or felt-tips are enough."
+  },
+  {
+   "n": 15,
+   "test": "Write somebody's name beautifully on a card, with a decorated first letter, and give it to them.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "A name for a bedroom door, a place card for a meal, or a label for a book they own. Rule guide lines, write it in pencil, then in pen, and rub out the pencil once the ink is fully dry. Hand it over in person if you can."
+  },
+  {
+   "n": 16,
+   "test": "Write your quotation on its own page with your decorated capital and your chosen plan, well enough to hang on a wall.",
+   "ctx": "room",
+   "kind": "courage",
+   "note": "Use everything on this ladder: ruled lines, one steady pen angle, even spacing, the page plan from rung thirteen and the capital from rung fourteen. Write it twice if you need to and keep the better one. When it is hanging on a wall, yours or the wall of somebody you gave it to, this ladder is done."
+  }
+ ]
+}

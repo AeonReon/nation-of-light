@@ -1,0 +1,132 @@
+{
+ "id": "mind.maps",
+ "name": "Maps",
+ "line": "From finding yourself on a phone map to planning a day out on a paper map and leading it.",
+ "size": "weeks",
+ "strand": "get-strong-outside",
+ "who": "From about eight, with a grown-up out of doors; grown-ups",
+ "about": "For anybody from about eight, with a grown-up for the rungs out of doors, and for grown-ups who have always let the phone decide. It starts on a phone map: the dot that is you, then the view from above. Then a paper map: finding home, the key, the scale, how long a walk takes, turning the map to match the street, and a first walk with the paper map alone. The middle rungs are the numbers and lines on a map: grid references, latitude and longitude (which can bring help to exactly where you are), and contour lines that show hills. It ends with drawing a map yourself, planning a walk somewhere new, and planning a day out for other people and leading it. A person who can read a map knows where they are and what is around them, even when the phone battery is empty.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Open a map app on a phone, find the dot that shows where you are, and name your street and the nearest street that crosses it.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Any free map app works. Zoom out with two fingers until the next street shows. Tap the button that makes the map turn as you turn, and watch it line up with the way you are facing. No phone? A computer shows the same map; find your home by typing the address.",
+   "mins": 3
+  },
+  {
+   "n": 2,
+   "test": "Switch the map to the satellite view and find your home, the nearest park and a place you go every week.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Satellite view is photos taken from above, so roofs, trees and car parks look as they really are. Find the three places, then switch back to the plain map and find them again. A child can say what each looks like from above: 'our roof is the grey one with the big tree behind'."
+  },
+  {
+   "n": 3,
+   "test": "Get a paper map that shows your home, and mark your home on it with a pencil cross.",
+   "ctx": "kit",
+   "kind": "attention",
+   "note": "Free ways to get one: borrow a local or walking map from the library, pick one up at a tourist office, or print one from a free online map such as OpenStreetMap. A walking map with contour lines (the thin brown or orange lines) is the most useful for later rungs. If you already have one at home, this takes a minute: count it."
+  },
+  {
+   "n": 4,
+   "test": "Find the key on the paper map, then find eight of its symbols on the map itself.",
+   "ctx": "kit",
+   "kind": "attention",
+   "note": "The key (sometimes called the legend) is the box explaining what each symbol means: a church, a car park, a railway, a footpath, woodland, water, a viewpoint, a bus station. Point to one of each on the map. A child can read out a symbol from the key while the grown-up finds it, then swap."
+  },
+  {
+   "n": 5,
+   "test": "Measure the straight-line distance from home to a place you know with the map's scale bar, then check it on the phone map.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Lay the edge of a strip of paper on the map between the two places and mark both ends. Hold the strip against the scale bar and read off the distance. Most map apps can measure a straight line, often by pressing and holding a point and choosing to measure. Say how far off you were."
+  },
+  {
+   "n": 6,
+   "test": "Measure a walking route of about one kilometre on the map, say how long it will take, then walk it and time yourself.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Lay a piece of thread along the roads and paths, then hold it against the scale bar. On flat ground many adults walk about five kilometres an hour, which is twelve minutes for one kilometre; children, hills and busy crossings are slower. Write your guess before you set off. A grown-up walks with any child."
+  },
+  {
+   "n": 7,
+   "test": "Stand at a street corner, find it on the paper map, and turn the map until the streets on it point the same way as the real streets.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "Turn the whole map, not yourself. When it is right, what is on your left in real life is on the left of the map too. The writing may end up sideways or upside down; that is fine. Walk to the next corner and turn it again."
+  },
+  {
+   "n": 8,
+   "test": "Walk to a place about a kilometre away that you have never walked to, using only the paper map and turning it at every corner.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "Pick the place on the map first: a park, a church, a bridge. Keep the phone in your pocket for safety, not for directions. At each corner, stop, turn the map, and choose. If you go wrong, walk back to the last place you were sure of. A grown-up is with any child and lets the child hold the map."
+  },
+  {
+   "n": 9,
+   "test": "Say which grid square your home is in, and find three places on the map from the grid references in its index.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Many walking maps have numbered lines across and up. Read the number along the bottom first, then the number up the side; a square takes the numbers of the line on its left and the line below it. If your map has letters along one edge and numbers along the other, give the letter and number of the square. Street maps often have an index of streets with their squares at the back."
+  },
+  {
+   "n": 10,
+   "test": "Give a six-figure grid reference for one landmark, and have somebody find the landmark from your numbers alone.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Split each side of the square into ten by eye. Across: the line number, then how many tenths across. Up: the line number, then how many tenths up. That points to a spot about a hundred metres across on most walking maps. If your map has no numbered lines, do this with the next rung instead, which works on every map in the world."
+  },
+  {
+   "n": 11,
+   "test": "Find your latitude and longitude on the phone map, send them to somebody, and have them find your exact spot.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "In most map apps, press and hold on your dot to see two numbers, such as 48.858, 2.294, which is the Eiffel Tower. They work on every map in the world, paper or phone. In an emergency, reading them out to your emergency number can bring help to exactly where you are, so practise finding them now, calmly, and try it without looking at these steps."
+  },
+  {
+   "n": 12,
+   "test": "Find a hill on a map with contour lines, and point to where its sides are steep and where they are gentle.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Contour lines join places of the same height; the numbers on them are metres (or on some maps, feet) above the sea. Lines close together mean steep; lines far apart mean gentle; a circle in the middle is the top. A walking map has them, and the free website OpenTopoMap shows them for the whole world. A child can make a hill of play dough, slice it into layers with a thread, and draw round each layer on paper."
+  },
+  {
+   "n": 13,
+   "test": "Choose the gentler of two ways up a hill from the contour lines, walk up that way, and say whether you chose right.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "A hill in a park or at the edge of town with paths. The gentler way crosses fewer contour lines for its length. Walk up it, and if you can, come down the steeper way to feel the difference. Stay on paths. A grown-up is with any child.",
+   "place": "hill"
+  },
+  {
+   "n": 14,
+   "test": "Draw a map of your street and the streets around it from memory, with a north arrow and a scale bar.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Pencil and paper. Put in what a visitor would look for: the corners, a school, a bus stop, a big tree, your gate. Then use the phone map to check which way is north and roughly how far each street is, and fix your drawing. Give it to somebody at home and ask them to point to where you live on it."
+  },
+  {
+   "n": 15,
+   "test": "On the paper map, plan a walk of about five kilometres to somewhere you have never walked, writing every turn and how long each part should take.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Choose a place with a reason to go: a viewpoint, a lake, a café, a friend's home. Write it as a list: 'left at the church, 10 minutes; footpath across the field, 15 minutes'. Add about ten minutes for every hundred metres of climbing, using the contour lines. Pick a shorter way back too, such as a bus or a different road."
+  },
+  {
+   "n": 16,
+   "test": "Walk the route you planned with only the paper map, and write the real time next to each part.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "Phone in the pocket, switched on, for safety. Tell somebody at home where you are going and when you expect to be back. At each turn, find it on the map before you take it. The difference between your planned times and the real ones is your own walking speed, which you now know. A grown-up is with any child."
+  },
+  {
+   "n": 17,
+   "test": "Plan a day out for other people on a paper map, with the route, the times and a stop for food, and then lead it.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Family, friends, or a child's friends with their grown-ups. Use everything: the scale for distances, the contour lines for hills, your own walking speed for times, and a shorter way back if people get tired. Tell everybody the plan the night before. This is the end of the ladder: other people can follow you because you can read the map."
+  }
+ ]
+}

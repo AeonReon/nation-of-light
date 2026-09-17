@@ -1,0 +1,185 @@
+{
+ "id": "magic.cards",
+ "name": "Card tricks",
+ "line": "From one trick that works by itself, to a five-minute card act for five or more people.",
+ "size": "months",
+ "strand": "make-things",
+ "who": "From about eight; children and grown-ups alike",
+ "about": "For everybody from about eight, children and grown-ups alike. A pack of playing cards is the only kit. It starts with tricks that work by themselves, so the very first person you show is surprised, then adds a few simple secret moves: a way to find a card after the pack is cut, a way to make somebody take the card you want, shuffles that keep a card on top, and showing two cards as one. It ends with a five-minute card act for five or more people. Along the way you learn careful hands, clear speaking, and what to do when a trick goes wrong.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Learn the 21-card trick and do it three times on your own, finding a card you picked yourself.",
+   "how": [
+    "Deal 21 cards face up into three columns of seven, one row at a time, left to right.",
+    "Remember one card, then pick up the three columns with that card's column in the middle.",
+    "Deal and pick up the same way twice more, always putting its column in the middle.",
+    "Count down from the top of the face-down pile: the 11th card is the one."
+   ],
+   "note": "It works by counting alone, so no skill is needed, which makes it the right first trick. Each deal moves the card nearer the middle of the pile until it has to be the 11th of 21. Keep each column together when you pick it up.",
+   "ctx": "kit",
+   "kind": "skill",
+   "mins": 15
+  },
+  {
+   "n": 2,
+   "test": "Do the 21-card trick for one person, then spell A-B-R-A-C-A-D-A-B-R-A, dealing one card for each letter, and turn over the last one.",
+   "note": "Abracadabra has exactly eleven letters, so the card on the last A is theirs. Each time you deal, ask them only which column their card is in. If you already know this trick, do it on purpose today and count it.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 3,
+   "test": "Do twenty overhand shuffles in a row without dropping a card.",
+   "note": "Hold the pack upright by its short ends in your right hand. Use your left thumb to pull a few cards at a time off into your left hand, again and again, until the right hand is empty. Practise over a bed or a sofa so a dropped card does not matter. Small hands can start with half a pack.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 4,
+   "test": "Do the key card trick for one person, and let them cut the pack as many times as they like.",
+   "how": [
+    "Shuffle, and secretly look at the bottom card. This is your key card.",
+    "Spread the cards, let them take one and look at it, and have them put it on top of the pack.",
+    "Ask them to cut the pack and put the bottom part on top, as many times as they like.",
+    "Deal the cards face up one at a time: the card straight after your key card is theirs."
+   ],
+   "note": "A complete cut moves cards from the top to the bottom but never changes which card sits next to which, so your key card stays just before theirs. If your key card is the very last card dealt, theirs was the first one. You can glance at the bottom card while you tap the pack square on the table.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 5,
+   "test": "Do a card trick saying only what you are doing, never what is about to happen.",
+   "note": "Say \"Take a card\" and \"Put it on top\", never \"Now I will find your card\". When people know the ending, they know where to look for the secret. Try it with the key card trick.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Practise the cross-cut force on your own ten times, until it feels like an ordinary cut.",
+   "how": [
+    "Look at the top card of the pack before you start.",
+    "Cut off some cards and set them down, the way the other person will.",
+    "Put the rest of the pack across the top of that pile, in a cross.",
+    "Count five seconds, lift off the top pile, and turn over the top card of the bottom pile: it is the card you looked at."
+   ],
+   "note": "A force means a person seems to choose freely but gets the card you want. It works because the card they are shown was on top of the pack all along; the cross shape and the pause make everybody forget which pile was which. Practise the pause as much as the hands.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Write the name of a card on paper, fold it, and use the cross-cut force so one person takes that card.",
+   "note": "Put the card you wrote down on top of the pack before they arrive, and leave the folded paper where they can see it. During the pause, talk about the paper: \"I wrote that before you came in.\" Let them open the paper themselves at the end.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 8,
+   "test": "Using two overhand shuffles, move a card from the top to the bottom and back to the top, ten times without losing it.",
+   "how": [
+    "First shuffle: pull the top card off on its own into your left hand, then shuffle the rest on top of it. It is now on the bottom.",
+    "Second shuffle: shuffle normally until only one card is left in your right hand, and drop it on top. It is back on top."
+   ],
+   "note": "Turn over the top card after each try to check. To anybody watching, both look like ordinary shuffles, so shuffle at your normal speed.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Have one person take a card and put it on top, shuffle it back to the top, then ask them to name it and turn the top card over.",
+   "note": "This uses the two shuffles from the rung before, with a card they really chose. After the shuffles, put the pack down and ask \"What was your card?\" before anybody touches it. Let them turn it over themselves.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "Practise a double lift at the mirror thirty times, turning over two cards so they look like one.",
+   "how": [
+    "Hold the pack face down in your left hand, and with your right thumb lift the back short edge of the top two cards together.",
+    "Turn the two over as one onto the top of the pack, so the face shows.",
+    "Turn them back face down as one, square with the pack."
+   ],
+   "note": "Keep the edges of the two cards exactly together, and move at the same speed as when you turn over one card. Check in the mirror: turn over one, then two, and see if you can tell which is which. Older cards are easier than new slippery ones.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 11,
+   "test": "Make a card on the table change into the chosen card for one person, using the two shuffles and a double lift.",
+   "how": [
+    "Have them choose a card, put it on top, and shuffle it back to the top.",
+    "Double lift to show a card and ask, \"Is this your card?\" They say no.",
+    "Turn both back face down as one, take the top card alone, and lay it face down on the table.",
+    "Wave over it and ask them to turn it over: it is their card."
+   ],
+   "note": "The card on the table was theirs all along; the double lift showed them the card underneath it. Keep the moment slow: \"Not yours? Watch.\" This one surprises grown-ups who already know the easy tricks.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 12,
+   "test": "Do the 21-card trick with the other person doing all the dealing and spelling, while you never touch the cards.",
+   "note": "You only tell them what to do: deal into three columns, point to your column, pick up with that column in the middle. Because it works by counting, it works in anybody's hands. Stand back a little so everybody can see you are not touching anything.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Borrow a pack of cards that is not yours and do two tricks with it.",
+   "note": "The 21-card trick and the key card trick work with any pack, so start with those. A borrowed pack shows there is nothing special about the cards. Give it back neatly in its box.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 14,
+   "test": "Choose what you will do if a trick goes wrong, and practise it three times with the cards in your hands.",
+   "note": "Pick one line, such as \"Let us try that another way\", and one trick that cannot go wrong, like the 21-card trick. Practise saying the line and going straight into that trick. Then the day a trick really fails, you do not have to think.",
+   "ctx": "kit",
+   "kind": "courage"
+  },
+  {
+   "n": 15,
+   "test": "Put three or four tricks in order for a five-minute act, and write the order on a small card.",
+   "note": "One good order: the written prediction first, because its card must be on top before anybody arrives; then the key card trick; then the card that changes on the table; and the 21-card trick with its spelling to end. Plan one or two sentences to say between tricks. Your own words work better than anybody else's.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 16,
+   "test": "Run your whole act on your own five times, speaking out loud, with a timer.",
+   "note": "Say every word as if people were there. Aim for about five minutes; if it runs long, cut words, not tricks. A run only counts if you do not stop and start again.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 17,
+   "test": "Do your whole act for one or two people at home, from start to end.",
+   "note": "Afterwards, ask which trick they liked best and which moment felt slow. Change one thing in your notes before the next time.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 18,
+   "test": "Do the changing-card trick with one person on your left and one on your right, and ask each if they saw anything odd.",
+   "note": "The double lift is easy to see from the side if the cards are tilted up. Keep the pack flat and low, and check which way you need to turn. When you perform, stand so that nobody is right beside your hands.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 19,
+   "test": "Teach somebody the 21-card trick until they can do it for a third person.",
+   "note": "Deal it through slowly with them twice, then let them do it while you watch. Remind them that the column always goes in the middle. It counts when their trick works on somebody who has not seen it.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 20,
+   "test": "Perform your five-minute card act for five or more people.",
+   "note": "A family meal, a birthday or a club you belong to all work; ask the host first. Sit or stand with everybody in front of you. Set the prediction card on top before you begin, and keep your small card of notes in your pocket.",
+   "ctx": "with",
+   "kind": "courage"
+  }
+ ]
+}

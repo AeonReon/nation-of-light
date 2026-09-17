@@ -1,0 +1,181 @@
+{
+ "id": "magic.coins",
+ "name": "Coin tricks",
+ "line": "From one coin passed hand to hand at a mirror, to a three-minute coin routine for five or more people.",
+ "size": "months",
+ "strand": "make-things",
+ "who": "From about eight; children and grown-ups alike",
+ "about": "For everybody from about eight, children and grown-ups alike. It starts with one coin passed from hand to hand at a mirror, then builds three simple secret moves: the French drop, a coin held hidden in curled fingers, and a pretend hand-over. With those, a coin vanishes, comes back, travels, changes and goes through a table, and the ladder ends with a three-minute routine for five or more people. All you need is a coin or two, and the practice gives you steady hands and the calm to perform. Keep coins away from children under three, who may put them in their mouths.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Stand at a mirror and pass a coin from your left hand to your right hand for real, ten times, watching how it looks.",
+   "note": "Hold the coin flat between the thumb and first two fingers of your left hand, then let your right hand take it and close round it. Watch the speed of your hands and where your eyes go. Every secret move later has to look exactly like this real one. If you are left-handed, swap the hands all the way up the ladder.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Do the French drop slowly at the mirror ten times, until you cannot see the coin fall.",
+   "how": [
+    "Hold the coin flat by its edges between your left thumb and fingertips, palm up, fingers a little curled.",
+    "Bring your right hand over as if to take it: right thumb under the coin, right fingers covering the top.",
+    "Just as the right fingers hide it, let the coin drop quietly into your curled left fingers.",
+    "Close the right hand and move it away as if it holds the coin, and let the left hand relax."
+   ],
+   "note": "The French drop is hundreds of years old and still works. Go at the same speed as your real hand-over from rung 1; rushing makes it look odd. The coin only falls a short way, into fingers already curled to catch it.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 3,
+   "test": "Do the French drop ten more times with your eyes on the closed right hand, then open that hand slowly to show it empty.",
+   "note": "People look where you look. If your eyes stay on the hand that seems to hold the coin, theirs will too. Keep the left hand still and relaxed, and open the right hand one finger at a time.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Show one person a coin, make it vanish with the French drop, and show your right hand empty.",
+   "note": "Start with somebody at home, standing in front of you rather than beside you. Say only \"Watch this coin.\" Afterwards, put your left hand in your pocket and leave the coin there before you show that hand.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 5,
+   "test": "Make the coin vanish, then bring it back from beside the person's ear.",
+   "how": [
+    "Do the French drop, keeping the coin in your curled left fingers.",
+    "Show the right hand empty, then reach your left hand towards their ear.",
+    "As your hand arrives, push the coin to your fingertips with your thumb, and bring it forward slowly so it shows."
+   ],
+   "note": "Ask first, and do not actually touch their ear; your hand only needs to come near it. If somebody would rather you did not come close, bring the coin back from behind your own elbow instead.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Keep a coin hidden in your curled right fingers for ten minutes while you use that hand for ordinary things.",
+   "note": "This is the finger palm. The coin lies across the middle and ring fingers, near where they join the hand, and the fingers curl just a little, like a hand hanging at your side. Turn pages, point, pick up a cup. When you forget the coin is there, the hand looks natural.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Practise the pretend hand-over at the mirror ten times, until it looks the same as a real one.",
+   "how": [
+    "Lay the coin on your open right hand, across the middle and ring fingers.",
+    "Turn the right hand over towards the left as if tipping the coin into it, and curl the fingers just enough to keep it.",
+    "Close the left hand as if it caught the coin, and move it away.",
+    "Let the right hand relax, with the coin still held in its fingers."
+   ],
+   "note": "Do one real tip-over first, then one pretend one, and compare them in the mirror. The left hand does the acting: it must close as if something landed in it, and your eyes follow it.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 8,
+   "test": "Make a coin travel from your left hand to your right hand for one person.",
+   "note": "Do the pretend hand-over, so they think the coin is in your closed left hand; the coin is really in your right fingers. Close the right hand into a loose fist. Hold both fists out, open the left one slowly to show it empty, then open the right. If you already do this trick, do it on purpose today and count it.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Change a small coin into a bigger coin for one person.",
+   "how": [
+    "Before you start, hide the bigger coin in the finger palm of your right hand.",
+    "Show the small coin at your left fingertips.",
+    "Do the French drop: the right hand seems to take the small coin and closes.",
+    "Open the right hand to show the big coin, and while they look at it, put the left hand in your pocket and leave the small coin there."
+   ],
+   "note": "Any two coins that look clearly different will do, and a large button or a metal washer can be the big one. Everybody looks at the right hand when it opens, and that is the moment the left hand moves. Keep both hands slow.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "Ask a helper to stand in front of you, then on your left, then on your right, and do each trick once from each place.",
+   "note": "Ask them to say \"stop\" the moment they see a coin that should be hidden. Where they say stop is a bad angle for that trick. Write it down, and from then on keep people in front of you for that trick. A mirror cannot show you this; only a person can.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Sitting at a table, make a coin pass down through the tabletop for one person.",
+   "how": [
+    "Sit across the table from them, with the coin at your left fingertips.",
+    "Do the French drop, so the right hand seems to take the coin.",
+    "Let your left hand go under the table \"to catch it\", with the coin in its fingers.",
+    "Slap the right hand flat on the table, lift it to show nothing there, and bring the coin out from underneath."
+   ],
+   "note": "At the moment of the slap, tap the coin against the underside of the table for a small click. Keep your eyes on the right hand the whole time. Any table works, even the kitchen one.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 12,
+   "test": "Borrow a coin from somebody and do two of your tricks with it.",
+   "note": "A borrowed coin shows there is nothing special about it. Ask plainly: \"May I borrow a coin? You will get it back.\" Use tricks that need one coin, such as the vanish and the table, and hand it back straight after.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 13,
+   "test": "Write down what you will say during three standing tricks, a few short sentences each, and read it aloud once.",
+   "note": "Choose three that can be done standing, for example the vanish and the ear, the coin that travels, and the coin that changes. Say what you are doing, never what is about to happen, so nobody knows where to look. A simple story helps, such as a coin that keeps escaping. Your own words work better than anybody else's.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Run your three tricks as one routine at the mirror five times, with no stops in between.",
+   "note": "Plan where the coins are between tricks, so one trick ends where the next begins; for example, the ear production leaves the coin at your fingertips, ready for the pretend hand-over. If you stop and start again, that run does not count. Time it: about three minutes is right.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 15,
+   "test": "Do your whole routine for one person, from start to end, without stopping.",
+   "note": "Somebody at home is ideal. If a move goes wrong, keep going to the end; not stopping is the thing you are practising. Afterwards, ask which moment surprised them most.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 16,
+   "test": "When somebody asks to see a trick again, smile and show them a different trick instead.",
+   "note": "The second time, people know where to look, so the secret is easier to see. Have a line ready, such as \"Here is another one.\" Practise saying it aloud now; the rung counts the first time somebody asks and you do it.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 17,
+   "test": "When somebody asks how a trick works, keep the secret kindly and move on to talk about something else.",
+   "note": "A smile and \"That part stays with me\" is enough. Keeping the secret keeps the surprise alive for them. Never make the person feel silly for asking; it means they enjoyed it.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 18,
+   "test": "During practice, drop a coin on purpose, pick it up with a smile, and go straight on to the next trick.",
+   "note": "Real coins fall, and an audience only minds if you do. Choose your line now, for example \"That one wanted to see the floor\", and practise it three times. Then the day a coin really falls, you already know what to do.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 19,
+   "test": "Teach somebody the French drop until they can make a coin vanish for a third person.",
+   "note": "Show it slowly, then let them try while you watch from the front. Tell them the two things that matter most: go at the speed of a real hand-over, and look at the hand that seems to hold the coin. It counts when their vanish works on somebody who has not seen it.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 20,
+   "test": "Perform your three-minute coin routine for five or more people.",
+   "note": "A family meal, a birthday or a club you belong to all work; ask the host first. Have everybody stand or sit in front of you, as you learned from your helper. Start with the trick you do best, and end with the one that got the biggest reaction at home.",
+   "ctx": "with",
+   "kind": "courage"
+  }
+ ]
+}

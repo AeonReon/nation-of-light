@@ -1,0 +1,152 @@
+{
+ "id": "music.songwrite",
+ "name": "Writing a song",
+ "line": "From new words to a tune everybody knows to a song of your own that a group joins in with on the last chorus.",
+ "size": "months",
+ "strand": "make-things",
+ "who": "From about eight; a child and a grown-up side by side",
+ "about": "For everybody from about eight: a child and a grown-up can climb it side by side, and writing one together counts. It starts with new words to a tune everybody knows, then choosing what your own song is about and finding the one line that says it. From there the chorus gets a tune, recorded on a phone, then two verses, cutting, singing it to somebody and changing it, and a simple beat or chords underneath. It ends with a second song written for a person you know, and one of your songs sung for a group who join in on the last chorus. No instrument is needed; your voice and a phone to record on are enough.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Write four new lines to the tune of a song everybody knows, and sing them through.",
+   "ctx": "room",
+   "kind": "skill",
+   "mins": 5,
+   "note": "For example \"Happy Birthday\" or \"Twinkle, Twinkle, Little Star\", with new words about your day, your pet, or the weather this morning. Each new line needs the same number of beats as the old line, so sing it as you write. If you already write songs, count this and start the next rungs on a new song."
+  },
+  {
+   "n": 2,
+   "test": "Choose what your own song is about, and write it at the top of a page in one plain sentence.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "One real thing: a day you remember, a person, a place you love, a feeling you had this week. For example \"The morning we saw the sea for the first time.\" Everything else in the song will serve this sentence."
+  },
+  {
+   "n": 3,
+   "test": "Under your sentence, write eight lines of plain words about it: what you saw, heard, did and felt, with no rhymes yet.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Real details, such as \"the cold sand under my feet\" or \"Dad counting the waves\", work better than big words. Write fast and do not fix anything yet."
+  },
+  {
+   "n": 4,
+   "test": "Choose the one line that says the whole thing best, and build a four-line chorus that starts and ends with it.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "The chorus is the part that comes back and that people remember. Rewrite your best line into something short enough to sing easily, then write two lines to go between its two appearances."
+  },
+  {
+   "n": 5,
+   "test": "Say the chorus out loud while clapping a steady beat, and change words until every line fits the beat.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Clap \"1, 2, 3, 4\" as you speak. Where a line feels crowded, cut a word; where it feels thin, add one. Two lines ending with a rhyme helps people remember it, but a clear line matters more than a rhyme."
+  },
+  {
+   "n": 6,
+   "test": "Sing the chorus on a tune you make up, and record it on your phone so it is not lost.",
+   "ctx": "room",
+   "kind": "courage",
+   "note": "Sing the first tune that comes, even a very simple one that moves only a few notes. Record three different tries and choose the one you like best. Nobody else needs to hear these."
+  },
+  {
+   "n": 7,
+   "test": "The next day, sing the chorus from memory, then check it against the recording.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "If the tune came out differently, decide which version is better and record that one. A tune you can remember a day later is one other people will be able to remember too."
+  },
+  {
+   "n": 8,
+   "test": "Write a first verse of four lines that says where, when and who, leading into the chorus.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "The verse tells the story; the chorus says what it means. Use details from your eight lines on rung three. Try to have the second and fourth lines end in a rhyme or a near-rhyme."
+  },
+  {
+   "n": 9,
+   "test": "Give the verse its own tune, different from the chorus, and record verse and chorus together.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Many songs sing the verse lower or more quietly and lift for the chorus, so you hear when the chorus arrives. Try two or three tunes and keep the one that leads most naturally into the chorus."
+  },
+  {
+   "n": 10,
+   "test": "Write a second verse that moves the story on: what happened next, or what changed.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Same number of lines and the same tune as the first verse, with new words. If verse one was the morning, verse two could be the drive home, or years later."
+  },
+  {
+   "n": 11,
+   "test": "Sing the whole song through and cut every word you stumble over or do not need.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Read it aloud first, then sing it. Mark every place you trip, and try the line with a word gone. Shorter lines are nearly always easier to sing."
+  },
+  {
+   "n": 12,
+   "test": "Sing verse, chorus, verse, chorus without stopping, time it, and get it under three minutes.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "If it runs long, cut a repeated line or shorten a long held note. Record this full version; it is your first finished draft."
+  },
+  {
+   "n": 13,
+   "test": "Sing the song to one person, and afterwards ask them which line they remember.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "A family member, a friend, or somebody on a video call. Tell them it is a first draft. The line they remember is working; a line nobody remembers is the one to look at."
+  },
+  {
+   "n": 14,
+   "test": "Change one line because of what they said, or because of what they did not remember.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Only one line, so the song stays yours. Sing the new version through and keep whichever of the two you prefer."
+  },
+  {
+   "n": 15,
+   "test": "Sing the song while clapping or tapping a steady beat, or playing two or three chords, all the way through.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Tapping a table is enough, and the Rhythm ladder shows how. If you play guitar, ukulele or keyboard, many songs work with just three chords; try the chords a beginner learns first on your instrument."
+  },
+  {
+   "n": 16,
+   "test": "Write the song out clearly, with the words, the chorus marked, and a recording, so somebody else could learn it.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Write \"Verse 1\", \"Chorus\", \"Verse 2\", \"Chorus\" as headings. Add chords above the words if you use them. If you read music, write the tune of the chorus on a stave as well."
+  },
+  {
+   "n": 17,
+   "test": "Over one week, write a second song about somebody you know, using the same shape as your first.",
+   "ctx": "long",
+   "kind": "kindness",
+   "note": "A grandparent, a friend, a brother or sister, a teacher. Choose a real thing they did or a day you shared, and keep every line kind. Go through the same steps: the sentence, the eight lines, the chorus, two verses."
+  },
+  {
+   "n": 18,
+   "test": "Sing or play that song to the person it is about, or send them the recording.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "In person, on a video call, or as a recording in a message. Tell them it is for them, then sing it through."
+  },
+  {
+   "n": 19,
+   "test": "Teach the chorus of one of your songs to two or more people until they can sing it back without you.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Sing it one line at a time and have them copy each line, then two lines, then the whole chorus. Family at a meal table is a good place to start."
+  },
+  {
+   "n": 20,
+   "test": "Sing one of your songs for a group of three or more, and have them join in on the last chorus.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Teach them the chorus first, as on the last rung, and tell them you will nod when the last chorus comes. A birthday, a family gathering, or friends round for a meal all work."
+  }
+ ]
+}

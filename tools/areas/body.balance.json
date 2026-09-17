@@ -1,0 +1,166 @@
+{
+ "id": "body.balance",
+ "name": "Balance",
+ "line": "From standing on one foot, to walking a narrow log or beam, turning round in the middle, and coming back without stepping off.",
+ "size": "months",
+ "strand": "get-strong-outside",
+ "who": "Everybody; a grown-up beside a young child outdoors",
+ "about": "For everybody: a child and a grown-up can climb it side by side, with a grown-up beside a young child on the outdoor rungs. The first half is done indoors on the floor: one foot, then one foot with your eyes shut, heel to toe along a line, and reaching and bending while you stay up. The second half goes outside to a log, a low wall or a plank lying on the ground, walking it forwards, backwards and slowly, and ends on something narrower, turning round in the middle and coming back. Everything here is at ground level or knee height at most, never higher, and a patch of grass underneath is best. Good balance is useful at every age, from climbing about as a child to staying steady on your feet when you are old.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Stand on one foot for thirty seconds without the other foot touching down.",
+   "note": "Lift the other foot just off the floor, look at something still in front of you, and count or use a timer. Stand near a wall or a chair back in case you tip. If this is already easy, do it on purpose and count it.",
+   "ctx": "room",
+   "kind": "skill",
+   "twist": "The foot you would never choose.",
+   "mins": 2
+  },
+  {
+   "n": 2,
+   "test": "Stand on one foot for a full minute.",
+   "note": "Then do the other foot. Brushing your teeth or waiting for the kettle is a good time for this. Small wobbles in the ankle are the balance working; let them happen instead of locking your knee.",
+   "ctx": "room",
+   "kind": "skill",
+   "twist": "The foot you would never choose."
+  },
+  {
+   "n": 3,
+   "test": "Walk heel to toe along a straight line on the floor for twenty steps.",
+   "note": "The heel of the front foot touches the toes of the back foot every step. Use the edge of a rug, a line of floor tiles or floorboards, or a strip of tape. Arms out to the sides is allowed.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 4,
+   "test": "Walk heel to toe backwards along the same line for ten steps.",
+   "note": "Toes of the back foot reach back to touch the heel of the front foot. Glance down at the line when you need to. Clear the floor behind you first.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 5,
+   "test": "Stand on one foot and pick a sock up off the floor, then stand up tall again without the other foot touching down.",
+   "note": "Put the sock just in front of your standing foot. Bend at the hips and knee, and let your free leg go out behind you to balance.",
+   "ctx": "room",
+   "kind": "skill",
+   "twist": "The foot you would never choose."
+  },
+  {
+   "n": 6,
+   "test": "Stand on one foot for thirty seconds with your eyes shut.",
+   "note": "Much harder than it sounds, because your eyes do a lot of the balancing. Stand in a corner or next to a chair so you can put a hand out. Start with five seconds and build up.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Stand on one foot and touch the floor in front, to the side and behind you with the toes of the other foot, three times round, without putting it down.",
+   "note": "Reach out, tap lightly, bring the foot back in, then the next direction. Reach only as far as you can and still come back up steady. Do both feet.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 8,
+   "test": "Stand on one foot holding a full water bottle out in front with both hands, bend your standing knee a little, count five, and straighten, ten times.",
+   "note": "A small bend is enough; this is about control, not depth. Keep the knee pointing over your toes and not falling inwards. Any tin, bag of rice or book will do instead of a bottle.",
+   "ctx": "room",
+   "kind": "skill",
+   "twist": "The other leg."
+  },
+  {
+   "n": 9,
+   "test": "Walk heel to toe along the line for twenty steps with your eyes shut.",
+   "note": "Clear the floor ahead of you and have a wall within reach. Open your eyes whenever you feel yourself going, then shut them and carry on. For a child, a grown-up walks beside them.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "Stand on one foot on a firm cushion or a folded towel for thirty seconds.",
+   "note": "A soft surface makes your ankle work much harder. Use a sofa cushion or a towel folded several times on the floor, with a wall close by. Do both feet.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 11,
+   "test": "Walk the length of a log, a low wall or a plank lying on the ground without stepping off.",
+   "note": "Choose one no higher than your knee, with grass or soft ground on both sides: a fallen tree in a park, the edge of a raised flower bed, a balance beam in a playground, or a plank laid flat on the grass. Never a wall with a drop on either side, and never a kerb beside a road. A grown-up walks beside a young child.",
+   "ctx": "out",
+   "kind": "skill",
+   "place": "outdoors"
+  },
+  {
+   "n": 12,
+   "test": "Walk the same log, wall or plank slowly, stop halfway, stand still for five seconds, and carry on to the end.",
+   "note": "Stopping is harder than walking, because moving forwards hides small wobbles. Look at the far end, not your feet. Step off on purpose if you start to fall rather than trying to save it.",
+   "ctx": "out",
+   "kind": "skill",
+   "place": "outdoors"
+  },
+  {
+   "n": 13,
+   "test": "Walk the length of it backwards without stepping off.",
+   "note": "Look at it before you start, then feel for it with your toes each step. Go slowly and keep your arms out.",
+   "ctx": "out",
+   "kind": "skill",
+   "place": "outdoors"
+  },
+  {
+   "n": 14,
+   "test": "Stand on one foot on the log, wall or plank and count to ten.",
+   "note": "Everything you did on the floor at the start, now on something narrow. Pick the widest, steadiest part to begin. Do both feet.",
+   "ctx": "out",
+   "kind": "skill",
+   "place": "outdoors"
+  },
+  {
+   "n": 15,
+   "test": "Walk to the middle, turn round to face the way you came, and walk back without stepping off.",
+   "note": "Turn in small steps on the balls of your feet, keeping them close together. Take as long as you need. Most people wobble most at the moment of turning.",
+   "ctx": "out",
+   "kind": "skill",
+   "place": "outdoors"
+  },
+  {
+   "n": 16,
+   "test": "Walk to the middle, crouch down until your hands touch it, stand back up, and walk on to the end.",
+   "note": "Go down slowly, with one foot a little in front of the other. Hands touch lightly, they do not grab. Stand up slowly too.",
+   "ctx": "out",
+   "kind": "skill",
+   "place": "outdoors"
+  },
+  {
+   "n": 17,
+   "test": "Walk the length of something narrower, such as a round log or a thin balance beam, without stepping off.",
+   "note": "Narrower means about as wide as your foot or less, still no higher than your knee and with soft ground beside it. In many playgrounds and parks there is a narrow beam or a line of logs. If there is nothing like that near you, a length of wood about as wide as your foot, laid flat on the grass, does the same job.",
+   "ctx": "out",
+   "kind": "skill",
+   "place": "outdoors"
+  },
+  {
+   "n": 18,
+   "test": "Walk the narrower one with a stop in the middle, standing still for five seconds.",
+   "note": "The same as rung twelve on something harder. Soft knees and your arms out, and let your hips move under you instead of your shoulders.",
+   "ctx": "out",
+   "kind": "skill",
+   "place": "outdoors"
+  },
+  {
+   "n": 19,
+   "test": "Walk beside somebody along a log or plank, holding their hand, until they can walk it end to end without you.",
+   "note": "A child, a friend, a grandparent. Hold their hand below shoulder height and let them lean on you only as much as they need. Let go a little more each time, and stay beside them.",
+   "ctx": "with",
+   "kind": "kindness",
+   "place": "outdoors"
+  },
+  {
+   "n": 20,
+   "test": "Walk the narrower one to the middle, turn round, and walk back to where you started without stepping off.",
+   "note": "Everything in this ladder is in this one walk: eyes ahead, small steps, soft knees, a still moment, and the turn. Take it slowly. If you have a slackline set up low by somebody who knows how, you can do this rung on that instead.",
+   "ctx": "out",
+   "kind": "skill",
+   "place": "outdoors"
+  }
+ ]
+}

@@ -1,0 +1,133 @@
+{
+ "id": "water.row",
+ "name": "Rowing and paddling",
+ "line": "From choosing your first kind of boat, to helping a beginner through their first session on the water.",
+ "size": "weeks",
+ "strand": "get-strong-outside",
+ "from": 8,
+ "who": "From about eight, always with an instructor or grown-up",
+ "about": "For anybody from about eight; a child is always with an instructor or a grown-up, and so is every beginner of any age. The first rungs happen at home and at a pool: choosing a kayak, canoe, paddleboard or rowing boat, finding a club, practising the stroke with a broom, fitting a buoyancy aid and floating in one. Then a proper club or centre takes you onto calm water: getting in and out, going where you mean to, stopping, turning, a practice capsize, and reading the wind and water before you go. It ends with a five-kilometre paddle with a group and helping a beginner through their first session. There is no need to own a boat: clubs and outdoor centres lend them, and many run free or low-cost taster sessions.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Look up the four kinds of small boat you can paddle or row, and choose the one you want to try first.",
+   "note": "A kayak is sat in, with a paddle that has a blade at each end; a canoe is open, and you kneel or sit with a single-blade paddle. A paddleboard is stood or knelt on, and in a rowing boat you pull two oars and face backwards. Any of them is a good start; pick the one a club near you teaches if you are not sure.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 10
+  },
+  {
+   "n": 2,
+   "test": "Find a club, outdoor centre or activity centre near you that teaches your boat, and write down the date of its next beginners' or taster session.",
+   "note": "Your national paddling or rowing organisation's website usually lists clubs by area, and your local council may list outdoor centres. Many run free or low-cost taster sessions and lend the boat, the paddle and the buoyancy aid. Write down what they ask you to bring, whether you need to be able to swim, and the youngest age they take. In places with a cold season, many clubs move to pool sessions in winter.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Sit on the floor with a broom and do twenty forward paddle strokes on each side, turning your body, not just your arms.",
+   "note": "Hold the broom handle a little wider than your shoulders. Reach forward, put the imagined blade in by your feet, and draw it back to your hip by turning your middle, then lift it out. For a canoe, use one side at a time with one hand on top of the handle. If your boat will be a rowing boat, sit on the floor with your knees bent and practise the rowing movement instead: arms straight out, lean back, pull your hands to your ribs.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 4,
+   "test": "Put on a buoyancy aid, do up every zip and buckle, and have somebody lift it by the shoulders to check it does not ride up past your chin.",
+   "note": "This is the lift test, and a buoyancy aid that fails it is the wrong size or too loose. Tighten the straps from the bottom up until it is snug but you can still breathe deeply and move your arms. You wear one on every rung on the water, however calm it looks. If you have no buoyancy aid, do this at the start of your first club session with one they lend you, and count it.",
+   "ctx": "kit",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "At a pool, wearing a buoyancy aid, get into deep water, float on your back for a minute, then swim ten metres to the side.",
+   "note": "Many clubs run pool sessions for exactly this; public pools often allow it if you ask first. Float first: lie back, let the buoyancy aid hold you, and breathe slowly until you feel calm, then swim. A grown-up or instructor is in the water or at the edge beside any child. If you cannot swim ten metres yet, the swimming ladder is the place to start, and many clubs ask for it.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 6,
+   "test": "At your first session, before you get in a boat, say back to the instructor what you will do if you fall in.",
+   "note": "The usual plan is: float first and get your breath, hold on to your boat and your paddle, shout or wave to the instructor, and wait for them to come to you. In moving water, stay on the upstream side of the boat so it cannot pin you. Every club says it a little differently, so use their words. Never go on the water alone, on this rung or any later one.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Get into the boat from a bank or low jetty, sit still without tipping it, and get out again, three times.",
+   "note": "Keep low, keep your weight over the middle of the boat, and hold on to the jetty or bank with one hand while you move. Lay the paddle across the boat and the jetty to steady it. An instructor holds the boat for your first try. Buoyancy aid on, even though you are only getting in.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 8,
+   "test": "Paddle twenty metres out on calm water and come back to where you started.",
+   "note": "Short strokes, both sides evenly, and look where you want to go, not at the paddle. Coming back means turning, so go slowly and use extra strokes on one side. The instructor stays close. Buoyancy aid on, and only on calm, sheltered water chosen by the club.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Stop the boat within one boat length of a marker, then turn it round on the spot.",
+   "note": "To stop, put the blade in by your hip and push forward: this is the reverse stroke. To turn on the spot, do wide sweeping strokes forward on one side, then backward on the other. The marker can be a buoy, a post or a spot on the bank. Buoyancy aid on, instructor close by.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "With an instructor, tip out of your boat on purpose in a capsize practice, float, and get yourself and your boat to the side.",
+   "note": "Clubs run this in a pool or in warm, shallow, sheltered water, because a capsize you have practised is far calmer than one you have not. Float first and get your breath, then hold the boat and swim it in, or wait for the instructor if they ask you to. In a kayak, the instructor shows you how to get out underwater first. Never try this without an instructor there.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 11,
+   "test": "Come alongside a jetty or bank, stop next to it, and get out without anybody holding the boat.",
+   "note": "Come in slowly and at a slight angle, stop with a reverse stroke, and take hold of the jetty before you move. Then the same as getting in, the other way round: low, weight in the middle, one hand on the jetty. If you already do this, do it on purpose today and count it. Buoyancy aid on until you are standing on land.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 12,
+   "test": "Before a session, look up the wind and the water where you will paddle, decide whether it suits a beginner, and check your answer with the instructor.",
+   "note": "Look at the wind speed and its direction, and for rain in the last few days, which makes rivers faster. The big warning is wind blowing from the land out over the water: near the shore it looks calm, but it pushes you away and makes coming back hard. On the sea, tides matter too. The instructor has the final word; when they say no, that is a good decision, not a lost day.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 13,
+   "test": "Paddle five hundred metres in a straight line to a point you chose, without zigzagging.",
+   "note": "Pick something fixed on the far side, such as a tree or a building, and keep the front of the boat pointed at it. If the boat starts to turn, add a stroke or two on the other side early, before the turn gets big. Buoyancy aid on, with your club or a grown-up who paddles, never alone.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Paddle into a light wind for ten minutes and keep your line, then turn and come back.",
+   "note": "Only on a day the club says suits you. Lean slightly forward, keep strokes short and steady, and aim a little into the wind so it does not turn you. Coming back with the wind behind you is fast, so slow down before any bank or jetty. Buoyancy aid on and a leader on the water with you.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 15,
+   "test": "Paddle with your club or centre once a week for four weeks.",
+   "note": "Mark the four dates on a calendar. A week off for bad weather does not end the four; take the next one. Each time, do the checks yourself before you get in: buoyancy aid fitted, the plan if you fall in, the wind and the water. If you already paddle weekly, count the next four on purpose.",
+   "ctx": "long",
+   "kind": "skill"
+  },
+  {
+   "n": 16,
+   "test": "Paddle five kilometres with a group and a leader, with a rest stop on the way.",
+   "note": "At a steady pace this takes about an hour and a half, with a rest. Stay in sight of the leader, eat and drink at the stop, and say early if you are cold or tired. A group trip like this is usually on the club calendar; tell somebody at home where you are going and when you will be back. Buoyancy aid on all the way.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 17,
+   "test": "At a club beginners' session, help one beginner: check their buoyancy aid with the lift test and paddle beside them until they are back on land.",
+   "note": "Ask the instructor first; they will usually be glad of the help and will still be in charge. Tell the beginner one thing at a time: where to sit, how to hold the paddle, what to do if they fall in. Stay beside them, not ahead. The end of the ladder is somebody else leaving the water wanting to come back.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ],
+ "place": "water"
+}

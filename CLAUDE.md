@@ -626,3 +626,24 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   jar). Prosperity: money.run, money.invest (educational only, never names anything to buy; points to the
   regulator). 123 of 175 at the standard; quick pool 205. **Left:** Fun and creativity (30), New experiences (15),
   and the under-sevens set.
+- **v80 (2026-09-17, Opus session): rewrite wave four — every adult ladder is now to the standard (168 of 175).**
+  45 ladders, 782 rungs, writers P–W, every rung read, safety and facts checked. Fun and creativity: make.knots,
+  make.clay (air-drying clay is not waterproof or food-safe — those rungs are gone), make.cloth (all by hand),
+  make.wood (hand tools only), words.callig (italic), make.photo (ask first; never photograph other people's
+  children), music.whistle, music.rhythm, music.dance (many cultures), music.instrument, music.readmusic,
+  music.songwrite, magic.coins, magic.cards, magic.mentalism (now **Mind-reading tricks** — always said to be a
+  trick, never a power), magic.mime (the joke is on you or an object), magic.puppet, magic.juggleclub (soft kit,
+  no fire), body.juggle, body.skip, body.balance (never above knee height), body.upside (no headstands, nothing on
+  the neck), sky.throw, sky.kite, sky.birdsflight (the correct lift explanation), sky.rocket (air and water only,
+  no motors), home.engines (never anything with a plug, a charger or a battery), home.bike (a grown-up checks the
+  brakes), make.electric (9 volts or less; mains kills; the first bulb rung is a torch bulb, LEDs wait for the
+  resistor rung), make.machines (now **Making things with code**, online safety as a rung). New experiences:
+  sky.wind (watching the sky yourself; forecasts stay in wild.weather), wild.living, mind.maps, wild.wayfind
+  (both hemispheres), water.pools, body.ride (now **Riding a bike**), wild.fire and food.firecook (from 12, only
+  where allowed, put out cold), wild.shelter, wild.camp, wild.forage (never eat unless a person who is certain
+  checked it; three easy plants only; no mushrooms), wild.tracks, water.row, water.fish, water.sail (buoyancy aid
+  on every water rung, a club or instructor always). Some writers added rung-level `place` (body.balance 11–20,
+  sky.throw skimming, mind.maps hill, body.ride hill) so those never surface as a home pick. Quick pool 212,
+  extras 123. **Left:** the seven under-sevens ladders (strand little) — body.hopping, speak.sayit,
+  make.scissors, make.crayons, music.song, care.helping, order.ownthings — which have their own shape (from four,
+  beside a grown-up, twists).

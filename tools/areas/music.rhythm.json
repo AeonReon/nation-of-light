@@ -1,0 +1,130 @@
+{
+ "id": "music.rhythm",
+ "name": "Rhythm",
+ "line": "From clapping along to one song to leading a group in a clapped or tapped rhythm that stops together on your signal.",
+ "size": "weeks",
+ "strand": "make-things",
+ "who": "From about six; a child and a grown-up side by side",
+ "about": "For everybody from about six: a child and a grown-up can climb it side by side. It starts by clapping along to a song, then counting, then keeping time with a free metronome app, and checking yourself with a recording. After that you clap the rhythm of words, tap your foot and clap at the same time, clap between the beats, hear music in three and in four, and play a simple drum pattern on a table with both hands. It ends with you leading three or more people in a clapped or tapped rhythm that stops together when you signal. You need nothing but your hands, a table, and a phone.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Put on a song you like and clap on every beat, all the way to the end.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 4,
+   "note": "The beat is the steady pulse you would tap your foot to. Choose a song with a clear, strong beat, such as a pop song, a march or a folk dance tune. If you drift, stop clapping, listen for four beats, then join in again. If you already do this without thinking, do it with a song you have never heard."
+  },
+  {
+   "n": 2,
+   "test": "Count \"1, 2, 3, 4\" out loud over and over, clapping on every number, for one minute by a timer.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Keep the numbers evenly spaced, like the ticking of a clock. Clap a little louder on each \"1\". This is the counting that every later rung uses."
+  },
+  {
+   "n": 3,
+   "test": "Clap along with a free metronome app or website set to 80 beats a minute for two minutes.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Search \"online metronome\". A metronome clicks at an exact, steady speed. When you are exactly together, your clap covers the click and you stop hearing it; when you hear two sounds, you are early or late."
+  },
+  {
+   "n": 4,
+   "test": "With the metronome going, turn the sound down to nothing for eight claps, then turn it back up and check you are still together.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Count the eight silent claps in your head. If you have drifted, notice whether you went faster or slower, and try again. When eight is easy, try sixteen."
+  },
+  {
+   "n": 5,
+   "test": "Record yourself clapping a steady beat for two minutes with no music, and listen back for any place it speeds up.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Most people speed up without noticing, and a recording shows it. Start the metronome while you listen back, at the speed you started on, and hear where the two separate. Write down whether you sped up, slowed down, or held it."
+  },
+  {
+   "n": 6,
+   "test": "Say a nursery rhyme or short poem and clap once on every syllable, then clap it again with the words only in your head.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "For example, \"Twinkle, twinkle, little star\" is seven claps: twin-kle twin-kle lit-tle star. That pattern of long and short sounds is the rhythm, which is different from the steady beat underneath it."
+  },
+  {
+   "n": 7,
+   "test": "Tap your foot on the steady beat while you clap the rhythm of the same rhyme.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Say the rhyme out loud to start. Your foot keeps going evenly; your hands follow the words. If one of them falls apart, stop, start the foot alone, and add the claps again."
+  },
+  {
+   "n": 8,
+   "test": "Have somebody clap you a rhythm four beats long, and clap it back correctly five times in a row.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Take turns: they clap, you copy, then swap. Keep the rhythms short and simple at first. With nobody to hand, search for a free \"clap back rhythm\" video, which claps a rhythm and leaves a gap for you."
+  },
+  {
+   "n": 9,
+   "test": "With the metronome at 80, clap exactly halfway between the clicks for one minute.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Count \"1 and 2 and 3 and 4 and\" out loud, with the numbers on the clicks, and clap only on each \"and\". This is called the offbeat, and it is harder than it sounds. Slow the metronome to 60 if you keep landing on the click."
+  },
+  {
+   "n": 10,
+   "test": "Clap a bar of three and a bar of four with a louder clap on each \"1\", then say whether \"Happy Birthday\" is in three or four.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Count \"1, 2, 3\" several times, then \"1, 2, 3, 4\" several times. Then sing \"Happy Birthday\" and clap along, trying each count. It fits in three, like a waltz; \"Twinkle, Twinkle, Little Star\" fits in four. Try one more song you know and decide which it is."
+  },
+  {
+   "n": 11,
+   "test": "On a table, tap every beat with your right hand and every other beat with your left for one minute, then swap hands.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Count \"1, 2, 3, 4\": the right hand taps on all four, the left hand only on 1 and 3. Start slowly with the metronome. When it is steady, swap so the left hand taps every beat."
+  },
+  {
+   "n": 12,
+   "test": "Tap a simple drum pattern on a table for one minute: right hand on every beat, left hand on 2 and 4, a foot on 1 and 3.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "This is the pattern under a great many songs. The foot is the low drum, the left hand the sharp drum, the right hand keeps time. Build it one part at a time: right hand alone, then add the left hand, then the foot.",
+   "how": [
+    "Tap the right hand on every beat, counting 1, 2, 3, 4.",
+    "Add the left hand on 2 and 4.",
+    "Add your foot on the floor on 1 and 3.",
+    "Hold all three for one minute with the metronome, slowly."
+   ]
+  },
+  {
+   "n": 13,
+   "test": "Play that drum pattern along with a whole song, without stopping.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Choose a song with a steady beat, not too fast. If you lose it, keep only the right hand going until you find the beat again, then add the rest."
+  },
+  {
+   "n": 14,
+   "test": "Along with a song, stop tapping for four bars while counting silently, and come back in exactly on a \"1\".",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "A bar is one count of \"1, 2, 3, 4\", so four bars is sixteen beats. Count them in your head and start again on the next \"1\". This is how drummers and players know when to come back in."
+  },
+  {
+   "n": 15,
+   "test": "Keep a steady beat on a table, a box or an upturned pot while somebody sings or plays a whole song over it.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Agree the speed first by counting \"1, 2, 3, 4\" out loud before they start. Your job is to stay steady even when they speed up or make a mistake. With nobody to hand, do it under a family member singing along to the radio."
+  },
+  {
+   "n": 16,
+   "test": "Lead three or more people in a clapped or tapped rhythm: set the beat, give each a pattern, and end all together on your signal.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Family at a table works well. Start everybody on the steady beat, then give one person the rung-six rhythm and another the offbeat. Agree the signal beforehand, such as a raised hand and \"4, 3, 2, 1, stop\". Try it twice and let somebody else lead the second time."
+  }
+ ]
+}

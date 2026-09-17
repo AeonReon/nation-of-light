@@ -1,0 +1,149 @@
+{
+ "id": "make.electric",
+ "name": "Electricity",
+ "line": "From tracing the loop inside a torch to a battery-powered gadget of your own that does a job somebody asked for, still working a month later.",
+ "size": "months",
+ "strand": "make-things",
+ "from": 8,
+ "who": "From about eight with a grown-up; teens and grown-ups",
+ "about": "For grown-ups and teenagers, and for children from about eight with a grown-up beside them. Everything on this ladder runs on ordinary batteries of 9 volts or less. Mains electricity, from the sockets in the wall, kills: nothing on this ladder is ever connected to it, opened, or plugged in. The climb starts inside a battery torch, then a bulb lit with kitchen foil, a home-made switch, series and parallel, an electromagnet, a meter, an LED with the right resistor, a breadboard, a light that comes on in the dark, and a small computer chip you program. It ends with a battery gadget of your own that does a job somebody asked for and keeps working for a month.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Open a battery torch, take the batteries out, and trace with your finger the path electricity takes from the battery, through the switch, to the bulb and back.",
+   "ctx": "home",
+   "kind": "attention",
+   "mins": 10,
+   "note": "Use a torch that takes ordinary AA or AAA batteries, not one you charge with a lead. Unscrew the end or the front, take the batteries out, and look for the metal strips and springs that touch each end of the batteries, the switch and the bulb. Electricity only flows when there is an unbroken loop from one end of the battery back to the other: that loop is called a circuit. The switch simply opens a gap in the loop and closes it again. Put it back together and check it still lights."
+  },
+  {
+   "n": 2,
+   "test": "Write the four safety rules for this ladder and read them out to somebody.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "One: batteries of 9 volts or less only, and never anything that plugs into the wall, because mains electricity kills. Two: never join the two ends of a battery with just a wire or foil and nothing else in the loop, because the wire gets hot fast (this is a short circuit). Three: never cut, pierce, crush or short-circuit a lithium or rechargeable battery, such as the ones in phones, laptops, electric toothbrushes and power packs, because they can catch fire; and keep button batteries away from small children. Four: if anything gets hot, smells or smokes, disconnect it and step back. Outside, keep well away from power lines and electricity substations."
+  },
+  {
+   "n": 3,
+   "test": "Light the torch bulb with one or two batteries and two strips of kitchen foil, then take it apart again.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Fold two strips of foil a finger wide and long enough to reach. One strip goes from the raised end of the battery (plus) to the tip at the bottom of the bulb; the other from the flat end (minus) to the metal side of the bulb. A white LED from a torch needs about 3 volts, so use two batteries end to end, raised end touching flat end, and the longer leg or marked side of the LED towards plus. If the foil gets warm, the strips are touching each other: separate them.",
+   "how": [
+    "Tape one strip to each end of the battery.",
+    "Hold the other end of one strip against the tip of the bulb.",
+    "Touch the other strip to the metal side of the bulb."
+   ]
+  },
+  {
+   "n": 4,
+   "test": "Draw the circuit you made as a diagram using the standard symbols for a battery, a bulb, a switch and a wire.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "A single battery cell is a long thin line (plus) beside a short thick line (minus). A bulb is a circle with a cross in it. A wire is a straight line, drawn with square corners. A switch is a short line tilted up away from a gap. Look these up on any free science site if you want to check; diagrams let anybody in any country read your circuit."
+  },
+  {
+   "n": 5,
+   "test": "Put ten different things into a gap in your circuit, one at a time, and sort them into ones that light the bulb and ones that do not.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Try a coin, a key, a metal spoon, a pencil sharpened at both ends (touch the lead), a rubber band, paper, plastic, a wooden spoon, a piece of foil, a glass of tap water with the two foil ends dipped in. Metals let electricity through easily (conductors); plastic, rubber, wood and paper do not (insulators). Pencil lead and water let a little through, often too little to light the bulb, which is a real result and worth writing down."
+  },
+  {
+   "n": 6,
+   "test": "Make a switch from a paper clip and two drawing pins pushed into card, put it in your circuit, and turn the bulb on and off.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Push two drawing pins into a piece of thick card a paper clip's length apart, with a foil strip under each pin. Hook the paper clip under one pin so it can swing across to touch the other. Swinging it across closes the gap and completes the loop; swinging it away opens the gap. A light switch on the wall does the same job, but that one is mains: never open it."
+  },
+  {
+   "n": 7,
+   "test": "Put two batteries end to end in your circuit, see what happens to the brightness, and say why.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Check the voltage printed on the bulb or on the torch first, and do not use more batteries than that, or the bulb will burn out. Batteries end to end, raised end to flat end, add their voltages: two 1.5-volt batteries give 3 volts. Voltage is the push; more push makes more electricity flow through the same bulb, so it glows brighter. Turned the wrong way round, one battery cancels the other."
+  },
+  {
+   "n": 8,
+   "test": "Wire two bulbs one after the other (series), then side by side (parallel), and say in which one they shine brighter and why.",
+   "ctx": "kit",
+   "kind": "attention",
+   "note": "You need a second bulb of the same kind: from a second torch, or a cheap pack. In series, all the electricity goes through both bulbs in turn, the push of the battery is shared between them, and both glow dimmer; take one out and both go off. In parallel, each bulb has its own path straight to the battery, so each glows about as bright as one bulb alone, and the battery runs down faster. Most homes are wired in parallel, which is why one lamp can be off while another is on."
+  },
+  {
+   "n": 9,
+   "test": "Make an electromagnet: wind plastic-coated wire thirty times round a steel nail, connect it to one battery for a few seconds, and pick up paper clips.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Use thin plastic-coated wire and a single ordinary (not rechargeable, not lithium) 1.5-volt battery. Electricity flowing through a coil of wire makes it a magnet, and the steel nail inside makes it much stronger. The coil is almost a short circuit, so connect it only for a few seconds at a time and let go if the wire or battery gets warm. Try twenty turns and forty turns and count the paper clips each time."
+  },
+  {
+   "n": 10,
+   "test": "Explain voltage, current and resistance out loud using water in a pipe, and answer one question about it from somebody.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "Voltage is like the pressure pushing water along a pipe; it is measured in volts. Current is how much flows past a point each second; it is measured in amps. Resistance is like a narrow part of the pipe that makes it harder to flow; it is measured in ohms. More push or less resistance gives more current. The comparison helps but is not perfect: electricity does not leak out of an open wire the way water leaks out of an open pipe."
+  },
+  {
+   "n": 11,
+   "test": "Use a multimeter to measure the voltage of a new battery and a used one, and write both numbers down.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Borrow a meter if you can: from a relative, a school, a library or a makers' club; basic ones are cheap. Turn the dial to DC volts (a V with a straight line) on the 20 range, touch the red probe to the raised end and the black to the flat end. A new AA battery usually reads a little over 1.5 volts; a used one reads less. Never put the probes anywhere near a wall socket."
+  },
+  {
+   "n": 12,
+   "test": "Use the multimeter's beep setting to find which of three wires somebody has secretly broken.",
+   "ctx": "kit",
+   "kind": "attention",
+   "note": "Ask somebody to cut through the metal inside one of three plastic-coated wires without cutting the plastic, or to break one foil strip under tape. Turn the meter to the setting with a sound symbol, touch the probes together to hear the beep, then touch one probe to each end of each wire. A beep means a complete path; silence means a break. Testing like this, instead of guessing, is how faults are found in every kind of machine."
+  },
+  {
+   "n": 13,
+   "test": "Work out on paper the resistor an LED needs on a 9-volt battery, then build it and light the LED.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Without a resistor, too much current flows and the LED burns out, often in a second. A typical red LED uses about 2 volts and is happy with 0.02 amps, so the resistor takes the other 7 volts: 7 divided by 0.02 is 350 ohms; use the next size up, such as 390 or 470. Resistor values are shown by coloured bands, and a free online chart or your meter will read them. The LED's longer leg goes towards plus.",
+   "how": [
+    "Take the LED voltage away from the battery voltage.",
+    "Divide what is left by 0.02.",
+    "Choose the nearest resistor with a bigger number, and put it in the loop with the LED."
+   ]
+  },
+  {
+   "n": 14,
+   "test": "Build a circuit with an LED, a resistor and a push button on a solderless breadboard, from a diagram.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "A breadboard has hidden metal strips under its holes: the holes in each short row are joined, and the long rows down the sides carry the battery. Push the parts in, follow the diagram one wire at a time, and check each connection against it before connecting the battery. With no breadboard, build the same circuit in a free online circuit simulator first, which also counts for this rung."
+  },
+  {
+   "n": 15,
+   "test": "Build a light that comes on by itself when it gets dark, from a diagram, using a light sensor and a transistor.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "The light sensor is a light-dependent resistor or a phototransistor. As the room gets darker, the sensor's resistance changes, and the transistor, which works like a switch controlled by a small current, turns the LED on. Library books on electronics and free electronics sites have this exact circuit. Test it by covering the sensor with your hand."
+  },
+  {
+   "n": 16,
+   "test": "Make a small programmable computer chip blink an LED, either on a real board or in a free online simulator.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Microcontroller boards such as Arduino-type boards or the micro:bit run from batteries or from a USB lead to a computer, and are used in many schools and clubs, which often lend them. Free online simulators, such as Wokwi, let you write and run the same code with no board at all. The code turns a pin on, waits half a second, turns it off, waits, and repeats. Only ever power it from batteries or a USB lead, never from anything wired to the wall."
+  },
+  {
+   "n": 17,
+   "test": "Program the chip to do one thing when a button is pressed and something different when a light sensor reads dark.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "The chip reads the button as on or off, and reads the light sensor as a number. Use an if: if the button is pressed, flash quickly; if the light number is below a value you choose, turn the LED on steadily. Print the sensor number to the screen first so you can see what dark and light read in your room."
+  },
+  {
+   "n": 18,
+   "test": "Build a battery gadget in a box that does a job somebody at home asked for, and keep it working for a month.",
+   "ctx": "long",
+   "kind": "kindness",
+   "note": "Ask first: a light that comes on when a cupboard opens, a buzzer when the fridge door is left open, a reaction-time game, a night light for a hallway, a light that shows when a plant's soil is dry. Put it in a small box with the wires tidy and the battery easy to change. Write down every time it stops working and what you fixed. The finish is a month of it being used, still running on batteries only."
+  }
+ ]
+}

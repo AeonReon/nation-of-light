@@ -1,0 +1,138 @@
+{
+ "id": "make.cloth",
+ "name": "Cloth and thread",
+ "line": "From threading a needle to a pair of pull-on shorts or a skirt, sewn by hand and worn out of the house.",
+ "size": "months",
+ "strand": "make-things",
+ "who": "From about seven; a child and a grown-up side by side",
+ "about": "For everybody from about seven: a child and a grown-up can climb it side by side, with a grown-up handling the iron for younger children. It starts with a needle, a knot and three stitches, then a button, a seam and a small filled pouch, then a hem, a stitched edge, a drawstring bag and a cushion cover. It ends with a pattern traced from clothes that already fit, and a pair of shorts or a skirt you sew and wear out of the house. Everything is sewn by hand, so there is no machine to buy: a needle, thread, pins, scissors and old sheets, pillowcases or shirts are enough.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Thread a needle and tie a knot in the long end of the thread that does not pull through the cloth.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 5,
+   "note": "Cut the thread about as long as your arm, because longer thread tangles. Snip the end cleanly, wet it, and push it through the eye while holding the needle against something white. For the knot, wrap the end twice round your fingertip, roll it off with your thumb and pull it tight."
+  },
+  {
+   "n": 2,
+   "test": "Sew a running stitch along a pencil line on a scrap of cloth, with every stitch the same length.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "In and out along the line, each stitch about half a centimetre long. Pull the thread snug but not so tight that the cloth bunches up. Old sheets, pillowcases and shirts all make good practice scraps."
+  },
+  {
+   "n": 3,
+   "test": "Sew a line of back stitch that looks like one unbroken line on the front.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Come up one stitch-length ahead, go back down at the end of the last stitch, and come up one stitch-length ahead again. It is the strongest hand stitch and the one that sews the seams on this ladder. On the back the stitches are longer and overlap, and that is correct."
+  },
+  {
+   "n": 4,
+   "test": "Finish a line of stitching with three tiny knotted stitches on the back, and trim the thread.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Take a tiny stitch, pull it nearly tight, and pass the needle through the little loop before it closes; do that three times in the same place. Tug the cloth gently and nothing should move. Every rung from here ends this way."
+  },
+  {
+   "n": 5,
+   "test": "Sew a four-hole button onto a scrap of cloth so it holds when you pull it hard.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Double the thread. Lay a pin across the top of the button and sew over it four or five times through each pair of holes, then pull out the pin, wind the thread three times round the stitches under the button and finish on the back. The pin leaves room for the cloth of the buttonhole. If you already sew buttons on, sew one onto clothing that needs it and count it."
+  },
+  {
+   "n": 6,
+   "test": "Sew two pieces of cloth together with back stitch one centimetre from the edge, then open them out.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Put the pieces with their better sides facing each other, pin them, and draw a pencil line one centimetre in from the edge. Sew along the line, then open the pieces out: the stitches are hidden and the seam sits on the back. Nearly all clothes are joined this way."
+  },
+  {
+   "n": 7,
+   "test": "Sew a small pouch from two squares, turn it right side out through a gap, fill it, and sew the gap shut.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Two squares about the size of your palm, sewn round three sides and part of the fourth. Turn it through the gap, push the corners out with a pencil, fill it with dried rice or lentils, and close the gap with small stitches over the edge. It makes a beanbag for throwing and catching; keep filled bags away from babies."
+  },
+  {
+   "n": 8,
+   "test": "Press a seam open with an iron, and compare it with a seam you did not press.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Open the two edges of the seam apart on the back and press down with the iron rather than sliding it. The pressed seam lies flat and looks finished; the other one bulges. A grown-up does the iron for younger children, and with no iron, running a thumbnail firmly along the opened seam does a smaller version of the same job."
+  },
+  {
+   "n": 9,
+   "test": "Hem the edge of a square of cloth: fold it over twice, pin it, and sew it down with small slanting stitches.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Fold the edge over about half a centimetre, then again about one centimetre, and press the folds. Each stitch catches a thread or two of the main cloth and then the fold; on the front only tiny dots should show. A square of old shirt hemmed on all four sides makes a handkerchief."
+  },
+  {
+   "n": 10,
+   "test": "Sew blanket stitch along the edge of a piece of felt or fleece, with every stitch the same height and the same distance apart.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Push the needle in from the front a little way in from the edge, and before you pull it tight, pass the needle through the loop of thread at the edge. An old fleece jumper cut up works as well as felt. Fleece does not fray, so it is good for a first pencil case."
+  },
+  {
+   "n": 11,
+   "test": "Measure and cut a rectangle of cloth 30 centimetres by 40 centimetres with straight edges and square corners.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Lay the cloth flat on a table, draw the lines with a ruler and a pencil or chalk, and check the corners against the corner of a book. Cut with long strokes of sharp scissors along the line, not little snips. Lining the edges up with the threads that run through the cloth makes it hang straight."
+  },
+  {
+   "n": 12,
+   "test": "Sew a drawstring bag from your rectangle, with a channel at the top and a cord that pulls it closed.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Fold the rectangle in half, back stitch the side and the bottom but stop five centimetres from the top, then fold the top edge over twice to make a channel wide enough for the cord and sew it down. Pin a safety pin to one end of a cord, a shoelace or a ribbon and push it through the channel. Use it for shoes, marbles or a packed lunch."
+  },
+  {
+   "n": 13,
+   "test": "Trace a paper pattern from a pillowcase, with an extra centimetre added all the way round for the seams.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Lay the pillowcase flat on newspaper or wrapping paper and draw round it, then draw a second line one centimetre outside the first. That extra centimetre is what the seams use. Write on the pattern what it is and which edge sits on a fold of the cloth."
+  },
+  {
+   "n": 14,
+   "test": "Make a cushion cover with an overlapping back and no zip, using your own paper pattern.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Cut one front piece the size of the cushion plus the seam allowance, and two back pieces that overlap by about ten centimetres, each hemmed along the edge that overlaps. Lay the backs on the front with the better sides facing, sew all round, turn it out through the overlap and push the cushion in. No cushion? The same cover makes a pillowcase for a small pillow."
+  },
+  {
+   "n": 15,
+   "test": "Sew a split seam or a loose button back together on a piece of clothing belonging to somebody in your home, and give it back.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Ask around: a coat with a loose button, a pocket coming away, a seam open under an arm. Turn the clothing inside out and back stitch along the old seam line, starting a little before the split and ending a little after it. If you live alone, do it for a friend or neighbour who asks."
+  },
+  {
+   "n": 16,
+   "test": "Shorten or take in one piece of your own clothing that does not fit, and wear it.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "The easiest are trousers or sleeves a little too long, or a waist a little too loose. Put it on inside out, pin where it should be, take it off, and sew along the pins, then try it on before you cut away any extra cloth. Children often have trousers that are too long, which makes a good first one."
+  },
+  {
+   "n": 17,
+   "test": "Trace a pattern from a pair of pull-on shorts or a skirt that fits you, and cut the pieces out of cloth.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "For shorts, fold them in half so one leg lies flat, trace the front and then the back (the back is deeper at the seat), and add one centimetre for seams, two at the hems and three at the waist for the elastic. For a simple skirt, a rectangle half as wide again as your hips is enough, as long as you want it plus the hem and the waist. An old sheet or a large cotton shirt gives enough cloth."
+  },
+  {
+   "n": 18,
+   "test": "Sew the shorts or skirt, thread elastic through the waist, and wear them out of the house.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "Back stitch the seams, press them, hem the legs or the bottom edge, then make the waist channel the way you did on the drawstring bag and feed the elastic through with a safety pin, sewing its ends together. Try it on before you sew the last gap in the channel shut. Spread it over a week of evenings; when you wear it out of the house, this ladder is done."
+  }
+ ]
+}

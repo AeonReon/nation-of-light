@@ -1,0 +1,130 @@
+{
+ "id": "body.skip",
+ "name": "Skipping",
+ "line": "From jumping on the spot to a hundred skips in a row, a criss-cross, and turning a long rope for somebody else.",
+ "size": "weeks",
+ "strand": "get-strong-outside",
+ "who": "Everybody; a child and a grown-up side by side",
+ "about": "For everybody: a child from about five and a grown-up can climb it side by side. It starts with small quiet jumps on the spot and a rope set to the right length, then swinging the rope over and stepping across it, then the first few skips in a row. From there the count climbs to fifty and a hundred, with running steps, one-foot skips and a criss-cross on the way. It ends with a long rope turned by two people and somebody else jumping in. A bought rope is cheap, and a length of washing line or thick cord works just as well.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Jump on the spot with your feet together twenty times, landing quietly on the balls of your feet.",
+   "note": "The balls of your feet are the wide part just behind your toes. The jumps only need to leave the floor a little, and quiet landings mean your knees are bending softly. This is exactly how skipping feels without the rope, so if you do this already, count twenty quiet ones.",
+   "ctx": "room",
+   "kind": "skill",
+   "mins": 1
+  },
+  {
+   "n": 2,
+   "test": "Stand on the middle of your rope and make it the length where the two ends reach your armpits.",
+   "note": "Stand on the middle with both feet and pull the ends straight up. Too long, tie a knot near each end or wrap it round your hands; too short, find a longer piece. No rope: use a length of washing line or thick cord, about two and a half metres for a grown-up and two metres for a child. A rope is only for skipping: never put it round anybody's neck, and put it away where a small child cannot play with it alone.",
+   "ctx": "kit",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Hold the rope behind your heels, swing it over your head, and let it land on the floor in front of your feet, ten times.",
+   "note": "No jumping yet. Turn the rope with your wrists rather than your whole arms, hands a little out from your hips. Outdoors on a flat hard surface is easiest; indoors, check the rope clears the ceiling and the light.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 4,
+   "test": "Swing the rope over, let it land in front of you, and step across it, ten times.",
+   "note": "Swing, land, step over, then bring the rope back behind your heels and go again. This teaches the timing of the rope reaching your feet, slowly enough to watch.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 5,
+   "test": "Swing the rope over and jump it with both feet as it reaches your toes, ten single jumps with a stop between each.",
+   "note": "One swing, one jump, stop. Jump just as the rope is about to touch the floor in front of your toes. A small jump is enough; the rope only needs a few centimetres.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Skip three times in a row without stopping.",
+   "note": "Now join the single jumps up: as you land, the rope is already coming over again. Keep your elbows close to your sides and let your wrists do the turning. Three is the rung, however long it takes.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Skip ten times in a row without stopping.",
+   "note": "Count out loud. If the rope keeps catching your toes, you are jumping a little late; if it hits your heels as you land, you are turning too slowly. Small, steady jumps win.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 8,
+   "test": "Skip twenty-five times in a row without stopping.",
+   "note": "Twenty-five is where breathing starts to matter. Breathe normally through the whole count, and keep landing on the balls of your feet with soft knees.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Skip for one whole minute on a timer, starting again straight away each time the rope catches.",
+   "note": "The rung is the minute, not a count. Every time the rope catches, step back into position and go again without walking away. If you already skip for longer than this, time a minute and count it.",
+   "ctx": "kit",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Skip fifty times in a row without stopping.",
+   "note": "Fifty takes under a minute. If you stop near thirty every time, slow the rope down a little and jump lower. Most people get here within a couple of weeks of a few minutes most days.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 11,
+   "test": "Skip twenty times in a row stepping from one foot to the other, as if running on the spot.",
+   "note": "One foot takes the first skip, the other foot takes the next. It feels uneven at first and then much easier than two feet, and many boxers skip this way for a long time without stopping. Keep the steps small and quiet.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 12,
+   "test": "Skip ten times in a row on one foot, then ten on the other foot.",
+   "note": "Hold the other foot just off the ground. One foot will be much weaker; give it the extra goes. Stop if your ankle or knee hurts and come back to it another day.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Skip one hundred times in a row without stopping.",
+   "note": "A hundred is about a minute and a half. Count in tens so the number stays small in your head. You can use two feet or the running step, whichever you are steadier with.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Skip twenty in a row with one criss-cross in the middle: cross your arms as the rope comes over, jump through, and uncross on the next turn.",
+   "note": "Cross your arms at the wrists in front of your tummy, so your hands end up beside the opposite hips, and the rope makes a loop to jump through. Practise the cross with single jumps and stops first. Then put one into a row of twenty.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 15,
+   "test": "Run into a long rope turned by two other people, jump it five times, and run out the other side.",
+   "how": [
+    "Use a rope of about four or five metres, turned by one person at each end.",
+    "Stand beside one of the turners, close to the rope.",
+    "Just after the rope touches the ground and starts going up away from you, run into the middle.",
+    "Jump five times facing a turner, then run out on the far side."
+   ],
+   "note": "Long rope is played in playgrounds all over the world. The turners keep it slow and steady and just touching the ground. Nobody needs to be good at it; the first few tries the rope catches you, and everybody laughs.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 16,
+   "test": "Turn a long rope with another person for a child or a friend, and help them run in, jump five times, and run out.",
+   "note": "Turn slowly and evenly, and say 'now' as the rope goes up away from them so they know when to run in. Start with the rope swinging from side to side along the ground for a small child, then go all the way round. Keep going until they do it without you calling.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

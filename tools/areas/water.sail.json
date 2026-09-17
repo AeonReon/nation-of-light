@@ -1,0 +1,154 @@
+{
+ "id": "water.sail",
+ "name": "Sailing",
+ "line": "From naming the parts of a dinghy, to taking somebody on their first sail and handing them the tiller.",
+ "size": "months",
+ "strand": "get-strong-outside",
+ "from": 8,
+ "who": "From about eight, always with a club or instructor",
+ "about": "For anybody from about eight; every rung on the water is done with a club or an instructor, whatever your age. The first rungs happen on land and at a pool: the parts of a small boat, finding a club, reading the wind, where a boat can and cannot sail, two knots, fitting a buoyancy aid and floating in one. Then, with an instructor, you crew, rig, steer, change speed, tack, practise a capsize, gybe and come back in. It ends with sailing a course round three marks and taking somebody on their first sail. You do not need a boat of your own: many sailing clubs and centres run free or low-cost try-sailing days and lend boats and buoyancy aids.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Find a picture of a small sailing dinghy and name the hull, mast, boom, sail, tiller, rudder, centreboard and mainsheet, saying what each does.",
+   "note": "The hull is the boat itself; the mast holds the sail up, and the boom holds its bottom edge. The tiller moves the rudder, which steers. The centreboard is the fin under the boat that stops it sliding sideways, and the mainsheet is the rope you pull to bring the sail in. Sailing club websites often have a labelled drawing.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 10
+  },
+  {
+   "n": 2,
+   "test": "Find a sailing club or centre near you, and write down the date of its next try-sailing or beginners' day and what to bring.",
+   "note": "Your national sailing organisation's website usually lists clubs and centres, including ones on lakes and reservoirs as well as the sea. Many run free or low-cost open days and lend the boat and the buoyancy aid. Write down the youngest age they take and whether they ask you to swim first. In places with a cold season, most sailing stops for the winter, so plan for the start of the warm months.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "On a walk, say where the wind is coming from five times, using your face, a flag, smoke, trees or the ripples on water.",
+   "note": "Turn your face until the wind feels the same on both cheeks: that is where it is coming from. Then check against something: a flag streams away from the wind, and ripples move with it. Say it as a direction or a landmark: \"from the hill\". Sailors check this all the time, so start the habit now.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Draw the wind as an arrow at the top of a page, then draw boats pointing in six directions and mark which ones could sail and which could not.",
+   "note": "A sailing boat cannot sail straight into the wind. Roughly, anything within about 45 degrees either side of where the wind is coming from is the no-go zone; everything else can be sailed. Across the wind is usually the easiest and fastest. Keep the drawing: it explains why a boat has to zigzag to go upwind.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Tie a figure-of-eight knot and a bowline, five times each, on a piece of rope or a dressing-gown cord.",
+   "note": "The figure-of-eight goes in the end of a rope so it cannot run out through a pulley. The bowline makes a loop that does not slip and is easy to undo, for tying a boat up. A sailing club website or a knot guide shows each one in pictures. When you can tie both without looking at the pictures, you are done.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Put on a buoyancy aid, do up every zip and buckle, and have somebody lift it by the shoulders to check it does not ride up past your chin.",
+   "note": "A buoyancy aid that rides up over your chin is too big or too loose; tighten it from the bottom strap up. You wear one on every rung on the water. If you have none, do this at the start of your first club day with one they lend you, and count it.",
+   "ctx": "kit",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "At a pool or in shallow water with an instructor, wearing a buoyancy aid, get in, float on your back for a minute, then swim ten metres.",
+   "note": "Float first: lie back, let the buoyancy aid hold you, and breathe out slowly until you are calm. That is the first thing to do whenever you land in the water, including from a boat. Many clubs run this at a pool or at the start of a first day. If you cannot swim ten metres yet, start with the swimming ladder.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 8,
+   "test": "Before you go on the water at your first session, say back to the instructor what you will do if the boat tips over.",
+   "note": "The usual plan: float first and get your breath, stay with the boat and hold on to it, because a boat is far easier to see than a head, and wait for the instructor or the safety boat. Never swim away from the boat to reach the shore. Every club says it in its own words; use theirs.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Go out as crew with an instructor, and say where the wind is coming from three times while you are sailing.",
+   "note": "Your job is to sit where the instructor says, move across the boat when asked, and keep watching the wind: the flag at the top of the mast, the ripples, your face. Buoyancy aid on. Ask the instructor to check your answers.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "With the instructor, rig the boat and check it over before it goes in.",
+   "note": "Look up first: never rig or move a boat under power lines, because a mast can carry electricity without touching them. The checks usually include: the drain bung in, the rudder and centreboard fitted, the sail up, the ropes free and with a figure-of-eight knot at the ends. Say each check out loud as you do it. Buoyancy aid on before the boat goes in.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 11,
+   "test": "With the instructor on board, hold the tiller and the mainsheet at the same time, and sail in a straight line across the wind for one minute.",
+   "note": "Tiller in the hand nearest the back of the boat, mainsheet in the other, sitting on the side the wind is coming from. Push the tiller away from you and the boat turns towards the wind; pull it and the boat turns away. Small movements. Pick a landmark and keep pointing at it.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 12,
+   "test": "Pull the sail in to speed up, let it out to slow down, and let it right out to stop the boat, all on purpose.",
+   "note": "Across the wind, letting the sail all the way out until it flaps makes the boat slow almost to a stop. This is the way to stop and think whenever something goes wrong. Do each change three times. Instructor aboard or close by, buoyancy aid on.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Tack: turn the front of the boat through the wind and keep sailing on the other side.",
+   "note": "The instructor talks you through it: say \"ready about\", push the tiller away, duck under the boom as it crosses, move to the new high side, and change hands on the tiller and mainsheet. It feels like a lot of things at once the first few times. Buoyancy aid on, instructor aboard.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Sail back and forth across the wind between two points, tacking at each end, three times.",
+   "note": "Pick two fixed points, such as two buoys or a buoy and a jetty. Aim for smooth tacks that keep the boat moving, not fast ones. If you stop in the middle of a tack, let the sail out, straighten up and try again. Buoyancy aid on, instructor aboard or in the safety boat close by.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 15,
+   "test": "With an instructor and a safety boat, tip the boat over on purpose, float, bring it upright, and climb back in.",
+   "note": "Clubs run this in warm, sheltered water, because a capsize you have practised is far calmer than one you have not. Float first, get your breath, then hold the boat. The usual way to bring it up: swim round to the centreboard, pull or stand on it, and lean back. The instructor shows you and stays beside you; never try it without them.",
+   "ctx": "out",
+   "kind": "courage"
+  },
+  {
+   "n": 16,
+   "test": "Before a sailing day, look up the wind speed and direction, say whether it suits you, and check your answer with the instructor.",
+   "note": "Beginners usually sail best in light, steady wind; your club will tell you its own limits. Two warnings: gusts much stronger than the average wind, and wind blowing from the land out over the water, which looks calm near the shore but pushes a boat away from it. On the sea, check the tide as well. When the instructor says no, that is a good decision, not a lost day.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 17,
+   "test": "Gybe with the instructor aboard: turn the back of the boat through the wind, keeping your head low as the boom swings across.",
+   "note": "A gybe happens when the wind is behind you, and the boom comes across fast and hard, so this rung comes after tacking is steady. Say \"stand by to gybe\", pull some of the mainsheet in, turn gently, duck low, and change sides. Only in light wind for the first ones. Buoyancy aid on.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 18,
+   "test": "Come back to a jetty, pontoon or beach and stop the boat where you meant to, without bumping.",
+   "note": "Come in slowly with the wind across or ahead of you, and let the sail right out to stop, as you practised on rung 12. If it is going wrong, turn away and come round again: a second try is normal. The instructor watches from the shore or the safety boat. If you already do this, do it on purpose and count it.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 19,
+   "test": "Sail a triangle round three marks, steering the whole way, with the instructor aboard or watching from the safety boat.",
+   "note": "A triangle makes you sail across the wind, upwind with tacks, and downwind with a gybe, which is every rung so far. Say each turn out loud before you make it. Buoyancy aid on, and only on a day the club says suits you.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 20,
+   "test": "Take somebody on their first sail as your crew, with the club's agreement and a safety boat out, and hand them the tiller for a minute.",
+   "note": "A friend, a parent or a younger sailor at a club open day. Fit their buoyancy aid with the lift test, tell them the plan if the boat tips over, and say each thing before it happens. Choose a light wind and a straight stretch before you hand them the tiller. The end of the ladder is somebody else stepping out of the boat wanting to go again.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ],
+ "place": "water"
+}

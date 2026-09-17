@@ -1,0 +1,157 @@
+{
+ "id": "make.machines",
+ "name": "Making things with code",
+ "line": "From exact instructions on paper to a web page you made that somebody asked for a change to, and then used on three different days.",
+ "size": "months",
+ "strand": "make-things",
+ "who": "From about eight, a grown-up nearby online; grown-ups too",
+ "about": "For everybody from about eight, with a grown-up close by for anything online and in charge of any account; grown-ups start at the same first rung. The climb starts on paper with no computer, then moves blocks on a free site to make a small game, then typed code: a web page, colours, a button, error messages, a list that remembers what you typed. It ends with putting your page online at a free address, watching somebody use it, fixing what confused them, adding the thing they asked for, and seeing them use it on three different days. All of it can be done with free sites and a computer or tablet already in the house, and it teaches you to see how the apps you use every day are made.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Write exact step-by-step instructions for drawing a simple picture, and have somebody follow them word for word without seeing the picture.",
+   "ctx": "with",
+   "kind": "attention",
+   "mins": 10,
+   "note": "Draw a house from a square, a triangle and a door first, and hide it. Write steps like \"Draw a square with sides as long as your thumb\" and \"Draw a triangle sitting on top of the square\". The other person does exactly what the words say, even when it is clearly wrong. Where their drawing goes wrong, your instructions were not exact enough, and a computer is even more literal than a person."
+  },
+  {
+   "n": 2,
+   "test": "Agree five online safety rules with a grown-up, or write them for your household, before using any coding site.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "Good rules: a grown-up sets up and owns any account for a child, and reads its age rules first. Never put your full name, school, address, photo or where you are into a project or a profile. Do not chat with or reply to people you do not know, and never move a conversation to another app. Tell a grown-up straight away about anything that feels wrong, and nobody is in trouble for telling. Never type a password or personal details into code somebody else gave you. Grown-ups keep the same rules for themselves, and use a strong password."
+  },
+  {
+   "n": 3,
+   "test": "Make a character move across the screen with code blocks on a free coding site that needs no account.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "The Scratch editor (scratch.mit.edu, choose Create) and the Hour of Code activities at code.org both work in a browser without an account. In Scratch, drag a \"when green flag clicked\" block, then \"move 10 steps\" under it, and click the green flag. A computer or tablet is best; the blocks are hard to drag on a phone."
+  },
+  {
+   "n": 4,
+   "test": "Make a character that keeps moving and bounces off the edges of the screen, using a loop.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "In Scratch, put \"move 10 steps\" and \"if on edge, bounce\" inside a \"forever\" block. A loop repeats the blocks inside it, which saves writing the same thing a hundred times. To keep your work without an account, use File, then Save to your computer."
+  },
+  {
+   "n": 5,
+   "test": "Make something happen only when a key is pressed or when two characters touch, using an if.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "In Scratch, try \"if key space pressed then\" with \"change y by 10\" inside, placed inside the forever loop, or \"if touching\" another sprite, then \"say Got you!\". An if checks a question and only runs its blocks when the answer is yes. Nearly every program you use is full of these."
+  },
+  {
+   "n": 6,
+   "test": "Add a score that goes up by one each time something is caught, using a variable.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "In Scratch, make a variable called score, set it to 0 when the green flag is clicked, and \"change score by 1\" when the catch happens. A variable is a named box that holds a value the program can change. Check that the score starts at 0 every time the game restarts."
+  },
+  {
+   "n": 7,
+   "test": "Finish a small game with a start, a way to win or lose, and an end screen, save it, and have somebody play it.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Keep it small: catch ten falling apples before a timer runs out, or dodge five balls. Watch the other person play and do not explain anything; notice where they are confused. Save the game file to the computer so it is kept."
+  },
+  {
+   "n": 8,
+   "test": "Make a web page with your first name as a heading, in a plain text editor, and open it in a web browser.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Open a plain text editor (Notepad on Windows; TextEdit on a Mac, set to plain text in its menu) and type <h1>Sam</h1> with your own first name, or any word. Save it as index.html and double-click the file; it opens in the browser. On a tablet, a free in-browser code editor does the same job. Everything on this page is only on your computer until the rung where it goes online.",
+   "how": [
+    "Open a plain text editor.",
+    "Type <h1>Your name</h1> and a line of <p>Some words</p> under it.",
+    "Save it as index.html, then open that file in a browser."
+   ]
+  },
+  {
+   "n": 9,
+   "test": "Change the colours, the font and the spacing of your page with CSS until it looks how you want.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Add a <style> section at the top with lines such as body { background: lightyellow; font-family: sans-serif; } and h1 { color: teal; }. Save, then reload the browser to see each change. Change one thing at a time so you can see what each line does."
+  },
+  {
+   "n": 10,
+   "test": "Add a button that changes the words on the page when you press it, using JavaScript.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Give a paragraph an id, add a <button>, and in a <script> section at the bottom write a line that sets that paragraph's text when the button is clicked. Free beginner lessons on sites such as MDN Web Docs or freeCodeCamp show exactly this. Copy the example, then change the words to your own, so you understand each part."
+  },
+  {
+   "n": 11,
+   "test": "Break your button on purpose, read the error message in the browser's console, and fix it.",
+   "ctx": "kit",
+   "kind": "attention",
+   "note": "Misspell a word in your script, save, and reload. On a computer, open the console with F12, or right-click the page, choose Inspect, then the Console tab. The red message usually names the line number and what went wrong, such as a name that does not exist. Reading error messages carefully fixes most problems faster than guessing."
+  },
+  {
+   "n": 12,
+   "test": "Draw on paper how a to-do list page will look, and write one sentence for what each button does, before writing any code.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Draw the box you type into, the Add button, the list, and a Delete button beside each item. Write, for example: \"Add puts what I typed at the bottom of the list and empties the box.\" Deciding this on paper first is quicker than changing code later."
+  },
+  {
+   "n": 13,
+   "test": "Build the list page from your drawing: type something, add it to the list, and delete any item.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "You need a text box, an Add button, and a list that your script adds a new item to. Each item gets its own Delete button that removes it. Build the Add part first and check it works before starting the Delete part."
+  },
+  {
+   "n": 14,
+   "test": "Make the list still be there after you close the page and open it again.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Browsers have a small store called localStorage: save the list into it every time it changes, and read it back when the page opens. It only keeps the list in that browser on that device, and clearing the browser's data empties it. Test by adding three items, closing the tab, and opening the page again."
+  },
+  {
+   "n": 15,
+   "test": "Ask an AI chat tool to explain one line of your code you do not fully understand, then change that line to do something new and check it works.",
+   "ctx": "kit",
+   "kind": "attention",
+   "note": "Many AI tools have a minimum age in their rules, often 13 or 18: a child does this with a grown-up using the grown-up's tool. Paste the one line, not your whole project, and never paste passwords or personal details. The explanation can be wrong, so the test is whether your change works when you reload the page."
+  },
+  {
+   "n": 16,
+   "test": "Make your list page work on a narrow phone-sized screen, checked in the browser's device view.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Add <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> inside the <head>. Open the browser's Inspect tools and choose the phone or device icon to see the page at a phone's width. Make buttons big enough for a finger and make sure nothing runs off the side of the screen."
+  },
+  {
+   "n": 17,
+   "test": "Put your page online at a free web address, and open it on a phone.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Free hosting sites such as GitHub Pages or Netlify let you upload a folder and give you an address. Their rules usually need you to be 13 or older, so a grown-up creates and owns the account for a younger child. Check the page first: no full name, school, address or photo on it."
+  },
+  {
+   "n": 18,
+   "test": "Send the address to one person, watch them use the page for the first time without helping, and write down where they got stuck.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Choose somebody you know: a family member or a friend. Sit beside them or watch on a video call, and do not point or explain, even when they struggle. Every place they hesitate goes on your list; that list is more useful than anything you could guess."
+  },
+  {
+   "n": 19,
+   "test": "Fix the first thing they got stuck on, and put the new version online without losing the working one.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Before changing anything, copy the whole working folder and name the copy with the date, so you can always go back. Make the fix, test it on your computer, then upload. Open the address on a phone afterwards to check the live page works."
+  },
+  {
+   "n": 20,
+   "test": "Ask your user for one thing they would like the page to do, add it, and see them use the page on three different days.",
+   "ctx": "long",
+   "kind": "kindness",
+   "note": "Keep the request small enough to build in a few sessions: a tick box for done items, a count of items, a second list. Tell them when it is ready and do not remind them to use it. The finish is three separate days on which they chose to open it."
+  }
+ ]
+}

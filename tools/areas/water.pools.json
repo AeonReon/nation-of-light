@@ -1,0 +1,97 @@
+{
+ "id": "water.pools",
+ "name": "Rock pools and shore",
+ "line": "From finding the time of low water to leading a rock pool hunt where every creature goes back.",
+ "size": "afternoon",
+ "strand": "get-strong-outside",
+ "place": "coast",
+ "who": "Everybody; a grown-up always with a child at the water",
+ "about": "For everybody: a child and a grown-up can climb it side by side, and a grown-up is always with any child at the water. It needs a rocky shore, so it waits for a day at the coast. It starts at home with the time of low water and what to wear, then on the shore: watching one pool before touching anything, five creatures found by looking, a stone turned and put back, one creature looked at closely in a tub and returned. Then naming what is common where you live, why different creatures live high and low on the shore, the line the last tide left, a bag of rubbish taken away, and a written count of one pool. It ends with you leading a hunt for younger children. A rock pool stays full of life only when every visitor puts everything back, and that is what this ladder teaches first.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Look up the time of low water for the shore you will visit, and plan to arrive about an hour before it.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Free tide times are on tide websites and apps, and harbours often post them. The pools lowest on the shore are only uncovered around low water, and arriving an hour before gives you the most time with the tide still going out. The Weather and tide ladder covers tides fully. On seas with almost no tide, such as the Mediterranean, any time will do; watch the waves instead.",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Get ready for the shore: shoes with grip that can get wet, a clear tub, and a turn-back time agreed with everybody going.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Old trainers or water shoes are best; bare feet and flip-flops slip and get cut on barnacles. A clean ice-cream tub or a large jar is the viewing tub; no net is needed, because nets scrape creatures off the rocks. Agree the turn-back time before you leave, such as an hour after low water, and tell somebody at home where you are going."
+  },
+  {
+   "n": 3,
+   "test": "At the shore, sit beside one pool without touching anything for five minutes, and count everything that moves.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "Choose a pool on the higher rocks first, away from the waves. Keep your shadow off the water and stay still: after a minute or two, shrimps, small fish and snails start to move again. Walk on bare, rough rock, not on seaweed, which is very slippery. A grown-up stays within arm's reach of any young child near water."
+  },
+  {
+   "n": 4,
+   "test": "Find five different kinds of creature in the pools by looking, before you touch any of them.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "Look in the seaweed at the edge, in cracks, under ledges and on the bottom: snails, limpets, anemones (soft blobs that open out like flowers under water), crabs, small fish, shrimps, starfish. Each kind counts once. Seaweeds are alive too, but for this rung count animals."
+  },
+  {
+   "n": 5,
+   "test": "Lift one small stone slowly, look at what lives under it, and put it back the same way up, exactly where it was.",
+   "ctx": "out",
+   "kind": "kindness",
+   "note": "Only a stone you can lift easily with one hand. The creatures under it need the dark and the damp, and a stone left upside down can kill what lived on both sides of it. Lower it back gently so nothing is squashed, and never move rocks that are stuck fast or too big to lift."
+  },
+  {
+   "n": 6,
+   "test": "Put one creature in your tub of seawater for a few minutes, look closely, and put it back in the same pool it came from.",
+   "ctx": "out",
+   "kind": "kindness",
+   "note": "Fill the tub from the pool first and keep it in the shade. Pick up only what comes away easily: a shrimp, a periwinkle, a small crab held by the back of its shell. Never pull limpets, anemones or starfish off rocks; look at them where they are. One creature at a time, ten minutes at most. In warm seas some pool creatures sting or bite dangerously, so there, look and never touch anything you cannot name."
+  },
+  {
+   "n": 7,
+   "test": "Name five of the creatures you found, using a free app, a seashore guide or a sign at the beach.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Photograph them in the tub or the pool and check the names later if that is easier. Free apps such as Seek suggest a name from a photo; a seashore guide for your part of the world from the library is more reliable. Learn what is common where you live first; those are the ones you will meet on every visit."
+  },
+  {
+   "n": 8,
+   "test": "Walk from the top of the shore down towards the water, and say which creatures live high up and which live low down.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "Creatures near the top spend hours out of the water every day, so they are the ones that can shut themselves in or hold water, such as barnacles, limpets and periwinkles. Lower down, near low water, live the ones that dry out easily, such as many anemones, starfish and sea urchins. Keep to your turn-back time, and stay off rocks where waves are breaking."
+  },
+  {
+   "n": 9,
+   "test": "Find the strandline, the line of seaweed and shells left by the last high tide, and name five things in it.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "Shells, crab shells, egg cases, driftwood, feathers. The dark leathery pouches are egg cases of skates, rays or sharks; a ball of papery bubbles is often the egg mass of a sea snail. Do not touch washed-up jellyfish, which can still sting, or anything sharp, or any container with liquid in it. Wash your hands afterwards."
+  },
+  {
+   "n": 10,
+   "test": "Pick up ten pieces of rubbish from the shore, bag them and put them in a bin.",
+   "ctx": "out",
+   "kind": "kindness",
+   "note": "Plastic bottle tops, rope, wrappers, bits of net. Use gloves or a bag over your hand. Leave anything sharp, any needle, any drum or container with something in it, and tell a lifeguard or the local council about those. A child collects the safe, soft pieces while a grown-up checks the rest."
+  },
+  {
+   "n": 11,
+   "test": "Choose one pool and write down the date, the time and every kind of creature in it, with a count of each.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "A notebook in a plastic bag or the notes on a phone. Sketch the shape of the pool and mark where things are. Count carefully, and put everything back as you go. If you come back to the same pool on another visit, compare the two lists. Some shore groups collect records like these from the public and welcome them."
+  },
+  {
+   "n": 12,
+   "test": "Lead a rock pool hunt for one or two younger children: teach them to look first, put everything back and watch the time.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Before you start, say the rules out loud and let them say them back: look before touching, everything goes back where it was, and we leave at the turn-back time. Give each child a tub, find the first creature together, then let them find their own. Their grown-up stays with them at the water the whole time. This is the end of the ladder: you can show the shore to somebody else."
+  }
+ ]
+}

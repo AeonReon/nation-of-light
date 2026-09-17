@@ -1,0 +1,157 @@
+{
+ "id": "music.readmusic",
+ "name": "Reading music",
+ "line": "From finding every C on a keyboard to playing a tune you have never seen, from the page, first time, for somebody.",
+ "size": "months",
+ "strand": "say-what-you-mean",
+ "who": "From about eight; a child and a grown-up side by side",
+ "about": "For everybody from about eight: a child and a grown-up can climb it side by side. It starts on a free piano app, finding the notes by letter, then the treble clef, middle C, and a note-naming quiz. Then comes rhythm: note lengths counted and clapped, time signatures, and dots, before playing tunes from the page, sharps and flats, repeats, and the bass clef. It ends with you writing out a tune of your own and playing a tune you have never seen, slowly, straight from the page, for somebody. A pencil, paper and a free piano app on a phone are all you need; where note names differ between countries, both are given.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "On a free piano app or website, find and play every C: the white key just to the left of each group of two black keys.",
+   "ctx": "room",
+   "kind": "skill",
+   "mins": 3,
+   "note": "Search \"online piano\". The black keys come in groups of two and three all along the keyboard. Music names notes with the letters A to G and then starts again, so there are many Cs, each one higher than the last. If you already read music, count this and go through the next rungs quickly."
+  },
+  {
+   "n": 2,
+   "test": "Play the white keys from one C up to the next, saying their names: C, D, E, F, G, A, B, C.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "After G the letters go back to A. The two Cs sound like the same note, one higher. Do it three times, then play them down again, saying the names backwards."
+  },
+  {
+   "n": 3,
+   "test": "Draw a stave of five lines, draw a treble clef at the start, and write a note in each of the four spaces: F, A, C, E from the bottom up.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "A stave is five evenly spaced lines; lines and spaces are counted from the bottom. Copy the treble clef from any sheet of music; its curl wraps round the second line, which is G. The four spaces spell FACE, which makes them easy to remember. Write the letter under each note."
+  },
+  {
+   "n": 4,
+   "test": "Write a note on each of the five lines of your treble stave and name them from the bottom up: E, G, B, D, F.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Some people remember them as \"Every Good Boy Deserves Fruit\". A note on a line has the line running through its middle. Now say all nine, lines and spaces, from the bottom: E, F, G, A, B, C, D, E, F."
+  },
+  {
+   "n": 5,
+   "test": "Write middle C and the four notes above it on your stave, then play them from what you wrote.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Middle C sits on a short extra line just below the treble stave. On a keyboard it is the C nearest the middle; on a phone app, the C labelled C4 if the keys have labels. Above it come D (just under the bottom line), E, F and G."
+  },
+  {
+   "n": 6,
+   "test": "Name twenty treble clef notes on a free note-reading quiz, getting at least eighteen right.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Search \"note reading quiz treble clef\". Without a screen, ask somebody to draw notes on your stave for you, or write ten yourself, cover the letters, and come back to them the next day. Aim for accuracy first, then speed."
+  },
+  {
+   "n": 7,
+   "test": "Clap and count four bars of crotchets and minims that you have written out, counting \"1, 2, 3, 4\" out loud.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "A crotchet (called a quarter note in some countries) is a filled-in note with a stem and lasts one count. A minim (a half note) is an open note with a stem and lasts two counts: clap once and hold for the second count. A bar is the space between two upright lines, and here each holds four counts."
+  },
+  {
+   "n": 8,
+   "test": "Clap and count a line with semibreves and crotchet rests, keeping silent on every rest.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "A semibreve (a whole note) is an open note with no stem and lasts four counts. A rest is a silence of a set length; a crotchet rest is a zigzag shape and lasts one count. Keep counting out loud through every silence."
+  },
+  {
+   "n": 9,
+   "test": "Clap and count a line that mixes quavers with crotchets, saying \"1 and 2 and 3 and 4 and\".",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "A quaver (an eighth note) has a flag on its stem, or is joined to its neighbour by a beam, and lasts half a count. Two quavers fit in one count: clap one on the number and one on the \"and\". Start slowly with a metronome app at 60."
+  },
+  {
+   "n": 10,
+   "test": "Find three pieces of free beginner sheet music, read the time signature of each, and count one bar of each out loud.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Search \"free beginner sheet music\", or use a songbook or hymn book. The time signature is the two numbers at the start. The top number says how many counts are in a bar; a 4 underneath means each count is a crotchet. So 4/4 is counted \"1, 2, 3, 4\" and 3/4 is \"1, 2, 3\"."
+  },
+  {
+   "n": 11,
+   "test": "Clap and count a line in 3/4 that has dotted minims in it.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "A dot after a note makes it half as long again. A minim is two counts, so a dotted minim is three and fills a whole bar of 3/4. A dotted crotchet is one and a half counts. Write four bars yourself if you have no music to hand."
+  },
+  {
+   "n": 12,
+   "test": "Play the first eight bars of \"Ode to Joy\" from the page on your piano app, slowly and in time.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Search for free easy sheet music for it in the key of C. Clap the rhythm first, then name the notes, then play. Bar four ends with a dotted crotchet, a quaver and a minim: hold the dotted note for one and a half counts.",
+   "how": [
+    "Clap the rhythm, counting out loud.",
+    "Say the note names in order.",
+    "Play it with a metronome app at 60."
+   ]
+  },
+  {
+   "n": 13,
+   "test": "Play an eight-bar tune you have never heard before, from the page, slowly.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "A beginner book or free beginner sheet music. Use the same three steps as the last rung: clap it, name it, play it. Do not look up a recording until you have played it through; then listen and check."
+  },
+  {
+   "n": 14,
+   "test": "Play C, C sharp and D, then E, E flat and D, saying each name as you play it.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "A sharp sign (like #) raises a note to the very next key up, and a flat sign (like a small b) lowers it to the very next key down; here both land on a black key. A natural sign cancels a sharp or flat. A sharp or flat written in front of a note lasts until the end of that bar."
+  },
+  {
+   "n": 15,
+   "test": "Play a simple tune with one sharp at the start of each line, playing every F as F sharp.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "The sharp sits on the top line of the treble stave, which is F. When a sharp or flat is written at the start of every line like this, it is called the key signature, and it applies to every F, high or low, all the way through. One sharp is the key of G major or E minor. Circle each F in pencil before you start."
+  },
+  {
+   "n": 16,
+   "test": "Play a tune that has a repeat sign and first and second endings, in the right order.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "A repeat sign is a thick and thin double line with two dots. Play to it, go back to the start or to the facing repeat sign, and play again. The first time through, play the bar marked 1; the second time, skip that bar and play the one marked 2. Trace the route with a finger before playing."
+  },
+  {
+   "n": 17,
+   "test": "Write the bass clef on a stave, name its lines G, B, D, F, A and its spaces A, C, E, G from the bottom, and find middle C just above it.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "The bass clef is for lower notes; its two dots sit either side of the fourth line, which is F. Some people remember \"Good Boys Do Fine Always\" for the lines and \"All Cows Eat Grass\" for the spaces. Middle C sits on a short extra line just above the bass stave, the same note as just below the treble stave."
+  },
+  {
+   "n": 18,
+   "test": "Play a four-bar bass clef line with your left hand, slowly, from the page.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Piano music for beginners gives the left hand a bass clef line. Name the notes first, then play. On a phone app, use your left thumb or finger, and play the notes below middle C."
+  },
+  {
+   "n": 19,
+   "test": "Write out a four-bar tune of your own with a clef, a time signature and bar lines, and have it played back to check it.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Make up a tune using the notes from middle C to G, and write it down neatly. Then have somebody who reads music play it, or type it into a free music-writing program or website that plays notes back. Fix anything that does not sound the way you meant."
+  },
+  {
+   "n": 20,
+   "test": "Play a simple tune you have never seen before, from the page, all the way through without stopping, in front of one person.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Ask them to choose it from beginner sheet music. Take one minute to look: the time signature, the key signature, any repeats. Then play slowly and steadily, keeping the count going through any wrong note. That is reading music at sight."
+  }
+ ]
+}

@@ -1,0 +1,152 @@
+{
+ "id": "music.instrument",
+ "name": "An instrument",
+ "line": "From one clear note to playing a song all the way through for a few people who sing along.",
+ "size": "months",
+ "strand": "make-things",
+ "who": "From about seven; a child and a grown-up side by side",
+ "about": "For everybody from about seven: a child and a grown-up can each learn one, side by side. It does not matter which instrument: one borrowed from family or a friend, a school or library loan, a low-cost recorder, whistle or ukulele, or a free piano app on a phone for the first rungs. The climb goes one clear note, a tune on five notes, playing in time, ten minutes a day, then working a tune out by ear and from the page, and a song you like played from memory. It ends with that song played all the way through for two or three people who know it and sing along. Free tuner and metronome apps are all the extra kit you need.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Get hold of an instrument you can use today and make one clear note on it.",
+   "ctx": "kit",
+   "kind": "skill",
+   "mins": 5,
+   "note": "Borrow one from family or a friend, ask whether a school or library lends them, or use a low-cost recorder, tin whistle or ukulele. With nothing to hand, a free piano app on a phone is enough for the first nine rungs. A clear note means no squeak, buzz or rattle; if you already play, count it and choose a piece you cannot play yet for the rungs ahead."
+  },
+  {
+   "n": 2,
+   "test": "Tune your instrument with a free tuner app, or play one note into the app and read which note it is.",
+   "ctx": "kit",
+   "kind": "attention",
+   "note": "Search your app store for a free tuner. String instruments such as a guitar, ukulele or violin need tuning every time you play; a beginner video for your instrument shows which notes the strings should be. A keyboard, piano app, recorder or whistle stays in tune, so just play one note and see its name."
+  },
+  {
+   "n": 3,
+   "test": "Play three different notes cleanly, one after another, and say the name of each.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Find a free beginner video for your instrument that shows how to hold it and where the first notes are. The tuner app tells you the name if the video does not. Slowly and clean beats quick and blurred."
+  },
+  {
+   "n": 4,
+   "test": "Play five notes going up in order and back down, without a squeak or a buzz.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "On a keyboard these are C, D, E, F and G, the white keys starting from the C just to the left of two black keys. On other instruments the beginner video usually starts with the same five. Play it three times."
+  },
+  {
+   "n": 5,
+   "test": "Play \"Ode to Joy\" or \"Mary Had a Little Lamb\" on those five notes, well enough that somebody could name it.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Starting from C, \"Ode to Joy\" begins E E F G G F E D C C D E E D D, and \"Mary Had a Little Lamb\" begins E D C D E E E, D D D, E G G. Play it slowly, note by note, until it flows. If you know a different five-note tune from where you grew up, that counts too."
+  },
+  {
+   "n": 6,
+   "test": "Play that tune three times in a row without a mistake.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "If you slip, start again from the beginning and count again from one. Slow down until three in a row is possible; speed comes later."
+  },
+  {
+   "n": 7,
+   "test": "Play the tune in time with a free metronome app set slowly, or with your own foot tapping.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Set the metronome to about 60 clicks a minute, one note to each click, and hold longer notes for two clicks. In time matters more than fast: slow and steady always sounds better than quick and uneven."
+  },
+  {
+   "n": 8,
+   "test": "Practise ten minutes a day for seven days in a row, and tick each day off.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "The same time each day helps, such as after breakfast or before the evening meal. Start each session with the five notes, then the tune, then something new. Ten minutes most days does more than an hour once a week."
+  },
+  {
+   "n": 9,
+   "test": "Learn a second, longer tune on your own from a free beginner video or book.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Choose one a little harder than the first, such as a folk tune, a hymn, or a simple theme from a film. Learn it a line at a time, and join each line to the one before."
+  },
+  {
+   "n": 10,
+   "test": "Take the bar you keep getting wrong, play it slowly ten times with no mistakes, then play the whole tune.",
+   "ctx": "kit",
+   "kind": "attention",
+   "note": "A bar is one small section of the tune, a few notes long. Play it slowly enough that it is never wrong, ten times, then a little faster. This is the most useful practice skill there is, and fixing one bar teaches more than playing the whole tune again."
+  },
+  {
+   "n": 11,
+   "test": "Play three tunes from memory, one after another, with nothing in front of you.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Your two tunes and one more. Choose the order first so there is no gap. If one breaks down, carry on to the next and come back to it tomorrow."
+  },
+  {
+   "n": 12,
+   "test": "Play a whole tune for one person in the room, from start to end without stopping.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "A family member, a friend, or somebody on a video call. Most listeners notice a stop far more than a wrong note, so keep going through any mistake."
+  },
+  {
+   "n": 13,
+   "test": "Work out a short tune by ear, with nobody showing you the notes.",
+   "ctx": "kit",
+   "kind": "attention",
+   "note": "Choose something you can hum, such as \"Happy Birthday\" or a song everybody in your house knows. Find the first note, then try notes until the next one sounds right. It takes longer than you expect and it changes how you listen to music."
+  },
+  {
+   "n": 14,
+   "test": "Learn a tune you do not know from written music or from tab, on your own.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Tab is a simple written form for guitar and ukulele that shows which string and fret to press. Free beginner sheet music and tab are easy to find online, and the Reading music ladder teaches the notes. Choose something short."
+  },
+  {
+   "n": 15,
+   "test": "Practise ten minutes a day for thirty days, ticking each one off.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "The same shape as rung eight, for a month. A missed day is not a reason to stop; tick the next one. By the end you will hear the difference in a recording from day one."
+  },
+  {
+   "n": 16,
+   "test": "Learn the beginner version of a song you really like.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Search the song name with \"easy\" and your instrument. On a guitar, ukulele or keyboard, a great many songs use just three or four chords; on a whistle or recorder, learn the tune. The simple version is a real way to play it."
+  },
+  {
+   "n": 17,
+   "test": "Play that song all the way through, three times, without stopping.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Use the bar-fixing from rung ten on any part that breaks down, then go back to playing it through. Three complete times in one sitting."
+  },
+  {
+   "n": 18,
+   "test": "Play the song from memory, with nothing in front of you.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Look at the music or chords once, then put them face down and play. If a part is missing, look at only that part, then put it away again."
+  },
+  {
+   "n": 19,
+   "test": "Play the song in time with somebody else singing or playing along, from start to end.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "A family member singing, a friend with another instrument, or a recording of the song played quietly if nobody is free. Count \"1, 2, 3, 4\" out loud before you both start."
+  },
+  {
+   "n": 20,
+   "test": "Play the song all the way through for two or three people who know it, and have them sing along.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "After a meal, on a birthday, or at a family visit. Tell them the song first and count them in. Play steadily and keep going through any mistake; people singing along carry a song past a wrong note."
+  }
+ ]
+}

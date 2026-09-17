@@ -1,0 +1,102 @@
+{
+ "id": "sky.kite",
+ "name": "Kites",
+ "line": "From reading the wind to flying a kite you made yourself, and teaching two children to launch and land it.",
+ "size": "afternoon",
+ "strand": "make-things",
+ "who": "Everybody; a grown-up with a child when flying",
+ "about": "For everybody: a child and a grown-up can climb it side by side, and a grown-up is with a child whenever a kite is flying. It starts by reading the wind from a window, then making a small kite from paper, straws and thread and getting it into the air. From there you launch and land it on your own, keep it up for ten minutes, make a bigger kite from a bin bag and two sticks, and change its tail to make it fly better. It ends with you teaching two children to launch and land a kite you made. It costs nothing, and the safety rules come first: fly only in a wide open space, never near power lines, roads, railways or airports, and never in rain or thunder.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Look out of a window and say whether today is a kite day, from what the trees, leaves and flags are doing.",
+   "note": "Leaves still and smoke going straight up: too little wind. Leaves and small twigs moving all the time, a flag standing out: good kite wind. Whole branches swaying, hard to walk against: too strong for a first kite. If you have a weather app, the wind speed for a small kite is roughly 10 to 25 kilometres an hour.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 2
+  },
+  {
+   "n": 2,
+   "test": "Make a small sled kite from a sheet of paper, two drinking straws, tape and a long piece of thread.",
+   "how": [
+    "Fold a sheet of printer paper in half and draw a shape like a house turned on its side: a wide middle and narrower ends. Cut it out and open it.",
+    "Tape a straw down each side of the middle, from top to bottom.",
+    "Put tape over each outer corner, make a small hole through it, and tie one piece of thread to both holes, about three times the width of the kite, as the bridle.",
+    "Tie your long flying thread to the middle of the bridle, and tape a paper strip to the bottom as a tail."
+   ],
+   "note": "Paper straws, plastic straws or two thin garden sticks all work. Cotton thread or fishing line on a piece of card to wind it on is enough for a small kite. A child can decorate and tape; a grown-up helps with the holes.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 3,
+   "test": "Work out which way the wind is blowing in an open space before you launch.",
+   "note": "Stand still and turn slowly until you feel the wind evenly on your face, or drop a little grass and watch where it goes. For flying, stand with the wind on your back. Choose a field, a beach or a large park with no trees, power lines or roads nearby.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Get your kite into the air and keep it up for one minute.",
+   "note": "With the wind at your back, let out a few metres of thread and let the wind lift the kite from your hand. If it drops, walk backwards a few steps to give it air. A helper holding the kite up a little way away and letting go makes the first flight easier.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Launch the kite on your own, with nobody holding it for you.",
+   "note": "Hold the kite up by the bridle with the wind behind you, and let the wind take it as you let out thread slowly. On a light day, a few quick steps backwards help it climb. Never run towards a road or a slope while looking up.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Land your kite on your own without it crashing.",
+   "note": "Wind the thread in steadily while walking towards the kite, so it comes down gently. If a gust pulls hard, let out a little thread instead of holding tight. Never grab a thread that is pulling fast; it can cut skin.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Keep your kite flying for ten minutes without it coming down.",
+   "note": "When it dips, pull in a little thread; when it pulls strongly and climbs, let some out. Watch the tail: if it spins in circles, it needs a longer tail. Keep well away from other people's kites.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Make a bigger sled kite from a bin bag, two sticks about as long as your arm, tape and strong string.",
+   "note": "The same shape as the paper kite, drawn about four times bigger on a cut-open bin bag. Garden canes, thin dowels or straight sticks work, and so does string from a parcel or a garden shed. A grown-up does any cutting of the sticks.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Fly the bigger kite for five minutes, wearing gloves.",
+   "note": "A bigger kite pulls harder, so wear garden gloves or woolly gloves and wind the string onto a stick or a piece of wood, not round your hand. A child flies it with a grown-up holding the line too. If it lands in a tree or on anything high, leave it; a kite can be made again.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "Change one thing on the bigger kite, such as the length of the tail or the length of the bridle, and fly it again to see if it flies better.",
+   "note": "Change only one thing at a time, or you will not know what worked. A longer tail steadies a spinning kite; a longer or shorter bridle changes the angle the kite sits at in the wind. Say out loud what you changed and what happened.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Let out about thirty metres of line, fly the kite at that height for ten minutes, and wind it all back in without a tangle.",
+   "note": "Thirty metres is about forty walking steps; tie a small knot in the line at that length before you go. Keep it much lower than aircraft could ever be, and well away from any airport; some countries set a height limit for kites, so find out yours. If the kite ever touches a power line, let go of the string at once, keep away, and tell the electricity company for your area.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 12,
+   "test": "Teach two younger children to launch and land a kite you made, until each of them has done both on their own.",
+   "note": "Children in your family, a friend's children with their grown-up there, or a group at a club. Show them how to read the wind first, then let them hold the line while you stand beside them. Tell them the power line rule before anything else.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

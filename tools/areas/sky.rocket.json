@@ -1,0 +1,129 @@
+{
+ "id": "sky.rocket",
+ "name": "Rockets",
+ "line": "From a balloon on a string to a rocket afternoon where everybody launches one safely.",
+ "size": "weeks",
+ "strand": "make-things",
+ "who": "From about six; a grown-up for every pressure launch",
+ "about": "For everybody from about six, with a grown-up in charge of every water rocket launch and of the pump. The climb starts with a balloon on a string and a paper rocket blown off a straw, then a launcher you stamp on, then a water rocket pushed by air from a bicycle pump: fins, the best amount of water, measuring the height, and a parachute. It ends with a launch afternoon where you keep the safety rules and everybody there launches one. Every rocket here is pushed only by air or water; there are no chemicals, fire or rocket motors anywhere on this ladder, and none should be added. Each rung shows the same idea a real space rocket uses: throw something out of the back, and the rocket goes the other way.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Make a balloon rocket that shoots along a string tied across a room.",
+   "ctx": "home",
+   "kind": "attention",
+   "mins": 10,
+   "note": "Thread a drinking straw onto a long piece of string and tie the string tight between two chair backs. Blow up a balloon, hold the neck shut, tape it to the straw, then let go. The air rushing out of the back pushes the balloon forwards, and the balloon pushes the air backwards: every rocket works this way."
+  },
+  {
+   "n": 2,
+   "test": "Roll a paper rocket round a pencil, close the top, slide it onto a straw and blow it across the room.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Roll a strip of paper around a pencil and tape it, fold and tape the top shut, slide the pencil out and put a straw in its place. Blow a short hard puff. Rule from the start: never aim a rocket at a person or an animal, even a paper one."
+  },
+  {
+   "n": 3,
+   "test": "Make three paper rockets with no fins, small fins and big fins, blow each one five times, and write down which flies furthest on average.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Tape the fins at the back end. Blow as evenly as you can each time and add up the five distances for each rocket, then divide by five. Fins at the back keep the rocket pointing forwards, the way the feathers on an arrow do, but big fins also add weight and drag, so the best size is something to find out."
+  },
+  {
+   "n": 4,
+   "test": "Blow the same paper rocket at three different angles, five times each, and find which angle sends it furthest.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Try low (almost flat), about halfway up, and steep. With no air to slow it, halfway up (45 degrees) would go furthest; a light paper rocket is slowed a lot by the air, so it often goes furthest a little lower than that. Mark each landing with a coin and pace it out."
+  },
+  {
+   "n": 5,
+   "test": "Explain out loud in three sentences why a rocket moves, and answer one question about it from somebody.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "A rocket throws something out of its back very fast, and that pushes the rocket the other way, which is what the balloon on the string showed. It does not need to push against the ground or the air, which is why rockets work in space. The faster and the more stuff it throws out, the bigger the push."
+  },
+  {
+   "n": 6,
+   "test": "Build a stamp launcher from an empty plastic drinks bottle and a card tube, and launch a paper rocket by stamping on the bottle.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Roll a tube of card that fits snugly into the bottle neck, seal the join all round with tape, and make a paper rocket (closed at the top) that slides over the other end of the tube. Lay the bottle on the ground and stamp on it; blow into the tube to fill the bottle again. Everybody nearby stays behind the launcher, and the rocket points up and away from people, windows and roads."
+  },
+  {
+   "n": 7,
+   "test": "Launch your stamp rocket straight up outside, time how long it stays in the air, and work out roughly how high it went.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "Use a phone stopwatch from the moment it leaves to the moment it lands. It takes about half that time to go up. Height in metres is about 5 times the going-up time times itself: 1 second up is about 5 metres, 2 seconds up is about 20. Air slows a light rocket, so the real height is a little less than this."
+  },
+  {
+   "n": 8,
+   "test": "Write the safety rules for water rockets and say them out loud to the grown-up who will help, before building anything.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "The rules: a grown-up runs the pump every time. Use only plastic bottles made for fizzy drinks, which are built to hold pressure; never glass, metal, or a dented or scratched bottle. Only water and air go in, never anything else. Everybody wears glasses or safety glasses and stands well back, at least 5 metres, and nobody stands over the bottle or looks down into it once pumping starts. Launch only in a big open space away from people, roads, buildings and power lines, and never hold, tape or clamp the stopper in to make it hold more pressure."
+  },
+  {
+   "n": 9,
+   "test": "With a grown-up, build a water rocket launcher from a bicycle pump, a ball inflating needle and a cork or rubber stopper that fits a fizzy-drink bottle.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "The grown-up makes a hole through the stopper and pushes the needle through so it pokes out the other side, then screws it onto the pump. Stand the bottle upside down on a simple stand, such as bricks either side or a board with sticks pushed in, pointing straight up. Many bicycle pumps come with a ball needle; a 1 or 2 litre fizzy-drink bottle is the rocket. The stopper is the safety valve: when the pressure gets high it pushes out on its own, which is why it must never be held in."
+  },
+  {
+   "n": 10,
+   "test": "Launch your first water rocket, a third full of water, with the grown-up pumping and everybody back behind them.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "Push the stopper in firmly, stand the bottle upside down on the stand, say the rules out loud, and move everybody back. The grown-up pumps from the end of the hose, standing to the side, until the stopper pops and the rocket goes. If nothing happens after a lot of pumping, stop, let the air out through the pump or wait, and check for leaks. Everybody gets wet at the start; wear old clothes."
+  },
+  {
+   "n": 11,
+   "test": "Launch with three different amounts of water, three times each, and find which amount sends it highest.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "Try a quarter full, a third full and half full. The squashed air pushes the water out, and the water is heavy, so it gives a much bigger push than air alone; too much water and there is not enough air to push it all out. Many people find about a third works best, but your bottle and stopper may differ, so trust your own results."
+  },
+  {
+   "n": 12,
+   "test": "Measure how high one launch went, using a folded paper corner and a known distance.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "Fold a square of paper in half corner to corner to make a triangle with a 45-degree angle. Somebody stands a measured distance from the launcher, say 15 metres, and looks along the slanted edge with the bottom edge level. If the rocket rises above that line, it went higher than 15 metres plus the height of their eyes; move further away on the next launch until the top just meets the line.",
+   "how": [
+    "Pace or measure a distance from the launcher, such as 15 metres.",
+    "Hold the paper triangle at your eye with the long flat edge level.",
+    "Watch the top of the flight: above the slanted line means higher than your distance plus your eye height."
+   ]
+  },
+  {
+   "n": 13,
+   "test": "Add fins and a nose cone with a little weight in its tip, and get the rocket to fly straight up without tumbling.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Cut three or four fins from a plastic folder or stiff card and tape them evenly round the bottom end, near the neck. Make a cone from card or the top of a second bottle and put a little modelling clay inside the tip. With the weight near the front and the fins at the back, the air keeps the back behind the front, the way a dart flies point first. Keep the pressure safety rules on every launch."
+  },
+  {
+   "n": 14,
+   "test": "Add a parachute from a plastic bag and string that comes out at the top of the flight and brings the rocket down gently.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Cut a circle about 40 centimetres across from a plastic bag, tie four strings to the edge, fold it into a loose-fitting nose cone that sits on the rocket but is not taped. When the rocket slows and tips over at the top, the cone falls off and the parachute pulls out. It takes a lot of tries to fold it so it opens; practise by throwing the folded cone up by hand first."
+  },
+  {
+   "n": 15,
+   "test": "Launch three rockets in a row that all fly straight and come down safely, saying the safety rules out loud before each one.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Check the bottle for dents and scratches before every launch, and replace any that are damaged. Keep a written note of water, fins and height for each flight. Three in a row, with nobody breaking a rule, is the finish; one that goes wrong means start the count again."
+  },
+  {
+   "n": 16,
+   "test": "Run a rocket afternoon for family or friends where every person launches a rocket, a grown-up runs the pump, and nobody breaks a safety rule.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Start everybody on the balloon and paper rockets, so the youngest have something to launch, then move to the stamp launcher and the water rocket. Say the rules before the first water launch and put a line on the ground that nobody crosses. Let each person choose the water amount and call the countdown for their own launch."
+  }
+ ]
+}

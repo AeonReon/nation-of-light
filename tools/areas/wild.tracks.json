@@ -1,0 +1,125 @@
+{
+ "id": "wild.tracks",
+ "name": "Tracking",
+ "line": "From your own footprints in soft ground to showing somebody else an animal track they can read themselves.",
+ "size": "months",
+ "strand": "get-strong-outside",
+ "who": "Everybody; a child and a grown-up side by side",
+ "about": "For everybody: a child and a grown-up can climb it side by side. It starts with your own footprints, walking and running, then dog, cat and bird prints you can find in any town, and a tray of damp sand that catches prints overnight. Then naming animals from prints, finding their paths and feeding signs, and droppings looked at but never touched. The later rungs are telling fresh from old, reading what an animal was doing, sitting still, moving quietly, and following a trail for a hundred metres. It ends with you showing somebody else a track they can read themselves. Tracking turns an ordinary walk into a story about who else has been there.",
+ "place": "countryside",
+ "steps": [
+  {
+   "n": 1,
+   "test": "In soft ground, make a line of your own footprints walking and then running, and say three differences.",
+   "note": "Mud, damp sand on a beach, snow, or a wet footprint on a dry path all work. Look at the distance between prints, how deep the toe and heel go, and whether the feet land in a straight line. If you already know this, do it on purpose today and count it.",
+   "ctx": "out",
+   "kind": "attention",
+   "mins": 15
+  },
+  {
+   "n": 2,
+   "test": "Find a dog's or a cat's footprint and say which it is, and why.",
+   "note": "In mud, snow, sand or a dusty path, a park is a good place. Dog prints usually show claw marks and are a little longer than wide. Cat prints are rounder and usually have no claw marks, as cats keep their claws tucked in when walking.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Find a bird's footprints, count its toes, and say whether it was walking or hopping.",
+   "note": "Pigeons, gulls, ducks and crows leave prints on mud, wet sand and snow. Walking birds leave prints one after the other; hopping birds leave them side by side in pairs. Ducks and gulls show webbing between the toes.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Put down a tray or patch of smooth, damp sand or mud where animals pass, and check it the next morning for prints.",
+   "note": "Near a bird feeder, a gap in a hedge, or along a garden wall. Smooth it flat with a board. A little food beside it, like a few seeds, makes a visit more likely. Photograph whatever you find, then smooth it again.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 5,
+   "test": "Using a free guide for your country, name three kinds of animal from their prints.",
+   "note": "Wildlife charities and nature groups in many countries publish free print charts. Prints from your sand tray, your dog, a park or a beach all count. Compare the number of toes, the shape of the pads and whether there are claw marks.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Have somebody walk across dewy grass or damp sand while you look away, then follow their trail for fifty metres.",
+   "note": "Early morning dew on grass shows a dark line where somebody has walked. Crouch low and look along the ground towards the light; tracks show up far better that way. Swap over and let them follow yours.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Find a path that animals use regularly, and say what makes you think so.",
+   "note": "A thin line of flattened grass through a field, a gap worn under a fence or hedge, hairs caught on a wire, or a muddy slide down a bank to water. Look where the path goes: to water, food or cover.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Find three signs of something eating, and say what you think ate each.",
+   "note": "A pine cone chewed down to its core, a nut shell split or gnawed, a pecked apple, bitten leaves, or a scatter of feathers. Your country's free guide will show what each animal leaves behind. Look, and photograph; you can touch cones and shells, then wash your hands.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Find animal droppings, and name what left them by looking only, using a stick to point.",
+   "note": "Never touch droppings with your hands, as they can carry germs; point with a stick and photograph them beside a coin for size. Rabbit, deer, dog, fox, goose and owl pellets all look different. Wash your hands with soap and water when you get home, even if you think you did not touch anything.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Make a footprint of your own in soft ground and look at it again after one hour and after one day, and describe how it changed.",
+   "note": "Photograph it each time. Edges crumble, rain softens it, leaves and insects fall in, and the bottom dries paler. Now you have something to compare with an animal's print when you ask \"how old is this?\".",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Find an animal's print and say whether you think it is fresh or old, and give two reasons.",
+   "note": "Compare it with what you learnt from your own print: sharp edges or crumbled, wet or dried, anything fallen into it, rain since. Say \"I think this morning, because the edges are sharp and it rained last night.\" Being unsure is fine; the reasons are the rung.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Look at a line of prints and say what the animal was doing: walking, running, stopping or turning.",
+   "note": "Prints close together in a steady line mean walking. Longer gaps and deeper toes mean running. A cluster of prints means it stopped, perhaps to sniff or eat. Your own walking and running prints from rung one are the key.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Sit still outdoors for twenty minutes and write down everything you saw and heard.",
+   "note": "A garden, a park bench or the edge of a wood. Sit with your back against something, stay quiet and let things settle. Animals often come back after about ten minutes. A child can sit with a grown-up and draw instead of writing.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 14,
+   "test": "Walk fifty metres through a wood or park as quietly as you can, placing each foot slowly.",
+   "note": "Put the outside edge of your foot down first, then roll it flat, feeling for twigs before you put weight on it. Stop often and look around. A child and a grown-up can take turns: one walks while the other listens with eyes closed.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 15,
+   "test": "Follow an animal's trail for a hundred metres, in snow, mud, sand, dew or along a path it uses.",
+   "note": "When you lose it, stop, mark the last print with a stick, and search in a circle ahead. Stay on land where you are allowed, and stop at fences, water and roads. Where there are dangerous animals, track only with somebody who knows the area, and never follow a fresh trail of one.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 16,
+   "test": "Take somebody out and help them find and read a track themselves.",
+   "note": "A child, a friend or a grown-up who has never done it. Take them somewhere you know has prints, ask questions instead of telling (\"how many toes?\", \"walking or running?\"), and let them work it out. That is the far end of this ladder.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

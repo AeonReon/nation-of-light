@@ -1,0 +1,152 @@
+{
+ "id": "sky.wind",
+ "name": "Wind and weather watching",
+ "line": "From saying which way the wind is blowing to teaching somebody to call tomorrow's weather from the sky.",
+ "size": "months",
+ "strand": "get-strong-outside",
+ "who": "Everybody; a child and a grown-up side by side",
+ "about": "For everybody: a child and a grown-up can climb it side by side. This ladder is about watching the sky yourself, with no forecast in your hand; the Weather and tide ladder is the one for forecasts, warnings and tides. It starts at the door with which way the wind is coming from and how hard it blows, then a streamer to show it, the families of cloud and which way they move, and a weather diary kept for a month. Then the signs: a shower cloud growing, thunder, high cloud thickening, the crossed-winds rule and the air pressure, each one tested against what really happens, and your own calls for tomorrow scored for a week. It ends with you teaching somebody else to make tomorrow's call from the sky. The signs here are the ones used in the middle latitudes of both halves of the world; near the equator the weather follows other patterns, and your own diary is what will show you the pattern where you live.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Go outside or open a window, and say which direction the wind is coming from.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Turn your face until the wind feels the same on both cheeks: you are now facing where it comes from. Check against a flag, smoke, washing on a line or the tops of trees. A wind is named by where it comes FROM, so a wind blowing towards the south is a north wind. No idea where north is? A free compass app on a phone will tell you, or say it as 'from the park side' for now.",
+   "mins": 2
+  },
+  {
+   "n": 2,
+   "test": "Say how strong the wind is in plain words, from calm to gale, by what it is moving.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Use what you can see: smoke going straight up is calm; leaves rustling and a flag lifting is a light breeze; small branches moving and paper blowing along is a moderate breeze; whole trees swaying is a strong wind; twigs breaking off and walking being hard is a gale. This is a short version of the Beaufort scale that sailors have used for about two hundred years. A child can learn it as 'still, leaves, branches, trees'."
+  },
+  {
+   "n": 3,
+   "test": "Tie a strip of light material to a railing, a post or a cane outside, where you can see it from a window.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "A strip cut from a plastic bag, an old ribbon or a length of wool, about as long as your arm, tied where nothing blocks the wind: a balcony rail, a fence post, a garden cane. It streams away from where the wind is coming from. A grown-up does anything that needs a ladder or a window above the ground floor; nobody leans out of a window to do it."
+  },
+  {
+   "n": 4,
+   "test": "Each morning for a week, look at your streamer and write down the wind's direction and strength.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "One line a day on paper or in the notes on a phone: 'Monday: from the west, branches moving'. The same time each day is best, such as after breakfast. A child can draw an arrow and a small picture instead of words. If you already notice the wind every morning, write it down on purpose and count it."
+  },
+  {
+   "n": 5,
+   "test": "Look at the sky and say whether each cloud you see is a heap, a sheet or a wisp.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "These are the three families. Heaps are puffy with flat bottoms (cumulus). Sheets are flat grey layers over much of the sky (stratus). Wisps are thin streaks very high up (cirrus). Nearly every cloud is one of these or a mix, and its full name joins them. A clear blue sky? Say so, and do it on the next cloudy day. If you already know the ten cloud types, sort each one into its family and count it."
+  },
+  {
+   "n": 6,
+   "test": "Line one cloud up with a chimney, a roof edge or a tree top, wait a minute, and say which direction it is moving from.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Stand still so the fixed point does not move for you. Write down both the wind you feel on the ground and the way the cloud is going: 'ground from the south, clouds from the west'. They are often different, because the wind changes with height. You will use this on rung thirteen."
+  },
+  {
+   "n": 7,
+   "test": "Over one week, name five cloud types on sight, using a free cloud guide from your national weather service.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "Good ones to start with: cumulus (fair-weather heaps), cumulonimbus (a huge tower, often with a flat top, that brings heavy showers or thunder), stratus (a low grey sheet), nimbostratus (a thick dark sheet with steady rain) and cirrus (high wisps). Tick each off on the day you see it. Clouds change by the hour, so a look out of the window at breakfast, midday and evening finds more than one long look."
+  },
+  {
+   "n": 8,
+   "test": "Start a weather diary: at the same time each day for two weeks, write down the wind, the cloud and whether it rained.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "One line a day: wind direction, wind strength in your plain words, the cloud family or type, and rain or dry since yesterday. Add warm, mild or cold if you like. A notebook by the window or a note on a phone both work. A child can use drawn symbols: an arrow, a cloud shape, a raindrop. Missed a day? Write 'missed' and carry on."
+  },
+  {
+   "n": 9,
+   "test": "On a clear morning, look out every hour and write down the time the first heap cloud appears.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "On sunny days the ground warms, warm air rises, and heap clouds often start to form by late morning. Note also whether they stay small and flat or grow taller. In a cold, grey season this may take a few tries; any morning that starts clear will do."
+  },
+  {
+   "n": 10,
+   "test": "Watch a tall heap cloud growing, say whether its shower will reach you and roughly when, and then check.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "A heap cloud that keeps growing upwards, with a dark base and crisp edges at the top, is often turning into a shower cloud. Use rung six to see which way it is moving and whether it is coming towards you. Say it plainly: 'rain here within the hour'. If you hear thunder, go inside a building or a car and stay there."
+  },
+  {
+   "n": 11,
+   "test": "The next time there is a thunderstorm, count the seconds from a flash to its thunder, and say how far away the storm is.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Sound travels about a kilometre in three seconds, so divide the seconds by three for kilometres, or by five for miles. Count again a few minutes later: fewer seconds means the storm is coming closer. Do this from indoors. Many weather services advise that if you can hear thunder you are close enough to be struck, and to stay inside until thirty minutes after the last thunder. No storm this season? Go on and come back to this rung."
+  },
+  {
+   "n": 12,
+   "test": "When high wispy cloud spreads and thickens into a thin milky sheet, write 'rain within a day?' in your diary, and check the next day.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "In the middle latitudes of both halves of the world, rain often comes with a front, and the first sign is often high cloud spreading across from one side of the sky, turning into a thin sheet, sometimes with a ring of light (a halo) round the sun or moon, then lowering and thickening. It does not always bring rain, which is why you check. Never look straight at the sun: stand where a building hides it and look at the sky beside it."
+  },
+  {
+   "n": 13,
+   "test": "Stand with your back to the wind you feel, watch the high clouds, and say whether the weather is more likely to get worse or better.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "This is the crossed-winds rule that walkers and sailors have long used. North of the equator: high clouds coming from your left mean the weather is more likely to get worse; from your right, better; from straight behind or in front, little change. South of the equator it is the other way round: from your right, worse. It works best in the middle latitudes and is often wrong near hills. Write your call in the diary and check it."
+  },
+  {
+   "n": 14,
+   "test": "Read the air pressure morning and evening for a week, and write down each time whether it is rising, steady or falling.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Many phones have a pressure sensor that a free barometer app can read, and an old barometer on a wall works too. No sensor? Your national weather service publishes free readings from its weather stations; use the nearest. Pressure is given in hectopascals or millibars (the same number), usually between about 970 and 1040. The change matters more than the number: a steady fall often comes before unsettled weather, and a rise before it settles."
+  },
+  {
+   "n": 15,
+   "test": "Keep the weather diary every day for a whole month, adding the pressure whenever you can.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Carry straight on from your two weeks. A month with a few gaps still shows a pattern. A child and a grown-up can take it in turns, a day each, and read it back together at the end of each week. If you already keep a diary like this, count the month you have."
+  },
+  {
+   "n": 16,
+   "test": "Read back your month and write down which wind direction came with the most rain, and which with the driest days.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Count the rainy days and the wind direction on each, then the dry ones. Where you live, rain may come mostly from the sea side, or over the hills, or with no pattern in the wind at all. Near the equator the pattern may be the time of day instead, such as storms most afternoons. Whatever you find is knowledge about your own place that you worked out yourself."
+  },
+  {
+   "n": 17,
+   "test": "Each evening for a week, write down tomorrow's weather from the sky, the wind and the pressure alone, and count how many you got right.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "Keep each call short and easy to check: 'dry morning, rain by evening' or 'windier, from the west'. Do not look at a forecast until it is written. Score one for right and a half for close. If you did this once on Out the door, part one, this is the same skill for a week, with a score. Four out of seven is a good start."
+  },
+  {
+   "n": 18,
+   "test": "For ten days, write your own call and the official forecast side by side, and count which was right more often.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Forecasts are made with huge computers and trained people, so they will be right more often, and that is fine. The useful days are the ones where you were right and they were not, often a shower or a change they put at a different hour. Those show you what your own eyes on your own sky are good for."
+  },
+  {
+   "n": 19,
+   "test": "Find one local weather sign, such as cloud on a particular hill or mist in a valley, and test it for two weeks.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Ask an older neighbour, a gardener, a farmer or somebody who fishes what they watch, or find one in your diary: cloud sitting on the top of a hill, a breeze off the sea on sunny afternoons, fog in low ground on still clear mornings. Each time the sign appears, write down what the weather did next. Some local signs are reliable and some are not, and finding out which is the rung."
+  },
+  {
+   "n": 20,
+   "test": "Take somebody outside, show them the wind, the cloud families and the crossed-winds rule, and let them make tomorrow's call.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "A child, a friend, a grandparent. Ten minutes outside: face the wind together, name the clouds, then stand with your backs to the wind and look up. Let them say their call, write it down, and check it with them the next day. This is the end of the ladder: reading the sky is now something you can give to somebody else."
+  }
+ ]
+}

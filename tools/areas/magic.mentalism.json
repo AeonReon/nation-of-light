@@ -1,0 +1,175 @@
+{
+ "id": "magic.mentalism",
+ "name": "Mind-reading tricks",
+ "line": "From a number puzzle on paper, to a ten-minute set of mind-reading tricks for five or more people.",
+ "size": "months",
+ "strand": "say-what-you-mean",
+ "from": 9,
+ "who": "From about nine; children and grown-ups alike",
+ "about": "For everybody from about nine, children and grown-ups alike. These are tricks that look like mind reading, and you always say so: every one works by maths, a helper with a secret signal, or a small hidden detail, never by any real power. It starts with a number puzzle on paper and ends with a ten-minute set of four tricks for five or more people. It builds careful counting, clear speaking and good manners in front of an audience. People only ever choose numbers, words, objects and animals; nothing here guesses at anybody's private life, feelings or worries.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "On paper, do the always-five puzzle with three different starting numbers, and check each answer is 5.",
+   "how": [
+    "Think of a number and double it.",
+    "Add 10, then halve the result.",
+    "Take away the number you started with. The answer is 5."
+   ],
+   "note": "Doubling and then halving gives back your number plus 5, so taking your number away leaves 5. Try 37: double is 74, add 10 is 84, half is 42, take away 37 is 5. Knowing why it works lets you perform it calmly.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Do the always-five puzzle with one person, saying first that it is a trick, and name their answer before they tell you.",
+   "note": "Start with: \"Here is a trick that looks like mind reading.\" Let them use paper or a calculator, and give each step slowly. Then look at them for a moment and say, \"You have 5.\" If you already know this one, do it on purpose today and count it.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 3,
+   "test": "On paper, do the 1089 puzzle with three different three-digit numbers, and check each answer is 1089.",
+   "how": [
+    "Write a three-digit number whose first and last digits differ by 2 or more, such as 742.",
+    "Write it backwards (247) and take the smaller number from the bigger one (495).",
+    "Write that answer backwards (594) and add the two together: 1089."
+   ],
+   "note": "The rule about the first and last digits matters: with a number like 312 the subtraction gives 99 and the trick fails. Check each subtraction carefully, because one slip in front of people gives the wrong answer.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 4,
+   "test": "Write 1089 on a paper and fold it, then lead one person through the 1089 puzzle and have them open the paper.",
+   "note": "Give them the folded paper to hold before they start, so everybody knows it was written first. Let them use a calculator if they like, and if the answer is not 1089, check the subtraction together. Say it is a prediction trick, and enjoy the moment with them.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 5,
+   "test": "Before a reveal, ask the person to say their choice out loud, then wait for a slow count of three.",
+   "note": "The pause gives everybody time to remember that you could not have known. Try it with the 1089 paper: \"Tell everybody your number.\" Count three to yourself. \"Now open the paper.\"",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Find a book at home with at least 108 pages, and learn the ninth word on page 108 by heart.",
+   "note": "Count from the first word at the top of the page. Write the word nowhere; learn it, and check yourself again tomorrow. Choose a book you can leave on a shelf among others, because it sets up the next rung.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Lead one person through the 1089 puzzle, then have them open the book at page 108, look at the ninth word, and name it for them.",
+   "note": "Say: \"Use the first three numbers as a page, and the last one to count words.\" Let them take the book from the shelf themselves. Take your time before naming the word, and say at the end that it was a trick.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 8,
+   "test": "Stack three dice, and work out the total of the five hidden faces from the top face alone, ten times.",
+   "note": "On an ordinary die, opposite faces add up to 7. Three dice have six top and bottom faces adding up to 21, and in a stack you can see only the very top one. So the hidden total is 21 take away the top number. Check each time by adding the hidden faces; dice from a board game are fine.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "With your back turned, have one person stack three dice, then turn round, look once, and name the total of the hidden faces.",
+   "note": "Ask them to stack the dice any way they like, then add up the hidden faces themselves and write the total down. Turn round, look at the stack for a second, then look away while you seem to think. Say the number and let them check.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "When somebody asks how you did it, say it is a trick, keep the secret, and never claim a real power.",
+   "note": "\"It is a trick, and a good one, but the secret stays with me\" is honest and friendly. If a child asks whether you can really read minds, say no, plainly. Practise the line now; the rung counts the first time somebody asks.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 11,
+   "test": "Practise the one-ahead trick on your own three times, with three slips of paper and three questions.",
+   "how": [
+    "Plan the last question to be the 1089 puzzle, so you already know its answer.",
+    "Ask for a colour, and while they think, write 1089 on the first slip.",
+    "When they say a colour, ask for an animal and write their colour on the second slip.",
+    "When they say an animal, lead them through the 1089 puzzle and write their animal on the third slip."
+   ],
+   "note": "You stay one answer ahead: each slip holds the answer to the question before. For practice, play both parts yourself, making up answers. At the end the slips are mixed and opened together, so nobody can tell which was written when.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 12,
+   "test": "Do the one-ahead trick for one person: three folded slips, three questions, and three right answers.",
+   "note": "Hide each slip from view while you write, fold it straight away, and drop it in a cup so the order is lost. At the end, tip the slips out and let them open all three. Say it is a trick before you start.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Agree a secret signal with a helper, and practise the black-object trick together five times.",
+   "how": [
+    "You leave the room, and the others choose any object in it.",
+    "You come back, and your helper points at objects one at a time, asking \"Is it this?\"",
+    "Your helper points at something black just before pointing at the chosen object.",
+    "You say no to each one until the one straight after the black thing, and say yes to that."
+   ],
+   "note": "The helper must never point at anything black except as the signal. If the room has a lot of black things, agree on another colour. A grown-up and a child make a good team.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Perform the black-object trick with your helper for two or more people, three times in a row.",
+   "note": "Doing it three times shows it is not luck. If somebody works out the secret, say \"Well done\" and let them be the next helper; that is part of the fun.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 15,
+   "test": "Tear a sheet of paper into nine pieces, three by three, and with your eyes closed find the middle piece by touch, five times.",
+   "note": "The middle piece is the only one with torn edges on all four sides. The corner pieces have two smooth edges and the others have one. Tear along straight lines so the difference is easy to feel.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 16,
+   "test": "Give four or more people a torn piece each, have the one with the middle piece write an animal, and find that piece without looking.",
+   "note": "Hand the middle piece to one person and ask them to write any animal; everybody else writes a food. Everybody folds their piece and drops it in a bowl. Reach in without looking, feel for four torn edges, and read out the animal slowly.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 17,
+   "test": "Choose four tricks for a ten-minute set, put them in order, and write one opening sentence that says they are tricks.",
+   "note": "One good order: the always-five puzzle to start, the dice, the one-ahead slips, and the torn-paper animal to end. The book trick can take the place of any of them. An opening sentence might be: \"None of this is real mind reading, but see if you can work out how it is done.\"",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 18,
+   "test": "Run your whole set on your own twice, speaking every line out loud, with a timer.",
+   "note": "Set out the paper, pens, dice and cup before you begin, and say the questions as if people were there. Aim for about ten minutes. Practise one line for when something fails, such as \"Let us try another one.\"",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 19,
+   "test": "Teach a younger person the always-five puzzle until they can do it for somebody else.",
+   "note": "Do it on them first, then show them the steps on paper and why the answer is 5. Let them practise on you twice. It counts when their trick works on somebody new, and they say it is a trick.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 20,
+   "test": "Perform your ten-minute set for five or more people, saying at the start that these are tricks.",
+   "note": "A family gathering, a birthday or a club you belong to all work; ask the host first. Choose people for each trick who look happy to join in, and never pick on anybody. Thank each helper by name at the end.",
+   "ctx": "with",
+   "kind": "courage"
+  }
+ ]
+}

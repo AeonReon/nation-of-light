@@ -1,0 +1,112 @@
+{
+ "id": "food.firecook",
+ "name": "Cooking on fire",
+ "line": "From toast on a stick to running the fire and the food for a whole day out.",
+ "size": "weeks",
+ "strand": "look-after-the-place",
+ "from": 12,
+ "who": "Grown-ups, and teenagers with a grown-up",
+ "about": "For grown-ups, and for teenagers with a grown-up beside them at every lit fire; a child never lights or runs a fire alone. It follows on from the Fire ladder: every rung is on a fire lit only where fires are allowed, with water ready, and put out cold at the end. A charcoal barbecue counts for every rung. The climb goes from toast on a stick to cooking on embers, keeping food clean, bread and foil parcels, meat cooked all the way through, a pot over the heat and a hot meal for two, then a meal for six. It ends with you running the fire and all the food for a whole day out, and it is one of the best ways there is to make a day outside feel like an occasion.",
+ "place": "outdoors",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Toast a piece of bread or a marshmallow on a long stick over a small fire and eat it.",
+   "note": "Only where a fire is allowed, with water ready, as in the Fire ladder; a charcoal barbecue works just as well. Use a long metal toasting fork, or a clean stick from a tree you know. Some trees and shrubs are poisonous, so if you are not sure what a stick is from, use metal. Hold it above the flames, not in them, and turn it.",
+   "ctx": "out",
+   "kind": "skill",
+   "mins": 45
+  },
+  {
+   "n": 2,
+   "test": "Let a fire burn down to glowing embers, and test the heat with your hand before cooking.",
+   "note": "Flames burn the outside and leave the middle raw; embers cook evenly. Hold your palm at cooking height above the embers and count slowly. If you have to pull away in two or three seconds, the heat is high; in five or six, it is medium. This usually takes twenty to thirty minutes after lighting.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Before cooking outdoors, wash your hands and set out a clean board or plate for raw food and a separate one for cooked food.",
+   "note": "Bring a bottle of water and a little soap for hands, or use hand wipes if that is all there is. Raw meat never touches cooked food, the same plate or the same tongs. Keep raw meat cold in a cool bag until it goes on the heat.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Bake a twist of bread dough on a stick over embers until it pulls off cleanly and sounds hollow when tapped.",
+   "note": "Mix flour, a pinch of salt, a spoon of baking powder and enough water to make a soft dough at home. Roll a sausage of it and wind it round a thick clean stick or a metal skewer. Turn it slowly above the embers for ten to fifteen minutes. Pale and doughy inside means it needs longer.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 5,
+   "test": "Wrap a potato or a mix of chopped vegetables in foil and cook it in the edge of the embers until soft.",
+   "note": "Two layers of foil, sealed well. Push it into the edge of the embers with a stick or tongs, turn it every ten minutes, and test with a knife: a whole potato can take forty minutes or more. Use gloves or tongs to lift it out; the foil stays very hot.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Keep a fire at steady cooking heat for twenty minutes by adding small pieces of wood little and often.",
+   "note": "Check with the hand test every five minutes. Add one or two small pieces to the side of the fire, not on top of your cooking spot, so there are always new embers coming. A big log thrown on makes flames and smoke, not heat.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Cook sausages over embers until they are cooked all the way through, and cut the thickest one open to check.",
+   "note": "Turn them often. Cooked through means no pink in the middle, and the juices run clear. Food-safety guides generally say meat like sausages, burgers and chicken should reach about 75 degrees in the middle; a food thermometer shows this if you have one. Blackened outside is not the same as cooked.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 8,
+   "test": "Set up a pot so it stands or hangs steady over the embers without tipping.",
+   "note": "Use a metal grill resting on stones, or a metal camping pot stand; a wooden stick can burn through. If you use stones, choose dry ones from a dry place, never from a river or the shore, as wet stones can crack in the heat. Push the pot gently: if it rocks, fix it before any water goes in.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Boil water in a pot over the fire and make a hot drink.",
+   "note": "A lid makes it much quicker. Lift the pot with a thick cloth or gloves, and pour away from yourself and other people. Keep children back from the fire while the water is hot.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "Cook a one-pot meal over the fire for two people.",
+   "note": "For example: a chopped onion softened in a little oil, sliced cooked sausages, and a tin of beans or tomatoes, stirred until everything is hot through. Or pasta boiled, drained and mixed with cheese. Stir often and move the pot to a cooler edge if it starts to stick.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 11,
+   "test": "Cook two things at once over the same fire, one on the hottest part and one on a cooler edge, and have both ready together.",
+   "note": "For example: sausages on the grill over the hot middle, and beans in a pot at the edge. Work backwards from what takes longest. This is the rung that makes a real meal possible.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 12,
+   "test": "Wash up outdoors and leave no sign of the cooking behind.",
+   "note": "Heat water on the fire, use a little soap, and scrape food scraps into a bag to take home. Pour the used water onto open ground well away from any stream, pond or lake, never into the water. Pack every scrap of rubbish and foil away with you.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 13,
+   "test": "Cook a full meal outdoors for six people, with everybody fed at about the same time.",
+   "note": "Plan the menu at home, and prepare what you can there: vegetables chopped, dough mixed, meat kept cold. A simple plan works best: a one-pot main, bread twists or foil potatoes, and fruit or something sweet toasted at the end. Ask the others to help with jobs, but you run the fire.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Run the fire and all the food for a whole day out: at least two hot meals or drinks, the fire put out cold, and the spot left clean.",
+   "note": "You check the rules and the fire danger that morning, pack the food and the water, light and keep the fire, cook, wash up, and put the fire out cold at the end. That is the far end of this ladder.",
+   "ctx": "out",
+   "kind": "kindness"
+  }
+ ]
+}
