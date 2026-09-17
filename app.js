@@ -117,7 +117,7 @@
     ambLayer(ambBird, 1);
     /* flowing water: a second layer under the birds, there on one visit in `visits` so the room is not the same twice running */
     const W = C.amb.water; if (W && AMB.off % (W.visits || 1) === 0) ambLayer(() => W, 1);
-    AMB.fire = ambLayer(() => AMB.fireOn ? C.amb.fire : null, AMB.fireOn ? 1 : 0).out;
+    if (C.amb.fire) AMB.fire = ambLayer(() => AMB.fireOn ? C.amb.fire : null, AMB.fireOn ? 1 : 0).out;
     AMB.layers.forEach(ambFeed); AMB.tick = setInterval(() => AMB.layers.forEach(ambFeed), 1000);
   }
   function ambFire(on) { AMB.fireOn = !!on; if (AMB.on && AMB.fire) { const t = ac().currentTime; AMB.fire.gain.cancelScheduledValues(t); AMB.fire.gain.setValueAtTime(AMB.fire.gain.value, t); AMB.fire.gain.linearRampToValueAtTime(on ? 1 : 0, t + 1.5); } }
@@ -136,6 +136,7 @@
   /* v72, his: moving between pages cut them off mid-sentence. A page change now lets the
      sentence finish (hushSoft: cancels what was queued, not what is being said), and the
      next page's words wait until the room is quiet (whenQuiet). */
+  const voiceBusy = () => !!SPEAKING || !NAR.paused || !MAR.paused;
   function hushSoft() { SPK++; MQ.length = 0; clearTimeout(whenQuiet._t); }
   function whenQuiet(fn, tries) {
     clearTimeout(whenQuiet._t);
@@ -148,20 +149,21 @@
      between them (`music.gap` seconds). It was one 52-second nocturne, the same one every visit, then
      silence. The very first Begin still opens on that nocturne; every other start takes the next piece. */
   let MUSV = 0, MUST = null, MUSWANT = false, MUSGAP = null, MUSI = 0;
-  const musicList = () => ['dawn'].concat(((C.music && C.music.pieces) || []).map(p => p.id));
+  const musicList = () => [(C.music && C.music.first) || { id: 'dawn' }].concat((C.music && C.music.pieces) || []);
   const duckTo = () => atHome() ? .26 : .14;
   function musicTo(v, ms) { clearInterval(MUST); const from = getVol(MUS), t0 = performance.now(); MUST = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / ms); setVol(MUS, from + (v - from) * k); if (k >= 1) clearInterval(MUST); }, 50); }
   function musicPlay() {
     clearTimeout(MUSGAP); if (!MUSWANT || !S.sound) return;
-    if (LYRE.on || document.hidden) { MUSGAP = setTimeout(musicPlay, 8000); return; }
-    const L = musicList(); wire(MUS); MUS.src = 'audio/music/' + L[MUSI % L.length] + '.mp3'; setVol(MUS, 0);
+    if (document.hidden) { MUSGAP = setTimeout(musicPlay, 8000); return; }
+    const L = musicList(); wire(MUS); MUS.src = 'audio/music/' + L[MUSI % L.length].id + '.mp3?v=' + C.version; setVol(MUS, 0); lyreLit(true);
     MUS.play().then(() => musicTo((!NAR.paused || !MAR.paused) ? duckTo() : MUSV, 2600)).catch(() => {});
   }
-  function musicStart(v, opening) { if (!S.sound) return; MUSWANT = true; MUSV = v || .55; if (opening) MUSI = 0; else { S.musicN = (S.musicN || 0) + 1; MUSI = S.musicN; save(); } musicPlay(); }
+  const lyreLit = on => { try { PORTICO.props.lyre.classList.toggle('play', on); } catch (e) {} };
+  function musicStart(v, opening) { if (!S.sound || S.musicOff) return; MUSWANT = true; MUSV = v || .55; if (opening) MUSI = 0; else { S.musicN = (S.musicN || 0) + 1; MUSI = S.musicN; save(); } musicPlay(); }
   MUS.addEventListener('ended', () => { if (!MUSWANT) return; MUSI++; S.musicN = MUSI; save(); const G = (C.music && C.music.gap) || [20, 40]; MUSGAP = setTimeout(musicPlay, (G[0] + Math.random() * (G[1] - G[0])) * 1000); });
   function musicDuck(on) { lyreDuck(on); if (MUS.paused || !MUSWANT) return; musicTo(on ? duckTo() : MUSV, on ? 350 : 1400); }
-  function musicStop() { MUSWANT = false; clearTimeout(MUSGAP); MUS._held = false; if (MUS.paused) return; musicTo(0, 1200); setTimeout(() => { if (!MUSWANT) MUS.pause(); }, 1300); }
-  const musicNow = () => musicList()[MUSI % musicList().length];
+  function musicStop() { MUSWANT = false; clearTimeout(MUSGAP); MUS._held = false; lyreLit(false); if (MUS.paused) return; musicTo(0, 1200); setTimeout(() => { if (!MUSWANT) MUS.pause(); }, 1300); }
+  const musicNow = () => musicList()[MUSI % musicList().length].id;
   [NAR, MAR].forEach(el => { el.addEventListener('play', () => musicDuck(true)); const back = () => { if (NAR.paused && MAR.paused) musicDuck(false); }; el.addEventListener('ended', back); el.addEventListener('pause', back); });
 
   /* Aurelia reads: the tablets, the breaks, the finish. */
@@ -291,29 +293,19 @@
     const src = ctx.createBufferSource(); src.buffer = lyreBuf(ctx, f); const g = ctx.createGain(); g.gain.setValueAtTime(vol, t0); g.gain.exponentialRampToValueAtTime(.0005, t0 + 2.2);
     const lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 2800; src.connect(lp); lp.connect(g); g.connect(LYRE.out); src.start(t0); src.stop(t0 + 2.4);
   }
-  /* the lyre plays a real piece: a strum on the tap, then about a minute of Chopin (Musopen, CC0), one after another day by day */
-  const LYR = new Audio(); LYR.preload = 'none';
-  function vol(el, v, ms) { clearInterval(el._vt); const from = getVol(el), t0 = performance.now(); el._vt = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / ms); setVol(el, from + (v - from) * k); if (k >= 1) clearInterval(el._vt); }, 50); }
-  function lyreStart() {
-    const ctx = ac(); if (!ctx || !S.sound) return; if (LYRE.on) return; LYRE.on = true;
-    const out = ctx.createGain(); out.gain.value = .5; out.connect(ctx.destination); LYRE.out = out;
-    const N = LYRE.notes, t = ctx.currentTime + .05; for (let i = 0; i < N.length; i++) pluck(ctx, N[i], t + i * .045, .2);
-    const P = (C.music && C.music.pieces) || []; if (!P.length) { LYRE.on = false; return; }
-    let pc = P[(daySeed() + (S.lyreN || 0)) % P.length]; if (P.length > 1 && !MUS.paused && pc.id === musicNow()) { S.lyreN = (S.lyreN || 0) + 1; pc = P[(daySeed() + S.lyreN) % P.length]; } S.lyreN = (S.lyreN || 0) + 1; save();
-    wire(LYR); LYR.src = 'audio/music/' + pc.id + '.mp3'; setVol(LYR, 0); LYR.onended = () => lyreStop(0);
-    LYRE.timer = setTimeout(() => { if (!LYRE.on) return; LYR.play().then(() => vol(LYR, .75, 2200)).catch(() => { LYRE.on = false; PORTICO.props.lyre.classList.remove('play'); }); }, 700);
-    PORTICO.props.lyre.classList.add('play'); if (!MUS.paused) musicTo(.05, 900);
-    toast(pc.name);
-  }
-  function lyreStop(ms) {
-    if (!LYRE.on) return; LYRE.on = false; clearTimeout(LYRE.timer);
-    vol(LYR, 0, ms || 800); setTimeout(() => { LYR.pause(); }, (ms || 800) + 60);
-    try { LYRE.out.gain.linearRampToValueAtTime(0, ac().currentTime + 1); } catch (e) {}
-    PORTICO.props.lyre.classList.remove('play'); if (!MUS.paused) musicTo(MUSV, 2500);
-  }
-  function lyreDuck(on) { if (!LYRE.on || LYR.paused) return; vol(LYR, on ? .2 : .75, on ? 300 : 1200); }
+  /* v85: THE LYRE IS THE MUSIC SWITCH. His: "there seems to be no way to turn the music off when it gets going".
+     It used to start a second piece over the room's music and a second tap only stopped that one, so the music
+     came straight back. Now: music playing (or waiting between pieces) + a tap = all music off, and it STAYS off
+     across visits (`S.musicOff`) until the lyre is tapped again, which strums, starts the next piece and names it. */
+  function lyreStrum() { const ctx = ac(); if (!ctx || !S.sound) return; const out = ctx.createGain(); out.gain.value = .5; out.connect(ctx.destination); LYRE.out = out; const N = LYRE.notes, t = ctx.currentTime + .05; for (let i = 0; i < N.length; i++) pluck(ctx, N[i], t + i * .045, .2); setTimeout(() => { try { out.disconnect(); } catch (e) {} }, 4000); }
+  function lyreStop() {}   /* kept for its callers: there is no second music channel any more */
+  function lyreDuck() {}
   function toast(text) { const old = document.querySelector('.toast'); if (old) old.remove(); const t = document.createElement('div'); t.className = 'toast'; t.textContent = text; $('stage').appendChild(t); setTimeout(() => { t.classList.add('gone'); setTimeout(() => t.remove(), 500); }, 3400); }
-  function tapLyre(el) { ac(); sfx('tap'); el.classList.remove('hint'); if (LYRE.on) lyreStop(1000); else lyreStart(); }
+  function tapLyre(el) {
+    ac(); sfx('tap'); el.classList.remove('hint'); const M = C.music || {};
+    if (MUSWANT) { musicStop(); S.musicOff = true; save(); toast(M.offToast || 'Music off'); return; }
+    if (!S.sound) return; S.musicOff = false; save(); lyreStrum(); setTimeout(() => { musicStart(.5); const pc = musicList()[MUSI % musicList().length]; if (pc && pc.name) toast(pc.name); }, 700);
+  }
   /* dawn at the first tablet, full morning by the middle, gold at the twenty-fifth */
   const skyFor = () => (S.school && S.school.celebrated === today()) ? 1 : Math.min(1, S.done.length / C.moves.length);
 
@@ -867,7 +859,7 @@
     tb.textContent = isKid() ? kidName() : ((C.school.tabs.find(t => t[0] === 'home') || [])[1] || 'Home'); tb.classList.toggle('kid', isKid()); }
   /* ---- the arrival: the portico, the two of them, where you stand, three for today ---- */
   let HOMEN = 0;
-  function goHome() { ROOMV = null; if ($('stage').classList.contains('arrive')) { hush(); renderArrival(); $('slist').scrollTop = 0; return; }
+  function goHome() { ROOMV = null; if ($('stage').classList.contains('arrive')) { hushSoft(); renderArrival(); $('slist').scrollTop = 0; return; }
     hushSoft(); clearTimeout(ROOMT); HOMEN++; CAT = null; TRK = null; SEARCH = null; paintSearchBtn(); arrival(false, true, true); }
   const todayQuick = () => { const t = today(); return Object.values(S.school.done).some(v => localDay(v) === t); };
   function dayCount() { const t = today(); const q = Object.values(S.school.done).filter(v => localDay(v) === t).length; const pr = Object.values(S.school.practice || {}).filter(p => p.days && p.days[t]).length; return q + pr; }
@@ -981,6 +973,7 @@
     if (!first && !quietFolk()) { const hers = vn % 2 === 0; if (hers) { const ids = C.aurelia.lines.map(l => l.id); const id = ids[(S.school.visits || 0) % ids.length]; const ln = C.aurelia.lines.find(l => l.id === id); lines = lines.concat([{ who: 'aurelia', id, t: ln.t }]); } else { const all = Object.keys(LINES).filter(k => k.startsWith('m-')); const ln = fresh(all.slice((S.school.visits || 0) % all.length).concat(all)); if (ln) lines = lines.concat([{ who: 'marcus', id: ln.id, t: ln.t }]); } }
     clearTimeout(arrival._t); arrival._t = setTimeout(() => {
       if (!$('stage').classList.contains('arrive')) return;
+      if (quiet && voiceBusy()) return;   /* back at home mid-sentence: let them finish, say nothing new */
       /* an open promise outranks anything else either of them could say */
       if (quiet) { speakSchool(lines); return; }
       if (!saySlot('arrive')) speakSchool(lines);
@@ -1078,10 +1071,10 @@
      home. Both cards on the home page open it; the streak card lands you on
      the streak. */
   let ROOMV = null;
-  function openRoom(at) { ROOMV = at || 'top'; hush(); renderArrival();
+  function openRoom(at) { ROOMV = at || 'top'; hushSoft(); renderArrival();
     setTimeout(() => { const el = at === 'run' ? $('runsec') : null;
       $('slist').scrollTop = el ? Math.max(0, el.offsetTop - 8) : 0; }, 30); }
-  function closeRoom() { ROOMV = null; hush(); renderArrival(); $('slist').scrollTop = 0; }
+  function closeRoom() { ROOMV = null; hushSoft(); renderArrival(); $('slist').scrollTop = 0; }
   const troBtn = a => `<button class="tro ${a.earned ? 'on' : 'off'}" data-tro="${a.id}">${trophySVG(a)}
     <span>${a.short}</span><small>${a.earned ? ((a.kind === 'medal' || a.kind === 'trait') ? a.tier : (a.kind === 'stone' ? a.need + ' days' : 'Earned'))
       : (a.kind === 'stone' ? a.left + ' more day' + (a.left === 1 ? '' : 's') : a.left + ' more')}</small></button>`;
@@ -1354,12 +1347,13 @@
   const ENTRYSAID = new Set();
   function entryWord() {
     if (!$('stage').classList.contains('school') || $('stage').classList.contains('arrive') || quietFolk()) return;
-    const q = quietProject(); if (q) { hush(); prac(q).asked = today(); save(); speakSchool([{ who: 'aurelia', id: 'ui-lg-check', t: C.voice['lg-check'] }], () => checkIn(q)); return; }
+    const q = quietProject(); if (q) { prac(q).asked = today(); save(); speakSchool([{ who: 'aurelia', id: 'ui-lg-check', t: C.voice['lg-check'] }], () => checkIn(q)); return; }
     const E = C.school.entry || []; if (!E.length) return;
     const start = (daySeed() * 7 + (S.school.visits || 0) + HOMEN) % E.length;
     let ln = null; for (let i = 0; i < E.length; i++) { const c = E[(start + i) % E.length]; if (!ENTRYSAID.has(c.id)) { ln = c; break; } }
     if (!ln) { ENTRYSAID.clear(); ln = E[start]; }
-    ENTRYSAID.add(ln.id); hush(); speakSchool([ln]);
+    if (voiceBusy()) return;   /* somebody is mid-sentence from the last page: the word for going in can wait for another day */
+    ENTRYSAID.add(ln.id); speakSchool([ln]);
   }
   /* a line from either of them: from the portico when it is showing, popped in at the edge when not */
   let SPK = 0;   /* a running chain dies when hush() moves this on */
@@ -1559,7 +1553,7 @@
       dock('scene'); stageBack(null);
       if (TAB === 'long') renderLong(list);
       else renderAll(list);
-      list.querySelectorAll('[data-room]').forEach(el => el.addEventListener('click', () => { sfx('tap'); CAT = el.dataset.room; renderSchool(); const id = C.school.catLines[CAT]; if (id && !SAIDCAT.has(CAT)) { SAIDCAT.add(CAT); hush(); speakSchool([{ who: 'aurelia', id, t: SCH.categories.find(c => c.id === CAT).name }]); } }));
+      list.querySelectorAll('[data-room]').forEach(el => el.addEventListener('click', () => { sfx('tap'); CAT = el.dataset.room; renderSchool(); const id = C.school.catLines[CAT]; if (id && !SAIDCAT.has(CAT) && !voiceBusy()) { SAIDCAT.add(CAT); speakSchool([{ who: 'aurelia', id, t: SCH.categories.find(c => c.id === CAT).name }]); } }));
     }
     wireRows(list);
   }
@@ -1802,7 +1796,7 @@
       `<h4 class="sub">${K.suggestedTitle}</h4>` + sug.map(candRow).join('') + `</div>`;
     list.querySelectorAll('[data-commit]').forEach(b => b.addEventListener('click', () => { sfx('tap'); commitCard(trackById(b.dataset.commit), 'long'); }));
     wireLong(list);
-    if (!LONGSAID && line('c-long')) { LONGSAID = true; hush(); popIn('marcus'); setTimeout(() => marcusSay(line('c-long'), 'point', () => popOut('marcus', 1400)), 700); }
+    if (!LONGSAID && line('c-long') && !voiceBusy()) { LONGSAID = true; popIn('marcus'); setTimeout(() => marcusSay(line('c-long'), 'point', () => popOut('marcus', 1400)), 700); }
   }
   /* ---- the long skills: a day counted each time you practise, and the two of them asking how it goes ---- */
   const K_LG = () => C.school.long.check;
@@ -2126,7 +2120,7 @@
     TRK = tr.id;
     TRK_FROM = from || (SEARCH !== null ? { search: SEARCH } : (CAT ? { cat: CAT } : { tab: TAB }));
     SEARCH = null;                       // or renderSchool would show the results again
-    hush(); renderSchool(); $('slist').scrollTop = 0;
+    hushSoft(); renderSchool(); $('slist').scrollTop = 0;
   }
   function closeTrack() {
     const f = TRK_FROM || {}; TRK = null; TRK_FROM = null;
@@ -2299,8 +2293,8 @@
     paintSearch();
     setTimeout(() => { try { box.focus(); } catch (e) {} }, 80);
   }
-  function openSearch() { SEARCH = SEARCH || ''; TRK = null; CAT = null; hush(); renderSchool(); }
-  function closeSearch() { SEARCH = null; hush(); renderSchool(); }
+  function openSearch() { SEARCH = SEARCH || ''; TRK = null; CAT = null; hushSoft(); renderSchool(); }
+  function closeSearch() { SEARCH = null; hushSoft(); renderSchool(); }
 
   function trackRow(tr) { const c = catOf(tr), n = trackDone(tr), N = tr.steps.length; return `<button class="srow track pic" style="--c:${c.accent};--c2:${c.accent2}" data-track="${tr.id}"><img src="${trackImg(tr)}" alt="" loading="lazy" onerror="this.src='images/cat/${c.id}.jpg'"><span class="stxt"><span class="stest">${tr.name}</span><span class="sline2">${tr.line || ''}</span>${tr.who ? `<span class="swho">${tr.who}</span>` : ''}<span class="szr sz-${tr.size || 'months'}">${sizeOf(tr).name}</span><span class="sprog"><i style="width:${Math.round(n / N * 100)}%"></i></span></span><span class="snum">${n} of ${N}</span></button>`; }
   /* The old veil. Kept as a name only, so any caller left anywhere lands on
@@ -2520,7 +2514,7 @@
     $('helpbtn').addEventListener('click', () => { sfx('tap'); if (MODE === 'school' && C.tour && !S.school.toured2) { S.school.toured2 = true; save(); if ($('stage').classList.contains('arrive')) leaveArrival(); tour(); } else help(); });
     cover();
     if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
-    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool, show: id => trophyShow(awards().find(a => a.id === id)), awards, quiet: quietProject, check: id => checkIn(trackById(id)), entry: entryWord, home: goHome, lyr: () => ({ on: LYRE.on, paused: LYR.paused, src: LYR.src.split('/').pop(), vol: +getVol(LYR).toFixed(2) }), amb: () => ({ on: AMB.on, fire: AMB.fireOn, beds: Object.keys(AMB.bufs), layers: AMB.layers.map(L => ({ n: L.n, live: L.live.length, bed: L.bed, next: +(L.nextAt - ac().currentTime).toFixed(1) })) }), mus: () => ({ want: MUSWANT, piece: musicNow(), paused: MUS.paused, vol: +getVol(MUS).toFixed(2), wired: !!MUS._g }), skip: () => { MUS.pause(); MUS.dispatchEvent(new Event('ended')); }, prac: id => logPractice(trackById(id)), track: id => openTrack(trackById(id)), tracks: () => allTracks().map(t => t.id), say: pickSay, state: sayState, ask: askPromise, open: schoolOpen, all: everythingOpen, fw: () => fireworks(inScene() ? $('scene') : $('stage'), 5000), day: dayCelebrate };
+    window.NOL = { S, save, reset() { localStorage.removeItem(KEY); location.reload(); }, PORTICO: () => PORTICO, RIG: () => RIG, LINES, school: enterSchool, show: id => trophyShow(awards().find(a => a.id === id)), awards, quiet: quietProject, check: id => checkIn(trackById(id)), entry: entryWord, home: goHome, amb: () => ({ on: AMB.on, fire: AMB.fireOn, beds: Object.keys(AMB.bufs), layers: AMB.layers.map(L => ({ n: L.n, live: L.live.length, bed: L.bed, next: +(L.nextAt - ac().currentTime).toFixed(1) })) }), mus: () => ({ want: MUSWANT, piece: musicNow(), paused: MUS.paused, vol: +getVol(MUS).toFixed(2), wired: !!MUS._g }), skip: () => { MUS.pause(); MUS.dispatchEvent(new Event('ended')); }, prac: id => logPractice(trackById(id)), track: id => openTrack(trackById(id)), tracks: () => allTracks().map(t => t.id), say: pickSay, state: sayState, ask: askPromise, open: schoolOpen, all: everythingOpen, fw: () => fireworks(inScene() ? $('scene') : $('stage'), 5000), day: dayCelebrate };
   }
   /* a phone held sideways: the stage turns back by ninety degrees and stays upright, which reads as "this app is this way up" */
   const rot = () => {
