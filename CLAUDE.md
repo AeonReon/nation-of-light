@@ -749,5 +749,7 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   builder's view before launch. Console: `NOL.hero(i, all)`. Pictures: images/hero/<id>.jpg, 704x980, painted with
   tools/hero/draw.mjs (Flux 2 Klein, stage one by txt2img, the rest by img2img off stage one at strength 1,
   image_guidance 2.5-3, use curl not node fetch: renders pass 300 s); bump `pic` on a stage to bust the cache.
-  Known faults in the first three: legionary looks 45, emperor wears a wristwatch, the body does not visibly grow.
+  v87 repainted the legionary and the emperor (tools/hero/rerender.py: the age said in the prompt, "bare wrists",
+  thicker arms and legs, watch/grey hair/beard in the negative; `pic: 2`): same young face now, no wristwatch, the
+  body visibly grows. Still loose: the emperor's boots look modern; the labourer could be thinner.
   NOT done: a woman's path (must exist before launch), the other nine stages, a voiced line from Marcus at a new stage.

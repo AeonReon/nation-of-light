@@ -6437,12 +6437,14 @@
    },
    {
     "id": "legionary",
+    "pic": 2,
     "at": 100,
     "title": "The legionary",
     "line": "Stronger and straighter, and trusted with a shield. The days you kept are in his shoulders."
    },
    {
     "id": "emperor",
+    "pic": 2,
     "at": 877,
     "title": "The emperor",
     "line": "Everything the school holds, done. He stands where Marcus stood."
