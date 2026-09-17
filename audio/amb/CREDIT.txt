@@ -1,17 +1,8 @@
-The room's beds (v81). All real recordings from Mixkit (https://mixkit.co/free-sound-effects/), Mixkit Sound
-Effects Free License: free for commercial and non-commercial use, no attribution required. Cut from the
-loudness-matched WAVs in APPS/storyreel/sfx (see its SOURCES.md and sfx_fetch.py), about a minute each,
-high-passed to take the rumble out, mp3. The app crossfades each into the next, so no loop point is needed.
+The room's beds (v85). Real recordings only: never synthesise ambience (the coded wind and fire pops were heard as "fuzz" and "a frog clicking").
+v85 rebuilt every bed from the RAW source at 160k, with a gentle high-pass and LINEAR gain to -24 LUFS. The v81 beds were cut from storyreel's loudnorm-ed WAVs (loudnorm pumps) at 80k, and he said they "sound really bad, like something is broken". The brazier crackle and the trickling-water layer are OUT of the room: on a phone speaker a quiet crackle or hiss is exactly what a broken speaker sounds like.
+Nobody can listen from a terminal, so beds are chosen by spectrogram (distinct calls over a dark floor) and then BY HIS EAR on /sounds.html, which plays every bed and every piece. Files named x-* are candidates waiting for his ear, not used by the app.
 
-birds-morning, birds-garden = Mixkit #2472 "Morning birds" (two different minutes of it)
-birds-evening = Mixkit #1220 "Quiet forest ambience"
-birds-brook = Mixkit #61 "Natural ambience with flowing water and birds" (v83)
-birds-river = Mixkit #2473 "Birds chirping near the river" (v83)
-birds-forest = Mixkit #1239 "Birds in forest loop" (v83)
-water = Mixkit #3126 "Water flowing ambience loop", low-passed at 4.5 kHz so it trickles and never hisses (v83)
-brazier = Mixkit #1329 "Campfire burning crackles"
-
-Never ship synthesised ambience: the coded wind and fire pops were heard as "fuzz" and "a frog clicking".
-
-Checked by spectrogram before use (nobody can listen from a terminal): a good bed shows distinct calls over a dark floor.
-Rejected: #2455 and storyreel's river.wav (flat roar), #1216 (hissy), #2453 (a constant tone), #2464 (a repeating insect beep: the frog again).
+Mixkit (https://mixkit.co/free-sound-effects/, Mixkit Sound Effects Free License, no attribution required):
+birds-morning, birds-garden = #2472 "Morning birds" (two different minutes) · birds-brook = #61 "Natural ambience with flowing water and birds" · birds-forest = #1239 "Birds in forest loop" · birds-evening = #1220 "Quiet forest ambience" · x-river = #2473 "Birds chirping near the river" (needed +13 dB, may hiss) · x-water = #3126 "Water flowing ambience loop"
+archive.org: x-nightingale = "Nightingale song May 2012", Adam Clark, CC0, https://archive.org/details/NightingaleSongMay2012 · x-songbirds = "Relaxing Nature Sounds - Birdsong", CC0 as uploaded, https://archive.org/details/naturesounds-soundtheraphy (uploader unknown: check before shipping it in the room)
+Rejected: Mixkit #2455 and storyreel's river.wav (flat roar), #1216 (hissy), #2453 (a constant tone), #2464 (a repeating insect beep). YouTube: the only reuse-licensed nature videos found were tiny re-upload channels, and YouTube audio is lossy anyway; not used.

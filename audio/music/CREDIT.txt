@@ -1,6 +1,14 @@
-Chopin, Nocturne in E flat major, Op. 9 no. 2. Recording from the Musopen Chopin project (archive.org/details/musopen-chopin-complete-works-flac), released CC0 / public domain. First 52 seconds, faded.
+The room's music (v85). His: he likes the original nocturne and did not take to the ten lesser-known Chopin excerpts of v83; he asked for the Moonlight Sonata and pieces with that weight. Every recording here is public domain or CC0, and every clip is cut from the start of the piece to a breath between phrases at about 75-95 seconds, faded out, 128k mp3.
+LEVELS ARE LINEAR GAIN ONLY (towards -20 LUFS, never past the peak, never more than +10 dB). Never loudnorm a piano: its dynamic mode rides the level and the music pumps.
 
-The lyre's pieces (v26), all from the same Musopen Chopin project, CC0 / public domain, trimmed to about seventy seconds and faded:
-nocturne-27-2 = Nocturne in D flat major, Op. 27 no. 2 · raindrop = Prelude Op. 28 no. 15 "Raindrop" · berceuse = Berceuse in D flat major, Op. 57 · nocturne-15-2 = Nocturne in F sharp major, Op. 15 no. 2.
-
-v83, ten more from the same Musopen Chopin project (CC0 / public domain), each cut from the start to a breath between phrases at about 70-90 seconds, faded, levelled to -20 LUFS: tristesse = Etude Op. 10 no. 3 · aeolian-harp = Etude Op. 25 no. 1 · nocturne-32-1 · nocturne-55-2 · nocturne-37-2 · nocturne-62-2 · farewell-waltz = Waltz Op. 69 no. 1 · prelude-17 and prelude-23 = Preludes Op. 28 (no. 23 whole) · andante-spianato = Op. 22, the Andante only. All in major keys on purpose. The room plays all fifteen in turn; the lyre plays the fourteen in content.json `music.pieces`.
+dawn = Chopin, Nocturne in E flat, Op. 9 no. 2 · raindrop = Chopin, Prelude Op. 28 no. 15. Both from the Musopen Chopin project, CC0: https://archive.org/details/musopen-chopin-complete-works-flac
+moonlight = Beethoven, the Moonlight Sonata, first movement. Public domain. https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_sonata_no._14_in_c_sharp_minor_%27moonlight%27,_op._27_no._2_-_i._adagio_sostenuto.ogg
+pathetique = Beethoven, Sonata Pathétique, the Adagio. CC0. https://commons.wikimedia.org/wiki/File:Daniel_Veesey_-_02_-_Sonata_8_Pathetique_-_II_Adagio_cantabile.ogg
+clair-de-lune = Debussy, Clair de lune. Public domain. https://commons.wikimedia.org/wiki/File:Clair_de_lune_(Claude_Debussy)_Suite_bergamasque.ogg
+gymnopedie = Satie, Gymnopédie no. 1. Public domain. https://commons.wikimedia.org/wiki/File:Erik_Satie_-_gymnopedies_-_la_1_ere._lent_et_douloureux.ogg
+bach-prelude = Bach, Prelude in C, the Well-Tempered Clavier. CC0. https://commons.wikimedia.org/wiki/File:Kimiko_Ishizaka_-_Bach_-_Well-Tempered_Clavier,_Book_1_-_01_Prelude_No._1_in_C_major,_BWV_846.ogg
+traumerei = Schumann, Träumerei. Public domain. https://commons.wikimedia.org/wiki/File:Robert_Schumann_-_scenes_from_childhood,_op._15_-_vii._dreaming.ogg
+goldberg-aria = Bach, the Goldberg Variations, Aria. Public domain (Musopen). https://archive.org/download/MusopenCollectionAsFlac/Bach_GoldbergVariations/JohannSebastianBach-01-GoldbergVariationsBwv.988-Aria.flac
+morning = Grieg, Morning, from Peer Gynt. Public domain (Musopen). https://archive.org/download/MusopenCollectionAsFlac/Greig_PeerGynt/EdvardGrieg-PeerGyntSuiteNo.1Op.46-01-Morning.flac
+nocturne-c-sharp = Chopin, Nocturne in C sharp minor, Op. posth.. Public domain (Musopen). https://archive.org/download/musopen-chopin-complete-works-flac/Nocturne%20in%20C%20sharp%20minor%20%27Lento%20con%20gran%20espressione%27%2C%20B.%2049%20%28Op.%20posth.%29.mp3
+(The Commons recordings are the Musopen ones: Paul Pitman, Daniel Veesey, Robin Alciatore; the Bach prelude is Kimiko Ishizaka's Open Well-Tempered Clavier; Clair de lune is a public-domain recording on Commons.)

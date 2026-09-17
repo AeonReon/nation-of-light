@@ -714,3 +714,22 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   hushed fires `musicDuck(false)` a moment AFTER `musicStop()` began its fade, which swelled the music back up for a
   second (now `musicDuck` does nothing unless `MUSWANT`); and the mute never stopped the lyre's piece (now
   `lyreStop(300)` in the sound-off handler).
+- **v85 (2026-09-17, Fable session): his ear on v81-v84, three fixes.** (1) **"No way to turn the music off."** THE LYRE IS
+  THE MUSIC SWITCH now: music playing (or between pieces) + a tap = all music off, kept off across visits
+  (`S.musicOff`) until the lyre is tapped again, which strums, starts the next piece and names it in a toast. The
+  second music channel (LYR) is gone; `lyreStop`/`lyreDuck` are empty shims for their callers. The sound button still
+  mutes everything. (2) **"Jumping between the long game, everything and home cuts them off."** v72's `hushSoft` only
+  covered some paths: `entryWord`, the first-visit long-game line and a room's name line each called `hush()` before
+  speaking, and `openTrack`, search, `openRoom/closeRoom` and Home-while-at-home hard-hushed. Rule now: NAVIGATION
+  NEVER CALLS `hush()`; it calls `hushSoft()`, and a decorative line that navigation would trigger is SKIPPED while
+  somebody is speaking (`voiceBusy()`), not queued. A Done, a tap on one of them, a celebration or the mute still
+  interrupt. Verified with a hook on `HTMLMediaElement.prototype.pause`: a 5.6 s line survived home, long game,
+  everything, home. (3) **"The audio effects sound really bad, like something is broken."** See audio/amb/CREDIT.txt:
+  beds rebuilt from raw sources at 160k with linear gain, the brazier crackle and the water layer removed
+  (`amb.fire` / `amb.water` are null; the code still supports both), and **`/sounds.html`** = a sound-check page that
+  plays every bed, every waiting candidate (`x-*`) and every piece, so he can choose by ear. Two blind rounds
+  failed; do not pick ambience blind again. **Music:** he likes the original nocturne, not the ten lesser-known
+  excerpts; the list is now dawn + Moonlight, Clair de lune, Grieg's Morning, the Raindrop, the Pathétique Adagio,
+  Gymnopédie 1, the C sharp minor nocturne, the Goldberg Aria, Bach's Prelude in C, Träumerei (all PD/CC0, see
+  audio/music/CREDIT.txt; `music.first` + `music.pieces` carry names). Linear gain only on music too: loudnorm made
+  v83's piano pump.
