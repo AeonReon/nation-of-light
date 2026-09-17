@@ -1,0 +1,622 @@
+[
+  {
+    "id": "q-page-new-shelf",
+    "test": "Read one page of a kind of book you never read, such as a cookbook, a bird guide or an instruction manual.",
+    "note": "Take any book in the house that is not your usual kind and open it in the middle. Read the whole page, even the parts that feel slow. If there is no such book, read one page of the instructions for something in the kitchen, or a page from a free library app on your phone.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-acrostic",
+    "test": "Write the word HOME down the side of a page and make a four-line poem where each line starts with one of those letters.",
+    "note": "For example: Hot tea in my blue cup, / Old coat on the hook, / My shoes by the door, / Everybody back by six. The lines do not have to rhyme. Any four-letter word works if you would rather pick your own, and the back of an envelope is plenty.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+  },
+  {
+    "id": "q-new-word",
+    "test": "Find one word you never say, check what it means, and write a sentence of your own that uses it.",
+    "note": "Open a dictionary at any page, or search a word like meander, which means to wander slowly with lots of turns. Your sentence could be: The river meanders past the old mill. Say the sentence out loud once so the word feels like yours.",
+    "mins": 2,
+    "cat": "words",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-copy-sentence",
+    "test": "Copy out by hand, slowly and neatly, one sentence you like from a book in the house.",
+    "note": "Choose any book and look for a sentence that you would like to have written yourself. Write it on a card or a scrap of paper with the book title under it. Keep it somewhere you will see it tomorrow, such as beside the kettle.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "attention",
+    "area": "creativity",
+    "trait": "patience"
+  },
+  {
+    "id": "q-six-word-story",
+    "test": "Write a story of exactly six words about something that happened to you this week.",
+    "note": "Count the words on your fingers as you go. An example: Lost the keys. Found them. Laughed. Write three versions if the first comes quickly, and keep the one you like best.",
+    "mins": 2,
+    "cat": "words",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+  },
+  {
+    "id": "q-describe-object",
+    "test": "Describe one object on the table in three sentences without saying what it is.",
+    "note": "Say its size, what it is made of and what somebody does with it. For a mug: It is about as tall as my hand. It is made of something hard and smooth. People hold it by the side when it is hot. Read it back and check nobody could mistake it for something else.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "attention",
+    "area": "creativity",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-alphabet-food",
+    "test": "Write one food for every letter from A to Z.",
+    "note": "Apple, bread, carrot, and so on down the page. Leave a gap for a hard letter and come back to it at the end. If X beats you, a dictionary or a quick search is allowed. Any theme works as well as food, such as animals or towns.",
+    "mins": 4,
+    "cat": "words",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-shorter-sentence",
+    "test": "Take one long sentence from an email or a letter and rewrite it in half as many words.",
+    "note": "Count the words first, then cut. For example: I just wanted to let you know that I will not be able to come on Friday (18 words) becomes I cannot come on Friday (5 words). Check the short one still says everything the long one did.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "discipline"
+  },
+  {
+    "id": "q-read-aloud",
+    "test": "Read one paragraph of any book out loud, slowly, as if to a room of people.",
+    "note": "Stand up if you can, and pause at every full stop. Read it a second time a little slower than the first. Reading to yourself counts; so does reading to a pet or an empty chair.",
+    "mins": 2,
+    "cat": "words",
+    "kind": "courage",
+    "area": "creativity",
+    "trait": "confidence"
+  },
+  {
+    "id": "q-rhyme-list",
+    "test": "Write ten words that rhyme with light.",
+    "note": "Start with the easy ones like night, bright and kite, then push for the harder ones like height and invite. Go through the alphabet in your head if you get stuck. When you have ten, pick two and make a line that rhymes.",
+    "mins": 2,
+    "cat": "words",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+  },
+  {
+    "id": "q-first-line",
+    "test": "Write the first sentence of a story that starts in your own kitchen.",
+    "note": "Put one real thing from your kitchen in it and one thing that is not usually there. An example: The kettle had just clicked off when the letter slid under the back door. You do not have to write any more than that one sentence.",
+    "mins": 2,
+    "cat": "words",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-five-for-walk",
+    "test": "Write five different words that mean walk, then use the best one in a sentence.",
+    "note": "Stroll, march, wander, stride and tiptoe are all kinds of walking, and each one paints a different picture. Say which one fits how you walked into the room today. A thesaurus or a phone search will give you more if you want them.",
+    "mins": 2,
+    "cat": "words",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-lang-colours",
+    "test": "Learn ten colour words in a language you do not speak, and say each one while pointing at something that colour.",
+    "note": "Use a free translation app, a phone search such as colours in Spanish, or a dictionary. Point at the kettle for silver, a book for red, the window frame for white. Say the list once more at the end without looking.",
+    "mins": 4,
+    "cat": "words",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-lang-count",
+    "test": "Count from one to ten out loud in a language you have never counted in.",
+    "note": "Search count to ten in Japanese, or Welsh, or any language you like, and listen to the sound clip if there is one. Count on your fingers as you say each number. Try it once with your eyes shut.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-lang-thanks",
+    "test": "Learn how to say thank you in five languages and write them down.",
+    "note": "A phone search for thank you in French gives merci; do the same for four more, such as Irish, Polish, Italian and Portuguese. Write each one with the name of the language beside it. Pick one to use at home today.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "skill",
+    "area": "relationships",
+    "trait": "kindness"
+  },
+  {
+    "id": "q-lang-kitchen",
+    "test": "Name five things in your kitchen in another language, touching each one as you say it.",
+    "note": "Pick the language first, then look up cup, spoon, table, door and window with a free translation app or a dictionary. Say each word twice. Leave the list by the kettle and test yourself tomorrow.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-lang-morning",
+    "test": "Learn good morning and good night in three languages and say them out loud.",
+    "note": "Search good morning in German, then in Irish, then in one language of your choice. Most search results show how to say it as well as how to write it. Use one of them for real tonight or tomorrow morning.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "skill",
+    "area": "relationships",
+    "trait": "joy"
+  },
+  {
+    "id": "q-lang-days",
+    "test": "Write the seven days of the week in one language you do not speak.",
+    "note": "Use a dictionary or a phone search such as days of the week in Italian. Write them in a column next to the English ones. Look for any that sound alike, like lunedì and Monday, which both come from the moon.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-lang-borrowed",
+    "test": "Find three English words that came from another language, and write where each one came from.",
+    "note": "Search the origin of a word you use at home, such as bungalow, shampoo or kindergarten. Write the word, the language it came from, and what it first meant. A good dictionary shows this in brackets near the start of each entry.",
+    "mins": 4,
+    "cat": "words",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-lang-greek-name",
+    "test": "Write your first name in the Greek alphabet.",
+    "note": "Search the Greek alphabet and find the letter that makes each sound in your name. Some sounds need a close match rather than an exact one, and that is fine. Write it three times until it looks natural.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-times-eleven",
+    "test": "Multiply five two-digit numbers by eleven in your head, then check them on a calculator.",
+    "note": "The method: add the two digits and put the answer in the middle. 32 times 11: 3 plus 2 is 5, so 352. If the middle adds to ten or more, carry one to the front: 57 times 11 is 5, then 12, then 7, so 627. Try 24, 43, 61, 75 and 88.",
+    "mins": 3,
+    "cat": "mind",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "confidence"
+  },
+  {
+    "id": "q-double-halve",
+    "test": "Work out 16 times 25 in your head by halving one number and doubling the other, then do two more.",
+    "note": "16 times 25 becomes 8 times 50, which becomes 4 times 100, which is 400. Keep halving and doubling until the sum is easy. Try 14 times 50 and 32 times 5, and check both on paper.",
+    "mins": 2,
+    "cat": "mind",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "confidence"
+  },
+  {
+    "id": "q-memory-list",
+    "test": "Memorise this list of eight things and say it back two minutes later: milk, rope, lemon, map, candle, sock, drum, key.",
+    "note": "Walk through your house in your head and put one thing in each room: milk on the doorstep, rope on the stairs, a lemon on the bed. To remember, walk the same route again. Write the list down afterwards to check, and try a list of your own tomorrow.",
+    "mins": 4,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "patience"
+  },
+  {
+    "id": "q-words-page",
+    "test": "Guess how many words are on one page of a book, then work it out.",
+    "note": "Write your guess first. Then count the words on three lines, divide by three to get an average line, and multiply by the number of lines on the page. See how close your guess was, and guess again for a different book.",
+    "mins": 3,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-room-steps",
+    "test": "Guess how many of your own footsteps long the room is, then walk it heel to toe and count.",
+    "note": "Write the guess down before you move. Walk with the heel of one foot touching the toes of the other, from one wall to the other. Then guess the width and check that too; the second guess is usually closer.",
+    "mins": 2,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "home",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-logic-set",
+    "test": "Write a logic puzzle about four people and their heights, then solve it.",
+    "note": "A worked example with three: Anna is taller than Ben. Cara is shorter than Ben. Who is shortest? Cara, because Ben is between the two. Now add a fourth person with one more clue, such as Dan is taller than Anna, and write the order from tallest to shortest.",
+    "mins": 4,
+    "cat": "mind",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "patience"
+  },
+  {
+    "id": "q-sevens-down",
+    "test": "Count backwards from 100 in sevens, out loud, as far as you can without a mistake.",
+    "note": "It goes 100, 93, 86, 79. Say each number before you work out the next. Write down where you got to, then check it by counting on in sevens from there back to 100.",
+    "mins": 2,
+    "cat": "mind",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "discipline"
+  },
+  {
+    "id": "q-ten-percent",
+    "test": "Work out ten, five and fifteen per cent of three prices in your head.",
+    "note": "Ten per cent: move the point one place left, so ten per cent of 24 pounds is 2 pounds 40. Five per cent is half of that, 1 pound 20. Fifteen per cent is both added: 3 pounds 60. Try 18 pounds, 60 pounds and 7 pounds 50.",
+    "mins": 3,
+    "cat": "mind",
+    "kind": "skill",
+    "area": "prosperity",
+    "trait": "confidence"
+  },
+  {
+    "id": "q-square-fives",
+    "test": "Square four numbers that end in 5, in your head.",
+    "note": "The method: take the first digit, multiply it by the next number up, then put 25 on the end. 35 squared: 3 times 4 is 12, so 1225. 65 squared: 6 times 7 is 42, so 4225. Try 15, 45, 75 and 95, and check them on a calculator.",
+    "mins": 3,
+    "cat": "mind",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-tray-memory",
+    "test": "Put ten small things on a table, look at them for thirty seconds, cover them with a tea towel, and write down all ten.",
+    "note": "Use what is to hand: a spoon, a key, a coin, a pen, a peg. Look at each one on purpose and say its name in your head. If you get all ten, add two more and try again.",
+    "mins": 3,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "patience"
+  },
+  {
+    "id": "q-next-number",
+    "test": "Find the next number in 2, 6, 12, 20, 30, and then write a pattern of your own.",
+    "note": "Look at the gaps: 4, 6, 8, 10. The next gap is 12, so the answer is 42. For your own, start with any rule, such as add 3 then double, and write five numbers. Check tomorrow whether you can still spot your own rule.",
+    "mins": 3,
+    "cat": "mind",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-one-minute-guess",
+    "test": "Close your eyes, start a phone stopwatch, and stop it when you think exactly one minute has passed.",
+    "note": "Do not count seconds out loud; just wait. Look at how far off you were, early or late. Try once more and see whether the second guess is closer.",
+    "mins": 2,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "patience"
+  },
+  {
+    "id": "q-how-works",
+    "test": "Pick the nearest thing in the room with a switch or a button and look up how it works.",
+    "note": "It might be a kettle, a light switch or a doorbell. Search how does a kettle know when to switch off, and read until you can explain it in two sentences. Say those two sentences out loud when you are done.",
+    "mins": 4,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-word-history",
+    "test": "Look up where the word breakfast comes from, then look up one more word you use every day.",
+    "note": "Breakfast is two words joined: breaking the fast of the night. A phone search for the origin of a word, or the small print at the start of a dictionary entry, will tell you. Good ones to try next: window, cupboard or goodbye.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-cupboard-origin",
+    "test": "Take one tin or packet from the cupboard, find where it was grown or packed, and find that place on a map.",
+    "note": "Read the small print on the label for a country or a town. Put it into the map on your phone and see how far it is from your house. If the label only says the country, look up which part of that country grows the most of it.",
+    "mins": 3,
+    "cat": "food",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-random-entry",
+    "test": "Open Wikipedia on your phone, tap Random article three times, and read the first section of the one you like best.",
+    "note": "The Random article link is in the menu. Read until you can say one thing you did not know before. No phone? Open a dictionary or an encyclopaedia at the page number that matches today's date and read the first full entry.",
+    "mins": 4,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-coin-look",
+    "test": "Look at one coin closely, find the year on it and the picture on the back, and look up what the picture means.",
+    "note": "Use a magnifying glass or your phone camera zoomed in if the writing is small. Search the coin value and the picture, such as 50p coin designs. Write down the year and one thing you found out.",
+    "mins": 3,
+    "cat": "money",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-town-name",
+    "test": "Look up where the name of your town or village comes from.",
+    "note": "Many place names in Northern Ireland come from Irish words that describe the land, such as a hill, a ford or a church. Search the origin of your town name and write down what the original words mean. Then say whether the name still fits the place.",
+    "mins": 3,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-rating-plate",
+    "test": "Find the small printed label on one appliance and look up what one of its numbers means.",
+    "note": "Most kettles, toasters and hair dryers have a label underneath or on the back with a number followed by W. Search what does the wattage on a kettle mean. Only look at the label; leave it switched off and cool while you do.",
+    "mins": 3,
+    "cat": "home",
+    "kind": "attention",
+    "area": "home",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-cloud-name",
+    "test": "Look out of the window and find the name of the kind of cloud you can see.",
+    "note": "Search types of clouds and compare the pictures with the sky. Fluffy heaps, flat grey sheets and thin high streaks all have different names. If the sky is clear, write down that it is clear and try again another day.",
+    "mins": 2,
+    "cat": "sky",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-on-this-day",
+    "test": "Look up one thing that happened on today's date in history and write it down in one sentence.",
+    "note": "Search on this day and today's date. Read down the list until one thing makes you want to know more, then read a little about that one. Write the year and what happened.",
+    "mins": 3,
+    "cat": "classic",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-who-invented",
+    "test": "Look up who invented one ordinary thing in the room, such as the zip, the paper clip or the tin opener.",
+    "note": "Search who invented the zip and read the short story of how it came about. Write down the name and the year. Look at the thing again once you know, and see whether it looks different to you.",
+    "mins": 3,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-made-in",
+    "test": "Find the Made in label on three things in the room and write down each country.",
+    "note": "Look underneath, on the back or on the sewn label. Write the three countries down and put them in order of how far away they are, using a map on your phone. If nothing has a label, try the box it came in.",
+    "mins": 3,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-river-to-sea",
+    "test": "Find your house on a map on your phone and follow the nearest river all the way to the sea.",
+    "note": "Switch to the satellite view if the map has one. Zoom out slowly as you follow the water, and write down each town the river passes. Note the name of the river where it meets the sea, as it sometimes changes.",
+    "mins": 4,
+    "cat": "wild",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-breath-four-six",
+    "test": "Breathe in for a count of four and out for a count of six, ten times.",
+    "note": "Sit with both feet flat on the floor. Count slowly in your head, and let the out-breath be gentle rather than forced. If you feel dizzy at any point, stop and breathe normally.",
+    "mins": 2,
+    "cat": "calm",
+    "kind": "attention",
+    "area": "health",
+    "trait": "calm"
+  },
+  {
+    "id": "q-five-sounds",
+    "test": "Sit still and write down five sounds you can hear, from the furthest away to the nearest.",
+    "note": "Close your eyes for a minute first. It might be a car outside, a fridge humming, a clock, a bird, your own breath. Once you have five, keep listening for a sixth you missed.",
+    "mins": 2,
+    "cat": "calm",
+    "kind": "attention",
+    "area": "emotions",
+    "trait": "calm"
+  },
+  {
+    "id": "q-tomorrow-one",
+    "test": "Write tomorrow's one important thing on a piece of paper and put it where you will see it first in the morning.",
+    "note": "Only one, and make it a real action, such as ring the dentist before ten, not sort life out. Put the paper on your phone, your shoes or the kettle. When the one thing is done tomorrow, bin the paper.",
+    "mins": 1,
+    "cat": "calm",
+    "kind": "attention",
+    "area": "emotions",
+    "trait": "discipline"
+  },
+  {
+    "id": "q-sit-three",
+    "test": "Set a timer for three minutes and sit with your feet flat, hands on your knees and your eyes resting on one spot on the floor.",
+    "note": "Pick a spot about two steps in front of you, such as a mark on the carpet. Each time your mind wanders off, notice it and bring your eyes and your thoughts back to the spot. Coming back many times is doing it right.",
+    "mins": 3,
+    "cat": "calm",
+    "kind": "attention",
+    "area": "spirituality",
+    "trait": "patience"
+  },
+  {
+    "id": "q-slow-water",
+    "test": "Drink one glass of water in ten slow sips, putting the glass down between each one.",
+    "note": "Notice how cold it is, how it feels in your mouth, and the sound of the glass on the table. Count the sips on your fingers. A cup of tea done the same way counts too.",
+    "mins": 3,
+    "cat": "calm",
+    "kind": "attention",
+    "area": "health",
+    "trait": "calm"
+  },
+  {
+    "id": "q-three-went-right",
+    "test": "Write down three things that went right today, one line each.",
+    "note": "Small is fine: the bus was on time, the soup was good, a friend replied. Write them, do not only think them. Read the three back once before you put the pen down.",
+    "mins": 2,
+    "cat": "calm",
+    "kind": "attention",
+    "area": "emotions",
+    "trait": "joy"
+  },
+  {
+    "id": "q-worry-step",
+    "test": "Write the thing that is on your mind in one sentence, and under it write the one next step you could take.",
+    "note": "For example: I have not replied to the school letter. Next step: read it again after tea and write the reply. The step should be small enough to do in a day. Keep the page and tick it when the step is done.",
+    "mins": 3,
+    "cat": "calm",
+    "kind": "attention",
+    "area": "emotions",
+    "trait": "calm"
+  },
+  {
+    "id": "q-window-count",
+    "test": "Look out of a window for two minutes and count everything that moves.",
+    "note": "Birds, cars, leaves, clouds, a person walking past: each one is one. Keep your eyes on the view and count on your fingers. If nothing moves, count the colours you can see instead.",
+    "mins": 2,
+    "cat": "calm",
+    "kind": "attention",
+    "area": "emotions",
+    "trait": "patience"
+  },
+  {
+    "id": "q-slow-cup",
+    "test": "Wash one cup by hand as slowly and carefully as you can.",
+    "note": "Feel the warmth of the water, the weight of the cup, the shape of the handle. Rinse it, dry it and put it away, all at the same slow pace. If you already wash up every day, doing it this slowly on purpose counts.",
+    "mins": 2,
+    "cat": "calm",
+    "kind": "attention",
+    "area": "home",
+    "trait": "patience"
+  },
+  {
+    "id": "q-phone-other-room",
+    "test": "Put your phone in another room for five minutes and stay sitting where you are.",
+    "note": "Set a kitchen timer or watch the clock on the wall so you know when the five minutes is up. Look around the room, stretch your hands, or just sit. When you get the phone back, notice whether anything important happened.",
+    "mins": 5,
+    "cat": "calm",
+    "kind": "attention",
+    "area": "emotions",
+    "trait": "discipline"
+  },
+  {
+    "id": "q-putoff-question",
+    "test": "Write down one question you have been putting off asking, who you will ask, and the day you will ask it.",
+    "note": "It might be asking the doctor's receptionist about a test result, or asking a neighbour whether the hedge is theirs. Write the question in the exact words you will use. Put the day in your phone calendar before you put the pen down.",
+    "mins": 3,
+    "cat": "nerve",
+    "kind": "courage",
+    "area": "emotions",
+    "trait": "courage"
+  },
+  {
+    "id": "q-bill-line",
+    "test": "Pick one bill, read one line on it, and check it matches what you expected to pay.",
+    "note": "An electricity, phone or bank statement all work, paper or in the app. Choose one line, such as the monthly charge, and compare it with last month's. If it is different, write down the question to ask them.",
+    "mins": 5,
+    "cat": "money",
+    "kind": "attention",
+    "area": "prosperity",
+    "trait": "discipline"
+  },
+  {
+    "id": "q-spent-three",
+    "test": "Write down three things you spent money on this week, and beside each one write glad or not sure.",
+    "note": "Your bank app or a receipt in your pocket will remind you. For example: coffee on Tuesday, glad; the second magazine, not sure. There are no wrong answers; this is only noticing.",
+    "mins": 3,
+    "cat": "money",
+    "kind": "attention",
+    "area": "prosperity",
+    "trait": "discipline"
+  },
+  {
+    "id": "q-mirror-sentence",
+    "test": "Say the first sentence of a hard conversation out loud to the mirror, three times.",
+    "note": "Write the sentence first. For example: I would like to talk about how we share the jobs at home. Say it slower each time and look at your own eyes while you say it.",
+    "mins": 2,
+    "cat": "nerve",
+    "kind": "courage",
+    "area": "relationships",
+    "trait": "courage"
+  },
+  {
+    "id": "q-polite-no",
+    "test": "Write one polite sentence that says no to something you have been asked to do, and say it out loud twice.",
+    "note": "For example: Thank you for asking, but I cannot help this Saturday. Keep it short, with no long list of reasons. Whether you use it or not, you now have the words ready.",
+    "mins": 2,
+    "cat": "nerve",
+    "kind": "courage",
+    "area": "relationships",
+    "trait": "confidence"
+  },
+  {
+    "id": "q-renewal-date",
+    "test": "Find the renewal date of one yearly payment and put a reminder in your phone a month before it.",
+    "note": "Car insurance, the TV licence and home insurance are common ones; the date is on the letter or email. Set the reminder with a note such as compare prices. A paper calendar on the fridge works just as well.",
+    "mins": 4,
+    "cat": "deal",
+    "kind": "attention",
+    "area": "prosperity",
+    "trait": "discipline"
+  },
+  {
+    "id": "q-ask-help",
+    "test": "Write a one-line message asking somebody for help with one thing.",
+    "note": "For example: Could you show me how to set up the printer on Saturday? Name the thing and a time. Send it now, or save it and send it in the morning.",
+    "mins": 2,
+    "cat": "nerve",
+    "kind": "courage",
+    "area": "relationships",
+    "trait": "courage"
+  },
+  {
+    "id": "q-did-well",
+    "test": "Write down one thing you did well this week that you have not told anybody.",
+    "note": "It could be finishing a job you had put off, staying patient in a queue, or cooking something new. Write what you did and one sentence on how you did it. Read it out loud once.",
+    "mins": 2,
+    "cat": "nerve",
+    "kind": "courage",
+    "area": "emotions",
+    "trait": "confidence"
+  }
+]

@@ -505,3 +505,49 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   height on any long area page — the flex-item + `overflow:hidden` trap; it has `flex:none` now.
   **Not done:** no track tiles drawn for `fit.body1`/`fit.body2` (fit category fallback), and
   Fasting still wears the `calm` candle tile, which reads oddly now that it sits in the Food path.
+- **v74 (2026-09-17, Opus session): the whole ladder from home, lengths on rungs, a deeper daily pool, Today's extra.**
+  (1) **A taken-on skill opens its ladder.** At home a skill you had taken on only offered "Practised today". The
+  `.lgrow` card is now `data-open` (click, Enter or Space) → `openTrack(tr, { home: true })`, so Back comes home; it
+  carries "The whole ladder ›" so the tap is findable; the buttons on it (Practised today, How is it going?, ×) keep
+  their own jobs (`e.target.closest('button,…')`). `.proj` on the long page does the same, returning to the tab.
+  (2) **`mins` on rungs** = roughly how long that rung takes once. His rule: 3 and under is the target for a quick
+  thing, 5 acceptable, 10 never one of the three. Set by hand on every ladder's FIRST rung
+  (`tools/daily/first_mins.py`; `None` = days or open-ended, and stays out). **Anything without `mins` is out of both
+  pools until somebody has read and timed it** (`shortStep`). (3) **The standalone daily pool.** Almost every quick
+  thing was a first rung, i.e. three invitations to a three-month project. `school.json.daily.quick` = 142 things
+  that belong to NO ladder (a page of a kind of book you never read, four lines of a poem, ten words of another
+  language, one move, one defined surface, a thank-you, a mental-arithmetic trick…), every one doable in a room at
+  home with nothing, each with a note (how, example, no-spend alternative); 123 at 3 min or under. With the 46 short
+  room-ctx first rungs that is **188**. In the code they are one-rung tracks (`soloTracks()`, `tr.solo`, keys
+  `daily.<id>#1`, picture = category image, eyebrow "A quick thing · 2 min") that live outside every room, area and
+  ladder count, so Done, points, traits and the step sheet all just work; `findStep` is now an index (`STEPIX`).
+  A standalone one comes back round 180 days after it was done. `todayPicks`: among the first three, at most ONE
+  ladder rung (while standalone ones remain; not on a child's page) and at most one over 3 min; a final `loose` pass
+  lifts both so a thin pool never empties the card. Pick rows show the minutes.
+  (4) **Today's extra** (`extraCard`, last in the day's flow under the long skill, quieter: no picture, thin outline,
+  faint type). One bigger optional thing a day, 10–20 min, for the quiet evening. **The rule that is not
+  negotiable: it never counts towards the day.** It is stored apart (`S.school.extras[date] = { k, at }`), never in
+  `S.school.done` and never in `S.days`, so the day bar, the three torches, the flame and the celebration cannot see
+  it. It earns `extra.points` (2) in `points()`, counts in `traitCounts()` and on Where you stand (by the ladder's
+  area/trait, or the item's own `area`/`trait`), puts a gold dot under that day in the week strip (`.wk.x`), and the
+  days room has a 35-day grid of them ("9 in the last thirty days"). Chosen by date: `extraPool()` is a fixed
+  shuffle; day n takes the next item from position n that was not done as an extra in the last `gap` (90) days, saved
+  in `S.school.extra` so it holds all day. One "A different one" (from the far side of the pool), then the button
+  goes. Not done = gone at midnight, no carry-over. Hidden on a child's page. Copy in `C.school.extra`; the lede
+  "Twenty minutes, if you have them. A different one tomorrow either way." is the anti-debt line — do not soften it.
+  **Content, 124:** 39 Creating order rungs tagged `extra: true` + `mins` + a note where they had none
+  (`tools/daily/order_extras.py`; doing one as an extra does NOT tick the rung or enrol you in the ladder, and the
+  sheet says so), and 85 fresh in `school.json.daily.extra` — about a third order and repair, the rest meant to widen
+  a life: ring an older relative about their childhood, a letter to somebody not spoken to in a year, dal /
+  shakshuka / placki from cupboard staples, Cassiopeia and the space station from the doorstep, when your street
+  was built (PRONI maps), what your town's name means (PlaceNamesNI), how the fridge / cistern / lock works, a
+  thatcher / cooper / Belfast shipwright, a poem by heart, go on a 9x9 board, why there is no biggest prime.
+  **How the content was made:** drafted by four parallel writers against `tools/daily/BRIEF.md` (the rules: plain
+  modern English, no idioms, exactly what to do now, an example and a no-spend alternative, nothing that invites a
+  joke), then every item read; `tools/daily/patch_v74.py` holds the cuts (nine duplicates of each other or of
+  existing rungs) and the wording fixes, asserts ids / minutes / cat / area / trait, and prints the pool sizes.
+  Re-run it after editing the json drafts. Facts in the extras the writers flagged and I did not verify at source:
+  the free site names (PRONI Historical Maps, Historic Environment Map Viewer, PlaceNamesNI, Ulster History Circle,
+  Spot the Station, Merlin, Seek, Stellarium Web) and "a large share of the tea drunk here is grown in Kenya".
+  (5) Tiles for `fit.body1`, `fit.body2` and `calm.fast` (Fasting had the Calm candle) drawn with
+  `tools/daily/tiles-v74.mjs` (the order-draw recipe, no people).

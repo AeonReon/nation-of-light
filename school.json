@@ -135,7 +135,8 @@
         "Ten throws without dropping it."
        ],
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 3
       },
       {
        "n": 2,
@@ -274,7 +275,8 @@
        "n": 1,
        "test": "Step over a rope lying still on the ground, ten times.",
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 2
       },
       {
        "n": 2,
@@ -357,7 +359,8 @@
        "n": 1,
        "test": "Do a forward roll and come back up on your feet.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 3
       },
       {
        "n": 2,
@@ -494,7 +497,8 @@
        ],
        "ctx": "room",
        "kind": "attention",
-       "note": "Breathing through your nose warms, filters and slows the air. Most of us mouth-breathe all day without noticing, and simply closing your mouth is a real change."
+       "note": "Breathing through your nose warms, filters and slows the air. Most of us mouth-breathe all day without noticing, and simply closing your mouth is a real change.",
+       "mins": 2
       },
       {
        "n": 2,
@@ -649,7 +653,8 @@
        ],
        "ctx": "out",
        "kind": "skill",
-       "note": "Two even loads are the easiest way to carry weight and the best place to start. The goal is always to walk normally, not to survive."
+       "note": "Two even loads are the easiest way to carry weight and the best place to start. The goal is always to walk normally, not to survive.",
+       "mins": 5
       },
       {
        "n": 2,
@@ -900,7 +905,8 @@
        ],
        "ctx": "out",
        "kind": "skill",
-       "note": "If one minute is hard, you are going too fast, not too unfit. Halve the speed and try again — it works every time."
+       "note": "If one minute is hard, you are going too fast, not too unfit. Halve the speed and try again — it works every time.",
+       "mins": 3
       },
       {
        "n": 2,
@@ -1145,7 +1151,8 @@
        "n": 1,
        "test": "Walk the length of a log or a low wall without falling off.",
        "ctx": "out",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 3
       },
       {
        "n": 2,
@@ -1279,7 +1286,8 @@
        "n": 1,
        "test": "Sit on a bike and push yourself along with your feet.",
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 5
       },
       {
        "n": 2,
@@ -1364,7 +1372,8 @@
        "test": "Stand on one foot while somebody counts to five. Then the other foot.",
        "ctx": "with",
        "kind": "skill",
-       "twist": "Eyes shut."
+       "twist": "Eyes shut.",
+       "mins": 2
       },
       {
        "n": 2,
@@ -1464,7 +1473,8 @@
        "test": "Walk for an hour with the phone in your pocket the whole time.",
        "ctx": "out",
        "kind": "attention",
-       "note": "Anywhere: streets count. Notice what you look at when there is nothing to look at."
+       "note": "Anywhere: streets count. Notice what you look at when there is nothing to look at.",
+       "mins": 60
       },
       {
        "n": 2,
@@ -1614,7 +1624,8 @@
        "test": "Gather a bundle of dry sticks that would actually burn.",
        "note": "Snap them. If they bend instead of snapping they are wet and they will not light.",
        "ctx": "out",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 15
       },
       {
        "n": 2,
@@ -1697,7 +1708,8 @@
        "n": 1,
        "test": "Point which way is north, and be right.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 3
       },
       {
        "n": 2,
@@ -1827,7 +1839,8 @@
        "n": 1,
        "test": "Build a den big enough to sit inside.",
        "ctx": "out",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 45
       },
       {
        "n": 2,
@@ -1910,7 +1923,8 @@
        "n": 1,
        "test": "Dress yourself right for the weather that is actually outside.",
        "ctx": "out",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 3
       },
       {
        "n": 2,
@@ -2043,7 +2057,8 @@
        "n": 1,
        "test": "Find five different kinds of leaf and lay them out.",
        "ctx": "out",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 15
       },
       {
        "n": 2,
@@ -2173,7 +2188,8 @@
        "test": "Pick and eat one wild food with somebody who knows it.",
        "note": "Never eat anything on this ladder without a person who is certain. Certain, not fairly sure.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 30
       },
       {
        "n": 2,
@@ -2303,7 +2319,8 @@
        "n": 1,
        "test": "Find an animal footprint and say what made it.",
        "ctx": "out",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 20
       },
       {
        "n": 2,
@@ -2531,7 +2548,8 @@
        ],
        "ctx": "out",
        "kind": "skill",
-       "note": "This is the rung that adults skip and then wonder why swimming feels like a panic. Blowing out under water is what makes everything above it calm."
+       "note": "This is the rung that adults skip and then wonder why swimming feels like a panic. Blowing out under water is what makes everything above it calm.",
+       "mins": 5
       },
       {
        "n": 2,
@@ -2784,7 +2802,8 @@
        ],
        "ctx": "home",
        "kind": "courage",
-       "note": "Thirty seconds, in your own bathroom, costing nothing. The gasp lasts about ten seconds and then it is simply cold, which is a very different thing."
+       "note": "Thirty seconds, in your own bathroom, costing nothing. The gasp lasts about ten seconds and then it is simply cold, which is a very different thing.",
+       "mins": 1
       },
       {
        "n": 2,
@@ -2934,7 +2953,8 @@
        "n": 1,
        "test": "Get into a boat and sit safely without wobbling it.",
        "ctx": "kit",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 10
       },
       {
        "n": 2,
@@ -3016,7 +3036,8 @@
        "n": 1,
        "test": "Name the parts of a small boat and what each one does.",
        "ctx": "kit",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 10
       },
       {
        "n": 2,
@@ -3147,7 +3168,8 @@
        "n": 1,
        "test": "Catch something in a rock pool with a net and put it back.",
        "ctx": "out",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 20
       },
       {
        "n": 2,
@@ -3230,7 +3252,8 @@
        "n": 1,
        "test": "Find five different creatures in a rock pool.",
        "ctx": "out",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 20
       },
       {
        "n": 2,
@@ -3304,7 +3327,8 @@
        ],
        "ctx": "room",
        "kind": "skill",
-       "note": "Two real ones beat ten half ones and always will. If you are already past two on the floor, start at the rung that is actually hard for you and count the ones below as done."
+       "note": "Two real ones beat ten half ones and always will. If you are already past two on the floor, start at the rung that is actually hard for you and count the ones below as done.",
+       "mins": 2
       },
       {
        "n": 2,
@@ -3557,7 +3581,8 @@
        ],
        "ctx": "room",
        "kind": "skill",
-       "note": "Hands behind the head is how people end up pulling on their own neck. Crossed on the chest from day one saves you that."
+       "note": "Hands behind the head is how people end up pulling on their own neck. Crossed on the chest from day one saves you that.",
+       "mins": 2
       },
       {
        "n": 2,
@@ -3808,7 +3833,8 @@
        ],
        "ctx": "kit",
        "kind": "skill",
-       "note": "Grip is usually what gives out first, and it is the quickest thing to improve. Ten seconds becomes thirty within a fortnight of trying."
+       "note": "Grip is usually what gives out first, and it is the quickest thing to improve. Ten seconds becomes thirty within a fortnight of trying.",
+       "mins": 2
       },
       {
        "n": 2,
@@ -4059,7 +4085,8 @@
        ],
        "ctx": "room",
        "kind": "skill",
-       "note": "A sagging plank does nothing for you and can hurt your back. Twenty honest seconds is worth more than a minute of hanging off your spine."
+       "note": "A sagging plank does nothing for you and can hurt your back. Twenty honest seconds is worth more than a minute of hanging off your spine.",
+       "mins": 2
       },
       {
        "n": 2,
@@ -4214,7 +4241,8 @@
        ],
        "ctx": "room",
        "kind": "skill",
-       "note": "Nearly everybody can already do ten of something they call a squat. The rung is ten where the thighs actually reach level — it is a different exercise and you will feel it."
+       "note": "Nearly everybody can already do ten of something they call a squat. The rung is ten where the thighs actually reach level — it is a different exercise and you will feel it.",
+       "mins": 2
       },
       {
        "n": 2,
@@ -4468,7 +4496,8 @@
        ],
        "ctx": "room",
        "kind": "skill",
-       "note": "Close to you, back straight, legs doing the work. That is the whole technique and it does not change however heavy the object gets."
+       "note": "Close to you, back straight, legs doing the work. That is the whole technique and it does not change however heavy the object gets.",
+       "mins": 2
       },
       {
        "n": 2,
@@ -4624,7 +4653,8 @@
        ],
        "ctx": "room",
        "kind": "skill",
-       "note": "This is a measurement, not a competition. Wherever you reach today is the honest start, and it moves faster than anything else in this school."
+       "note": "This is a measurement, not a competition. Wherever you reach today is the honest start, and it moves faster than anything else in this school.",
+       "mins": 2
       },
       {
        "n": 2,
@@ -4875,7 +4905,8 @@
        ],
        "ctx": "out",
        "kind": "skill",
-       "note": "Never sprint cold. Pulled hamstrings almost always happen on the first sprint of the day, and five minutes of warming up prevents nearly all of them."
+       "note": "Never sprint cold. Pulled hamstrings almost always happen on the first sprint of the day, and five minutes of warming up prevents nearly all of them.",
+       "mins": 10
       },
       {
        "n": 2,
@@ -5032,7 +5063,8 @@
        ],
        "ctx": "room",
        "kind": "attention",
-       "note": "This is the rung everything else is measured against, so be honest — nobody else ever sees it. If the answer is none, write nought. Nought is a perfectly good starting number and it does not stay nought."
+       "note": "This is the rung everything else is measured against, so be honest — nobody else ever sees it. If the answer is none, write nought. Nought is a perfectly good starting number and it does not stay nought.",
+       "mins": 10
       },
       {
        "n": 2,
@@ -5303,7 +5335,8 @@
        ],
        "ctx": "room",
        "kind": "attention",
-       "note": "Named targets beat good intentions because you can tell whether you hit them. Everything in this ladder walks towards these three."
+       "note": "Named targets beat good intentions because you can tell whether you hit them. Everything in this ladder walks towards these three.",
+       "mins": 5
       },
       {
        "n": 2,
@@ -5575,7 +5608,8 @@
        "n": 1,
        "test": "Get a kite into the air and keep it there for a minute.",
        "ctx": "kit",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 15
       },
       {
        "n": 2,
@@ -5632,7 +5666,8 @@
        "n": 1,
        "test": "Make a paper rocket and launch it off a straw.",
        "ctx": "kit",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 10
       },
       {
        "n": 2,
@@ -5714,7 +5749,8 @@
        "n": 1,
        "test": "Find the Plough and the North Star.",
        "ctx": "out",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 10
       },
       {
        "n": 2,
@@ -5844,7 +5880,8 @@
        "n": 1,
        "test": "Fold a paper aeroplane that flies across the room.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 5
       },
       {
        "n": 2,
@@ -5974,7 +6011,8 @@
        "n": 1,
        "test": "Say which way the wind is blowing without looking at anything.",
        "ctx": "out",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 2
       },
       {
        "n": 2,
@@ -6104,7 +6142,8 @@
        "test": "Scrunch a sheet of paper into a ball and throw it into a bin from five paces.",
        "ctx": "room",
        "kind": "skill",
-       "twist": "Other hand."
+       "twist": "Other hand.",
+       "mins": 2
       },
       {
        "n": 2,
@@ -6203,7 +6242,8 @@
        "test": "Look up one thing you have wondered about and read until you could explain it.",
        "ctx": "room",
        "kind": "attention",
-       "note": "Why the sky is blue, how a lock works, where a word comes from. Explain it to the wall if nobody is there."
+       "note": "Why the sky is blue, how a lock works, where a word comes from. Explain it to the wall if nobody is there.",
+       "mins": 15
       },
       {
        "n": 2,
@@ -6352,7 +6392,8 @@
        "n": 1,
        "test": "Count in twos up to twenty.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 1
       },
       {
        "n": 2,
@@ -6483,7 +6524,8 @@
        "test": "Name the pieces and turn the cube twenty times without losing track of a colour.",
        "note": "Centres never move. Whatever colour is in the middle is that face, always.",
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 5
       },
       {
        "n": 2,
@@ -6614,7 +6656,8 @@
        "test": "Set the board up correctly and name every piece.",
        "note": "White square on the right, and the queen goes on her own colour.",
        "ctx": "kit",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 5
       },
       {
        "n": 2,
@@ -6744,7 +6787,8 @@
        "n": 1,
        "test": "Memorise a six-digit number and say it back a minute later.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 2
       },
       {
        "n": 2,
@@ -6876,7 +6920,8 @@
        "n": 1,
        "test": "Add two single-digit numbers in your head, twenty in a row, correct.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 3
       },
       {
        "n": 2,
@@ -7007,7 +7052,8 @@
        "n": 1,
        "test": "Write a message in a shift cipher and have somebody read it.",
        "ctx": "with",
-       "kind": "kindness"
+       "kind": "kindness",
+       "mins": 10
       },
       {
        "n": 2,
@@ -7089,7 +7135,8 @@
        "n": 1,
        "test": "Finish a twenty-four piece jigsaw on your own.",
        "ctx": "kit",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 15
       },
       {
        "n": 2,
@@ -7171,7 +7218,8 @@
        "n": 1,
        "test": "Ask somebody a question you do not know the answer to, and get an answer you understand.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 5
       },
       {
        "n": 2,
@@ -7253,7 +7301,8 @@
        "n": 1,
        "test": "Find where you are standing on a paper map.",
        "ctx": "kit",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 5
       },
       {
        "n": 2,
@@ -7344,7 +7393,8 @@
        "n": 1,
        "test": "Learn one usable sentence and say it out loud to another person.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 10
       },
       {
        "n": 2,
@@ -7473,7 +7523,8 @@
        "n": 1,
        "test": "Say your own name and where you are from, in Irish.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 5
       },
       {
        "n": 2,
@@ -7609,7 +7660,8 @@
         "Do it out loud with somebody who can tell you when it is off."
        ],
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 5
       },
       {
        "n": 2,
@@ -7738,7 +7790,8 @@
        "n": 1,
        "test": "Read one page of a book tonight before you sleep.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 3
       },
       {
        "n": 2,
@@ -7872,7 +7925,8 @@
        "n": 1,
        "test": "Write your own name so anybody could read it.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 2
       },
       {
        "n": 2,
@@ -7953,7 +8007,8 @@
        "n": 1,
        "test": "Write the alphabet neatly, all the same size.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 5
       },
       {
        "n": 2,
@@ -8084,7 +8139,8 @@
        "n": 1,
        "test": "Learn a four-line rhyme and say it from memory.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 5
       },
       {
        "n": 2,
@@ -8167,7 +8223,8 @@
        "test": "Learn the sign-language alphabet for the letters of your name, and spell your name with your hands.",
        "ctx": "room",
        "kind": "attention",
-       "note": "Sign language has its own alphabet. Any short video of the British Sign Language alphabet will show you the letters."
+       "note": "Sign language has its own alphabet. Any short video of the British Sign Language alphabet will show you the letters.",
+       "mins": 5
       },
       {
        "n": 2,
@@ -8460,7 +8517,8 @@
        "test": "Send a one-line message to three people you have not spoken to in a year.",
        "ctx": "room",
        "kind": "kindness",
-       "note": "\"Saw this and thought of you.\" \"Hope the new job is going well.\" No ask, no catch-up demand. Some will answer this week; that is enough."
+       "note": "\"Saw this and thought of you.\" \"Hope the new job is going well.\" No ask, no catch-up demand. Some will answer this week; that is enough.",
+       "mins": 5
       },
       {
        "n": 2,
@@ -8608,7 +8666,8 @@
        "n": 1,
        "test": "Say hello and your name to somebody you have never met.",
        "ctx": "out",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 2
       },
       {
        "n": 2,
@@ -8737,7 +8796,8 @@
        "n": 1,
        "test": "Say your name and one thing you like, at the welcome circle.",
        "ctx": "with",
-       "kind": "kindness"
+       "kind": "kindness",
+       "mins": 2
       },
       {
        "n": 2,
@@ -8867,7 +8927,8 @@
        "n": 1,
        "test": "Listen to a whole story without needing to be the one talking.",
        "ctx": "with",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 10
       },
       {
        "n": 2,
@@ -8949,7 +9010,8 @@
        "n": 1,
        "test": "Say sorry properly, and say what you will do instead.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 5
       },
       {
        "n": 2,
@@ -9078,7 +9140,8 @@
        "n": 1,
        "test": "Tell what happened today in the order it happened.",
        "ctx": "with",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 5
       },
       {
        "n": 2,
@@ -9208,7 +9271,8 @@
        "n": 1,
        "test": "Tell a joke well enough that somebody laughs.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 3
       },
       {
        "n": 2,
@@ -9338,7 +9402,8 @@
        "n": 1,
        "test": "Teach one person one thing you can do.",
        "ctx": "with",
-       "kind": "kindness"
+       "kind": "kindness",
+       "mins": 10
       },
       {
        "n": 2,
@@ -9421,7 +9486,8 @@
        "n": 1,
        "test": "Say your name and how old you are to somebody you have not met, looking at them.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 2
       },
       {
        "n": 2,
@@ -9502,7 +9568,8 @@
        "n": 1,
        "test": "Ask one person you already know how they are, and listen to the whole answer.",
        "ctx": "with",
-       "kind": "kindness"
+       "kind": "kindness",
+       "mins": 5
       },
       {
        "n": 2,
@@ -9643,7 +9710,8 @@
        "test": "Draw one thing in front of you for ten minutes, mostly without looking at the paper.",
        "ctx": "room",
        "kind": "skill",
-       "note": "A mug, a hand, a plant. It will look wrong; that is the point. Keep it."
+       "note": "A mug, a hand, a plant. It will look wrong; that is the point. Keep it.",
+       "mins": 10
       },
       {
        "n": 2,
@@ -9792,7 +9860,8 @@
        "n": 1,
        "test": "Sand a piece of wood properly smooth.",
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 15
       },
       {
        "n": 2,
@@ -9922,7 +9991,8 @@
        "n": 1,
        "test": "Thread a needle on your own.",
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 3
       },
       {
        "n": 2,
@@ -10051,7 +10121,8 @@
        "n": 1,
        "test": "Tie a knot that does not come undone when pulled.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 3
       },
       {
        "n": 2,
@@ -10132,7 +10203,8 @@
        "n": 1,
        "test": "Make a pinch pot that holds water.",
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 20
       },
       {
        "n": 2,
@@ -10265,7 +10337,8 @@
        "test": "Draw something and have somebody name it without being told.",
        "ctx": "room",
        "kind": "skill",
-       "twist": "Other hand."
+       "twist": "Other hand.",
+       "mins": 5
       },
       {
        "n": 2,
@@ -10403,7 +10476,8 @@
        "n": 1,
        "test": "Light one bulb with a battery and two wires.",
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 10
       },
       {
        "n": 2,
@@ -10532,7 +10606,8 @@
        "n": 1,
        "test": "Describe an idea for an app out loud, in three clear sentences.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 5
       },
       {
        "n": 2,
@@ -10662,7 +10737,8 @@
        "n": 1,
        "test": "Take a photo where you can tell what it is of.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 2
       },
       {
        "n": 2,
@@ -10793,7 +10869,8 @@
        "n": 1,
        "test": "Open and shut the scissors ten times with nothing in them.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 1
       },
       {
        "n": 2,
@@ -10875,7 +10952,8 @@
        "n": 1,
        "test": "Colour one shape in and stay inside the line.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 5
       },
       {
        "n": 2,
@@ -10967,7 +11045,8 @@
        "test": "Sing one whole song out loud, alone, start to finish.",
        "ctx": "room",
        "kind": "courage",
-       "note": "In the car, the shower, the kitchen. All the verses you know."
+       "note": "In the car, the shower, the kitchen. All the verses you know.",
+       "mins": 4
       },
       {
        "n": 2,
@@ -11116,7 +11195,8 @@
        "n": 1,
        "test": "Sing one whole song out loud where somebody can hear you.",
        "ctx": "home",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 4
       },
       {
        "n": 2,
@@ -11247,7 +11327,8 @@
        "test": "Get one clear note out of an instrument.",
        "note": "Any instrument. A tin whistle costs less than a takeaway and five notes gets you a tune.",
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 5
       },
       {
        "n": 2,
@@ -11382,7 +11463,8 @@
        "n": 1,
        "test": "Clap in time with a song, all the way through.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 4
       },
       {
        "n": 2,
@@ -11464,7 +11546,8 @@
        "n": 1,
        "test": "Whistle one clear note.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 3
       },
       {
        "n": 2,
@@ -11521,7 +11604,8 @@
        "n": 1,
        "test": "Write two lines that rhyme and mean something.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 5
       },
       {
        "n": 2,
@@ -11650,7 +11734,8 @@
        "n": 1,
        "test": "Name every note on a line of written music.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 10
       },
       {
        "n": 2,
@@ -11779,7 +11864,8 @@
        "n": 1,
        "test": "Learn one dance step and do it in time.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 10
       },
       {
        "n": 2,
@@ -11909,7 +11995,8 @@
        "n": 1,
        "test": "Sing one song all the way through with somebody singing beside you.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 4
       },
       {
        "n": 2,
@@ -12001,7 +12088,8 @@
        "test": "Do one card trick that works, on one person.",
        "note": "A self-working one out of a book counts. Start where it cannot go wrong.",
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 15
       },
       {
        "n": 2,
@@ -12132,7 +12220,8 @@
        "n": 1,
        "test": "Make a coin vanish and reappear.",
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 15
       },
       {
        "n": 2,
@@ -12263,7 +12352,8 @@
        "n": 1,
        "test": "Do a trick where you name a card somebody chose.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 15
       },
       {
        "n": 2,
@@ -12393,7 +12483,8 @@
        "n": 1,
        "test": "Mime one action so clearly that somebody names it.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 5
       },
       {
        "n": 2,
@@ -12475,7 +12566,8 @@
        "n": 1,
        "test": "Make a puppet out of a sock or a paper bag.",
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 20
       },
       {
        "n": 2,
@@ -12557,7 +12649,8 @@
        "n": 1,
        "test": "Spin a plate or a hoop and keep it going for ten seconds.",
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 10
       },
       {
        "n": 2,
@@ -13005,7 +13098,8 @@
        ],
        "ctx": "kit",
        "kind": "skill",
-       "note": "The smallest possible knife job, and the one that teaches a light hand. Spread a hard butter and you tear the bread; that is the whole lesson in one slice."
+       "note": "The smallest possible knife job, and the one that teaches a light hand. Spread a hard butter and you tear the bread; that is the whole lesson in one slice.",
+       "mins": 3
       },
       {
        "n": 2,
@@ -13160,7 +13254,8 @@
        ],
        "ctx": "home",
        "kind": "skill",
-       "note": "Clearing away is half of this ladder and the half people skip. A cook who leaves a wreck behind stops getting to cook."
+       "note": "Clearing away is half of this ladder and the half people skip. A cook who leaves a wreck behind stops getting to cook.",
+       "mins": 10
       },
       {
        "n": 2,
@@ -13411,7 +13506,8 @@
        ],
        "ctx": "kit",
        "kind": "attention",
-       "note": "Cooking forgives, baking does not. Everything above this rung depends on the weighing being honest."
+       "note": "Cooking forgives, baking does not. Everything above this rung depends on the weighing being honest.",
+       "mins": 10
       },
       {
        "n": 2,
@@ -13656,7 +13752,8 @@
        "n": 1,
        "test": "Toast something on a stick over a fire and eat it.",
        "ctx": "out",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 30
       },
       {
        "n": 2,
@@ -13869,7 +13966,8 @@
        "n": 1,
        "test": "Make jam that sets.",
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 60
       },
       {
        "n": 2,
@@ -13998,7 +14096,8 @@
        "n": 1,
        "test": "Lay a table properly for everybody.",
        "ctx": "home",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 5
       },
       {
        "n": 2,
@@ -14135,7 +14234,8 @@
        ],
        "ctx": "with",
        "kind": "skill",
-       "note": "Start every single session with this and it becomes automatic within a fortnight. Do it yourself beside them rather than telling them to."
+       "note": "Start every single session with this and it becomes automatic within a fortnight. Do it yourself beside them rather than telling them to.",
+       "mins": 1
       },
       {
        "n": 2,
@@ -14443,7 +14543,8 @@
        "n": 1,
        "test": "Name every coin and note when somebody holds one up.",
        "ctx": "kit",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 3
       },
       {
        "n": 2,
@@ -14654,7 +14755,8 @@
        "n": 1,
        "test": "Sell one thing to one person.",
        "ctx": "out",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 20
       },
       {
        "n": 2,
@@ -14785,7 +14887,8 @@
        "test": "Imagine you are putting on a games afternoon for six children. Write down five things you would have to sort out before the day.",
        "ctx": "room",
        "kind": "attention",
-       "note": "There is no right list. A room, a start time, a helper, which games, what to drink, what happens if it rains. Anything that would go wrong if nobody thought of it counts. The point is writing it down before the day, which is most of running anything."
+       "note": "There is no right list. A room, a start time, a helper, which games, what to drink, what happens if it rains. Anything that would go wrong if nobody thought of it counts. The point is writing it down before the day, which is most of running anything.",
+       "mins": 5
       },
       {
        "n": 2,
@@ -15045,7 +15148,8 @@
        "n": 1,
        "test": "Ask for something you want, out loud, in a full sentence.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 2
       },
       {
        "n": 2,
@@ -15185,7 +15289,8 @@
        "n": 1,
        "test": "Point at a building you think is pretty and one you think is ugly, and say which is which.",
        "ctx": "out",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 5
       },
       {
        "n": 2,
@@ -15266,7 +15371,8 @@
        "n": 1,
        "test": "Fold a piece of string exactly in half by eye, then check it.",
        "ctx": "home",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 2
       },
       {
        "n": 2,
@@ -15396,7 +15502,8 @@
        "n": 1,
        "test": "Find a circle, a square and a triangle in the room you are in.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 2
       },
       {
        "n": 2,
@@ -15453,7 +15560,8 @@
        "n": 1,
        "test": "Fold paper, cut a shape, open it out, and see the two halves match.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 5
       },
       {
        "n": 2,
@@ -15534,7 +15642,8 @@
        "n": 1,
        "test": "Find an arch somewhere near you and stand underneath it.",
        "ctx": "out",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 15
       },
       {
        "n": 2,
@@ -15592,7 +15701,8 @@
        "n": 1,
        "test": "Walk down your street and count the buildings you like.",
        "ctx": "out",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 15
       },
       {
        "n": 2,
@@ -15813,7 +15923,8 @@
        "n": 1,
        "test": "Ask why three times in a row about the same thing and see where you end up.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 3
       },
       {
        "n": 2,
@@ -15895,7 +16006,8 @@
        "n": 1,
        "test": "Say what you think the word good means, in your own words.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 3
       },
       {
        "n": 2,
@@ -16024,7 +16136,8 @@
        "n": 1,
        "test": "Listen to a whole myth or fable and say what happened.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 10
       },
       {
        "n": 2,
@@ -16154,7 +16267,8 @@
        "test": "Learn what one word root means and find two English words that use it.",
        "ctx": "room",
        "kind": "skill",
-       "note": "Aqua means water: aquarium, aqueduct. That is the whole exercise, with a root of your own."
+       "note": "Aqua means water: aquarium, aqueduct. That is the whole exercise, with a root of your own.",
+       "mins": 5
       },
       {
        "n": 2,
@@ -16283,7 +16397,8 @@
        "n": 1,
        "test": "Find one beautiful thing today and say why it is.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 3
       },
       {
        "n": 2,
@@ -16364,7 +16479,8 @@
        "n": 1,
        "test": "Walk or sit for ten minutes with nothing to look at, thinking about one thing.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 10
       },
       {
        "n": 2,
@@ -16504,7 +16620,8 @@
        "n": 1,
        "test": "Ask a stranger the time, or for directions you do not really need.",
        "ctx": "out",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 3
       },
       {
        "n": 2,
@@ -16586,7 +16703,8 @@
        "n": 1,
        "test": "Walk into a room where you know nobody, and stay.",
        "ctx": "out",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 30
       },
       {
        "n": 2,
@@ -16667,7 +16785,8 @@
        "n": 1,
        "test": "Make one phone call you would rather have sent a message about.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 5
       },
       {
        "n": 2,
@@ -16749,7 +16868,8 @@
        "n": 1,
        "test": "Ask for something you are fairly sure will be refused, and be refused.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 5
       },
       {
        "n": 2,
@@ -16830,7 +16950,8 @@
        "n": 1,
        "test": "Say something out loud in a group of people you do not know.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 5
       },
       {
        "n": 2,
@@ -17002,7 +17123,8 @@
        "n": 1,
        "test": "Ask somebody at home for something you want, and give one good reason why.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 3
       },
       {
        "n": 2,
@@ -17083,7 +17205,8 @@
        "n": 1,
        "test": "Ask for something extra that costs them nothing — a bag, more sauce, a longer look.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 2
       },
       {
        "n": 2,
@@ -17164,7 +17287,8 @@
        "n": 1,
        "test": "Find one thing your household pays every month and work out what it costs in a year.",
        "ctx": "home",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 10
       },
       {
        "n": 2,
@@ -17222,7 +17346,8 @@
        "test": "Think of the last thing you bought that cost more than a coffee. Say two things about that deal that were not the price.",
        "ctx": "room",
        "kind": "attention",
-       "note": "How long it will last. Whether you could take it back. When you had to pay. A deal is never only the number."
+       "note": "How long it will last. Whether you could take it back. When you had to pay. A deal is never only the number.",
+       "mins": 3
       },
       {
        "n": 2,
@@ -17385,7 +17510,8 @@
        "n": 1,
        "test": "Swap something with somebody so that you are both happy.",
        "ctx": "with",
-       "kind": "kindness"
+       "kind": "kindness",
+       "mins": 10
       },
       {
        "n": 2,
@@ -17525,7 +17651,8 @@
        "test": "Walk one street in your own town that you have never walked.",
        "ctx": "out",
        "kind": "attention",
-       "note": "Ten minutes. Look up: the upper floors are where the old town still is. If you have walked every street, walk one at a different time of day."
+       "note": "Ten minutes. Look up: the upper floors are where the old town still is. If you have walked every street, walk one at a different time of day.",
+       "mins": 10
       },
       {
        "n": 2,
@@ -17674,7 +17801,8 @@
        "n": 1,
        "test": "Look up a grand building near you that is open to the public, and find its opening times.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 5
       },
       {
        "n": 2,
@@ -17755,7 +17883,8 @@
        "n": 1,
        "test": "Walk into an expensive shop and look at three things properly, without hurrying.",
        "ctx": "out",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 15
       },
       {
        "n": 2,
@@ -17836,7 +17965,8 @@
        "n": 1,
        "test": "Look up a car you like and read what it actually costs.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 5
       },
       {
        "n": 2,
@@ -17917,7 +18047,8 @@
        "n": 1,
        "test": "Find out which grand buildings near you are open to the public.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 10
       },
       {
        "n": 2,
@@ -17998,7 +18129,8 @@
        "n": 1,
        "test": "Walk into a room with your head up and make eye contact with one person.",
        "ctx": "out",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 2
       },
       {
        "n": 2,
@@ -18128,7 +18260,8 @@
        "n": 1,
        "test": "Write down one place you avoid because you have decided it is not for you.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 3
       },
       {
        "n": 2,
@@ -18268,7 +18401,8 @@
        "test": "Make your bed and clear the floor of your room.",
        "ctx": "home",
        "kind": "skill",
-       "note": "Everything off the floor, into its place or a bag. Two minutes, and the whole room looks different."
+       "note": "Everything off the floor, into its place or a bag. Two minutes, and the whole room looks different.",
+       "mins": 5
       },
       {
        "n": 2,
@@ -18417,7 +18551,8 @@
        "n": 1,
        "test": "Put your own things away without being asked twice.",
        "ctx": "home",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 5
       },
       {
        "n": 2,
@@ -18498,7 +18633,8 @@
        "n": 1,
        "test": "Tighten a loose screw with the right screwdriver.",
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 5
       },
       {
        "n": 2,
@@ -18627,7 +18763,8 @@
        "n": 1,
        "test": "Name ten tools and say what each one is for.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 3
       },
       {
        "n": 2,
@@ -18708,7 +18845,8 @@
        "n": 1,
        "test": "Pump a tyre to the right pressure.",
        "ctx": "kit",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 10
       },
       {
        "n": 2,
@@ -18838,7 +18976,8 @@
        "test": "Say out loud, as if to the 999 operator, exactly what you would tell them: where you are, what has happened, who is hurt.",
        "ctx": "room",
        "kind": "attention",
-       "note": "Where you are comes first. They can send help before they know anything else."
+       "note": "Where you are comes first. They can send help before they know anything else.",
+       "mins": 2
       },
       {
        "n": 2,
@@ -18967,7 +19106,8 @@
        "n": 1,
        "test": "Take something broken apart and name five parts inside.",
        "ctx": "home",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 30
       },
       {
        "n": 2,
@@ -19097,7 +19237,8 @@
        "n": 1,
        "test": "Say your own address and a phone number from memory.",
        "ctx": "room",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 1
       },
       {
        "n": 2,
@@ -19318,7 +19459,8 @@
        "n": 1,
        "test": "Notice a younger child on their own and bring them into the game.",
        "ctx": "with",
-       "kind": "kindness"
+       "kind": "kindness",
+       "mins": 5
       },
       {
        "n": 2,
@@ -19447,7 +19589,8 @@
        "n": 1,
        "test": "Say hello to somebody much older and shake their hand properly.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 2
       },
       {
        "n": 2,
@@ -19576,7 +19719,8 @@
        "n": 1,
        "test": "Share something you actually wanted, before being asked.",
        "ctx": "with",
-       "kind": "kindness"
+       "kind": "kindness",
+       "mins": 2
       },
       {
        "n": 2,
@@ -19705,7 +19849,8 @@
        "n": 1,
        "test": "Pick up litter you walk past, without being asked.",
        "ctx": "out",
-       "kind": "kindness"
+       "kind": "kindness",
+       "mins": 5
       },
       {
        "n": 2,
@@ -19834,7 +19979,8 @@
        "n": 1,
        "test": "Say hello first to somebody new, before they say it to you.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 2
       },
       {
        "n": 2,
@@ -19916,7 +20062,8 @@
        "n": 1,
        "test": "Carry one thing to the table before a meal, and one thing back after it.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 2
       },
       {
        "n": 2,
@@ -20008,7 +20155,8 @@
        "test": "Sit still for two minutes, eyes closed, and count your breaths.",
        "ctx": "room",
        "kind": "attention",
-       "note": "Lose count, start again. Two minutes is longer than you think and shorter than you fear."
+       "note": "Lose count, start again. Two minutes is longer than you think and shorter than you fear.",
+       "mins": 2
       },
       {
        "n": 2,
@@ -20157,7 +20305,8 @@
        "n": 1,
        "test": "Sit completely still and quiet for one minute.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 1
       },
       {
        "n": 2,
@@ -20287,7 +20436,8 @@
        "n": 1,
        "test": "Do one thing for ten minutes with nothing else going on.",
        "ctx": "room",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 10
       },
       {
        "n": 2,
@@ -20699,7 +20849,8 @@
        "n": 1,
        "test": "Say one good thing about today, out loud, at tea.",
        "ctx": "with",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 1
       },
       {
        "n": 2,
@@ -21043,7 +21194,10 @@
        "n": 1,
        "test": "Clear every surface in the bedroom and put back only what you used this week.",
        "ctx": "home",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 20,
+       "extra": true,
+       "note": "Bedside table, chest of drawers, windowsill, the chair that collects clothes. Everything off, then back only what you picked up in the last seven days. The rest goes where it lives, or into one bag to decide about at the weekend."
       },
       {
        "n": 2,
@@ -21055,19 +21209,28 @@
        "n": 3,
        "test": "Empty the box by the door: bin it, give it, or find each thing a real home.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 15,
+       "extra": true,
+       "note": "Every house has one: the box, bag or corner where things wait to be dealt with. Tip it out. Each thing gets one of three answers: bin, give, or a real home. No fourth pile."
       },
       {
        "n": 4,
        "test": "Get everything off the floor.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 10,
+       "extra": true,
+       "note": "Clothes into the wash basket or back on a hanger, shoes in a pair, bags on a hook, anything else into its place. Set a timer for ten minutes and see how much of the floor comes back."
       },
       {
        "n": 5,
        "test": "Clean the bedroom to a close look: under the bed, the skirting, the corners, the light switch.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 20,
+       "extra": true,
+       "note": "Look where you never look: under the bed with a torch, along the skirting, into the corners, and the light switch that everybody touches. A damp cloth does all of it."
       },
       {
        "n": 6,
@@ -21079,7 +21242,10 @@
        "n": 7,
        "test": "Take out anything that is not for sleeping or dressing.",
        "ctx": "home",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 15,
+       "extra": true,
+       "note": "The bedroom is for sleeping and dressing. The ironing pile, the exercise bike used as a rail, the work bag, the laptop charger: take one of them out and find it a better place tonight."
       },
       {
        "n": 8,
@@ -21100,25 +21266,37 @@
        "n": 1,
        "test": "Clear the desk to bare wood, wipe it, and put back the three things you use every day.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 15,
+       "extra": true,
+       "note": "Everything off: the pens, the mugs, the post. Wipe it with a damp cloth until it is bare. Then choose three things you actually use every day, and only those go back. A kitchen table you work at counts."
       },
       {
        "n": 2,
        "test": "Every loose paper into one pile, then through it once: bin, file, or act on it today.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 20,
+       "extra": true,
+       "note": "Gather every loose piece of paper in the house into one pile. Go through it once, top to bottom: bin it, put it in a folder, or do what it asks today. A shoebox is a perfectly good folder."
       },
       {
        "n": 3,
        "test": "Sort the drawers: one drawer for what you use, everything else out.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 15,
+       "extra": true,
+       "note": "Pick one drawer to hold what you use: pens that work, the stapler, the chargers you need. Everything else comes out of the drawers and gets a home somewhere else, or goes."
       },
       {
        "n": 4,
        "test": "Tame the cables: unplug what is not used, coil and label the rest.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 15,
+       "extra": true,
+       "note": "Unplug anything that has not been used this month. Coil the rest loosely and hold each one with a bread-bag tie or a strip of paper. Write on the tie what the cable is for."
       },
       {
        "n": 5,
@@ -21130,7 +21308,10 @@
        "n": 6,
        "test": "Sit down and check the chair and the screen are at the right height.",
        "ctx": "home",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 10,
+       "extra": true,
+       "note": "Sit as you normally do. Your feet should be flat on the floor and the top of the screen at eye level. A cushion raises you, a stack of books raises the screen. Nothing needs buying."
       },
       {
        "n": 7,
@@ -21157,7 +21338,8 @@
        "n": 1,
        "test": "Take every piece of clothing out and put it on the bed. All of it.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 10
       },
       {
        "n": 2,
@@ -21187,13 +21369,19 @@
        "n": 6,
        "test": "Put the out-of-season things somewhere else entirely.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 20,
+       "extra": true,
+       "note": "Summer things in winter, heavy coats in summer. Fold them into a bag or a box and put it under the bed, on top of the wardrobe, or in the loft. What is left is only what you can wear this month."
       },
       {
        "n": 7,
        "test": "Work out what you are actually missing, and write the list.",
        "ctx": "home",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 10,
+       "extra": true,
+       "note": "Look at what you wear every week and ask what would make mornings easier. A plain jumper that goes with everything, a pair of shoes that do not hurt. Write the list. Buying is not today; knowing is."
       },
       {
        "n": 8,
@@ -21214,7 +21402,10 @@
        "n": 1,
        "test": "Walk the whole house with a notebook and list every broken thing.",
        "ctx": "home",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 15,
+       "extra": true,
+       "note": "Room by room with a pen: the dripping tap, the door that sticks, the lamp with a dead bulb, the drawer that jams, the phone with a cracked screen. Just the list tonight. Seeing it all written down is the job."
       },
       {
        "n": 2,
@@ -21244,7 +21435,10 @@
        "n": 6,
        "test": "Fix something you have walked past for a year.",
        "ctx": "home",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 20,
+       "extra": true,
+       "note": "Every home has one thing everybody has stepped round for a year. The loose handle, the wobbly chair, the cupboard door on one hinge. Tonight, fix that one. A free video search of the exact problem usually shows how."
       },
       {
        "n": 7,
@@ -21295,7 +21489,10 @@
        "n": 1,
        "test": "Fill one bag with things you have not used in a year. Today.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 15,
+       "extra": true,
+       "note": "Any bag. Walk the house and fill it with things you have not used in a year: the spare mugs, the gadget in its box, the clothes that wait for a different you. Tie it and put it by the front door."
       },
       {
        "n": 2,
@@ -21307,19 +21504,28 @@
        "n": 3,
        "test": "Do the kitchen: gadgets, mugs, tins past their date. One bag out.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 20,
+       "extra": true,
+       "note": "Open every kitchen cupboard. The third spatula, the mugs nobody picks, the machine used twice, the tins past their date. One bag of things to give, one bin bag for what is past it."
       },
       {
        "n": 4,
        "test": "Do the books, games and hobby things you have finished with. Pass them on.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 15,
+       "extra": true,
+       "note": "Books you have read and will not read again, board games nobody asks for, the kit from a hobby you have finished with. Put them in a bag for a friend, a school, or a charity shop."
       },
       {
        "n": 5,
        "test": "Do the bathroom cupboard and the medicine box.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 15,
+       "extra": true,
+       "note": "Take everything out of the bathroom cupboard. Check every date on the medicines. Out-of-date medicines go back to a pharmacy, not in the bin. Half-used bottles you do not like: out."
       },
       {
        "n": 6,
@@ -21331,7 +21537,10 @@
        "n": 7,
        "test": "Give away one thing that is good and that you like, to somebody who will use it more.",
        "ctx": "home",
-       "kind": "kindness"
+       "kind": "kindness",
+       "mins": 10,
+       "extra": true,
+       "note": "Not the thing you do not want. Something good that you like and hardly use: a book you loved, a good coat, a tool. Pick the person who will use it more and send them a message to say it is theirs."
       },
       {
        "n": 8,
@@ -21376,37 +21585,55 @@
        "n": 1,
        "test": "Delete every app you have not opened in a month.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 10,
+       "extra": true,
+       "note": "Go through your apps page by page. If you cannot remember opening it in the last month, delete it. You can always get it back for free. Most phones can list apps by last use in the settings."
       },
       {
        "n": 2,
        "test": "Delete the screenshots and the junk photos from the last month.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 10,
+       "extra": true,
+       "note": "Open your photos and scroll back one month. Delete the screenshots you no longer need, the blurry ones, the six copies of the same thing. Keep the best one of each."
       },
       {
        "n": 3,
        "test": "Unsubscribe from twenty emails you never read.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 15,
+       "extra": true,
+       "note": "Open your email and search the word unsubscribe. For every newsletter or shop email you never read, open one and press the unsubscribe link at the bottom. Count to twenty."
       },
       {
        "n": 4,
        "test": "Turn off every notification that is not a person talking to you.",
        "ctx": "home",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 10,
+       "extra": true,
+       "note": "Settings, then notifications. Go down the list. Messages and calls from people stay on. Shops, games, news and anything else that buzzes you: off. You can still open the app whenever you choose."
       },
       {
        "n": 5,
        "test": "Get the inbox to empty once: archive, delete, or act.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 20,
+       "extra": true,
+       "note": "Start with the oldest. Anything older than a month that needs nothing from you: archive it all at once. Then go through what is left: reply, delete, or archive. The goal is an empty inbox once, tonight."
       },
       {
        "n": 6,
        "test": "Clear the home screen to one page of what you use.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 10,
+       "extra": true,
+       "note": "Keep only the apps you use every day on the first page, eight or so. Everything else goes onto the second page or into one folder. The first page is what your thumb sees first."
       },
       {
        "n": 7,
@@ -21418,7 +21645,10 @@
        "n": 8,
        "test": "Back up the photographs you would be sick to lose.",
        "ctx": "home",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 15,
+       "extra": true,
+       "note": "The photographs you would be most sorry to lose: children, weddings, the people who are gone. Turn on your phone's free photo backup, or copy them onto a computer or a memory stick you already own."
       },
       {
        "n": 9,
@@ -21430,13 +21660,19 @@
        "n": 10,
        "test": "Cancel one subscription you had forgotten you pay for.",
        "ctx": "home",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 10,
+       "extra": true,
+       "note": "Look through a month of your bank statement or the subscriptions list in your phone settings. Find the one you forgot about, the app or channel you do not use. Cancel it tonight."
       },
       {
        "n": 11,
        "test": "Check where you are still signed in, and sign out of what you do not use.",
        "ctx": "home",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 15,
+       "extra": true,
+       "note": "Open your main email account's security settings. It lists the devices and apps still signed in. Sign out of old phones, old computers, and apps you no longer use."
       },
       {
        "n": 12,
@@ -21457,25 +21693,37 @@
        "n": 1,
        "test": "Clean the windows, inside and out, in one room.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 20,
+       "extra": true,
+       "note": "Warm water with a drop of washing-up liquid, a cloth, and a dry tea towel or newspaper to finish. Inside first, then outside where you can reach safely from the ground. Never lean out of an upstairs window."
       },
       {
        "n": 2,
        "test": "Wash or wipe the blinds and the curtain rail.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 15,
+       "extra": true,
+       "note": "Close the blinds and wipe each slat with a damp cloth, or a sock over your hand. Then run the cloth along the top of the curtain rail, where the dust has been sitting for months."
       },
       {
        "n": 3,
        "test": "Clean behind and under the sink, and the bin itself.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 20,
+       "extra": true,
+       "note": "Empty the cupboard under the kitchen sink. Wipe the floor of it, bin what is empty or dried up, and put back only what you use. Then wash the bin itself, inside and out, and dry it."
       },
       {
        "n": 4,
        "test": "Empty and wipe the fridge, shelf by shelf, and bin what is past.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 20,
+       "extra": true,
+       "note": "Everything out of one shelf at a time. Check dates, bin what is past, wipe the shelf, put back what is good. Door shelves last. Warm water and a spoon of bicarbonate of soda cleans it, if you have some."
       },
       {
        "n": 5,
@@ -21493,7 +21741,10 @@
        "n": 7,
        "test": "The top of the cupboards, the light shades, and the skirting all the way round: one room.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 20,
+       "extra": true,
+       "note": "One room. Stand on a steady step, never a chair on wheels. Wipe the top of the cupboards, dust the light shade with the light switched off and cool, then go all the way round the skirting with a damp cloth."
       },
       {
        "n": 8,
@@ -21505,19 +21756,28 @@
        "n": 9,
        "test": "Clean the front door, the handle and the step.",
        "ctx": "home",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 15,
+       "extra": true,
+       "note": "The front door is the first thing you touch coming home. Wipe the door, polish the handle and the letterbox, sweep the step. A bucket of warm soapy water and a cloth is everything."
       },
       {
        "n": 10,
        "test": "Do the one place in the house nobody has looked at in years.",
        "ctx": "home",
-       "kind": "courage"
+       "kind": "courage",
+       "mins": 20,
+       "extra": true,
+       "note": "The top of the wardrobe, behind the washing machine, the back of the cupboard under the stairs. Pick the one place nobody in the house has looked at in years. Twenty minutes, and it is done."
       },
       {
        "n": 11,
        "test": "Descale, empty or change the filter on something that needed it.",
        "ctx": "home",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 15,
+       "extra": true,
+       "note": "The kettle with white scale inside, the extractor fan filter, the shower head, the hoover filter. Pick one. For a kettle: half water, half vinegar, boil, leave an hour, rinse well and boil fresh water twice."
       },
       {
        "n": 12,
@@ -21538,7 +21798,10 @@
        "n": 1,
        "test": "Everything you own has a home: choose one for the five things that never get put away.",
        "ctx": "home",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 15,
+       "extra": true,
+       "note": "Keys, glasses, chargers, the post, shoes: the things that always end up on the table. Walk the house and choose one spot for each, close to where you use it. A bowl by the door for keys counts."
       },
       {
        "n": 2,
@@ -21604,13 +21867,19 @@
        "n": 12,
        "test": "Walk the whole house with a close look. Where has clutter crept back? Deal with it today.",
        "ctx": "home",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 20,
+       "extra": true,
+       "note": "Walk every room slowly, the way a visitor would see it. Where are the piles back? The chair, the stairs, the kitchen counter. Pick the worst one and put it right tonight."
       },
       {
        "n": 13,
        "test": "Find the one spot that always goes wrong, and change what it is for.",
        "ctx": "home",
-       "kind": "attention"
+       "kind": "attention",
+       "mins": 15,
+       "extra": true,
+       "note": "Every house has a spot that always goes wrong: the hall table, the end of the kitchen counter. Watch what lands there. Then give it a new job: a hook for bags, a basket for post, or nothing at all."
       },
       {
        "n": 14,
@@ -21668,7 +21937,8 @@
        "n": 1,
        "test": "Put your shoes side by side by the door, the same way round.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "mins": 2
       },
       {
        "n": 2,
@@ -22377,5 +22647,2286 @@
     "mind.memory"
    ]
   }
- ]
+ ],
+ "daily": {
+  "quick": [
+   {
+    "id": "q-wall-sit",
+    "test": "Slide your back down a wall until your knees are bent at a right angle, and hold it for thirty seconds.",
+    "note": "Feet a little in front of you and hip-width apart, knees over your ankles. If a right angle is too deep, hold it higher up the wall and go lower another day. Stop if anything hurts. Seated version: sit tall on the front edge of a chair and press both feet hard into the floor for thirty seconds.",
+    "mins": 2,
+    "cat": "fit",
+    "kind": "skill",
+    "area": "health",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-heel-raise",
+    "test": "Rise up onto your toes and lower yourself slowly, fifteen times, with one hand resting on the back of a chair.",
+    "note": "Take two counts to go up and three counts to come down. Keep your knees straight but not locked. Stop if anything hurts. Seated version: sit with feet flat and lift both heels as high as they go, fifteen times.",
+    "mins": 2,
+    "cat": "fit",
+    "kind": "skill",
+    "area": "health",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-one-foot-eyes",
+    "test": "Stand on one foot for thirty seconds with your eyes shut, then do the same on the other foot.",
+    "note": "Stand beside a table or a wall so you can put a hand out if you wobble. If thirty seconds is too long, start with ten and count how far you get. Stop if anything hurts. If standing is not possible, sit and lift one foot just off the floor for thirty seconds instead.",
+    "mins": 2,
+    "cat": "body",
+    "kind": "skill",
+    "area": "health",
+    "trait": "patience"
+   },
+   {
+    "id": "q-look-shoulder",
+    "test": "Turn your head slowly to look over your left shoulder, then over your right, five times each side.",
+    "note": "Move slowly and only as far as is comfortable, with your shoulders staying still. Breathe out as you turn. Stop if anything hurts. This works just as well sitting at a table.",
+    "mins": 1,
+    "cat": "body",
+    "kind": "skill",
+    "area": "health",
+    "trait": "calm"
+   },
+   {
+    "id": "q-shoulder-roll",
+    "test": "Roll both shoulders slowly backwards ten times, then forwards ten times.",
+    "note": "Make each circle as big as you can: up to your ears, back, down, and round. Keep your arms loose by your sides. Stop if anything hurts. You can do this sitting down, and if you already do it at your desk, doing it now on purpose counts.",
+    "mins": 1,
+    "cat": "body",
+    "kind": "skill",
+    "area": "health",
+    "trait": "calm"
+   },
+   {
+    "id": "q-wall-stand",
+    "test": "Stand for one minute with your heels, your back and the back of your head all touching a wall.",
+    "note": "Tuck your chin in slightly so your head can reach the wall without tipping up. Let your arms hang and breathe normally. Stop if anything hurts. When you step away, try to keep that same tall shape for the next few steps.",
+    "mins": 2,
+    "cat": "body",
+    "kind": "attention",
+    "area": "health",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-chair-stand",
+    "test": "Stand up from a chair and sit back down ten times without using your hands.",
+    "note": "Cross your arms over your chest, feet flat and a little apart. Sit down slowly rather than dropping. Stop if anything hurts. If it is hard without hands, use one hand on your knee and count how many you manage.",
+    "mins": 2,
+    "cat": "fit",
+    "kind": "skill",
+    "area": "health",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-heel-to-toe",
+    "test": "Walk ten steps in a straight line, placing each heel right up against the toes of the other foot.",
+    "note": "Use the edge of a rug or a line between floorboards as your guide. Look ahead, not down at your feet, and hold your arms out to the side. Stop if anything hurts. Walk beside a wall so you can touch it if you need to.",
+    "mins": 2,
+    "cat": "body",
+    "kind": "skill",
+    "area": "health",
+    "trait": "patience"
+   },
+   {
+    "id": "q-breath-arms",
+    "test": "Raise your arms slowly above your head as you breathe in, and lower them as you breathe out, eight times.",
+    "note": "Breathe in through your nose for a count of four while the arms go up, and out for a count of six while they come down. Let the arms follow the breath, not the other way round. Stop if anything hurts. Sitting on a chair works exactly the same.",
+    "mins": 2,
+    "cat": "body",
+    "kind": "attention",
+    "area": "health",
+    "trait": "calm"
+   },
+   {
+    "id": "q-calf-stretch",
+    "test": "Stretch the back of each lower leg against a wall for thirty seconds a side.",
+    "note": "Hands on the wall, one foot forward with the knee bent, the other leg straight behind with the heel pressed flat to the floor. Lean in until you feel a gentle stretch, not pain. Stop if anything hurts. Seated version: sit with one leg straight out, heel on the floor, and pull your toes back towards you.",
+    "mins": 2,
+    "cat": "fit",
+    "kind": "skill",
+    "area": "health",
+    "trait": "patience"
+   },
+   {
+    "id": "q-doorway-stretch",
+    "test": "Stand in a doorway with your forearms on the frame at shoulder height and lean gently forward for thirty seconds.",
+    "note": "Step one foot through the door and let your weight move slowly onto it until you feel the front of your chest open. Keep your head up and breathe slowly. Stop if anything hurts. Without a doorway: clasp your hands behind your back and lift them a little away from you.",
+    "mins": 1,
+    "cat": "fit",
+    "kind": "skill",
+    "area": "health",
+    "trait": "calm"
+   },
+   {
+    "id": "q-march",
+    "test": "March on the spot for two minutes, lifting your knees as high as your hips.",
+    "note": "Swing your arms as you go, right arm with left knee. Put on one song and march until it is two minutes in. Stop if anything hurts. Seated version: sit near the front of a chair and lift your knees in turn, arms swinging.",
+    "mins": 2,
+    "cat": "fit",
+    "kind": "skill",
+    "area": "health",
+    "trait": "joy"
+   },
+   {
+    "id": "q-bridge",
+    "test": "Lie on your back with your knees bent, and lift your hips until you make a straight line from knees to shoulders, ten times.",
+    "note": "Feet flat and hip-width apart, arms by your sides with palms down. Hold each lift for two seconds at the top, then lower slowly. Stop if anything hurts. A rug or a folded towel under your back is plenty.",
+    "mins": 3,
+    "cat": "fit",
+    "kind": "skill",
+    "area": "health",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-hands-knees-reach",
+    "test": "On your hands and knees, stretch your right arm forward and your left leg back, hold for five seconds, then swap sides, six times each.",
+    "note": "Keep your back flat enough that a cup could sit on it without sliding. Look at the floor, not ahead. Stop if anything hurts. Seated version: sit tall and lift your right arm and left knee together, then swap.",
+    "mins": 3,
+    "cat": "fit",
+    "kind": "skill",
+    "area": "health",
+    "trait": "patience"
+   },
+   {
+    "id": "q-ankle-circles",
+    "test": "Sit on a chair, lift one foot, and draw ten slow circles with your toes each way. Then change feet.",
+    "note": "Make the circles as wide as the ankle will go, moving only the foot, not the whole leg. Then write the letters of your name in the air with your toes for a change. Stop if anything hurts. This one is made for sitting, so it suits a desk or a sofa.",
+    "mins": 2,
+    "cat": "body",
+    "kind": "skill",
+    "area": "health",
+    "trait": "patience"
+   },
+   {
+    "id": "q-floor-rise",
+    "test": "Sit down on the floor and stand back up again, three times, using your hands as little as you can.",
+    "note": "Cross your legs or kneel on the way down, then find the easiest way up. Count how many hands or knees you needed and see if it gets fewer by the third go. Stop if anything hurts. Skip this one if your knees are sore, and do the chair stand instead: up and down from a chair ten times.",
+    "mins": 2,
+    "cat": "fit",
+    "kind": "skill",
+    "area": "health",
+    "trait": "confidence"
+   },
+   {
+    "id": "q-one-line-cup",
+    "test": "Draw a cup in one line, without lifting the pen off the paper.",
+    "note": "Put a real cup in front of you and let the line wander round the rim, down the side, round the handle and back. It will look a bit wobbly, and that is how these drawings are meant to look. Any pen and the back of an envelope will do.",
+    "mins": 2,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+   },
+   {
+    "id": "q-paper-box",
+    "test": "Fold a square of paper into a small open box with no glue or tape.",
+    "note": "Fold the corners to the centre, then fold two sides in to meet the middle, open out, and lift the ends to form walls. Look up a masu box if you get stuck, and follow one set of steps at a time. A page from an old magazine or a sheet of printer paper cut square is plenty.",
+    "mins": 5,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "patience"
+   },
+   {
+    "id": "q-tear-square",
+    "test": "Turn a rectangle of paper into a perfect square with one fold and one tear.",
+    "note": "Fold one corner down so the short edge lies exactly along the long edge. Crease the fold hard, then tear off the strip left below it. Open it out and you have a square, ready for the next folding item.",
+    "mins": 1,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-paper-boat",
+    "test": "Fold a sheet of paper into a boat that stands up on the table.",
+    "note": "Fold the sheet in half, fold the top corners down to make a triangle, fold the bottom strips up on each side, then open the middle and flatten it into a square before pulling the two points apart. Look up a paper boat if you lose your place. Printer paper or a page of an old newspaper both work.",
+    "mins": 4,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+   },
+   {
+    "id": "q-figure-eight",
+    "test": "Tie a figure-of-eight knot in a shoelace or a piece of string.",
+    "note": "Make a loop, pass the end round behind the standing part, then feed it back down through the loop. Pull both ends and it should look like the number eight. Untie it and tie it again with your eyes shut.",
+    "mins": 2,
+    "cat": "make",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "patience"
+   },
+   {
+    "id": "q-bow-eyes-shut",
+    "test": "Tie a shoelace bow with your eyes shut, and check it is tight.",
+    "note": "Take your shoe off and put it on your lap, or tie it while it is on your foot. Go slowly and feel each loop with your fingers. If you already tie laces without looking, try the double bow that does not come undone.",
+    "mins": 1,
+    "cat": "make",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "confidence"
+   },
+   {
+    "id": "q-draw-hand",
+    "test": "Draw your own hand as it rests on the table, in three minutes.",
+    "note": "Start with the shape of the gaps between the fingers rather than the fingers themselves. Look at the hand more than you look at the paper. Pencil or pen both work, and nobody needs to see it.",
+    "mins": 3,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "patience"
+   },
+   {
+    "id": "q-shade-ball",
+    "test": "Draw a circle and shade it so it looks like a round ball.",
+    "note": "Pick one side for the light to come from. Leave a small white spot near that side, shade darker the further you get from it, and add a dark shadow on the table under the ball. An ordinary pencil pressed harder or softer is all you need.",
+    "mins": 3,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-block-letters",
+    "test": "Write your first name in big hollow block letters and shade them in.",
+    "note": "Draw each letter as a thin outline first, then go round it to make it thick. Shade in stripes, dots or solid colour. A biro is fine; felt tips are a bonus if they are already in the house.",
+    "mins": 4,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+   },
+   {
+    "id": "q-paper-fan",
+    "test": "Fold a sheet of paper back and forth into a fan, with every fold the same width.",
+    "note": "Make the first fold about two fingers wide, then turn the paper over and fold again along the edge. Pinch one end together when you finish and open the other end out. Try to make every fold line up exactly with the last.",
+    "mins": 2,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "patience"
+   },
+   {
+    "id": "q-room-map",
+    "test": "Draw a map of the room you are in as if looking down from the ceiling, with every piece of furniture in its place.",
+    "note": "Start with the walls, then mark the door and the window, then the big things like a bed, a table or a sofa. Use squares and rectangles only. Check it by standing where the map says the door is.",
+    "mins": 3,
+    "cat": "make",
+    "kind": "attention",
+    "area": "creativity",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-paper-envelope",
+    "test": "Fold a sheet of paper into an envelope with no glue.",
+    "note": "Fold the sheet into a diamond shape: fold two side corners to the middle, fold the bottom corner up, then tuck the top corner down into the pocket. Put a short note inside if you like. Any sheet of printer paper works.",
+    "mins": 3,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+   },
+   {
+    "id": "q-one-drawer",
+    "test": "Empty one kitchen drawer onto the counter, wipe it out, and put back only what belongs in it.",
+    "note": "Pick the drawer that sticks or rattles most. Anything that lives somewhere else goes to that place, and anything broken goes in the bin. If the kitchen is busy, a bedside drawer works just as well.",
+    "mins": 5,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-empty-bag",
+    "test": "Empty the bag you carry most days, bin the rubbish, and put back only what you need tomorrow.",
+    "note": "Tip it out onto a table so you can see everything at once. Receipts, wrappers and dead pens go first. A school bag, a handbag or a rucksack all count.",
+    "mins": 3,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-ten-photos",
+    "test": "Delete ten photos from your phone that are blurry, doubled, or of something you no longer need.",
+    "note": "Start with the most recent week and scroll back. A photo of a parking ticket or a shopping list from last month is a good first choice. Stop at ten, and then empty the recently deleted folder only if you are sure.",
+    "mins": 2,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-bottom-row",
+    "test": "Put the four apps you use most into the bottom row of your phone's home screen.",
+    "note": "Press and hold an app until the icons move, then drag each one down. Choose the four you open every day, like messages, phone, camera and a calendar. Anything that was there before and is not used every day goes further back.",
+    "mins": 2,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-bedside",
+    "test": "Clear the top of your bedside table so only three things are left on it.",
+    "note": "Lift everything off first, wipe the top, then choose three, for example a lamp, a book and a glass of water. Everything else goes to where it lives. If you have no bedside table, do the windowsill in your room.",
+    "mins": 2,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "calm"
+   },
+   {
+    "id": "q-fridge-door",
+    "test": "Take everything off the front of the fridge and put back only what is still current.",
+    "note": "Old appointment cards and last term's letters go in the recycling. Drawings and photos you love go back up, a little straighter than before. If the fridge front is already clear, do the noticeboard or the pile by the kettle.",
+    "mins": 3,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-coat-hooks",
+    "test": "Take every coat and bag off the hooks by the door and hang back only the ones used this week.",
+    "note": "Out-of-season coats go to a wardrobe or a cupboard. Hang one thing per hook if you can. If there are no hooks, do the pile of shoes or coats on the stairs.",
+    "mins": 3,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-pen-test",
+    "test": "Test every pen in one pot or drawer by scribbling with it, and bin the ones that do not write.",
+    "note": "Scribble a small spiral on scrap paper with each. Put the good ones back point down and caps on. A child can do this one on their own.",
+    "mins": 3,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "patience"
+   },
+   {
+    "id": "q-wallet",
+    "test": "Take everything out of your wallet or purse and put back only the cards and papers you still use.",
+    "note": "Old receipts, used tickets and expired cards come out. Put the card you use most in the easiest slot to reach. A phone case with cards in it counts too.",
+    "mins": 3,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-sink-edge",
+    "test": "Clear everything off the edge around the bathroom sink, wipe it, and put back only what gets used every day.",
+    "note": "Empty bottles go in the recycling, and spares go in a cupboard. A cloth with warm water is enough for the wipe. If there is a shelf above the sink, do that instead or as well.",
+    "mins": 2,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-cups-home",
+    "test": "Walk round the house and bring every cup, mug and glass back to the kitchen.",
+    "note": "Check bedsides, windowsills, the floor by the sofa and the hall table. Rinse them as they arrive, or stack them by the sink. Count how many you found.",
+    "mins": 2,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "kindness"
+   },
+   {
+    "id": "q-tins-front",
+    "test": "Turn every tin and jar in one cupboard so the labels face forward, with the oldest date at the front.",
+    "note": "Take a quick look at each date as you turn it. Anything past its date goes on the counter to deal with today. A shelf of spices or a row of cereal boxes works just as well.",
+    "mins": 3,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "patience"
+   },
+   {
+    "id": "q-thank-specific",
+    "test": "Send one message thanking somebody for a specific thing they did, and name the thing.",
+    "note": "For example: \"Thanks for the lift on Tuesday, it made my whole morning easier.\" One or two sentences is enough. If you thanked them at the time, thanking them again now on purpose counts.",
+    "mins": 2,
+    "cat": "care",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "kindness"
+   },
+   {
+    "id": "q-hidden-note",
+    "test": "Write a short kind note and leave it where somebody in the house will find it today.",
+    "note": "Inside a lunchbox, on a pillow or on the kettle all work. Say one true thing, like \"You made the dinner great last night.\" If you live alone, leave it in a birthday card you will post, or send the same words as a message.",
+    "mins": 2,
+    "cat": "care",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "kindness"
+   },
+   {
+    "id": "q-kind-review",
+    "test": "Write a short, true, kind review for a local shop, café or tradesperson you have used.",
+    "note": "Name one thing they did well, like \"Fixed our boiler the same day and tidied up after.\" Put it on the map app or website where people find them. If they have no page, send them the same words as a message.",
+    "mins": 4,
+    "cat": "care",
+    "kind": "kindness",
+    "area": "community",
+    "trait": "kindness"
+   },
+   {
+    "id": "q-compliment-written",
+    "test": "Write down one true compliment about somebody you know, then send it or say it to them today.",
+    "note": "Make it about something they did rather than how they look, for example \"You are really patient with your little brother.\" Writing it first helps you say it clearly. A text message counts.",
+    "mins": 2,
+    "cat": "care",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "courage"
+   },
+   {
+    "id": "q-their-job",
+    "test": "Do one small job that somebody else in the house usually does, without mentioning it.",
+    "note": "Empty the dishwasher, fill the kettle, or bring the washing in off the radiator. Pick the job that person does most often. If you live alone, do one job for yourself for tomorrow, like setting out a clean mug by the kettle.",
+    "mins": 3,
+    "cat": "care",
+    "kind": "kindness",
+    "area": "home",
+    "trait": "kindness"
+   },
+   {
+    "id": "q-make-drink",
+    "test": "Make a drink for somebody in the house and bring it to them without being asked.",
+    "note": "Ask how they take it if you do not know, or bring them water. Children can pour a glass of juice or water. If nobody else is home, send somebody a message asking how their day is going.",
+    "mins": 3,
+    "cat": "care",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "kindness"
+   },
+   {
+    "id": "q-voice-message",
+    "test": "Send a thirty-second voice message to a grandparent or older relative, telling them one thing from your day.",
+    "note": "Say who it is, say one thing you did or saw, and say you hope they are well. If there is no older relative, send it to an older neighbour or friend. A written message is fine for anybody who does not use voice messages.",
+    "mins": 2,
+    "cat": "speak",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "kindness"
+   },
+   {
+    "id": "q-birthdays",
+    "test": "Put the birthdays of five people you care about into your phone's calendar, set to repeat every year.",
+    "note": "Add a reminder for two days before so there is time to send a card or a message. If you do not know a date, ask them or a family member by message. A paper calendar on the wall works too.",
+    "mins": 3,
+    "cat": "care",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-noticed-effort",
+    "test": "Message somebody who has worked hard at something lately and tell them you noticed.",
+    "note": "For example: \"I saw how much practice you put into the concert. Well done.\" It could be a friend studying, a neighbour doing up a garden, or a cousin learning to drive. One sentence is enough.",
+    "mins": 2,
+    "cat": "speak",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "kindness"
+   },
+   {
+    "id": "q-ask-help",
+    "test": "Ask somebody in the house if there is one thing you can do for them right now, and then do it.",
+    "note": "Say it plainly: \"Is there anything I can do for you in the next five minutes?\" If they say no, offer one thing, like fetching a jumper or setting the table. If you live alone, message a friend with the same offer for later in the week.",
+    "mins": 3,
+    "cat": "care",
+    "kind": "kindness",
+    "area": "home",
+    "trait": "kindness"
+   },
+   {
+    "id": "q-thank-collectors",
+    "test": "Write a thank-you note to the postman or the bin collectors and put it where they will see it.",
+    "note": "Tape it to the inside of the front window or put it in a clear bag on the lid of the bin. Big letters and one line is enough: \"Thank you for coming out in the wind and the rain.\" A drawing from a child is a lovely addition.",
+    "mins": 3,
+    "cat": "care",
+    "kind": "kindness",
+    "area": "community",
+    "trait": "kindness"
+   },
+   {
+    "id": "q-look-object",
+    "test": "Pick one object near you, look at it for two minutes, then write down five things about it you had not noticed before.",
+    "note": "A mug, a key or a houseplant are good choices. Look at its colour in the light, the marks on it, its shadow and its edges. Pen and paper, or the notes app on your phone.",
+    "mins": 3,
+    "cat": "beauty",
+    "kind": "attention",
+    "area": "experiences",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-hum-breath",
+    "test": "Hum one steady note for as long as one breath lasts, five times.",
+    "note": "Breathe in slowly through your nose, then hum with your mouth closed until the breath runs out. Try a lower note, then a higher one, and feel where each one buzzes. If you hum along to music already, doing it now on purpose counts.",
+    "mins": 2,
+    "cat": "music",
+    "kind": "attention",
+    "area": "emotions",
+    "trait": "calm"
+   },
+   {
+    "id": "q-clap-names",
+    "test": "Clap the rhythm of the full names of everybody in your house, one clap for each beat of each name.",
+    "note": "\"Ka-tie Mc-Cann\" is four claps; \"Tom Rea\" is two. Say the name as you clap, then try clapping it without saying it. Add friends, pets or your street name if the house is small.",
+    "mins": 2,
+    "cat": "music",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+   },
+   {
+    "id": "q-shelf-three",
+    "test": "Rearrange three things on one shelf until they look right to you.",
+    "note": "Try one tall thing, one wide thing and one small thing, with a little space between each. Move them, step back, and move them again until you stop wanting to. A windowsill or the top of a chest of drawers works just as well.",
+    "mins": 3,
+    "cat": "beauty",
+    "kind": "attention",
+    "area": "home",
+    "trait": "joy"
+   },
+   {
+    "id": "q-music-eyes-shut",
+    "test": "Listen to one piece of music from start to finish with your eyes shut and nothing else going on.",
+    "note": "Pick something without words if you can, like a short piece of classical or film music under five minutes. Sit, press play, close your eyes and stay until the last note. Radio, phone speaker or headphones all work.",
+    "mins": 5,
+    "cat": "music",
+    "kind": "attention",
+    "area": "spirituality",
+    "trait": "calm"
+   },
+   {
+    "id": "q-window-colours",
+    "test": "Look out of the window and name ten different colours you can see.",
+    "note": "Go past the easy ones: not only green, but the dark green of a hedge and the yellow-green of new grass. Say them out loud or write them down. From a room with no window, name ten colours on the objects around you.",
+    "mins": 2,
+    "cat": "beauty",
+    "kind": "attention",
+    "area": "experiences",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-best-light",
+    "test": "Find the spot in your home where the light is best right now, and stand or sit in it for one minute.",
+    "note": "Walk from room to room and look at where the daylight or lamplight falls. Notice what it lands on, like a wall, a chair or the floor. In the evening, a single lamp in a dark room counts.",
+    "mins": 1,
+    "cat": "beauty",
+    "kind": "attention",
+    "area": "emotions",
+    "trait": "joy"
+   },
+   {
+    "id": "q-two-hand-beat",
+    "test": "Tap a steady beat on a table with one hand while the other hand taps twice as fast, for one minute.",
+    "note": "Count \"one, two, three, four\" out loud with the slow hand, and fit two taps into each count with the fast hand. When it feels steady, swap hands. Your knees work if there is no table.",
+    "mins": 2,
+    "cat": "music",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "patience"
+   },
+   {
+    "id": "q-glass-notes",
+    "test": "Pour water into a glass to three different levels, tapping it gently with a spoon each time, and listen to the note change.",
+    "note": "Use a sturdy glass or a mug on a flat table, and tap softly. Listen for whether the note goes higher or lower as the water rises. Line up three glasses if you have them and play a short tune.",
+    "mins": 3,
+    "cat": "music",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-rough-smooth",
+    "test": "Touch five different surfaces in the room and put them in order from roughest to smoothest.",
+    "note": "A wall, a cushion, a book cover, a window and a wooden table all make a good set. Close your eyes while you touch each one. Say the order out loud, then check it again.",
+    "mins": 2,
+    "cat": "beauty",
+    "kind": "attention",
+    "area": "experiences",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-page-new-shelf",
+    "test": "Read one page of a kind of book you never read, such as a cookbook, a bird guide or an instruction manual.",
+    "note": "Take any book in the house that is not your usual kind and open it in the middle. Read the whole page, even the parts that feel slow. If there is no such book, read one page of the instructions for something in the kitchen, or a page from a free library app on your phone.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-acrostic",
+    "test": "Write the word HOME down the side of a page and make a four-line poem where each line starts with one of those letters.",
+    "note": "For example: Hot tea in my blue cup, / Old coat on the hook, / My shoes by the door, / Everybody back by six. The lines do not have to rhyme. Any four-letter word works if you would rather pick your own, and the back of an envelope is plenty.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+   },
+   {
+    "id": "q-new-word",
+    "test": "Find one word you never say, check what it means, and write a sentence of your own that uses it.",
+    "note": "Open a dictionary at any page, or search a word like meander, which means to wander slowly with lots of turns. Your sentence could be: The river meanders past the old mill. Say the sentence out loud once so the word feels like yours.",
+    "mins": 2,
+    "cat": "words",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-copy-sentence",
+    "test": "Copy out by hand, slowly and neatly, one sentence you like from a book in the house.",
+    "note": "Choose any book and look for a sentence that you would like to have written yourself. Write it on a card or a scrap of paper with the book title under it. Keep it somewhere you will see it tomorrow, such as beside the kettle.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "attention",
+    "area": "creativity",
+    "trait": "patience"
+   },
+   {
+    "id": "q-six-word-story",
+    "test": "Write a story of exactly six words about something that happened to you this week.",
+    "note": "Count the words on your fingers as you go. An example: Lost the keys. Found them. Laughed. Write three versions if the first comes quickly, and keep the one you like best.",
+    "mins": 2,
+    "cat": "words",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+   },
+   {
+    "id": "q-describe-object",
+    "test": "Describe one object on the table in three sentences without saying what it is.",
+    "note": "Say its size, what it is made of and what somebody does with it. For a mug: It is about as tall as my hand. It is made of something hard and smooth. People hold it by the side when it is hot. Read it back and check nobody could mistake it for something else.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "attention",
+    "area": "creativity",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-alphabet-food",
+    "test": "Write one food for every letter from A to Z.",
+    "note": "Apple, bread, carrot, and so on down the page. Leave a gap for a hard letter and come back to it at the end. If X beats you, a dictionary or a quick search is allowed. Any theme works as well as food, such as animals or towns.",
+    "mins": 4,
+    "cat": "words",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-shorter-sentence",
+    "test": "Take one long sentence from an email or a letter and rewrite it in half as many words.",
+    "note": "Count the words first, then cut. For example: I just wanted to let you know that I will not be able to come on Friday (18 words) becomes I cannot come on Friday (5 words). Check the short one still says everything the long one did.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-read-aloud",
+    "test": "Read one paragraph of any book out loud, slowly, as if to a room of people.",
+    "note": "Stand up if you can, and pause at every full stop. Read it a second time a little slower than the first. Reading to yourself counts; so does reading to a pet or an empty chair.",
+    "mins": 2,
+    "cat": "words",
+    "kind": "courage",
+    "area": "creativity",
+    "trait": "confidence"
+   },
+   {
+    "id": "q-rhyme-list",
+    "test": "Write ten words that rhyme with light.",
+    "note": "Start with the easy ones like night, bright and kite, then push for the harder ones like height and invite. Go through the alphabet in your head if you get stuck. When you have ten, pick two and make a line that rhymes.",
+    "mins": 2,
+    "cat": "words",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+   },
+   {
+    "id": "q-first-line",
+    "test": "Write the first sentence of a story that starts in your own kitchen.",
+    "note": "Put one real thing from your kitchen in it and one thing that is not usually there. An example: The kettle had just clicked off when the letter slid under the back door. You do not have to write any more than that one sentence.",
+    "mins": 2,
+    "cat": "words",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-five-for-walk",
+    "test": "Write five different words that mean walk, then use the best one in a sentence.",
+    "note": "Stroll, march, wander, stride and tiptoe are all kinds of walking, and each one describes a different way of moving. Say which one fits how you walked into the room today. A thesaurus or a phone search will give you more if you want them.",
+    "mins": 2,
+    "cat": "words",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-lang-colours",
+    "test": "Learn ten colour words in a language you do not speak, and say each one while pointing at something that colour.",
+    "note": "Use a free translation app, a phone search such as colours in Spanish, or a dictionary. Point at the kettle for silver, a book for red, the window frame for white. Say the list once more at the end without looking.",
+    "mins": 4,
+    "cat": "words",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-lang-count",
+    "test": "Count from one to ten out loud in a language you have never counted in.",
+    "note": "Search count to ten in Japanese, or Welsh, or any language you like, and listen to the sound clip if there is one. Count on your fingers as you say each number. Try it once with your eyes shut.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-lang-thanks",
+    "test": "Learn how to say thank you in five languages and write them down.",
+    "note": "A phone search for thank you in French gives merci; do the same for four more, such as Irish, Polish, Italian and Portuguese. Write each one with the name of the language beside it. Pick one to use at home today.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "skill",
+    "area": "relationships",
+    "trait": "kindness"
+   },
+   {
+    "id": "q-lang-kitchen",
+    "test": "Name five things in your kitchen in another language, touching each one as you say it.",
+    "note": "Pick the language first, then look up cup, spoon, table, door and window with a free translation app or a dictionary. Say each word twice. Leave the list by the kettle and test yourself tomorrow.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-lang-morning",
+    "test": "Learn good morning and good night in three languages and say them out loud.",
+    "note": "Search good morning in German, then in Irish, then in one language of your choice. Most search results show how to say it as well as how to write it. Use one of them for real tonight or tomorrow morning.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "skill",
+    "area": "relationships",
+    "trait": "joy"
+   },
+   {
+    "id": "q-lang-days",
+    "test": "Write the seven days of the week in one language you do not speak.",
+    "note": "Use a dictionary or a phone search such as days of the week in Italian. Write them in a column next to the English ones. Look for any that sound alike, like lunedì and Monday, which both come from the moon.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-lang-borrowed",
+    "test": "Find three English words that came from another language, and write where each one came from.",
+    "note": "Search the origin of a word you use at home, such as bungalow, shampoo or kindergarten. Write the word, the language it came from, and what it first meant. A good dictionary shows this in brackets near the start of each entry.",
+    "mins": 4,
+    "cat": "words",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-lang-greek-name",
+    "test": "Write your first name in the Greek alphabet.",
+    "note": "Search the Greek alphabet and find the letter that makes each sound in your name. Some sounds need a close match rather than an exact one, and that is fine. Write it three times until it looks natural.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-times-eleven",
+    "test": "Multiply five two-digit numbers by eleven in your head, then check them on a calculator.",
+    "note": "The method: add the two digits and put the answer in the middle. 32 times 11: 3 plus 2 is 5, so 352. If the middle adds to ten or more, carry one to the front: 57 times 11 is 5, then 12, then 7, so 627. Try 24, 43, 61, 75 and 88.",
+    "mins": 3,
+    "cat": "mind",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "confidence"
+   },
+   {
+    "id": "q-double-halve",
+    "test": "Work out 16 times 25 in your head by halving one number and doubling the other, then do two more.",
+    "note": "16 times 25 becomes 8 times 50, which becomes 4 times 100, which is 400. Keep halving and doubling until the sum is easy. Try 14 times 50 and 32 times 5, and check both on paper.",
+    "mins": 2,
+    "cat": "mind",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "confidence"
+   },
+   {
+    "id": "q-memory-list",
+    "test": "Memorise this list of eight things and say it back two minutes later: milk, rope, lemon, map, candle, sock, drum, key.",
+    "note": "Walk through your house in your head and put one thing in each room: milk on the doorstep, rope on the stairs, a lemon on the bed. To remember, walk the same route again. Write the list down afterwards to check, and try a list of your own tomorrow.",
+    "mins": 4,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "patience"
+   },
+   {
+    "id": "q-words-page",
+    "test": "Guess how many words are on one page of a book, then work it out.",
+    "note": "Write your guess first. Then count the words on three lines, divide by three to get an average line, and multiply by the number of lines on the page. See how close your guess was, and guess again for a different book.",
+    "mins": 3,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-room-steps",
+    "test": "Guess how many of your own footsteps long the room is, then walk it heel to toe and count.",
+    "note": "Write the guess down before you move. Walk with the heel of one foot touching the toes of the other, from one wall to the other. Then guess the width and check that too; the second guess is usually closer.",
+    "mins": 2,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "home",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-logic-set",
+    "test": "Write a logic puzzle about four people and their heights, then solve it.",
+    "note": "A worked example with three: Anna is taller than Ben. Cara is shorter than Ben. Who is shortest? Cara, because Ben is between the two. Now add a fourth person with one more clue, such as Dan is taller than Anna, and write the order from tallest to shortest.",
+    "mins": 4,
+    "cat": "mind",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "patience"
+   },
+   {
+    "id": "q-sevens-down",
+    "test": "Count backwards from 100 in sevens, out loud, as far as you can without a mistake.",
+    "note": "It goes 100, 93, 86, 79. Say each number before you work out the next. Write down where you got to, then check it by counting on in sevens from there back to 100.",
+    "mins": 2,
+    "cat": "mind",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-ten-percent",
+    "test": "Work out ten, five and fifteen per cent of three prices in your head.",
+    "note": "Ten per cent: move the point one place left, so ten per cent of 24 pounds is 2 pounds 40. Five per cent is half of that, 1 pound 20. Fifteen per cent is both added: 3 pounds 60. Try 18 pounds, 60 pounds and 7 pounds 50.",
+    "mins": 3,
+    "cat": "mind",
+    "kind": "skill",
+    "area": "prosperity",
+    "trait": "confidence"
+   },
+   {
+    "id": "q-square-fives",
+    "test": "Square four numbers that end in 5, in your head.",
+    "note": "The method: take the first digit, multiply it by the next number up, then put 25 on the end. 35 squared: 3 times 4 is 12, so 1225. 65 squared: 6 times 7 is 42, so 4225. Try 15, 45, 75 and 95, and check them on a calculator.",
+    "mins": 3,
+    "cat": "mind",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-tray-memory",
+    "test": "Put ten small things on a table, look at them for thirty seconds, cover them with a tea towel, and write down all ten.",
+    "note": "Use what is to hand: a spoon, a key, a coin, a pen, a peg. Look at each one on purpose and say its name in your head. If you get all ten, add two more and try again.",
+    "mins": 3,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "patience"
+   },
+   {
+    "id": "q-next-number",
+    "test": "Find the next number in 2, 6, 12, 20, 30, and then write a pattern of your own.",
+    "note": "Look at the gaps: 4, 6, 8, 10. The next gap is 12, so the answer is 42. For your own, start with any rule, such as add 3 then double, and write five numbers. Check tomorrow whether you can still spot your own rule.",
+    "mins": 3,
+    "cat": "mind",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-one-minute-guess",
+    "test": "Close your eyes, start a phone stopwatch, and stop it when you think exactly one minute has passed.",
+    "note": "Do not count seconds out loud; just wait. Look at how far off you were, early or late. Try once more and see whether the second guess is closer.",
+    "mins": 2,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "patience"
+   },
+   {
+    "id": "q-how-works",
+    "test": "Pick the nearest thing in the room with a switch or a button and look up how it works.",
+    "note": "It might be a kettle, a light switch or a doorbell. Search how does a kettle know when to switch off, and read until you can explain it in two sentences. Say those two sentences out loud when you are done.",
+    "mins": 4,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-word-history",
+    "test": "Look up where the word breakfast comes from, then look up one more word you use every day.",
+    "note": "Breakfast is two words joined: breaking the fast of the night. A phone search for the origin of a word, or the small print at the start of a dictionary entry, will tell you. Good ones to try next: window, cupboard or goodbye.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-cupboard-origin",
+    "test": "Take one tin or packet from the cupboard, find where it was grown or packed, and find that place on a map.",
+    "note": "Read the small print on the label for a country or a town. Put it into the map on your phone and see how far it is from your house. If the label only says the country, look up which part of that country grows the most of it.",
+    "mins": 3,
+    "cat": "food",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-random-entry",
+    "test": "Open Wikipedia on your phone, tap Random article three times, and read the first section of the one you like best.",
+    "note": "The Random article link is in the menu. Read until you can say one thing you did not know before. No phone? Open a dictionary or an encyclopaedia at the page number that matches today's date and read the first full entry.",
+    "mins": 4,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-coin-look",
+    "test": "Look at one coin closely, find the year on it and the picture on the back, and look up what the picture means.",
+    "note": "Use a magnifying glass or your phone camera zoomed in if the writing is small. Search the coin value and the picture, such as 50p coin designs. Write down the year and one thing you found out.",
+    "mins": 3,
+    "cat": "money",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-rating-plate",
+    "test": "Find the small printed label on one appliance and look up what one of its numbers means.",
+    "note": "Most kettles, toasters and hair dryers have a label underneath or on the back with a number followed by W. Search what does the wattage on a kettle mean. Only look at the label; leave it switched off and cool while you do.",
+    "mins": 3,
+    "cat": "home",
+    "kind": "attention",
+    "area": "home",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-on-this-day",
+    "test": "Look up one thing that happened on today's date in history and write it down in one sentence.",
+    "note": "Search on this day and today's date. Read down the list until one thing makes you want to know more, then read a little about that one. Write the year and what happened.",
+    "mins": 3,
+    "cat": "classic",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-who-invented",
+    "test": "Look up who invented one ordinary thing in the room, such as the zip, the paper clip or the tin opener.",
+    "note": "Search who invented the zip and read the short story of how it came about. Write down the name and the year. Look at the thing again once you know, and see whether it looks different to you.",
+    "mins": 3,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-made-in",
+    "test": "Find the Made in label on three things in the room and write down each country.",
+    "note": "Look underneath, on the back or on the sewn label. Write the three countries down and put them in order of how far away they are, using a map on your phone. If nothing has a label, try the box it came in.",
+    "mins": 3,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-breath-four-six",
+    "test": "Breathe in for a count of four and out for a count of six, ten times.",
+    "note": "Sit with both feet flat on the floor. Count slowly in your head, and let the out-breath be gentle rather than forced. If you feel dizzy at any point, stop and breathe normally.",
+    "mins": 2,
+    "cat": "calm",
+    "kind": "attention",
+    "area": "health",
+    "trait": "calm"
+   },
+   {
+    "id": "q-five-sounds",
+    "test": "Sit still and write down five sounds you can hear, from the furthest away to the nearest.",
+    "note": "Close your eyes for a minute first. It might be a car outside, a fridge humming, a clock, a bird, your own breath. Once you have five, keep listening for a sixth you missed.",
+    "mins": 2,
+    "cat": "calm",
+    "kind": "attention",
+    "area": "emotions",
+    "trait": "calm"
+   },
+   {
+    "id": "q-tomorrow-one",
+    "test": "Write tomorrow's one important thing on a piece of paper and put it where you will see it first in the morning.",
+    "note": "Only one, and make it a real action, such as ring the dentist before ten, not sort life out. Put the paper on your phone, your shoes or the kettle. When the one thing is done tomorrow, bin the paper.",
+    "mins": 1,
+    "cat": "calm",
+    "kind": "attention",
+    "area": "emotions",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-sit-three",
+    "test": "Set a timer for three minutes and sit with your feet flat, hands on your knees and your eyes resting on one spot on the floor.",
+    "note": "Pick a spot about two steps in front of you, such as a mark on the carpet. Each time your mind wanders off, notice it and bring your eyes and your thoughts back to the spot. Coming back many times is doing it right.",
+    "mins": 3,
+    "cat": "calm",
+    "kind": "attention",
+    "area": "spirituality",
+    "trait": "patience"
+   },
+   {
+    "id": "q-slow-water",
+    "test": "Drink one glass of water in ten slow sips, putting the glass down between each one.",
+    "note": "Notice how cold it is, how it feels in your mouth, and the sound of the glass on the table. Count the sips on your fingers. A cup of tea done the same way counts too.",
+    "mins": 3,
+    "cat": "calm",
+    "kind": "attention",
+    "area": "health",
+    "trait": "calm"
+   },
+   {
+    "id": "q-three-went-right",
+    "test": "Write down three things that went right today, one line each.",
+    "note": "Small is fine: the bus was on time, the soup was good, a friend replied. Write them, do not only think them. Read the three back once before you put the pen down.",
+    "mins": 2,
+    "cat": "calm",
+    "kind": "attention",
+    "area": "emotions",
+    "trait": "joy"
+   },
+   {
+    "id": "q-worry-step",
+    "test": "Write the thing that is on your mind in one sentence, and under it write the one next step you could take.",
+    "note": "For example: I have not replied to the school letter. Next step: read it again after tea and write the reply. The step should be small enough to do in a day. Keep the page and tick it when the step is done.",
+    "mins": 3,
+    "cat": "calm",
+    "kind": "attention",
+    "area": "emotions",
+    "trait": "calm"
+   },
+   {
+    "id": "q-window-count",
+    "test": "Look out of a window for two minutes and count everything that moves.",
+    "note": "Birds, cars, leaves, clouds, a person walking past: each one is one. Keep your eyes on the view and count on your fingers. If nothing moves, count the colours you can see instead.",
+    "mins": 2,
+    "cat": "calm",
+    "kind": "attention",
+    "area": "emotions",
+    "trait": "patience"
+   },
+   {
+    "id": "q-slow-cup",
+    "test": "Wash one cup by hand as slowly and carefully as you can.",
+    "note": "Feel the warmth of the water, the weight of the cup, the shape of the handle. Rinse it, dry it and put it away, all at the same slow pace. If you already wash up every day, doing it this slowly on purpose counts.",
+    "mins": 2,
+    "cat": "calm",
+    "kind": "attention",
+    "area": "home",
+    "trait": "patience"
+   },
+   {
+    "id": "q-phone-other-room",
+    "test": "Put your phone in another room for five minutes and stay sitting where you are.",
+    "note": "Set a kitchen timer or watch the clock on the wall so you know when the five minutes is up. Look around the room, stretch your hands, or just sit. When you get the phone back, notice whether anything important happened.",
+    "mins": 5,
+    "cat": "calm",
+    "kind": "attention",
+    "area": "emotions",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-putoff-question",
+    "test": "Write down one question you have been putting off asking, who you will ask, and the day you will ask it.",
+    "note": "It might be asking the doctor's receptionist about a test result, or asking a neighbour whether the hedge is theirs. Write the question in the exact words you will use. Put the day in your phone calendar before you put the pen down.",
+    "mins": 3,
+    "cat": "nerve",
+    "kind": "courage",
+    "area": "emotions",
+    "trait": "courage"
+   },
+   {
+    "id": "q-bill-line",
+    "test": "Pick one bill, read one line on it, and check it matches what you expected to pay.",
+    "note": "An electricity, phone or bank statement all work, paper or in the app. Choose one line, such as the monthly charge, and compare it with last month's. If it is different, write down the question to ask them.",
+    "mins": 5,
+    "cat": "money",
+    "kind": "attention",
+    "area": "prosperity",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-spent-three",
+    "test": "Write down three things you spent money on this week, and beside each one write glad or not sure.",
+    "note": "Your bank app or a receipt in your pocket will remind you. For example: coffee on Tuesday, glad; the second magazine, not sure. There are no wrong answers; this is only noticing.",
+    "mins": 3,
+    "cat": "money",
+    "kind": "attention",
+    "area": "prosperity",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-mirror-sentence",
+    "test": "Say the first sentence of a hard conversation out loud to the mirror, three times.",
+    "note": "Write the sentence first. For example: I would like to talk about how we share the jobs at home. Say it slower each time and look at your own eyes while you say it.",
+    "mins": 2,
+    "cat": "nerve",
+    "kind": "courage",
+    "area": "relationships",
+    "trait": "courage"
+   },
+   {
+    "id": "q-polite-no",
+    "test": "Write one polite sentence that says no to something you have been asked to do, and say it out loud twice.",
+    "note": "For example: Thank you for asking, but I cannot help this Saturday. Keep it short, with no long list of reasons. Whether you use it or not, you now have the words ready.",
+    "mins": 2,
+    "cat": "nerve",
+    "kind": "courage",
+    "area": "relationships",
+    "trait": "confidence"
+   },
+   {
+    "id": "q-renewal-date",
+    "test": "Find the renewal date of one yearly payment and put a reminder in your phone a month before it.",
+    "note": "Car insurance, the TV licence and home insurance are common ones; the date is on the letter or email. Set the reminder with a note such as compare prices. A paper calendar on the fridge works just as well.",
+    "mins": 4,
+    "cat": "deal",
+    "kind": "attention",
+    "area": "prosperity",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-ask-for-help",
+    "test": "Write a one-line message asking somebody for help with one thing.",
+    "note": "For example: Could you show me how to set up the printer on Saturday? Name the thing and a time. Send it now, or save it and send it in the morning.",
+    "mins": 2,
+    "cat": "nerve",
+    "kind": "courage",
+    "area": "relationships",
+    "trait": "courage"
+   },
+   {
+    "id": "q-did-well",
+    "test": "Write down one thing you did well this week that you have not told anybody.",
+    "note": "It could be finishing a job you had put off, staying patient in a queue, or cooking something new. Write what you did and one sentence on how you did it. Read it out loud once.",
+    "mins": 2,
+    "cat": "nerve",
+    "kind": "courage",
+    "area": "emotions",
+    "trait": "confidence"
+   },
+   {
+    "id": "q-sorry-message",
+    "test": "Send one short message saying sorry for something small you have not yet said sorry for.",
+    "note": "Name the thing and stop there, for example: \"Sorry I was short with you on the phone on Monday.\" No long reasons, no but. If there is nothing to say sorry for this week, send somebody a message saying you were glad of something they did.",
+    "mins": 2,
+    "cat": "speak",
+    "kind": "courage",
+    "area": "relationships",
+    "trait": "courage"
+   },
+   {
+    "id": "q-name-feeling",
+    "test": "Write down, in one word, how you feel right now, and one word for what would help.",
+    "note": "Tired and a glass of water. Restless and a walk round the block. Cheerful and a song. The two words take ten seconds; looking for the true one is the exercise. A scrap of paper or the notes on your phone.",
+    "mins": 1,
+    "cat": "calm",
+    "kind": "attention",
+    "area": "emotions",
+    "trait": "calm"
+   },
+   {
+    "id": "q-good-news-share",
+    "test": "Tell one person one piece of good news from your own week, by message or out loud.",
+    "note": "Small is fine: the tomatoes came up, you ran further, the car passed its test. Good news lifts the person hearing it too. If nobody is around, send it to the friend who always asks how you are.",
+    "mins": 2,
+    "cat": "speak",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "joy"
+   },
+   {
+    "id": "q-sing-chorus",
+    "test": "Sing the chorus of one song you know, out loud, all the way through, twice.",
+    "note": "Any song: a hymn, a football song, a song from school. The first time is to remember the words, the second time is to sing it properly, a little louder. In the kitchen with the tap running counts.",
+    "mins": 2,
+    "cat": "music",
+    "kind": "courage",
+    "area": "creativity",
+    "trait": "joy"
+   },
+   {
+    "id": "q-question-list",
+    "test": "Write down three questions you would like to ask the oldest person you know.",
+    "note": "For example: what was your first wage, what did your house look like, what did you do on a Saturday. Keep the list in your phone. You do not have to ask them today; having them ready is the step.",
+    "mins": 3,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "relationships",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-hard-first",
+    "test": "Pick the one job on today's list you least want to do, and do the first two minutes of it.",
+    "note": "Set a timer for two minutes. Open the letter, find the form, fill the first line of the email. When the timer goes, you are allowed to stop, and often you will not want to. If today's list is empty, do two minutes of tomorrow's worst job.",
+    "mins": 2,
+    "cat": "calm",
+    "kind": "courage",
+    "area": "emotions",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-plant-water",
+    "test": "Check every plant in the house with a finger in the soil, and water only the ones that are dry.",
+    "note": "Push a finger in up to the first knuckle. Damp: leave it. Dry: water slowly until it just starts to come out of the bottom. No house plants? Give fresh water to a pet, a bird bath or a vase of flowers instead.",
+    "mins": 3,
+    "cat": "home",
+    "kind": "kindness",
+    "area": "home",
+    "trait": "patience"
+   },
+   {
+    "id": "q-stairs-twice",
+    "test": "Walk up and down the stairs three times at a steady pace, holding the rail.",
+    "note": "Not a race: steady steps, whole foot on each stair. Stop if anything hurts. No stairs at home? Step up onto the bottom step or a sturdy low step and down again, twenty times.",
+    "mins": 2,
+    "cat": "fit",
+    "kind": "skill",
+    "area": "health",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-guess-weight",
+    "test": "Guess the weight of three things in the kitchen, then check each one on the label or on scales.",
+    "note": "A bag of flour, a tin of beans, a full kettle. Write the three guesses first. Most packets print the weight; a full litre of water weighs one kilogram, so a kettle can be worked out. Guess a fourth thing now that your hand knows more.",
+    "mins": 3,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-wind-down-table",
+    "test": "Set out everything you need for tomorrow morning in one place before you go to bed.",
+    "note": "Keys, bag, the letter to post, the lunchbox, tomorrow's clothes on the chair. Then there is less to think about in the morning. If you already do this every night, do it tonight on purpose and count it.",
+    "mins": 4,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-message-neighbour",
+    "test": "Write a short note or message to a neighbour offering one small, real thing.",
+    "note": "For example: \"We are going to the shop on Saturday morning, can we get you anything?\" or \"Our ladder is free if you ever need it.\" Push the note through the door or send it. A neighbour you only wave to is a good choice.",
+    "mins": 3,
+    "cat": "belong",
+    "kind": "kindness",
+    "area": "community",
+    "trait": "kindness"
+   },
+   {
+    "id": "q-proverb-meaning",
+    "test": "Look up one saying in Irish or Ulster Scots and write down what it means word for word.",
+    "note": "Search Irish proverbs or Ulster Scots sayings and pick one short one. Write the words, what each word means, and what the whole thing is saying. Read it out loud once, trying the sounds.",
+    "mins": 4,
+    "cat": "words",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-sketch-window",
+    "test": "Sketch the view from one window in three minutes, using only straight lines.",
+    "note": "Roofs, walls, the fence, the road, the edge of a tree: straight lines only, no shading. Set a timer so it stays a sketch. A pen and the back of an envelope is enough. From a room with no view, sketch the window frame itself.",
+    "mins": 3,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "patience"
+   },
+   {
+    "id": "q-price-per-100",
+    "test": "Take two packets of the same food in your cupboard and work out which one costs less per 100 grams.",
+    "note": "Look at the price you paid, or the receipt, and the weight on the packet. Price divided by weight, times 100. For example, 1 pound 50 for 500 grams is 30p per 100 grams. Many shop shelf labels already print this small at the side; next time you shop, look for it.",
+    "mins": 4,
+    "cat": "money",
+    "kind": "attention",
+    "area": "prosperity",
+    "trait": "discipline"
+   },
+   {
+    "id": "q-ask-for-feedback",
+    "test": "Send one person a message asking for one thing you could do better at work, at home or in a hobby.",
+    "note": "Make it easy to answer: \"What is one thing I could do better when we cook together?\" Thank them for whatever comes back, and do not argue with it today. Asking is the part that takes nerve.",
+    "mins": 2,
+    "cat": "nerve",
+    "kind": "courage",
+    "area": "emotions",
+    "trait": "courage"
+   },
+   {
+    "id": "q-toe-touch-slow",
+    "test": "Bend slowly towards your toes with soft knees and hang there for five slow breaths, then roll up one bone at a time.",
+    "note": "Let your head and arms hang heavy. Breathe out as you go down. Roll up slowly with your head last. Stop if anything hurts. Seated version: sit on the edge of a chair and let your chest fold towards your knees.",
+    "mins": 2,
+    "cat": "fit",
+    "kind": "skill",
+    "area": "health",
+    "trait": "calm"
+   },
+   {
+    "id": "q-map-memory",
+    "test": "Draw the route from your front door to the nearest shop from memory, and mark three things you pass.",
+    "note": "Arrows for turns, boxes for buildings. A post box, a tree, a lamp post, a gate: three things you would see. Next time you walk it, check which ones you remembered right.",
+    "mins": 3,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity"
+   },
+   {
+    "id": "q-letter-to-self",
+    "test": "Write three lines to yourself one year from now: where you are, what you are working on, and one hope.",
+    "note": "Date it, fold it, and put it somewhere you will find it next year: the back of a drawer or an email scheduled to send to yourself. Honest and short is best.",
+    "mins": 3,
+    "cat": "words",
+    "kind": "attention",
+    "area": "spirituality",
+    "trait": "patience"
+   },
+   {
+    "id": "q-magic-pencil",
+    "test": "Make a pencil look like it is made of rubber by holding it loosely and wobbling it.",
+    "note": "Hold the pencil between thumb and first finger about a third of the way along. Move your hand up and down a little, quickly, and let the pencil rock. From a step away it bends. Try a pen or a spoon handle if there is no pencil.",
+    "mins": 2,
+    "cat": "magic",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+   },
+   {
+    "id": "q-open-window",
+    "test": "Open a window for three minutes, stand beside it, and take ten slow breaths of the outside air.",
+    "note": "Wrap up if it is cold; three minutes is all. Notice the smell of the air and the temperature on your face. If the window will not open, stand at the open front door instead.",
+    "mins": 3,
+    "cat": "calm",
+    "kind": "attention",
+    "area": "health",
+    "trait": "calm"
+   },
+   {
+    "id": "q-praise-child",
+    "test": "Tell a child in your life one thing they did well today, and name exactly what it was.",
+    "note": "\"You kept trying with that zip and you got it\" rather than \"good boy\" or \"clever girl\". Naming the effort is what they remember. No child at home? Send the same kind of message to a young relative's parent to pass on.",
+    "mins": 1,
+    "cat": "care",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "kindness"
+   },
+   {
+    "id": "q-clean-screen",
+    "test": "Clean the screen and case of your phone, and the keyboard or remote you use most.",
+    "note": "A soft cloth, very slightly damp, for the screen; a dry one after. Tip the keyboard upside down and tap it gently. Wipe the remote buttons. Switch things off first.",
+    "mins": 3,
+    "cat": "order",
+    "kind": "skill",
+    "area": "home",
+    "trait": "discipline"
+   }
+  ],
+  "extra": [
+   {
+    "id": "x-letter-year",
+    "test": "Write a real letter, at least one full page, to one person you have not spoken to in over a year.",
+    "note": "Tell them three things: what you remember doing with them, what your life looks like now, and one question you would like them to answer. Post it if you have a stamp and an address. If not, type the same page as a long message and send it tonight.",
+    "mins": 20,
+    "cat": "words",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "courage"
+   },
+   {
+    "id": "x-childhood-call",
+    "test": "Ring a grandparent or an older neighbour and ask them three questions about when they were a child.",
+    "note": "Good questions: what did you play in the street, what did your house look like, what was your first job. Write the questions down before you ring and jot short notes while they talk. If there is nobody to ring tonight, ask an older person in your own house the same three questions over a cup of tea.",
+    "mins": 20,
+    "cat": "speak",
+    "kind": "attention",
+    "area": "relationships",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-family-recipe",
+    "test": "Phone an older relative and write down one recipe they have made for years, every step, in their words.",
+    "note": "Ask the questions a recipe card leaves out: how do you know when it is done, what did your own mother do differently. Soda bread, stew or a Christmas cake are good ones to ask for. If nobody is free to ring, write down a dish you remember from a relative's kitchen as best you can, and send it to them to correct.",
+    "mins": 20,
+    "cat": "food",
+    "kind": "attention",
+    "area": "relationships",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-thank-teacher",
+    "test": "Write a thank-you message to a teacher who helped you, naming one thing they did that you still remember.",
+    "note": "Be exact: \"You let me stay in at lunch to finish my drawing\" says more than \"You were great\". Send it to the school by email or post, addressed to them by name; schools pass these on. A sports coach, a music teacher or a youth leader counts just the same.",
+    "mins": 15,
+    "cat": "words",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "kindness"
+   },
+   {
+    "id": "x-how-they-met",
+    "test": "Ask a parent, grandparent or older relative how they met the person they married or lived with, and write the story down.",
+    "note": "Ask where it was, what they were wearing, and what they thought the first time. Write it as a short story of half a page, with their words in it. If there is nobody to ask tonight, write down the story of how you met your oldest friend, while you still remember the details.",
+    "mins": 20,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "relationships",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-photo-story",
+    "test": "Take one old family photograph to an older relative, in person or on a video call, and write down who is in it and what was happening.",
+    "note": "Write the names and the year lightly in pencil on the back, or in a note on your phone beside a photo of it. Ask who took the picture and what happened just after. If nobody is free, pick one photograph and write down everything you already know about it, with a question mark beside what you are unsure of.",
+    "mins": 15,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "relationships",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-family-tree",
+    "test": "Draw your family tree back to your great-grandparents, and ring one relative to fill in the gaps.",
+    "note": "Put yourself at the bottom of a sheet of paper and work upwards: parents, grandparents, great-grandparents. Leave blank boxes for what you do not know, then ask one relative for the missing first names and where each person lived. Whatever you do not find tonight stays as a blank box to fill another day.",
+    "mins": 20,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "relationships",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-letter-later",
+    "test": "Write a letter to a child in your family for them to open when they are grown up, and seal it in an envelope.",
+    "note": "Tell them what they are like right now, what they love, and one funny thing they said this year. Write the date and \"open when you are eighteen\" on the front and put it somewhere safe. If there is no child in the family, write the same kind of letter to your own future self, to open in five years.",
+    "mins": 20,
+    "cat": "words",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "kindness"
+   },
+   {
+    "id": "x-record-story",
+    "test": "Ask an older relative to tell you one story from their life and record it on your phone, with their permission.",
+    "note": "Start with a clear question: \"Tell me about the day you started your first job\" or \"What was the worst snow you remember?\" Let them talk without interrupting, and save the file with their name and today's date. If you cannot reach anybody, record yourself telling a story an older relative used to tell you.",
+    "mins": 15,
+    "cat": "speak",
+    "kind": "attention",
+    "area": "relationships",
+    "trait": "patience"
+   },
+   {
+    "id": "x-old-friend-plan",
+    "test": "Ring an old friend you have not seen in a long time and agree a day and a place to meet.",
+    "note": "A free place is fine: a walk along the shore, a park bench, one of your kitchens. Put the date in your phone before you hang up so it is real. If a call is not possible tonight, send a message with two dates to choose from, not \"we should meet up sometime\".",
+    "mins": 10,
+    "cat": "speak",
+    "kind": "courage",
+    "area": "relationships",
+    "trait": "courage"
+   },
+   {
+    "id": "x-cook-dal",
+    "test": "Cook a pot of Indian dal from lentils, onion, a tin of tomatoes and whatever spices are in the cupboard.",
+    "note": "Fry a chopped onion until soft, add a spoon of curry powder or cumin, then a cup of red lentils, the tin of tomatoes and two cups of water, and simmer about fifteen minutes, stirring, until thick. No lentils in the cupboard? Use a tin of chickpeas or beans and simmer for ten minutes. Children cook with a grown-up at the cooker.",
+    "mins": 20,
+    "cat": "food",
+    "kind": "skill",
+    "area": "experiences",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-cook-shakshuka",
+    "test": "Cook shakshuka, eggs gently cooked in a spiced tomato sauce, a dish eaten across North Africa and the Middle East.",
+    "note": "Soften an onion in a frying pan, add a tin of tomatoes, a pinch of cumin or paprika, salt and pepper, and let it bubble for five minutes. Make two hollows with a spoon, crack an egg into each, cover with a lid or a plate, and cook until the whites are set. No spices? It still works with just salt, pepper and the tomatoes.",
+    "mins": 20,
+    "cat": "food",
+    "kind": "skill",
+    "area": "experiences",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-cook-tortilla",
+    "test": "Cook a Spanish tortilla, a thick potato and egg cake, using potatoes, an onion and four eggs.",
+    "note": "Slice two potatoes and an onion thinly and cook them slowly in oil in a covered pan until soft, about ten minutes. Beat four eggs with salt, stir the potatoes in, pour it all back into the pan and cook gently until nearly set, then finish under the grill. No onion is fine; in Spain some families never use one.",
+    "mins": 20,
+    "cat": "food",
+    "kind": "skill",
+    "area": "experiences",
+    "trait": "patience"
+   },
+   {
+    "id": "x-cook-rice-peas",
+    "test": "Cook Jamaican rice and peas using rice, a tin of kidney beans, and thyme or mixed herbs.",
+    "note": "In Jamaica the \"peas\" are beans. Put a cup of rice, the drained beans, a pinch of thyme, salt and two cups of water in a pot, bring to the boil, then cover and cook on low for fifteen minutes. The usual recipe adds coconut milk; if you have none, a small piece of butter works well.",
+    "mins": 20,
+    "cat": "food",
+    "kind": "skill",
+    "area": "experiences",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-cook-ful",
+    "test": "Make ful medames, the mashed bean breakfast eaten in Egypt, from a tin of beans, garlic, lemon and oil.",
+    "note": "Warm a drained tin of broad beans in a pan with a splash of water, then mash roughly with a fork. Stir in crushed garlic, a squeeze of lemon, a spoon of olive oil, salt and a pinch of cumin if you have it. No broad beans? Butter beans or chickpeas work; eat it with toast or flatbread.",
+    "mins": 15,
+    "cat": "food",
+    "kind": "skill",
+    "area": "experiences",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-cook-placki",
+    "test": "Cook Polish placki ziemniaczane, crisp potato pancakes, from grated potato, onion, one egg and a spoon of flour.",
+    "note": "Grate two potatoes and a small onion, squeeze out the water in a clean tea towel, then mix in the egg, the flour and salt. Fry spoonfuls in a little oil, flattening each one, for about three minutes a side until golden. Grating is the careful part, so go slowly near the end of each potato. If you know somebody from Poland, ask them how their family eats them.",
+    "mins": 20,
+    "cat": "food",
+    "kind": "skill",
+    "area": "experiences",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-cook-gyeranbap",
+    "test": "Make gyeran-bap, a Korean egg rice, from rice, a fried egg, soy sauce and butter.",
+    "note": "Put a bowl of hot rice down (leftover rice heated through is ideal), add a small piece of butter and a fried egg cooked how you like it, then a teaspoon of soy sauce. Mix it all together with a spoon and eat it straight away. No soy sauce? A pinch of salt and pepper still makes a good bowl.",
+    "mins": 15,
+    "cat": "food",
+    "kind": "skill",
+    "area": "experiences",
+    "trait": "joy"
+   },
+   {
+    "id": "x-cook-crepes",
+    "test": "Make French crêpes, very thin pancakes, from one egg, flour and milk, and eat them the way people in Brittany do.",
+    "note": "Whisk one egg, 100 grams of flour and about 250 millilitres of milk until smooth and runny like cream. Pour a thin layer into a hot buttered pan, tilt it to cover the base, and turn after a minute. In Brittany, in north-west France, savoury ones are made with buckwheat flour and filled with ham, egg or cheese; use plain flour and whatever you have.",
+    "mins": 20,
+    "cat": "food",
+    "kind": "skill",
+    "area": "experiences",
+    "trait": "joy"
+   },
+   {
+    "id": "x-potato-story",
+    "test": "Find out where the potato first came from and how it reached Ireland, and tell somebody in three sentences.",
+    "note": "Look it up online or in an encyclopedia on the shelf: start with the mountains of South America and follow it across the sea. Then peel or wash one potato for tomorrow while you tell the story. If there is nobody to tell, write the three sentences on a card and stick it inside a kitchen cupboard door.",
+    "mins": 15,
+    "cat": "food",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-tea-story",
+    "test": "Read the packet of tea or coffee in your cupboard, find the country it was grown in on a map, and read how it is picked there.",
+    "note": "Packets often name a country or region, such as Kenya, Assam in India, or Colombia. Find it on a map on your phone or in an atlas, then look up how the leaves or beans are picked and dried there. If the packet does not say, pick Kenya: a large share of the tea drunk in Britain and Ireland is grown there.",
+    "mins": 15,
+    "cat": "food",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-cassiopeia",
+    "test": "Find the W shape of Cassiopeia from a window or your doorstep after dark.",
+    "note": "From Northern Ireland, Cassiopeia is above the horizon every clear night of the year, on the opposite side of the North Star from the Plough. Turn off the lights in the room and give your eyes ten minutes to get used to the dark. If it is cloudy, open the free website Stellarium Web on your phone, set your town, and find it on the screen instead.",
+    "mins": 15,
+    "cat": "sky",
+    "kind": "attention",
+    "area": "experiences",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-three-constellations",
+    "test": "Use a free star map to find three constellations above your house tonight, and then find at least one of them in the real sky.",
+    "note": "Open Stellarium Web on your phone and set your location. In summer and autumn evenings look for the Summer Triangle of three bright stars; in winter look for Orion's belt of three stars in a row; the W of Cassiopeia is there all year. On a cloudy night, draw the three shapes on paper from the screen so you know them for the next clear night.",
+    "mins": 20,
+    "cat": "sky",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-sunset-whole",
+    "test": "Watch the sunset from the moment the sun touches the horizon until ten minutes after it has gone.",
+    "note": "Look up tonight's sunset time and be at a west-facing window, doorstep or open spot five minutes before it. Keep your phone in your pocket and notice how the colours change. On a grey evening, watch the sky get darker for fifteen minutes from a window and write down each colour you see.",
+    "mins": 20,
+    "cat": "sky",
+    "kind": "attention",
+    "area": "experiences",
+    "trait": "calm"
+   },
+   {
+    "id": "x-moon-phase",
+    "test": "Find out tonight's phase of the moon, then show why the moon changes shape using a lamp and an orange.",
+    "note": "Look up the phase online. In a dark room, the lamp is the sun and the orange is the moon: hold the orange at arm's length and turn slowly on the spot, watching the lit part grow and shrink. If the moon is up, look at it from a window and match it to what the orange showed you.",
+    "mins": 15,
+    "cat": "sky",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-street-trees",
+    "test": "Name five different trees on your street or in the nearest park.",
+    "note": "Take a clear photo of a leaf and of the bark of each tree, then check them with a free app such as Seek or the Woodland Trust's tree guide online. Write the five names down with the house or lamp post each tree is next to. Staying in? Use photos of trees you have already taken, or name the trees you can see from a window.",
+    "mins": 20,
+    "cat": "wild",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity",
+    "ctx": "out"
+   },
+   {
+    "id": "x-street-birds",
+    "test": "Name five different birds that live on or near your street.",
+    "note": "Stand at an open door or window, or walk slowly to the end of the street, and use the free Merlin Bird ID app, which can name birds from their song. Blackbirds, robins, starlings, jackdaws and blue tits are common in Northern Ireland towns. On a wet evening, look up those five on the RSPB website and learn to tell them apart by sight.",
+    "mins": 20,
+    "cat": "wild",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-space-station",
+    "test": "Find out when the International Space Station next passes over your town, and if it is tonight, watch it go over.",
+    "note": "Search NASA's free Spot the Station website for Belfast or the nearest large town. It looks like a bright, steady light moving across the sky with no flashing, and a pass lasts a few minutes. If the next pass is another night, put an alarm in your phone for it, then read about who is living on board right now.",
+    "mins": 15,
+    "cat": "sky",
+    "kind": "attention",
+    "area": "experiences",
+    "trait": "joy"
+   },
+   {
+    "id": "x-name-clouds",
+    "test": "Name every type of cloud in the sky right now using the Met Office cloud guide.",
+    "note": "The free Met Office website has pictures of each type: high, thin wisps are cirrus; flat grey sheets are stratus; heaped white ones are cumulus. Look from a window, match each cloud to a picture, and sketch the ones you find. On a clear blue evening, learn the ten main types from the guide and test yourself tomorrow.",
+    "mins": 15,
+    "cat": "sky",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-moon-map",
+    "test": "Draw the moon's dark patches from memory, then check them against a moon map and find where Apollo 11 landed.",
+    "note": "The dark patches are called seas, though they hold no water. Find a moon map online and look for the Sea of Tranquillity, where people first stood on the moon in 1969. If the moon is up tonight, look at it from a window and find the same patch with your own eyes.",
+    "mins": 15,
+    "cat": "sky",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-listen-dusk",
+    "test": "Stand at an open window or door at dusk for ten minutes and write down every sound you hear, then look up one you cannot name.",
+    "note": "Number them as they come: a car door, a blackbird, the wind in a hedge, a dog two gardens away. Most evenings bring more than twenty. If a bird call puzzles you, play it into a free app such as Merlin Bird ID, or describe it in words and search the RSPB website.",
+    "mins": 15,
+    "cat": "wild",
+    "kind": "attention",
+    "area": "experiences",
+    "trait": "calm"
+   },
+   {
+    "id": "x-sit-new-spot",
+    "test": "Go and sit for ten minutes somewhere in your town where you have never sat before.",
+    "note": "A bench outside the library, the steps of the town hall, a wall by the river, the corner of the park you always walk past. Watch what happens there, and write down three things you noticed that you never knew went on. On a rainy evening, sit for ten minutes in a room or chair at home you never use, facing a different way.",
+    "mins": 15,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "community",
+    "trait": "calm",
+    "ctx": "out"
+   },
+   {
+    "id": "x-street-built",
+    "test": "Find out roughly when your street was built.",
+    "note": "The free PRONI Historical Maps viewer online lets you look at your area on old maps from the 1830s onwards; see which map your street first appears on. Look out for date stones on the houses, or ask the neighbour who has lived there longest. All of the map work can be done from the sofa.",
+    "mins": 20,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-walk-driven-road",
+    "test": "Walk a stretch of road you have only ever driven or been driven along, and find three things you never saw from a car.",
+    "note": "Ten minutes out and ten back is plenty: a gate with a name on it, an old post box, a garden someone clearly loves. Children go with a grown-up. If you are staying in, open Street View on that road and go along it slowly, one click at a time.",
+    "mins": 20,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity",
+    "ctx": "out"
+   },
+   {
+    "id": "x-read-plaques",
+    "test": "Read every plaque, date stone and inscription on one old building in your town.",
+    "note": "Churches, banks, schools and town halls often have them near the door or high on the wall. Photograph each one, then find out one fact about a name or date you read. At home, open the Ulster History Circle website, which puts up blue plaques across Northern Ireland, and read about the plaque nearest to you.",
+    "mins": 20,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity",
+    "ctx": "out"
+   },
+   {
+    "id": "x-oldest-mile",
+    "test": "Find the oldest thing within a mile of your home.",
+    "note": "It might be a churchyard stone, a bridge, a standing stone, a ringfort or a very old tree. The free Historic Environment Map Viewer from the Department for Communities shows recorded old sites on a map, so you can start from home. If it is close and the evening is dry, walk to it and look.",
+    "mins": 20,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-town-name",
+    "test": "Find out what the name of your town means and which language it came from.",
+    "note": "Most place names in Northern Ireland come from Irish, and some from Scots or English. The free PlaceNamesNI website gives the meaning and the old spellings: Belfast, for example, comes from Béal Feirste, the mouth of the sandbank ford. Then look up the name of your townland or street the same way.",
+    "mins": 15,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-named-after",
+    "test": "Find three streets, buildings or parks in your town named after a person, and find out who each person was.",
+    "note": "Look at a map of your town on your phone and pick out names like a surname followed by Street, Avenue or Park. Search each name with your town and write one line about each person. You can do the whole thing from home, and walk past one of them tomorrow.",
+    "mins": 20,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-look-above-shops",
+    "test": "Walk your main street looking only above the shop signs, and find one date, one old name and one carved or decorated detail.",
+    "note": "The upper floors often keep what the shop fronts lost: old painted names, dates set in stone, carved faces, fancy window tops. Photograph what you find. On a wet evening, go along the same street on Street View and tilt the view upwards.",
+    "mins": 20,
+    "cat": "beauty",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity",
+    "ctx": "out"
+   },
+   {
+    "id": "x-memory-map",
+    "test": "Draw a map of your town from memory, then check it against a real map and mark what you got wrong in another colour.",
+    "note": "Put in the main streets, the school, the shops, the river or the coast, and where you live. Then open a map on your phone and correct it with a different pen. The parts you left blank are good places for your next walk.",
+    "mins": 20,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-local-river",
+    "test": "Find the river or stream nearest your home, and trace on a map where it starts and where it reaches the sea.",
+    "note": "Follow the blue line on a map on your phone upstream to the hills and downstream to the lough or the sea, and write down the towns it passes. If it is close and the evening is dry, walk to a bridge over it and look at which way the water runs. Children go near water only with a grown-up.",
+    "mins": 20,
+    "cat": "water",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-tap-water",
+    "test": "Find out which reservoir or lough the water in your kitchen tap comes from.",
+    "note": "The NI Water website explains where water for each area comes from and how it is treated. Find the place on a map and work out how far the water travels to reach your tap. Then fill a glass and drink it slowly, knowing where it has been.",
+    "mins": 15,
+    "cat": "water",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-old-photos-town",
+    "test": "Find an old photograph of a street in your town and see what has changed.",
+    "note": "Try the PRONI or National Museums NI websites, or the museum run by your local council, and search for your town. Pick one photo and list five differences from today: the shops, the clothes, the transport, the road. If the street is near, walk to where the photographer stood and look at the same view.",
+    "mins": 20,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-library-town-book",
+    "test": "Find a book or booklet about the history of your own town and read the first chapter.",
+    "note": "Your local library usually keeps these on a local history shelf, and borrowing is free. The Libraries NI website also lets you search the catalogue and borrow e-books from home. If there is no book about your town, read about the nearest bigger town or your county.",
+    "mins": 20,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-how-fridge",
+    "test": "Find out how your fridge keeps food cold, then explain it out loud in five sentences.",
+    "note": "Look first: feel the back or the grille underneath (it is warm), and listen for the hum when it starts. Then read or watch one short explanation of how a fridge moves heat from inside to outside. Say it out loud to the room or to somebody at home. If you already know, explain why the back is warm, which is the part people find surprising.",
+    "mins": 20,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-how-cistern",
+    "test": "Lift the lid off the toilet cistern, flush, and watch what happens inside until it is full again.",
+    "note": "Watch the float rise and see the valve close when the water reaches the line. Then read or watch one explanation of how a cistern fills and stops, and say it out loud in your own words. The lid is heavy and can crack, so a grown-up lifts it off and lays it on a towel. Only look and flush; there is nothing to take apart.",
+    "mins": 15,
+    "cat": "home",
+    "kind": "attention",
+    "area": "home",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-how-switch",
+    "test": "Find out what happens inside a light switch when you press it, and draw a simple picture of it.",
+    "note": "Do not open the switch or unscrew anything. Press it slowly and listen for the click, then read or watch one explanation of how a switch breaks and joins a circuit. Draw a box, two wires and the little piece that moves between them. Explain your drawing out loud when you are done.",
+    "mins": 15,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-how-router",
+    "test": "Find the Wi-Fi router in your house, read every light and label on it, and find out what each one means.",
+    "note": "Write down the name of each light, then look up the model number on the label to find what the lights mean. Then read one simple explanation of how the router sends the internet to your phone through the air. Explain it out loud in a few sentences. Do not press the reset button or change any settings.",
+    "mins": 20,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-how-zip",
+    "test": "Look closely at a zip on a coat or a bag, then find out how the slider joins the teeth, and explain it out loud.",
+    "note": "Open and close it slowly while you watch the teeth meet inside the slider. Count how many teeth are on one side if you like. Then read or watch one short explanation of the zip and when it was first made. Tell somebody at home, or say it to yourself, in three sentences.",
+    "mins": 15,
+    "cat": "make",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-how-boiler",
+    "test": "Stand in front of your boiler or hot water tank, read every label on the outside, and find out how it heats the water.",
+    "note": "Do not open any panel. Find the make and model on the label, the pressure gauge if there is one, and the pipes going in and out. Then read or watch one explanation of how that kind of boiler or tank works, and write down what the normal pressure should be. Explain it out loud when you are finished.",
+    "mins": 20,
+    "cat": "home",
+    "kind": "attention",
+    "area": "home",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-how-lock",
+    "test": "Look at your front door key under a good light, then find out how the pins inside a lock match its bumps.",
+    "note": "Count the bumps and dips along the edge of the key. Read or watch one explanation of how a pin lock works, then draw the key and the row of pins it lifts. Explain out loud why a different key will not turn. Only look at the key; leave the lock itself as it is.",
+    "mins": 15,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-how-tap",
+    "test": "Turn a tap on very slowly, watch how the water changes, and find out what happens inside the tap as you turn it.",
+    "note": "Notice how many turns it takes from off to full. Then read or watch one explanation of how a tap opens and closes, and why an old tap can drip. Explain it out loud in your own words. Only turn the handle; there is nothing to take apart.",
+    "mins": 10,
+    "cat": "water",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-how-smoke-alarm",
+    "test": "Press the test button on your smoke alarm, then read what is printed on the back of the box or online for that model.",
+    "note": "Stand on the floor and use a broom handle if you cannot reach it. Find out how that alarm notices smoke and when it should be replaced, and write the replacement year on a sticky note or in your phone. Explain out loud how it works. If there is no alarm, write that on your list for the house.",
+    "mins": 15,
+    "cat": "home",
+    "kind": "attention",
+    "area": "home",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-how-washer",
+    "test": "Next time the washing machine is running, stand beside it for one part of the wash, and find out what each sound and stage is doing.",
+    "note": "Listen for water coming in, the drum turning, the pause, and the pump. Then read the manual or one explanation of a wash cycle and match each sound to a stage. Explain it out loud. If the machine is not running tonight, read the dial and find out what three of its settings are for.",
+    "mins": 20,
+    "cat": "home",
+    "kind": "attention",
+    "area": "home",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-trade-thatcher",
+    "test": "Read or watch about the work of a thatcher, and write down three things that surprised you.",
+    "note": "Look for what a roof is made from, how long the work takes, and how long a thatched roof lasts. A short film of a thatcher at work is the easiest place to start. Write your three things on paper or in your phone. Say one of them to somebody at home if you can.",
+    "mins": 15,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-trade-lighthouse",
+    "test": "Read about the life of a lighthouse keeper, and write down three things that surprised you.",
+    "note": "Find out what a keeper did through one night, how they got food and news, and why the job ended. Rathlin Island and St John's Point both have lighthouses with written histories online. Write your three things down, then read them back out loud.",
+    "mins": 20,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-trade-luthier",
+    "test": "Watch or read how a luthier makes a guitar or a violin, and write down three things that surprised you.",
+    "note": "A luthier is a person who makes stringed instruments by hand. Look for which woods they choose, how they bend the sides, and how long one instrument takes. Write your three things down. If you have an instrument at home, look at it again afterwards and find the parts you read about.",
+    "mins": 20,
+    "cat": "music",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-trade-stonemason",
+    "test": "Read or watch about a stonemason's work, and write down three things that surprised you.",
+    "note": "Find out how they split a stone, which tools they use, and how long an apprentice trains. The next time you pass an old church or bank, look at the carved stone and the joins. For tonight, three written things is the whole job.",
+    "mins": 15,
+    "cat": "beauty",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-trade-cooper",
+    "test": "Find out how a cooper makes a wooden barrel without glue or nails, and write down three things that surprised you.",
+    "note": "A cooper is a barrel maker. Watch one short film of a barrel being put together with hoops, and look for how the wood is bent. Write your three things down. Say out loud how you think the barrel stays watertight, then check if you were right.",
+    "mins": 15,
+    "cat": "make",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-trade-shipwright",
+    "test": "Read about the people who built ships in Belfast a hundred years ago, and write down three things that surprised you.",
+    "note": "Look up the jobs inside a shipyard: riveters, platers, joiners, painters. Find out how many people worked there, what hours they kept, and what age they started. Write your three things down. You could read one of them out at tea.",
+    "mins": 20,
+    "cat": "classic",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-trade-bookbinder",
+    "test": "Watch or read how a bookbinder sews and covers a book by hand, and write down three things that surprised you.",
+    "note": "Take a hardback off your shelf first and look at the spine from the top: you may see the folded groups of pages. Then find one film or article on hand bookbinding. Write your three things down, and look at the book again when you are finished.",
+    "mins": 15,
+    "cat": "words",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-trade-waller",
+    "test": "Find out how a dry-stone waller builds a wall with no cement, and write down three things that surprised you.",
+    "note": "Look for how the big stones and the small stones are used, and why the wall is wider at the bottom. Northern Ireland has miles of these walls in the Mournes. Write your three things down, then draw the shape of the wall from the end.",
+    "mins": 15,
+    "cat": "wild",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-make-three-ways",
+    "test": "Draw the same mug three ways: once with lines only, once with shading only, and once in under thirty seconds.",
+    "note": "Any cup, jug or shoe works just as well. Use a pencil or pen and the back of some old paper. Lay the three drawings side by side when you are done and pick the one you like most. The point is to see one thing three times, not to get it right.",
+    "mins": 15,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+   },
+   {
+    "id": "x-make-short-story",
+    "test": "Write a one-page short story that starts with somebody finding a key that fits no door in the house.",
+    "note": "Give it a beginning, a middle and an end, and stop when the page is full. Handwriting on one sheet or a note on your phone both count. If you would rather use your own start, pick any object in the room and ask who lost it. Read it out loud once when you have finished.",
+    "mins": 20,
+    "cat": "words",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+   },
+   {
+    "id": "x-make-chords-ear",
+    "test": "Pick one simple song you know well and work out its chords by ear, using a free tuner or piano app on your phone.",
+    "note": "Hum the first note of the song and find it on the app. Then try the chords that start on that note until one sounds right under the tune. A song with three chords, like many folk songs, is a good first choice. Writing down the first two chords counts as done.",
+    "mins": 20,
+    "cat": "music",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "patience"
+   },
+   {
+    "id": "x-make-recycling",
+    "test": "Make one useful thing from the recycling: a pen pot, a seed tray, a drawer divider or a box for cables.",
+    "note": "Rinse and dry what you use first. A cereal box cut down makes a drawer divider; a tin with smooth edges makes a pen pot. Use tape, string or glue you already have, and cover it with old paper if you like. Put it to use tonight.",
+    "mins": 20,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+   },
+   {
+    "id": "x-make-comic",
+    "test": "Draw a four-box comic strip of something that really happened to you this week.",
+    "note": "Fold a page into four and draw one moment in each box. Stick figures are fine; the story is what counts. Add one line of speech in at least two of the boxes. Show it to somebody, or keep it in a drawer to find later.",
+    "mins": 20,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+   },
+   {
+    "id": "x-make-origami",
+    "test": "Fold one paper crane, or another origami animal, by following one free video from start to finish.",
+    "note": "Any square of paper works: cut a square from printer paper or an old envelope. Pause the video after every fold. If the first one goes wrong, the second one almost always goes better, so fold it twice if there is time. Put the finished one where you will see it tomorrow.",
+    "mins": 20,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "patience"
+   },
+   {
+    "id": "x-make-new-words",
+    "test": "Write new words for one verse of a song you already know, about something in your own day.",
+    "note": "Keep the tune and the number of beats in each line. A nursery song, a hymn or a pop song all work. Your words could be about the dog, the drive to school or the weather today. Sing it once out loud, alone or to somebody at home.",
+    "mins": 15,
+    "cat": "music",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+   },
+   {
+    "id": "x-make-one-object-photos",
+    "test": "Take ten photographs of one ordinary object, each from a different angle or light, and keep the best one.",
+    "note": "Try from above, from the floor, very close, by the window, and with a lamp to one side. A spoon, an apple or a shoe is plenty. Delete the other nine when you have picked, so the phone does not fill up. Make the one you keep the lock screen for a day if you like it.",
+    "mins": 15,
+    "cat": "beauty",
+    "kind": "attention",
+    "area": "creativity",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-make-little-book",
+    "test": "Make an eight-page little book from one sheet of paper, and fill every page.",
+    "note": "Fold a sheet into eight, make one cut in the middle, and fold it into a book: one short video shows how. Fill it with anything: a short story, a guide to your house for a visitor, or eight drawings. Give it a title on the front.",
+    "mins": 20,
+    "cat": "words",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+   },
+   {
+    "id": "x-learn-place-history",
+    "test": "Choose one place you love to visit outside your own town, and read about its history until you can tell three facts about it.",
+    "note": "It could be a beach, a castle, a forest park or a church you like. Look for when it was built or named, who lived or worked there, and one thing that changed. Write the three facts down, and say them out loud the next time you are there.",
+    "mins": 20,
+    "cat": "classic",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-learn-poem-heart",
+    "test": "Learn a poem of at least twelve lines by heart and say it out loud with the page turned over.",
+    "note": "Pick one from a book on your shelf or a free poetry website. Learn it four lines at a time, saying each group out loud five times before you add the next. Short cheerful poems work well for children. If you stumble, look once, then start that verse again.",
+    "mins": 20,
+    "cat": "words",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "discipline"
+   },
+   {
+    "id": "x-learn-go",
+    "test": "Learn the rules of the board game go with a free app, and play one whole small game on a nine-by-nine board.",
+    "note": "Most free go apps have a short lesson and a computer player on its easiest setting. The rules fit on one page: place a stone, surround the other colour, count the space you hold. Losing the first game is normal. If you prefer, learn draughts or backgammon the same way.",
+    "mins": 20,
+    "cat": "mind",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "patience"
+   },
+   {
+    "id": "x-learn-primes",
+    "test": "Find out why there is no biggest prime number, and explain the idea out loud without looking at your notes.",
+    "note": "A prime is a number only two numbers go into: itself and one, like 2, 3, 5, 7 and 11. Read or watch one simple explanation of the proof, which is over two thousand years old. Try it with small numbers on paper: multiply 2, 3 and 5, add one, and see what you get.",
+    "mins": 20,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-learn-pencil",
+    "test": "Find out the history of one ordinary thing on your table, like the pencil, the fork or the teabag, and tell it in five sentences.",
+    "note": "Look for where it was first made, what people used before it, and how it came to look the way it does. Write your five sentences down and say them out loud. If you are at tea with somebody, ask them to guess the answers first.",
+    "mins": 15,
+    "cat": "classic",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-learn-morse",
+    "test": "Learn the Morse code for every letter of your name, then tap your name on the table from memory.",
+    "note": "A free Morse chart online is all you need. A dot is a short tap and a dash is a long one, with a pause between letters. Learn one letter at a time, then tap the whole name three times without looking. If somebody else is in, tap theirs too.",
+    "mins": 15,
+    "cat": "mind",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "discipline"
+   },
+   {
+    "id": "x-learn-painting",
+    "test": "Choose one famous painting, look at it for five full minutes, then read how and when it was made.",
+    "note": "Open a large picture of it on a screen or in a book. Before you read anything, write down three things you notice. Then read about the painter, the year, and what the painting shows. Look again and find one thing you did not see the first time.",
+    "mins": 15,
+    "cat": "beauty",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-learn-map-region",
+    "test": "Learn the names and places of the countries around one sea you have never studied, and draw them from memory.",
+    "note": "The Baltic Sea or the Black Sea are good choices. Look at a map for five minutes, then close it and draw the sea and the countries round it. Check, fix what you got wrong, and draw it once more. Paper and pencil is all it takes.",
+    "mins": 20,
+    "cat": "mind",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "curiosity"
+   },
+   {
+    "id": "x-order-spices",
+    "test": "Take every jar and packet off the spice shelf, check the dates, and put them back in order from A to Z.",
+    "note": "Bin anything well past its date or with no smell left. Tip half-empty packets into a spare clean jar if you have one, and write the name on a piece of tape. Put the ones you use most at the front. You are finished when you have being able to find the cumin in one look.",
+    "mins": 20,
+    "cat": "order",
+    "kind": "skill",
+    "area": "home",
+    "trait": "discipline"
+   },
+   {
+    "id": "x-order-fridge-door",
+    "test": "Take every jar and bottle out of the fridge door, check each one's date and when it was opened, and put back only what is still good.",
+    "note": "Many jars say on the label how many weeks they keep once opened. Wipe each jar and the door shelves before they go back. Put the tallest bottles on the bottom shelf and the small jars on top. You are finished when you have a door where every jar is one you will use.",
+    "mins": 15,
+    "cat": "order",
+    "kind": "skill",
+    "area": "home",
+    "trait": "discipline"
+   },
+   {
+    "id": "x-order-glovebox",
+    "test": "Empty the car glovebox and door pockets, and put back only what belongs in a car.",
+    "note": "A good car set is the manual, a pen, a cloth, a torch, a phone cable and a copy of the breakdown number. Check the torch works. Bin the old receipts and bring the rest into the house. If there is no car, do the same with the bag you keep by the door for going out.",
+    "mins": 15,
+    "cat": "order",
+    "kind": "skill",
+    "area": "home",
+    "trait": "discipline"
+   },
+   {
+    "id": "x-order-medicine-dates",
+    "test": "Read the date on every medicine and plaster box in the house, and write a list of what you have and when each one runs out.",
+    "note": "Keep the list on a sheet taped inside the cupboard door or in your phone. Anything past its date can go back to a chemist, who will take it for safe disposal. Add to the list anything you would want in the middle of the night, like plasters or a thermometer. Keep every medicine up high, away from children.",
+    "mins": 20,
+    "cat": "order",
+    "kind": "skill",
+    "area": "health",
+    "trait": "discipline"
+   },
+   {
+    "id": "x-order-chargers",
+    "test": "Tip out the drawer of chargers and cables, match each one to the thing it charges, and label or let go of the rest.",
+    "note": "Test each cable with the phone, the torch or the speaker it belongs to. A strip of tape with a name written on it makes a label. Coil each one loosely and hold it with a hair tie or a twist tie. Cables that match nothing in the house can go to an electrical recycling point.",
+    "mins": 20,
+    "cat": "order",
+    "kind": "skill",
+    "area": "home",
+    "trait": "discipline"
+   },
+   {
+    "id": "x-order-photo-check",
+    "test": "Open your photo backup and find one photograph from three years ago, to prove the backup really works.",
+    "note": "If you back up to a cloud account, sign in on a different device or the website and look there. If you back up to a drive, plug it in and open the picture. If you cannot find it, you now know what to fix, and that counts as done for tonight. Write down where the backup lives so somebody else at home could find it too.",
+    "mins": 15,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "discipline"
+   },
+   {
+    "id": "x-order-hall-shelf",
+    "test": "Clear the hall shelf or table by the front door, and put back only keys, one bowl, and what goes out with you tomorrow.",
+    "note": "Post goes to where post is dealt with, and everything else goes back to its own room. A bowl or a small dish for keys means they are always in one place. If the shed shelf is the bigger job at your house, do that instead with the same rule: only what is used there stays.",
+    "mins": 10,
+    "cat": "order",
+    "kind": "skill",
+    "area": "home",
+    "trait": "discipline"
+   }
+  ]
+ }
 }

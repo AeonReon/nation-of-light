@@ -1,0 +1,457 @@
+[
+  {
+    "id": "x-letter-year",
+    "test": "Write a real letter, at least one full page, to one person you have not spoken to in over a year.",
+    "note": "Tell them three things: what you remember doing with them, what your life looks like now, and one question you would like them to answer. Post it if you have a stamp and an address. If not, type the same page as a long message and send it tonight.",
+    "mins": 20,
+    "cat": "words",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "courage"
+  },
+  {
+    "id": "x-childhood-call",
+    "test": "Ring a grandparent or an older neighbour and ask them three questions about when they were a child.",
+    "note": "Good questions: what did you play in the street, what did your house look like, what was your first job. Write the questions down before you ring and jot short notes while they talk. If there is nobody to ring tonight, ask an older person in your own house the same three questions over a cup of tea.",
+    "mins": 20,
+    "cat": "speak",
+    "kind": "attention",
+    "area": "relationships",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-family-recipe",
+    "test": "Phone an older relative and write down one recipe they have made for years, every step, in their words.",
+    "note": "Ask the questions a recipe card leaves out: how do you know when it is done, what did your own mother do differently. Soda bread, stew or a Christmas cake are good ones to ask for. If nobody is free to ring, write down a dish you remember from a relative's kitchen as best you can, and send it to them to correct.",
+    "mins": 20,
+    "cat": "food",
+    "kind": "attention",
+    "area": "relationships",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-thank-teacher",
+    "test": "Write a thank-you message to a teacher who helped you, naming one thing they did that you still remember.",
+    "note": "Be exact: \"You let me stay in at lunch to finish my drawing\" says more than \"You were great\". Send it to the school by email or post, addressed to them by name; schools pass these on. A sports coach, a music teacher or a youth leader counts just the same.",
+    "mins": 15,
+    "cat": "words",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "kindness"
+  },
+  {
+    "id": "x-voice-note-far",
+    "test": "Record a two-minute voice note for somebody who lives far away and send it to them.",
+    "note": "Tell them about your day as if they were sitting beside you: what you ate, what the weather did, one thing that made you laugh. Record it twice if the first one feels stiff; the second is usually better. No phone signal to spare? Write the same thing down and read it to them on your next call.",
+    "mins": 10,
+    "cat": "speak",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "courage"
+  },
+  {
+    "id": "x-how-they-met",
+    "test": "Ask a parent, grandparent or older relative how they met the person they married or lived with, and write the story down.",
+    "note": "Ask where it was, what they were wearing, and what they thought the first time. Write it as a short story of half a page, with their words in it. If there is nobody to ask tonight, write down the story of how you met your oldest friend, while you still remember the details.",
+    "mins": 20,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "relationships",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-photo-story",
+    "test": "Take one old family photograph to an older relative, in person or on a video call, and write down who is in it and what was happening.",
+    "note": "Write the names and the year lightly in pencil on the back, or in a note on your phone beside a photo of it. Ask who took the picture and what happened just after. If nobody is free, pick one photograph and write down everything you already know about it, with a question mark beside what you are unsure of.",
+    "mins": 15,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "relationships",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-family-tree",
+    "test": "Draw your family tree back to your great-grandparents, and ring one relative to fill in the gaps.",
+    "note": "Put yourself at the bottom of a sheet of paper and work upwards: parents, grandparents, great-grandparents. Leave blank boxes for what you do not know, then ask one relative for the missing first names and where each person lived. Whatever you do not find tonight stays as a blank box to fill another day.",
+    "mins": 20,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "relationships",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-letter-later",
+    "test": "Write a letter to a child in your family for them to open when they are grown up, and seal it in an envelope.",
+    "note": "Tell them what they are like right now, what they love, and one funny thing they said this year. Write the date and \"open when you are eighteen\" on the front and put it somewhere safe. If there is no child in the family, write the same kind of letter to your own future self, to open in five years.",
+    "mins": 20,
+    "cat": "words",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "kindness"
+  },
+  {
+    "id": "x-thank-unseen",
+    "test": "Write a thank-you card for somebody whose work helps you but whom you rarely meet, and leave it where they will find it.",
+    "note": "The postman or postwoman, the bin crew, the person who cleans the school hall. A folded sheet of paper works as well as a card: say thank you and name one thing, such as \"you always close the gate\". Tape it to the bin lid or the letterbox tonight.",
+    "mins": 10,
+    "cat": "care",
+    "kind": "kindness",
+    "area": "community",
+    "trait": "kindness"
+  },
+  {
+    "id": "x-record-story",
+    "test": "Ask an older relative to tell you one story from their life and record it on your phone, with their permission.",
+    "note": "Start with a clear question: \"Tell me about the day you started your first job\" or \"What was the worst snow you remember?\" Let them talk without interrupting, and save the file with their name and today's date. If you cannot reach anybody, record yourself telling a story an older relative used to tell you.",
+    "mins": 15,
+    "cat": "speak",
+    "kind": "attention",
+    "area": "relationships",
+    "trait": "patience"
+  },
+  {
+    "id": "x-old-friend-plan",
+    "test": "Ring an old friend you have not seen in a long time and agree a day and a place to meet.",
+    "note": "A free place is fine: a walk along the shore, a park bench, one of your kitchens. Put the date in your phone before you hang up so it is real. If a call is not possible tonight, send a message with two dates to choose from, not \"we should meet up sometime\".",
+    "mins": 10,
+    "cat": "speak",
+    "kind": "courage",
+    "area": "relationships",
+    "trait": "courage"
+  },
+  {
+    "id": "x-cook-dal",
+    "test": "Cook a pot of Indian dal from lentils, onion, a tin of tomatoes and whatever spices are in the cupboard.",
+    "note": "Fry a chopped onion until soft, add a spoon of curry powder or cumin, then a cup of red lentils, the tin of tomatoes and two cups of water, and simmer about fifteen minutes, stirring, until thick. No lentils in the cupboard? Use a tin of chickpeas or beans and simmer for ten minutes. Children cook with a grown-up at the cooker.",
+    "mins": 20,
+    "cat": "food",
+    "kind": "skill",
+    "area": "experiences",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-cook-shakshuka",
+    "test": "Cook shakshuka, eggs gently cooked in a spiced tomato sauce, a dish eaten across North Africa and the Middle East.",
+    "note": "Soften an onion in a frying pan, add a tin of tomatoes, a pinch of cumin or paprika, salt and pepper, and let it bubble for five minutes. Make two hollows with a spoon, crack an egg into each, cover with a lid or a plate, and cook until the whites are set. No spices? It still works with just salt, pepper and the tomatoes.",
+    "mins": 20,
+    "cat": "food",
+    "kind": "skill",
+    "area": "experiences",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-cook-tortilla",
+    "test": "Cook a Spanish tortilla, a thick potato and egg cake, using potatoes, an onion and four eggs.",
+    "note": "Slice two potatoes and an onion thinly and cook them slowly in oil in a covered pan until soft, about ten minutes. Beat four eggs with salt, stir the potatoes in, pour it all back into the pan and cook gently until nearly set, then finish under the grill. No onion is fine; in Spain some families never use one.",
+    "mins": 20,
+    "cat": "food",
+    "kind": "skill",
+    "area": "experiences",
+    "trait": "patience"
+  },
+  {
+    "id": "x-cook-rice-peas",
+    "test": "Cook Jamaican rice and peas using rice, a tin of kidney beans, and thyme or mixed herbs.",
+    "note": "In Jamaica the \"peas\" are beans. Put a cup of rice, the drained beans, a pinch of thyme, salt and two cups of water in a pot, bring to the boil, then cover and cook on low for fifteen minutes. The usual recipe adds coconut milk; if you have none, a small piece of butter works well.",
+    "mins": 20,
+    "cat": "food",
+    "kind": "skill",
+    "area": "experiences",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-cook-ful",
+    "test": "Make ful medames, the mashed bean breakfast eaten in Egypt, from a tin of beans, garlic, lemon and oil.",
+    "note": "Warm a drained tin of broad beans in a pan with a splash of water, then mash roughly with a fork. Stir in crushed garlic, a squeeze of lemon, a spoon of olive oil, salt and a pinch of cumin if you have it. No broad beans? Butter beans or chickpeas work; eat it with toast or flatbread.",
+    "mins": 15,
+    "cat": "food",
+    "kind": "skill",
+    "area": "experiences",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-cook-placki",
+    "test": "Cook Polish placki ziemniaczane, crisp potato pancakes, from grated potato, onion, one egg and a spoon of flour.",
+    "note": "Grate two potatoes and a small onion, squeeze out the water in a clean tea towel, then mix in the egg, the flour and salt. Fry spoonfuls in a little oil, flattening each one, for about three minutes a side until golden. Grating is the careful part, so go slowly near the end of each potato. If you know somebody from Poland, ask them how their family eats them.",
+    "mins": 20,
+    "cat": "food",
+    "kind": "skill",
+    "area": "experiences",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-cook-gyeranbap",
+    "test": "Make gyeran-bap, a Korean egg rice, from rice, a fried egg, soy sauce and butter.",
+    "note": "Put a bowl of hot rice down (leftover rice heated through is ideal), add a small piece of butter and a fried egg cooked how you like it, then a teaspoon of soy sauce. Mix it all together with a spoon and eat it straight away. No soy sauce? A pinch of salt and pepper still makes a good bowl.",
+    "mins": 15,
+    "cat": "food",
+    "kind": "skill",
+    "area": "experiences",
+    "trait": "joy"
+  },
+  {
+    "id": "x-cook-crepes",
+    "test": "Make French crêpes, very thin pancakes, from one egg, flour and milk, and eat them the way people in Brittany do.",
+    "note": "Whisk one egg, 100 grams of flour and about 250 millilitres of milk until smooth and runny like cream. Pour a thin layer into a hot buttered pan, tilt it to cover the base, and turn after a minute. In Brittany, in north-west France, savoury ones are made with buckwheat flour and filled with ham, egg or cheese; use plain flour and whatever you have.",
+    "mins": 20,
+    "cat": "food",
+    "kind": "skill",
+    "area": "experiences",
+    "trait": "joy"
+  },
+  {
+    "id": "x-potato-story",
+    "test": "Find out where the potato first came from and how it reached Ireland, and tell somebody in three sentences.",
+    "note": "Look it up online or in an encyclopedia on the shelf: start with the mountains of South America and follow it across the sea. Then peel or wash one potato for tomorrow while you tell the story. If there is nobody to tell, write the three sentences on a card and stick it inside a kitchen cupboard door.",
+    "mins": 15,
+    "cat": "food",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-tea-story",
+    "test": "Read the packet of tea or coffee in your cupboard, find the country it was grown in on a map, and read how it is picked there.",
+    "note": "Packets often name a country or region, such as Kenya, Assam in India, or Colombia. Find it on a map on your phone or in an atlas, then look up how the leaves or beans are picked and dried there. If the packet does not say, pick Kenya: a large share of the tea drunk in Britain and Ireland is grown there.",
+    "mins": 15,
+    "cat": "food",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-cassiopeia",
+    "test": "Find the W shape of Cassiopeia from a window or your doorstep after dark.",
+    "note": "From Northern Ireland, Cassiopeia is above the horizon every clear night of the year, on the opposite side of the North Star from the Plough. Turn off the lights in the room and give your eyes ten minutes to get used to the dark. If it is cloudy, open the free website Stellarium Web on your phone, set your town, and find it on the screen instead.",
+    "mins": 15,
+    "cat": "sky",
+    "kind": "attention",
+    "area": "experiences",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-three-constellations",
+    "test": "Use a free star map to find three constellations above your house tonight, and then find at least one of them in the real sky.",
+    "note": "Open Stellarium Web on your phone and set your location. In summer and autumn evenings look for the Summer Triangle of three bright stars; in winter look for Orion's belt of three stars in a row; the W of Cassiopeia is there all year. On a cloudy night, draw the three shapes on paper from the screen so you know them for the next clear night.",
+    "mins": 20,
+    "cat": "sky",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-sunset-whole",
+    "test": "Watch the sunset from the moment the sun touches the horizon until ten minutes after it has gone.",
+    "note": "Look up tonight's sunset time and be at a west-facing window, doorstep or open spot five minutes before it. Keep your phone in your pocket and notice how the colours change. On a grey evening, watch the sky get darker for fifteen minutes from a window and write down each colour you see.",
+    "mins": 20,
+    "cat": "sky",
+    "kind": "attention",
+    "area": "experiences",
+    "trait": "calm"
+  },
+  {
+    "id": "x-moon-phase",
+    "test": "Find out tonight's phase of the moon, then show why the moon changes shape using a lamp and an orange.",
+    "note": "Look up the phase online. In a dark room, the lamp is the sun and the orange is the moon: hold the orange at arm's length and turn slowly on the spot, watching the lit part grow and shrink. If the moon is up, look at it from a window and match it to what the orange showed you.",
+    "mins": 15,
+    "cat": "sky",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-street-trees",
+    "test": "Name five different trees on your street or in the nearest park.",
+    "note": "Take a clear photo of a leaf and of the bark of each tree, then check them with a free app such as Seek or the Woodland Trust's tree guide online. Write the five names down with the house or lamp post each tree is next to. Staying in? Use photos of trees you have already taken, or name the trees you can see from a window.",
+    "mins": 20,
+    "cat": "wild",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity",
+    "ctx": "out"
+  },
+  {
+    "id": "x-street-birds",
+    "test": "Name five different birds that live on or near your street.",
+    "note": "Stand at an open door or window, or walk slowly to the end of the street, and use the free Merlin Bird ID app, which can name birds from their song. Blackbirds, robins, starlings, jackdaws and blue tits are common in Northern Ireland towns. On a wet evening, look up those five on the RSPB website and learn to tell them apart by sight.",
+    "mins": 20,
+    "cat": "wild",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-space-station",
+    "test": "Find out when the International Space Station next passes over your town, and if it is tonight, watch it go over.",
+    "note": "Search NASA's free Spot the Station website for Belfast or the nearest large town. It looks like a bright, steady light moving across the sky with no flashing, and a pass lasts a few minutes. If the next pass is another night, put an alarm in your phone for it, then read about who is living on board right now.",
+    "mins": 15,
+    "cat": "sky",
+    "kind": "attention",
+    "area": "experiences",
+    "trait": "joy"
+  },
+  {
+    "id": "x-name-clouds",
+    "test": "Name every type of cloud in the sky right now using the Met Office cloud guide.",
+    "note": "The free Met Office website has pictures of each type: high, thin wisps are cirrus; flat grey sheets are stratus; heaped white ones are cumulus. Look from a window, match each cloud to a picture, and sketch the ones you find. On a clear blue evening, learn the ten main types from the guide and test yourself tomorrow.",
+    "mins": 15,
+    "cat": "sky",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-moon-map",
+    "test": "Draw the moon's dark patches from memory, then check them against a moon map and find where Apollo 11 landed.",
+    "note": "The dark patches are called seas, though they hold no water. Find a moon map online and look for the Sea of Tranquillity, where people first stood on the moon in 1969. If the moon is up tonight, look at it from a window and find the same patch with your own eyes.",
+    "mins": 15,
+    "cat": "sky",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-listen-dusk",
+    "test": "Stand at an open window or door at dusk for ten minutes and write down every sound you hear, then look up one you cannot name.",
+    "note": "Number them as they come: a car door, a blackbird, the wind in a hedge, a dog two gardens away. Most evenings bring more than twenty. If a bird call puzzles you, play it into a free app such as Merlin Bird ID, or describe it in words and search the RSPB website.",
+    "mins": 15,
+    "cat": "wild",
+    "kind": "attention",
+    "area": "experiences",
+    "trait": "calm"
+  },
+  {
+    "id": "x-sit-new-spot",
+    "test": "Go and sit for ten minutes somewhere in your town where you have never sat before.",
+    "note": "A bench outside the library, the steps of the town hall, a wall by the river, the corner of the park you always walk past. Watch what happens there, and write down three things you noticed that you never knew went on. On a rainy evening, sit for ten minutes in a room or chair at home you never use, facing a different way.",
+    "mins": 15,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "community",
+    "trait": "calm",
+    "ctx": "out"
+  },
+  {
+    "id": "x-street-built",
+    "test": "Find out roughly when your street was built.",
+    "note": "The free PRONI Historical Maps viewer online lets you look at your area on old maps from the 1830s onwards; see which map your street first appears on. Look out for date stones on the houses, or ask the neighbour who has lived there longest. All of the map work can be done from the sofa.",
+    "mins": 20,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-walk-driven-road",
+    "test": "Walk a stretch of road you have only ever driven or been driven along, and find three things you never saw from a car.",
+    "note": "Ten minutes out and ten back is plenty: a gate with a name on it, an old post box, a garden someone clearly loves. Children go with a grown-up. If you are staying in, open Street View on that road and go along it slowly, one click at a time.",
+    "mins": 20,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity",
+    "ctx": "out"
+  },
+  {
+    "id": "x-read-plaques",
+    "test": "Read every plaque, date stone and inscription on one old building in your town.",
+    "note": "Churches, banks, schools and town halls often have them near the door or high on the wall. Photograph each one, then find out one fact about a name or date you read. At home, open the Ulster History Circle website, which puts up blue plaques across Northern Ireland, and read about the plaque nearest to you.",
+    "mins": 20,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity",
+    "ctx": "out"
+  },
+  {
+    "id": "x-oldest-mile",
+    "test": "Find the oldest thing within a mile of your home.",
+    "note": "It might be a churchyard stone, a bridge, a standing stone, a ringfort or a very old tree. The free Historic Environment Map Viewer from the Department for Communities shows recorded old sites on a map, so you can start from home. If it is close and the evening is dry, walk to it and look.",
+    "mins": 20,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-town-name",
+    "test": "Find out what the name of your town means and which language it came from.",
+    "note": "Most place names in Northern Ireland come from Irish, and some from Scots or English. The free PlaceNamesNI website gives the meaning and the old spellings: Belfast, for example, comes from Béal Feirste, the mouth of the sandbank ford. Then look up the name of your townland or street the same way.",
+    "mins": 15,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-named-after",
+    "test": "Find three streets, buildings or parks in your town named after a person, and find out who each person was.",
+    "note": "Look at a map of your town on your phone and pick out names like a surname followed by Street, Avenue or Park. Search each name with your town and write one line about each person. You can do the whole thing from home, and walk past one of them tomorrow.",
+    "mins": 20,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-look-above-shops",
+    "test": "Walk your main street looking only above the shop signs, and find one date, one old name and one carved or decorated detail.",
+    "note": "The upper floors often keep what the shop fronts lost: old painted names, dates set in stone, carved faces, fancy window tops. Photograph what you find. On a wet evening, go along the same street on Street View and tilt the view upwards.",
+    "mins": 20,
+    "cat": "beauty",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity",
+    "ctx": "out"
+  },
+  {
+    "id": "x-memory-map",
+    "test": "Draw a map of your town from memory, then check it against a real map and mark what you got wrong in another colour.",
+    "note": "Put in the main streets, the school, the shops, the river or the coast, and where you live. Then open a map on your phone and correct it with a different pen. The parts you left blank are good places for your next walk.",
+    "mins": 20,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-local-river",
+    "test": "Find the river or stream nearest your home, and trace on a map where it starts and where it reaches the sea.",
+    "note": "Follow the blue line on a map on your phone upstream to the hills and downstream to the lough or the sea, and write down the towns it passes. If it is close and the evening is dry, walk to a bridge over it and look at which way the water runs. Children go near water only with a grown-up.",
+    "mins": 20,
+    "cat": "water",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-tap-water",
+    "test": "Find out which reservoir or lough the water in your kitchen tap comes from.",
+    "note": "The NI Water website explains where water for each area comes from and how it is treated. Find the place on a map and work out how far the water travels to reach your tap. Then fill a glass and drink it slowly, knowing where it has been.",
+    "mins": 15,
+    "cat": "water",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-old-photos-town",
+    "test": "Find an old photograph of a street in your town and see what has changed.",
+    "note": "Try the PRONI or National Museums NI websites, or the museum run by your local council, and search for your town. Pick one photo and list five differences from today: the shops, the clothes, the transport, the road. If the street is near, walk to where the photographer stood and look at the same view.",
+    "mins": 20,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "community",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-library-town-book",
+    "test": "Find a book or booklet about the history of your own town and read the first chapter.",
+    "note": "Your local library usually keeps these on a local history shelf, and borrowing is free. The Libraries NI website also lets you search the catalogue and borrow e-books from home. If there is no book about your town, read about the nearest bigger town or your county.",
+    "mins": 20,
+    "cat": "belong",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  }
+]

@@ -1426,3 +1426,30 @@ html[data-rot] .stage.school.arrive .veil.trophyveil,html[data-rot] .stage.schoo
    On the ladder page's next-step card the note is the quieter second voice. */
 .acard.one .note{font-size:13.5px;line-height:1.5;color:var(--ink-soft);margin:8px 0 0;padding:9px 12px;
   background:var(--ivory);border-radius:12px;border-left:3px solid var(--gold-lt);text-align:left}
+/* ---- v74: the taken-on skill opens its ladder; Today's extra ---- */
+.lgrow[data-open],.proj[data-open]{cursor:pointer;transition:transform .2s var(--spring)}
+.lgrow[data-open]:active,.proj[data-open]:active{transform:scale(.985)}
+.lgrow .lgmore{display:block;font-style:normal;font-size:12px;font-weight:700;color:var(--gold-deep);margin-top:3px}
+/* quieter than the three and the long skill: no picture, a thin outline, soft ground, smaller type */
+.acard.extracard{background:transparent;box-shadow:none;padding:12px 14px 10px;gap:6px;--g1:var(--line);--g2:var(--gold-lt)}
+.acard.extracard::before{padding:1.2px}
+.acard.extracard .eyebrow{color:var(--ink-faint)}
+.acard.extracard .lede{font-size:13px;color:var(--ink-faint)}
+.xrow{text-align:left;display:flex;flex-direction:column;gap:3px;padding:8px 10px;border-radius:12px;background:var(--ivory-2);border-left:3px solid var(--c2)}
+.xrow strong{font-weight:600;font-size:14.5px;line-height:1.35;color:var(--ink)}
+.xmeta{font-size:11.5px;font-weight:700;color:var(--ink-faint)}
+.xbtns{display:flex;align-items:center;gap:8px}
+.xbtns .btn{flex:1}
+.xbtns .what{font-size:12.5px;font-weight:700;color:var(--ink-faint);padding:6px 8px;white-space:nowrap}
+.xdone{margin:0;display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--gold-deep)}
+.xdone i{width:10px;height:10px;border-radius:50%;background:linear-gradient(180deg,#FFE9A0,#C9A227);box-shadow:0 0 0 2px rgba(201,162,39,.25);flex:none}
+.extrasheet .xrule{margin:10px 0 0;font-size:12.5px;line-height:1.45;color:var(--ink-faint)}
+.extrasheet .row .xdone{flex:1;justify-content:center;padding:8px}
+/* the gold mark on a day an extra was done: a small dot under the flame, never the flame itself */
+.wk{position:relative}
+.wrow:has(.wk.x){padding-bottom:10px}
+.wk.x::after{content:"";position:absolute;bottom:-10px;left:50%;width:7px;height:7px;margin-left:-3.5px;border-radius:50%;background:linear-gradient(180deg,#FFE9A0,#C9A227);box-shadow:0 0 0 1.5px rgba(201,162,39,.3)}
+.xmonth{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.xmonth i{aspect-ratio:1;border-radius:6px;background:var(--ivory-2);box-shadow:inset 0 0 0 1px var(--line)}
+.xmonth i.on{background:linear-gradient(180deg,#FFE9A0,#C9A227);box-shadow:none}
+.xmonth i.td{box-shadow:inset 0 0 0 1.5px var(--gold-deep)}

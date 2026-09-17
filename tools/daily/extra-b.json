@@ -1,0 +1,452 @@
+[
+  {
+    "id": "x-how-fridge",
+    "test": "Find out how your fridge keeps food cold, then explain it out loud in five sentences.",
+    "note": "Look first: feel the back or the grille underneath (it is warm), and listen for the hum when it starts. Then read or watch one short explanation of how a fridge moves heat from inside to outside. Say it out loud to the room or to somebody at home. If you already know, explain why the back is warm, which is the part people find surprising.",
+    "mins": 20,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-how-cistern",
+    "test": "Lift the lid off the toilet cistern, flush, and watch what happens inside until it is full again.",
+    "note": "Watch the float rise and see the valve close when the water reaches the line. Then read or watch one explanation of how a cistern fills and stops, and say it out loud in your own words. Put the lid down gently on a towel while you look, as it is heavy and can crack. Only look and flush; there is nothing to take apart.",
+    "mins": 15,
+    "cat": "home",
+    "kind": "attention",
+    "area": "home",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-how-switch",
+    "test": "Find out what happens inside a light switch when you press it, and draw a simple picture of it.",
+    "note": "Do not open the switch or unscrew anything. Press it slowly and listen for the click, then read or watch one explanation of how a switch breaks and joins a circuit. Draw a box, two wires and the little piece that moves between them. Explain your drawing out loud when you are done.",
+    "mins": 15,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-how-router",
+    "test": "Find the Wi-Fi router in your house, read every light and label on it, and find out what each one means.",
+    "note": "Write down the name of each light, then look up the model number on the label to find what the lights mean. Then read one simple explanation of how the router sends the internet to your phone through the air. Explain it out loud in a few sentences. Do not press the reset button or change any settings.",
+    "mins": 20,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-how-zip",
+    "test": "Look closely at a zip on a coat or a bag, then find out how the slider joins the teeth, and explain it out loud.",
+    "note": "Open and close it slowly while you watch the teeth meet inside the slider. Count how many teeth are on one side if you like. Then read or watch one short explanation of the zip and when it was first made. Tell somebody at home, or say it to yourself, in three sentences.",
+    "mins": 15,
+    "cat": "make",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-how-boiler",
+    "test": "Stand in front of your boiler or hot water tank, read every label on the outside, and find out how it heats the water.",
+    "note": "Do not open any panel. Find the make and model on the label, the pressure gauge if there is one, and the pipes going in and out. Then read or watch one explanation of how that kind of boiler or tank works, and write down what the normal pressure should be. Explain it out loud when you are finished.",
+    "mins": 20,
+    "cat": "home",
+    "kind": "attention",
+    "area": "home",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-how-lock",
+    "test": "Look at your front door key under a good light, then find out how the pins inside a lock match its bumps.",
+    "note": "Count the bumps and dips along the edge of the key. Read or watch one explanation of how a pin lock works, then draw the key and the row of pins it lifts. Explain out loud why a different key will not turn. Only look at the key; leave the lock itself as it is.",
+    "mins": 15,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-how-tap",
+    "test": "Turn a tap on very slowly, watch how the water changes, and find out what happens inside the tap as you turn it.",
+    "note": "Notice how many turns it takes from off to full. Then read or watch one explanation of how a tap opens and closes, and why an old tap can drip. Explain it out loud in your own words. Only turn the handle; there is nothing to take apart.",
+    "mins": 10,
+    "cat": "water",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-how-smoke-alarm",
+    "test": "Press the test button on your smoke alarm, then read what is printed on the back of the box or online for that model.",
+    "note": "Stand on the floor and use a broom handle if you cannot reach it. Find out how that alarm notices smoke and when it should be replaced, and write the replacement year on a sticky note or in your phone. Explain out loud how it works. If there is no alarm, write that on your list for the house.",
+    "mins": 15,
+    "cat": "home",
+    "kind": "attention",
+    "area": "home",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-how-washer",
+    "test": "Run the washing machine, stand beside it for one part of the wash, and find out what each sound and stage is doing.",
+    "note": "Listen for water coming in, the drum turning, the pause, and the pump. Then read the manual or one explanation of a wash cycle and match each sound to a stage. Explain it out loud. If the machine is not running tonight, read the dial and find out what three of its settings are for.",
+    "mins": 20,
+    "cat": "home",
+    "kind": "attention",
+    "area": "home",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-trade-thatcher",
+    "test": "Read or watch about the work of a thatcher, and write down three things that surprised you.",
+    "note": "Look for what a roof is made from, how long the work takes, and how long a thatched roof lasts. A short film of a thatcher at work is a good way in. Write your three things on paper or in your phone. Say one of them to somebody at home if you can.",
+    "mins": 15,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-trade-lighthouse",
+    "test": "Read about the life of a lighthouse keeper, and write down three things that surprised you.",
+    "note": "Find out what a keeper did through one night, how they got food and news, and why the job ended. Rathlin Island and St John's Point both have lighthouses with written histories online. Write your three things down, then read them back out loud.",
+    "mins": 20,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-trade-luthier",
+    "test": "Watch or read how a luthier makes a guitar or a violin, and write down three things that surprised you.",
+    "note": "A luthier is a person who makes stringed instruments by hand. Look for which woods they choose, how they bend the sides, and how long one instrument takes. Write your three things down. If you have an instrument at home, look at it again afterwards and find the parts you read about.",
+    "mins": 20,
+    "cat": "music",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-trade-stonemason",
+    "test": "Read or watch about a stonemason's work, and write down three things that surprised you.",
+    "note": "Find out how they split a stone, which tools they use, and how long an apprentice trains. The next time you pass an old church or bank, look at the carved stone and the joins. For tonight, three written things is the finish line.",
+    "mins": 15,
+    "cat": "beauty",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-trade-cooper",
+    "test": "Find out how a cooper makes a wooden barrel without glue or nails, and write down three things that surprised you.",
+    "note": "A cooper is a barrel maker. Watch one short film of a barrel being put together with hoops, and look for how the wood is bent. Write your three things down. Say out loud how you think the barrel stays watertight, then check if you were right.",
+    "mins": 15,
+    "cat": "make",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-trade-shipwright",
+    "test": "Read about the people who built ships in Belfast a hundred years ago, and write down three things that surprised you.",
+    "note": "Look up the jobs inside a shipyard: riveters, platers, joiners, painters. Find out how many people worked there, what hours they kept, and what age they started. Write your three things down. You could read one of them out at tea.",
+    "mins": 20,
+    "cat": "classic",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-trade-bookbinder",
+    "test": "Watch or read how a bookbinder sews and covers a book by hand, and write down three things that surprised you.",
+    "note": "Take a hardback off your shelf first and look at the spine from the top: you may see the folded groups of pages. Then find one film or article on hand bookbinding. Write your three things down, and look at the book again when you are finished.",
+    "mins": 15,
+    "cat": "words",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-trade-waller",
+    "test": "Find out how a dry-stone waller builds a wall with no cement, and write down three things that surprised you.",
+    "note": "Look for how the big stones and the small stones are used, and why the wall is wider at the bottom. Northern Ireland has miles of these walls in the Mournes. Write your three things down, then draw the shape of the wall from the end.",
+    "mins": 15,
+    "cat": "wild",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-make-three-ways",
+    "test": "Draw the same mug three ways: once with lines only, once with shading only, and once in under thirty seconds.",
+    "note": "Any cup, jug or shoe works just as well. Use a pencil or pen and the back of some old paper. Lay the three drawings side by side when you are done and pick the one you like most. The point is to see one thing three times, not to get it right.",
+    "mins": 15,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+  },
+  {
+    "id": "x-make-short-story",
+    "test": "Write a one-page short story that starts with somebody finding a key that fits no door in the house.",
+    "note": "Give it a beginning, a middle and an end, and stop when the page is full. Handwriting on one sheet or a note on your phone both count. If you would rather use your own start, pick any object in the room and ask who lost it. Read it out loud once when you have finished.",
+    "mins": 20,
+    "cat": "words",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+  },
+  {
+    "id": "x-make-chords-ear",
+    "test": "Pick one simple song you know well and work out its chords by ear, using a free tuner or piano app on your phone.",
+    "note": "Hum the first note of the song and find it on the app. Then try the chords that start on that note until one sounds right under the tune. A song with three chords, like many folk songs, is a good first choice. Writing down even the first two chords is a finish line.",
+    "mins": 20,
+    "cat": "music",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "patience"
+  },
+  {
+    "id": "x-make-recycling",
+    "test": "Make one useful thing from the recycling: a pen pot, a seed tray, a drawer divider or a box for cables.",
+    "note": "Rinse and dry what you use first. A cereal box cut down makes a drawer divider; a tin with smooth edges makes a pen pot. Use tape, string or glue you already have, and cover it with old paper if you like. Put it to use tonight.",
+    "mins": 20,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+  },
+  {
+    "id": "x-make-comic",
+    "test": "Draw a four-box comic strip of something that really happened to you this week.",
+    "note": "Fold a page into four and draw one moment in each box. Stick figures are fine; the story is what counts. Add one line of speech in at least two of the boxes. Show it to somebody, or keep it in a drawer to find later.",
+    "mins": 20,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+  },
+  {
+    "id": "x-make-origami",
+    "test": "Fold one paper crane, or another origami animal, by following one free video from start to finish.",
+    "note": "Any square of paper works: cut a square from printer paper or an old envelope. Pause the video after every fold. If the first one goes wrong, the second one almost always goes better, so fold it twice if there is time. Put the finished one where you will see it tomorrow.",
+    "mins": 20,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "patience"
+  },
+  {
+    "id": "x-make-new-words",
+    "test": "Write new words for one verse of a song you already know, about something in your own day.",
+    "note": "Keep the tune and the number of beats in each line. A nursery song, a hymn or a pop song all work. Your words could be about the dog, the drive to school or the weather today. Sing it once out loud, alone or to somebody at home.",
+    "mins": 15,
+    "cat": "music",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+  },
+  {
+    "id": "x-make-one-object-photos",
+    "test": "Take ten photographs of one ordinary object, each from a different angle or light, and keep the best one.",
+    "note": "Try from above, from the floor, very close, by the window, and with a lamp to one side. A spoon, an apple or a shoe is plenty. Delete the other nine when you have picked, so the phone does not fill up. Make the one you keep the lock screen for a day if you like it.",
+    "mins": 15,
+    "cat": "beauty",
+    "kind": "attention",
+    "area": "creativity",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-make-little-book",
+    "test": "Make an eight-page little book from one sheet of paper, and fill every page.",
+    "note": "Fold a sheet into eight, make one cut in the middle, and fold it into a book: one short video shows how. Fill it with anything: a short story, a guide to your house for a visitor, or eight drawings. Give it a title on the front.",
+    "mins": 20,
+    "cat": "words",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+  },
+  {
+    "id": "x-learn-place-history",
+    "test": "Choose one place you love to visit outside your own town, and read about its history until you can tell three facts about it.",
+    "note": "It could be a beach, a castle, a forest park or a church you like. Look for when it was built or named, who lived or worked there, and one thing that changed. Write the three facts down, and say them out loud the next time you are there.",
+    "mins": 20,
+    "cat": "classic",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-learn-poem-heart",
+    "test": "Learn a poem of at least twelve lines by heart and say it out loud with the page turned over.",
+    "note": "Pick one from a book on your shelf or a free poetry website. Learn it four lines at a time, saying each group out loud five times before you add the next. Short cheerful poems work well for children. If you stumble, look once, then start that verse again.",
+    "mins": 20,
+    "cat": "words",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "discipline"
+  },
+  {
+    "id": "x-learn-go",
+    "test": "Learn the rules of the board game go with a free app, and play one whole small game on a nine-by-nine board.",
+    "note": "Most free go apps have a short lesson and a computer player on its easiest setting. The rules fit on one page: place a stone, surround the other colour, count the space you hold. Losing the first game is normal. If you prefer, learn draughts or backgammon the same way.",
+    "mins": 20,
+    "cat": "mind",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "patience"
+  },
+  {
+    "id": "x-learn-primes",
+    "test": "Find out why there is no biggest prime number, and explain the idea out loud without looking at your notes.",
+    "note": "A prime is a number only two numbers go into: itself and one, like 2, 3, 5, 7 and 11. Read or watch one simple explanation of the proof, which is over two thousand years old. Try it with small numbers on paper: multiply 2, 3 and 5, add one, and see what you get.",
+    "mins": 20,
+    "cat": "mind",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-learn-pencil",
+    "test": "Find out the history of one ordinary thing on your table, like the pencil, the fork or the teabag, and tell it in five sentences.",
+    "note": "Look for where it was first made, what people used before it, and how it came to look the way it does. Write your five sentences down and say them out loud. If you are at tea with somebody, ask them to guess the answers first.",
+    "mins": 15,
+    "cat": "classic",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-learn-morse",
+    "test": "Learn the Morse code for every letter of your name, then tap your name on the table from memory.",
+    "note": "A free Morse chart online is all you need. A dot is a short tap and a dash is a long one, with a pause between letters. Learn one letter at a time, then tap the whole name three times without looking. If somebody else is in, tap theirs too.",
+    "mins": 15,
+    "cat": "mind",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "discipline"
+  },
+  {
+    "id": "x-learn-painting",
+    "test": "Choose one famous painting, look at it for five full minutes, then read how and when it was made.",
+    "note": "Open a large picture of it on a screen or in a book. Before you read anything, write down three things you notice. Then read about the painter, the year, and what the painting shows. Look again and find one thing you did not see the first time.",
+    "mins": 15,
+    "cat": "beauty",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-learn-map-region",
+    "test": "Learn the names and places of the countries around one sea you have never studied, and draw them from memory.",
+    "note": "The Baltic Sea or the Black Sea are good choices. Look at a map for five minutes, then close it and draw the sea and the countries round it. Check, fix what you got wrong, and draw it once more. Paper and pencil is all it takes.",
+    "mins": 20,
+    "cat": "mind",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "x-order-under-sink",
+    "test": "Take everything out of the cupboard under the kitchen sink, check the pipes for drips, and put back only what belongs there, standing up.",
+    "note": "Run the tap for a minute and feel the pipes and the cupboard floor with a dry hand. Put the cleaning bottles back upright with their lids tight, and group them by what they clean. Keep anything unsafe for children at the back or up high. The finish line is a dry floor and a door that closes easily.",
+    "mins": 20,
+    "cat": "order",
+    "kind": "skill",
+    "area": "home",
+    "trait": "discipline"
+  },
+  {
+    "id": "x-order-spices",
+    "test": "Take every jar and packet off the spice shelf, check the dates, and put them back in order from A to Z.",
+    "note": "Bin anything well past its date or with no smell left. Tip half-empty packets into a spare clean jar if you have one, and write the name on a piece of tape. Put the ones you use most at the front. The finish line is being able to find the cumin in one look.",
+    "mins": 20,
+    "cat": "order",
+    "kind": "skill",
+    "area": "home",
+    "trait": "discipline"
+  },
+  {
+    "id": "x-order-fridge-door",
+    "test": "Take every jar and bottle out of the fridge door, check each one's date and when it was opened, and put back only what is still good.",
+    "note": "Many jars say on the label how many weeks they keep once opened. Wipe each jar and the door shelves before they go back. Put the tallest bottles on the bottom shelf and the small jars on top. The finish line is a door where every jar is one you will use.",
+    "mins": 15,
+    "cat": "order",
+    "kind": "skill",
+    "area": "home",
+    "trait": "discipline"
+  },
+  {
+    "id": "x-order-glovebox",
+    "test": "Empty the car glovebox and door pockets, and put back only what belongs in a car.",
+    "note": "A good car set is the manual, a pen, a cloth, a torch, a phone cable and a copy of the breakdown number. Check the torch works. Bin the old receipts and bring the rest into the house. If there is no car, do the same with the bag you keep by the door for going out.",
+    "mins": 15,
+    "cat": "order",
+    "kind": "skill",
+    "area": "home",
+    "trait": "discipline"
+  },
+  {
+    "id": "x-order-medicine-dates",
+    "test": "Read the date on every medicine and plaster box in the house, and write a list of what you have and when each one runs out.",
+    "note": "Keep the list on a sheet taped inside the cupboard door or in your phone. Anything past its date can go back to a chemist, who will take it for safe disposal. Add to the list anything you would want in the middle of the night, like plasters or a thermometer. Keep every medicine up high, away from children.",
+    "mins": 20,
+    "cat": "order",
+    "kind": "skill",
+    "area": "health",
+    "trait": "discipline"
+  },
+  {
+    "id": "x-order-chargers",
+    "test": "Tip out the drawer of chargers and cables, match each one to the thing it charges, and label or let go of the rest.",
+    "note": "Test each cable with the phone, the torch or the speaker it belongs to. A strip of tape with a name written on it makes a label. Coil each one loosely and hold it with a hair tie or a twist tie. Cables that match nothing in the house can go to an electrical recycling point.",
+    "mins": 20,
+    "cat": "order",
+    "kind": "skill",
+    "area": "home",
+    "trait": "discipline"
+  },
+  {
+    "id": "x-order-photo-check",
+    "test": "Open your photo backup and find one photograph from three years ago, to prove the backup really works.",
+    "note": "If you back up to a cloud account, sign in on a different device or the website and look there. If you back up to a drive, plug it in and open the picture. If you cannot find it, you now know what to fix, and that is the win for tonight. Write down where the backup lives so somebody else at home could find it too.",
+    "mins": 15,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "discipline"
+  },
+  {
+    "id": "x-order-bathroom-cabinet",
+    "test": "Empty the bathroom cabinet, wipe the shelves, and put things back with one shelf or space for each person.",
+    "note": "Lids back on, empty bottles into the recycling, and the things used every day at the front. Label a shelf with a name on tape if that helps children find their own. The finish line is a cabinet where each person can reach their things without moving somebody else's.",
+    "mins": 15,
+    "cat": "order",
+    "kind": "skill",
+    "area": "home",
+    "trait": "discipline"
+  },
+  {
+    "id": "x-order-hall-shelf",
+    "test": "Clear the hall shelf or table by the front door, and put back only keys, one bowl, and what goes out with you tomorrow.",
+    "note": "Post goes to where post is dealt with, and everything else goes back to its own room. A bowl or a small dish for keys means they are always in one place. If the shed shelf is the bigger job at your house, do that instead with the same rule: only what is used there stays.",
+    "mins": 10,
+    "cat": "order",
+    "kind": "skill",
+    "area": "home",
+    "trait": "discipline"
+  },
+  {
+    "id": "x-order-daily-bag",
+    "test": "Tip out the bag you carry every day, bin the rubbish, and put back only what you used in the last week.",
+    "note": "Check every pocket, including the small zipped one. Wipe the inside with a damp cloth and let it dry open. A small pouch for the little things like lip balm and a pen stops them sinking to the bottom. A school bag or a work bag counts just the same.",
+    "mins": 15,
+    "cat": "order",
+    "kind": "skill",
+    "area": "home",
+    "trait": "discipline"
+  }
+]

@@ -1,0 +1,622 @@
+[
+  {
+    "id": "q-wall-sit",
+    "test": "Slide your back down a wall until your knees are bent at a right angle, and hold it for thirty seconds.",
+    "note": "Feet a little in front of you and hip-width apart, knees over your ankles. If a right angle is too deep, hold it higher up the wall and go lower another day. Stop if anything hurts. Seated version: sit tall on the front edge of a chair and press both feet hard into the floor for thirty seconds.",
+    "mins": 2,
+    "cat": "fit",
+    "kind": "skill",
+    "area": "health",
+    "trait": "discipline"
+  },
+  {
+    "id": "q-heel-raise",
+    "test": "Rise up onto your toes and lower yourself slowly, fifteen times, with one hand resting on the back of a chair.",
+    "note": "Take two counts to go up and three counts to come down. Keep your knees straight but not locked. Stop if anything hurts. Seated version: sit with feet flat and lift both heels as high as they go, fifteen times.",
+    "mins": 2,
+    "cat": "fit",
+    "kind": "skill",
+    "area": "health",
+    "trait": "discipline"
+  },
+  {
+    "id": "q-one-foot-eyes",
+    "test": "Stand on one foot for thirty seconds with your eyes shut, then do the same on the other foot.",
+    "note": "Stand beside a table or a wall so you can put a hand out if you wobble. If thirty seconds is too long, start with ten and count how far you get. Stop if anything hurts. If standing is not possible, sit and lift one foot just off the floor for thirty seconds instead.",
+    "mins": 2,
+    "cat": "body",
+    "kind": "skill",
+    "area": "health",
+    "trait": "patience"
+  },
+  {
+    "id": "q-look-shoulder",
+    "test": "Turn your head slowly to look over your left shoulder, then over your right, five times each side.",
+    "note": "Move slowly and only as far as is comfortable, with your shoulders staying still. Breathe out as you turn. Stop if anything hurts. This works just as well sitting at a table.",
+    "mins": 1,
+    "cat": "body",
+    "kind": "skill",
+    "area": "health",
+    "trait": "calm"
+  },
+  {
+    "id": "q-shoulder-roll",
+    "test": "Roll both shoulders slowly backwards ten times, then forwards ten times.",
+    "note": "Make each circle as big as you can: up to your ears, back, down, and round. Keep your arms loose by your sides. Stop if anything hurts. You can do this sitting down, and if you already do it at your desk, doing it now on purpose counts.",
+    "mins": 1,
+    "cat": "body",
+    "kind": "skill",
+    "area": "health",
+    "trait": "calm"
+  },
+  {
+    "id": "q-wall-stand",
+    "test": "Stand for one minute with your heels, your back and the back of your head all touching a wall.",
+    "note": "Tuck your chin in slightly so your head can reach the wall without tipping up. Let your arms hang and breathe normally. Stop if anything hurts. When you step away, try to keep that same tall shape for the next few steps.",
+    "mins": 2,
+    "cat": "body",
+    "kind": "attention",
+    "area": "health",
+    "trait": "discipline"
+  },
+  {
+    "id": "q-chair-stand",
+    "test": "Stand up from a chair and sit back down ten times without using your hands.",
+    "note": "Cross your arms over your chest, feet flat and a little apart. Sit down slowly rather than dropping. Stop if anything hurts. If it is hard without hands, use one hand on your knee and count how many you manage.",
+    "mins": 2,
+    "cat": "fit",
+    "kind": "skill",
+    "area": "health",
+    "trait": "discipline"
+  },
+  {
+    "id": "q-heel-to-toe",
+    "test": "Walk ten steps in a straight line, placing each heel right up against the toes of the other foot.",
+    "note": "Use the edge of a rug or a line between floorboards as your guide. Look ahead, not down at your feet, and hold your arms out to the side. Stop if anything hurts. Walk beside a wall so you can touch it if you need to.",
+    "mins": 2,
+    "cat": "body",
+    "kind": "skill",
+    "area": "health",
+    "trait": "patience"
+  },
+  {
+    "id": "q-breath-arms",
+    "test": "Raise your arms slowly above your head as you breathe in, and lower them as you breathe out, eight times.",
+    "note": "Breathe in through your nose for a count of four while the arms go up, and out for a count of six while they come down. Let the arms follow the breath, not the other way round. Stop if anything hurts. Sitting on a chair works exactly the same.",
+    "mins": 2,
+    "cat": "body",
+    "kind": "attention",
+    "area": "health",
+    "trait": "calm"
+  },
+  {
+    "id": "q-calf-stretch",
+    "test": "Stretch the back of each lower leg against a wall for thirty seconds a side.",
+    "note": "Hands on the wall, one foot forward with the knee bent, the other leg straight behind with the heel pressed flat to the floor. Lean in until you feel a gentle stretch, not pain. Stop if anything hurts. Seated version: sit with one leg straight out, heel on the floor, and pull your toes back towards you.",
+    "mins": 2,
+    "cat": "fit",
+    "kind": "skill",
+    "area": "health",
+    "trait": "patience"
+  },
+  {
+    "id": "q-doorway-stretch",
+    "test": "Stand in a doorway with your forearms on the frame at shoulder height and lean gently forward for thirty seconds.",
+    "note": "Step one foot through the door and let your weight move slowly onto it until you feel the front of your chest open. Keep your head up and breathe slowly. Stop if anything hurts. Without a doorway: clasp your hands behind your back and lift them a little away from you.",
+    "mins": 1,
+    "cat": "fit",
+    "kind": "skill",
+    "area": "health",
+    "trait": "calm"
+  },
+  {
+    "id": "q-march",
+    "test": "March on the spot for two minutes, lifting your knees as high as your hips.",
+    "note": "Swing your arms as you go, right arm with left knee. Put on one song and march until it is two minutes in. Stop if anything hurts. Seated version: sit near the front of a chair and lift your knees in turn, arms swinging.",
+    "mins": 2,
+    "cat": "fit",
+    "kind": "skill",
+    "area": "health",
+    "trait": "joy"
+  },
+  {
+    "id": "q-bridge",
+    "test": "Lie on your back with your knees bent, and lift your hips until you make a straight line from knees to shoulders, ten times.",
+    "note": "Feet flat and hip-width apart, arms by your sides with palms down. Hold each lift for two seconds at the top, then lower slowly. Stop if anything hurts. A rug or a folded towel under your back is plenty.",
+    "mins": 3,
+    "cat": "fit",
+    "kind": "skill",
+    "area": "health",
+    "trait": "discipline"
+  },
+  {
+    "id": "q-hands-knees-reach",
+    "test": "On your hands and knees, stretch your right arm forward and your left leg back, hold for five seconds, then swap sides, six times each.",
+    "note": "Keep your back flat enough that a cup could sit on it without sliding. Look at the floor, not ahead. Stop if anything hurts. Seated version: sit tall and lift your right arm and left knee together, then swap.",
+    "mins": 3,
+    "cat": "fit",
+    "kind": "skill",
+    "area": "health",
+    "trait": "patience"
+  },
+  {
+    "id": "q-ankle-circles",
+    "test": "Sit on a chair, lift one foot, and draw ten slow circles with your toes each way. Then change feet.",
+    "note": "Make the circles as wide as the ankle will go, moving only the foot, not the whole leg. Then write the letters of your name in the air with your toes for a change. Stop if anything hurts. This one is made for sitting, so it suits a desk or a sofa.",
+    "mins": 2,
+    "cat": "body",
+    "kind": "skill",
+    "area": "health",
+    "trait": "patience"
+  },
+  {
+    "id": "q-floor-rise",
+    "test": "Sit down on the floor and stand back up again, three times, using your hands as little as you can.",
+    "note": "Cross your legs or kneel on the way down, then find the easiest way up. Count how many hands or knees you needed and see if it gets fewer by the third go. Stop if anything hurts. Skip this one if your knees are sore, and do the chair stand instead: up and down from a chair ten times.",
+    "mins": 2,
+    "cat": "fit",
+    "kind": "skill",
+    "area": "health",
+    "trait": "confidence"
+  },
+  {
+    "id": "q-one-line-cup",
+    "test": "Draw a cup in one line, without lifting the pen off the paper.",
+    "note": "Put a real cup in front of you and let the line wander round the rim, down the side, round the handle and back. It will look a bit wobbly, and that is how these drawings are meant to look. Any pen and the back of an envelope will do.",
+    "mins": 2,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+  },
+  {
+    "id": "q-paper-box",
+    "test": "Fold a square of paper into a small open box with no glue or tape.",
+    "note": "Fold the corners to the centre, then fold two sides in to meet the middle, open out, and lift the ends to form walls. Look up a masu box if you get stuck, and follow one set of steps at a time. A page from an old magazine or a sheet of printer paper cut square is plenty.",
+    "mins": 5,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "patience"
+  },
+  {
+    "id": "q-tear-square",
+    "test": "Turn a rectangle of paper into a perfect square with one fold and one tear.",
+    "note": "Fold one corner down so the short edge lies exactly along the long edge. Crease the fold hard, then tear off the strip left below it. Open it out and you have a square, ready for the next folding item.",
+    "mins": 1,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-paper-boat",
+    "test": "Fold a sheet of paper into a boat that stands up on the table.",
+    "note": "Fold the sheet in half, fold the top corners down to make a triangle, fold the bottom strips up on each side, then open the middle and flatten it into a square before pulling the two points apart. Look up a paper boat if you lose your place. Printer paper or a page of an old newspaper both work.",
+    "mins": 4,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+  },
+  {
+    "id": "q-figure-eight",
+    "test": "Tie a figure-of-eight knot in a shoelace or a piece of string.",
+    "note": "Make a loop, pass the end round behind the standing part, then feed it back down through the loop. Pull both ends and it should look like the number eight. Untie it and tie it again with your eyes shut.",
+    "mins": 2,
+    "cat": "make",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "patience"
+  },
+  {
+    "id": "q-bow-eyes-shut",
+    "test": "Tie a shoelace bow with your eyes shut, and check it is tight.",
+    "note": "Take your shoe off and put it on your lap, or tie it while it is on your foot. Go slowly and feel each loop with your fingers. If you already tie laces without looking, try the double bow that does not come undone.",
+    "mins": 1,
+    "cat": "make",
+    "kind": "skill",
+    "area": "knowledge",
+    "trait": "confidence"
+  },
+  {
+    "id": "q-draw-hand",
+    "test": "Draw your own hand as it rests on the table, in three minutes.",
+    "note": "Start with the shape of the gaps between the fingers rather than the fingers themselves. Look at the hand more than you look at the paper. Pencil or pen both work, and nobody needs to see it.",
+    "mins": 3,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "patience"
+  },
+  {
+    "id": "q-shade-ball",
+    "test": "Draw a circle and shade it so it looks like a round ball.",
+    "note": "Pick one side for the light to come from. Leave a small white spot near that side, shade darker the further you get from it, and add a dark shadow on the table under the ball. An ordinary pencil pressed harder or softer is all you need.",
+    "mins": 3,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-block-letters",
+    "test": "Write your first name in big hollow block letters and shade them in.",
+    "note": "Draw each letter as a thin outline first, then go round it to make it thick. Shade in stripes, dots or solid colour. A biro is fine; felt tips are a bonus if they are already in the house.",
+    "mins": 4,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+  },
+  {
+    "id": "q-paper-fan",
+    "test": "Fold a sheet of paper back and forth into a fan, with every fold the same width.",
+    "note": "Make the first fold about two fingers wide, then turn the paper over and fold again along the edge. Pinch one end together when you finish and open the other end out. Try to make every fold line up exactly with the last.",
+    "mins": 2,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "patience"
+  },
+  {
+    "id": "q-room-map",
+    "test": "Draw a map of the room you are in as if looking down from the ceiling, with every piece of furniture in its place.",
+    "note": "Start with the walls, then mark the door and the window, then the big things like a bed, a table or a sofa. Use squares and rectangles only. Check it by standing where the map says the door is.",
+    "mins": 3,
+    "cat": "make",
+    "kind": "attention",
+    "area": "creativity",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-paper-envelope",
+    "test": "Fold a sheet of paper into an envelope with no glue.",
+    "note": "Fold the sheet into a diamond shape: fold two side corners to the middle, fold the bottom corner up, then tuck the top corner down into the pocket. Put a short note inside if you like. Any sheet of printer paper works.",
+    "mins": 3,
+    "cat": "make",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+  },
+  {
+    "id": "q-one-drawer",
+    "test": "Empty one kitchen drawer onto the counter, wipe it out, and put back only what belongs in it.",
+    "note": "Pick the drawer that sticks or rattles most. Anything that lives somewhere else goes to that place, and anything broken goes in the bin. If the kitchen is busy, a bedside drawer works just as well.",
+    "mins": 5,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "discipline"
+  },
+  {
+    "id": "q-empty-bag",
+    "test": "Empty the bag you carry most days, bin the rubbish, and put back only what you need tomorrow.",
+    "note": "Tip it out onto a table so you can see everything at once. Receipts, wrappers and dead pens go first. A school bag, a handbag or a rucksack all count.",
+    "mins": 3,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "discipline"
+  },
+  {
+    "id": "q-ten-photos",
+    "test": "Delete ten photos from your phone that are blurry, doubled, or of something you no longer need.",
+    "note": "Start with the most recent week and scroll back. A photo of a parking ticket or a shopping list from last month is a good first choice. Stop at ten, and then empty the recently deleted folder only if you are sure.",
+    "mins": 2,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "discipline"
+  },
+  {
+    "id": "q-bottom-row",
+    "test": "Put the four apps you use most into the bottom row of your phone's home screen.",
+    "note": "Press and hold an app until the icons move, then drag each one down. Choose the four you open every day, like messages, phone, camera and a calendar. Anything that was there before and is not used every day goes further back.",
+    "mins": 2,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "discipline"
+  },
+  {
+    "id": "q-bedside",
+    "test": "Clear the top of your bedside table so only three things are left on it.",
+    "note": "Lift everything off first, wipe the top, then choose three, for example a lamp, a book and a glass of water. Everything else goes to where it lives. If you have no bedside table, do the windowsill in your room.",
+    "mins": 2,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "calm"
+  },
+  {
+    "id": "q-fridge-door",
+    "test": "Take everything off the front of the fridge and put back only what is still current.",
+    "note": "Old appointment cards and last term's letters go in the recycling. Drawings and photos you love go back up, a little straighter than before. If the fridge front is already clear, do the noticeboard or the pile by the kettle.",
+    "mins": 3,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "discipline"
+  },
+  {
+    "id": "q-coat-hooks",
+    "test": "Take every coat and bag off the hooks by the door and hang back only the ones used this week.",
+    "note": "Out-of-season coats go to a wardrobe or a cupboard. Hang one thing per hook if you can. If there are no hooks, do the pile of shoes or coats on the stairs.",
+    "mins": 3,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "discipline"
+  },
+  {
+    "id": "q-pen-test",
+    "test": "Test every pen in one pot or drawer by scribbling with it, and bin the ones that do not write.",
+    "note": "Scribble a small spiral on scrap paper with each. Put the good ones back point down and caps on. A child can do this one on their own.",
+    "mins": 3,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "patience"
+  },
+  {
+    "id": "q-wallet",
+    "test": "Take everything out of your wallet or purse and put back only the cards and papers you still use.",
+    "note": "Old receipts, used tickets and expired cards come out. Put the card you use most in the easiest slot to reach. A phone case with cards in it counts too.",
+    "mins": 3,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "discipline"
+  },
+  {
+    "id": "q-sink-edge",
+    "test": "Clear everything off the edge around the bathroom sink, wipe it, and put back only what gets used every day.",
+    "note": "Empty bottles go in the recycling, and spares go in a cupboard. A cloth with warm water is enough for the wipe. If there is a shelf above the sink, do that instead or as well.",
+    "mins": 2,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "discipline"
+  },
+  {
+    "id": "q-cups-home",
+    "test": "Walk round the house and bring every cup, mug and glass back to the kitchen.",
+    "note": "Check bedsides, windowsills, the floor by the sofa and the hall table. Rinse them as they arrive, or stack them by the sink. Count how many you found.",
+    "mins": 2,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "kindness"
+  },
+  {
+    "id": "q-tins-front",
+    "test": "Turn every tin and jar in one cupboard so the labels face forward, with the oldest date at the front.",
+    "note": "Take a quick look at each date as you turn it. Anything past its date goes on the counter to deal with today. A shelf of spices or a row of cereal boxes works just as well.",
+    "mins": 3,
+    "cat": "order",
+    "kind": "attention",
+    "area": "home",
+    "trait": "patience"
+  },
+  {
+    "id": "q-thank-specific",
+    "test": "Send one message thanking somebody for a specific thing they did, and name the thing.",
+    "note": "For example: \"Thanks for the lift on Tuesday, it made my whole morning easier.\" One or two sentences is enough. If you thanked them at the time, thanking them again now on purpose counts.",
+    "mins": 2,
+    "cat": "care",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "kindness"
+  },
+  {
+    "id": "q-hidden-note",
+    "test": "Write a short kind note and leave it where somebody in the house will find it today.",
+    "note": "Inside a lunchbox, on a pillow or on the kettle all work. Say one true thing, like \"You made the dinner great last night.\" If you live alone, leave it in a birthday card you will post, or send the same words as a message.",
+    "mins": 2,
+    "cat": "care",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "kindness"
+  },
+  {
+    "id": "q-kind-review",
+    "test": "Write a short, true, kind review for a local shop, café or tradesperson you have used.",
+    "note": "Name one thing they did well, like \"Fixed our boiler the same day and tidied up after.\" Put it on the map app or website where people find them. If they have no page, send them the same words as a message.",
+    "mins": 4,
+    "cat": "care",
+    "kind": "kindness",
+    "area": "community",
+    "trait": "kindness"
+  },
+  {
+    "id": "q-compliment-written",
+    "test": "Write down one true compliment about somebody you know, then send it or say it to them today.",
+    "note": "Make it about something they did rather than how they look, for example \"You are really patient with your little brother.\" Writing it first helps you say it clearly. A text message counts.",
+    "mins": 2,
+    "cat": "care",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "courage"
+  },
+  {
+    "id": "q-their-job",
+    "test": "Do one small job that somebody else in the house usually does, without mentioning it.",
+    "note": "Empty the dishwasher, fill the kettle, or bring the washing in off the radiator. Pick the job that person does most often. If you live alone, do one job for yourself for tomorrow, like setting out a clean mug by the kettle.",
+    "mins": 3,
+    "cat": "care",
+    "kind": "kindness",
+    "area": "home",
+    "trait": "kindness"
+  },
+  {
+    "id": "q-make-drink",
+    "test": "Make a drink for somebody in the house and bring it to them without being asked.",
+    "note": "Ask how they take it if you do not know, or bring them water. Children can pour a glass of juice or water. If nobody else is home, send somebody a message asking how their day is going.",
+    "mins": 3,
+    "cat": "care",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "kindness"
+  },
+  {
+    "id": "q-old-teacher",
+    "test": "Write three lines to a teacher, coach or boss from years ago, saying one thing they taught you.",
+    "note": "Line one says who you are, line two names the thing, line three says how you still use it. Send it if you can find them online or through the school. If not, keep it in a notebook; writing it counts.",
+    "mins": 4,
+    "cat": "care",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "kindness"
+  },
+  {
+    "id": "q-voice-message",
+    "test": "Send a thirty-second voice message to a grandparent or older relative, telling them one thing from your day.",
+    "note": "Say who it is, say one thing you did or saw, and say you hope they are well. If there is no older relative, send it to an older neighbour or friend. A written message is fine for anybody who does not use voice messages.",
+    "mins": 2,
+    "cat": "speak",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "kindness"
+  },
+  {
+    "id": "q-birthdays",
+    "test": "Put the birthdays of five people you care about into your phone's calendar, set to repeat every year.",
+    "note": "Add a reminder for two days before so there is time to send a card or a message. If you do not know a date, ask them or a family member by message. A paper calendar on the wall works too.",
+    "mins": 3,
+    "cat": "care",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "discipline"
+  },
+  {
+    "id": "q-noticed-effort",
+    "test": "Message somebody who has worked hard at something lately and tell them you noticed.",
+    "note": "For example: \"I saw how much practice you put into the concert. Well done.\" It could be a friend studying, a neighbour doing up a garden, or a cousin learning to drive. One sentence is enough.",
+    "mins": 2,
+    "cat": "speak",
+    "kind": "kindness",
+    "area": "relationships",
+    "trait": "kindness"
+  },
+  {
+    "id": "q-ask-help",
+    "test": "Ask somebody in the house if there is one thing you can do for them right now, and then do it.",
+    "note": "Say it plainly: \"Is there anything I can do for you in the next five minutes?\" If they say no, offer one thing, like fetching a jumper or setting the table. If you live alone, message a friend with the same offer for later in the week.",
+    "mins": 3,
+    "cat": "care",
+    "kind": "kindness",
+    "area": "home",
+    "trait": "kindness"
+  },
+  {
+    "id": "q-thank-collectors",
+    "test": "Write a thank-you note to the postman or the bin collectors and put it where they will see it.",
+    "note": "Tape it to the inside of the front window or put it in a clear bag on the lid of the bin. Big letters and one line is enough: \"Thank you for coming out in the wind and the rain.\" A drawing from a child is a lovely addition.",
+    "mins": 3,
+    "cat": "care",
+    "kind": "kindness",
+    "area": "community",
+    "trait": "kindness"
+  },
+  {
+    "id": "q-look-object",
+    "test": "Pick one object near you, look at it for two minutes, then write down five things about it you had not noticed before.",
+    "note": "A mug, a key or a houseplant are good choices. Look at its colour in the light, the marks on it, its shadow and its edges. Pen and paper, or the notes app on your phone.",
+    "mins": 3,
+    "cat": "beauty",
+    "kind": "attention",
+    "area": "experiences",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-hum-breath",
+    "test": "Hum one steady note for as long as one breath lasts, five times.",
+    "note": "Breathe in slowly through your nose, then hum with your mouth closed until the breath runs out. Try a lower note, then a higher one, and feel where each one buzzes. If you hum along to music already, doing it now on purpose counts.",
+    "mins": 2,
+    "cat": "music",
+    "kind": "attention",
+    "area": "emotions",
+    "trait": "calm"
+  },
+  {
+    "id": "q-clap-names",
+    "test": "Clap the rhythm of the full names of everybody in your house, one clap for each beat of each name.",
+    "note": "\"Ka-tie Mc-Cann\" is four claps; \"Tom Rea\" is two. Say the name as you clap, then try clapping it without saying it. Add friends, pets or your street name if the house is small.",
+    "mins": 2,
+    "cat": "music",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "joy"
+  },
+  {
+    "id": "q-shelf-three",
+    "test": "Rearrange three things on one shelf until they look right to you.",
+    "note": "Try one tall thing, one wide thing and one small thing, with a little space between each. Move them, step back, and move them again until you stop wanting to. A windowsill or the top of a chest of drawers works just as well.",
+    "mins": 3,
+    "cat": "beauty",
+    "kind": "attention",
+    "area": "home",
+    "trait": "joy"
+  },
+  {
+    "id": "q-music-eyes-shut",
+    "test": "Listen to one piece of music from start to finish with your eyes shut and nothing else going on.",
+    "note": "Pick something without words if you can, like a short piece of classical or film music under five minutes. Sit, press play, close your eyes and stay until the last note. Radio, phone speaker or headphones all work.",
+    "mins": 5,
+    "cat": "music",
+    "kind": "attention",
+    "area": "spirituality",
+    "trait": "calm"
+  },
+  {
+    "id": "q-window-colours",
+    "test": "Look out of the window and name ten different colours you can see.",
+    "note": "Go past the easy ones: not only green, but the dark green of a hedge and the yellow-green of new grass. Say them out loud or write them down. From a room with no window, name ten colours on the objects around you.",
+    "mins": 2,
+    "cat": "beauty",
+    "kind": "attention",
+    "area": "experiences",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-best-light",
+    "test": "Find the spot in your home where the light is best right now, and stand or sit in it for one minute.",
+    "note": "Walk from room to room and look at where the daylight or lamplight falls. Notice what it lands on, like a wall, a chair or the floor. In the evening, a single lamp in a dark room counts.",
+    "mins": 1,
+    "cat": "beauty",
+    "kind": "attention",
+    "area": "emotions",
+    "trait": "joy"
+  },
+  {
+    "id": "q-two-hand-beat",
+    "test": "Tap a steady beat on a table with one hand while the other hand taps twice as fast, for one minute.",
+    "note": "Count \"one, two, three, four\" out loud with the slow hand, and fit two taps into each count with the fast hand. When it feels steady, swap hands. Your knees work if there is no table.",
+    "mins": 2,
+    "cat": "music",
+    "kind": "skill",
+    "area": "creativity",
+    "trait": "patience"
+  },
+  {
+    "id": "q-glass-notes",
+    "test": "Pour water into a glass to three different levels, tapping it gently with a spoon each time, and listen to the note change.",
+    "note": "Use a sturdy glass or a mug on a flat table, and tap softly. Listen for whether the note goes higher or lower as the water rises. Line up three glasses if you have them and play a short tune.",
+    "mins": 3,
+    "cat": "music",
+    "kind": "attention",
+    "area": "knowledge",
+    "trait": "curiosity"
+  },
+  {
+    "id": "q-rough-smooth",
+    "test": "Touch five different surfaces in the room and put them in order from roughest to smoothest.",
+    "note": "A wall, a cushion, a book cover, a window and a wooden table all make a good set. Close your eyes while you touch each one. Say the order out loud, then check it again.",
+    "mins": 2,
+    "cat": "beauty",
+    "kind": "attention",
+    "area": "experiences",
+    "trait": "curiosity"
+  }
+]

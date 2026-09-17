@@ -646,14 +646,26 @@
   const inSceneNow = () => inScene();
   const inScene = () => { const c = $('stage').classList; return c.contains('school') || c.contains('room') || c.contains('arrive') || c.contains('portico'); };
   const skey = (tr, st) => tr.id + '#' + st.n;
-  const trackImg = tr => 'images/track/' + tr.id + '.jpg' + (tr.pic ? '?v=' + tr.pic : '');
+  const trackImg = tr => tr.solo ? 'images/cat/' + tr.cat + '.jpg' : 'images/track/' + tr.id + '.jpg' + (tr.pic ? '?v=' + tr.pic : '');
   const sdone = k => !!S.school.done[k];
   const trackDone = tr => tr.steps.filter(s => sdone(skey(tr, s))).length;
   const nextStep = tr => tr.steps.find(s => !sdone(skey(tr, s)));
-  const catOf = tr => SCH.categories.find(c => c.tracks.includes(tr));
+  const catOf = tr => SCH.categories.find(c => c.tracks.includes(tr)) || (tr && tr.cat && SCH.categories.find(c => c.id === tr.cat));
   const allTracks = () => SCH.categories.flatMap(c => c.tracks);
   const trackById = id => allTracks().find(t => t.id === id);
-  const findStep = key => { for (const tr of allTracks()) for (const st of tr.steps) if (skey(tr, st) === key) return [tr, st]; return null; };
+  /* v74, his: the daily pool needs its own short things that belong to NO ladder, so three quick
+     things are not three invitations to a three-month project. school.json `daily.quick` and
+     `daily.extra` become one-rung tracks (`solo`) that live outside every room, area and count of
+     ladders, keyed `daily.<id>#1`, so a Done, a trait, a point and the step sheet all just work. */
+  let SOLO = null, STEPIX = null;
+  function soloTracks() {
+    if (SOLO) return SOLO; const D = (SCH && SCH.daily) || {};
+    const mk = (it, kind) => ({ id: 'daily.' + it.id, name: '', solo: kind, cat: it.cat, area: it.area, trait: it.trait,
+      steps: [{ n: 1, test: it.test, note: it.note, how: it.how, ctx: it.ctx || 'room', kind: it.kind || 'attention', mins: it.mins }] });
+    return SOLO = (D.quick || []).map(it => mk(it, 'quick')).concat((D.extra || []).map(it => mk(it, 'extra')));
+  }
+  const findStep = key => { if (!STEPIX) { STEPIX = new Map(); for (const tr of allTracks().concat(soloTracks())) for (const st of tr.steps) STEPIX.set(skey(tr, st), [tr, st]); }
+    return STEPIX.get(key) || null; };
   /* ---- the little one (v47) ----
      His decision: the under-sevens share the parent's phone and the parent's
      account, and never get a hand-over app. So a child is a second `school`
@@ -666,7 +678,7 @@
   const isLittle = tr => tr.strand === 'little';
   const littleTracks = () => allTracks().filter(isLittle);
   function switchTo(who) { if (S.who === who || (who === 'kid' && !S.kid)) return; const mine = S.school; S.school = S.kid.school; S.kid.school = mine; S.who = who; save(); }
-  const points = () => Object.keys(S.school.done).length + (isKid() ? 0 : S.done.length) + (S.school.refresh || 0);
+  const points = () => Object.keys(S.school.done).length + (isKid() ? 0 : S.done.length) + (S.school.refresh || 0) + extrasDone().length * extraPts();
   /* ---- going rusty ----
      His rule, and it replaced the opposite one: you do NOT get to tick a step
      because you could do it once. "A lot of people might have fasted a year or
@@ -714,13 +726,21 @@
      many (a flat, a town, central Europe). Tagged `place` on the ladder or the rung; the daily picks
      skip them all. Later: a place profile that lets the right ones back in. */
   const placeOf = (tr, st) => (st && st.place) || (tr && tr.place) || null;
+  /* v74, his length rule: three minutes and under is the target for a daily quick thing, five is
+     acceptable, ten never appears as one of the three. A rung nobody has timed (`mins`) stays out. */
+  const QUICK_MAX = 5, QUICK_AIM = 3;
+  const shortStep = st => typeof st.mins === 'number' && st.mins <= QUICK_MAX;
+  const isSolo = k => k.startsWith('daily.');
   function quickCandidates(which) {
-    const ok = ([tr, st]) => fits(tr, st, which) && !placeOf(tr, st);
+    const ok = ([tr, st]) => fits(tr, st, which) && !placeOf(tr, st) && shortStep(st);
     const easy = (SCH.journey.find(j => j.id === 'easy') || { steps: [] }).steps.map(findStep).filter(Boolean).filter(([tr, st]) => !sdone(skey(tr, st))).filter(ok);
     const firsts = allTracks().map(tr => [tr, nextStep(tr)]).filter(([tr, st]) => st && st.n === 1 && !easy.some(([t2]) => t2 === tr)).filter(ok);
     const little = isKid() ? firsts.filter(([tr]) => isLittle(tr)) : [];
     const room = firsts.filter(([tr, st]) => st.ctx === 'room' && !little.includes(tr)), rest = firsts.filter(([tr, st]) => st.ctx !== 'room' && !isLittle(tr));
-    return seededShuffle(little, daySeed() + 3).concat(seededShuffle(easy, daySeed()), seededShuffle(room, daySeed() + 7), seededShuffle(rest, daySeed() + 11));
+    /* the standalone ones come back round after half a year: they are things to do, not rungs climbed */
+    const solo = soloTracks().filter(tr => tr.solo === 'quick').map(tr => [tr, tr.steps[0]])
+      .filter(([tr, st]) => { const v = S.school.done[skey(tr, st)]; return !v || (daysAgo(localDay(v)) || 0) >= 180; }).filter(ok);
+    return seededShuffle(little, daySeed() + 3).concat(seededShuffle(easy.concat(room, solo), daySeed() + 7), seededShuffle(rest, daySeed() + 11));
   }
   function todayPicks(which) {
     const T = S.school.today; const d = today();
@@ -728,7 +748,7 @@
     const t = S.school.today; t.later = t.later || [];
     const key = which === 'later' ? 'later' : 'picks', limit = which === 'later' ? 4 : 6;
     const cand = quickCandidates(which).map(([tr, st]) => skey(tr, st));
-    t[key] = t[key].filter(k => { const r = findStep(k); return r && !sdone(k) && fits(r[0], r[1], which); });
+    t[key] = t[key].filter(k => { const r = findStep(k); return r && (!sdone(k) || cand.includes(k)) && fits(r[0], r[1], which) && shortStep(r[1]); });
     /* His rule (2026-09-12): the picks must be DIFFERENT kinds of thing — one
        physical, one for the mind, one social, one to make — so that whatever
        mood you are in, one of them catches you. Three passes: a family not yet
@@ -741,8 +761,18 @@
     const resting = k => { const sh = SH[k]; if (!sh || sh[d]) return false; const days = Object.keys(sh).sort(); if (days.length < 3) return false; return (daysAgo(days[days.length - 1]) || 0) < 14; };
     t[key] = t[key].filter(k => !resting(k));
     const pool = cand.filter(k => !t[key].includes(k) && !t.skip.includes(k) && !resting(k));
-    for (const pass of ['group', 'cat', 'any']) for (const k of pool) {
+    /* v74, his: three first rungs a day were three invitations to a three-month project, and a
+       five-minute thing is the most any of the three should ask. So among the first three: at most
+       one ladder rung (when there are standalone ones to offer) and at most one over three minutes.
+       The last pass lifts both, so a thin pool never leaves the card empty. */
+    const minsOf = k => { const r = findStep(k); return r ? r[1].mins : 99; };
+    const soloLeft = which !== 'later' && !isKid() && pool.some(isSolo);
+    const shape = k => { const top = t[key].slice(0, 3); if (top.length >= 3) return true;
+      if (soloLeft && !isSolo(k) && top.filter(x => !isSolo(x)).length >= 1) return false;
+      if (minsOf(k) > QUICK_AIM && top.filter(x => minsOf(x) > QUICK_AIM).length >= 1) return false; return true; };
+    for (const pass of ['group', 'cat', 'any', 'loose']) for (const k of pool) {
       if (t[key].length >= limit) break; if (t[key].includes(k)) continue; const r = findStep(k); if (!r) continue;
+      if (pass !== 'loose' && !shape(k)) continue;
       if (pass === 'group' && have(groupOf).has(groupOf(r[0]))) continue;
       if (pass === 'cat' && have(tr => catOf(tr).id).has(catOf(r[0]).id)) continue;
       t[key].push(k); }
@@ -957,7 +987,7 @@
     const lit = daysLit(), t = today(), days = [];
     for (let i = 6; i >= 0; i--) { const d = new Date(); d.setDate(d.getDate() - i); days.push(d); }
     const dk = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
-    return `<div class="wrow">${days.map(d => `<span class="wk ${lit.has(dk(d)) ? 'on' : ''} ${dk(d) === t ? 'td' : ''}"><i></i><b>${d.toLocaleDateString('en-GB', { weekday: 'narrow' })}</b></span>`).join('')}</div>`;
+    return `<div class="wrow">${days.map(d => `<span class="wk ${lit.has(dk(d)) ? 'on' : ''} ${dk(d) === t ? 'td' : ''} ${(S.school.extras || {})[dk(d)] ? 'x' : ''}"><i></i><b>${d.toLocaleDateString('en-GB', { weekday: 'narrow' })}</b></span>`).join('')}</div>`;
   }
   /* Today and the run, together, at the BOTTOM. "The most important thing is
      the little bar which looks cool and is small... and then right underneath
@@ -1074,10 +1104,17 @@
     /* v72, his: the Becoming page confused a new account. It is a snapshot now: one bar per
        life area (tap it to go to that area's ladders), then what it builds, the rest folded. */
     const ST = C.school.standing || {}, P = (C.school.traits || {}).page || {};
-    const total = Object.keys(S.school.done).length + S.done.length;
+    const total = Object.keys(S.school.done).length + S.done.length + extrasDone().length;
+    /* v74: a standalone quick thing or an extra has no ladder, so it counts by its own area and
+       trait; an extra taken from a ladder rung counts where that ladder lives */
+    const loose = { area: {}, trait: {} };
+    const addLoose = k => { const r = findStep(k); if (!r) return; const tr = r[0];
+      const a = tr.solo ? tr.area : (areaOf(tr) || {}).id, t = tr.solo ? tr.trait : ((SCH.traits || []).find(x => x.tracks.includes(tr.id)) || {}).id;
+      if (a) loose.area[a] = (loose.area[a] || 0) + 1; if (t) loose.trait[t] = (loose.trait[t] || 0) + 1; };
+    Object.keys(S.school.done).filter(isSolo).forEach(addLoose); extrasDone().forEach(x => addLoose(x.k));
     const countIn = ids => ids.map(trackById).filter(Boolean).reduce((n, tr) => n + trackDone(tr), 0);
-    const areas = (SCH.areas || []).map(a => ({ a, n: countIn(a.tracks) })), amax = Math.max(10, ...areas.map(x => x.n));
-    const traits = (SCH.traits || []).map(t => ({ t, n: countIn(t.tracks) })), tmax = Math.max(10, ...traits.map(x => x.n));
+    const areas = (SCH.areas || []).map(a => ({ a, n: countIn(a.tracks) + (loose.area[a.id] || 0) })), amax = Math.max(10, ...areas.map(x => x.n));
+    const traits = (SCH.traits || []).map(t => ({ t, n: countIn(t.tracks) + (loose.trait[t.id] || 0) })), tmax = Math.max(10, ...traits.map(x => x.n));
     const bar = (id, name, n, max, cls) => `<button class="rr ${cls}" data-go="${id}"><span>${name}</span><i><b style="width:${Math.round(n / max * 100)}%"></b></i><small>${fmt1(ST.steps || '{n} step{s}', { n, s: n === 1 ? '' : 's' })}</small></button>`;
     stageBack(closeRoom);
     const can = allTracks().map(tr => { const done = tr.steps.filter(st => sdone(skey(tr, st))); if (!done.length) return null; const top = done[done.length - 1]; const when = S.school.done[skey(tr, top)] || ''; return { tr, top, n: done.length, when: typeof when === 'string' ? when : '' }; }).filter(Boolean).sort((x, y) => y.when.localeCompare(x.when));
@@ -1121,7 +1158,7 @@
       `<div class="acard"><span class="eyebrow">${(C.school.awards.show || {}).ladder || 'The ladder'}</span>
         <div class="chips">${RK.map((x, i) => `<span class="chip ${i <= lvl ? 'got' : ''} ${i === lvl ? 'this' : ''}">${x[1]}<small>${Math.max(1, x[0])}</small></span>`).join('')}</div>
         <p class="rule">${(C.school.rankLines || {})[r.name] || ''}</p></div>` +
-      `<div class="acard" id="runsec"><span class="eyebrow">${R.title || 'Days in a row'}</span>${runCard(true)}</div>` +
+      `<div class="acard" id="runsec"><span class="eyebrow">${R.title || 'Days in a row'}</span>${runCard(true)}</div>` + extraMonth() +
       `<div class="acard"><span class="eyebrow">${R.shelfTitle || 'What days in a row earn'}</span>
         <p class="lede">${R.lede || ''}</p>
         <div class="stonelist">${stones.map(a => `<button class="stonerow ${a.earned ? 'on' : ''}" data-tro="${a.id}">
@@ -1161,7 +1198,7 @@
     step();
   }
   function foldCard(key, title, inner, open) { return `<details class="fold" data-fold="${key}" ${open ? 'open' : ''}><summary>${title}</summary><div class="fbody">${inner}</div></details>`; }
-  const pickRow = ([tr, st]) => { const c = catOf(tr), P = C.arrival, nd = (isKid() && isLittle(tr)) ? null : needsOf(st); return `<div class="pick" style="--c:${c.accent};--c2:${c.accent2}"><img src="${trackImg(tr)}" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span class="ptxt"><span class="scat">${c.name} · ${tr.name}${nd ? ` <b class="need ${nd}">${(P.needs || {})[nd] || nd}</b>` : ''}</span><span class="stest">${st.test}</span></span><span class="pbtns"><button class="btn btn-gold sm wide" data-do="${skey(tr, st)}">${P.do}</button><button class="btn btn-ghost sm" data-not="${skey(tr, st)}">${P.notThis}</button></span></div>`; };
+  const pickRow = ([tr, st]) => { const c = catOf(tr), P = C.arrival, nd = (isKid() && isLittle(tr)) ? null : needsOf(st); return `<div class="pick" style="--c:${c.accent};--c2:${c.accent2}"><img src="${trackImg(tr)}" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span class="ptxt"><span class="scat">${c.name}${tr.solo ? '' : ' · ' + tr.name}${st.mins ? ' · ' + fmt1(P.mins || '{n} min', { n: st.mins }) : ''}${nd ? ` <b class="need ${nd}">${(P.needs || {})[nd] || nd}</b>` : ''}</span><span class="stest">${st.test}</span></span><span class="pbtns"><button class="btn btn-gold sm wide" data-do="${skey(tr, st)}">${P.do}</button><button class="btn btn-ghost sm" data-not="${skey(tr, st)}">${P.notThis}</button></span></div>`; };
   function renderArrival() {
     const list = $('slist'), keep = list.scrollTop;
     if (ROOMV === 'becoming') { becomingRoom(list); return; }
@@ -1195,7 +1232,7 @@
         : `<p class="lede">Every quick one is done. The long game is where the rest of you lives.</p>`) +
       `</div>` +
       (later.length ? foldCard('later', P.laterTitle || 'With people, outside, or with a thing', `<p class="lede" style="padding:0 6px">${P.laterLede || ''}</p><div class="acard" style="padding-top:4px">${later.map(pickRow).join('')}</div>`) : '') +
-      kidCard + longCard() +
+      kidCard + longCard() + extraCard() +
       `<p class="punch homepunch">${standLine()}</p>` +
       (P.how ? foldCard('how', P.how.title, `<ol class="howlist">${P.how.lines.map(x => `<li>${x}</li>`).join('')}</ol>`, visits <= 3 && !S.school.howSeen) : '') +
       (C.vision ? foldCard('vision', C.vision.title, `<div class="acard visioncard"><div class="rhead"><span class="eyebrow">${C.vision.lede}</span><button class="playbtn" id="visionread" aria-label="Aurelia reads it">${SPK_IC}</button></div>${C.vision.paras.map(x => `<p>${x}</p>`).join('')}</div><div class="acard polycard"><span class="eyebrow">${C.vision.polyTitle}</span><p class="lede">${C.vision.polyLede}</p>${C.vision.polymaths.map(x => `<div class="poly"><b>${x.name}</b><span>${x.line}</span></div>`).join('')}<p class="close">${C.vision.close}</p></div>`, visits <= 2 && !S.school.visionSeen) : '') +
@@ -1214,7 +1251,7 @@
     list.querySelectorAll('.fold').forEach(d => d.addEventListener('toggle', () => { if (d.dataset.fold === 'how' && !d.open) { S.school.howSeen = true; save(); } if (d.dataset.fold === 'vision' && !d.open) { S.school.visionSeen = true; save(); } }));
     const vr = list.querySelector('#visionread'); if (vr) vr.addEventListener('click', () => { sfx('tap'); if (VISREAD) { hush(); return; } readVision(list); });
     const rb = list.querySelector('#readit'); if (rb) rb.addEventListener('click', () => { sfx('tap'); hush(); clearTimeout(ROOMT); cap('aurelia', rd.title); ARIG.nod(); aureliaSay('ui-read-' + rd.id, () => { capHide(1500); idleRoom(); }); });
-    wireShelf(list); wireLong(list); wireContact(list);
+    wireShelf(list); wireLong(list); wireContact(list); wireExtra(list);
     list.querySelectorAll('[data-becoming]').forEach(b => b.addEventListener('click', () => { sfx('tap'); ROOMV_AT = b.dataset.becoming; openRoom('becoming'); }));
     list.querySelectorAll('[data-panel]').forEach(b => b.addEventListener('click', () => { sfx('open');
       openRoom(b.dataset.panel === 'run' ? 'run' : 'top'); }));
@@ -1516,7 +1553,8 @@
     return out;
   }
   const TRAIT_COLOUR = { courage: '#9C3A47', skill: '#1F5E8A', kindness: '#2F6B4F', attention: '#6B4E9E' };
-  function traitCounts() { const t = {}; for (const k in S.school.done) { const r = findStep(k); if (r) t[r[1].kind] = (t[r[1].kind] || 0) + 1; } for (const id of S.done) { const m = C.moves.find(x => x.id === id); if (m) t[m.kind] = (t[m.kind] || 0) + 1; } return t; }
+  function traitCounts() { const t = {}; for (const k in S.school.done) { const r = findStep(k); if (r) t[r[1].kind] = (t[r[1].kind] || 0) + 1; }
+    for (const x of extrasDone()) { const r = findStep(x.k); if (r) t[r[1].kind] = (t[r[1].kind] || 0) + 1; } for (const id of S.done) { const m = C.moves.find(x => x.id === id); if (m) t[m.kind] = (t[m.kind] || 0) + 1; } return t; }
   function traitsCard() {
     const T = C.school.traits; if (!T) return ''; const tc = traitCounts();
     const fmt = (t, o) => (t || '').replace(/\{(\w+)\}/g, (m, k) => o[k] !== undefined ? o[k] : m);
@@ -1689,7 +1727,7 @@
   function projectRow(tr) {
     const c = catOf(tr), st = nextStep(tr), n = trackDone(tr);
     const last = tr.steps[tr.steps.length - 1], first = tr.steps[0];
-    return `<div class="proj taken" style="--c:${c.accent};--c2:${c.accent2}"><div class="seal"><i></i>${C.school.long.page.taken}</div><div class="ptop"><img src="${trackImg(tr)}" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${c.name} · ${tr.steps.length} steps</small><small class="szl sz-${tr.size || 'months'}">${sizeOf(tr).name}</small></span><button class="px" data-drop="${tr.id}" aria-label="Put this one down">×</button></div>
+    return `<div class="proj taken" data-open="${tr.id}" style="--c:${c.accent};--c2:${c.accent2}"><div class="seal"><i></i>${C.school.long.page.taken}</div><div class="ptop"><img src="${trackImg(tr)}" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>${c.name} · ${tr.steps.length} steps</small><small class="szl sz-${tr.size || 'months'}">${sizeOf(tr).name}</small></span><button class="px" data-drop="${tr.id}" aria-label="Put this one down">×</button></div>
       <div class="ladder">
         <div class="rung ${n === 0 ? 'here' : 'done'}"><b>1</b><span><em>${n === 0 ? 'Start here' : 'Started'}</em>${first.test}</span></div>
         ${n > 0 ? `<div class="rung here"><b>${n + 1}</b><span><em>You are here</em>${st.test}</span></div>` : ''}
@@ -1738,8 +1776,84 @@
   function longCard() {
     const K = K_LG(), mine = projects();
     return `<div class="acard longcard"><span class="eyebrow">${K.roomTitle}</span><p class="lede">${mine.length ? K.roomLede : K.none}</p>` +
-      (mine.length ? mine.map(tr => { const c = catOf(tr), st = nextStep(tr), n = trackDone(tr); return `<div class="lgrow taken" style="--c:${c.accent};--c2:${c.accent2}"><div class="seal"><i></i>${C.school.long.page.taken}</div><button class="px" data-drop="${tr.id}" aria-label="Put this one down">&#215;</button><img src="${trackImg(tr)}" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${st.test}</small></span>${pracLine(tr)}</div>`; }).join('') + `<p class="rule">${K.capLine || ''}</p>`
+      (mine.length ? mine.map(tr => { const c = catOf(tr), st = nextStep(tr), n = trackDone(tr); return `<div class="lgrow taken" role="button" tabindex="0" data-open="${tr.id}" aria-label="${tr.name}: the whole ladder" style="--c:${c.accent};--c2:${c.accent2}"><div class="seal"><i></i>${C.school.long.page.taken}</div><button class="px" data-drop="${tr.id}" aria-label="Put this one down">&#215;</button><img src="${trackImg(tr)}" alt="" onerror="this.src='images/cat/${c.id}.jpg'"><span><strong>${tr.name}</strong><small>Step ${n + 1} of ${tr.steps.length} · ${st.test}</small><em class="lgmore">${C.school.long.page.whole || 'The whole ladder'} &#8250;</em></span>${pracLine(tr)}</div>`; }).join('') + `<p class="rule">${K.capLine || ''}</p>`
         : `${homeOne()}<button class="btn btn-ghost sm" id="pickLong">${C.school.long.page.other || K.pick}</button><p class="rule">${K.capLine || ''}</p>`) + `</div>`;
+  }
+  /* ---- Today's extra (v74) ----
+     His: one bigger thing a day, ten to twenty minutes, entirely optional, for the evening when there
+     is a quiet half hour and you want a real win rather than another three-minute tick. The rule that
+     is not negotiable: it NEVER counts towards the day. The day stays three quick things and three
+     torches; if an extra were worth points against that, one extra plus one quick thing would finish
+     a day and the rhythm of three dies, and on a tired evening it would feel owed. So it earns rank
+     points (two), feeds the trait meters and Where you stand, and puts a gold mark on that day in the
+     strip; it never touches the day bar, the torches, S.days (the flame) or the celebration.
+     One a day by date, the same all day; never the same one inside ninety days; not done = gone, no
+     carry-over; one "A different one". Nothing is ticked on a ladder: doing a Creating order rung as
+     an extra does not enrol you in that ladder. State: S.school.extra (today's choice) and
+     S.school.extras[date] = { k, at }. */
+  const EX = () => C.school.extra || {};
+  const extraPts = () => EX().points || 2;
+  const extrasDone = () => Object.entries((S.school && S.school.extras) || {}).map(([d, x]) => ({ d, k: x.k, at: x.at }));
+  let EXPOOL = null;
+  function extraPool() {
+    if (EXPOOL) return EXPOOL; const out = [];
+    allTracks().forEach(tr => tr.steps.forEach(st => { if (st.extra && typeof st.mins === 'number') out.push(skey(tr, st)); }));
+    soloTracks().filter(tr => tr.solo === 'extra' && typeof tr.steps[0].mins === 'number').forEach(tr => out.push(skey(tr, tr.steps[0])));
+    return EXPOOL = seededShuffle(out.sort(), 7919);
+  }
+  function extraPick(from, not) {
+    const P = extraPool(), L = P.length; if (!L) return null;
+    const recent = new Set(extrasDone().filter(x => (daysAgo(x.d) || 0) < (EX().gap || 90)).map(x => x.k));
+    for (let i = 0; i < L; i++) { const k = P[((from + i) % L + L) % L]; if (k !== not && !recent.has(k) && findStep(k)) return k; }
+    return null;
+  }
+  function todayExtra() {
+    if (isKid()) return null; const d = today(); S.school.extras = S.school.extras || {};
+    const T = S.school.extra;
+    if (!T || T.date !== d || !findStep(T.k)) { const k = extraPick(dayNum(d)); if (!k) return null; S.school.extra = { date: d, k, swapped: false }; save(); }
+    return S.school.extra;
+  }
+  function extraCard() {
+    const T = todayExtra(); if (!T) return ''; const r = findStep(T.k); if (!r) return '';
+    const [tr, st] = r, E = EX(), c = catOf(tr), did = S.school.extras[T.date];
+    const from = tr.solo ? '' : ` · ${fmt1(E.from || 'from {name}', { name: tr.name })}`;
+    return `<div class="acard extracard ${did ? 'did' : ''}" style="--c:${c.accent};--c2:${c.accent2}"><span class="eyebrow">${E.title || "Today's extra"}</span>
+      <p class="lede">${E.lede || ''}</p>
+      <button class="xrow" data-extra="${T.k}"><span class="xmeta">${fmt1(E.mins || 'About {n} minutes', { n: st.mins })}${from}</span><strong>${st.test}</strong></button>
+      ${did ? `<p class="xdone"><i></i>${E.done || 'Done today. A gold mark on today.'}</p>`
+        : `<div class="xbtns"><button class="btn btn-ghost sm" data-extra="${T.k}">${E.look || 'Have a look'}</button>${T.swapped ? '' : `<button class="what sm" id="xswap">${E.swap || 'A different one'}</button>`}</div>`}</div>`;
+  }
+  function wireExtra(root) {
+    root.querySelectorAll('[data-extra]').forEach(b => b.addEventListener('click', () => { sfx('tap'); extraSheet(b.dataset.extra); }));
+    const sw = root.querySelector('#xswap'); if (sw) sw.addEventListener('click', () => { sfx('tap'); const T = todayExtra(); if (!T || T.swapped) return;
+      const k = extraPick(dayNum(T.date) + Math.floor(extraPool().length / 2), T.k); if (k) { T.k = k; } T.swapped = true; save(); renderArrival(); });
+  }
+  function extraSheet(k) {
+    const r = findStep(k), T = todayExtra(); if (!r || !T) return; const [tr, st] = r, E = EX(), c = catOf(tr), did = S.school.extras[T.date];
+    const how = (st.how ? `<ul class="how">${st.how.map(h => `<li>${h}</li>`).join('')}</ul>` : '') + (st.note ? `<p class="note">${st.note}</p>` : '');
+    const v = veil(`<div class="panel sheet extrasheet" style="--c:${c.accent};--c2:${c.accent2}">
+      <div class="eyebrow"><i></i>${E.title || "Today's extra"} · ${fmt1(E.mins || 'About {n} minutes', { n: st.mins })}</div>
+      <div class="stestbig">${st.test}</div>${how}
+      <p class="xrule">${tr.solo ? '' : fmt1(E.notLadder || 'From {name}. Doing it here does not start that ladder.', { name: tr.name }) + ' '}${E.rule || ''}</p>
+      <div class="row">${did ? `<p class="xdone"><i></i>${E.done || ''}</p>` : `<button class="btn btn-gold" id="xdone" style="flex:1">${E.doneBtn || 'Done'}</button>`}</div></div>`, 'light');
+    backBtn(v, () => closeVeil());
+    const b = v.querySelector('#xdone'); if (b) b.addEventListener('click', () => {
+      const before = rankOf(points()).name, had = new Set(awards().filter(x => x.earned).map(x => x.id));
+      S.school.extras[T.date] = { k, at: new Date().toISOString() }; save();
+      sfx('done'); if (inSceneNow()) { sparks(); RIG.smile(1.8); if (ARIG && !ARIG.hidden) ARIG.smile(1.8); }
+      paintSchoolCount();   // the rank pill moves; the day bar and the torches read dayCount(), which an extra never touches
+      const won = awards().find(x => x.earned && !had.has(x.id));
+      closeVeil(() => { renderArrival(); if (won) setTimeout(() => trophyShow(won), 450);
+        else toast(rankOf(points()).name !== before ? fmt1(E.toastRank || 'Two points, and you are {rank} now.', { rank: rankOf(points()).name }) : (E.toast || 'Two points, and a gold mark on today.')); });
+    });
+  }
+  /* the days room: a month of extras at a glance */
+  function extraMonth() {
+    const E = EX(), all = extrasDone(); if (!all.length) return '';
+    const cells = []; for (let i = 34; i >= 0; i--) { const d = new Date(); d.setDate(d.getDate() - i); const k = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); cells.push(`<i class="${S.school.extras[k] ? 'on' : ''} ${k === today() ? 'td' : ''}"></i>`); }
+    const month = all.filter(x => (daysAgo(x.d) || 0) < 30).length;
+    return `<div class="acard xmonthcard"><span class="eyebrow">${E.monthTitle || 'Extras'}</span><div class="xmonth">${cells.join('')}</div>
+      <p class="runcap">${fmt1(E.monthLine || '{m} in the last thirty days. {n} altogether.', { m: month, n: all.length })}</p></div>`;
   }
   /* v67, his: first-week people should see ONE long skill at home, take it or ask for another */
   function homeOne() {
@@ -1758,6 +1872,12 @@
     root.querySelectorAll('[data-check]').forEach(b => b.addEventListener('click', () => { sfx('tap'); checkIn(trackById(b.dataset.check)); }));
     const pk = root.querySelector('#pickLong'); if (pk) pk.addEventListener('click', () => { sfx('tap'); TAB = 'long'; leaveArrival(); });
     root.querySelectorAll('.homeone [data-track]').forEach(b => b.addEventListener('click', () => { sfx('tap'); openTrack(trackById(b.dataset.track), { home: true }); }));
+    /* v74, his: a skill you have taken on only offered "Practised today" at home. The whole card now
+       opens its ladder (the rungs, the ring, the medals, the days practised), the way Look does, and
+       Back comes home. The buttons on it keep their own jobs. On the long page it returns to the tab. */
+    root.querySelectorAll('[data-open]').forEach(el => { const go = e => { if (e.target.closest('button,a,summary,details')) return; sfx('tap');
+      openTrack(trackById(el.dataset.open), $('stage').classList.contains('arrive') ? { home: true } : undefined); };
+      el.addEventListener('click', go); el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(e); } }); });
     root.querySelectorAll('[data-commit]').forEach(b => b.addEventListener('click', () => { sfx('tap'); commitCard(trackById(b.dataset.commit), 'long'); }));
   }
   const rerender = () => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); };
@@ -2158,7 +2278,7 @@
       ? fmt1(K.doneLong || 'Done {d} — over six months ago. Can you still?', { d: whenText(k) })
       : fmt1(K.doneOn || 'Done {d}.', { d: whenText(k) })}</p>`;
     const v = veil(`<div class="panel sheet" style="--c:${c.accent};--c2:${c.accent2}">
-      <div class="eyebrow"><i></i>${c.name} · ${tr.name} · step ${st.n} of ${tr.steps.length}</div>
+      <div class="eyebrow"><i></i>${c.name} · ${tr.solo ? ((K.solo || 'A quick thing') + (st.mins ? ' · ' + fmt1(C.arrival.mins || '{n} min', { n: st.mins }) : '')) : `${tr.name} · step ${st.n} of ${tr.steps.length}`}</div>
       <div class="stestbig">${st.test}</div>${how}${twist}${againLine}
       <div class="row">${bothBtn}<button class="btn ${(!d || rusty) ? 'btn-gold' : 'btn-ghost'}" id="sdone" style="flex:1.3">${
         d ? ((K.again || 'Done it again') + (rusty ? ' · +1' : '')) : 'Done'}</button></div>
@@ -2197,7 +2317,7 @@
       const won = awards().find(x => x.earned && !hadIds.has(x.id));
       if (won) { closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); setTimeout(() => trophyShow(won), 450); }); return; }
       /* the last rung. Nothing else that happens today outranks this. */
-      if (!nextStep(tr)) {
+      if (!nextStep(tr) && !tr.solo) {
         closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool();
           setTimeout(() => finishCard(tr), 420); });
         return;

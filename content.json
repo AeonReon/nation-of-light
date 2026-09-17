@@ -2448,7 +2448,8 @@
     "homeOne": "One to start with",
     "other": "A different one",
     "about": "More about this",
-    "introTitle": "How the long game works"
+    "introTitle": "How the long game works",
+    "whole": "The whole ladder"
    },
    "soft": {
     "title": "Enjoying {name}?",
@@ -2836,7 +2837,8 @@
    "againFresh": "Marked again for today. Still yours.",
    "twist": "Already easy?",
    "both": "Done, me too",
-   "bothTwist": "Me too, with the twist"
+   "bothTwist": "Me too, with the twist",
+   "solo": "A quick thing"
   },
   "goal": {
    "n": 3,
@@ -5873,7 +5875,25 @@
    "steps": "{n} step{s}"
   },
   "areaNeed": "Opens at {n} steps in {area} · {done} so far",
-  "areaOpenLater": "Opens later in this area."
+  "areaOpenLater": "Opens later in this area.",
+  "extra": {
+   "title": "Today's extra",
+   "lede": "Twenty minutes, if you have them. A different one tomorrow either way.",
+   "mins": "About {n} minutes",
+   "from": "from {name}",
+   "look": "Have a look",
+   "swap": "A different one",
+   "doneBtn": "Done",
+   "done": "Done today. Two points, and a gold mark on today.",
+   "rule": "Not part of the day's three. It adds two points and a gold mark on today, and it is gone at midnight whether you do it or not.",
+   "notLadder": "From {name}. Doing it here does not start that ladder.",
+   "toast": "Two points, and a gold mark on today.",
+   "toastRank": "Two points, and you are {rank} now.",
+   "monthTitle": "Extras",
+   "monthLine": "{m} in the last thirty days. {n} altogether.",
+   "points": 2,
+   "gap": 90
+  }
  },
  "arrival": {
   "lines": [
@@ -5991,7 +6011,8 @@
    "out": "outside",
    "kit": "needs a thing",
    "home": "at home"
-  }
+  },
+  "mins": "{n} min"
  },
  "room": {
   "title": "The portico",
