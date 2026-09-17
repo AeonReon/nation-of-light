@@ -1,0 +1,125 @@
+{
+ "id": "make.scissors",
+ "name": "Scissors",
+ "line": "From opening and shutting them in the air to a picture cut out, stuck down and explained to somebody.",
+ "who": "From about four, with a grown-up beside them",
+ "size": "weeks",
+ "strand": "little",
+ "from": 4,
+ "about": "For a child of about four and upwards, with a grown-up beside them. The first four rungs are all about the tool: which scissors, how they are held, how they are carried and handed over, and one snipping job that needs no aim at all. Then the cutting itself, in the order it really comes: a cut right through, a straight line, a square with corners, a curve, a circle, and a fold opened out. It ends with three shapes cut out, stuck down as a picture, and explained to somebody who is looking at it. Cutting is one of the few things a four-year-old gets visibly better at within a week, and they can see it for themselves.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Open and shut the scissors ten times in the air, with nothing in them.",
+   "ctx": "with",
+   "kind": "skill",
+   "mins": 1,
+   "note": "Use child scissors: about as long as a grown-up's hand, with rounded ends, and metal blades that really cut paper, because all-plastic ones chew the paper and make the job harder. If the child reaches for things with the left hand, they need left-handed scissors; in a right-handed pair the blade on top sits over the line, so a left-handed child cannot see where the cut is going. Sit down at a table for this rung and every one after it. Say once, now, that scissors cut paper and nothing else: not hair, not clothes, not anything with a wire in it."
+  },
+  {
+   "n": 2,
+   "test": "Hold the scissors with your thumb on top, and show somebody.",
+   "how": [
+    "Thumb in the small hole, pointing at the ceiling.",
+    "Two fingers in the big hole underneath.",
+    "The other hand holds the paper, thumb up as well."
+   ],
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Thumb on top is right: held properly the thumb sits in the upper hole and points up, and the hand stays that way for every rung of this ladder. To correct a grip, draw a small mark on the top handle and say that the mark goes up, or turn their hand while they carry on cutting; taking the scissors off a child to fix the hold stops the work for no reason. Small hands often need the middle finger and the index finger both in the lower hole, and that is fine."
+  },
+  {
+   "n": 3,
+   "test": "Carry the scissors to somebody with the points down, and hand them over handles first.",
+   "how": [
+    "Blades shut, held in your fist, points at the floor.",
+    "Walk, do not run.",
+    "Turn the handles towards the other person before you let go."
+   ],
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Do this one twice rather than once, because it is what makes the rest of the ladder relaxed. Handles first means the other person takes the safe end, so this rung is about them, not about the child. Between cuts the scissors go down on the table shut, and at the end of a session they are put away somewhere out of reach, which matters most if there is a smaller child in the house."
+  },
+  {
+   "n": 4,
+   "test": "Snip all along the edge of a piece of paper to make a fringe.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "One open and shut makes one snip, and nothing has to move forward yet, which is why this comes before cutting anything in two. Stiff paper stands up and is much easier than thin paper: an envelope, a page from a magazine, or a piece of card off a food packet. The fringe will be uneven, and that is the right result at this stage, so let them fill the whole edge and leave it as it is.",
+   "twist": "The hand you would never choose."
+  },
+  {
+   "n": 5,
+   "test": "Cut a piece of paper in two.",
+   "how": [
+    "Start with a strip about as wide as two fingers.",
+    "Then a whole sheet.",
+    "Do not shut the blades all the way: open, push forward, shut again."
+   ],
+   "ctx": "with",
+   "kind": "skill",
+   "note": "A narrow strip goes in one or two snips, so the job is finished straight away; a whole sheet needs the paper fed forward by the other hand. If the cut keeps stopping in jagged steps, it is because the blades are being shut completely every time. The other hand is doing half of this rung, and it is worth saying that out loud while they work."
+  },
+  {
+   "n": 6,
+   "test": "Cut along a straight line somebody drew for you.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Draw the line with a thick dark pen: a wide line means anywhere inside it counts as right, and a thin pencil line makes this far harder than it needs to be. Draw it across the short way first so the cut is short, and draw the next one longer. This is the rung where left-handed scissors start to matter, because from here on the child needs to see the line under the blade."
+  },
+  {
+   "n": 7,
+   "test": "Cut a square out, turning the paper at the corners.",
+   "how": [
+    "Draw a big square, a hand wide, with a thick pen.",
+    "At a corner, stop and hold the scissors still.",
+    "Turn the paper with the other hand, then carry on."
+   ],
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Turning the paper instead of the scissors is the whole technique, and it is what makes every shape after this possible. Corners will come out rounded for a while, and the square still counts. Keep it big; small shapes need a steadiness that comes later."
+  },
+  {
+   "n": 8,
+   "test": "Cut along a curvy line, all the way, without leaving it.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "Draw one long gentle wave with the thick pen rather than a tight squiggle. The scissors stay roughly where they are and the other hand feeds the paper round them, a little at a time. Wandering off the line and coming back to it is normal; the rung is done when they reach the end of the wave.",
+   "twist": "The hand you would never choose."
+  },
+  {
+   "n": 9,
+   "test": "Cut out a circle and hold it up.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Draw round a cup, a jar lid or a bowl so the circle is a good size, and let them pick the object. The paper now turns steadily all the way round, which is the longer version of the last rung. A circle with a few flat bits is a circle finished, and the next one is rounder."
+  },
+  {
+   "n": 10,
+   "test": "Fold a piece of paper, cut pieces out of the fold, and open it out.",
+   "how": [
+    "Fold it in half and press the fold flat.",
+    "Cut pieces out of the folded edge, not the open edge.",
+    "Open it out together and look."
+   ],
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Two layers take more squeeze than one, so use thin paper for this rung. Cutting into the folded edge is what makes the holes come out doubled; cutting only the open edges leaves the paper in pieces, which is also worth seeing once. Ask them what they think will happen before they open it.",
+   "twist": "Fold it twice instead of once."
+  },
+  {
+   "n": 11,
+   "test": "Cut out three shapes and stick them down to make a picture.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Any paper with colour on it works: food packets, letters that came through the door, an old magazine. If there is no glue in the house, flour and water stirred to a thick cream sticks paper perfectly well and washes off, and a few pieces of tape do the same job. Let them decide what the picture is rather than suggesting one to them."
+  },
+  {
+   "n": 12,
+   "test": "Tell somebody what your picture is, while they look at it.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Find a real listener: somebody else in the house, or a relative on a call who holds still and looks. Ask one question at the end and then stop asking, so the telling stays theirs. Explaining something you made, to a person who is paying attention, is a different job from making it, and this is an easy place to do it for the first time."
+  }
+ ]
+}

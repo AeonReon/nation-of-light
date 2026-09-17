@@ -736,7 +736,8 @@
       }
      ],
      "about": "Your breathing is the one part of your body that runs itself and that you can also take hold of, which makes it the fastest way there is to calm yourself down on purpose. This ladder is half calm and half capacity: slow breathing that you can use before anything frightening, and breath holds that climb to two minutes. One safety rule runs through all of it, and it is not negotiable: never practise any of this in water, or near water, ever.",
-     "need": 12
+     "need": 12,
+     "who": "Everybody; a child and a grown-up side by side"
     },
     {
      "id": "body.strength",
@@ -988,7 +989,8 @@
       }
      ],
      "about": "Strength that goes somewhere. Lifting is getting a load off the ground; carrying is moving it down a street, up a hill or up two flights of stairs, and it is the sort of strength that actually shows up in a life — shopping, moving house, a child asleep on your shoulder, somebody who has turned an ankle. No equipment: bags, water containers, sacks, and people.",
-     "need": 60
+     "need": 60,
+     "who": "Grown-ups and teenagers"
     },
     {
      "id": "body.run",
@@ -1240,7 +1242,8 @@
       }
      ],
      "about": "Running from nothing to five kilometres, the way it actually works: slowly. Almost everybody who says they cannot run is simply running too fast, and the whole first half of this ladder is about going slow enough to keep going. It needs shoes that do not hurt and a road. Three times a week for about three months takes most people from a minute to five kilometres without stopping.",
-     "need": 40
+     "need": 40,
+     "who": "Grown-ups and anybody from about ten"
     },
     {
      "id": "body.balance",
@@ -1556,10 +1559,12 @@
     {
      "id": "body.hopping",
      "name": "Hopping and balancing",
-     "line": "From four, beside you. One foot, two feet, a straight line and a roll.",
+     "line": "From standing still on one foot to hopping the whole way across the room, swapping feet halfway and landing without a wobble.",
      "size": "weeks",
      "strand": "little",
      "from": 4,
+     "who": "From about four, with a grown-up beside them",
+     "about": "For a child of about four and upwards, with a grown-up beside them. It starts standing still on one foot for a count of five, then two feet together for ten jumps, a jump over a line and a jump off the bottom stair. After that comes the first hop, five hops, a line on the floor to walk along and then to walk heel to toe, and one forward roll on something soft. It ends with a hop the whole way across the room, a change of feet halfway, and a last landing that does not move. Nothing here needs buying: a belt or a rope laid on the floor is the line, and a folded quilt on the carpet is the soft place.",
      "steps": [
       {
        "n": 1,
@@ -1567,81 +1572,101 @@
        "ctx": "with",
        "kind": "skill",
        "twist": "Eyes shut.",
-       "mins": 2
+       "mins": 2,
+       "note": "Do this on a carpet or a rug, with bare feet rather than socks, which slide. Stand within reach of a wall or the back of a chair so there is something to touch, and count out loud and slowly so they can hear how far they have got. Always do both feet, even though one of them is much worse, because the worse one is the one that gets better."
       },
       {
        "n": 2,
-       "test": "Stand on one foot while they count to ten.",
+       "test": "Jump with both feet together, ten times.",
        "ctx": "with",
        "kind": "skill",
-       "twist": "Eyes shut."
+       "twist": "Land so quietly that nobody hears you.",
+       "note": "Both feet leave the floor at the same moment and land at the same moment. If one foot goes first it is a step rather than a jump, so do a few yourself beside them and let them copy. Ask for bent knees on the landing, and put a rug down if the floor is hard."
       },
       {
        "n": 3,
-       "test": "Hop three times on one foot.",
+       "test": "Jump over a line on the floor with both feet together, ten times.",
        "ctx": "with",
        "kind": "skill",
-       "twist": "The foot you would never choose."
+       "twist": "Sideways.",
+       "note": "With no chalk or tape in the house, the line is a skipping rope, a belt, a dressing-gown cord or a long scarf laid out straight, or the join between two floorboards or two tiles. Lay it flat so a foot landing on it cannot roll. Jumping back the other way counts as the next one, so ten is five there and five back."
       },
       {
        "n": 4,
-       "test": "Hop five times on one foot without putting the other one down.",
+       "test": "Jump off a low step and land on two feet without wobbling.",
        "ctx": "with",
-       "kind": "skill",
-       "twist": "The foot you would never choose."
+       "kind": "courage",
+       "twist": "Land, then stay still for a count of three.",
+       "note": "One step only, and no higher than their own knee: the bottom stair or a low doorstep is right, and nothing higher belongs on this ladder. Clear the landing so there is nothing within an arm's length to hit, and hold a hand for the first few goes until they ask to go on their own. A landing means knees bent and then standing up straight, not a sit-down on the floor."
       },
       {
        "n": 5,
-       "test": "Jump with both feet together, ten times.",
+       "test": "Stand on one foot while somebody counts to ten.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "attention",
+       "twist": "Eyes shut.",
+       "note": "Arms held out sideways is allowed and makes it much easier. Looking at one fixed thing on the wall works better than looking down at the foot. If they wobble at six, count more slowly next time rather than going back to one, and do both feet every session."
       },
       {
        "n": 6,
-       "test": "Jump over a line with both feet together, ten times.",
+       "test": "Hop three times on one foot.",
        "ctx": "with",
        "kind": "skill",
-       "twist": "Eyes shut."
+       "twist": "The foot you would never choose.",
+       "note": "A hop is the same foot going up and coming down while the other one stays off the floor, which is not obvious at all — do it slowly yourself first. Count out loud, and count only the hops where the other foot stayed up. Let them hold one of your fingers for the first goes, then take it away once they have stopped looking for it."
       },
       {
        "n": 7,
-       "test": "Jump off a low step and land on two feet without wobbling.",
+       "test": "Hop five times on one foot without putting the other one down.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "The foot you would never choose.",
+       "note": "Small hops are easier to keep going than big ones, so ask for little ones. Arms out sideways again. Do the other foot in the same session; it will be worse to start with and it catches up with practice."
       },
       {
        "n": 8,
        "test": "Walk along a line without stepping off it.",
        "ctx": "with",
-       "kind": "skill",
-       "twist": "Backwards."
+       "kind": "attention",
+       "twist": "Backwards.",
+       "note": "The line is the same rope, belt, dressing-gown cord or scarf laid out straight, or something the floor already gives you: a join between two floorboards, the edge of a rug, the pattern in the tiles, or the long edge of a door mat. Arms out sideways. When a foot comes off, let them put it back on and carry on from there rather than going back to the start, because staying on is the thing being practised."
       },
       {
        "n": 9,
        "test": "Walk along the line heel to toe.",
        "ctx": "with",
-       "kind": "skill",
-       "twist": "Backwards."
+       "kind": "attention",
+       "twist": "Backwards.",
+       "note": "Every step puts the heel of the front foot against the toes of the back foot, with no gap between them. Slow is the whole point of this one, so there is nothing to count and no hurry. Looking ahead at something on the wall holds them steadier than looking down at their feet."
       },
       {
        "n": 10,
-       "test": "Do a forward roll on something soft.",
+       "test": "Roll forwards on something soft and come up sitting.",
+       "how": [
+        "Crouch down small, hands flat on the floor in front, about a shoulder's width apart.",
+        "Chin down on the chest, eyes looking at their own tummy, and keep it there the whole way over.",
+        "Push with the feet, take the weight on the hands, and roll over the back of the shoulders.",
+        "Come up sitting."
+       ],
        "ctx": "with",
-       "kind": "skill"
+       "kind": "courage",
+       "note": "The soft place is a folded duvet or two folded quilts on a carpet, out in the middle of the room and away from furniture — never a bed and never a sofa. Kneel beside them with one hand behind the head, holding the chin tucked down towards the chest, and the other hand at the hips to help them over. The weight belongs on the hands and the back of the shoulders; if the top of the head goes down on the floor, stop, go back to the tuck and try again, and leave the rung for another week if the tuck will not hold. This is the one rung here that is not hopping or standing, and it is here because turning over and coming back up is the same balance used from a completely different angle."
       },
       {
        "n": 11,
        "test": "Hop all the way across the room on one foot.",
        "ctx": "with",
        "kind": "skill",
-       "twist": "The foot you would never choose."
+       "twist": "The foot you would never choose.",
+       "note": "Take the short way across the room and move anything in the path out of it first. If the other foot comes down, put a shoe on the floor to mark how far they got and go for further another day, rather than starting the whole thing again. Both feet get a turn, on different days if they are too tired after the first one."
       },
       {
        "n": 12,
        "test": "Hop across the room, swap feet halfway, and land the last one still.",
        "ctx": "with",
        "kind": "skill",
-       "twist": "Start on the foot you would never choose."
+       "twist": "Start on the foot you would never choose.",
+       "note": "Lay the rope or the belt across the middle of the room as the halfway mark. The swap is the hard part: at first both feet can come down for a moment at the line, and the swap in the air comes later. Landing still means the last hop lands and nothing moves at all while somebody counts to three. Choosing which foot to use and then changing it on purpose is what running, climbing and dancing all need, and this rung is the first time they do it deliberately."
       }
      ]
     }
@@ -1804,7 +1829,8 @@
        "note": "Sunrise from rung nine, dusk from rung three, and everything between. Part two is the wild proper."
       }
      ],
-     "about": "Out the door, wherever you live: an hour without the phone in your hand, north found and checked, the first star, rain on purpose, a sunrise, ten thousand steps, a walk at night with the torch off, and a whole day outside at the end. Every rung works from a town street."
+     "about": "Out the door, wherever you live: an hour without the phone in your hand, north found and checked, the first star, rain on purpose, a sunrise, ten thousand steps, a walk at night with the torch off, and a whole day outside at the end. Every rung works from a town street.",
+     "who": "Everybody; a grown-up with a child outdoors"
     },
     {
      "id": "wild.fire",
@@ -3225,7 +3251,8 @@
      "warn": "Never on your own, and never in open water on this ladder. Every step happens at a pool or a lifeguarded beach with somebody beside you who can already swim.",
      "about": "Swimming is the one thing on this list that is a safety skill as well as a fitness one, and the water is patient: it takes almost everybody from blowing bubbles to fifty metres inside a few months. It needs a pool, which is the only cost here — public pools are usually cheap and many have free or low-cost family sessions. Nothing else in the school trains your breathing and your whole body at once like this.",
      "place": "pool",
-     "need": 60
+     "need": 60,
+     "who": "Everybody; never alone, and a grown-up with any child"
     },
     {
      "id": "water.cold",
@@ -3261,7 +3288,7 @@
       },
       {
        "n": 3,
-       "test": "Stand in the sea or a lough up to your ankles for one minute.",
+       "test": "Stand in the sea or a lake up to your ankles for one minute.",
        "how": [
         "Somewhere you know, with somebody with you.",
         "Shoes off, trousers rolled. A minute on the clock.",
@@ -3381,8 +3408,9 @@
       }
      ],
      "place": "water",
-     "about": "Getting into cold water is the shortest route there is to finding out that you can do something you do not want to do, and it takes two minutes. It starts in your own shower, which costs nothing, and moves out to the sea or a lough. The whole skill is the breathing: cold water makes you gasp, and everything else here is learning to take hold of that. Never get into open water alone, never after drinking, and always have dry warm clothes waiting.",
-     "need": 25
+     "about": "Getting into cold water is the shortest route there is to finding out that you can do something you do not want to do, and it takes two minutes. It starts in your own shower, which costs nothing, and moves out to the sea or a lake. The whole skill is the breathing: cold water makes you gasp, and everything else here is learning to take hold of that. Never get into open water alone, never after drinking, and always have dry warm clothes waiting.",
+     "need": 25,
+     "who": "Grown-ups and teenagers; never alone in open water"
     },
     {
      "id": "water.row",
@@ -4166,7 +4194,8 @@
       }
      ],
      "about": "Thirty press-ups in one go is a real undertaking and it is not an overwhelming one. It needs no equipment, no gym and no money, it takes about five minutes a session three times a week, and the whole path from two to thirty is a few simple steps repeated. Almost nobody who does the sets fails to get there. It is the clearest proof in the school that a thing you could not do last month is now yours.",
-     "need": 25
+     "need": 25,
+     "who": "Grown-ups and anybody from about ten"
     },
     {
      "id": "fit.situp",
@@ -4418,7 +4447,8 @@
       }
      ],
      "about": "The front of your middle, trained on a floor with nothing else. This one stops at fifty in one go and turns to harder movements instead of bigger numbers, because a hundred fast sit-ups teaches your neck more than your stomach. Do it alongside the plank, not instead of it: one is moving, one is holding, and a middle needs both.",
-     "need": 40
+     "need": 40,
+     "who": "Grown-ups and anybody from about ten"
     },
     {
      "id": "fit.pullup",
@@ -4670,7 +4700,8 @@
       }
      ],
      "about": "The hardest thing in the school to get the first one of, and the most satisfying. It is the one ladder here that needs something to hang from — a park bar, a beam, a strong branch, a door frame bar — and nothing else. The path is not more pull-ups, because you cannot do any yet: it is hanging, then rows under a table, then lowering yourself slowly from the top. Do those three and the first one arrives on its own.",
-     "need": 60
+     "need": 60,
+     "who": "Grown-ups and anybody from about ten"
     },
     {
      "id": "fit.plank",
@@ -4826,7 +4857,8 @@
       }
      ],
      "about": "The plank trains the part of you that stops your back hurting, and it needs a patch of floor and nothing else. This one stops at two minutes on purpose: past that it is a party trick, and a side plank or a one-foot plank buys far more for the same time. A few weeks of a minute a day is enough to feel it in how you stand.",
-     "need": 40
+     "need": 40,
+     "who": "Grown-ups and anybody from about ten"
     },
     {
      "id": "fit.squat",
@@ -5081,7 +5113,8 @@
       }
      ],
      "about": "Legs are the muscles you use every single day and the first ones people lose. This ladder goes from ten honest squats to a hundred in one go and a squat on one leg, which almost nobody can do. It needs no equipment and no space beyond a patch of floor, and it is the quickest thing in the school to notice in ordinary life: stairs, hills, getting off the ground, carrying a child upstairs.",
-     "need": 25
+     "need": 25,
+     "who": "Grown-ups and anybody from about ten"
     },
     {
      "id": "fit.lift",
@@ -5238,7 +5271,8 @@
      ],
      "pic": 2,
      "about": "Getting something heavy off the floor and up onto a shelf, without hurting yourself. This is the least glamorous and most useful physical skill there is: almost every bad back in the world came from one careless lift. Everything you need is already in the house — bags, boxes, water containers, sacks of coal or compost. Carrying it any distance is its own ladder.",
-     "need": 60
+     "need": 60,
+     "who": "Grown-ups and teenagers"
     },
     {
      "id": "fit.stretch",
@@ -5490,7 +5524,8 @@
       }
      ],
      "about": "Getting back the range you had as a child. Palms flat on the floor with straight legs is a genuinely hard thing that most adults cannot do, and it takes five or ten minutes a day for a few months rather than any talent. It needs no equipment, no space and no money, and unlike almost everything else physical, it is easiest to do at the end of the day in front of the fire. Everything else in the Fitness path works better once you have it.",
-     "need": 12
+     "need": 12,
+     "who": "Everybody; a child and a grown-up side by side"
     },
     {
      "id": "fit.sprint",
@@ -5646,7 +5681,8 @@
       }
      ],
      "about": "Flat-out running is a different quality from distance running, it is the first one to go with age, and it is almost never practised after school. This ladder is short on purpose: a handful of sprints with long rests, once or twice a week, on grass if you can. It costs nothing and it makes you feel about fifteen.",
-     "need": 60
+     "need": 60,
+     "who": "Grown-ups and anybody from about eight"
     },
     {
      "id": "fit.body1",
@@ -5917,7 +5953,8 @@
        "kind": "attention",
        "note": "This is the whole point of rung one. Numbers you wrote before you believed anything would happen are the only proof that cannot be argued with. Keep the paper: part two starts by setting the next three."
       }
-     ]
+     ],
+     "who": "Grown-ups and anybody from about ten"
     },
     {
      "id": "fit.body2",
@@ -6189,7 +6226,8 @@
        "kind": "attention",
        "note": "Two programmes, three sets of numbers, and a body that can do things it could not do at the start. From here the single-move ladders go much further than these rounds ever will, and you now know which of them you actually want."
       }
-     ]
+     ],
+     "who": "Grown-ups and anybody from about twelve"
     }
    ]
   },
@@ -7174,7 +7212,8 @@
        "note": "Write the question at the top. No phone, no book. Whatever you write underneath is yours. Part two goes deeper."
       }
      ],
-     "about": "How to learn anything, practised on a few things at once: a language, a poem, sums in your head, a book that is a bit too hard. The rungs are short and the last one is thirty minutes of thinking with only a pen. Nothing to buy; a library card helps."
+     "about": "How to learn anything, practised on a few things at once: a language, a poem, sums in your head, a book that is a bit too hard. The rungs are short and the last one is thirty minutes of thinking with only a pen. Nothing to buy; a library card helps.",
+     "who": "Grown-ups and anybody from about ten"
     },
     {
      "id": "mind.tables",
@@ -9736,7 +9775,8 @@
        "note": "Same person, another day. \"Did you try that walk?\" If it goes well, suggest something: a coffee, the market, the children at the park, a talk you both want to hear. That is a friend beginning. Part two starts here."
       }
      ],
-     "about": "Twenty small steps from a smile to a second conversation with somebody you did not know a month ago. Nothing here needs money or a café; the shop rungs need no buying and the calls take a minute. It is written for the person who finds this genuinely hard, so the first rungs are tiny and the later ones are where the friends come from."
+     "about": "Twenty small steps from a smile to a second conversation with somebody you did not know a month ago. Nothing here needs money or a café; the shop rungs need no buying and the calls take a minute. It is written for the person who finds this genuinely hard, so the first rungs are tiny and the later ones are where the friends come from.",
+     "who": "Grown-ups and teenagers"
     },
     {
      "id": "speak.people2",
@@ -9888,7 +9928,8 @@
        "kind": "attention",
        "note": "If the list is longer than it was when you started part one, both ladders worked. That list is the point of all of it. From here a facilitator, and the network you build on purpose."
       }
-     ]
+     ],
+     "who": "Grown-ups and teenagers"
     },
     {
      "id": "speak.strangers",
@@ -10856,83 +10897,117 @@
     {
      "id": "speak.sayit",
      "name": "Saying it yourself",
-     "line": "From four, beside you. Your name, a hello, a please, a thank you, a question, a story.",
+     "line": "From a hello at home to telling a whole story to everybody in the room.",
      "size": "weeks",
      "strand": "little",
      "from": 4,
+     "who": "From about four, with a grown-up beside them",
+     "about": "For a child of about four and upwards, with a grown-up beside them. It starts with the easiest speaking there is, a hello said first to somebody at home who already loves them, and works outwards from there: telling a person at home what happened, saying what they want instead of going quiet, then a neighbour, then somebody they have not met, then the person at a counter, and at the end a whole story told to everybody in the room. Nothing on this ladder is ever pushed. A rung that will not come is a rung to try again in a week, or a rung to go back from, or a sentence the grown-up says first and the child says after. Being able to say what you want, out loud, to somebody you do not know, is used every single day for the rest of a life.",
      "steps": [
       {
        "n": 1,
-       "test": "Say your name and how old you are to somebody you have not met, looking at them.",
+       "test": "Say hello first to somebody at home, before they say it to you.",
        "ctx": "with",
        "kind": "courage",
-       "mins": 2
+       "note": "This is the whole ladder in one small move: the child speaks first, to somebody who already loves them. If the words do not come, wait, then say your own hello and let them say it after you. That counts. A child who will not speak is never pushed on any rung here; go back a rung, leave it a week, and try it again then.",
+       "mins": 1
       },
       {
        "n": 2,
-       "test": "Say hello first to somebody you know, before they say it to you.",
+       "test": "Ask for what you want in a whole sentence with a please in it, instead of pointing.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "skill",
+       "note": "Hold the thing for a moment and wait, rather than asking questions they can answer by nodding. If they get stuck, say the sentence yourself and let them repeat it. Never hold something back until the words come out right, and never make them ask again when they have already asked."
       },
       {
        "n": 3,
-       "test": "Say goodbye and their name when you leave.",
+       "test": "Say goodbye to somebody by their name when they go.",
        "ctx": "with",
-       "kind": "kindness"
+       "kind": "kindness",
+       "note": "The name is the part children leave out, so put the name in your own goodbye and they will pick it up from you. A grandparent going home, a friend leaving the house, somebody who came to the door: anybody who is actually going somewhere. A wave as well as the words is fine; a wave instead of the words is next week's try."
       },
       {
        "n": 4,
-       "test": "Ask for something in a whole sentence with a please in it, instead of pointing.",
+       "test": "Tell somebody at home one thing that happened today.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "attention",
+       "note": "Ask for one thing, not for the whole day. Picking one thing out of a whole day is most of the work of this rung, so give them time to choose it. Listen to the end without asking anything, and if it comes out in the wrong order leave it alone; the order is rung twelve, not this one.",
+       "twist": "Tell it to somebody who was not there when it happened."
       },
       {
        "n": 5,
-       "test": "Say thank you to the person at the shop, loud enough that they hear it.",
+       "test": "When you do not want to do something, say in words what you want instead.",
+       "how": [
+        "The thing they do not want: \"I do not want to stop yet.\"",
+        "Then the thing they do want: \"I want five more minutes.\"",
+        "You answer the words, even when the answer is no."
+       ],
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "note": "The skill here is getting a want into words. Crying is not the thing being corrected and is never treated as the failure; wait until they are calm again, then help them say it in words afterwards, and say the words first yourself if they cannot find them. Answering the words seriously, yes or no, is what makes words worth using next time."
       },
       {
        "n": 6,
-       "test": "Answer a grown-up who asks you a question, without hiding behind anybody.",
+       "test": "Say sorry to somebody in your own words.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "kindness",
+       "note": "Their own words means a sentence of their own, not the one word repeated back after us: \"I am sorry I knocked your tower over\" is the rung. Wait until everybody is calm again; it does not work in the middle of it. If it will not come, let them see you say your own sorry to somebody this week, and leave the rung for now.",
+       "twist": "Say what you will do next time as well."
       },
       {
        "n": 7,
-       "test": "Ask a grown-up a question you really want the answer to, and listen to all of it.",
+       "test": "Say hello to somebody you know who does not live with you.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "courage",
+       "note": "A neighbour, a relative who visits, the person at the door of somewhere you go every week. Stand beside them rather than in front of them, and give them a few seconds before you speak for them. The same person every week is far easier than a new one, so pick one person and go back to them."
       },
       {
        "n": 8,
-       "test": "Tell somebody you do not want to, in words, instead of crying.",
+       "test": "Answer a question yourself when somebody asks you one.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "note": "The hard part of this rung is ours: we answer for them without noticing, especially when somebody is waiting. Count to five in your head before you say anything at all. If nothing comes, answer for them without any comment about it, or say the answer quietly and let them say it after you.",
+       "twist": "Give them more than one sentence."
       },
       {
        "n": 9,
-       "test": "Say sorry to somebody yourself, in your own words.",
+       "test": "Say your name to somebody you have not met, with your grown-up beside you.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "note": "This is the first rung with somebody they do not know in it. Every rung like that is done standing beside the grown-up they came with, never on their own, and never with somebody we have only just met ourselves unless we are right there. Pick somebody who has a reason to ask: another child at the park, somebody at a desk, a friend of a relative. Never ask them to say it again so another adult can hear it.",
+       "twist": "Ask them their name back."
       },
       {
        "n": 10,
-       "test": "Order your own food or drink while somebody stands beside you.",
+       "test": "Say thank you to the person serving you, loud enough for them to hear.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "kindness",
+       "note": "A shop, a library desk, a bus driver, somebody handing out food at a hall: anywhere a person hands them something. Stand half a step back so the thank you is theirs and not ours, and do not say it again after them. Quiet on the first few goes is fine, and loud enough is the rung rather than the first attempt."
       },
       {
        "n": 11,
-       "test": "Tell somebody something that happened today, with a beginning, a middle and an end.",
+       "test": "Ask for what you want yourself at a counter, with your grown-up beside you.",
+       "how": [
+        "Decide what you want before you get to the front.",
+        "Wait your turn, then say it: \"Can I have one of those, please?\"",
+        "Say thank you when it comes."
+       ],
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "note": "Ordering food or a drink is the usual version of this. It works exactly the same with no money at all: asking at a library desk for a book about dinosaurs, asking at a visitor desk for a map, asking somebody in a big building where the toilets are. Let them say it their own way even when it comes out backwards, and only repeat it if the person truly did not hear."
       },
       {
        "n": 12,
-       "test": "Tell it to somebody who was not there, so that they understand it.",
+       "test": "Tell everybody in the room about something that happened, from the start to the end.",
+       "how": [
+        "Where you were, and who was there.",
+        "What happened, in the order it happened.",
+        "How it ended, and then stop."
+       ],
        "ctx": "with",
-       "kind": "courage"
+       "kind": "skill",
+       "note": "Get everybody quiet and looking at them before they start, and ask the others not to talk over them or finish it for them. Somebody in the room who was not there makes the best listener, because then the child has to say the parts that person does not already know. Two or three people is a room; if that is too many today, one listener is still the rung and a second one can come next time.",
+       "twist": "No ums."
       }
      ]
     },
@@ -11234,7 +11309,8 @@
        "note": "That is the bar. Part two is a craft you keep."
       }
      ],
-     "about": "Making, tried from every side: drawing, knots, paper, card, cloth, a photograph, soap carving, a circuit, a thing taken apart, a gift made and given. By the end one thing you made is good enough that somebody asks where you bought it. Scraps, tape and what is in the recycling."
+     "about": "Making, tried from every side: drawing, knots, paper, card, cloth, a photograph, soap carving, a circuit, a thing taken apart, a gift made and given. By the end one thing you made is good enough that somebody asks where you bought it. Scraps, tape and what is in the recycling.",
+     "who": "From about eight; a child and a grown-up side by side"
     },
     {
      "id": "make.wood",
@@ -12356,166 +12432,241 @@
     {
      "id": "make.scissors",
      "name": "Scissors",
-     "line": "From four, beside you. Cutting, and cutting where you meant to.",
+     "line": "From opening and shutting them in the air to a picture cut out, stuck down and explained to somebody.",
+     "who": "From about four, with a grown-up beside them",
      "size": "weeks",
      "strand": "little",
      "from": 4,
+     "about": "For a child of about four and upwards, with a grown-up beside them. The first four rungs are all about the tool: which scissors, how they are held, how they are carried and handed over, and one snipping job that needs no aim at all. Then the cutting itself, in the order it really comes: a cut right through, a straight line, a square with corners, a curve, a circle, and a fold opened out. It ends with three shapes cut out, stuck down as a picture, and explained to somebody who is looking at it. Cutting is one of the few things a four-year-old gets visibly better at within a week, and they can see it for themselves.",
      "steps": [
       {
        "n": 1,
-       "test": "Open and shut the scissors ten times with nothing in them.",
+       "test": "Open and shut the scissors ten times in the air, with nothing in them.",
        "ctx": "with",
        "kind": "skill",
-       "mins": 1
+       "mins": 1,
+       "note": "Use child scissors: about as long as a grown-up's hand, with rounded ends, and metal blades that really cut paper, because all-plastic ones chew the paper and make the job harder. If the child reaches for things with the left hand, they need left-handed scissors; in a right-handed pair the blade on top sits over the line, so a left-handed child cannot see where the cut is going. Sit down at a table for this rung and every one after it. Say once, now, that scissors cut paper and nothing else: not hair, not clothes, not anything with a wire in it."
       },
       {
        "n": 2,
-       "test": "Hold them the right way round, thumb on top, and show somebody.",
+       "test": "Hold the scissors with your thumb on top, and show somebody.",
+       "how": [
+        "Thumb in the small hole, pointing at the ceiling.",
+        "Two fingers in the big hole underneath.",
+        "The other hand is the one that will hold and turn the paper."
+       ],
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "Thumb on top is right: held properly the thumb sits in the upper hole and points up, and the hand stays that way for every rung of this ladder. To correct a grip, draw a small mark on the top handle and say that the mark goes up, or turn their hand while they carry on cutting; taking the scissors off a child to fix the hold stops the work for no reason. Small hands often need the middle finger and the index finger both in the lower hole, and that is fine."
       },
       {
        "n": 3,
-       "test": "Cut a piece of paper in two, any way you like.",
+       "test": "Carry the scissors to somebody with the points down, and hand them over handles first.",
+       "how": [
+        "Blades shut, held in your fist, points at the floor.",
+        "Walk, do not run.",
+        "Turn the handles towards the other person before you let go."
+       ],
        "ctx": "with",
-       "kind": "skill"
+       "kind": "kindness",
+       "note": "Do this one twice rather than once, because it is what makes the rest of the ladder relaxed. Handles first means the other person takes the safe end, so this rung is about them, not about the child. Between cuts the scissors go down on the table shut, and at the end of a session they are put away somewhere out of reach, which matters most if there is a smaller child in the house."
       },
       {
        "n": 4,
        "test": "Snip all along the edge of a piece of paper to make a fringe.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "One open and shut makes one snip, and nothing has to move forward yet, which is why this comes before cutting anything in two. Stiff paper stands up and is much easier than thin paper: an envelope, a page from a magazine, or a piece of card off a food packet. The fringe will be uneven, and that is the right result at this stage, so let them fill the whole edge and leave it as it is.",
+       "twist": "The hand you would never choose."
       },
       {
        "n": 5,
-       "test": "Cut along a straight line somebody drew for you.",
+       "test": "Cut a piece of paper in two.",
+       "how": [
+        "Start with a strip about as wide as two fingers.",
+        "Then a whole sheet.",
+        "Do not shut the blades all the way: open, push forward, shut again."
+       ],
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "A narrow strip goes in one or two snips, so the job is finished straight away; a whole sheet needs the paper fed forward by the other hand. If the cut keeps stopping in jagged steps, it is because the blades are being shut completely every time. The other hand is doing half of this rung, and it is worth saying that out loud while they work."
       },
       {
        "n": 6,
-       "test": "Cut a square out.",
+       "test": "Cut along a straight line somebody drew for you.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "Draw the line with a thick dark pen: a wide line means anywhere inside it counts as right, and a thin pencil line makes this far harder than it needs to be. Draw it across the short way first so the cut is short, and draw the next one longer. This is the rung where left-handed scissors start to matter, because from here on the child needs to see the line under the blade."
       },
       {
        "n": 7,
-       "test": "Cut along a curvy line, all the way, without leaving it.",
+       "test": "Cut a square out, turning the paper at the corners.",
+       "how": [
+        "Draw a big square, a hand wide, with a thick pen.",
+        "At a corner, stop and hold the scissors still.",
+        "Turn the paper with the other hand, then carry on."
+       ],
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "Turning the paper instead of the scissors is the whole technique, and it is what makes every shape after this possible. Corners will come out rounded for a while, and the square still counts. Keep it big; small shapes need a steadiness that comes later."
       },
       {
        "n": 8,
-       "test": "Cut out a circle and hold it up.",
+       "test": "Cut along a curvy line, all the way, without leaving it.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "attention",
+       "note": "Draw one long gentle wave with the thick pen rather than a tight squiggle. The scissors stay roughly where they are and the other hand feeds the paper round them, a little at a time. Wandering off the line and coming back to it is normal; the rung is done when they reach the end of the wave.",
+       "twist": "The hand you would never choose."
       },
       {
        "n": 9,
-       "test": "Cut out a shape and turn the paper instead of the scissors.",
+       "test": "Cut out a circle and hold it up.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "Draw round a cup, a jar lid or a bowl so the circle is a good size, and let them pick the object. The paper now turns steadily all the way round, which is the longer version of the last rung. A circle with a few flat bits is a circle finished, and the next one is rounder."
       },
       {
        "n": 10,
-       "test": "Fold paper, cut, and open it out to see what happened.",
+       "test": "Fold a piece of paper, cut pieces out of the fold, and open it out.",
+       "how": [
+        "Fold it in half and press the fold flat.",
+        "Cut pieces out of the folded edge, not the open edge.",
+        "Open it out together and look."
+       ],
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "Two layers take more squeeze than one, so use thin paper for this rung. Cutting into the folded edge is what makes the holes come out doubled; cutting only the open edges leaves the paper in pieces, which is also worth seeing once. Ask them what they think will happen before they open it.",
+       "twist": "Fold it twice instead of once."
       },
       {
        "n": 11,
        "test": "Cut out three shapes and stick them down to make a picture.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "Any paper with colour on it works: food packets, letters that came through the door, an old magazine. If there is no glue in the house, flour and water stirred to a thick cream sticks paper perfectly well and washes off, and a few pieces of tape do the same job. Let them decide what the picture is rather than suggesting one to them."
       },
       {
        "n": 12,
        "test": "Tell somebody what your picture is, while they look at it.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "note": "Find a real listener: somebody else in the house, or a relative on a call who holds still and looks. Ask one question at the end and then stop asking, so the telling stays theirs. Explaining something you made, to a person who is paying attention, is a different job from making it, and this is an easy place to do it for the first time."
       }
      ]
     },
     {
      "id": "make.crayons",
      "name": "Crayons",
-     "line": "From four, beside you. Colouring in, then drawing what you see.",
+     "line": "From a page covered in colour to a picture of your own day, handed to somebody with the story that goes with it.",
+     "who": "From about four, with a grown-up beside them",
      "size": "weeks",
      "strand": "little",
      "from": 4,
+     "about": "For a child of about four and upwards, with a grown-up beside them. It starts with a whole page covered in colour and a crayon held in the fingers, then lines, then a circle, a square and a triangle: drawing comes before colouring in, because staying inside somebody else's line is harder than making your own. After that comes colouring one shape properly, filling it with no white left, pressing hard and softly, and a whole picture in more than one colour. It ends with a person, then something that happened that day, then handing that picture to somebody and saying what is in it. Nothing here needs a colouring book: a thick pen and the back of an envelope make everything this ladder asks for.",
      "steps": [
       {
        "n": 1,
-       "test": "Colour one shape in and stay inside the line.",
+       "test": "Fill a whole page with colour.",
+       "how": [
+        "Hold the crayon in your fingers, not in your fist.",
+        "Any paper: the back of a letter, a paper bag, a food packet opened out.",
+        "Cover every part of the page."
+       ],
        "ctx": "with",
        "kind": "skill",
-       "mins": 5
+       "mins": 5,
+       "note": "Break the crayons in half before you start. A short crayon cannot be held in a fist, so the fingers find the right hold on their own, and a broken crayon is no loss. Anything that makes a mark will do for this ladder: crayons, coloured pencils, a pen, or chalk on a paving stone outside."
       },
       {
        "n": 2,
-       "test": "Colour it all the way in, with no white bits left.",
+       "test": "Draw a long line right across the paper, then a short one.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "Lines come before shapes because a line has a beginning and an end that the child chooses. Ask for one from side to side, then one from top to bottom, then a few short ones in between. Hold the paper still for them at first, or put it on a book; a sliding page makes this much harder than it is.",
+       "twist": "The hand you would never choose."
       },
       {
        "n": 3,
-       "test": "Colour a whole picture, every part of it, with more than one colour.",
+       "test": "Draw a circle that joins up where it started.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "Draw one yourself first, slowly, while they watch, then leave them to it. Joining up is the only standard here, and size and wobble do not matter. Drawing round a cup comes in a later rung; this one is about the movement of the hand.",
+       "twist": "The hand you would never choose."
       },
       {
        "n": 4,
-       "test": "Press hard for a dark colour and softly for a pale one.",
+       "test": "Draw a square.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "Four lines and four stops. Say stop, turn, and go again at each corner, or put four dots on the page for them to join up. Corners are where the hand has to plan ahead, which is why a square takes longer to learn than a circle even though it looks simpler."
       },
       {
        "n": 5,
-       "test": "Draw a circle that joins up where it started.",
+       "test": "Draw a triangle.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "Three corners and two slanted lines, which is harder than it looks, so three dots to join up is a fair way to start. Look for triangles around the house afterwards: a slice of bread cut across, a roof, a coat hanger. A triangle drawn at four is usually lopsided, and the next one is better."
       },
       {
        "n": 6,
-       "test": "Draw a square and a triangle.",
+       "test": "Colour inside a shape you drew yourself, staying inside the line.",
+       "how": [
+        "Use one of your own circles or squares, a big one.",
+        "Go round the inside edge first.",
+        "Then fill in the middle."
+       ],
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "Colouring in comes after drawing shapes, not before, because staying inside a line somebody else drew is harder work than making the line yourself. No colouring book is needed: outline something on plain paper with a thick dark pen, or draw round a cup, a hand, a spoon or a lid to make shapes worth filling in. Going round the inside edge first and filling the middle after is the bit that makes it work."
       },
       {
        "n": 7,
-       "test": "Draw a person with a head, a body, two arms and two legs.",
+       "test": "Colour it all the way in, with no white bits left.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "attention",
+       "note": "This rung is about finishing rather than drawing, so choose a small shape the first time. Let them say when it is done, then hold it up to the window together and look for the gaps. Pressing very hard tears the paper, and a second layer of colour on top covers white bits better than one hard layer does."
       },
       {
        "n": 8,
-       "test": "Give the person a face, and say who it is.",
+       "test": "Press hard for a dark colour and softly for a pale one.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "Ask for the same shape twice on one page, one dark and one pale, so the difference sits in front of them. This is the first control they have over how a colour looks, and it is what stops later pictures looking flat. Two colours laid over each other make a third, which is worth trying on the same sheet.",
+       "twist": "The side of the crayon, not the point."
       },
       {
        "n": 9,
-       "test": "Draw your house.",
+       "test": "Colour a whole picture in, every part of it, with more than one colour.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "attention",
+       "note": "If there is nothing printed in the house, draw the picture for them with a thick pen: a house, a fish, a tree, a face, big and simple. Every part means the sky and the ground as well, which is the difference between a coloured picture and a coloured-in shape. It takes a while, so leaving it on the table and coming back to it later is fine."
       },
       {
        "n": 10,
-       "test": "Draw somebody standing outside your house.",
+       "test": "Draw a person with a head, a body, two arms, two legs and a face.",
+       "how": [
+        "Head first, then the body under it.",
+        "Two arms, two legs, then the face.",
+        "Say who it is when it is finished."
+       ],
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "Name the parts as they go and let them put the arms wherever they put them. A head with legs coming straight out of it is a common first version, and asking for a body in between is usually enough. A person is the first drawing that stands for somebody real, so saying who it is matters as much as the drawing does.",
+       "twist": "The hand you would never choose."
       },
       {
        "n": 11,
        "test": "Draw something that happened today.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "attention",
+       "note": "Ask what they did first, listen to the answer, then let them draw whichever part of it they choose. It does not have to look like the thing; it has to be about the thing. Small events are easier to draw than big ones: rain, a dog, a bus, somebody coming to the door."
       },
       {
        "n": 12,
-       "test": "Tell the story of your picture to somebody while they look at it.",
+       "test": "Give a picture you drew to somebody and tell them what is in it.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "kindness",
+       "note": "Somebody in the house, or a relative it can be posted to. Let them choose which picture goes, even if it is not the one you would have chosen. Handing over something you made and saying what is in it asks more of a child than the drawing did, which is why it is the last rung."
       }
      ]
     }
@@ -12678,7 +12829,8 @@
        "note": "A song, a trick, a joke, a tune. Introduce it. Bow at the end. Part two is a real act."
       }
      ],
-     "about": "Songs, tricks, juggling, dancing, a joke, a tune on anything, a cartwheel, a character with a hat. Twenty rungs of play that end in a five-minute show for two people. Socks for juggling, a phone keyboard for the tune, and no audience until you are ready."
+     "about": "Songs, tricks, juggling, dancing, a joke, a tune on anything, a cartwheel, a character with a hat. Twenty rungs of play that end in a five-minute show for two people. Socks for juggling, a phone keyboard for the tune, and no audience until you are ready.",
+     "who": "From about six; a child and a grown-up side by side"
     },
     {
      "id": "music.sing",
@@ -13680,83 +13832,109 @@
     {
      "id": "music.song",
      "name": "A song all the way through",
-     "line": "From four, beside you. One song, sung whole, then sung to somebody.",
+     "line": "From singing one song with somebody beside you to singing it right through to everybody in the room at once.",
      "size": "weeks",
      "strand": "little",
      "from": 4,
+     "who": "From about four, with a grown-up beside them",
+     "about": "For a child of about four and upwards, with a grown-up beside them. It starts with one song the family already knows, sung all the way through with somebody singing along, then the same song on their own, then the whole of it with nobody helping at all. Next comes the beat: clapping it, then singing and clapping at the same time, then the song loud, then quiet, then fast and slow. The last rungs are for other people — one person, a second song, a verse of their own words, and at the end singing to everybody in the room. Nothing is needed but a song and somebody to sing it with, and no rung asks a child to sing for anybody until they have sung it on their own many times.",
      "steps": [
       {
        "n": 1,
        "test": "Sing one song all the way through with somebody singing beside you.",
        "ctx": "with",
        "kind": "skill",
-       "mins": 4
+       "mins": 4,
+       "note": "Pick a song the family already sings — a birthday song, a lullaby, something from nursery or from a film — and sing it right through two or three times yourself before asking for anything. Sit or stand beside them rather than in front of them, and sing at their speed instead of your own. If they join in on only some of the words the first time, that is this rung done."
       },
       {
        "n": 2,
-       "test": "Sing it all the way through on your own, with nobody helping.",
+       "test": "Sing it on your own, with somebody helping only when you get stuck.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "note": "Stop singing along and let the song be theirs. When they stop, give them the next word quietly and nothing more, rather than taking the line over. Three or four goes spread across a week works better than three goes in one sitting."
       },
       {
        "n": 3,
-       "test": "Sing it without forgetting any of the words.",
+       "test": "Sing it all the way through with nobody helping at all.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "attention",
+       "twist": "With your eyes shut.",
+       "note": "Sit where they can see you and stay quiet the whole way through, including the parts that come out wrong. A swapped word or a line in the wrong place is fine; getting from the beginning to the end with no prompt is the rung. If the same verse keeps going missing, sing that verse together on its own a few times before the next try."
       },
       {
        "n": 4,
        "test": "Clap the beat while somebody else sings it.",
+       "how": [
+        "Sing a verse yourself and nod your head in time with it until the nod is steady.",
+        "Clap once for every nod, and nothing in between.",
+        "Then sing it again and let them clap with your nodding."
+       ],
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Tap it with your feet instead.",
+       "note": "The beat is the steady thing underneath, not one clap for every word, and that difference is the whole rung. Start with a slow song, because a fast one is much harder to hold on to. If the claps drift, keep your own going steadily for them to come back to instead of stopping to explain."
       },
       {
        "n": 5,
        "test": "Sing it and clap the beat at the same time.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Walk in time while you sing it.",
+       "note": "Doing two things at once is the difficulty here, so the singing may go quiet while the hands work, or the claps may stop while the words come back. Slow the song right down for the first tries. Once through with both going together is enough for this rung."
       },
       {
        "n": 6,
-       "test": "Sing it as loud as you can.",
+       "test": "Sing it as loudly as you can.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "note": "Say where and when loud is allowed — outdoors, in the car, or in a room with the door shut — and then sing at the same volume beside them, so it is a thing you are both doing and not a performance. Loud comes from a big breath and an open mouth, not from shouting in the throat. One loud go and then a normal one is plenty."
       },
       {
        "n": 7,
        "test": "Sing it so quietly that only the person next to you can hear.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "attention",
+       "note": "Quiet singing still uses a proper breath: it is not whispering, and the tune has to stay in it. Put your ear near them and say when you can only just hear it. This is the harder half of the loud rung, and it is the one that makes singing among other people possible later on."
       },
       {
        "n": 8,
        "test": "Sing it fast, then sing it slow.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "Change from fast to slow in the middle, without stopping.",
+       "note": "Fast first, because it is the funny one, then as slowly as they can hold it while the tune still holds together. Ask for clear words at both speeds; running the words together is not the fast version. Changing the speed on purpose is the first piece of control over a song, rather than only knowing it."
       },
       {
        "n": 9,
-       "test": "Sing it to somebody who has never heard you sing it.",
+       "test": "Sing it to one person who has never heard you sing it.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "note": "Ask that person beforehand to listen right to the end and then say thank you and nothing else: no scoring it, no corrections, and no asking for another one. A grandparent or a relative on a video or phone call counts, and being heard without being looked at makes an easier first go. Let the child say when it happens, and let them start on their own without you announcing it first."
       },
       {
        "n": 10,
        "test": "Learn a second song all the way through.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "A song in another language.",
+       "note": "Let them choose this one, even if it is a song you have heard plenty of already. Learn it the same way: you sing it right through several times over a few days, they join in with the parts they have, then they take it on their own. Two songs they can sing whenever they are asked is what makes the last rungs possible."
       },
       {
        "n": 11,
-       "test": "Make up a new verse and sing that too.",
+       "test": "Make up a new verse for one of your songs and sing it.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "skill",
+       "twist": "A whole new verse, made up while you are singing.",
+       "note": "Keep the tune exactly as it is and change the words of one verse only. Start it with a question — what else could be on the bus, what else could the farmer have — and use something real from today: the dog, the rain, somebody's name. Write their verse down and sing it back to them the next day, because a made-up verse that gets sung twice becomes part of the song."
       },
       {
        "n": 12,
-       "test": "Sing your song to a whole roomful of people.",
+       "test": "Sing a song to everybody in the room at once.",
        "ctx": "with",
-       "kind": "courage"
+       "kind": "courage",
+       "twist": "Standing up on your own, with everybody quiet.",
+       "note": "A roomful is whoever is there: three people at the table after a meal, or four faces on one video call, is a room. The gentlest real version is a song everybody knows, started at the next family birthday, so the child begins on their own and the others come in after the first line — singing with a brother, a sister or a friend counts too. Ask them privately first, and never announce it to the room before they have said yes; if the answer is no, say that is fine, put it away, and offer it again in a month or two. A rung that is waiting has not been failed, and this ladder is allowed to sit on the eleventh rung for a year."
       }
      ]
     }
@@ -14890,7 +15068,8 @@
        "note": "Two or three real meals inside the eight hours, nothing outside them. That is the far end of this ladder. Past here is part two; and if you have a health condition or take medicine, a doctor before you go further."
       }
      ],
-     "about": "For grown-ups. Twenty rungs from one honest look at a label to an eight-hour eating window, in an order that never jumps. If a rung is already how you live, you do it on purpose that day and it counts. Real food, fewer snacks, a bit of space between meals; nothing extreme until the very end, and a doctor before going further if you take medicine."
+     "about": "For grown-ups. Twenty rungs from one honest look at a label to an eight-hour eating window, in an order that never jumps. If a rung is already how you live, you do it on purpose that day and it counts. Real food, fewer snacks, a bit of space between meals; nothing extreme until the very end, and a doctor before going further if you take medicine.",
+     "who": "Grown-ups only"
     },
     {
      "id": "food.real2",
@@ -15042,7 +15221,8 @@
        "kind": "attention",
        "note": "One page. That page is your way of eating, and it is yours to defend. From here a facilitator, if you want to go further, and a doctor beside you if you do."
       }
-     ]
+     ],
+     "who": "Grown-ups only"
     },
     {
      "id": "food.knife",
@@ -15198,7 +15378,8 @@
       }
      ],
      "about": "Almost everything that gets called cooking is actually chopping, and almost nobody is ever taught how. A fortnight of this and a meal takes half as long and costs half as much, because real ingredients are cheaper than prepared ones and it is the chopping you were paying to avoid. It also happens to be the safest thing in the kitchen to learn properly and the most dangerous to pick up by accident.",
-     "need": 12
+     "need": 12,
+     "who": "Grown-ups, and children from about eight beside one"
     },
     {
      "id": "food.cook",
@@ -15450,7 +15631,8 @@
       }
      ],
      "about": "Being able to feed yourself and other people well, from real ingredients, without a recipe in your hand. This is the most immediately useful ladder in the school: it saves real money every week, it is the practical half of Real food, and a person who can cook is welcome everywhere. It goes from boiling an egg to a roast and three courses, in about three months of cooking a few times a week — which you were going to do anyway.",
-     "need": 25
+     "need": 25,
+     "who": "From about ten with a grown-up; teens and grown-ups"
     },
     {
      "id": "food.bake",
@@ -15702,7 +15884,8 @@
       }
      ],
      "about": "Baking is chemistry that you get to eat, and unlike cooking it rewards exactness rather than judgement, which makes it the better one to learn with children. The ladder goes from a packet mix to a proper loaf of bread from flour, water and salt — which costs very little and beats anything in a shop — and ends by selling what you made to somebody who is not related to you, which is a different kind of nerve entirely.",
-     "need": 40
+     "need": 40,
+     "who": "From about six; a child and a grown-up side by side"
     },
     {
      "id": "food.firecook",
@@ -16302,7 +16485,8 @@
        ],
        "ctx": "with",
        "kind": "skill",
-       "note": "Give them the checking as well as the stirring. A child who has been shown how to tell when a job is done will do it properly without being watched."
+       "note": "Give them the checking as well as the stirring. A child who has been shown how to tell when a job is done will do it properly without being watched.",
+       "twist": "The hand you would never choose."
       },
       {
        "n": 4,
@@ -16314,7 +16498,8 @@
        ],
        "ctx": "with",
        "kind": "skill",
-       "note": "Practising with water first is the trick for all of this. Ten free goes at the sink is worth more than one careful go with the eggs."
+       "note": "Practising with water first is the trick for all of this. Ten free goes at the sink is worth more than one careful go with the eggs.",
+       "twist": "The hand you would never choose."
       },
       {
        "n": 5,
@@ -16326,7 +16511,8 @@
        ],
        "ctx": "with",
        "kind": "skill",
-       "note": "The corners are the standard, and it is a standard a four-year-old can see for themselves. That is what makes it a good first job."
+       "note": "The corners are the standard, and it is a standard a four-year-old can see for themselves. That is what makes it a good first job.",
+       "twist": "The hand you would never choose."
       },
       {
        "n": 6,
@@ -16350,7 +16536,8 @@
        ],
        "ctx": "with",
        "kind": "skill",
-       "note": "The small bowl is how you let them do it without any risk to the meal, which means you can say yes rather than 'not this time'."
+       "note": "The small bowl is how you let them do it without any risk to the meal, which means you can say yes rather than 'not this time'.",
+       "twist": "One hand only."
       },
       {
        "n": 8,
@@ -16413,7 +16600,8 @@
        "note": "Say their name out loud when the food goes on the table. Being useful to the whole family, publicly, is what they are actually after."
       }
      ],
-     "about": "For a child of about four and upwards, with a grown-up beside them. Children want to be in the kitchen long before we let them, and a four-year-old can genuinely stir, pour, peel a satsuma, crack an egg and make a sandwich for somebody else. Every rung here is a real job that actually needed doing, which is the whole point: children can tell the difference between helping and being given something to keep them busy."
+     "about": "For a child of about four and upwards, with a grown-up beside them. Children want to be in the kitchen long before we let them, and a four-year-old can genuinely stir, pour, peel a satsuma, crack an egg and make a sandwich for somebody else. Every rung here is a real job that actually needed doing, which is the whole point: children can tell the difference between helping and being given something to keep them busy.",
+     "who": "From about four, with a grown-up beside them"
     }
    ]
   },
@@ -16573,7 +16761,8 @@
        "note": "That is a business, however small. Part two grows it."
       }
      ],
-     "about": "Money made and money kept, in twenty rungs that start with writing down what you spent today and end with three different people paying you for the same thing. Selling one thing, asking for a better price, an offer said out loud, a tenth put aside. Small, real, and most of it is nerve rather than knowledge."
+     "about": "Money made and money kept, in twenty rungs that start with writing down what you spent today and end with three different people paying you for the same thing. Selling one thing, asking for a better price, an offer said out loud, a tenth put aside. Small, real, and most of it is nerve rather than knowledge.",
+     "who": "Grown-ups and anybody from about twelve"
     },
     {
      "id": "money.handling",
@@ -20592,7 +20781,8 @@
        "note": "Nothing to put on, nothing to organise. When it happens, you belong here. Part two builds something for the town."
       }
      ],
-     "about": "Your own town, walked, learned, and joined. From a street you have never walked to a meeting you went back to twice, to being greeted by name on one walk through. Free things only; no group needs paying for and no shop needs buying from."
+     "about": "Your own town, walked, learned, and joined. From a street you have never walked to a meeting you went back to twice, to being greeted by name on one walk through. Free things only; no group needs paying for and no shop needs buying from.",
+     "who": "Grown-ups and teenagers; a grown-up with a child"
     },
     {
      "id": "belong.chair",
@@ -21433,7 +21623,8 @@
        "note": "Tea, a clear table, a chair to sit in. When ten minutes is enough, the place works. Part two makes it beautiful."
       }
      ],
-     "about": "A home that works: the bed, one drawer, the sink dry, one thing fixed, the stopcock found, five things given away, and on to a whole room done properly and a week of tidy nights. It ends with somebody round and ten minutes to be ready. Renting counts exactly the same."
+     "about": "A home that works: the bed, one drawer, the sink dry, one thing fixed, the stopcock found, five things given away, and on to a whole room done properly and a week of tidy nights. It ends with somebody round and ten minutes to be ready. Renting counts exactly the same.",
+     "who": "Everybody; a child and a grown-up side by side"
     },
     {
      "id": "home.keep",
@@ -23170,81 +23361,113 @@
     {
      "id": "care.helping",
      "name": "Helping",
-     "line": "From four, beside you. One thing carried, one thing given, one thing done before anybody asked.",
+     "line": "From carrying one thing to the table, to doing a helpful thing nobody asked for and nobody knows about.",
      "size": "weeks",
      "strand": "little",
      "from": 4,
+     "who": "From about four, with a grown-up beside them",
+     "about": "For a child of about four and upwards, with a grown-up beside them. It begins with jobs somebody else names — carry this to the table, fetch that, feed the animal — and then turns round: noticing what a person did for you, clearing a table that is not only yours, asking what would help, and at the end doing one thing before anybody asks and keeping it quiet. Every rung is a job that genuinely needed doing, because a job invented to keep a child busy is obvious to the child. This ladder is about being useful to the people around you, which is one of the most enjoyable things a small person can be.",
      "steps": [
       {
        "n": 1,
        "test": "Carry one thing to the table before a meal, and one thing back after it.",
+       "how": [
+        "Hand them something that cannot break and cannot burn: the spoons, the bread, a plastic cup.",
+        "Both hands, and walking, not running.",
+        "Ask them at the end what else still needs to go on."
+       ],
+       "note": "Give them something that was going to the table anyway rather than inventing a job for them. Two trips are fine, and so is putting the spoons down in the wrong places. Everything later in this ladder is a bigger version of this one: a meal is something the family gets ready, not something that appears.",
+       "twist": "Two things at once, one in each hand.",
        "ctx": "with",
        "kind": "skill",
        "mins": 2
       },
       {
        "n": 2,
-       "test": "Put your own plate and cup by the sink when you have finished.",
-       "ctx": "with",
-       "kind": "skill"
-      },
-      {
-       "n": 3,
-       "test": "Put your own shoes and coat away.",
-       "ctx": "with",
-       "kind": "skill"
-      },
-      {
-       "n": 4,
-       "test": "Give a pet its food, or a plant its water.",
-       "ctx": "with",
-       "kind": "skill"
-      },
-      {
-       "n": 5,
-       "test": "Do that every day for a week.",
-       "ctx": "with",
-       "kind": "attention"
-      },
-      {
-       "n": 6,
-       "test": "Fetch something for somebody when they ask.",
+       "test": "Fetch something for somebody when they ask you to.",
+       "note": "Ask for one clear thing that is really in another room: your glasses, a cushion, the book on the chair. Use it in front of them afterwards and say thank you, so they see what it was for. If the wrong thing comes back, take it anyway and describe it better next time.",
        "ctx": "with",
        "kind": "kindness"
       },
       {
+       "n": 3,
+       "test": "Say thank you to somebody for one thing they did for you today.",
+       "note": "Do it at a quiet moment, at the end of the day or on a walk, and say yours first so they hear what it sounds like: thank you for the dinner, thank you for finding my shoe. It has to be one real thing that happened today, not a general thank you. Noticing that somebody has done something for you is what the rest of this ladder is built on.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
+       "n": 4,
+       "test": "Hold a door open and let somebody go through first.",
+       "note": "A light door first: a room at home, a gate, the door of a small shop. Heavy shop doors and doors that shut themselves are hard for a four-year-old to hold, so stand beside them the first few times. Once they have done it in front of a stranger who says thank you, they will do it everywhere.",
+       "twist": "Hold it for somebody whose hands are full.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 5,
+       "test": "Give a pet its food, or a plant its water.",
+       "how": [
+        "Measure the food into a cup or a scoop beforehand, so the amount is already right.",
+        "A small jug for a plant, half full, poured at the soil and not on the leaves.",
+        "Put the bowl down and step back, in case the animal comes in quickly."
+       ],
+       "note": "With no pet and no plant, a cutting from a friend's plant in a jar of water on the windowsill does the same job and costs nothing. Say what happens next — the animal comes to the bowl, the plant stands up again by the evening — so the job has a visible end. An animal that is not yours is fed only when its own grown-up says so.",
+       "ctx": "with",
+       "kind": "kindness"
+      },
+      {
+       "n": 6,
+       "test": "Do that every day for a week.",
+       "note": "Do it at the same moment each day, after breakfast or before the evening meal; the fixed time is what keeps it going. Let them be the one who notices it is time, and a reminder on a slow day does not spoil the week. If a day gets missed, do it yourself and carry on the next day rather than starting the week again.",
+       "ctx": "with",
+       "kind": "attention"
+      },
+      {
        "n": 7,
-       "test": "Hold a door open for somebody.",
+       "test": "Clear the table with somebody after a meal, and take everybody's things, not only yours.",
+       "note": "Give them what cannot break and cannot burn: the cups, the mats, the cutlery gathered in a pile, the board. Scraping the plates into the bin is usually the popular job and can be theirs too. The rung is in the words not only yours, so say that part out loud at the start.",
        "ctx": "with",
        "kind": "kindness"
       },
       {
        "n": 8,
        "test": "Make something for somebody and give it to them. A drawing counts.",
+       "note": "Anything made with their own hands: a drawing, a card, a paper aeroplane, a stone with a pattern drawn on it, a sandwich. They choose the person, and they hand it over themselves rather than you passing it on for them. If the person lives far away, a photograph of it sent to them works.",
+       "twist": "Make it for somebody who does not live in your house.",
        "ctx": "with",
        "kind": "kindness"
       },
       {
        "n": 9,
        "test": "Help a smaller child do something they cannot do yet, without doing it for them.",
+       "how": [
+        "Show it once, slowly, then put your hands in your lap.",
+        "Say the next bit in words instead of reaching in.",
+        "Let the little one be the one who finishes it."
+       ],
+       "note": "A younger brother, sister or cousin, or a friend's child while their own grown-up is there. Zips, a shoe on the right foot, a puzzle piece and a tower of bricks are the usual ones. Tell them beforehand that the hard part of this rung is keeping their hands off, which makes it a challenge rather than a correction.",
        "ctx": "with",
        "kind": "kindness"
       },
       {
        "n": 10,
-       "test": "Help tidy up a whole room with somebody, and stay to the end.",
+       "test": "Help tidy a room that everybody uses, and stay until it is finished.",
+       "note": "The kitchen, the sitting room or the hall: a room they did not make untidy on their own. Put them in charge of one kind of thing — all the cushions, all the shoes, everything that belongs upstairs — rather than saying tidy up. Staying to the end is the rung, so say at the start what finished is going to look like.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 11,
-       "test": "Say thank you to somebody who did something for you today.",
+       "test": "Ask somebody what would help them, then do it.",
+       "note": "Give them the words the first time: what can I do to help? Whoever they ask needs a small real answer ready — the cutlery on the table, the curtains shut, the shoes moved out of the doorway. Being the one who asks instead of the one who is asked is the whole change here, and it is what makes the last rung possible.",
        "ctx": "with",
-       "kind": "kindness"
+       "kind": "courage"
       },
       {
        "n": 12,
        "test": "Do one helpful thing before anybody asks, and do not tell them it was you.",
+       "note": "Agree beforehand that you are the only person who ever hears about it, and that at bedtime a nod is enough; they never have to say what it was. You will usually see it before you hear about it — the shoes in a row, the table set, the animal already fed, the cushions back on the sofa. Say to the room that somebody has done something kind, and then say nothing more: do not guess out loud, do not ask, and do not tell the person it was done for.",
        "ctx": "with",
        "kind": "courage"
       }
@@ -23409,7 +23632,8 @@
        "note": "Ten minutes still, three things written, then the hard thing. A week of it is a different life. Part two goes further in."
       }
      ],
-     "about": "Two minutes still, then five, then twenty. Three things written down at night, one beautiful thing looked at properly, a day without complaining, a hard feeling sat with. It ends with a week of mornings that begin the right way. Nothing to buy and nothing to believe; just sitting, noticing, and the hard thing first."
+     "about": "Two minutes still, then five, then twenty. Three things written down at night, one beautiful thing looked at properly, a day without complaining, a hard feeling sat with. It ends with a week of mornings that begin the right way. Nothing to buy and nothing to believe; just sitting, noticing, and the hard thing first.",
+     "who": "Everybody; a child and a grown-up side by side"
     },
     {
      "id": "calm.still",
@@ -23855,7 +24079,8 @@
        "note": "One change at a time is how you help somebody. The waking time and the morning light are the two that do most of the work, so start them there."
       }
      ],
-     "about": "Sleep is the one thing that makes every other ladder in the school easier, and it is the easiest of all of them to fix, because almost all of it comes down to a handful of habits that cost nothing: the same waking time, daylight in the morning, a dark cool room, and the last half hour away from a screen. It works the same way for a child of six and an adult of forty, which is why this ladder is written for both."
+     "about": "Sleep is the one thing that makes every other ladder in the school easier, and it is the easiest of all of them to fix, because almost all of it comes down to a handful of habits that cost nothing: the same waking time, daylight in the morning, a dark cool room, and the last half hour away from a screen. It works the same way for a child of six and an adult of forty, which is why this ladder is written for both.",
+     "who": "Grown-ups, and a grown-up setting a child’s night"
     },
     {
      "id": "calm.hard",
@@ -24343,7 +24568,8 @@
      ],
      "about": "Real food part two took you to a sixteen-hour window and one twenty-four hour fast. This ladder is the craft of going further: what to drink, how to keep working through it, what to do when you feel rough, and — the part nearly everybody gets wrong — how to break a long fast without wrecking the good of it. It costs nothing; it is the only thing in the school that saves you money while you do it. If you are pregnant, underweight, diabetic, on medication, or have any history of disordered eating, this ladder is not for you. Talk to a doctor first.",
      "from": 18,
-     "after": "food.real2"
+     "after": "food.real2",
+     "who": "Grown-ups only; children stop at step four"
     }
    ]
   },
@@ -25336,81 +25562,113 @@
     {
      "id": "order.ownthings",
      "name": "Your own things",
-     "line": "From four, beside you. Shoes, cover, clothes, books, and one box put right.",
+     "line": "From two shoes put side by side, to a whole day of looking after your own things with nobody reminding you.",
      "size": "weeks",
      "strand": "little",
      "from": 4,
+     "who": "From about four, with a grown-up beside them",
+     "about": "For a child of about four and upwards, with a grown-up beside them. It starts with the few things a child handles every day anyway — shoes, coat, the cover on the bed, clothes at bedtime — and then reaches the habit the whole ladder is for: one thing away before the next thing comes out. The last rungs are a whole room tidied to the end, and then one whole day of it with nobody reminding them. Nothing here needs buying: it needs a hook they can reach, a box that is theirs, and a place for each thing that stays the same place.",
      "steps": [
       {
        "n": 1,
        "test": "Put your shoes side by side by the door, the same way round.",
+       "note": "Choose the spot together and then keep it: the same piece of floor every day. Both toes pointing the same way is the standard for now, not which shoe is on which side. Put yours beside theirs, because a row of shoes is easier to copy than an instruction.",
+       "twist": "Line them up so you could step straight into them.",
        "ctx": "with",
        "kind": "skill",
        "mins": 2
       },
       {
        "n": 2,
-       "test": "Hang your coat up on a hook.",
+       "test": "Hang your coat up on a hook by yourself.",
+       "note": "The hook has to be low enough to reach with both feet on the floor: a peg at their height, a hook on the back of a door, or a loop of string over a door handle. Show them the hanging loop inside the collar once, then let them do it slowly and badly for a while. Getting the hood over the hook is the hard part and takes a good while of practice; that is the rung, not a sign it is too early.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 3,
        "test": "Pull the cover up straight on your bed when you get out of it.",
+       "how": [
+        "Stand at the bottom and pull the cover up to the pillow with both hands.",
+        "Walk down one side smoothing it flat, then the other side.",
+        "Pillow on last, straightened with two hands."
+       ],
+       "note": "Flat and covering the bed is the standard; it does not have to be neat to count. Do yours in the next room at the same time and then go and look at each other's. A straight bed is the first thing they see when they come back into the room later in the day, which is what makes this rung easy to keep.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 4,
-       "test": "Put your clothes in the wash basket at bedtime, without being asked.",
+       "test": "Put your clothes in the wash basket at bedtime.",
+       "note": "The basket goes where they get undressed, not along the hall, or the rung fails for reasons that have nothing to do with them. A bag hung on a door handle does the job where there is no basket. Ask for it at the same point every night, straight after the pyjamas go on, so it becomes part of getting into bed rather than an extra job.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 5,
        "test": "Put the books back on the shelf the right way up.",
+       "note": "Spines facing out and the words the right way up, which is a real sorting job at four and takes longer than you would expect. Let them find the upside-down ones themselves instead of pointing at them. With no shelf, a box with the books standing up in it works the same way.",
+       "twist": "Put them back in size order, biggest to smallest.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 6,
-       "test": "Put the lids back on the pens and the tops back on the tubs.",
+       "test": "Put the tops back on the pens and the lids back on the tubs.",
+       "note": "Say it as the end of the drawing rather than a separate job: the drawing is finished when the tops are on. Show them a dried-up pen next to a good one once and the reason needs no explaining. The same rule covers the glue, the paint, the modelling dough and the box the small toys live in.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 7,
-       "test": "Empty one box of toys onto the floor and put every single one back in.",
+       "test": "Tip one box of toys out and put every single one back in.",
+       "how": [
+        "Choose a box with a lid and not too much in it: bricks, cars, animals.",
+        "Tip it out on a clear floor, not on top of other toys.",
+        "Going back in, same kinds together: all the cars, then all the bricks."
+       ],
+       "note": "The mess is part of the exercise here and nobody is cross about it, which is what makes it a good practice run for a real tidy-up. Let them do the whole putting-back themselves even when it is slow, and sit on the floor with them rather than watching from the door. Being able to fill a box properly is the skill rung eleven is built on.",
+       "twist": "Do it with one hand behind your back.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 8,
-       "test": "Find a home for one thing that never had one.",
+       "test": "Find a home for one thing of yours that has never had one.",
+       "note": "Walk round the room together and let them name something that ends up somewhere different every day: a torch, a special stone, hair bands, a favourite card. They choose the place and you ask only one question, which is whether they will remember it. A jar, a tin or a box with the thing drawn on the front makes the home obvious from across the room.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 9,
        "test": "Put away what you were playing with before the next thing comes out.",
+       "note": "Say it once at the moment they move on, then wait instead of saying it again. One thing away, one thing out, is the whole rule, and it does more of the work in a tidy room than any big clear-up does. When one time is easy, try a whole afternoon of it.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 10,
-       "test": "Do that for a whole afternoon.",
+       "test": "Take something of yours out with you and bring it home again.",
+       "note": "One thing, chosen by them and looked after by them: a water bottle, a toy, a hat, a book for the journey. On the way home ask whether they have everything of theirs, rather than naming the thing you can see they have forgotten. Where you can, go back for what gets left behind together, because fetching it is what teaches the rung.",
        "ctx": "with",
-       "kind": "skill"
+       "kind": "attention"
       },
       {
        "n": 11,
-       "test": "Tidy your room with somebody, and stay until it is finished.",
+       "test": "Tidy your own room with somebody, and stay until it is finished.",
+       "how": [
+        "One kind of thing at a time: all the clothes, then all the books, then all the toys.",
+        "A basket by the door for anything that lives in another room.",
+        "The floor last, so the end is easy to see coming."
+       ],
+       "note": "Work beside them for the whole job rather than supervising it, and say at the start what finished will look like so there is something to reach. Two short goes on the same day count; stopping halfway and not coming back does not. It is a big job at four, and doing it together is how they learn the order to do it in.",
        "ctx": "with",
        "kind": "skill"
       },
       {
        "n": 12,
        "test": "Do all of it one whole day without anybody reminding you.",
+       "note": "Tell them in the morning which day it is, then say nothing at all until bedtime, whatever you see lying about. Most days will have a reminder in them somewhere, and a day with a reminder in it is simply not the day: tomorrow will do, and nothing goes back to the bottom of the ladder. When the day does arrive it will be because the earlier rungs have become ordinary, not because anybody tried harder.",
        "ctx": "with",
        "kind": "courage"
       }
@@ -27878,7 +28136,7 @@
    {
     "id": "x-local-river",
     "test": "Find the river or stream nearest your home, and trace on a map where it starts and where it reaches the sea.",
-    "note": "Follow the blue line on a map on your phone upstream to the hills and downstream to the lough or the sea, and write down the towns it passes. If it is close and the evening is dry, walk to a bridge over it and look at which way the water runs. Children go near water only with a grown-up.",
+    "note": "Follow the blue line on a map on your phone upstream to the hills and downstream to the lake or the sea, and write down the towns it passes. If it is close and the evening is dry, walk to a bridge over it and look at which way the water runs. Children go near water only with a grown-up.",
     "mins": 20,
     "cat": "water",
     "kind": "attention",
@@ -27887,7 +28145,7 @@
    },
    {
     "id": "x-tap-water",
-    "test": "Find out which reservoir or lough the water in your kitchen tap comes from.",
+    "test": "Find out which lake, river or reservoir the water in your kitchen tap comes from.",
     "note": "Your water company's website usually explains where the water for each area comes from and how it is treated. Find the place on a map and work out how far the water travels to reach your tap. Then fill a glass and drink it slowly, knowing where it has been.",
     "mins": 15,
     "cat": "water",

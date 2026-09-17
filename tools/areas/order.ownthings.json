@@ -1,0 +1,115 @@
+{
+ "id": "order.ownthings",
+ "name": "Your own things",
+ "line": "From two shoes put side by side, to a whole day of looking after your own things with nobody reminding you.",
+ "size": "weeks",
+ "strand": "little",
+ "from": 4,
+ "who": "From about four, with a grown-up beside them",
+ "about": "For a child of about four and upwards, with a grown-up beside them. It starts with the few things a child handles every day anyway — shoes, coat, the cover on the bed, clothes at bedtime — and then reaches the habit the whole ladder is for: one thing away before the next thing comes out. The last rungs are a whole room tidied to the end, and then one whole day of it with nobody reminding them. Nothing here needs buying: it needs a hook they can reach, a box that is theirs, and a place for each thing that stays the same place.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Put your shoes side by side by the door, the same way round.",
+   "note": "Choose the spot together and then keep it: the same piece of floor every day. Both toes pointing the same way is the standard for now, not which shoe is on which side. Put yours beside theirs, because a row of shoes is easier to copy than an instruction.",
+   "twist": "Line them up so you could step straight into them.",
+   "ctx": "with",
+   "kind": "skill",
+   "mins": 2
+  },
+  {
+   "n": 2,
+   "test": "Hang your coat up on a hook by yourself.",
+   "note": "The hook has to be low enough to reach with both feet on the floor: a peg at their height, a hook on the back of a door, or a loop of string over a door handle. Show them the hanging loop inside the collar once, then let them do it slowly and badly for a while. Getting the hood over the hook is the hard part and takes a good while of practice; that is the rung, not a sign it is too early.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 3,
+   "test": "Pull the cover up straight on your bed when you get out of it.",
+   "how": [
+    "Stand at the bottom and pull the cover up to the pillow with both hands.",
+    "Walk down one side smoothing it flat, then the other side.",
+    "Pillow on last, straightened with two hands."
+   ],
+   "note": "Flat and covering the bed is the standard; it does not have to be neat to count. Do yours in the next room at the same time and then go and look at each other's. A straight bed is the first thing they see when they come back into the room later in the day, which is what makes this rung easy to keep.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 4,
+   "test": "Put your clothes in the wash basket at bedtime.",
+   "note": "The basket goes where they get undressed, not along the hall, or the rung fails for reasons that have nothing to do with them. A bag hung on a door handle does the job where there is no basket. Ask for it at the same point every night, straight after the pyjamas go on, so it becomes part of getting into bed rather than an extra job.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 5,
+   "test": "Put the books back on the shelf the right way up.",
+   "note": "Spines facing out and the words the right way up, which is a real sorting job at four and takes longer than you would expect. Let them find the upside-down ones themselves instead of pointing at them. With no shelf, a box with the books standing up in it works the same way.",
+   "twist": "Put them back in size order, biggest to smallest.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Put the tops back on the pens and the lids back on the tubs.",
+   "note": "Say it as the end of the drawing rather than a separate job: the drawing is finished when the tops are on. Show them a dried-up pen next to a good one once and the reason needs no explaining. The same rule covers the glue, the paint, the modelling dough and the box the small toys live in.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Tip one box of toys out and put every single one back in.",
+   "how": [
+    "Choose a box with a lid and not too much in it: bricks, cars, animals.",
+    "Tip it out on a clear floor, not on top of other toys.",
+    "Going back in, same kinds together: all the cars, then all the bricks."
+   ],
+   "note": "The mess is part of the exercise here and nobody is cross about it, which is what makes it a good practice run for a real tidy-up. Let them do the whole putting-back themselves even when it is slow, and sit on the floor with them rather than watching from the door. Being able to fill a box properly is the skill rung eleven is built on.",
+   "twist": "Do it with one hand behind your back.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 8,
+   "test": "Find a home for one thing of yours that has never had one.",
+   "note": "Walk round the room together and let them name something that ends up somewhere different every day: a torch, a special stone, hair bands, a favourite card. They choose the place and you ask only one question, which is whether they will remember it. A jar, a tin or a box with the thing drawn on the front makes the home obvious from across the room.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Put away what you were playing with before the next thing comes out.",
+   "note": "Say it once at the moment they move on, then wait instead of saying it again. One thing away, one thing out, is the whole rule, and it does more of the work in a tidy room than any big clear-up does. When one time is easy, try a whole afternoon of it.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Take something of yours out with you and bring it home again.",
+   "note": "One thing, chosen by them and looked after by them: a water bottle, a toy, a hat, a book for the journey. On the way home ask whether they have everything of theirs, rather than naming the thing you can see they have forgotten. Where you can, go back for what gets left behind together, because fetching it is what teaches the rung.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Tidy your own room with somebody, and stay until it is finished.",
+   "how": [
+    "One kind of thing at a time: all the clothes, then all the books, then all the toys.",
+    "A basket by the door for anything that lives in another room.",
+    "The floor last, so the end is easy to see coming."
+   ],
+   "note": "Work beside them for the whole job rather than supervising it, and say at the start what finished will look like so there is something to reach. Two short goes on the same day count; stopping halfway and not coming back does not. It is a big job at four, and doing it together is how they learn the order to do it in.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 12,
+   "test": "Do all of it one whole day without anybody reminding you.",
+   "note": "Tell them in the morning which day it is, then say nothing at all until bedtime, whatever you see lying about. Most days will have a reminder in them somewhere, and a day with a reminder in it is simply not the day: tomorrow will do, and nothing goes back to the bottom of the ladder. When the day does arrive it will be because the earlier rungs have become ordinary, not because anybody tried harder.",
+   "ctx": "with",
+   "kind": "courage"
+  }
+ ]
+}

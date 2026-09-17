@@ -1,0 +1,117 @@
+{
+ "id": "speak.sayit",
+ "name": "Saying it yourself",
+ "line": "From four, beside you. From a hello at home to telling a whole story to everybody in the room.",
+ "size": "weeks",
+ "strand": "little",
+ "from": 4,
+ "who": "From about four, with a grown-up beside them",
+ "about": "For a child of about four and upwards, with a grown-up beside them. It starts with the easiest speaking there is, a hello said first to somebody at home who already loves them, and works outwards from there: telling a person at home what happened, saying what they want instead of going quiet, then a neighbour, then somebody they have not met, then the person at a counter, and at the end a whole story told to everybody in the room. Nothing on this ladder is ever pushed. A rung that will not come is a rung to try again in a week, or a rung to go back from, or a sentence the grown-up says first and the child says after. Being able to say what you want, out loud, to somebody you do not know, is used every single day for the rest of a life.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Say hello first to somebody at home, before they say it to you.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "This is the whole ladder in one small move: the child speaks first, to somebody who already loves them. If the words do not come, wait, then say your own hello and let them say it after you. That counts. A child who will not speak is never pushed on any rung here; go back a rung, leave it a week, and try it again then.",
+   "mins": 1
+  },
+  {
+   "n": 2,
+   "test": "Ask for what you want in a whole sentence with a please in it, instead of pointing.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Hold the thing for a moment and wait, rather than asking questions they can answer by nodding. If they get stuck, say the sentence yourself and let them repeat it. Never hold something back until the words come out right, and never make them ask again when they have already asked."
+  },
+  {
+   "n": 3,
+   "test": "Say goodbye to somebody by their name when they go.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "The name is the part children leave out, so put the name in your own goodbye and they will pick it up from you. A grandparent going home, a friend leaving the house, somebody who came to the door: anybody who is actually going somewhere. A wave as well as the words is fine; a wave instead of the words is next week's try."
+  },
+  {
+   "n": 4,
+   "test": "Tell somebody at home one thing that happened today.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "Ask for one thing, not for the whole day. Picking one thing out of a whole day is most of the work of this rung, so give them time to choose it. Listen to the end without asking anything, and if it comes out in the wrong order leave it alone; the order is rung twelve, not this one.",
+   "twist": "Tell it to somebody who was not there when it happened."
+  },
+  {
+   "n": 5,
+   "test": "When you do not want to do something, say in words what you want instead.",
+   "how": [
+    "The thing they do not want: \"I do not want to stop yet.\"",
+    "Then the thing they do want: \"I want five more minutes.\"",
+    "You answer the words, even when the answer is no."
+   ],
+   "ctx": "with",
+   "kind": "courage",
+   "note": "The skill here is getting a want into words. Crying is not the thing being corrected and is never treated as the failure; wait until they are calm again, then help them say it in words afterwards, and say the words first yourself if they cannot find them. Answering the words seriously, yes or no, is what makes words worth using next time."
+  },
+  {
+   "n": 6,
+   "test": "Say sorry to somebody in your own words.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Their own words means a sentence of their own, not the one word repeated back after us: \"I am sorry I knocked your tower over\" is the rung. Wait until everybody is calm again; it does not work in the middle of it. If it will not come, let them see you say your own sorry to somebody this week, and leave the rung for now.",
+   "twist": "Say what you will do next time as well."
+  },
+  {
+   "n": 7,
+   "test": "Say hello to somebody you know who does not live with you.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "A neighbour, a relative who visits, the person at the door of somewhere you go every week. Stand beside them rather than in front of them, and give them a few seconds before you speak for them. The same person every week is far easier than a new one, so pick one person and go back to them."
+  },
+  {
+   "n": 8,
+   "test": "Answer a question yourself when somebody asks you one.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "The hard part of this rung is ours: we answer for them without noticing, especially when somebody is waiting. Count to five in your head before you say anything at all. If nothing comes, answer for them without any comment about it, or say the answer quietly and let them say it after you.",
+   "twist": "Give them more than one sentence."
+  },
+  {
+   "n": 9,
+   "test": "Say your name to somebody you have not met, with your grown-up beside you.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "This is the first rung with somebody they do not know in it. Every rung like that is done standing beside the grown-up they came with, never on their own, and never with somebody we have only just met ourselves unless we are right there. Pick somebody who has a reason to ask: another child at the park, somebody at a desk, a friend of a relative. Never ask them to say it again so another adult can hear it.",
+   "twist": "Ask them their name back."
+  },
+  {
+   "n": 10,
+   "test": "Say thank you to the person serving you, loud enough for them to hear.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "A shop, a library desk, a bus driver, somebody handing out food at a hall: anywhere a person hands them something. Stand half a step back so the thank you is theirs and not ours, and do not say it again after them. Quiet on the first few goes is fine, and loud enough is the rung rather than the first attempt."
+  },
+  {
+   "n": 11,
+   "test": "Ask for what you want yourself at a counter, with your grown-up beside you.",
+   "how": [
+    "Decide what you want before you get to the front.",
+    "Wait your turn, then say it: \"Can I have one of those, please?\"",
+    "Say thank you when it comes."
+   ],
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Ordering food or a drink is the usual version of this. It works exactly the same with no money at all: asking at a library desk for a book about dinosaurs, asking at a visitor desk for a map, asking somebody in a big building where the toilets are. Let them say it their own way even when it comes out backwards, and only repeat it if the person truly did not hear."
+  },
+  {
+   "n": 12,
+   "test": "Tell everybody in the room about something that happened, from the start to the end.",
+   "how": [
+    "Where you were, and who was there.",
+    "What happened, in the order it happened.",
+    "How it ended, and then stop."
+   ],
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Get everybody quiet and looking at them before they start, and ask the others not to talk over them or finish it for them. Somebody in the room who was not there makes the best listener, because then the child has to say the parts that person does not already know. Two or three people is a room; if that is too many today, one listener is still the rung and a second one can come next time.",
+   "twist": "No ums."
+  }
+ ]
+}

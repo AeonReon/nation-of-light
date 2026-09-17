@@ -1,0 +1,109 @@
+{
+ "id": "music.song",
+ "name": "A song all the way through",
+ "line": "From singing one song with somebody beside you to singing it right through to everybody in the room at once.",
+ "size": "weeks",
+ "strand": "little",
+ "from": 4,
+ "who": "From about four, with a grown-up beside them",
+ "about": "For a child of about four and upwards, with a grown-up beside them. It starts with one song the family already knows, sung all the way through with somebody singing along, then the same song on their own, then the whole of it with nobody helping at all. Next comes the beat: clapping it, then singing and clapping at the same time, then the song loud, then quiet, then fast and slow. The last rungs are for other people — one person, a second song, a verse of their own words, and at the end singing to everybody in the room. Nothing is needed but a song and somebody to sing it with, and no rung asks a child to sing for anybody until they have sung it on their own many times.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Sing one song all the way through with somebody singing beside you.",
+   "ctx": "with",
+   "kind": "skill",
+   "mins": 4,
+   "note": "Pick a song the family already sings — a birthday song, a lullaby, something from nursery or from a film — and sing it right through two or three times yourself before asking for anything. Sit or stand beside them rather than in front of them, and sing at their speed instead of your own. If they join in on only some of the words the first time, that is this rung done."
+  },
+  {
+   "n": 2,
+   "test": "Sing it on your own, with somebody helping only when you get stuck.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Stop singing along and let the song be theirs. When they stop, give them the next word quietly and nothing more, rather than taking the line over. Three or four goes spread across a week works better than three goes in one sitting."
+  },
+  {
+   "n": 3,
+   "test": "Sing it all the way through with nobody helping at all.",
+   "ctx": "with",
+   "kind": "attention",
+   "twist": "With your eyes shut.",
+   "note": "Sit where they can see you and stay quiet the whole way through, including the parts that come out wrong. A swapped word or a line in the wrong place is fine; getting from the beginning to the end with no prompt is the rung. If the same verse keeps going missing, sing that verse together on its own a few times before the next try."
+  },
+  {
+   "n": 4,
+   "test": "Clap the beat while somebody else sings it.",
+   "how": [
+    "Sing a verse yourself and nod your head in time with it until the nod is steady.",
+    "Clap once for every nod, and nothing in between.",
+    "Then sing it again and let them clap with your nodding."
+   ],
+   "ctx": "with",
+   "kind": "skill",
+   "twist": "Tap it with your feet instead.",
+   "note": "The beat is the steady thing underneath, not one clap for every word, and that difference is the whole rung. Start with a slow song, because a fast one is much harder to hold on to. If the claps drift, keep your own going steadily for them to come back to instead of stopping to explain."
+  },
+  {
+   "n": 5,
+   "test": "Sing it and clap the beat at the same time.",
+   "ctx": "with",
+   "kind": "skill",
+   "twist": "Walk in time while you sing it.",
+   "note": "Doing two things at once is the difficulty here, so the singing may go quiet while the hands work, or the claps may stop while the words come back. Slow the song right down for the first tries. Once through with both going together is enough for this rung."
+  },
+  {
+   "n": 6,
+   "test": "Sing it as loudly as you can.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Say where and when loud is allowed — outdoors, in the car, or in a room with the door shut — and then sing at the same volume beside them, so it is a thing you are both doing and not a performance. Loud comes from a big breath and an open mouth, not from shouting in the throat. One loud go and then a normal one is plenty."
+  },
+  {
+   "n": 7,
+   "test": "Sing it so quietly that only the person next to you can hear.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "Quiet singing still uses a proper breath: it is not whispering, and the tune has to stay in it. Put your ear near them and say when you can only just hear it. This is the harder half of the loud rung, and it is the one that makes singing among other people possible later on."
+  },
+  {
+   "n": 8,
+   "test": "Sing it fast, then sing it slow.",
+   "ctx": "with",
+   "kind": "skill",
+   "twist": "Change from fast to slow in the middle, without stopping.",
+   "note": "Fast first, because it is the funny one, then as slowly as they can hold it while the tune still holds together. Ask for clear words at both speeds; running the words together is not the fast version. Changing the speed on purpose is the first piece of control over a song, rather than only knowing it."
+  },
+  {
+   "n": 9,
+   "test": "Sing it to one person who has never heard you sing it.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Ask that person beforehand to listen right to the end and then say thank you and nothing else: no scoring it, no corrections, and no asking for another one. A grandparent or a relative on a video or phone call counts, and being heard without being looked at makes an easier first go. Let the child say when it happens, and let them start on their own without you announcing it first."
+  },
+  {
+   "n": 10,
+   "test": "Learn a second song all the way through.",
+   "ctx": "with",
+   "kind": "skill",
+   "twist": "A song in another language.",
+   "note": "Let them choose this one, even if it is a song you have heard plenty of already. Learn it the same way: you sing it right through several times over a few days, they join in with the parts they have, then they take it on their own. Two songs they can sing whenever they are asked is what makes the last rungs possible."
+  },
+  {
+   "n": 11,
+   "test": "Make up a new verse for one of your songs and sing it.",
+   "ctx": "with",
+   "kind": "skill",
+   "twist": "A whole new verse, made up while you are singing.",
+   "note": "Keep the tune exactly as it is and change the words of one verse only. Start it with a question — what else could be on the bus, what else could the farmer have — and use something real from today: the dog, the rain, somebody's name. Write their verse down and sing it back to them the next day, because a made-up verse that gets sung twice becomes part of the song."
+  },
+  {
+   "n": 12,
+   "test": "Sing a song to everybody in the room at once.",
+   "ctx": "with",
+   "kind": "courage",
+   "twist": "Standing up on your own, with everybody quiet.",
+   "note": "A roomful is whoever is there: three people at the table after a meal, or four faces on one video call, is a room. The gentlest real version is a song everybody knows, started at the next family birthday, so the child begins on their own and the others come in after the first line — singing with a brother, a sister or a friend counts too. Ask them privately first, and never announce it to the room before they have said yes; if the answer is no, say that is fine, put it away, and offer it again in a month or two. A rung that is waiting has not been failed, and this ladder is allowed to sit on the eleventh rung for a year."
+  }
+ ]
+}

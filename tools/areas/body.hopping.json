@@ -1,0 +1,114 @@
+{
+ "id": "body.hopping",
+ "name": "Hopping and balancing",
+ "line": "From standing still on one foot to hopping the whole way across the room, swapping feet halfway and landing without a wobble.",
+ "size": "weeks",
+ "strand": "little",
+ "from": 4,
+ "who": "From about four, with a grown-up beside them",
+ "about": "For a child of about four and upwards, with a grown-up beside them. It starts standing still on one foot for a count of five, then two feet together for ten jumps, a jump over a line and a jump off the bottom stair. After that comes the first hop, five hops, a line on the floor to walk along and then to walk heel to toe, and one forward roll on something soft. It ends with a hop the whole way across the room, a change of feet halfway, and a last landing that does not move. Nothing here needs buying: a belt or a rope laid on the floor is the line, and a folded quilt on the carpet is the soft place.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Stand on one foot while somebody counts to five. Then the other foot.",
+   "ctx": "with",
+   "kind": "skill",
+   "twist": "Eyes shut.",
+   "mins": 2,
+   "note": "Do this on a carpet or a rug, with bare feet rather than socks, which slide. Stand within reach of a wall or the back of a chair so there is something to touch, and count out loud and slowly so they can hear how far they have got. Always do both feet, even though one of them is much worse, because the worse one is the one that gets better."
+  },
+  {
+   "n": 2,
+   "test": "Jump with both feet together, ten times.",
+   "ctx": "with",
+   "kind": "skill",
+   "twist": "Land so quietly that nobody hears you.",
+   "note": "Both feet leave the floor at the same moment and land at the same moment. If one foot goes first it is a step rather than a jump, so do a few yourself beside them and let them copy. Ask for bent knees on the landing, and put a rug down if the floor is hard."
+  },
+  {
+   "n": 3,
+   "test": "Jump over a line on the floor with both feet together, ten times.",
+   "ctx": "with",
+   "kind": "skill",
+   "twist": "Sideways.",
+   "note": "With no chalk or tape in the house, the line is a skipping rope, a belt, a dressing-gown cord or a long scarf laid out straight, or the join between two floorboards or two tiles. Lay it flat so a foot landing on it cannot roll. Jumping back the other way counts as the next one, so ten is five there and five back."
+  },
+  {
+   "n": 4,
+   "test": "Jump off a low step and land on two feet without wobbling.",
+   "ctx": "with",
+   "kind": "courage",
+   "twist": "Land, then stay still for a count of three.",
+   "note": "One step only, and no higher than their own knee: the bottom stair or a low doorstep is right, and nothing higher belongs on this ladder. Clear the landing so there is nothing within an arm's length to hit, and hold a hand for the first few goes until they ask to go on their own. A landing means knees bent and then standing up straight, not a sit-down on the floor."
+  },
+  {
+   "n": 5,
+   "test": "Stand on one foot while somebody counts to ten.",
+   "ctx": "with",
+   "kind": "attention",
+   "twist": "Eyes shut.",
+   "note": "Arms held out sideways is allowed and makes it much easier. Looking at one fixed thing on the wall works better than looking down at the foot. If they wobble at six, count more slowly next time rather than going back to one, and do both feet every session."
+  },
+  {
+   "n": 6,
+   "test": "Hop three times on one foot.",
+   "ctx": "with",
+   "kind": "skill",
+   "twist": "The foot you would never choose.",
+   "note": "A hop is the same foot going up and coming down while the other one stays off the floor, which is not obvious at all — do it slowly yourself first. Count out loud, and count only the hops where the other foot stayed up. Let them hold one of your fingers for the first goes, then take it away once they have stopped looking for it."
+  },
+  {
+   "n": 7,
+   "test": "Hop five times on one foot without putting the other one down.",
+   "ctx": "with",
+   "kind": "skill",
+   "twist": "The foot you would never choose.",
+   "note": "Small hops are easier to keep going than big ones, so ask for little ones. Arms out sideways again. Do the other foot in the same session; it will be worse to start with and it catches up with practice."
+  },
+  {
+   "n": 8,
+   "test": "Walk along a line without stepping off it.",
+   "ctx": "with",
+   "kind": "attention",
+   "twist": "Backwards.",
+   "note": "The line is the same rope, belt, dressing-gown cord or scarf laid out straight, or something the floor already gives you: a join between two floorboards, the edge of a rug, the pattern in the tiles, or the long edge of a door mat. Arms out sideways. When a foot comes off, let them put it back on and carry on from there rather than going back to the start, because staying on is the thing being practised."
+  },
+  {
+   "n": 9,
+   "test": "Walk along the line heel to toe.",
+   "ctx": "with",
+   "kind": "attention",
+   "twist": "Backwards.",
+   "note": "Every step puts the heel of the front foot against the toes of the back foot, with no gap between them. Slow is the whole point of this one, so there is nothing to count and no hurry. Looking ahead at something on the wall holds them steadier than looking down at their feet."
+  },
+  {
+   "n": 10,
+   "test": "Roll forwards on something soft and come up sitting.",
+   "how": [
+    "Crouch down small, hands flat on the floor in front, about a shoulder's width apart.",
+    "Chin down on the chest, eyes looking at their own tummy, and keep it there the whole way over.",
+    "Push with the feet, take the weight on the hands, and roll over the back of the shoulders.",
+    "Come up sitting."
+   ],
+   "ctx": "with",
+   "kind": "courage",
+   "note": "The soft place is a folded duvet or two folded quilts on a carpet, out in the middle of the room and away from furniture — never a bed and never a sofa. Kneel beside them with one hand behind the head, holding the chin tucked down towards the chest, and the other hand at the hips to help them over. The weight belongs on the hands and the back of the shoulders; if the top of the head goes down on the floor, stop, go back to the tuck and try again, and leave the rung for another week if the tuck will not hold. This is the one rung here that is not hopping or standing, and it is here because turning over and coming back up is the same balance used from a completely different angle."
+  },
+  {
+   "n": 11,
+   "test": "Hop all the way across the room on one foot.",
+   "ctx": "with",
+   "kind": "skill",
+   "twist": "The foot you would never choose.",
+   "note": "Take the short way across the room and move anything in the path out of it first. If the other foot comes down, put a shoe on the floor to mark how far they got and go for further another day, rather than starting the whole thing again. Both feet get a turn, on different days if they are too tired after the first one."
+  },
+  {
+   "n": 12,
+   "test": "Hop across the room, swap feet halfway, and land the last one still.",
+   "ctx": "with",
+   "kind": "skill",
+   "twist": "Start on the foot you would never choose.",
+   "note": "Lay the rope or the belt across the middle of the room as the halfway mark. The swap is the hard part: at first both feet can come down for a moment at the line, and the swap in the air comes later. Landing still means the last hop lands and nothing moves at all while somebody counts to three. Choosing which foot to use and then changing it on purpose is what running, climbing and dancing all need, and this rung is the first time they do it deliberately."
+  }
+ ]
+}

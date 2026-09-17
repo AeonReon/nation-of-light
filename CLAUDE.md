@@ -667,3 +667,38 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   switch no longer silences the room and effects while the voices carry on; a hidden page quiets the room and pauses
   the music. Console: `NOL.amb()`, `NOL.mus()`, `NOL.skip()` (end the piece now). The preview pane reports
   `document.hidden = true`, so to hear/test there, override it first. More pieces need sourcing (Musopen CC0).
+- **v82 (2026-09-17, Opus session): the under-sevens rewritten; every ladder now says who it is for.**
+  (1) **The eight `strand: "little"` ladders.** Seven of them (body.hopping, speak.sayit, make.scissors,
+  make.crayons, music.song, care.helping, order.ownthings) were bare `test` lines with no `note`, no `about` and
+  no `who` — the last set left after v80. Rewritten to `tools/areas/BRIEF-LITTLE.md`, which is the v73 standard
+  plus the shape these have of their own: from four, every rung `ctx: "with"` (so they never surface as an
+  adult's quick thing), the `test` spoken to the CHILD in one plain sentence and the `note` to the GROWN-UP (how
+  to set it up, what to let the child do badly and finish themselves, the free alternative, what not to do), and
+  the other-hand twists kept. `food.kitchen`, already written this way in v43, is the model the rest were matched
+  to; it got its `who` and its twists back (v45 put them on and a later rewrite lost them). 84 rungs, four
+  writers (X, Y, Z, W2), every rung read. **Orders that were wrong and are now right:** hopping had balancing
+  and one-foot hopping BEFORE two-footed jumping; crayons had colouring in before drawing shapes (a child draws
+  a closed shape long before they can stay inside somebody else's line); speak.sayit opened by asking a shy
+  four-year-old to give their name and age to a stranger, which is now rung 9 of a ladder that starts with a
+  hello said first to somebody at home. **Content calls:** the rung that said to use words "instead of crying"
+  is gone — rung 5 is now saying what you want instead, and its note says plainly that crying is not the thing
+  being corrected; make.scissors rung 1 carries the left-handed point (in a right-handed pair the upper blade
+  sits over the cut line, so a left-handed child cannot see the cut) and rung 3 is carrying and handing over on
+  its own; body.hopping keeps the forward roll with a four-line `how` and a spotting note (chin tucked, weight on
+  hands and the back of the shoulders, stop if the top of the head goes down); music.song rung 12 and
+  order.ownthings rung 12 both have notes that make a rung that will not come an ordinary thing — "a rung that is
+  waiting has not been failed". care.helping and order.ownthings overlapped badly (two of the same rungs
+  word for word); the line drawn is helping = done for other people, ownthings = your own things.
+  (2) **`who` on the last 32 adult ladders** — all of Health (written in v73, before the field existed, which
+  said it inside `line` instead) and the nine area-opening programmes. **All 175 ladders now carry a `who` and an
+  `about`, and every rung in the school has a `note`.**
+  (3) Two place words the v77 pass missed because it looked for names: "lough" (Irish and Scottish for a lake) in
+  water.cold rung 3, its `about`, mind.maps and one daily extra. `apply_v82.py` holds them so they cannot return.
+  (4) **22 ladder tiles drawn** (`tools/tiles-v81.mjs`, `tools/tiles-v82.mjs`, the order-draw recipe): the
+  fourteen adult ladders that had none — the nine area openers plus words.books, speak.connect, food.real1/2 —
+  and the eight under-sevens. They were all falling back on the room tile, so several rows in a room looked
+  identical.
+  **Left in the school:** nothing unwritten. The daily pools are lopsided and that is the next content job —
+  extras have one health item in 85 and nothing at all for emotions, spirituality or prosperity; quick things
+  have three or four each for community, new experiences and spirituality against 34 for knowledge.
+  Apply order: apply_v76 → v78 → v79 → v80 → **v82**. (v81 was the other session's audio wave.)

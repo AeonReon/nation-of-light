@@ -1,0 +1,116 @@
+{
+ "id": "make.crayons",
+ "name": "Crayons",
+ "line": "From a page covered in colour to a picture of your own day, handed to somebody with the story that goes with it.",
+ "who": "From about four, with a grown-up beside them",
+ "size": "weeks",
+ "strand": "little",
+ "from": 4,
+ "about": "For a child of about four and upwards, with a grown-up beside them. It starts with a whole page covered in colour and a crayon held in the fingers, then lines, then a circle, a square and a triangle: drawing comes before colouring in, because staying inside somebody else's line is harder than making your own. After that comes colouring one shape properly, filling it with no white left, pressing hard and softly, and a whole picture in more than one colour. It ends with a person, then something that happened that day, then handing that picture to somebody and saying what is in it. Nothing here needs a colouring book: a thick pen and the back of an envelope make everything this ladder asks for.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Fill a whole page with colour.",
+   "how": [
+    "Hold the crayon in your fingers, not in your fist.",
+    "Any paper: the back of a letter, a paper bag, a food packet opened out.",
+    "Cover every part of the page."
+   ],
+   "ctx": "with",
+   "kind": "skill",
+   "mins": 5,
+   "note": "Break the crayons in half before you start. A short crayon cannot be held in a fist, so the fingers find the right hold on their own, and a broken crayon is no loss. Anything that makes a mark will do for this ladder: crayons, coloured pencils, a pen, or chalk on a paving stone outside."
+  },
+  {
+   "n": 2,
+   "test": "Draw a long line right across the paper, then a short one.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Lines come before shapes because a line has a beginning and an end that the child chooses. Ask for one from side to side, then one from top to bottom, then a few short ones in between. Hold the paper still for them at first, or put it on a book; a sliding page makes this much harder than it is.",
+   "twist": "The hand you would never choose."
+  },
+  {
+   "n": 3,
+   "test": "Draw a circle that joins up where it started.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Draw one yourself first, slowly, while they watch, then leave them to it. Joining up is the only standard here, and size and wobble do not matter. Drawing round a cup comes in a later rung; this one is about the movement of the hand.",
+   "twist": "The hand you would never choose."
+  },
+  {
+   "n": 4,
+   "test": "Draw a square.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Four lines and four stops. Say stop, turn, and go again at each corner, or put four dots on the page for them to join up. Corners are where the hand has to plan ahead, which is why a square takes longer to learn than a circle even though it looks simpler."
+  },
+  {
+   "n": 5,
+   "test": "Draw a triangle.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Three corners and two slanted lines, which is harder than it looks, so three dots to join up is a fair way to start. Look for triangles around the house afterwards: a slice of bread cut across, a roof, a coat hanger. A triangle drawn at four is usually lopsided, and the next one is better."
+  },
+  {
+   "n": 6,
+   "test": "Colour inside a shape you drew yourself, staying inside the line.",
+   "how": [
+    "Use one of your own circles or squares, a big one.",
+    "Go round the inside edge first.",
+    "Then fill in the middle."
+   ],
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Colouring in comes after drawing shapes, not before, because staying inside a line somebody else drew is harder work than making the line yourself. No colouring book is needed: outline something on plain paper with a thick dark pen, or draw round a cup, a hand, a spoon or a lid to make shapes worth filling in. Going round the inside edge first and filling the middle after is the bit that makes it work."
+  },
+  {
+   "n": 7,
+   "test": "Colour it all the way in, with no white bits left.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "This rung is about finishing rather than drawing, so choose a small shape the first time. Let them say when it is done, then hold it up to the window together and look for the gaps. Pressing very hard tears the paper, and a second layer of colour on top covers white bits better than one hard layer does."
+  },
+  {
+   "n": 8,
+   "test": "Press hard for a dark colour and softly for a pale one.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Ask for the same shape twice on one page, one dark and one pale, so the difference sits in front of them. This is the first control they have over how a colour looks, and it is what stops later pictures looking flat. Two colours laid over each other make a third, which is worth trying on the same sheet.",
+   "twist": "The side of the crayon, not the point."
+  },
+  {
+   "n": 9,
+   "test": "Colour a whole picture in, every part of it, with more than one colour.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "If there is nothing printed in the house, draw the picture for them with a thick pen: a house, a fish, a tree, a face, big and simple. Every part means the sky and the ground as well, which is the difference between a coloured picture and a coloured-in shape. It takes a while, so leaving it on the table and coming back to it later is fine."
+  },
+  {
+   "n": 10,
+   "test": "Draw a person with a head, a body, two arms, two legs and a face.",
+   "how": [
+    "Head first, then the body under it.",
+    "Two arms, two legs, then the face.",
+    "Say who it is when it is finished."
+   ],
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Name the parts as they go and let them put the arms wherever they put them. A head with legs coming straight out of it is a common first version, and asking for a body in between is usually enough. A person is the first drawing that stands for somebody real, so saying who it is matters as much as the drawing does.",
+   "twist": "The hand you would never choose."
+  },
+  {
+   "n": 11,
+   "test": "Draw something that happened today.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "Ask what they did first, listen to the answer, then let them draw whichever part of it they choose. It does not have to look like the thing; it has to be about the thing. Small events are easier to draw than big ones: rain, a dog, a bus, somebody coming to the door."
+  },
+  {
+   "n": 12,
+   "test": "Give a picture you drew to somebody and tell them what is in it.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Somebody in the house, or a relative it can be posted to. Let them choose which picture goes, even if it is not the one you would have chosen. Handing over something you made and saying what is in it asks more of a child than the drawing did, which is why it is the last rung."
+  }
+ ]
+}

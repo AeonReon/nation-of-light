@@ -1,0 +1,115 @@
+{
+ "id": "care.helping",
+ "name": "Helping",
+ "line": "From carrying one thing to the table, to doing a helpful thing nobody asked for and nobody knows about.",
+ "size": "weeks",
+ "strand": "little",
+ "from": 4,
+ "who": "From about four, with a grown-up beside them",
+ "about": "For a child of about four and upwards, with a grown-up beside them. It begins with jobs somebody else names — carry this to the table, fetch that, feed the animal — and then turns round: noticing what a person did for you, clearing a table that is not only yours, asking what would help, and at the end doing one thing before anybody asks and keeping it quiet. Every rung is a job that genuinely needed doing, because a job invented to keep a child busy is obvious to the child. This ladder is about being useful to the people around you, which is one of the most enjoyable things a small person can be.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Carry one thing to the table before a meal, and one thing back after it.",
+   "how": [
+    "Hand them something that cannot break and cannot burn: the spoons, the bread, a plastic cup.",
+    "Both hands, and walking, not running.",
+    "Ask them at the end what else still needs to go on."
+   ],
+   "note": "Give them something that was going to the table anyway rather than inventing a job for them. Two trips are fine, and so is putting the spoons down in the wrong places. Everything later in this ladder is a bigger version of this one: a meal is something the family gets ready, not something that appears.",
+   "twist": "Two things at once, one in each hand.",
+   "ctx": "with",
+   "kind": "skill",
+   "mins": 2
+  },
+  {
+   "n": 2,
+   "test": "Fetch something for somebody when they ask you to.",
+   "note": "Ask for one clear thing that is really in another room: your glasses, a cushion, the book on the chair. Use it in front of them afterwards and say thank you, so they see what it was for. If the wrong thing comes back, take it anyway and describe it better next time.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 3,
+   "test": "Say thank you to somebody for one thing they did for you today.",
+   "note": "Do it at a quiet moment, at the end of the day or on a walk, and say yours first so they hear what it sounds like: thank you for the dinner, thank you for finding my shoe. It has to be one real thing that happened today, not a general thank you. Noticing that somebody has done something for you is what the rest of this ladder is built on.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Hold a door open and let somebody go through first.",
+   "note": "A light door first: a room at home, a gate, the door of a small shop. Heavy shop doors and doors that shut themselves are hard for a four-year-old to hold, so stand beside them the first few times. Once they have done it in front of a stranger who says thank you, they will do it everywhere.",
+   "twist": "Hold it for somebody whose hands are full.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 5,
+   "test": "Give a pet its food, or a plant its water.",
+   "how": [
+    "Measure the food into a cup or a scoop beforehand, so the amount is already right.",
+    "A small jug for a plant, half full, poured at the soil and not on the leaves.",
+    "Put the bowl down and step back, in case the animal comes in quickly."
+   ],
+   "note": "With no pet and no plant, a cutting from a friend's plant in a jar of water on the windowsill does the same job and costs nothing. Say what happens next — the animal comes to the bowl, the plant stands up again by the evening — so the job has a visible end. An animal that is not yours is fed only when its own grown-up says so.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 6,
+   "test": "Do that every day for a week.",
+   "note": "Do it at the same moment each day, after breakfast or before the evening meal; the fixed time is what keeps it going. Let them be the one who notices it is time, and a reminder on a slow day does not spoil the week. If a day gets missed, do it yourself and carry on the next day rather than starting the week again.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Clear the table with somebody after a meal, and take everybody's things, not only yours.",
+   "note": "Give them what cannot break and cannot burn: the cups, the mats, the cutlery gathered in a pile, the board. Scraping the plates into the bin is usually the popular job and can be theirs too. The rung is in the words not only yours, so say that part out loud at the start.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 8,
+   "test": "Make something for somebody and give it to them. A drawing counts.",
+   "note": "Anything made with their own hands: a drawing, a card, a paper aeroplane, a stone with a pattern drawn on it, a sandwich. They choose the person, and they hand it over themselves rather than you passing it on for them. If the person lives far away, a photograph of it sent to them works.",
+   "twist": "Make it for somebody who does not live in your house.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 9,
+   "test": "Help a smaller child do something they cannot do yet, without doing it for them.",
+   "how": [
+    "Show it once, slowly, then put your hands in your lap.",
+    "Say the next bit in words instead of reaching in.",
+    "Let the little one be the one who finishes it."
+   ],
+   "note": "A younger brother, sister or cousin, or a friend's child while their own grown-up is there. Zips, a shoe on the right foot, a puzzle piece and a tower of bricks are the usual ones. Tell them beforehand that the hard part of this rung is keeping their hands off, which makes it a challenge rather than a correction.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 10,
+   "test": "Help tidy a room that everybody uses, and stay until it is finished.",
+   "note": "The kitchen, the sitting room or the hall: a room they did not make untidy on their own. Put them in charge of one kind of thing — all the cushions, all the shoes, everything that belongs upstairs — rather than saying tidy up. Staying to the end is the rung, so say at the start what finished is going to look like.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 11,
+   "test": "Ask somebody what would help them, then do it.",
+   "note": "Give them the words the first time: what can I do to help? Whoever they ask needs a small real answer ready — the cutlery on the table, the curtains shut, the shoes moved out of the doorway. Being the one who asks instead of the one who is asked is the whole step up here, and it is what makes the last rung possible.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "Do one helpful thing before anybody asks, and do not tell them it was you.",
+   "note": "Agree beforehand that you are the only person who ever hears about it, and that at bedtime a nod is enough; they never have to say what it was. You will usually see it before you hear about it — the shoes in a row, the table set, the animal already fed, the cushions back on the sofa. Say to the room that somebody has done something kind, and then say nothing more: do not guess out loud, do not ask, and do not tell the person it was done for.",
+   "ctx": "with",
+   "kind": "courage"
+  }
+ ]
+}

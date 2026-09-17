@@ -15,7 +15,7 @@ MINS = {
  'words.lang': 10, 'words.irish': 10, 'words.read': 5, 'words.books': 3, 'words.hand': 3, 'words.callig': 10,
  'words.poems': 10, 'words.sign': 10,
  'speak.people1': None, 'speak.people2': 5, 'speak.strangers': 3, 'speak.stage': 3, 'speak.listen': 2,
- 'speak.hardthing': 3, 'speak.story': 3, 'speak.humour': 3, 'speak.teach': 5, 'speak.sayit': 2, 'speak.connect': 3,
+ 'speak.hardthing': 3, 'speak.story': 3, 'speak.humour': 3, 'speak.teach': 5, 'speak.sayit': 1, 'speak.connect': 3,
  'make.something1': 10, 'make.wood': 15, 'make.cloth': 5, 'make.knots': 5, 'make.clay': 15, 'make.draw': 6,
  'make.electric': 10, 'make.machines': 10, 'make.photo': 3, 'make.scissors': 1, 'make.crayons': 5,
  'music.play1': 4, 'music.sing': 2, 'music.instrument': 5, 'music.rhythm': 4, 'music.whistle': 3,
