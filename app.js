@@ -159,7 +159,7 @@
   }
   function musicStart(v, opening) { if (!S.sound) return; MUSWANT = true; MUSV = v || .55; if (opening) MUSI = 0; else { S.musicN = (S.musicN || 0) + 1; MUSI = S.musicN; save(); } musicPlay(); }
   MUS.addEventListener('ended', () => { if (!MUSWANT) return; MUSI++; S.musicN = MUSI; save(); const G = (C.music && C.music.gap) || [20, 40]; MUSGAP = setTimeout(musicPlay, (G[0] + Math.random() * (G[1] - G[0])) * 1000); });
-  function musicDuck(on) { lyreDuck(on); if (MUS.paused) return; musicTo(on ? duckTo() : MUSV, on ? 350 : 1400); }
+  function musicDuck(on) { lyreDuck(on); if (MUS.paused || !MUSWANT) return; musicTo(on ? duckTo() : MUSV, on ? 350 : 1400); }
   function musicStop() { MUSWANT = false; clearTimeout(MUSGAP); MUS._held = false; if (MUS.paused) return; musicTo(0, 1200); setTimeout(() => { if (!MUSWANT) MUS.pause(); }, 1300); }
   const musicNow = () => musicList()[MUSI % musicList().length];
   [NAR, MAR].forEach(el => { el.addEventListener('play', () => musicDuck(true)); const back = () => { if (NAR.paused && MAR.paused) musicDuck(false); }; el.addEventListener('ended', back); el.addEventListener('pause', back); });
@@ -2511,7 +2511,7 @@
     for (const l of (C.marcus.spoken || [])) LINES[l.id] = l;
     buildScene();
     $('donebtn').addEventListener('click', onDone); $('skipbtn').addEventListener('click', onSkip); $('readbtn').addEventListener('click', readTablet);
-    $('soundbtn').addEventListener('click', () => { S.sound = !S.sound; save(); paintSound(); if (!S.sound) { hush(); musicStop(); ambStop(); } else { sfx('tap'); ambStart(); if (S.done.length || (atHome() && points())) ambFire(true); if (atHome()) musicStart(.4); } });
+    $('soundbtn').addEventListener('click', () => { S.sound = !S.sound; save(); paintSound(); if (!S.sound) { hush(); musicStop(); lyreStop(300); ambStop(); } else { sfx('tap'); ambStart(); if (S.done.length || (atHome() && points())) ambFire(true); if (atHome()) musicStart(.4); } });
     capSwipe($('popcap')); capSwipe($('capband'));
     /* swipe down on either of them while they are popped up: both go, and the words with them */
     ['mfig', 'afig'].forEach(id => { const el = $(id); let y0 = null; el.addEventListener('pointerdown', e => { y0 = $('stage').classList.contains('popmode') ? e.clientY : null; }, { passive: true }); el.addEventListener('pointermove', e => { if (y0 !== null && e.clientY - y0 > 36) { y0 = null; hush(); popOut('marcus', 0); popOut('aurelia', 0); capHide(0); } }, { passive: true }); el.addEventListener('pointerup', () => { y0 = null; }); });

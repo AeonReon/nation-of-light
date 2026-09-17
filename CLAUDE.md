@@ -710,3 +710,7 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   rule in the v83 CREDIT note) → fifteen in the room's turn, fourteen on the lyre. Gains were set by measured
   loudness (beds about -38 LUFS, water -44, music files -20), not by ear: if he says a bed is loud or thin, change
   its `gain` in content.json, nothing else.
+- **v84 (2026-09-17, Fable session): the mute button really mutes.** Two flaws in the mute path: a voice being
+  hushed fires `musicDuck(false)` a moment AFTER `musicStop()` began its fade, which swelled the music back up for a
+  second (now `musicDuck` does nothing unless `MUSWANT`); and the mute never stopped the lyre's piece (now
+  `lyreStop(300)` in the sound-off handler).
