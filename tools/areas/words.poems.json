@@ -1,0 +1,110 @@
+{
+ "id": "words.poems",
+ "name": "Poems: learning them and writing them",
+ "line": "From choosing one short poem to a poem evening at home where you say one by heart and read one of your own.",
+ "size": "weeks",
+ "strand": "say-what-you-mean",
+ "who": "Everybody from about six; a child and a grown-up side by side",
+ "about": "For everybody from about six: a child and a grown-up can climb it side by side, each with a poem that suits them. It starts with reading a few short poems aloud and choosing one you like, then learning it by heart, finding its beat, and saying it to one person slowly enough that every word is heard. Writing your own comes in small pieces alongside: a three-line poem, then four lines that rhyme, then eight lines you change until they sound right. It ends with a poem evening at home where everybody says or reads one, and you say one by heart and read one you wrote. Poems are free in any library and on many websites, and a poem learned by heart stays with you for years.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Read three short poems aloud and choose the one you like best.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 10,
+   "note": "Short means four to twelve lines. Some to look for: 'Who Has Seen the Wind?' by Christina Rossetti, 'Rain' by Robert Louis Stevenson, 'Hope is the thing with feathers' by Emily Dickinson, or a book of poems for children from the library. Choose the one whose sound you like, not the one you think is best. If you already have a favourite, read it aloud on purpose and count it."
+  },
+  {
+   "n": 2,
+   "test": "Learn the first four lines of your poem, and say them with the page turned face down.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Read one line aloud three times, then say it without looking; add the next line the same way. Say all four together at the end. A small mistake is fine on this rung; say them again tomorrow morning and you will usually find they are still there."
+  },
+  {
+   "n": 3,
+   "test": "Clap the beat of those four lines as you say them.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Most poems have a beat, like a song. Clap on the words or parts of words that sound strongest: 'WHO has SEEN the WIND?' Some poems do not have a steady beat; if yours does not, clap each line's strong words anyway and notice where the pauses fall."
+  },
+  {
+   "n": 4,
+   "test": "Learn the rest of your poem, and say the whole of it the next morning without the page.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "Add two lines a day, always saying the whole poem from the top. Saying it next morning is the test, because that is when you find out whether you really remember it. If a line goes missing, look once, then say the whole poem again."
+  },
+  {
+   "n": 5,
+   "test": "Say your poem to one person, slowly, with a short pause at the end of every line.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Nearly everybody says a poem too fast the first time. Stand or sit facing them, take a breath, and leave a half-second at the end of each line. Ask them afterwards which line they remember; that tells you it was heard."
+  },
+  {
+   "n": 6,
+   "test": "Write a three-line poem about something you can see from a window: five syllables, then seven, then five.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "This shape is called a haiku, and it comes from Japan. A syllable is each separate sound you can clap in a word: 'window' has two, and 'the cat on the wall' has five. Write about one real thing you can see right now, such as rain on a car, a bird or a washing line. The count matters less than a clear picture."
+  },
+  {
+   "n": 7,
+   "test": "Choose a longer poem of sixteen to twenty-four lines, and learn it by heart over a week.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "'Stopping by Woods on a Snowy Evening' by Robert Frost has sixteen lines; 'The Tyger' by William Blake has twenty-four. A child might choose a funny poem of the same length. Four lines a day is enough, always saying the whole poem from the top."
+  },
+  {
+   "n": 8,
+   "test": "Say the longer poem standing up to two or more people.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "At a meal, after dinner, or on a video call to relatives. Tell them the name of the poem and who wrote it, then begin. Keep the pauses from rung five; if you lose a line, stop, breathe, and carry on from the next line you remember."
+  },
+  {
+   "n": 9,
+   "test": "Write four lines about something that happened this week, with the second and fourth lines ending in words that rhyme.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Pick a small real thing: a dog that barked at you, a burnt piece of toast, a bus that came early. Write what happened in plain words first, then move the words around until lines two and four end in a rhyme, such as rain and again, or toast and most. Clap it to hear whether it runs smoothly."
+  },
+  {
+   "n": 10,
+   "test": "Copy five poems you like into a notebook by hand, one a day for five days.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Any notebook or a few sheets stapled together. Write the title and who wrote it above each one. Copying a poem slowly shows you how it was built: where the lines break and which words were chosen. This becomes a book of your own to choose from later."
+  },
+  {
+   "n": 11,
+   "test": "Write eight lines of your own, read them aloud, and change at least one word that sounds wrong.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "About a person, a place or a day you remember well. Read it out loud: a word that makes you stumble, or sounds flat, is the one to change. Rhyme or no rhyme, both are allowed; keep a beat you can clap."
+  },
+  {
+   "n": 12,
+   "test": "Read your eight lines aloud to one person.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Tell them first what it is about in one sentence, then read it slowly with the pauses you have practised. You do not need to ask what they thought; reading it aloud to somebody is the rung. If they say one line they liked, write that down."
+  },
+  {
+   "n": 13,
+   "test": "Learn a poem of about thirty lines by heart.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "'The Owl and the Pussy-cat' by Edward Lear and 'If' by Rudyard Kipling are both a little over thirty lines. Use the notebook from rung ten to choose. Four or five lines a day for a week is plenty, saying the whole poem from the top each time."
+  },
+  {
+   "n": 14,
+   "test": "Hold a poem evening at home where everybody says or reads one poem, and you say one by heart and read one of your own.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Tell people a few days ahead so each can choose a poem; a child can say a four-line rhyme. Sit in a circle, take turns, and clap after each one. You say your thirty-line poem and read your eight lines. That is the far end of this ladder."
+  }
+ ]
+}

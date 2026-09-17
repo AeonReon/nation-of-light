@@ -1,0 +1,153 @@
+{
+ "id": "classic.logic",
+ "name": "Spotting a bad argument",
+ "line": "From splitting what somebody said into a point and a reason to teaching somebody three kinds of bad argument.",
+ "size": "months",
+ "strand": "say-what-you-mean",
+ "from": 10,
+ "about": "For grown-ups and anybody from about ten; a younger child can do the early rungs with a grown-up. It starts with splitting anything somebody says to persuade you into two parts: the point, and the reason given for it. Then, one at a time, you learn ten common kinds of bad argument with everyday examples, and spot them in real conversations, adverts and programmes. It ends with finding bad arguments in your own words, asking a calm question when you hear one, and teaching somebody else. It is worth it because a loud or clever-sounding reason is not the same as a good one, and it helps you think clearly without making anybody feel small.",
+ "who": "Grown-ups and anybody from about ten",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Take one thing somebody said today to persuade you of something, and write it as two parts: the point, and the reason they gave.",
+   "note": "\"We should leave now, because the shop shuts at five.\" Point: leave now. Reason: the shop shuts at five. It can be something said at home, a line in an advert, or something you read. Almost every argument is a point and a reason, and this is how you see them.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Find one claim with no reason at all, in an advert, a packet or a conversation, and write the question that would ask for one.",
+   "note": "\"The best pizza in town.\" \"You will love this.\" The question: \"What makes you say that?\" or \"Best compared with what?\" A claim with no reason is not an argument yet.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Say what is wrong with \"Everybody in my class has one, so it must be good\", and write a better reason somebody could give.",
+   "note": "How many people do something tells you it is popular, not that it is good. A better reason would be about the thing itself: it lasts, it works, it is worth the money. In books this is called an appeal to popularity.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Say what is wrong with \"Don't listen to his idea for the trip; he is always late.\"",
+   "note": "Being late has nothing to do with whether the idea is good. This is attacking the person instead of the point. The fair question is: is the idea good or not?",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Say what is wrong with answering \"Did you finish your homework?\" with \"I helped wash the dishes.\"",
+   "note": "Helping may be true and kind, but it does not answer the question. Changing the subject is one of the most common moves there is, and once you have a name for it you notice it often.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Say what is wrong with answering \"Could we have fewer sweets in the house?\" with \"So you want nobody to have any fun ever again.\"",
+   "note": "Nobody said that. The reply argues against a bigger, sillier claim that is easier to argue against than the real one. The fix is to repeat what was actually said.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Say what is wrong with \"If I let you stay up ten minutes late tonight, you will be up until midnight every night.\"",
+   "note": "It jumps from a small step to a big result without showing why one must lead to the other. Sometimes one thing does lead to another; the question is whether a reason is given for each step.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Over one week, spot two real examples of the kinds of bad argument in rungs 3 to 7, and write down the words and which kind each was.",
+   "note": "Listen at meals, in games, in programmes, in adverts and in comments online. Everyday and small is best. Write who said it only as \"a friend\" or \"an advert\"; the point is the argument, not the person.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Say what is wrong with \"Either you come to my party or you are not my friend.\"",
+   "note": "It pretends there are only two choices when there are more: you can be a friend and still miss a party. When you hear \"either... or...\", ask whether there is a third way.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Say what is wrong with \"I bought one thing from that shop and it broke, so everything they sell is rubbish.\"",
+   "note": "One case is too few to say something about all of them. The question is: how many cases is this based on?",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Say what is wrong with \"I wore my blue socks and our team won, so the socks made us win.\"",
+   "note": "One thing happening before another does not show that it caused it. Both could be chance, or something else could have caused the win. The question is: what else could explain it?",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Say what is wrong with \"A famous footballer says this phone is the best, so it is.\"",
+   "note": "Being an expert in one thing does not make somebody an expert in another. A footballer's view on football is worth hearing; on phones, it is one person's opinion. The question is: does this person know about this particular thing?",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 13,
+   "test": "Find a number on a packet, advert or website used as proof, and write three questions it does not answer.",
+   "note": "\"9 out of 10 people preferred it.\" How many people were asked? Who asked them, and who chose them? Preferred it to what? A number can be true and still not prove the point it is used for.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 14,
+   "test": "Over one week, spot three different kinds of bad argument from rungs 9 to 13, and write down the words of each.",
+   "note": "Adverts are full of rung 12 and 13. Conversations about sport and luck are full of rung 11. Write the exact words you heard or read, and the plain name of the kind.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 15,
+   "test": "From memory, write down the ten kinds of bad argument from this ladder, each in plain words with one real example you met.",
+   "note": "Following the crowd, attacking the person, changing the subject, arguing against something nobody said, a small step made into a disaster, only two choices, one case for all, before means because, the wrong expert, and a number that does not prove it. Use the real examples you wrote down in rungs 8 and 14 where you can.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 16,
+   "test": "Find one bad argument in something you said or wrote yourself this week, and write a better reason in its place.",
+   "note": "\"I should get a new game because all my friends have it\" is rung 3. A better reason might be what you would learn or enjoy. Everybody does this; finding your own is the hardest and most useful part of this ladder.",
+   "ctx": "room",
+   "kind": "courage"
+  },
+  {
+   "n": 17,
+   "test": "Find a point you agree with that somebody backed with a bad reason, and write a good reason for it.",
+   "note": "\"Brush your teeth because I said so\" is a poor reason for a good habit. A bad argument does not make the point wrong; it only means that reason does not show it. Separating the two is a big step in thinking clearly.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 18,
+   "test": "When somebody near you uses a bad argument, ask one calm question about it, without naming the kind or making them feel small.",
+   "note": "\"Is that the only two choices, or could we do something else?\" \"How many times has that happened?\" Choose a small moment with family or a friend, not somebody who is upset. A question works better than \"That is a bad argument.\"",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 19,
+   "test": "When somebody shows you a better reason than yours, say \"You are right, I had not thought of that\", and mean it.",
+   "note": "This can happen in a game, a plan at home or a disagreement about a film. If you are already quick to say it, do it on purpose once this week and count it.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 20,
+   "test": "Teach somebody three kinds of bad argument with an everyday example of each, until they can name the kind in a new example you give them.",
+   "note": "A child teaching a grown-up works as well as the other way round. Use your own examples from rungs 8 and 14, then make up a fresh one for them to spot. Keep the examples everyday: games, food, shops, sport.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

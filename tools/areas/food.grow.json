@@ -1,0 +1,152 @@
+{
+ "id": "food.grow",
+ "name": "Growing",
+ "line": "From cress on a windowsill to giving away food and plants you grew yourself.",
+ "size": "months",
+ "strand": "look-after-the-place",
+ "who": "Everybody; a child and a grown-up can grow side by side",
+ "about": "For everybody: a child and a grown-up can climb it side by side, each with their own pot. Every rung up to the last few works on a sunny windowsill, with no garden at all. It starts with cress on damp paper, then a pot of salad or radishes, kitchen scraps that grow again, a herb from a cutting, and one bigger plant like a tomato or beans, with a notebook of what happened. Then it looks outwards to your own seasons, compost and a bigger space, and ends with enough grown to share and seed saved for next time. Watching food come out of a pot of soil is a quiet daily pleasure, and it changes how you look at every vegetable you buy.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Sow cress seeds on damp kitchen paper in a saucer, and put it on a windowsill.",
+   "ctx": "kit",
+   "kind": "skill",
+   "mins": 10,
+   "note": "Fold two sheets of kitchen paper into the saucer, wet them, pour off the extra water, and sprinkle the seeds thinly over the top. Cress or mustard seed is cheap and quick. No seeds at all: a spoonful of dried lentils or chickpeas from the cupboard will sprout on damp paper too, but those are for watching, not for eating raw."
+  },
+  {
+   "n": 2,
+   "test": "Check the saucer every morning for a week, keep the paper damp but not swimming, and write down the day the first shoots appear.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Touch the paper each morning: damp like a wrung-out cloth is right; a puddle is too much. A few drops from your fingers is usually enough. A child can keep the chart on the fridge."
+  },
+  {
+   "n": 3,
+   "test": "Cut the cress with scissors when it is about a finger tall, and eat it.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Usually about a week after sowing. Rinse it, then put it in an egg sandwich, on a cheese cracker, or on top of soup. Wash your hands before you cut it."
+  },
+  {
+   "n": 4,
+   "test": "Fill a pot with compost and sow radish or salad leaf seeds at the depth the packet says.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "The pot needs holes in the bottom and a saucer under it; a yoghurt pot or a cut-down milk carton with holes poked in by a grown-up works fine. Fill it to a finger below the rim, press it down lightly, water it, then sow. Garden soil will do if you have no compost. Salad leaves and radishes are some of the easiest seeds to grow indoors."
+  },
+  {
+   "n": 5,
+   "test": "For a week, push a finger into the soil every day and water the pot only when the top is dry to your first knuckle.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "More pot plants die from too much water than too little. Water slowly until a little comes out into the saucer, then stop, and tip away what is left in the saucer after half an hour. If you already water plants this way, do it on purpose and count it."
+  },
+  {
+   "n": 6,
+   "test": "Stand the root ends of some spring onions in a glass with a little water, change the water every two days, and cut the green tops once they have grown back.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Keep the white root end, about a thumb long, after you cook with the rest. Water only up to the roots, not over the top. The green grows back in about a week, and you can cut it more than once. The root ends of celery and leeks do the same."
+  },
+  {
+   "n": 7,
+   "test": "When the seedlings in your pot have two or three leaves, pull out the weakest so each one left has room to grow.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Radishes need about a thumb width between them; salad leaves a little less. Hold down the soil next to the one you keep with one finger while you pull. The small salad leaves you pull out can be rinsed and eaten."
+  },
+  {
+   "n": 8,
+   "test": "Put a cutting from a herb like mint or basil in a glass of water, and move it into a pot of soil once its roots are a finger long.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Cut a stem about a hand long just below a leaf joint, take off the lower leaves, and stand it in water on a bright windowsill out of hot direct sun. A pot of herbs from a supermarket or a friend's plant is a good place to take one from. Roots usually show in one to three weeks."
+  },
+  {
+   "n": 9,
+   "test": "Harvest your pot of radishes or salad leaves at the right size, and eat them the same day.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Radishes are ready when the round top at the soil is about as wide as a large marble, usually four to six weeks after sowing; leave them much longer and they go woody. Salad leaves: cut the outer leaves when they are about a hand long and leave the middle to keep growing."
+  },
+  {
+   "n": 10,
+   "test": "Sow a fresh pot the same day you harvest, so there is always one growing.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "This is how growers keep food coming for weeks instead of all at once. Tip the old soil into a bag to reuse for the new pot, or mix it with fresh compost. If you have space for two pots, sow one two weeks after the other."
+  },
+  {
+   "n": 11,
+   "test": "Keep a growing notebook for a month: what you sowed and when, when it came up, when you watered, and what you picked.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "One line a day is enough, on paper or in your phone. Add anything you noticed: the plant leaning to the light, leaves turning yellow, a fly on the soil. The notebook is what you will use to work out why something went wrong."
+  },
+  {
+   "n": 12,
+   "test": "Sow one plant that takes two months or more to give food, in a big pot on your sunniest windowsill or outside.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "A cherry tomato, a chilli pepper or dwarf beans all grow in a pot the size of a bucket. Sow in spring (roughly March to May in the northern half of the world, September to November in the southern half), or at any time indoors in a warm, bright room; where there is no cold season, sow at the time local growers do. Seeds from a dried chilli or a ripe tomato from the kitchen will often grow, for free."
+  },
+  {
+   "n": 13,
+   "test": "Give the big plant a stick to lean on, and tie its main stem to it loosely with soft string as it grows.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "A thin garden cane, a straight stick from a walk, or a chopstick for a small plant. Push it into the soil near the stem, not through the roots, and tie in a loose figure of eight so the stem has room to thicken. Tie again every week or so as it grows."
+  },
+  {
+   "n": 14,
+   "test": "Find out the growing seasons where you live, and write down what you could sow in each one.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "In a place with cold winters, that means the average date of the last frost in spring and the first in autumn; in a warm place, it is usually the rainy and dry seasons. Your national weather service, a local gardening club or the back of seed packets will tell you. A simple list of your seasons with two or three crops for each is the rung."
+  },
+  {
+   "n": 15,
+   "test": "The next time a plant dies or does badly, work out the most likely reason and write down what you will change.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Check your notebook. The usual reasons: too much water, too little light, too cold, too hot and dry, or small insects on the leaves. Everybody who grows things loses some; the ones who get good are the ones who work out why. If nothing has died, look closely at your weakest plant and do the same."
+  },
+  {
+   "n": 16,
+   "test": "Start making compost from vegetable peelings, or find a place near you that takes them for composting.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Outside: a lidded bin or a heap in a corner, with peelings, tea leaves and eggshells mixed with torn cardboard or dry leaves, turned now and then. No meat, fish or cooked food. With no outside space, many councils, community gardens and neighbours with a heap will take peelings, and that counts."
+  },
+  {
+   "n": 17,
+   "test": "Grow three different food plants at once in a bigger space: a window box, a large container, a garden bed or a share of a community garden.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Choose from what your season list says: for example, beans, lettuce and a herb. A community garden or a neighbour with more ground than time is often glad of help, and that counts as your space. Use your finger test and your notebook for all three."
+  },
+  {
+   "n": 18,
+   "test": "Grow enough of one crop to make one dish for everybody in your home.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "A big bowl of salad leaves, a pan of beans, a tomato sauce, a herb pesto. Plan backwards from the dish: how many plants would that need? One dish, all from the one crop you grew, with other things added from the kitchen, is the rung."
+  },
+  {
+   "n": 19,
+   "test": "Save seeds from something you grew, dry them, and test ten on damp paper to see how many sprout.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Beans and peas are the easiest: leave a few pods on the plant until they are dry and rattle. Tomato and chilli seeds are scooped out, rinsed and dried on a plate. Seeds from plants labelled \"F1\" often do not grow true to the parent. If seven of your ten sprout, your seed is good; keep the rest in a labelled paper envelope in a cool, dry place."
+  },
+  {
+   "n": 20,
+   "test": "Give food, seedlings or rooted cuttings you grew to three people, with a note on how to look after them.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "A bag of salad leaves to a neighbour, a rooted mint cutting to a friend, a pot of tomato seedlings to a grandparent. Write the care note from what you learned: how much water, how much light, when to pick. Some of them will start growing too."
+  }
+ ]
+}

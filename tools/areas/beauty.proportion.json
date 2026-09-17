@@ -1,0 +1,145 @@
+{
+ "id": "beauty.proportion",
+ "name": "Proportion",
+ "line": "From marking the middle of a line by eye to a scale drawing of a building front where every part follows a proportion you chose, explained to somebody.",
+ "size": "months",
+ "strand": "make-things",
+ "from": 10,
+ "who": "From about ten; a child and a grown-up side by side",
+ "about": "For anybody from about ten who can use a ruler; a child and a grown-up can climb it side by side. Proportion is how big one thing is compared with another, and this ladder teaches you to see it, measure it and use it on purpose. You start by marking the middle of a line by eye, then write shapes as numbers, find out why most printer paper halves into the same shape, measure things built to fit a body, and test the golden ratio for yourself instead of believing what is often said about it. It ends with a scale drawing of a building front where every part follows a proportion you chose, explained to somebody. A ruler, a pencil, paper and the calculator on a phone are all it needs.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Mark the middle of a line by eye, then fold the paper to check how close you were.",
+   "note": "Draw a line across a scrap of paper, or use the edge of the page. Make one mark where you think the middle is. Fold the paper so the two ends of the line meet, and crease: the crease is the true middle. Measure the gap between your mark and the crease. Do three and see if you get closer. Already good at this? Try a line drawn on a slant.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 2
+  },
+  {
+   "n": 2,
+   "test": "Mark a line into three equal parts by eye, then measure to see how close you came.",
+   "note": "Thirds are harder than halves because there is no middle to aim at. Make two marks, then measure all three parts with a ruler and write the lengths down. With no ruler, fold a strip of paper the same length into three, like a letter going into an envelope, and hold it against your line.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 3,
+   "test": "Measure the long side and the short side of three rectangles at home, and divide the long side by the short side for each.",
+   "note": "A book, a door, a window, a sheet of paper, a table top, a picture frame. Use a ruler or a tape measure, or count hand-widths if you have neither. The calculator on a phone does the dividing. A square gives 1. Most television screens give about 1.78, which is 16 to 9. Write each answer beside the thing's name: that number is the shape of the rectangle, whatever its size.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Choose the rectangle whose shape you like most, and draw two rectangles of that same shape at different sizes.",
+   "note": "Two rectangles are the same shape when the long side divided by the short side gives the same number. If yours was 1.5, draw one 6 by 4 centimetres and one 12 by 8 (or 3 by 2 inches and 6 by 4). To check, lay the small one on a corner of the big one, both the same way up: a straight line from that corner passes through the far corner of both.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 5,
+   "test": "Fold a sheet of printer paper in half and check whether the half is the same shape as the whole.",
+   "note": "Stand the half upright on a corner of a whole sheet that is also upright, and check the corners with a straight line as on the last rung. Most countries use the A sizes, such as A4 at 210 by 297 millimetres, which are made so that every half is the same shape as the whole: the long side divided by the short side is about 1.41, the square root of two. Letter paper, used in the United States, Canada and some other countries, is 8.5 by 11 inches, and its half is a different shape. Either answer is worth finding.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Measure the height of a stair step, a chair seat and a table top, and compare each one with a part of your body.",
+   "note": "Most stair steps are between about 15 and 20 centimetres high (6 to 8 inches), since a higher step is tiring to climb again and again. A chair seat is usually close to the height of the back of a grown-up's knee, and a table top comes up near a seated grown-up's elbows. For a child, all three are sized for somebody bigger, which is worth noticing too. With no stairs at home, use a front step or a kerb.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Using a door as a measure about two metres tall, work out roughly how tall a building is from a photograph of it.",
+   "how": [
+    "Take or find a photograph of a building front with a door in it.",
+    "Measure the door's height and the whole building's height on the photograph with a ruler.",
+    "Divide the building's height by the door's height to find how many doors tall it is.",
+    "Multiply by two metres (about six and a half feet)."
+   ],
+   "note": "Most house doors are close to two metres tall, a little more or less from country to country, so this gives a rough answer, not an exact one. Use a photograph taken straight on, not looking up, or the top of the building will look smaller than it is. Check your answer by counting floors: in many homes there are about three metres from one floor to the next.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "In a photograph of a building front, measure the windows on each floor and write down whether they get taller, shorter or stay the same going up.",
+   "note": "In many older town houses in Europe the tallest windows are on the floor above the ground floor, where the finest rooms were, and the windows under the roof are the smallest. In many modern office blocks every floor is the same. Neither is right or wrong; the point is to see that somebody chose. A building near you counts if you can look at it straight on.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Write down the numbers 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, and divide each one by the one before it.",
+   "note": "Each number is the two before it added together. The answers go 1, 2, 1.5, 1.67, 1.6, 1.625, 1.615, 1.619, 1.618, getting closer and closer to about 1.618. That number is called the golden ratio, and a rectangle whose long side is about 1.618 times its short side is called a golden rectangle. These numbers are named after Fibonacci, an Italian mathematician who wrote about them in 1202; mathematicians in India knew them centuries earlier.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Draw four rectangles with a short side of 10 centimetres and long sides of 10, 14.1, 16.2 and 20, and ask two people which shape they like best without saying which is golden.",
+   "note": "They are a square, the printer-paper shape, the golden rectangle and a double square. In inches, use a short side of 4 and long sides of 4, 5.7, 6.5 and 8. Write down the answers. People have run tests like this for about 150 years: some found a small liking for shapes near the golden rectangle, others found none, and people differ. There is no settled answer, and your two people are a small test of your own.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Check one famous golden-ratio claim by measuring a photograph yourself, and write down how much the answer changes with where you measure.",
+   "note": "Claims are often made about the front of the Parthenon in Athens, the Great Pyramid, the Mona Lisa or the human face. Measure a straight-on photograph with a ruler: the answer changes a lot depending on whether you include the steps, the roof or the hair, and you can usually find a golden ratio somewhere if you choose the edges to fit. There is little evidence that the ancient builders or Leonardo used it on purpose. Some later designers did, such as the architect Le Corbusier in his measuring system, the Modulor.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Measure the four margins of a well-made printed book, and write down which margin is widest.",
+   "note": "Top, bottom, the outside edge and the inside edge by the spine. In many carefully made books the bottom margin is the widest and the inside margin the narrowest, because the two open pages are seen together as one. Books made cheaply often squeeze the margins. Compare two books and say which page is more pleasant to read. Proportion is not only for buildings.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 13,
+   "test": "Lay out one page, such as a recipe, a poem or a notice, with margins chosen on purpose, and compare it with the same words crammed to the edges.",
+   "note": "Write the same words twice. On one, rule light pencil margins like the book you liked: bottom widest, sides a little less, top a little less again. On the other, fill the page to the edges. Put them side by side and say which you would rather read, and why. By hand is fine.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Measure a table top and draw it to scale, with one centimetre on the paper for every ten centimetres of table, and the things on it in their places.",
+   "note": "A table 120 by 80 centimetres becomes 12 by 8 on the paper. Measure a plate, a cup or a book on the table and draw those to the same scale in their places. In inches, use one inch on paper for every ten inches of table. Drawing to scale is how builders and architects everywhere show sizes and proportions before anything is made.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 15,
+   "test": "Measure the front of your home or a building you can stand close to, and draw it to scale with the door, the windows and the roof in their places.",
+   "note": "You cannot reach the top, so measure what you can: the width and height of the door and a window, and the bricks, boards or blocks, which are all the same size and can be counted. Use the door method from rung seven for the height. One centimetre for every half metre fits most houses on one page (or a quarter of an inch for every foot). For a large building or a block of flats, draw only the part you can see from one spot.",
+   "ctx": "out",
+   "kind": "skill"
+  },
+  {
+   "n": 16,
+   "test": "Redraw the same front with one proportion changed, such as windows half as tall, and ask somebody which drawing looks right without telling them which is real.",
+   "note": "Change only one thing, so you can see what that one thing does: the windows, the door, the height of the roof, or the space between floors. A person can often see that something is wrong before they can say what. Ask them to point at the part that looks wrong.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 17,
+   "test": "Choose one proportion, such as 1 to 1.5, and design the front of a small building where the whole front, the door and the windows all use it.",
+   "note": "Pick a shape from this ladder you liked: the printer-paper shape, 1.5, the golden rectangle or a double square. Make the whole front that shape, and the door, and the windows, upright or on their side as suits. It can be a shed, a shop, a garden room or a house. Sketch it roughly first, then work out the sizes with a calculator before the neat drawing.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 18,
+   "test": "Draw your design neatly to scale and explain to somebody the proportion you chose and every place it appears.",
+   "note": "Use a ruler and a sharp pencil, and write the scale in one corner. Before you explain, ask them what they notice without being told. Then show each place the proportion appears. Keep the drawing: it shows you can see, measure and use proportion on purpose, which is what this ladder set out to teach.",
+   "ctx": "with",
+   "kind": "skill"
+  }
+ ]
+}

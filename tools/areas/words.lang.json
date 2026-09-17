@@ -1,0 +1,153 @@
+{
+ "id": "words.lang",
+ "name": "A new language",
+ "line": "From saying hello and your name to a ten-minute conversation about your life with somebody who grew up speaking it.",
+ "size": "months",
+ "strand": "say-what-you-mean",
+ "from": 8,
+ "who": "Everybody from about eight; a child and a grown-up side by side",
+ "about": "For everybody from about eight: a child and a grown-up can learn the same language together, and it works for any language you choose. It starts with the sounds, a few greetings and numbers, and saying who you are, then builds the words for your home, your food and your day. The middle adds questions, what you did yesterday and what you will do tomorrow, and the first short talks with other people. It ends with a ten-minute conversation about your life with somebody who grew up speaking it. Everything here can be done with free tools: free lessons and a free dictionary online, library courses, and people nearby or online who speak the language.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Choose one language and one free way to learn it, and say 'Hello, my name is' and your name in it, out loud.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 10,
+   "note": "Choose a language you will hear or use: a family language, the language of a place you want to visit, or one spoken by people near you. Free ways in: a language app with free lessons, free video lessons on a video website, a course borrowed from the library. Copy a recording of a real speaker so the sounds are right from the first day."
+  },
+  {
+   "n": 2,
+   "test": "Listen to the main sounds of the language, and copy each one out loud after the recording.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Search for the name of the language and the word 'pronunciation', and choose a video by a speaker. Pay most attention to the sounds your own language does not have. If the language uses its own letters, such as Greek, Arabic or Japanese, learn the first five letters and their sounds now and add a few each week."
+  },
+  {
+   "n": 3,
+   "test": "Say hello, goodbye, please, thank you, sorry, yes and no without looking.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Write the seven on a small card and read them aloud morning and evening for a few days. Test yourself by covering the card. If you already know these, say them on purpose today and count it."
+  },
+  {
+   "n": 4,
+   "test": "Count from one to ten and back down to one, out loud.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Say them on the stairs, one step each, or while laying the table. Counting backwards shows whether you really know them or are only saying a string of sounds. Numbers come up in every price, time and address, so they are worth having early."
+  },
+  {
+   "n": 5,
+   "test": "Say four sentences about yourself: your name, your age, where you live, and one thing you like.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Use a free online dictionary or your lessons for the words, and keep the sentences short: 'I am ten. I live in a flat. I like football.' Write them down, then say them without the paper. These four sentences are the start of nearly every first conversation."
+  },
+  {
+   "n": 6,
+   "test": "Learn the words for ten things in your home, and put a paper label on each one.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Door, table, chair, window, bed, cup, fridge, book, lamp, shoes. Small strips of paper and a bit of tape work fine. Say the word each time you touch the thing, and take the labels off after a week to test yourself."
+  },
+  {
+   "n": 7,
+   "test": "Learn five questions and how to answer each one: what is your name, how are you, where do you live, what is this, and how much is it.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Write each question with a short answer underneath. Ask yourself the questions out loud and answer them. Notice how questions are made in this language: some change the order of the words, some only change the voice."
+  },
+  {
+   "n": 8,
+   "test": "Say your four sentences about yourself to another person.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "A family member counts, even if they do not speak the language; tell them what you said afterwards. A child and a grown-up learning together can take turns. Saying it to a real face is harder than saying it to the wall, which is why it is a rung."
+  },
+  {
+   "n": 9,
+   "test": "Count to a hundred in tens, then say five numbers somebody picks between one and a hundred.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Ten, twenty, thirty and so on first, then the numbers in between. Some languages build numbers in an unusual way, such as French saying 'four twenties' for eighty; notice the pattern in yours. Ages, prices and bus numbers are good practice."
+  },
+  {
+   "n": 10,
+   "test": "Learn fifty everyday words over a week: food, family, weather and time.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "Seven or eight new words a day. Make small paper cards with the word on one side and a quick drawing on the other, and go through the pile each morning. Take out the cards you know every time, so you spend your time on the hard ones."
+  },
+  {
+   "n": 11,
+   "test": "Watch ten minutes of a children's programme or song in the language, and write down every word you recognise.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Free video websites have children's programmes and songs in most languages. Children's programmes speak slowly and show what they mean. Do not stop to look words up; just catch what you can, and count the words at the end."
+  },
+  {
+   "n": 12,
+   "test": "Say five sentences about what you are doing today.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "'I get up. I eat bread. I go to school. I see my friend. I read a book.' Use the words from rung ten. Say them to yourself while you do the thing, and write them down afterwards to check."
+  },
+  {
+   "n": 13,
+   "test": "Learn how to talk about the past with five common verbs, go, eat, see, do and say, and make one sentence with each.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Your free lessons or a grammar page online will show the past forms. Make sentences about yesterday: 'I went to the shop. I ate soup.' If the language has several past forms, learn the one used most in everyday talk first."
+  },
+  {
+   "n": 14,
+   "test": "Write five sentences about your weekend, and have somebody who speaks the language correct them.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "A speaker you know, a teacher, or a free language-learning forum where speakers correct learners' writing; a grown-up helps a child post there. Write the corrections underneath in a different colour and read the correct version aloud. Every mistake corrected is a sentence you will not get wrong next time."
+  },
+  {
+   "n": 15,
+   "test": "Have a two-minute conversation in the language with another learner or a speaker.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Ask each other the five questions from rung seven and answer with your sentences about yourself. Look for a conversation group at a library or community centre, or a free language-exchange website where you help each other. Anybody under sixteen does online exchanges with a grown-up in the room, and nobody gives out their address or school."
+  },
+  {
+   "n": 16,
+   "test": "Read a short children's story in the language and understand most of it.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Free children's stories in many languages are online, and some libraries lend picture books in other languages. Read the whole story once without a dictionary, then look up only the words you needed to follow it. Tell yourself the story in your own language to check."
+  },
+  {
+   "n": 17,
+   "test": "Say three things you will do tomorrow.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "'Tomorrow I will go to the park. I will cook dinner. I will phone my grandmother.' Your lessons will show how the future is made; some languages simply add a word for 'tomorrow' to the present. Say them tonight, then check the next evening what you really did."
+  },
+  {
+   "n": 18,
+   "test": "Watch a short video made for learners at normal speed, twice, and say in the language three things it was about.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Search for the language and 'for learners' or 'easy', and choose a video of about five minutes with real people talking. The first time, just listen; the second time, catch the details. Watching with subtitles in the same language is allowed on the second go."
+  },
+  {
+   "n": 19,
+   "test": "Have a five-minute conversation with somebody who speaks the language well, about your day and what you did yesterday.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "The person from rung fourteen or fifteen, a speaker in your area, or a language-exchange partner. Ask them to speak a bit slowly and not switch into your own language. When you do not know a word, describe it with the words you have."
+  },
+  {
+   "n": 20,
+   "test": "Have a ten-minute conversation about your life with somebody who grew up speaking the language, and understand most of what they say.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Your family, your work or school, what you like doing, where you would like to go. Mistakes are fine; ten minutes of staying in the language is the rung. That is the far end of this ladder; talking with speakers often is what keeps the language growing from here."
+  }
+ ]
+}

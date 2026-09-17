@@ -1,0 +1,153 @@
+{
+ "id": "money.run",
+ "name": "Running something",
+ "line": "From writing down five things to sort out to running the same small thing for the fourth time, with written notes somebody else could follow.",
+ "size": "months",
+ "strand": "be-useful-to-somebody",
+ "from": 10,
+ "about": "For grown-ups and anybody from about ten; a child runs things with a grown-up who knows the plan and is there on the day. It starts on paper, with the list of things to sort out, then turns into one real small thing: a games afternoon, a board-game evening, a litter pick, a book or toy swap, a kickabout or a walk. You choose the date and place, list every job and put a name against each, work out the cost, tell people, plan for what could go wrong, run it, tidy up and thank the helpers. It ends with the same thing running on a regular day for the fourth time, with notes written down so somebody else could run it too. Running something small well is how most clubs, groups and events anywhere begin.",
+ "who": "Grown-ups and anybody from about ten",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Imagine you are putting on a games afternoon for six children. Write down five things you would have to sort out before the day.",
+   "note": "There is no right list. A room, a start time, a helper, which games, what to drink, what happens if it rains. Anything that would go wrong if nobody thought of it counts. The point is writing it down before the day, which is most of running anything.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Choose one small real thing you could run in the next month, and write it in one sentence: what it is, who it is for, where, and roughly when.",
+   "note": "A board-game evening for friends, a games afternoon for younger cousins, a litter pick on your street, a book or toy swap, a kickabout in a park, a walk for neighbours. A child chooses it with a grown-up. If you already run something, use that and count this rung.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Ask three people who might come whether they really would, and write down what each said.",
+   "note": "\"I am thinking of running a board-game evening on a Saturday. Would you come?\" Write yes, no or maybe. Count a maybe as a no for now. If nobody says yes, change the day, the time or the idea and ask again.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 4,
+   "test": "Fix the date, the start and finish times and the place, and check that you are allowed to use the place at that time.",
+   "note": "Your own home costs nothing and needs only the household's yes. A friend's home, a hall or a room at school or work needs asking. For a park or public space, check your local council's rules for groups. Write the four details at the top of a page.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "On that page, list every job that has to happen, from today until everything is tidied away, in the order they happen.",
+   "note": "Ask the place, tell people, borrow games, buy drinks, set out chairs, welcome people, start the first game, clear up, give back what you borrowed. Walk through the day in your head from the first minute to the last, and write each job as it comes.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Put a name against every job on the list, even if most of the names are yours.",
+   "note": "A job with no name against it does not get done. That is the whole of organising. If one name is against too many jobs at the same moment, that is where you need a helper.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Ask one person to take one job, tell them exactly what \"done\" looks like, and then leave that job to them.",
+   "note": "\"Could you bring two games and set them up on the table by half past two?\" Say it plainly and let them say yes or no. Once they say yes, do not do the job for them.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 8,
+   "test": "Write down every cost, what you already have, and how the rest will be paid, or change the plan until it costs nothing.",
+   "note": "Borrow instead of buying, ask everybody to bring one thing to share, use your own home. If people share a cost, agree the amount before the day and write it down. A child agrees any money with a grown-up first.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Tell everybody who might come what it is, the date, the start and finish times, the place, and what to bring.",
+   "note": "A message, a note given by hand to neighbours you know, or a word at the school gate or at work. Put all the details in one message so nobody has to ask. A child never posts their own address or details where strangers can see them.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 10,
+   "test": "Write down three things that could go wrong on the day, and what you will do about each.",
+   "note": "Bad weather: a place indoors. A helper cannot come: who could step in, or which job you will drop. Fewer people than expected: games that work for three. Also write who has a first-aid kit and your emergency number; for children, a grown-up in charge and a phone number for each child's family.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "The day before, send a short reminder to everybody coming, and check each helper still knows their job.",
+   "note": "\"See you tomorrow at two, at number 14. Bring a snack to share if you can.\" For each helper: \"Still all right to bring the games for half past two?\" If somebody drops out, you still have a day to change the plan.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Run it: be there first, start within five minutes of the time you said, and finish on time.",
+   "note": "Arrive early to set up. Welcome each person as they come. Keep your list and your three \"what could go wrong\" answers in your pocket. If something goes differently, use your plan or change it calmly; that is part of the rung.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Tidy up, leave the place as you found it, give back anything borrowed, and settle any money on the same day.",
+   "note": "Chairs back, rubbish out, floors swept if needed. Return games to their owners. If people shared a cost, pay back or collect what was agreed and write it down.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Within two days, thank each helper by name, for the exact thing they did.",
+   "note": "\"Thank you for bringing the games and setting them up before anybody arrived; it meant we started on time.\" A message, a note or saying it face to face all count.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 15,
+   "test": "Ask three people who came what they enjoyed and what they would change, then write their answers and your own list of changes.",
+   "note": "Ask \"What was the best part?\" and \"What would make it better next time?\" Listen without explaining. Add what you noticed yourself: what took longer than you planned, what nobody used.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 16,
+   "test": "Run it a second time with at least two of those changes made.",
+   "note": "Use your old page of jobs and names, crossing out and adding as needed; it will take far less planning than the first time. Tell people what is new.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 17,
+   "test": "Choose a regular day and time for it, the same day each week or every two weeks, and tell everybody.",
+   "note": "\"Board games every other Saturday at two.\" A regular day means people can plan around it and you do not start from nothing each time. Check the place is free on those days first.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 18,
+   "test": "Give one job you have always done yourself to somebody who has never done it, show them once, and then leave it to them.",
+   "note": "Welcoming people at the door, setting up, keeping the time, collecting shared costs. They will do it differently from you, and that is fine as long as it gets done.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 19,
+   "test": "Run it a third time with somebody else leading on the day while you help.",
+   "note": "Give them your page of jobs and names a few days before. On the day, do the jobs they ask you to do. Afterwards, ask them what was hard and add it to the page.",
+   "ctx": "with",
+   "kind": "kindness"
+  },
+  {
+   "n": 20,
+   "test": "Run it for the fourth time on its regular day, with at least two people who have come before, and a page of notes that would let somebody else run it.",
+   "note": "The notes: the date and place details, the jobs in order, who usually does each, the costs, the three things that can go wrong, and what people said they liked. Keep them where a helper could find them. That page is the difference between an event and something that lasts.",
+   "ctx": "with",
+   "kind": "skill"
+  }
+ ]
+}

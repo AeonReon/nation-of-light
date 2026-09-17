@@ -1,0 +1,153 @@
+{
+ "id": "classic.roots",
+ "name": "Words and where they come from",
+ "line": "From one root and two words to teaching somebody to work out a long word from its parts.",
+ "size": "months",
+ "strand": "say-what-you-mean",
+ "from": 9,
+ "about": "For grown-ups and anybody from about nine; a younger child can do the first few rungs with a grown-up. It starts with one Latin root and two English words that use it, and builds to about twenty roots, the common beginnings and endings, and breaking long words into their parts to work out what they mean. Along the way come the stories behind some everyday words, the Latin inside short forms like \"e.g.\" and \"a.m.\", and words that look related but are not. It ends with you teaching somebody else to work out a long word from its parts. A great many English words are built from a small number of Latin and Greek parts, so every root you learn helps with many words at once.",
+ "who": "Grown-ups and anybody from about nine",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Learn what one word root means and find two English words that use it.",
+   "note": "Aqua is Latin for water: aquarium, aqueduct. That is the whole exercise. Say the root, its meaning and your two words out loud, then write them in a notebook or a note on your phone, where the rest of this ladder will go.",
+   "ctx": "room",
+   "kind": "skill",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Learn three Greek roots, tele (far), phone (sound) and scope (look at), and say what telephone and telescope mean from their parts.",
+   "note": "Telephone: sound from far away. Telescope: a thing for looking at what is far. Microphone and microscope use \"micro\", Greek for small. Write all four roots in your notebook.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 3,
+   "test": "Learn five Latin roots, port (carry), spect (look), dict (say), aud (hear) and vis (see), and write one English word for each.",
+   "note": "Portable, inspect, dictionary, audience, visible. Say each word and point at the root inside it. If one of your words does not really use the root, a dictionary that shows where words come from will tell you.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 4,
+   "test": "Find five words on packets, labels, books or screens around you that use a root you know, and say what the root means in each.",
+   "note": "\"Television\" (far, see), \"audio\", \"transport\", \"microwave\", \"inspection\". Circle or write each one down. Seeing the roots in ordinary places helps you remember them.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Learn six word beginnings, re (again or back), pre (before), sub (under), trans (across), inter (between) and anti (against), with one word for each.",
+   "note": "Replay, preview, submarine, transport, international, antifreeze. The first five come from Latin and \"anti\" from Greek. \"Un\", as in undo, is a beginning too, but it comes from Old English, not Latin.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Learn five word endings, er (one who), able (can be), less (without), ful (full of) and ology (the study of), and what each does to a word.",
+   "note": "Teacher, washable, careless, hopeful, biology. An ending often changes what kind of word it is: \"care\" is a thing, \"careless\" describes somebody. \"Ology\" comes from Greek; \"able\" from Latin; \"er\", \"less\" and \"ful\" from Old English.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Break five words into beginning, root and ending, and say what each means from its parts: transport, inspector, portable, prediction, audible.",
+   "note": "Prediction: pre (before) + dict (say) + ion (makes it a thing) = a saying beforehand. Inspector: in + spect (look) + or (one who) = one who looks into things. Write each one as parts joined with plus signs.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Learn five more roots, manu (hand, Latin), ped (foot, Latin), bio (life, Greek), photo (light, Greek) and graph (write, Greek), with one word for each.",
+   "note": "Manual, pedal, biology, photograph, autograph. Photograph is \"light writing\"; autograph uses \"auto\", Greek for self, so it is \"self writing\". Add them to your notebook.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Learn five number roots, uni (one), bi (two), tri (three), cent (hundred) and mille (thousand), with one word for each.",
+   "note": "Unicycle, bicycle, triangle, century, millimetre. A centipede is \"hundred feet\", using cent and ped together, though few centipedes have exactly a hundred.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "Work out what three words mean from their parts alone, write your guess, then check each in a dictionary.",
+   "note": "Try bipedal (bi + ped: walking on two feet), telegraph (tele + graph: writing sent far) and audiology (aud + ology: the study of hearing). Cover the answers in this note first. If you know those, ask somebody to pick three long words from a dictionary for you.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Learn what these short forms stand for in Latin and in English: e.g., i.e., etc., a.m., p.m. and PS.",
+   "note": "e.g. is exempli gratia, \"for example\". i.e. is id est, \"that is\". etc. is et cetera, \"and the rest\". a.m. and p.m. are ante meridiem and post meridiem, \"before midday\" and \"after midday\". PS is post scriptum, \"written after\".",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 12,
+   "test": "Look up five words in a dictionary that shows where words come from, and write down the language and the original meaning of each.",
+   "note": "Many free online dictionaries have a section called \"origin\" or \"etymology\" under each word; a large library dictionary has it too. Try words you use every day: school, music, planet, alphabet, library. This is how you check any word story you hear.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Find the story behind three of these everyday words, check each in a dictionary, and tell somebody the one that surprised you most: daisy, window, muscle, hippopotamus, breakfast.",
+   "note": "Daisy was \"day's eye\" in Old English, because it opens in the morning. Window comes from Old Norse for \"wind eye\". Muscle is from Latin for \"little mouse\". Hippopotamus is Greek for \"river horse\". Breakfast is the meal that breaks the night's fast. Check them yourself; that is the rung.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 14,
+   "test": "Find out why September, October, November and December mean seven, eight, nine and ten, when they are the ninth to twelfth months.",
+   "note": "Septem, octo, novem and decem are Latin for seven, eight, nine and ten. The earliest Roman calendar began the year in March, so these were the seventh to tenth months. When the start of the year moved, the names stayed.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 15,
+   "test": "Learn two pairs of words that look related but are not, and explain one pair to somebody: island and isle, male and female.",
+   "note": "Island comes from Old English and had no \"s\"; the \"s\" was added later because people thought it came from \"isle\", which is from Latin. Male and female come from two different Latin words, though they look like one grows from the other. A dictionary with word origins shows both.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 16,
+   "test": "Learn where five words used by doctors and dentists come from: doctor, patient, dental, cardiology, paediatrician.",
+   "note": "Doctor is Latin for \"teacher\". Patient is from Latin for \"one who suffers or endures\". Dental is from Latin dens, a tooth. Cardiology is from Greek kardia, heart. Paediatrician is from Greek pais, child, and iatros, healer; so the \"ped\" here is not the Latin \"foot\" from rung 8.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 17,
+   "test": "From memory, write down twenty roots and beginnings, each with its meaning and one English word.",
+   "note": "Everything from rungs 1 to 9 counts: roots, beginnings and number roots. Then check against your notebook and mark the ones you missed. If you get fewer than twenty, learn the missing ones and try again another day.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 18,
+   "test": "Find five words in a language that grew from Latin, such as Spanish, French, Italian, Portuguese or Romanian, that share a root with an English word, and say what each means.",
+   "note": "Spanish \"agua\" (water) and English aquarium. French \"main\" (hand) and English manual. Italian \"piede\" (foot) and English pedal. Spanish \"cien\" (a hundred) and English century. Use a free translation app or a dictionary. If you already speak one of these languages, choose one you do not.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 19,
+   "test": "For one week, each time you meet a long word you do not know, break it into parts in your notebook and write your guess before you look it up.",
+   "note": "Words from books, school, work, the news or packets all count. Aim for at least one a day. Tick the ones you guessed right; the ticks grow as the week goes on.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 20,
+   "test": "Teach somebody five roots and how to break a long word into its parts, until they can work out one new word on their own.",
+   "note": "Choose roots from your notebook and a test word that uses them, such as bipedal or telegraph. Let them guess before you help. A child can teach a grown-up as well as the other way round.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

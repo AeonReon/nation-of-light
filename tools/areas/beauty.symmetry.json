@@ -1,0 +1,121 @@
+{
+ "id": "beauty.symmetry",
+ "name": "Symmetry and pattern",
+ "line": "From one folded paper cut-out to a repeating pattern of your own design, coloured and put up where people will see it.",
+ "size": "weeks",
+ "strand": "make-things",
+ "who": "Everybody from about six; side by side",
+ "about": "For everybody from about six: a child and a grown-up can climb it side by side, each with their own paper. This ladder is about the three ways a shape can repeat: in a mirror, by turning round a centre, and by sliding along. You start with a folded paper cut-out, then find mirror lines and turning shapes around you, cut a six-armed snowflake, draw borders, work out which kind of repeat is in a rug or a brick wall, and look at patterns from several parts of the world. It ends with a tile of your own that repeats in every direction, made into a coloured pattern and put up where people will see it. Paper, scissors and a pencil are all it needs.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Fold a piece of paper in half, cut a shape from the folded edge, and open it out.",
+   "note": "The fold is a mirror line: each half is the reflection of the other. Draw half a heart, a person, a leaf or a vase against the fold before you cut. Round-ended scissors are fine for a small child. Already easy? Fold twice, into quarters, and see that the shape now has two mirror lines.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 3
+  },
+  {
+   "n": 2,
+   "test": "Find three things in the room with a mirror line, and trace each line in the air with your finger.",
+   "note": "A chair seen from the front, a door, a bottle, a face, a leaf. Many capital letters: A has a mirror line straight down, B has one straight across, and H has both. A round plate has as many mirror lines as you like. Look for one thing with exactly two, such as a rectangular table seen from above.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Stand a small mirror upright on the mirror line of a letter or a drawing, and see the whole shape made from one half.",
+   "note": "If the line is right, the half on the paper and its reflection together look like the whole thing. Now stand the mirror down the middle of a photograph of a face: a face made from two copies of one side usually looks a little strange, because no real face is exactly symmetrical. With no small mirror, a shiny flat lid or a phone screen that is switched off gives a rough reflection.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Find something that is almost symmetrical and say exactly what spoils it.",
+   "note": "A shirt with a pocket on one side only. A car with the fuel cap on one side. A clock face whose numbers break the mirror. A face with the hair parted on one side. Once you start looking, most things made to look symmetrical have one part that had to go on one side.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Draw half a shape against a straight line on squared paper, then draw the other half so it matches square for square.",
+   "note": "Draw a line down the middle of the page and draw half a house, a face or a butterfly on one side. For each corner, count how many squares it is from the line and put its partner the same number of squares away on the other side. With no squared paper, rule a grid with the edge of a book, lines about a finger apart. Check it with the mirror from rung three.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Find three things that look the same again after less than a whole turn, and count how many times each one matches in one full turn.",
+   "note": "This is turning symmetry. A three-bladed fan matches three times in a turn. A plain square tile matches four times. Many flowers have five petals and match five times. A wheel often matches as many times as it has spokes or bolts. To count, mark one edge with a finger or a small sticker and turn the thing, or your head, slowly until it looks the same again.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Fold a circle of paper into twelve layers, cut shapes out of the folded edges, and open it into a six-armed snowflake.",
+   "how": [
+    "Cut a circle, fold it in half, and crease.",
+    "Fold the half into three equal slices laid on top of each other, like a closed fan.",
+    "Fold that in half once more, so the point is at the centre of the circle.",
+    "Cut small shapes out of both long edges, never all the way across, and open it slowly."
+   ],
+   "note": "Real snowflakes have six arms because of the way water freezes into ice. Your paper one matches six times in a turn and has six mirror lines as well. If it only matches three times, the last fold was missed; if it has eight arms, it was folded in quarters twice, so try again for six. If snow falls where you live, catch a flake on a dark sleeve and look closely.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 8,
+   "test": "Draw a border of one small shape repeated ten times along a strip of paper, the same size and the same distance apart.",
+   "note": "This is a repeat by sliding: move the shape along and draw it again. Cut a small card shape to draw round, and mark the spaces first with a ruler. Then try a second border where every other shape is flipped, like footprints going left, right, left, right. Borders like these run along rugs, plates, clothes and walls in almost every part of the world.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Find a repeating pattern made by people in your home, and say whether it repeats by sliding, by turning, by mirroring, or more than one.",
+   "note": "A knitted jumper, a rug, curtains, wallpaper, floor tiles, a plate rim, a fence or a brick wall seen from a window. Bricks are laid in patterns called bonds, and you can usually find a small group of bricks that repeats by sliding. Draw the smallest piece that, repeated, makes the whole pattern. Most patterns use more than one kind of repeat.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Find a building front with a mirror line down its middle, and find what breaks the mirror.",
+   "note": "Many older houses, banks, town halls, temples, mosques and churches have symmetrical fronts. Stand straight across from the middle. Almost always something breaks it: a drainpipe, a sign, a door moved to one side, a later extension. Say whether that one thing bothers you or not. A straight-on photograph of a well-known building counts if you cannot go out.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Look at pictures of patterns from three different parts of the world, and for each one say which kinds of repeat it uses.",
+   "note": "Some to look up in a library book or online: the tiled walls of the Alhambra in Granada, Spain; kente cloth from Ghana; the knotwork in early Irish and Scottish books and carved stones; asanoha, the hemp-leaf pattern from Japan; Navajo woven rugs; kowhaiwhai, the painted rafter patterns of Maori meeting houses in New Zealand. Choose three that are far apart. Most mix mirroring, turning and sliding in one pattern.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Cut a square tile from card, cut a curved piece out of one edge, and tape that piece onto the opposite edge without turning it.",
+   "how": [
+    "Cut a square of card about the size of your palm.",
+    "Cut a curved piece out of the left edge, starting and ending at the two corners of that edge.",
+    "Slide the piece straight across to the right edge, without turning or flipping it, and tape it on."
+   ],
+   "note": "Whatever you cut from one side you add to the other, so the new shape still fits against copies of itself with no gaps, exactly as the square did. Do the same from the top edge to the bottom edge if you like. The artist M. C. Escher made birds, fish and lizards that fit together this way. Card from a cereal box is enough; a child draws the curve, and a grown-up can help cut thick card.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Draw round your tile at least twelve times on one sheet so the copies fit together with no gaps, and fix anything that does not line up.",
+   "note": "Start in one corner and put each new copy right against the last: first a row, then the next row underneath. If a gap or an overlap appears, the tile was turned, or the taped piece slipped; trim or remake the tile and draw again. Then look at the outline and see what it could become: a bird, a fish, a leaf, a face.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 14,
+   "test": "Colour your tiled sheet into a finished pattern and put it up at home where people will see it.",
+   "note": "Use two or three colours with a rule you choose, such as alternating rows, so the repeat shows clearly. Stand across the room and check the pattern still reads from there. Put it on a wall, a door or the fridge, or use it as wrapping paper for a present. A child and a grown-up can put their two patterns up side by side.",
+   "ctx": "home",
+   "kind": "skill"
+  }
+ ]
+}

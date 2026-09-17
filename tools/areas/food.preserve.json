@@ -1,0 +1,152 @@
+{
+ "id": "food.preserve",
+ "name": "Keeping food",
+ "line": "From a tray of frozen fruit to a store of food you made yourself, kept full for three months.",
+ "size": "months",
+ "strand": "look-after-the-place",
+ "who": "Grown-ups and teenagers; children help beside a grown-up",
+ "about": "For grown-ups and teenagers; a child can help with most rungs beside a grown-up, who does the boiling sugar, the hot jars and the sharp knives. It starts with the safest ways to keep food, the freezer and drying, then fridge pickles, then the rules for what never to try at home, then jam, chutney and sauerkraut. It ends with a small store of food you made, in the freezer, the fridge and the cupboard, kept full and eaten oldest first for three months. Food safety matters here more than anywhere in the kitchen, so the jar rungs say to follow a recipe from a trusted source exactly; the reward is less food thrown away and a shelf of good things you made.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Freeze some fruit that would otherwise go off: spread it out on a tray to freeze, then tip it into a bag, and label it with the name and the date.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 15,
+   "note": "Berries, grapes, banana slices or chopped apple. Spread out on a tray, the pieces freeze separately instead of in one lump, so you can take out a handful. Squeeze the air out of the bag. Frozen fruit goes straight into porridge, yoghurt or a smoothie."
+  },
+  {
+   "n": 2,
+   "test": "Put a name and a date on everything that goes into the freezer this week, and move the oldest things to the front.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "A piece of masking tape and a pen is enough. Food kept frozen stays safe for a long time, but it tastes best eaten within about three months, so the date is what tells you what to eat first. If you already label everything, sort the whole freezer oldest to front and count it."
+  },
+  {
+   "n": 3,
+   "test": "Blanch and freeze one vegetable: a minute or two in boiling water, then into cold water, then dried and frozen.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Green beans, peas, broccoli or carrots. The short boil keeps the colour and taste in the freezer; a trusted recipe gives the exact time for each vegetable. A grown-up does the boiling water and a child can do the cold water and the bags."
+  },
+  {
+   "n": 4,
+   "test": "Cook twice as much of one meal, cool the extra quickly, and freeze it in portions within two hours.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Soup, stew, a pasta sauce or a curry. To cool it fast, spread it into a wide, shallow dish, then portion it into tubs or bags and into the freezer. Defrost it in the fridge, heat it until it is steaming hot all the way through, and do not freeze it again."
+  },
+  {
+   "n": 5,
+   "test": "Hang a small bunch of herbs to dry, and after one or two weeks crumble them into a labelled jar.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "Rosemary, thyme, oregano, sage or mint dry well. Tie the stems with string and hang them upside down somewhere dry and airy, out of direct sun. They are ready when the leaves crumble easily; if any are still soft, wait a few more days."
+  },
+  {
+   "n": 6,
+   "test": "Dry thin slices of apple in the oven at its lowest heat until they feel leathery, with no wetness when you squeeze one.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Slice about as thick as a coin, lay them flat on a lined tray, and leave the oven door slightly open if your oven allows it. It usually takes a few hours; turn them once. Cool completely before they go in an airtight jar. A grown-up handles the oven."
+  },
+  {
+   "n": 7,
+   "test": "Make a jar of fridge pickles from a trusted recipe, and keep it in the fridge.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Sliced cucumber, red onion, carrot or radish in a warm mix of vinegar, water, a little salt and a little sugar, from a trusted source, such as your national food safety agency, a university food science service, or a well-tested preserving book. Use vinegar that says it is at least five per cent acid, and do not add less than the recipe says. Fridge pickles stay in the fridge and are eaten within the time the recipe gives, usually a few weeks."
+  },
+  {
+   "n": 8,
+   "test": "Taste your pickle after one day and again after one week, and write down which you liked better and what you would change.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Crunchier, sharper, sweeter, more garlic, thinner slices? Write it on the recipe. This is how a recipe becomes yours. If it smells or looks wrong at any point, throw it away without tasting."
+  },
+  {
+   "n": 9,
+   "test": "Write down the four things never to do at home when keeping food, and the safe way to do each instead.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "One: never bottle low-acid food like plain vegetables, beans, meat or fish in jars for the cupboard without a pressure canner and a tested recipe; freeze them instead. Two: never keep garlic or herbs in oil at room temperature; keep it in the fridge and use it within a few days, or freeze it. Three: never salt or cure meat or fish without a tested recipe. Four: never taste from a jar or can that is bulging, leaking, spurts when opened, or smells wrong; throw it away."
+  },
+  {
+   "n": 10,
+   "test": "Wash and sterilise jars and lids for jam, using the method in a trusted recipe, and keep them hot until you fill them.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Common methods are a hot wash, then heating the glass jars in a low oven or boiling them in a pan of water, or a very hot dishwasher cycle. Lids and rubber seals often need a different method; the recipe says. A grown-up handles hot jars with oven gloves, and hot glass sits on a wooden board or a folded cloth, never a cold surface."
+  },
+  {
+   "n": 11,
+   "test": "Make a small batch of jam from a trusted recipe, and check the set on a cold plate before you fill the jars.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Put a saucer in the freezer before you start. Spoon a little jam onto it, wait a minute and push it with your finger: if the surface wrinkles, it is set. Boiling jam is much hotter than boiling water and sticks to skin, so a grown-up stirs and pours and a child weighs the fruit. Follow a trusted source, such as your national food safety agency, a university food science service, or a well-tested preserving book for how to seal the jars; some advise a boiling-water bath. Once opened, keep jam in the fridge."
+  },
+  {
+   "n": 12,
+   "test": "Make a second batch of jam and change one thing: a different fruit, a better set, or a freezer jam recipe, which is kept in the freezer.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Look at your first batch: too runny, too stiff, too sweet? Change only one thing so you learn what that one thing does. Lower-sugar jams usually must be kept in the fridge or freezer; the recipe says. If any jam grows mould, throw the whole jar away."
+  },
+  {
+   "n": 13,
+   "test": "Make a chutney from a trusted recipe, using fruit or vegetables that would otherwise be wasted, and leave the jars to rest before opening.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "Apples, plums, tomatoes, onions and marrows all make good chutney, slowly cooked with vinegar, sugar and spices until thick. Use the jar method from the recipe. Most recipes say to leave it for some weeks for the taste to soften; the rung is done when you open the first jar and try it with cheese or cold meat."
+  },
+  {
+   "n": 14,
+   "test": "Make a jar of sauerkraut: shredded cabbage and salt, pressed down until the cabbage sits under its own liquid.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Weigh the cabbage and use the amount of salt a trusted recipe gives for that weight, usually about two per cent. Squeeze the salted cabbage with clean hands for ten minutes until it goes wet, pack it tightly into a clean jar, and press it down. A small bag of water on top keeps it under the liquid."
+  },
+  {
+   "n": 15,
+   "test": "Check the sauerkraut every day for two weeks, keep it under the liquid, and move it to the fridge once it tastes sour enough for you.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Keep it at room temperature out of the sun, and taste it with a clean fork from about day five. Bubbles and a sour smell are normal. If anything fuzzy or coloured grows on it, or it smells rotten, or it goes slimy, throw the whole jar away."
+  },
+  {
+   "n": 16,
+   "test": "Make a list of everything you have put away: what it is, the date, where it is kept, and the date to eat it by.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Freezer, fridge and cupboard all on one list, on paper inside a cupboard door or in your phone. Use the eat-by times from your recipes. Throw out anything past its time, or anything that looks or smells wrong, without tasting it and without arguing with yourself."
+  },
+  {
+   "n": 17,
+   "test": "The next time there is a lot of one fruit or vegetable at once, keep at least a kilo of it using two different methods from this ladder.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "A tree full of apples, a neighbour with too many courgettes, a market selling off boxes of tomatoes at the end of the day. Freeze some and make chutney from the rest, or dry some and make jam. Ask people with fruit trees: many are glad for somebody to pick them."
+  },
+  {
+   "n": 18,
+   "test": "Cook a whole meal using three things you put away yourself.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Frozen soup with dried herbs and a pickle on the side; a stew from the freezer with sauerkraut; toast and your own jam for pudding. Check your list, and use the oldest things first."
+  },
+  {
+   "n": 19,
+   "test": "Give a jar or bag of something you made to three people, labelled with the name, the date and how to store it.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Write \"keep in the fridge once opened\" where it applies, and the eat-by date. Choose the things you are surest of, like jam, dried herbs or chutney. Ask them afterwards which they liked."
+  },
+  {
+   "n": 20,
+   "test": "Keep a store of food you made in the freezer, the fridge and the cupboard for three months, with your list kept up to date and the oldest eaten first.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "Something of your own always in all three places. Top it up as you eat it, and cross things off the list. At the end, look back at how much food that would have been thrown away is now on your shelf instead."
+  }
+ ]
+}

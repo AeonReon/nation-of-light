@@ -1,0 +1,153 @@
+{
+ "id": "mind.memory",
+ "name": "Memory",
+ "line": "From six digits held for a minute to thirty things, read to you once, said back in order.",
+ "size": "months",
+ "strand": "say-what-you-mean",
+ "from": 8,
+ "who": "From about eight; a child and a grown-up side by side",
+ "about": "For anybody from about eight: a child and a grown-up can climb it side by side. A trained memory is a method anybody can learn: you turn things into pictures, put the pictures in places you know, and walk past them again. The climb starts with a six-digit number held for a minute, builds a route of ten places in your head, then twenty, then thirty, and adds names and numbers along the way. It ends with somebody reading you thirty things once and you saying them all back in order. It looks like a gift, and it is a method.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Memorise a six-digit number as three pairs, cover it, and say it back one minute later.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 2,
+   "note": "Take six digits from a barcode or a receipt, or have somebody write them for you. Say them as three pairs: 4, 7, 1, 8, 9, 2 becomes forty-seven, eighteen, ninety-two. Wait a minute, say it, then uncover it and check."
+  },
+  {
+   "n": 2,
+   "test": "Learn the phone number of one person you would call if you lost your phone, and say it the next day without looking.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Many people now know no phone numbers from memory, and this is the one worth having. Split it into groups of three or four digits, say it out loud five times, and again at bedtime. A child learns the number of a parent or carer."
+  },
+  {
+   "n": 3,
+   "test": "Turn five words into five pictures in your head, and say the words back five minutes later.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Use these: bell, carrot, ladder, umbrella, fish. Make each picture big, moving or noisy: not just a bell, but a huge bell ringing on your kitchen table. The clearer and stranger the picture, the easier it is to find again."
+  },
+  {
+   "n": 4,
+   "test": "Link ten words into one short story in your head, and say the ten back in order.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Use these: kite, bread, shoe, lion, clock, bucket, star, piano, spoon, tree. Each thing does something to the next: the kite lands on a loaf of bread, the bread is squashed by a shoe, a lion is wearing the shoe. Go through the story once more in your head, then say the list."
+  },
+  {
+   "n": 5,
+   "test": "Learn the names of three people you have just met, say each name back to them, and write all three down that evening.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "A new classmate, a neighbour, somebody at a club, or a shop worker with a name badge. Say the name back as you meet (\"Nice to meet you, Amira\") and link it to a picture, like a Rose holding a rose. A child does this with a grown-up nearby; if you meet nobody new this week, learn the names of three people you see often but have never asked."
+  },
+  {
+   "n": 6,
+   "test": "Choose ten places in your home in the order you walk past them, and say them with your eyes closed, forwards and backwards.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "For example: front door, doormat, coat hook, mirror, stairs, kitchen door, sink, fridge, table, window. Pick places that look different from each other and will not move. Write the list down, because you will use these ten places in this order for the rest of the ladder."
+  },
+  {
+   "n": 7,
+   "test": "Put ten things on your ten places, and say them back in order and then backwards.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Use these, or ask somebody to write ten: hammer, apple, feather, rabbit, cup, glove, egg, whistle, basket, crown. Make each thing do something at its place: the hammer knocking on the front door, an apple squashed on the doormat. To say them back, walk the route again in your head and look at each place."
+  },
+  {
+   "n": 8,
+   "test": "Say the same ten things back the next morning, in order, without looking.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Walk the route once in your head before you start. If a place seems empty, look at it for a moment longer, as the picture often comes back. Make the pictures for any you missed stranger for next time."
+  },
+  {
+   "n": 9,
+   "test": "Give each digit from 0 to 9 a picture by its shape, and say all ten pictures in order without looking.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "For example: 0 a ball, 1 a candle, 2 a swan, 3 a pair of lips turned on its side, 4 a sailing boat, 5 a hook, 6 a cherry on its stalk, 7 a boomerang, 8 a snowman, 9 a balloon on a string. Use these or your own, but once chosen, never change them. Numbers are hard to picture and these pictures are easy, which is why this works."
+  },
+  {
+   "n": 10,
+   "test": "Memorise the first twenty digits of pi, two digit pictures at each of your ten places, and say them back.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Pi is the distance round any circle divided by the distance across it, and it starts 3.1415926535897932384. Split the digits into pairs: 31 41 59 26 53 58 97 93 23 84. At each place, put the two pictures doing something together: at the front door, a pair of lips (3) blowing out a candle (1)."
+  },
+  {
+   "n": 11,
+   "test": "Memorise a shopping list of ten things and do the shop without looking at the list.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Put the ten things on your ten places before you leave, and keep the written list in a pocket to check only at the end. A child can do this for part of a family shop with a grown-up. For an online shop, fill the basket from memory, then compare it with the list."
+  },
+  {
+   "n": 12,
+   "test": "Add ten more places to your route, and walk all twenty in your head, forwards and backwards.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Carry on through the house, or go outside: the gate, the path, a tree, a lamp post, the corner. Keep to places you know well and that will still be there next year. Write the new ten under the first ten."
+  },
+  {
+   "n": 13,
+   "test": "Put twenty things on your twenty places and say them back in order, with no more than two missed.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Have somebody write twenty words you have not seen, or take twenty names of things from one page of a book. Look at each for a few seconds and make it do something at its place before you move on. If you miss more than two, try a new list another day."
+  },
+  {
+   "n": 14,
+   "test": "Go over a new list of twenty on the day, the next day and three days later, then say it back a week after you learned it, with none missed.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Each time, walk the route once and say the list out loud; it takes about a minute. Going back over it at growing gaps is what keeps it: without that, many people find much of a list has gone within days. Write the list down and fold it away so you can check honestly at the end."
+  },
+  {
+   "n": 15,
+   "test": "Memorise the first forty digits of pi, two digit pictures at each of your twenty places, and say them back.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "The twenty digits after the ones you know are 62 64 33 83 27 95 02 88 41 97. So the first forty are 3.141592653589793238462643383279502884197. Keep the first twenty where they are and put the new pairs on places eleven to twenty."
+  },
+  {
+   "n": 16,
+   "test": "Learn the names of everybody in a group of eight or more people, and say every name out loud to the group.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "A class, a sports team, a club, or the guests at a family meal. Link each name to a picture, as on rung five, and go round the group in your head more than once while you are with them. Asking somebody their name again early on is fine; saying all of them at the end is the rung."
+  },
+  {
+   "n": 17,
+   "test": "Add ten more places, and walk all thirty in your head, forwards and backwards.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Carry on the same route, or add a second route you know well, like the way to school, work or a friend's home. Keep the places in a fixed order and write all thirty down. This route will hold the list on the last rung."
+  },
+  {
+   "n": 18,
+   "test": "Have somebody read you twenty things once, at a steady pace, and say them back in order, with no more than two missed.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "They read one thing about every five seconds and do not repeat any. You put each one on its place as it is read, with no time to go back. If you miss more than two, try again another day with a new list."
+  },
+  {
+   "n": 19,
+   "test": "Have somebody read you a twenty-digit number once, in pairs, and say it back with no mistakes.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "They read it as pairs, like \"fifty-eight, zero seven, ninety-one\", with a short pause between each. You turn each pair into two digit pictures at the next place on your route. They check you against what they wrote."
+  },
+  {
+   "n": 20,
+   "test": "Have somebody read you thirty things once, and say all thirty back in order.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Done the same way as rung eighteen, with a list of their choosing and all thirty places. A mistake or two on the first go is normal, so try a new list on another day. When you can do this, you can hold a list of jobs or a day's plan the same way."
+  }
+ ]
+}

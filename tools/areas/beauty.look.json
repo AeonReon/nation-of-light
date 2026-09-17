@@ -1,0 +1,110 @@
+{
+ "id": "beauty.look",
+ "name": "Looking at buildings",
+ "line": "From naming five parts of the building you are in, to five minutes talking somebody through one building: its parts, its age, and what you think of it.",
+ "size": "weeks",
+ "strand": "say-what-you-mean",
+ "who": "Everybody; a child and a grown-up side by side",
+ "about": "For everybody: a child and a grown-up can climb it side by side. This ladder is about reading one building at a time, the way you would read a page. You start by naming five parts of the building you are in, then learn to see what a building is for, how its bottom, middle and top differ, what its roof, door and windows are doing, how old it might be, and how it suits its weather. It ends with standing in front of one building with somebody and talking them through it for five minutes. Once you can say what you see, every street you walk down has more in it.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Name five parts of the building you are in, pointing at each one or at where it is.",
+   "note": "Walls, a floor, a ceiling, a window, a door, a stair, the roof, a chimney, a gutter, a porch, a step. Look out of a window if you can see the outside of the building. If five is easy, find five more and learn the name of one you did not know, such as the sill under a window or the frame around a door.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 3
+  },
+  {
+   "n": 2,
+   "test": "Look at one building near you and say what it is for, with three clues from the outside that told you.",
+   "note": "A shop has big windows at street level to show what is inside. A school often has a fence, a wide gate and a playground. A place of worship often has a tower, a dome or a grand entrance. A fire station has doors wide enough for its engines. If you cannot go out now, do this from a window or from a photograph of a street, and check your guess later.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Find a building where the bottom, the middle and the top look different from each other, and say how each part is different.",
+   "note": "Many buildings are made a little like a person standing: feet, body, head. The bottom might be heavier stone or a shop front, the middle plainer walls with rows of windows, and the top a roof edge, a band of decoration or smaller windows. Some modern buildings are the same all the way up on purpose; if the first one you find is like that, say so and look for another. A photograph counts if you cannot go out.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Draw the outline of three different roofs you can see, and name each shape.",
+   "note": "A flat roof. A pitched roof, with two slopes meeting at a ridge and a triangle at each end, called a gable. A hipped roof, which slopes down on all four sides. A dome, which is round. Steep roofs are common where there is a lot of rain or snow, and flat roofs where it is dry, though there are many exceptions. A view from a window or a photograph of a town works just as well.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Find the main door of a building and say three things that show a visitor this is the door to use.",
+   "note": "Steps up to it, a porch or a small roof over it, a frame or a light around it, a path that leads straight to it, a sign or a number, a door wider or taller than the others. Some buildings hide the way in, and that is worth noticing too: stand where a stranger would stand and see how long it takes to find the door. Your own home counts.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "Look at the windows of one building and say what they tell you about the rooms behind them.",
+   "note": "Large windows at street level often mean a shop or a place that wants to be seen into. Small or high windows can mean a bathroom or a room that needs privacy. A row of identical windows usually means a row of similar rooms, such as offices, classrooms or flats. A window halfway between two floors often lights a stair. Check your guesses on a building you know from the inside, such as your home or a school.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Guess how old one building near you is from three clues, then find out whether you were right.",
+   "note": "Clues are the materials, the shape of the windows, whether it has chimneys, the style of its door, and whether the buildings beside it look older or newer. To check, look for a date carved or set into the wall, ask somebody who has lived nearby a long time, ask at your local library, or look it up if the building is well known. A wrong guess still counts; the checking is what teaches you.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Look at photographs of three homes built for very different weather, and say one thing each does to suit its weather.",
+   "note": "Some to find online or in a library book: the steep thatched farmhouses of Shirakawa-go in Japan, built for heavy snow; houses on stilts in places that flood, found in many parts of South-East Asia and elsewhere; thick-walled courtyard houses in hot, dry places, where the rooms open onto a shaded middle; a snow house built by Inuit people in the Arctic. Look at where each roof sheds its rain or snow, how thick the walls are, and how big the windows are.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Describe a building to somebody who cannot see it, for two minutes, then show it to them and ask what they had pictured differently.",
+   "note": "Use the words from the rungs so far: what it is for, how many floors, the roof shape, the door, the windows, the bottom, middle and top. A phone call works, or somebody at home with their eyes closed while you describe a building across the street or in a photograph. A child can describe their school or a grandparent's house.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Take photographs or quick sketches of three buildings you like and three you do not.",
+   "note": "Choose by your first feeling and do not worry about reasons yet. Get the whole front of each one in if you can. A phone camera is enough; with no camera, a quick sketch of the outline, the door and the windows is enough. Photographs from a book or a magazine count if you cannot go out.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Lay the six side by side and write one thing the three you like share and one thing the three you do not like share.",
+   "note": "Use the words from this ladder: the roof, the door, the windows, the bottom and the top, the age, how well it suits its weather and its street. It might be that the ones you like all have an easy door to find, or that the ones you do not like all have blank walls at street level. There is no right answer; the aim is to find your own reason, not somebody else's.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Find out who designed or built one building you like, and when.",
+   "note": "Look for a plaque or a date on the building, search its name and street online, ask at a local library or a local history group, or ask the people who work inside. Many ordinary houses have no known designer; then find out who built the street and what for, such as homes for the workers at a mill, a port or a railway. Write down one thing you learned that you could not have seen from outside.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 13,
+   "test": "Write your own five rules for what makes a building good, each with one real building as its example.",
+   "note": "Short rules in your own words, such as \"The way in should be easy to find\" or \"A building should suit its weather\". Each rule needs a building you have looked at on this ladder that keeps it. Other people's rules will be different, and that is fine. Keep the list for the last rung.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 14,
+   "test": "Stand in front of one building with somebody and talk them through it for five minutes: what it is for, its parts, its age, and what you think of it and why.",
+   "note": "Choose a building you have looked at on this ladder, near home or on a walk you take anyway. Let them ask questions and point at things too, and use one of your five rules. A child can do this for a grown-up and a grown-up for a child; both learn something. If you cannot go out together, do it from a window or with a photograph on a screen between you.",
+   "ctx": "with",
+   "kind": "courage"
+  }
+ ]
+}

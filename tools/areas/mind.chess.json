@@ -1,0 +1,152 @@
+{
+ "id": "mind.chess",
+ "name": "Chess",
+ "line": "From setting up the board to teaching a complete beginner to play a whole game.",
+ "size": "months",
+ "strand": "be-useful-to-somebody",
+ "about": "For everybody from about seven: a child and a grown-up can climb it side by side. It starts with setting up the board and learning how each piece moves, then a first whole game, the special moves, and how to finish a game with checkmate. After that come the ideas that win games: a good start, checking what the other player is threatening, puzzles, forks and pins, and going back over a game you lost. It ends with you teaching a complete beginner until they can play a whole game by the rules. A board and pieces are ideal, but a free chess app, or a board drawn on paper with pieces written on scraps, does every rung.",
+ "who": "From about seven; a child and a grown-up side by side",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Set up the board and pieces correctly, and name every piece as you put it down.",
+   "note": "Turn the board so each player has a light square in the bottom right-hand corner. Rooks go in the corners, then knights, then bishops; the queen goes on the square of her own colour, and the king on the one left. The eight pawns go in the row in front. No set? Draw eight rows of eight squares on paper and write the pieces on small scraps, or use a free chess app.",
+   "ctx": "kit",
+   "kind": "attention",
+   "mins": 10
+  },
+  {
+   "n": 2,
+   "test": "Show somebody, or say out loud, how each of the six kinds of piece moves and takes.",
+   "note": "Rook: straight along rows and columns. Bishop: diagonally. Queen: both. King: one square any way. Knight: an L shape, two squares one way and one to the side, and it can jump over pieces. Pawn: one square forward (two on its first move), but it takes one square diagonally forward, which is the move beginners most often get wrong.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 3,
+   "test": "On the board, put a king in check, then in checkmate, then in stalemate, and say the difference.",
+   "note": "Check: the king is attacked and must get out of it. Checkmate: the king is attacked and there is no way out, so the game is won. Stalemate: the player to move is not in check but has no legal move, and the game is a draw. Set each one up with just a few pieces.",
+   "ctx": "kit",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Play one whole game to the end, checkmate or draw, with every move legal.",
+   "note": "White moves first. Play slowly and check each other's moves; there is no hurry. No other player? A free chess app on its easiest setting counts. A child and a grown-up playing each other is ideal.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 5,
+   "test": "Castle in a game, and say the four rules that allow it.",
+   "note": "The king moves two squares towards a rook, and that rook jumps to the square on the king's other side. You may only castle if neither piece has moved, nothing stands between them, your king is not in check, and it does not pass through or land on an attacked square. It tucks the king away and brings the rook out in one move.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Set up and show the two special pawn moves: reaching the far row, and taking \"en passant\".",
+   "note": "A pawn that reaches the far row becomes a queen, rook, bishop or knight, almost always a queen. En passant: if a pawn moves two squares from its start and lands right beside an enemy pawn, that enemy pawn may take it as if it had moved only one, but only on the very next move.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Say the usual value of each piece, then play a game counting what you give and what you get before every capture.",
+   "note": "Pawn 1, knight 3, bishop 3, rook 5, queen 9. The king cannot be swapped, so it has no number. Giving a knight to take a pawn loses 2. A free app counts as the other player.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Checkmate a lone king using your king and queen, on a board or an app with only those three pieces.",
+   "note": "Use the queen to push the lone king to the edge of the board, then bring your own king up to help. Watch for stalemate: leave the lone king at least one square to move to until the final move. Many free apps let you set up this position; so does a board.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Checkmate a lone king using only your king and one rook.",
+   "note": "It takes longer than with a queen. The rook cuts the king off one row at a time while your king walks alongside to guard the rook. If you already know how, do it on purpose from a new starting position and count it.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "In three games, in your first ten moves: move a pawn to the centre, bring out both knights and both bishops, and castle.",
+   "note": "The centre is the four squares in the middle. Try not to move the same piece twice early, and keep the queen on its starting square for the first few moves. Write a tick for each game where you did all three.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 11,
+   "test": "For one whole game, before every move of yours, ask \"What does the other player's last move attack?\"",
+   "note": "Look at the piece that just moved and every square it now reaches. Most lost pieces are lost because nobody asked. It makes the game slower; that is fine.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Solve ten \"mate in one\" puzzles, where one move gives checkmate.",
+   "note": "Free chess apps and websites have thousands, and a library chess book will have pages of them. Look at every check you can give before choosing. If a puzzle beats you, set it up on a board and try each move.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Find the fork in five puzzles: one piece attacking two of the other player's pieces at once.",
+   "note": "Knights are the best at forks, because their L-shaped move is hard to see coming. A knight that attacks the king and the queen at once wins the queen. Search \"fork\" in a free puzzle app, or ask somebody who plays to set some up.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 14,
+   "test": "Find the pin in five puzzles: a piece that cannot move without leaving a more valuable piece behind it open to capture.",
+   "note": "A bishop attacking a knight that has the queen standing behind it on the same diagonal is a pin: if the knight moves, the queen is taken. Only rooks, bishops and queens can pin.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 15,
+   "test": "Solve ten \"mate in two\" puzzles, finding both of your moves before you play the first.",
+   "note": "Look for checks and captures first, then for quiet moves that leave the king no way out. Write down both moves before you check the answer.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 16,
+   "test": "Write down every move of one game in chess notation, both players' moves.",
+   "note": "The columns are a to h from White's left, the rows 1 to 8 from White's side. Pieces are K, Q, R, B and N (knight); a pawn has no letter. \"Nf3\" means knight to f3, \"x\" means takes, \"+\" means check, \"O-O\" means castling. Many free apps show the notation as you play, so you can check yourself.",
+   "ctx": "with",
+   "kind": "skill"
+  },
+  {
+   "n": 17,
+   "test": "Play five whole games in one week, and write down the moves of each.",
+   "note": "Against people, or a free app on a setting that wins about half the time. Online, a child plays with a grown-up nearby and with chat turned off. Keep the written games; the next rung uses one.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 18,
+   "test": "Go back through one game you lost, move by move, and mark the first move where it went wrong.",
+   "note": "Replay it on a board from your notation. Stop at each of your moves and ask what else you could have played. Many free apps will also check a game for you, but find your answer first and check it after.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 19,
+   "test": "Win a game against somebody who is playing their best, not letting you win.",
+   "note": "A friend, a relative, somebody at a chess club, or a free app one setting above the one you usually beat. Ask them before you start to play properly. Losing on the way is part of the rung; keep playing until the win comes.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 20,
+   "test": "Teach a complete beginner until they can set up the board and play one whole game by the rules.",
+   "note": "Use the same order you climbed: the board, the moves, check and checkmate, then a game. Let them make mistakes and ask them what they see before you tell them. A child can teach a grown-up, and a grown-up a child.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

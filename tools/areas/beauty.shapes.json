@@ -1,0 +1,124 @@
+{
+ "id": "beauty.shapes",
+ "name": "Shapes and geometry",
+ "line": "From a circle, a square and a triangle in your room to a twenty-sided solid you drew, cut and folded yourself.",
+ "size": "afternoon",
+ "strand": "make-things",
+ "who": "From about nine; younger with a grown-up beside them",
+ "about": "For anybody from about nine; a younger child can do it with a grown-up beside them. This is the ladder for making shapes exactly and learning what is true about them. You start by finding a circle, a square and a triangle in the room you are in, then draw a true circle with string, find its centre by folding, step six points round it to make a hexagon, fold a right angle and a square from any paper, and find out why only three regular shapes can cover a floor on their own. It ends with solids: a paper cube, a count that works for every flat-sided solid without a hole through it, and a twenty-sided solid you drew and folded yourself. Paper, a pencil, string, scissors and tape are all it needs.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Find a circle, a square and a triangle in the room you are in.",
+   "note": "A circle: a plate, the top of a cup, a clock, a coin. A square: a tile, a sticky note, a window pane, a tissue box seen from the top. A triangle is harder: a coat hanger, a sandwich cut corner to corner, the end of a roof seen from a window. Already easy? Find a hexagon too, a shape with six equal sides: the end of many pencils, or the head of a nut.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 2
+  },
+  {
+   "n": 2,
+   "test": "Draw a circle about the size of a dinner plate using only a pencil and a piece of string.",
+   "how": [
+    "Tie one end of the string round the pencil, close to the point.",
+    "Hold the other end pressed flat on the middle of the paper with one finger. That spot is the centre; mark it.",
+    "Keep the string tight and move the pencil all the way round, holding it upright."
+   ],
+   "note": "The distance from the centre to the edge is called the radius, and it is the same all the way round, which is what makes a circle a circle. A compass does the same job; its point is sharp, so a child uses one with a grown-up. Keep this drawing for rung four.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 3,
+   "test": "Draw round a plate, cut the circle out, and find its exact centre by folding.",
+   "note": "Fold the circle in half so the edges meet exactly, and crease. Open it, turn it a little, and fold it in half again the same way. The two creases cross at the centre, because every fold that lays one half exactly on the other passes through the centre. A third fold crossing at the same point is a good check. Round-ended scissors are fine for a child.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 4,
+   "test": "On your string circle, mark six points round the edge, each one a radius away from the last, and join them to make a hexagon.",
+   "how": [
+    "Keep the string the same length you used for the circle, or keep the compass open the same width.",
+    "Hold the string end on any point of the edge and mark where the pencil crosses the edge.",
+    "Move to that new mark and do the same again, all the way round.",
+    "Join the six marks with straight lines, using the edge of a book as a ruler."
+   ],
+   "note": "The radius fits round the edge exactly six times, so the sixth mark lands back where you started, or very close; a small gap just means the string stretched or slipped. The shape has six equal sides and six equal corners: a regular hexagon. Now draw a line from the centre to each corner, and you will see it is six triangles with every side the same length as the radius.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 5,
+   "test": "Join every other corner of your hexagon to draw a triangle with three equal sides, and check the sides with a strip of paper.",
+   "note": "Start at one corner, skip one, join to the next, and so on: three lines make the triangle. A triangle with three equal sides also has three equal corners, each 60 degrees, a sixth of a full turn. To check, mark the length of one side on the edge of a strip of paper and hold it against the other two. Join the corners you skipped and you get a second triangle; the two together make a six-pointed star.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Fold any scrap of paper to make an exact right angle, and check it against the corner of a book.",
+   "note": "Fold the paper once anywhere and crease. Then fold it again so the crease lies exactly on top of itself, and crease again. The new corner is a right angle, 90 degrees, a quarter of a full turn, even if the paper was torn and had no straight edges to begin with. It works because the second fold cuts the straight line of the first crease into two equal halves.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Make an exact square from a rectangular sheet of paper by folding one corner over and cutting off the strip that is left.",
+   "note": "Fold one top corner down so the short top edge lies exactly along the long side, making a triangle. Cut or tear off the strip left below the triangle, then unfold: all four sides are equal and all four corners are right angles. Check one corner against your folded right angle from the last rung. This is how an origami square is made from ordinary paper.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 8,
+   "test": "Mark twelve equal spaces on a piece of string, pull it into a triangle with sides of three, four and five spaces, and check that the corner at the third mark is a right angle.",
+   "how": [
+    "Mark the string with a pen at twelve equal spaces, using a ruler or your thumb width to space them.",
+    "Hold the start and the end of the marked part together at one point.",
+    "Pull the string tight at the third mark and at the seventh mark, so the sides are three, four and five spaces long.",
+    "Check the corner at the third mark with your folded right angle."
+   ],
+   "note": "Sides of three, four and five always meet in a right angle, because three times three plus four times four equals five times five (9 + 16 = 25). Builders and gardeners in many countries still use this with a tape measure to set out a square corner for a wall, a shed or a garden bed, as 3, 4 and 5 metres or feet, or twice those numbers. Two people make the pulling easier.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Fit six copies of your hexagon together with no gaps, and say why a shape with five equal sides can never do the same.",
+   "how": [
+    "Cut out your hexagon and draw round it to cut out five more.",
+    "Fit them together on a table like floor tiles.",
+    "Look at a point where corners meet and count them."
+   ],
+   "note": "Where corners meet, they must fill a full turn exactly, 360 degrees. A square corner is 90, and four fill it. A corner of a three-equal-sided triangle is 60, and six fill it. A hexagon corner is 120, and three fill it. A regular five-sided shape has corners of 108: three leave a gap and four overlap, so it can never cover a floor on its own. Shapes with more than six equal sides have corners too big for three to fit, so the triangle, the square and the hexagon are the only regular shapes that tile on their own.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Draw six squares joined edge to edge in a pattern that folds into a cube, then cut it out, fold it and tape it shut.",
+   "note": "A flat pattern that folds into a solid is called a net. An easy cube net is a cross: four squares in a row, with one more square above the second square and one below it. Tape the edges as you fold. There are exactly eleven different nets that fold into a cube; if you enjoy this, find another one on paper and test it before you cut.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 11,
+   "test": "Count the faces, corners and edges of your cube and of a pyramid with a square base, and show that faces plus corners minus edges comes to two for both.",
+   "note": "A cube has 6 faces, 8 corners and 12 edges: 6 + 8 - 12 = 2. A pyramid with a square base has 5 faces, 5 corners and 8 edges: 5 + 5 - 8 = 2. The mathematician Leonhard Euler wrote this rule down in the 1750s, and it holds for every solid with flat faces that has no hole through it. A cardboard box or a triangular box also work if you count carefully; a round tin does not, because its faces are not all flat.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Draw a net of twenty triangles with three equal sides, then cut, fold and tape it into a closed twenty-sided solid.",
+   "how": [
+    "Draw a strip of ten triangles in a row, pointing up and down in turn, with sides about 4 centimetres (an inch and a half).",
+    "Add one triangle on each of the five edges along the top of the strip, and one on each of the five edges along the bottom.",
+    "Cut round the outside and crease every inside line.",
+    "Fold so five triangles meet at every corner, and tape the edges shut one at a time."
+   ],
+   "note": "Draw one triangle carefully with the hexagon method, cut it from card and draw round it for all twenty. The solid is called an icosahedron: five triangles meet at every corner, and faces plus corners minus edges is 20 + 12 - 30 = 2. It is one of only five solids whose faces are all the same regular shape with the same number meeting at every corner; the others are the four-sided tetrahedron, the cube, the eight-sided octahedron and the twelve-sided dodecahedron. Plato wrote about all five, which is why they are called the Platonic solids.",
+   "ctx": "home",
+   "kind": "skill"
+  }
+ ]
+}

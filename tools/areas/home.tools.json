@@ -1,0 +1,125 @@
+{
+ "id": "home.tools",
+ "name": "Tools",
+ "line": "From finding five tools at home to teaching somebody to carry, pass and put away tools safely.",
+ "size": "weeks",
+ "strand": "look-after-the-place",
+ "from": 8,
+ "who": "From eight with a grown-up; power tools for grown-ups only",
+ "about": "For grown-ups, and for children from about eight with a grown-up beside them. The rungs with a blade are for grown-ups and older teenagers, and the power drill rung is for grown-ups only: a child never uses a power tool. You start by finding five tools at home and writing your own safety rules, then learn safety glasses, the tape measure, the level, pliers, a spanner and a hammer, then a craft knife, drill bits and a drill, then cleaning and storing, and one real job from start to finish. It ends with teaching somebody else to carry, pass and put away tools safely. Sawing and joining wood are in the Wood ladder, and repairs are in Mending; this one is the tools themselves.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Find five tools in your home and say what each one is for.",
+   "note": "Look in a drawer, a cupboard, a shed or a garage: a hammer, a screwdriver, pliers, a tape measure, a spanner, a torch, scissors. Put them together in one place while you name them. A child does this with a grown-up and leaves anything with a blade or a plug for the grown-up to move. If your home has almost none, look through a relative's or a neighbour's toolbox with them.",
+   "ctx": "home",
+   "kind": "attention",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Write five safety rules for tools in your home and put them where the tools are kept.",
+   "note": "Good rules: carry anything sharp or pointed with the point down and away from you; pass a tool handle first; never leave a tool on the floor or on a stair; nothing with a plug or a battery is used by a child; every tool goes back when the job is done. Add one of your own. A child and a grown-up can write them together, and the child can read them out.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Find a pair of safety glasses and a pair of work gloves, and put both on to check they fit.",
+   "note": "Eyes are the part most easily hurt by tools: a chip from a nail, dust from a drill, a spring that jumps out. From now on, glasses go on before any hammering, cutting or drilling. Borrow a pair if you have none; ordinary glasses give a little protection while you find some, and the measuring rungs need none. Gloves protect against splinters and rough edges, but never wear gloves with a drill or anything that spins, because a glove can catch and pull your hand in.",
+   "ctx": "kit",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Measure the length and width of a table with a tape measure, twice each, and get the same numbers both times.",
+   "note": "Hook the metal end over one edge, pull the tape straight and flat, and read where it meets the other edge, looking straight down at it. The hook at the end is loose on purpose: it moves by its own thickness so the reading is right whether you hook it on or push it against something. If your two tries differ, measure a third time. Use centimetres or inches, whichever your tape shows. Let the tape roll back slowly with your hand on it, because its edge can cut.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 5,
+   "test": "Use a spirit level to check whether a shelf and a table are level, and use it to straighten one picture frame.",
+   "note": "When the bubble sits exactly between the two lines, the surface is level. To check the level itself, read it, turn it end for end on the same spot, and read it again: the bubble should sit in the same place. With no spirit level, many phones have one built into their measuring app, or you can find a free one. Straighten a frame that already hangs on a hook or nail; putting up new fixings comes later.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Bend a paper clip into a hook with a pair of pliers, then straighten it again as well as you can.",
+   "note": "Grip near the tip of the pliers for small bends and near the joint for strength. Keep the fingers of your other hand away from the jaws, which pinch hard. Many pliers also have a wire cutter near the joint: leave that for a grown-up, who cuts with the loose end pointing down so it cannot fly up. Already easy? Bend the clip into the first letter of your name.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 7,
+   "test": "Loosen and tighten a nut with a spanner that fits it exactly, without wearing down the corners of the nut.",
+   "note": "A bicycle seat, a garden chair or a scooter often has one. A spanner of the right size, or an adjustable one closed up tight on the nut, grips it firmly; a loose one slips and rounds off the corners. Turn anticlockwise to loosen and clockwise to tighten, as you look at the nut, which is true for almost every nut. Pull the spanner towards you rather than pushing, so your knuckles do not hit anything if it slips. Anything that carries weight or a person goes back fully tight, and a grown-up checks it.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 8,
+   "test": "Hammer a nail straight into a scrap of wood, holding the nail with a clothes peg so your fingers are clear.",
+   "note": "Safety glasses on. Hold the hammer near the end of the handle, not near the head. Tap gently until the nail stands up by itself, then take the peg away and hit more firmly, watching the nail head, not the hammer. A child does this with a grown-up beside them, using a short nail in soft wood. Places that sell timber will often give away an offcut if you ask.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 9,
+   "test": "Pull a nail out with the claw of a hammer, with a thin scrap of wood under the hammer head to protect the surface.",
+   "note": "Slide the claw under the nail head, put the scrap of wood under the curve of the hammer head, and pull the handle back slowly. The scrap stops a dent and gives more lift; for a long nail, use a thicker scrap halfway out. Keep your glasses on, because a nail can spring out. Do not use a bent nail again: keep bent nails in a tin for metal recycling.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 10,
+   "test": "Cut a straight line in thick card with a craft knife against a metal ruler, then put the blade away.",
+   "note": "This rung is for grown-ups, or a teenager with a grown-up beside them. A younger child cuts the same line in thin card with scissors instead, and that counts. Put the card on a cutting board or an old magazine, hold the ruler down with your fingers spread flat on the side away from the blade, and make two or three light cuts rather than one hard one. Slide the blade back in, or cover it, the moment you stop cutting.",
+   "ctx": "kit",
+   "kind": "skill"
+  },
+  {
+   "n": 11,
+   "test": "Tell a wood drill bit, a masonry drill bit and a metal drill bit apart, and say what each one is for.",
+   "note": "A wood bit usually has a sharp spike in the middle of its tip, to start the hole in the right place. A masonry bit, for brick, stone and concrete, has a flat tip slightly wider than the rest, often a different colour. A metal bit has a plain cone-shaped point with no spike, and can also drill wood. A child can do this rung by looking and pointing with the bits left in their case. With no bits at home, look at them in a hardware shop or in pictures online.",
+   "ctx": "kit",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Drill one hole in a scrap of wood with a power drill, wearing safety glasses and no gloves, with long hair tied back.",
+   "note": "This rung is for grown-ups only. A child never uses a power tool: a child can choose the right bit, hold a torch, and watch from a step back with safety glasses on. Clamp the wood or hold it firmly on a bench, hold the drill with both hands, start slowly, and take the battery out or unplug it before changing the bit. Before you ever drill a wall, remember that wires often run straight above, below and beside switches and sockets, and pipes run to taps and radiators: do not drill there, and if in doubt, ask somebody qualified.",
+   "ctx": "kit",
+   "kind": "courage"
+  },
+  {
+   "n": 13,
+   "test": "Clean and dry every tool you have used on this ladder, wipe the metal parts with a little oil, and put each one back in its own place.",
+   "note": "Wipe off dust and dirt with a dry cloth; water left on metal causes rust. A thin wipe of light machine oil keeps rust off; a drop of cooking oil will do for a while if that is all you have. Blades and bits go back in their covers or case. Give each tool one place, so a gap shows what is missing: a box with sections, a shelf, or a board with the outline of each tool drawn on it.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 14,
+   "test": "Do one real job at home from start to finish: choose the tools, lay them out, do the job, and put everything back.",
+   "note": "Pick a job this ladder has trained you for: tighten a wobbly chair, straighten a picture, measure a space for a piece of furniture, pull an old nail from a board. Lay the tools out before you start, glasses included. A child chooses the job with a grown-up and does the parts that are safe for them. If you already do jobs like this, do one on purpose today and count it.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 15,
+   "test": "Put every tool back clean and in its place after every use for four weeks.",
+   "note": "Keep a tick on a calendar or a note on the fridge each time. The day you need a tool in a hurry, it is where it should be. A child can be the one who checks the tool box once a week. If you forget once, put it back when you notice and keep going; the count does not start again.",
+   "ctx": "long",
+   "kind": "attention"
+  },
+  {
+   "n": 16,
+   "test": "Teach somebody to carry a sharp tool, pass a tool and put tools away safely, and watch them do all three.",
+   "note": "Show each one first, then let them do it while you watch without taking over: point down and away when carrying; handle first when passing; clean and back in its place when done. A younger brother or sister, a friend, a grandparent or somebody you live with all count, and a child can teach a grown-up. Ask them to tell you one of your safety rules back.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

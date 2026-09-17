@@ -1,0 +1,138 @@
+{
+ "id": "order.digital",
+ "name": "The phone and the inbox",
+ "line": "From deleting the apps you never open to a ten-minute phone and inbox tidy every week for two months.",
+ "size": "weeks",
+ "strand": "look-after-the-place",
+ "from": 12,
+ "about": "For grown-ups and anybody from about twelve with their own phone or email. It starts with the quick jobs on the phone itself: apps you never open, notifications that are not people, the home screen, and the apps that take the most time. Then the inbox and photographs, then the safety jobs: a backup of the photographs that matter, a forgotten subscription, old sign-ins and two-step sign-in. It ends with a short weekly tidy for two months. A phone with less on it asks for less of your attention, and the things that matter are safe.",
+ "who": "Grown-ups and anybody from twelve with a phone",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Delete every app you have not opened in a month.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 10,
+   "extra": true,
+   "note": "Go through your apps page by page. If you cannot remember opening it in the last month, delete it. An app you paid for can usually be downloaded again for no cost from the same account. Many phones can show apps by last use in the settings."
+  },
+  {
+   "n": 2,
+   "test": "Turn off every notification that is not a person talking to you.",
+   "ctx": "home",
+   "kind": "attention",
+   "mins": 10,
+   "extra": true,
+   "note": "Open settings, then notifications, and go down the list. Messages and calls from people stay on. Shops, games, news and anything else that buzzes you: off. You can still open the app whenever you choose."
+  },
+  {
+   "n": 3,
+   "test": "Clear the home screen to one page of the apps you use every day.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 10,
+   "extra": true,
+   "note": "Keep only the apps you use every day on the first page, eight or so. Everything else goes onto the second page or into one folder. The first page is what you see every time you pick the phone up, so make it only what you need."
+  },
+  {
+   "n": 4,
+   "test": "Move the two apps that take up most of your time off the first page and into a folder on the last page.",
+   "ctx": "home",
+   "kind": "courage",
+   "note": "Most phones show which apps you spend the most time in, under screen time or digital wellbeing in the settings. Take the top two off the first page. You can still open them; it just takes a moment longer, and that moment is the point."
+  },
+  {
+   "n": 5,
+   "test": "Delete the screenshots and extra copies of photographs from the last month.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 10,
+   "extra": true,
+   "note": "Open your photographs and scroll back one month. Delete the screenshots you no longer need, the blurry ones, and all but the best of the near-identical shots. Many phones have a screenshots album that makes this quick. Check the recently deleted album too, and empty it."
+  },
+  {
+   "n": 6,
+   "test": "Unsubscribe from twenty emails you never read.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 15,
+   "extra": true,
+   "note": "Open your email and search for the word unsubscribe. For every newsletter or shop email you never read, open one and press the unsubscribe link at the bottom. Only use the link in emails from companies you know you signed up with. Count to twenty."
+  },
+  {
+   "n": 7,
+   "test": "Get the inbox to empty once: every email archived, deleted, or dealt with.",
+   "ctx": "home",
+   "kind": "skill",
+   "how": [
+    "Search or sort your email by date, oldest first.",
+    "Select everything older than a month that needs nothing from you, and archive it.",
+    "Go through the rest one at a time: reply, delete, or archive."
+   ],
+   "mins": 20,
+   "extra": true,
+   "note": "Start with the oldest. Anything older than a month that needs nothing from you: select it and archive it all at once, which keeps it searchable. Then go through what is left, one email at a time: reply, delete, or archive. The goal is an empty inbox once, tonight."
+  },
+  {
+   "n": 8,
+   "test": "Back up the photographs you would be most sorry to lose.",
+   "ctx": "home",
+   "kind": "attention",
+   "mins": 15,
+   "extra": true,
+   "note": "Children growing up, family occasions, the people who are gone. Turn on your phone's photo backup (most come with some free space), or copy them onto a computer or a memory stick you already own. Two copies in two different places is safer than one."
+  },
+  {
+   "n": 9,
+   "test": "Sort one year of photographs, one month at a time, keeping the best of each set of near-copies.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "One month a sitting takes about ten minutes, so a year is a couple of weeks of short sittings. Keep the best of each set of near-identical shots and delete the rest. Leave any photograph of a person who has died until you feel ready; nothing has to go today."
+  },
+  {
+   "n": 10,
+   "test": "Find one subscription you had forgotten about, and cancel it.",
+   "ctx": "home",
+   "kind": "courage",
+   "mins": 10,
+   "extra": true,
+   "note": "Look through a month of your bank statement, or the subscriptions list in your phone settings. Find the one you forgot about: an app, a channel, a free trial about to start charging. Cancel it today. If somebody else pays for your subscriptions, look through the list with them."
+  },
+  {
+   "n": 11,
+   "test": "Check where your main email account is still signed in, and sign out of what you do not use.",
+   "ctx": "home",
+   "kind": "attention",
+   "mins": 15,
+   "extra": true,
+   "note": "Open your main email account's security settings. It lists the devices and apps still signed in. Sign out of old phones, old computers, and apps you no longer use. If you see a device you do not recognise, sign it out and change your password."
+  },
+  {
+   "n": 12,
+   "test": "Turn on two-step sign-in for your main email account.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "It is in the same security settings. After your password, the account also asks for a code from your phone, so a stolen password alone is not enough. Never give that code to anybody who asks for it, by phone, message or email, whoever they say they are. If it is already on, check the phone number on it is still yours and count it."
+  },
+  {
+   "n": 13,
+   "test": "Get the inbox back to empty by the end of each day for a week.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "Five minutes in the evening: reply, delete, or archive each email that came in. If something needs longer, archive it and write it on your list for tomorrow instead of leaving it in the inbox. If one evening slips, catch up the next day and carry on."
+  },
+  {
+   "n": 14,
+   "test": "Do a ten-minute phone and inbox tidy once a week for two months.",
+   "ctx": "long",
+   "kind": "skill",
+   "how": [
+    "Delete apps you have not opened, and turn off any new notifications that are not people.",
+    "Delete the week's screenshots and extra copies.",
+    "Unsubscribe from anything new you did not read, then empty the inbox."
+   ],
+   "note": "Same day each week, with a timer. New apps you have not opened, new notifications that are not people, the week's screenshots, any new emails to unsubscribe from, and the inbox back to empty. Stop when the ten minutes are up."
+  }
+ ]
+}

@@ -1,0 +1,120 @@
+{
+ "id": "order.broken",
+ "name": "Broken things",
+ "line": "From a written list of every broken thing to a broken-things page cleared every week for two months.",
+ "size": "weeks",
+ "strand": "look-after-the-place",
+ "about": "For grown-ups and teenagers; a child from about ten can walk the house and help with the list, with a grown-up for anything electrical or sharp. This ladder is about deciding, not repair skills (the Mending ladder teaches those). It starts with a list of every broken and half-working thing in the house, makes the dangerous ones safe, gives each thing an answer (fix, repair shop, replace or let go) and works through them until the list is empty. It ends with looking after things before they break and a page for broken things cleared every week for two months. A house where things work is calmer, and so is the person who lives in it.",
+ "who": "Grown-ups and teenagers; from ten with a grown-up",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Walk the whole house with a notebook and list every broken or half-working thing.",
+   "ctx": "home",
+   "kind": "attention",
+   "mins": 15,
+   "extra": true,
+   "note": "Room by room with a pen: the dripping tap, the door that sticks, the lamp with a dead bulb, the drawer that jams, the phone with a cracked screen. Add the things that only half work, like the remote you have to press twice. Just the list tonight. Seeing it all written down is the job."
+  },
+  {
+   "n": 2,
+   "test": "Circle anything on the list that could hurt somebody, stop using it, and put it out of reach today.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "A frayed or melted cable, a cracked plug, a heater or charger that smells hot, a chipped glass, a loose stair rod, a wobbly chair. Unplug electrical things at the wall and stick a note on them saying \"Do not use\". Anything to do with gas or the wiring in the walls is for a qualified person, never a home fix. A child tells a grown-up instead of touching it."
+  },
+  {
+   "n": 3,
+   "test": "Beside every thing on the list, write one word: fix, shop, replace, or go.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "\"Fix\" means you can do it at home. \"Shop\" means somebody else could repair it for less than a new one. \"Replace\" means it is worn out but you still need one, and \"go\" means you can live without it. Decide quickly; you can change a word later."
+  },
+  {
+   "n": 4,
+   "test": "Fix the quickest thing marked \"fix\", today.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Pick the one that takes under ten minutes: a new bulb (switched off and cool first), fresh batteries, a loose screw on a cupboard handle. Do it now, and cross it off the list. If you have already fixed the easy ones, pick the next quickest and count it."
+  },
+  {
+   "n": 5,
+   "test": "Let one thing marked \"go\" leave the house the right way.",
+   "ctx": "home",
+   "kind": "courage",
+   "note": "Most broken things can go in the ordinary bin, but electrical things, batteries and light bulbs should not. Your local council lists where to take them, and many shops that sell electrical things take old ones back. Cross it off when it has left the house, not when it is bagged."
+  },
+  {
+   "n": 6,
+   "test": "For one thing marked \"shop\", find out where it could be repaired and roughly what it would cost.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "First look for a receipt or email: it may still be under guarantee and be repaired for free. Then search for a shoe repairer, a phone or bike repair shop, the maker's own repair service, or a repair café, where volunteers fix things for free. Ask on the phone or by message what they think it would cost. Write the place and the cost beside it on the list."
+  },
+  {
+   "n": 7,
+   "test": "Take that thing to be repaired, or send it off.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Take the receipt if you found one, and the charger or any parts that go with it. Ask when it will be ready and write it on the list. If the repair would cost more than it is worth, change its word to \"replace\" or \"go\" and count the rung."
+  },
+  {
+   "n": 8,
+   "test": "For one thing marked \"replace\", look for a second-hand or free one before buying new.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Ask family and friends first; somebody often has a spare kettle, lamp or bike light in a cupboard. Then look at free-giving groups and second-hand shops online or nearby. Buying new is fine when there is no other way, but look first. When the new one arrives, the broken one leaves the house the right way."
+  },
+  {
+   "n": 9,
+   "test": "Find the instructions for one thing on your list by searching its model number, and read what they say about its fault.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "The model number is on a small printed label, often on the back or underneath. Search it with the word \"manual\", and most makers' instructions come up for free. Look for the part called \"troubleshooting\" or \"problems\". Sometimes the fix is a reset button or a blocked filter."
+  },
+  {
+   "n": 10,
+   "test": "Fix something you have walked past for a year.",
+   "ctx": "home",
+   "kind": "courage",
+   "mins": 20,
+   "extra": true,
+   "note": "Every home has one thing everybody has stepped round for a year: the loose handle, the wobbly chair, the cupboard door on one hinge. Today, fix that one. A free video search for the exact problem, with the make or model if it has one, usually shows how. If it turns out to need a person with a trade, book them today and count it."
+  },
+  {
+   "n": 11,
+   "test": "Let go of one thing you have been keeping \"to fix one day\" for more than a year.",
+   "ctx": "home",
+   "kind": "courage",
+   "note": "The radio in the cupboard, the chair in the shed, the watch in the drawer. If a year has passed and nobody has fixed it, give it a real answer now. It goes, the right way, or it goes to a repair shop this week. Keeping it for another year is not one of the answers."
+  },
+  {
+   "n": 12,
+   "test": "Get the list down to nothing: every thing fixed, at a repair shop, replaced, or gone.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "Do one thing a day, or a few at the weekend, until every line is crossed off. Anything waiting for a repair shop or a delivery counts as done once it is arranged. Tick the date at the bottom when the last line goes."
+  },
+  {
+   "n": 13,
+   "test": "Pick one thing that broke because it was never looked after, and do the looking-after job on another thing like it.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "A vacuum cleaner that stopped because the filter was never cleaned: clean the filter on the one you have now. A bike chain that rusted: oil the chain on the other bike. A knife that went blunt: sharpen the others. Unplug anything electrical first."
+  },
+  {
+   "n": 14,
+   "test": "Write a short list of the jobs that stop things in your home breaking, and how often each one needs doing.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Five to ten lines is plenty. For example: clean the vacuum cleaner filter every month, tighten loose handles every few months, oil the bike chain every month, check the tyres on the bike or car. The instructions you found earlier often say how often. Keep the list with the broken-things page."
+  },
+  {
+   "n": 15,
+   "test": "Keep one page for broken things, and clear it every week for two months, doing one job from your list each week too.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "Anybody in the house can write on the page when something breaks. Once a week, at the same time, give each new line its word and do what it says, plus one job from the looking-after list. If a week slips, do it the next day and carry on; the two months do not start again."
+  }
+ ]
+}

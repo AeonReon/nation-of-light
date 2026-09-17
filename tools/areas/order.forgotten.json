@@ -1,0 +1,131 @@
+{
+ "id": "order.forgotten",
+ "name": "The forgotten places",
+ "line": "From every light switch in the house wiped to one forgotten place cleaned every week for two months.",
+ "size": "weeks",
+ "strand": "look-after-the-place",
+ "about": "For grown-ups and teenagers; a child from about ten can do most rungs with a grown-up nearby, and the oven and anything electrical are for grown-ups. These are the places ordinary cleaning misses: behind, under, on top of and inside. It starts with the things everybody touches and nobody wipes, then the windows and blinds, under the sink, the fridge, the tops and edges of a room, under the furniture, the front door, the kettle and filters, and the oven. It ends with a list of your own forgotten places and one done every week for two months. Every rung uses warm water, washing-up liquid and ordinary cloths; nobody stands on anything, and cleaning products are never mixed.",
+ "who": "Grown-ups and teenagers; from ten with a grown-up",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Wipe every light switch, door handle and stair rail in the house.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 15,
+   "note": "A cloth in warm water with a drop of washing-up liquid, wrung out well so it is only damp. Go room by room: the switches, both sides of every door handle, the cupboard handles, the stair rail. Keep water away from the inside of light switches and sockets."
+  },
+  {
+   "n": 2,
+   "test": "Wipe the blinds slat by slat, and the curtain rail if you can reach it from the floor.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 15,
+   "extra": true,
+   "note": "Close the blinds and wipe each slat with a damp cloth, or a sock over your hand. Then run a cloth along the top of the curtain rail, where the dust has been sitting for months. For a rail you cannot reach standing on the floor, tie a cloth over the head of a broom; never stand on a chair."
+  },
+  {
+   "n": 3,
+   "test": "Clean the windows in one room, inside and out.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 20,
+   "extra": true,
+   "note": "Warm water with a drop of washing-up liquid, a cloth, and a dry tea towel or newspaper to finish. Inside first, then outside only where you can reach from the ground. Never lean out of an upstairs window or climb up to reach. Pick a dry day that is not freezing."
+  },
+  {
+   "n": 4,
+   "test": "Empty and clean the cupboard under the kitchen sink, then wash the kitchen bin inside and out.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 20,
+   "extra": true,
+   "note": "Take everything out. Wipe the floor of the cupboard, bin what is empty or dried up, and put back only what you use. Never mix two cleaning products, because some, such as bleach, give off dangerous fumes when mixed; keep them all where children cannot get to them. Then wash the bin itself with warm soapy water and dry it."
+  },
+  {
+   "n": 5,
+   "test": "Empty and wipe the fridge shelf by shelf, and bin what is past its date.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 20,
+   "extra": true,
+   "note": "Take everything out of one shelf at a time. Check dates, bin what is past, wipe the shelf, and put back what is good. Do the door shelves last. Warm water and a spoonful of bicarbonate of soda cleans it well, if you have some; plain soapy water works too."
+  },
+  {
+   "n": 6,
+   "test": "In one room, dust the top of the cupboards, the light shade and the skirting all the way round, from the floor.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 20,
+   "extra": true,
+   "note": "One room. Stand on the floor, not on a chair or a step: for high places, use a long-handled duster or a damp cloth over the head of a broom. Dust the light shade with the light switched off and cool. Then go all the way round the skirting boards with a damp cloth."
+  },
+  {
+   "n": 7,
+   "test": "Move the furniture in one room and clean what was under and behind it.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "The sofa, the armchair, the small table, the television stand. Lift the sofa cushions too. Anything heavy is a job for two people: slide it on a folded towel rather than lifting it alone. Switch off and unplug electrical things before moving them."
+  },
+  {
+   "n": 8,
+   "test": "Clean the front door, the handle and the doorstep.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 15,
+   "extra": true,
+   "note": "The front door is the first thing you touch coming home. Wipe the door, polish the handle, the letterbox or the doorbell, and sweep the step. In a flat, do your own door and the bit of floor outside it. A bucket of warm soapy water and a cloth is everything."
+  },
+  {
+   "n": 9,
+   "test": "Descale, empty or clean the filter on one thing that needs it.",
+   "ctx": "home",
+   "kind": "attention",
+   "mins": 15,
+   "extra": true,
+   "note": "The kettle with white scale inside, the cooker hood filter, the shower head, the vacuum cleaner filter. Pick one, and unplug or switch it off first. For a kettle: half water, half white vinegar, boil, leave an hour, rinse well and boil fresh water twice before using it. Never add any other cleaner to vinegar."
+  },
+  {
+   "n": 10,
+   "test": "Clean the oven, or the microwave if you have no oven.",
+   "ctx": "home",
+   "kind": "courage",
+   "how": [
+    "Oven off and cold; take out the shelves and soak them in hot soapy water.",
+    "Spread bicarbonate paste inside, avoiding the heating parts, and leave it overnight.",
+    "Wipe it all off with a damp cloth, rinsing the cloth often, then put the shelves back."
+   ],
+   "note": "Oven off and completely cold. Mix bicarbonate of soda with a little water into a paste, spread it inside away from the heating parts, leave it overnight, then wipe it off with a damp cloth. For a microwave, heat a bowl of water with a slice of lemon for a few minutes and wipe the inside. A grown-up does the oven; no shop oven cleaner is needed."
+  },
+  {
+   "n": 11,
+   "test": "Wash the things that clean other things: the washing-up bowl, the dish rack, the cutlery tray and the toothbrush holder.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "These get wet every day and almost never get washed themselves. Hot soapy water and an old toothbrush for the corners. Leave each one to dry fully before it goes back. Add the soap dish and the nail brush if you have them."
+  },
+  {
+   "n": 12,
+   "test": "Clean the one place in the house nobody has looked at in years, if you can reach it from the floor.",
+   "ctx": "home",
+   "kind": "courage",
+   "mins": 20,
+   "extra": true,
+   "note": "Behind the sofa, the back of the cupboard under the stairs, the drawer under the oven, the gap beside the fridge. Pick the one place nobody in the house has looked at in years. Take everything out, clean it, and put back only what belongs there. Twenty minutes, and it is done."
+  },
+  {
+   "n": 13,
+   "test": "Write a list of the forgotten places in your home, with how often each one needs doing.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Go through the rungs you have done and add anything else you noticed: the bath panel, the rubber seal inside the washing machine door, the car mats if you have a car. Beside each one write weekly, monthly or twice a year. Aim for about ten places, so there is one for each week and a few to spare."
+  },
+  {
+   "n": 14,
+   "test": "Clean one forgotten place from your list every week for two months.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "Pick the same day each week and do the next place on the list, about twenty minutes. Tick it and write the date. If a week slips, do it the next day and carry on; the two months do not start again."
+  }
+ ]
+}

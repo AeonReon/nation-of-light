@@ -1,0 +1,199 @@
+{
+ "id": "mind.cube",
+ "name": "The cube",
+ "line": "From counting the pieces to solving any mix-up somebody hands you, from memory, in under three minutes.",
+ "size": "months",
+ "strand": "make-things",
+ "from": 8,
+ "who": "From about eight; anybody who can follow written steps",
+ "about": "For anybody from about eight who can follow written steps, and for grown-ups. The cube looks impossible and is not: it is seven short sequences of turns, learned one at a time, and the first one takes an evening. The climb goes layer by layer, from the white cross to the whole cube with the notes in front of you, then from memory, and ends with any mix-up somebody hands you solved in under three minutes. The only thing you need is a standard three-by-three puzzle cube, which costs little and can often be borrowed from a friend, a school or a toy box.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Count the centres, edges and corners on the cube, and say which colour centre is opposite which.",
+   "ctx": "kit",
+   "kind": "attention",
+   "mins": 5,
+   "note": "There are 6 centres with one colour each, 12 edges with two and 8 corners with three. The centres never move against each other, so the colour in the middle of a face is the colour that whole face will be when it is solved. On most cubes white is opposite yellow, but check yours, as some are different."
+  },
+  {
+   "n": 2,
+   "test": "Learn the six letters R, L, U, D, F and B, and turn each face a quarter turn both ways.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "L, D and B are the hard ones, because clockwise for them feels backwards from where you are holding the cube. Say each letter out loud as you turn it. Every sequence on this ladder is written in these letters.",
+   "how": [
+    "Hold the cube still with one face towards you: that face is F, the front.",
+    "R is the right face, L the left, U the top, D the bottom and B the back.",
+    "A letter on its own means a quarter turn clockwise, as if you were looking straight at that face.",
+    "A letter with a mark after it, like R', means a quarter turn anticlockwise; R2 means a half turn."
+   ]
+  },
+  {
+   "n": 3,
+   "test": "Do R U R' U' six times in a row, and watch the cube come back to how it started.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Start from a solved cube, or take a photo of a mixed one first, so you can see it come back. Keep the same face towards you the whole time and say the letters as you go. This short sequence is the first of the seven you will use to solve the cube."
+  },
+  {
+   "n": 4,
+   "test": "Make the daisy: the yellow centre on top, with a white edge on each of its four sides, white facing up.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Turn faces one at a time to bring each white edge up next to the yellow centre. Before bringing in the next one, turn the top so you do not knock out one that is already there. There is no sequence to learn for this: work it out by trying."
+  },
+  {
+   "n": 5,
+   "test": "Turn the daisy into a white cross on the bottom, with each edge's side colour matching the centre next to it.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Turn the cube over to check: a white plus sign on the bottom, and a matching colour going up from each arm of it. If one side does not match, that edge went down before it lined up, so bring it back up and try again. Keep white on the bottom from here on.",
+   "how": [
+    "Turn the top until one white edge's side colour matches the centre below it.",
+    "Turn that face twice, which takes the white edge down to the bottom.",
+    "Do the same for the other three edges."
+   ]
+  },
+  {
+   "n": 6,
+   "test": "Put one white corner into its place on the bottom, using R U R' U'.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "It never takes more than five goes of the sequence. If a white corner is in the bottom layer in the wrong place or the wrong way round, hold it at the front right and do R U R' U' once to bring it up, then start again.",
+   "how": [
+    "Find a corner in the top layer that has white on it.",
+    "Turn the top until the corner sits above the place it belongs, between the two centres that match its other colours.",
+    "Turn the whole cube so that place is at the front right, with white still on the bottom.",
+    "Do R U R' U' again and again until the corner is in, with white on the bottom."
+   ]
+  },
+  {
+   "n": 7,
+   "test": "Finish the white layer: all four white corners in, and the bottom row of every side matching its centre.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Do each corner the same way as the last rung, turning the whole cube so the next empty place is at the front right. When it is done, every side has a bottom row of one colour that matches its centre. Look for white corners in the top layer first."
+  },
+  {
+   "n": 8,
+   "test": "Solve the white layer from three different mix-ups, one after another, without looking at the notes.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Mix the cube each time with about twenty turns of any faces. Say the stages out loud as you go: daisy, cross, corners. When you can do this three times running, you know the first layer."
+  },
+  {
+   "n": 9,
+   "test": "Put one middle-layer edge in on the right, using U R U' R' U' F' U F.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "The edge goes down into the gap between the front and right faces. Your white layer comes apart and goes back together during the sequence, so do all eight turns without stopping. If it comes out wrong, check that the top colour of the edge matched the right-hand centre before you started.",
+   "how": [
+    "Hold the cube with white on the bottom.",
+    "Find an edge in the top layer with no yellow on it.",
+    "Turn the top until the front colour of that edge matches the centre below it.",
+    "If its top colour matches the right-hand centre, do U R U' R' U' F' U F."
+   ]
+  },
+  {
+   "n": 10,
+   "test": "Put one middle-layer edge in on the left, using U' L' U L U F U' F'.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Line the edge up the same way as the last rung, but this time its top colour matches the left-hand centre. It is the right-hand sequence done the other way round. If an edge is in the middle layer but in the wrong place or flipped, put any top edge into that gap with either sequence, and the wrong one comes up to the top where you can place it properly."
+  },
+  {
+   "n": 11,
+   "test": "Solve the first two layers: the white layer and all four middle edges.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "If every edge in the top layer has yellow on it, the edges you still need are in the middle layer the wrong way, so bring one up as on the last rung. When it is done, only the top layer is left to solve. Write down how long it took."
+  },
+  {
+   "n": 12,
+   "test": "Solve the first two layers from three different mix-ups, one after another, without looking at the notes.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Mix it with about twenty turns each time. Say the stages out loud: daisy, cross, corners, middle edges. It is common to be slowest at finding the middle edges, so practise spotting the top edge with no yellow on it quickly."
+  },
+  {
+   "n": 13,
+   "test": "Make a yellow cross on top, using F R U R' U' F'.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Look only at the yellow edges and the yellow centre; ignore the corners for now. The first two layers are back as they were at the end of each go.",
+   "how": [
+    "Look at the top: the yellow edges make a dot, an L shape, a line, or already a cross.",
+    "Dot: do the sequence once, and you get an L.",
+    "L: hold it so its arms point to the back and to the left, and do the sequence to get a line.",
+    "Line: hold it going from left to right, and do the sequence once more for the cross."
+   ]
+  },
+  {
+   "n": 14,
+   "test": "Turn the yellow edges so each side colour matches its centre, using R U R' U R U2 R'.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "The corners will look mixed up after this; that is expected, and the next two rungs put them right. If all four edges already match, go straight on to the next rung.",
+   "how": [
+    "Turn the top until at least two edges match their centres.",
+    "If two that match are next to each other, hold them at the back and on the right, do the sequence, then turn the top once more clockwise (U).",
+    "If the two that match are opposite each other, do the sequence once from any side, then turn the top until two next to each other match, and do the step above."
+   ]
+  },
+  {
+   "n": 15,
+   "test": "Put each yellow corner in its right place, whichever way round it is, using U R U' L' U R' U' L.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "The corner you hold at the front right stays where it is while the other three swap round. Do not turn the top between goes.",
+   "how": [
+    "A corner is in its right place when its three colours match the three centres around it, even if yellow is not facing up.",
+    "Find a corner in its right place and hold the cube so that corner is at the front right of the top.",
+    "Do the sequence, then check; if the others are not in place yet, do it once more.",
+    "If no corner is in its right place, do the sequence once from any side, and then one will be."
+   ]
+  },
+  {
+   "n": 16,
+   "test": "Twist the last corners using R' D' R D, and solve the whole cube for the first time, with the notes in front of you.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Do not turn the whole cube during this stage, or the bottom layers will not come back. If the very last corner will not come right however you twist it, the cube may once have been taken apart and put back wrongly; on most cubes you can twist that one corner round by hand.",
+   "how": [
+    "Hold the cube with yellow on top and an unfinished corner at the front right of the top.",
+    "Do R' D' R D, two at a time, until that corner has yellow on top. The rest of the cube will look mixed up: keep going.",
+    "Turn only the top (U) to bring the next unfinished corner to the front right, and do the same again.",
+    "When every corner has yellow on top, turn the top until the sides match, and the cube is solved."
+   ]
+  },
+  {
+   "n": 17,
+   "test": "Solve the whole cube three times, from three different mix-ups, with the notes in front of you.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Look at the notes only when you need them, and say each stage out loud as you start it. Notice which sequence you still check every time: that is the one to practise. Write down your time for each solve."
+  },
+  {
+   "n": 18,
+   "test": "Solve the whole cube from a mix-up with nothing written in front of you.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "First say the seven sequences out loud from memory, each with the stage it belongs to, and check them against the notes. If you get stuck during the solve, look up the one you need, then put the notes away and start again from a new mix-up. The rung is one whole solve with no looking."
+  },
+  {
+   "n": 19,
+   "test": "Solve the cube three times in one sitting, each in under five minutes, with nothing in front of you.",
+   "ctx": "kit",
+   "kind": "skill",
+   "note": "Use a timer on a phone or a clock with a second hand. Start it when you pick up the mixed cube and stop it when the last face is done. If one goes over five minutes, the three start again."
+  },
+  {
+   "n": 20,
+   "test": "Solve the cube from a mix-up somebody else gives you, from memory, in under three minutes.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Ask them to turn it about twenty times while you look away, then start the timer as you pick it up. Speed comes from not stopping to hunt for pieces, so practise finding the next piece while your hands finish the last sequence. When you can do this, you can solve any cube anybody hands you."
+  }
+ ]
+}

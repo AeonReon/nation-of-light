@@ -1,0 +1,105 @@
+{
+ "id": "order.desk",
+ "name": "The desk",
+ "line": "From one bare, wiped surface to a desk left clear at the end of every day for two weeks.",
+ "size": "afternoon",
+ "strand": "look-after-the-place",
+ "about": "For everybody from about eight: a child with a homework table and a grown-up with a work desk can do theirs side by side. The desk is wherever you sit to write, study or work, and a kitchen table counts. The climb clears the surface, the floor round it, the papers, the drawers and the cables, then sets the chair, the screen and the light so sitting there is comfortable. It ends with the desk left clear at the end of every day for two weeks. A clear desk means you sit down and start, instead of tidying first.",
+ "who": "From about eight; a child and a grown-up side by side",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Clear the desk to a bare surface, wipe it, and put back only the three things you use every day.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 15,
+   "extra": true,
+   "note": "Everything off: the pens, the mugs, the post, the charger. Wipe it with a damp cloth until it is bare. Then choose the three things you really use every day, and only those go back; the rest waits in a box on the floor for later. A kitchen table you work or do homework at counts."
+  },
+  {
+   "n": 2,
+   "test": "Clear the floor under and around the desk, and put each thing where it belongs.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Bags, shoes, boxes, the bin that needs emptying, the things that slid off the desk. Each one goes to where it lives in the house, or into the bin. Your feet should have room to rest flat under the desk when you finish."
+  },
+  {
+   "n": 3,
+   "test": "Gather every loose paper on and around the desk into one pile and go through it once: bin it, file it, or do what it asks today.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 20,
+   "extra": true,
+   "note": "Put every loose piece of paper into one pile and go through it once, from top to bottom, touching each sheet only once. It goes in the bin, into a folder, or you do what it asks today. Tear anything with a name, address or account number into small pieces before it goes in the bin. A child does the same with school sheets and old drawings, with a grown-up saying what can go."
+  },
+  {
+   "n": 4,
+   "test": "Set up one tray, box or folder for papers that still need doing, and put everything waiting into it.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "One place only, so nothing waiting ever sits loose on the desk again. A shoebox lid or a cereal box cut down makes a free tray. Write on it what it is for, such as \"To do\", and keep it at the back corner of the desk. If you already have one, empty it out, check it, and count it."
+  },
+  {
+   "n": 5,
+   "test": "Sort the desk drawers: one drawer for what you use at the desk, and everything else out.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 15,
+   "extra": true,
+   "note": "Pick one drawer to hold what you use at the desk: the scissors, a notebook, the tape, the charger you need. Everything else comes out of the drawers and goes to its real place in the house, or goes. With no drawers, a mug or a small box on the desk does the same job."
+  },
+  {
+   "n": 6,
+   "test": "Gather the cables on and behind the desk so none lie across the surface or the floor.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 15,
+   "extra": true,
+   "note": "Unplug and put away anything you have not used this month. Coil the rest loosely, hold each one with a bread-bag tie or a strip of paper, and write on it what the cable is for. Keep cables out of the way of chair wheels and feet, never under a rug, and never bent tight or squashed. A child leaves the plugs to a grown-up."
+  },
+  {
+   "n": 7,
+   "test": "Sit at the desk and set the chair and the screen or page to the right height.",
+   "ctx": "home",
+   "kind": "attention",
+   "mins": 10,
+   "extra": true,
+   "note": "Sit as you normally do. Your feet should be flat on the floor, your elbows about level with the desk, and the top of any screen at about eye level. A cushion raises you, a stack of books raises a screen, and a box under the feet helps a child whose feet do not reach. Nothing needs buying."
+  },
+  {
+   "n": 8,
+   "test": "Move the desk, the lamp or yourself so the light falls on your work from the side, not from behind you or into your eyes.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Sit down with a page in front of you. If your head or your hand makes a shadow on it, the light is behind you or on the wrong side; if you are squinting at a bright window, it is in front of you. Most people find light from the side away from their writing hand works best. Moving the lamp or turning the desk is free."
+  },
+  {
+   "n": 9,
+   "test": "Put one thing on the desk that you are glad to look at.",
+   "ctx": "home",
+   "kind": "kindness",
+   "note": "Not something useful, something you like: a stone from a walk, a photograph, a child's drawing, a plant cutting in a glass of water. One thing only, so the desk stays clear. If there is already something there you love, dust it and count it."
+  },
+  {
+   "n": 10,
+   "test": "At the end of one work or homework session, clear the desk and leave out only the one thing you will start with next time.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "The cup back to the kitchen, papers into the tray, pens into the drawer. Then put out the single thing you will pick up first next time, such as the book open at the right page. It takes about two minutes. If you already clear up at the end, leave the one thing out on purpose and count it."
+  },
+  {
+   "n": 11,
+   "test": "Clear the desk at the end of every day for a week, with one thing set out for the morning.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "The same two minutes as the last rung, every evening or when you finish for the day. On a day you did not use the desk, just check it is still clear. If you miss a day, clear it the next morning and carry on; the week does not start again."
+  },
+  {
+   "n": 12,
+   "test": "Keep the desk clear at the end of every day for two weeks, then write down one thing that was easier.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "By now it should take a minute. At the end of the fortnight, write one line about what changed: starting work faster, finding things, not moving piles before homework. Keep the line in the tray, so you see it next time the desk starts to fill up."
+  }
+ ]
+}

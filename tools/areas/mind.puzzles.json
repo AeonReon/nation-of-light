@@ -1,0 +1,97 @@
+{
+ "id": "mind.puzzles",
+ "name": "Puzzles",
+ "line": "From one easy puzzle finished to a puzzle of your own that three people try and at least one solves.",
+ "size": "weeks",
+ "strand": "make-things",
+ "from": 8,
+ "who": "From about eight; a child and a grown-up together",
+ "about": "For anybody from about eight: a child and a grown-up can work on most rungs together. It starts with one easy puzzle finished, then goes through a river-crossing riddle, sudoku, logic grids, crosswords and puzzles you solve by asking questions. Along the way it practises two habits: staying with a puzzle while you are stuck, and coming back to it the next day. It ends with a puzzle of your own that three people try and at least one solves. Everything is free: paper and a pen, the puzzle pages of the newspapers at a library, library puzzle books, or free printable puzzle pages online.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Finish one easy puzzle on your own, from start to end: a word search, a maze or a small jigsaw.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 15,
+   "note": "A jigsaw of about 50 pieces if your household has one; otherwise a word search or maze from a newspaper, a library puzzle book or a free printable page. For a jigsaw, do the edge pieces first, then sort the rest by colour. If easy puzzles are nothing new to you, do one on purpose against a timer and count the rung."
+  },
+  {
+   "n": 2,
+   "test": "Solve the farmer's river crossing in the note, moving scraps of paper, without being told the answer.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "A farmer must take a wolf, a goat and a cabbage across a river in a boat that holds the farmer and only one of them. If they are left alone together, the wolf eats the goat, and the goat eats the cabbage. Draw the river on paper, write the four names on scraps, and move them across: there is a way with nothing eaten."
+  },
+  {
+   "n": 3,
+   "test": "Finish an easy sudoku with no help.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Every row, every column and every 3 by 3 box needs the numbers 1 to 9 once each. Start with a row, column or box that has only one or two empty squares. Use a pencil, and younger children can start with a small 4 by 4 grid that uses 1 to 4."
+  },
+  {
+   "n": 4,
+   "test": "Spend twenty minutes on the nine-dot puzzle in the note, writing down each thing you try, without looking up the answer.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Draw nine dots in three rows of three, then join all nine with four straight lines, without lifting your pen or going back along a line. Being stuck is the part where the thinking happens, so the rung is the twenty minutes, solved or not. If you do solve it, keep the answer to yourself so you can give the puzzle to somebody else."
+  },
+  {
+   "n": 5,
+   "test": "Finish a medium sudoku with no help.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Now look at one empty square at a time and check its row, column and box together to see which numbers are left. Write the possible numbers small in the corner of a square, and cross them out as you find they cannot go there. If you make a mistake you cannot find, start a fresh one rather than looking at the answer."
+  },
+  {
+   "n": 6,
+   "test": "Finish a logic grid puzzle, where clues tell you who has what, by crossing things off in a grid.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "A small one might have three friends, three pets and clues such as \"the girl with the cat is not called Mia\". Put a cross in the grid where a clue says no and a tick where you are sure; each tick lets you cross off the rest of its row and column. Choose the smallest size for your first one, from a library puzzle book or a free printable page."
+  },
+  {
+   "n": 7,
+   "test": "Solve a lateral thinking puzzle that somebody else reads to you, asking only questions they can answer with yes or no.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "These are short stories that seem not to make sense, and the other person picks one from a puzzle book or a free page and keeps the answer to themselves. Ask things like \"Is it night-time?\" or \"Does the weather matter?\" until you can say what happened. There is no limit on questions, and the rung is done when you give the whole answer."
+  },
+  {
+   "n": 8,
+   "test": "Solve the two working-backwards puzzles in the note by starting from the end.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Here is how it works: I think of a number, double it, add 6 and get 20, so work back: 20 take away 6 is 14, and half of 14 is 7. Now try: I think of a number, add 5, double it and get 36; what was it? Then: a water lily doubles in size every day and covers a whole pond on day 30; on which day did it cover half the pond?"
+  },
+  {
+   "n": 9,
+   "test": "Finish a whole crossword, using a dictionary if you need one.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Start with a quick or easy crossword, where each clue is simply a meaning, not a riddle. Fill in the answers you are sure of first, because each one gives you letters for the answers that cross it. Library newspapers, puzzle books and free printable pages all have them, and children's puzzle books have smaller ones."
+  },
+  {
+   "n": 10,
+   "test": "Put away a puzzle you are stuck on, come back to it the next day or the day after, and solve it.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "A sudoku, a crossword clue or a riddle from a book. Stop when you have tried everything you can think of, write down where you got to, and look again the next day before you do anything else with it. It is common to see what to do straight away after a break; if not, give it one more day before looking at the answer."
+  },
+  {
+   "n": 11,
+   "test": "Finish a hard sudoku or a large logic grid puzzle with no help.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "You will need the small pencil numbers from rung five. One useful rule: when two squares in the same row can only hold the same two numbers, those two numbers cannot go anywhere else in that row, and the same is true for a column or a box. Expect it to take more than one sitting, and come back to it as on the last rung."
+  },
+  {
+   "n": 12,
+   "test": "Make a puzzle of your own, give it to three people, and have at least one of them solve it.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "A river crossing with new characters, a number to work back to, a small logic grid, or a riddle about something in your home. Solve it yourself first and write the answer down, so you know it can be done. If nobody gets it after a fair try, give a clue, and if that is not enough, make it a little easier and try new people."
+  }
+ ]
+}

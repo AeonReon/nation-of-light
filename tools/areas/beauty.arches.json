@@ -1,0 +1,116 @@
+{
+ "id": "beauty.arches",
+ "name": "Arches and columns",
+ "line": "From a sheet of paper that carries coins once it is curved, to an arch of your own with no glue that carries a heavy book, explained to somebody.",
+ "size": "afternoon",
+ "strand": "make-things",
+ "who": "Everybody; a child and a grown-up side by side",
+ "about": "For everybody: a child and a grown-up can climb it side by side, and a grown-up does any cutting of thick card. This ladder is about how buildings stay up: why a curve carries more than a flat beam, how an arch pushes outwards at its feet, why a hanging chain shows the best shape for an arch, and how columns carry weight straight down. You start with a sheet of paper and a few coins, build arches from books and card, and look at arches, domes and columns from many parts of the world, from Maya temples and Roman bridges to Persian palaces and Chinese timber halls. It ends with an arch of your own, with no glue, that carries a heavy book, and you explain to somebody why it stands. Paper, card, books and coins are all it needs.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Lay a sheet of paper flat across a gap between two piles of books and add coins until it sags, then curve the same sheet up into an arch between the piles and count how many coins it carries.",
+   "note": "Leave a gap about the width of your hand. The flat sheet sags with almost nothing on it. For the arch, push the ends of the paper into the inside corners at the bottom of the piles so they cannot slide apart, and put the coins on the top of the curve. The curve turns the weight into a push along the paper and down into the books, instead of a bend in the middle. Write both numbers down.",
+   "ctx": "home",
+   "kind": "attention",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Find three places at home where something flat spans a gap, such as the top of a door frame, a shelf or a table, and say what holds up each end.",
+   "note": "A flat piece across a gap is called a beam, and over a door or a window it is called a lintel. A beam carries weight by bending, and it bends most in the middle, which is why a long shelf loaded with books sags in the middle. Look along a long bookshelf from one end and you may see the sag.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Find an arch near you, such as a bridge, a doorway or a gateway, and point to where its weight goes into the ground.",
+   "note": "The weight runs round the curve and down both sides into the ground or into the walls beside it. Look for thick sides, heavy blocks at the bottom, or other walls pressing against it. Many road and railway bridges, old doorways and garden gateways are arches. If there is none near you, use a photograph of one.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 4,
+   "test": "Build an arch from books or wooden blocks by stacking each layer a little further out over a gap until the two sides meet at the top.",
+   "note": "Start with two piles a little apart. Each book sticks out over the gap a little further than the one below, with the weight above holding its back end down, until the two sides touch. This is a corbel arch. People have built this way for thousands of years: the Maya roofed rooms in their temples like this, and the inner chamber at Newgrange in Ireland, older than the pyramids of Giza, has a corbelled roof. Keep each step small; if the pile tips over, that is part of the lesson.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 5,
+   "test": "Cut an arch of seven wedge-shaped blocks from thick card, stand them on a curved support, and slide the support out so the arch stands on its own.",
+   "how": [
+    "On thick card, draw a half circle about the size of a dinner plate, and a smaller half circle inside it from the same centre, leaving a curved band about three fingers wide.",
+    "Divide the band into seven equal blocks with lines that all point to the centre, and cut them out.",
+    "For the support, use a round tub lying on its side or a strip of card bent to the same curve.",
+    "Stand the blocks on the support, touching, then slide the support out gently."
+   ],
+   "note": "This is a true arch: each block is a wedge that presses on its neighbours. A child can draw the blocks; a grown-up cuts thick card, with scissors or a craft knife. With thin card, glue three pieces together for each block so it is thick enough to stand. Builders of stone arches used a wooden support in the same way until the last block was in.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 6,
+   "test": "Take out the top middle block of your arch and watch it fall, then rebuild it and take out a block from one side instead.",
+   "note": "The top middle block is called the keystone. It is the last block put in and it locks the others, but it is not the only one that matters: take out any block and the arch falls, because every block is pressing on the ones either side of it.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Press gently down on the top of your arch and feel its feet slide outwards, then put a heavy book against the outside of each foot and press again.",
+   "note": "An arch pushes outwards at its feet as well as down. If nothing stops the feet, they spread and the top drops. That outward push is why arched bridges have heavy ends, why a row of arches can lean each one against the next, and why many tall stone churches have buttresses propping their walls from outside. Press gently: you are feeling the push, not breaking the arch.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Hang a necklace or a thin chain from two fingers, trace its curve on paper held behind it, and turn the drawing upside down.",
+   "note": "A hanging chain, turned upside down, gives the best shape for an arch that carries only its own weight, because every part of it is pushed along the curve and no part is bent. The English scientist Robert Hooke wrote this down in the 1670s, and the architect Antoni Gaudí designed churches in and near Barcelona with upside-down hanging models of strings and small bags of weight. Hold the paper flat against a wall, or ask somebody to hold it while you trace. A shoelace works if you have no chain.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Look at photographs of a round arch, a pointed arch, a horseshoe arch and a very flat arch, and draw the outline of each.",
+   "note": "Round: the Roman aqueduct bridge of the Pont du Gard in France. Pointed: the medieval cathedrals of Europe, and mosques and palaces in the Islamic world, which used pointed arches centuries earlier. Horseshoe, curving back in at the bottom: the Great Mosque of Córdoba in Spain. Very flat: the Zhaozhou Bridge in China, a stone bridge more than 1,400 years old. Say which looks strongest to you and which looks most beautiful.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Stand four half eggshells open side down in a square, lay a tray or a board on them, and add books one at a time to see how many they carry.",
+   "note": "A dome is an arch turned all the way round its centre, so it pushes down and outwards on every side. Break the eggs into a bowl for cooking, rinse the shells, put a band of tape round the middle of each and cut along the tape with small scissors so the edge is level; a grown-up can help. Wash your hands after handling raw egg. Famous domes to look at afterwards: the Pantheon in Rome, Hagia Sophia in Istanbul, the Taj Mahal in Agra, and the snow houses built by Inuit people.",
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 11,
+   "test": "Point out the base, the shaft and the top of one column, near you or in a photograph.",
+   "note": "The top is called the capital: it spreads the weight of the beam or arch above onto the shaft. The shaft carries the weight straight down, and the base spreads it onto the floor. A column is squeezed, not bent, which is why stone makes good columns but poor long beams. Not every column has all three parts: the oldest Greek style, the Doric, usually stands on the floor with no base. Porches, halls, stations and temples have them.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Look at columns from three different parts of the world and draw the top of each one.",
+   "note": "Some to look up: the papyrus-shaped columns of the great hall at Karnak in Egypt; the Doric, Ionic and Corinthian columns of ancient Greece; the columns at Persepolis in Iran, topped with two bulls back to back; the red timber columns of Chinese temples and palaces, with layers of interlocking wooden brackets on top; the carved stone pillars of Hindu temples in India. The outline and the main shapes are enough.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 13,
+   "test": "Find one place where columns hold up a flat beam and one where columns hold up arches, and say which has the wider gaps between its columns.",
+   "note": "A stone beam between columns has to be short, because a long stone beam cracks in the middle; that is why ancient Greek temples have their columns close together. Arches let columns stand further apart. Look at a porch, a covered market, a station, a cloister or a bridge. Photographs count if you cannot go out.",
+   "ctx": "out",
+   "kind": "attention"
+  },
+  {
+   "n": 14,
+   "test": "Build an arch with no glue that stands on its own and carries a heavy book on top, and explain to somebody why it stands.",
+   "note": "Use what worked best for you: your card blocks made deeper, or blocks of salt dough (flour, salt and water) baked hard in the oven by a grown-up. Brace the feet with books, and lay a flat piece of card across the top to spread the weight of the book. When it holds, explain the three ideas from this ladder: the curve carries by pushing, not bending; every block matters; and the feet must be held. A child can do the explaining while the grown-up only asks questions.",
+   "ctx": "home",
+   "kind": "skill"
+  }
+ ]
+}

@@ -1,0 +1,153 @@
+{
+ "id": "mind.mental",
+ "name": "Mental arithmetic",
+ "line": "From adding two small numbers to twenty mixed sums, set by somebody else, done in your head in under ten minutes.",
+ "size": "months",
+ "strand": "say-what-you-mean",
+ "from": 8,
+ "who": "From about eight; grown-ups too",
+ "about": "For anybody from about eight who can add small numbers, and for grown-ups who would like to stop reaching for a calculator. It starts with adding two small numbers and moves through taking away, doubling and halving, multiplying, dividing and percentages, with one method for each that works every time. Then the sums go into real shopping: a running total, the change, a shared bill, and which size is better value. It ends with twenty mixed sums set by somebody else, done in your head in under ten minutes. The Times tables ladder helps with the multiplying rungs, and nothing needs buying.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Add twenty pairs of numbers from 1 to 9 in your head, all correct.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 3,
+   "note": "Write 1 to 9 on nine scraps of paper, put them in a cup and pull out two at a time, or have somebody call out pairs. Pairs that make ten help most: 8 and 7 is 8 and 2, which makes 10, then 5 more, so 15. If this is already easy, do the twenty on purpose as fast as you can and count the rung."
+  },
+  {
+   "n": 2,
+   "test": "Answer twenty take-away sums inside twenty, like 15 take away 8, all correct.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Count up from the smaller number instead of back from the bigger: from 8 to 10 is 2, from 10 to 15 is 5, so the answer is 7. Use the same scraps: pull two, add 10 to the bigger, and take the smaller away. Say each answer out loud."
+  },
+  {
+   "n": 3,
+   "test": "Answer ten sums like 47 plus 8 in your head, where the answer goes past the next ten, all correct.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Fill up to the next ten first: 47 and 3 is 50, and the 5 left over makes 55. For questions, pull a scrap and add it to a two-digit number you can see: a page number, a date, a number on a packet. Check each one on paper afterwards."
+  },
+  {
+   "n": 4,
+   "test": "Add ten pairs of two-digit numbers in your head, like 46 plus 37, all correct.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Tens first, then ones: 40 and 30 is 70, 6 and 7 is 13, and 70 and 13 is 83. For questions, open a book at two pages and use the last two digits of each page number, or have somebody read pairs out. Check each one on paper after you say it."
+  },
+  {
+   "n": 5,
+   "test": "Answer ten sums by rounding one number to a ten and putting it right afterwards, like 47 plus 38.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "38 is 2 less than 40, so work out 47 plus 40, which is 87, then take away the 2: 85. It works for taking away too: 63 take away 29 is 63 take away 30, which is 33, then add the 1 back: 34. This one method does much of the work in the rest of the ladder."
+  },
+  {
+   "n": 6,
+   "test": "Take one two-digit number from another ten times in your head, like 72 take away 45, all correct.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Count up in jumps: 45 to 50 is 5, 50 to 72 is 22, and 5 and 22 is 27. Or round: 72 take away 50 is 22, then add back the 5 you took away too many: 27. Use whichever is quicker for you, and check on paper."
+  },
+  {
+   "n": 7,
+   "test": "Add four two-digit numbers in your head, five times, all correct.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Look for pairs that make a round number first: 27, 45, 33 and 15 become 27 and 33, which is 60, and 45 and 15, which is 60, so 120. Use the ages of four people you know, or the last two digits of four prices on a receipt. Say the running total out loud as you go."
+  },
+  {
+   "n": 8,
+   "test": "Double ten two-digit numbers and halve ten others in your head, all correct.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Double the tens, double the ones, then add: double 68 is 120 and 16, which is 136. Halve the same way: half of 74 is half of 70, which is 35, and half of 4, which is 2, so 37. Half of an odd number ends in a half: half of 57 is 28 and a half, written 28.5."
+  },
+  {
+   "n": 9,
+   "test": "Multiply ten two-digit numbers by a one-digit number in your head, like 34 times 7, all correct.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Split the bigger number into tens and ones: 30 times 7 is 210, 4 times 7 is 28, so 238. Say the first part out loud so you keep hold of it while you work out the second. The Times tables ladder makes this rung much quicker."
+  },
+  {
+   "n": 10,
+   "test": "Multiply ten numbers by 5 and ten numbers by 9 using ten lots, all correct.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Times 5 is times 10, then halve: 46 times 5 is 460 halved, which is 230. Times 9 is times 10, then take away one lot: 36 times 9 is 360 take away 36, which is 324. Check two or three on paper to be sure of the method."
+  },
+  {
+   "n": 11,
+   "test": "Divide ten numbers by a one-digit number in your head, like 156 divided by 6, all correct.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Split the number into parts that divide easily: 156 is 120 and 36, 120 divided by 6 is 20, 36 divided by 6 is 6, so 26. To divide by 4, halve twice: 96, 48, 24. Make questions that come out exactly by multiplying first, and check each answer by multiplying back: 26 times 6 should be 156."
+  },
+  {
+   "n": 12,
+   "test": "Work out 50, 25, 20 and 75 per cent of five different numbers in your head.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Fifty per cent is half, and 25 per cent is half again: 25 per cent of 64 is 32, then 16. Twenty per cent is ten per cent doubled: 20 per cent of 45 is 4.5 doubled, which is 9. Seventy-five per cent is the whole take away a quarter: 75 per cent of 48 is 48 take away 12, which is 36."
+  },
+  {
+   "n": 13,
+   "test": "Before working out ten sums, say roughly what each answer will be, then work it out and see how close you were.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Round each number to one that is easy to use: 48 times 21 is about 50 times 20, which is 1000, and the real answer is 1008. A rough answer first catches the big mistakes, like a missing nought. Use sums from the rungs before, or prices on a receipt."
+  },
+  {
+   "n": 14,
+   "test": "Multiply ten pairs of two-digit numbers in your head, like 23 times 14, and get at least eight right when you check on paper.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Split the smaller number into tens and ones: 23 times 10 is 230, 23 times 4 is 92, and 230 and 92 is 322. Say 230 out loud to keep hold of it while you work out the rest. Make a rough answer first, as on the last rung, so you know about where you should land."
+  },
+  {
+   "n": 15,
+   "test": "Keep a running total in your head for a shop of ten or more things, and be within 1 of the total at the till.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "Round each price to one place after the point as you go: 2.49 becomes 2.50 and 1.85 becomes 1.90. A child can do this for a grown-up's shop, and an online basket works too if you add it up before looking at the total. If prices where you live are in large whole numbers, like 1250, aim to be within 100 instead."
+  },
+  {
+   "n": 16,
+   "test": "Work out your change before the till shows it, on three separate things you pay for.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Count up from the price to what you handed over: from 7.35 to 7.40 is 0.05, to 8 is 0.60 more, to 20 is 12 more, so 12.65. If you pay by card, work out the change you would get from the next round number, like 10, 20 or 50, and check it on a calculator later. A child can do this while a grown-up pays."
+  },
+  {
+   "n": 17,
+   "test": "Take a real receipt or bill and split it evenly between three or four people in your head, then check it on a calculator.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Split the whole number and the part after the point separately: 87.60 between 4 is 80 divided by 4, which is 20, and 7.60 divided by 4, which is 1.90, so 21.90 each. If it does not divide exactly, round each share up and say how much is left over. A shopping receipt, a household bill or a take-away order all work."
+  },
+  {
+   "n": 18,
+   "test": "In a shop or on a shop's website, work out which of two sizes of the same thing is better value, three times.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Work out the price of the same amount of each: 500 g for 2.40 is 0.48 for each 100 g, and 750 g for 3.30 is 0.44 for each 100 g, so the bigger one costs less for each 100 g. Some shelf labels print this in small type, so you can check yourself. The bigger size is only better value if you will use it all before it spoils."
+  },
+  {
+   "n": 19,
+   "test": "Teach somebody one method from this ladder until they use it correctly on three sums of their own.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Rounding and putting it right (rung five) and counting up for change (rung sixteen) are good ones to start with. Show one worked example, then give them three to try and say nothing unless they ask. If they get stuck, work the next one together and let them do the one after alone."
+  },
+  {
+   "n": 20,
+   "test": "Answer twenty mixed sums that somebody else sets from this ladder, in your head, in under ten minutes, with at least eighteen right.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Give them this ladder to choose from: some adding, taking away, multiplying, dividing, percentages and change. They read each sum out, you say the answer, and they check it on a calculator. If you get fewer than eighteen, practise the kind you missed for a few days and try again with new sums."
+  }
+ ]
+}

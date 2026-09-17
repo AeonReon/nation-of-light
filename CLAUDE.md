@@ -608,3 +608,21 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   targets a later wave rewrote. 87 of 175 ladders now to the standard; quick pool 206. **Left:** Prosperity
   money.run, money.invest; all of Knowledge (21), Home (13), Fun and creativity (30), New experiences (15); the
   under-sevens set. Writers' order notes: tools/areas/D-…I-notes.md.
+- **v79 (2026-09-17, Opus session): rewrite wave three — Knowledge and Home done.** 36 ladders, 597 rungs,
+  writers J–O, every rung read, facts checked (word origins, pi digits, cipher examples, geometry, the savings
+  sums, chess rules, first aid against mainstream Red Cross teaching). `tools/areas/apply_v79.py` (run after
+  apply_v78.py) also REGENERATES `tools/daily/order_extras.py` from school.json, because the order ladders were
+  rewritten and their evening-extra rungs moved: 38 ladder extras + 85 fresh = 123. Knowledge: words.read (phonics,
+  sounds not names, into words.books), words.hand, words.poems (**Poems: learning them and writing them**),
+  words.lang, words.irish (the old language of your place), words.sign, mind.tables, mind.mental, mind.memory,
+  mind.puzzles, mind.codes, mind.cube (seven sequences, simulated), mind.chess, classic.logic (everyday examples
+  only), classic.question, classic.roots, beauty.look, beauty.shapes, beauty.symmetry, beauty.proportion (the
+  golden ratio stated honestly), beauty.arches (many cultures; the pointed arch is not a European first).
+  Home: order.desk, order.wardrobe (one kind of clothing at a time; the hanger test), order.broken (deciding, not
+  repairing — Mending teaches repairs), order.giving, order.digital (two-step sign-in), order.forgotten (nobody
+  stands on anything, products never mixed), order.keeping (the systems) vs home.keep (the jobs), home.tools
+  (power tools grown-ups only), home.firstaid (says plainly an app is not a course; CPR on a cushion; a real
+  course is a rung), home.safe, food.grow (windowsill, both hemispheres), food.preserve (never-do list before any
+  jar). Prosperity: money.run, money.invest (educational only, never names anything to buy; points to the
+  regulator). 123 of 175 at the standard; quick pool 205. **Left:** Fun and creativity (30), New experiences (15),
+  and the under-sevens set.

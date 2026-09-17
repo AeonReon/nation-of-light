@@ -1,0 +1,109 @@
+{
+ "id": "mind.codes",
+ "name": "Codes and ciphers",
+ "line": "From one message in a shift cipher to a treasure hunt of five coded clues that other people follow to the end.",
+ "size": "weeks",
+ "strand": "make-things",
+ "from": 8,
+ "who": "From about eight; best with a friend or a grown-up",
+ "about": "For anybody from about eight, and best done with a friend, a brother or sister, or a grown-up. It starts with one of the oldest ciphers, moving each letter along the alphabet, then goes on to keyword alphabets, counting letters to read a message without its key, book ciphers, Morse code, and messages hidden inside ordinary writing. It ends with a treasure hunt of five clues, each in a different code, that other people follow to the end. Codes are puzzles, spelling and careful counting all at once, and they need only paper and a pen.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Write a short message in a shift-of-three cipher, then turn it back into plain words to check it.",
+   "ctx": "room",
+   "kind": "skill",
+   "mins": 10,
+   "note": "MEET AT FOUR becomes PHHW DW IRXU. Leave the spaces between words in for now, as it makes the next rungs easier. Julius Caesar is said to have used this shift in his letters.",
+   "how": [
+    "Write the alphabet in a line.",
+    "Under it, write the alphabet again starting from D, with A, B and C at the end.",
+    "For each letter of your message, find it on the top line and write the letter under it.",
+    "To read it back, find each letter on the bottom line and write the one above it."
+   ]
+  },
+  {
+   "n": 2,
+   "test": "Send a message in a shift cipher to somebody, tell them the shift, and have them read it correctly.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Choose any shift from 1 to 25 and tell them the number, not the message. A note on the table, a message on the fridge or a text all work. Then ask them to send one back for you to read."
+  },
+  {
+   "n": 3,
+   "test": "Read the shift cipher in the note without being told the shift.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Here it is: AOL JHRL PZ PU AOL ISBL APU. There are only 25 possible shifts, so you could try them one by one, but short words are quicker: a three-letter word that appears twice is often THE. Count how far it is from T to A to find the shift, then read the rest."
+  },
+  {
+   "n": 4,
+   "test": "Make a keyword alphabet, write a message with it, and read it back.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Write a keyword with no letter used twice, like GARDEN, then the rest of the alphabet in order without those letters: GARDENBCFHIJKLMOPQSTUVWXYZ. Write the normal alphabet above it, so A becomes G, B becomes A and C becomes R. HELLO becomes CEJJM."
+  },
+  {
+   "n": 5,
+   "test": "Count how often each letter appears in the first 200 letters of a page of a book, and write down the five most common.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Tally marks against A to Z down the side of a page make it quick. In ordinary English writing E is usually the most common letter, with T, A, O and I close behind; other languages have a different order, so count a page in the language you write your messages in. These counts are what let you read a cipher without its key on the next rung."
+  },
+  {
+   "n": 6,
+   "test": "Read a message somebody else wrote in a mixed-up alphabet of their own, without the key, and read the whole message.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Ask somebody to write at least three sentences with every letter swapped for another, keeping the spaces. Count its letters: the most common is probably E. Then look for one-letter words (often A or I), three-letter words that repeat (often THE or AND) and double letters, and pencil in your guesses as you go."
+  },
+  {
+   "n": 7,
+   "test": "Send a message to somebody using a book cipher, giving each word as page, line and word numbers from a book you both have.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "12-3-4 means page 12, line 3, the fourth word. You both need the same edition, because page numbers change between editions: two copies of the same school reading book or two library copies of the same printing work. Find each word you need anywhere in the book and write its numbers down in order."
+  },
+  {
+   "n": 8,
+   "test": "Learn the Morse code for the letters of your name, and tap your name for somebody who writes it down from the taps.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Copy the Morse alphabet from a library book or a free page: each letter is a pattern of short and long signals, like A, which is short then long. Tap short taps and long presses on a table, with a clear gap between letters. SOS is short-short-short, long-long-long, short-short-short; practise it indoors, and never signal it outside for fun, where somebody could take it as a real call for help."
+  },
+  {
+   "n": 9,
+   "test": "Hide a word in an ordinary note using the first letter of each line, have somebody read the note without noticing, then show them.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "To hide HELLO, write five lines starting with H, E, L, L and O: Home soon. Eggs for dinner? Lots of rain here. Lunch was good. Out at six tomorrow. Keep each line an ordinary sentence so nothing looks odd. With this kind of hiding, nobody knows there is a message at all; with a cipher, people can see a message but cannot read it."
+  },
+  {
+   "n": 10,
+   "test": "Write a message where a keyword sets a different shift for each letter, then read it back.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "With the keyword CAT the shifts are 2, 0 and 19, so SEE YOU AT NOON becomes UEX AON CT GQOG. The same letter no longer always turns into the same letter, so counting letters does not read it. This way of writing was used for hundreds of years and was once called the cipher nobody could read.",
+   "how": [
+    "Turn each letter of the keyword into a shift: A is 0, B is 1, C is 2, and so on.",
+    "Write the keyword again and again under your message, one keyword letter under each message letter.",
+    "Move each message letter along by the shift of the keyword letter under it.",
+    "To read it back, move each letter back the same number of places."
+   ]
+  },
+  {
+   "n": 11,
+   "test": "Invent a cipher of your own and give a message in it to a friend, who tries for ten minutes to read it without the key.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Mix ideas from this ladder: a shift and then the message written backwards, numbers for letters, or a drawn symbol for each letter. Write the key down and keep it somewhere safe. Whether they read it or not, show them the key at the end and ask what helped them or what stopped them."
+  },
+  {
+   "n": 12,
+   "test": "Run a treasure hunt of five clues, each written in a different code from this ladder, that other people follow to the end.",
+   "ctx": "home",
+   "kind": "kindness",
+   "note": "Each clue says where the next one is hidden, and the last one leads to a small treasure: a snack, a drawing or a note. Put a hint with each clue so it can be solved, like \"shift of 3\" or \"the blue book on the shelf\". Indoors or in a garden is best; if any clue goes outside, a grown-up checks that every hiding place is safe."
+  }
+ ]
+}

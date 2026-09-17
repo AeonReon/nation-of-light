@@ -1,0 +1,158 @@
+{
+ "id": "home.firstaid",
+ "name": "First aid",
+ "line": "From saying the emergency call out loud to being the trained first-aider on a family day out.",
+ "size": "months",
+ "strand": "look-after-yourself",
+ "from": 8,
+ "who": "Grown-ups, and anybody from about eight with a grown-up",
+ "about": "For grown-ups, and for anybody from about eight doing it with a grown-up beside them. An app is not a first-aid course: these rungs help you remember and practise, and one of them is booking a proper hands-on course with a trainer. The climb starts with the emergency call and the first-aid kit, then the everyday injuries (cuts, bleeding, burns, nosebleeds, stings, bumps on the head), then the signs that mean call for help now, then the recovery position, choking and CPR, always practised on a cushion or a training dummy and never on a person. It ends with you as the first-aider for a family day out. The steps here follow mainstream first-aid teaching such as the Red Cross and Red Crescent; if your course or your emergency operator tells you something different, follow them.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Say out loud, as if to the emergency operator, what you would tell them: the number you ring, where you are, what has happened, and who is hurt.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 2,
+   "note": "Find out your emergency number (such as 112, 911 or 999) where you live; in many countries 112 also works from a mobile phone. Where you are comes first, because they can send help before they know anything else. Never ring the real number to practise."
+  },
+  {
+   "n": 2,
+   "test": "Next time you are out, stop and say exactly how you would tell the operator where you are.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "Away from home you may not know the address. Use a street name, a shop, a bus stop or a landmark, or open the map on your phone and read out where the blue dot is. In a park or on a path, say the entrance you came in by and roughly how far you walked."
+  },
+  {
+   "n": 3,
+   "test": "Find the first-aid kit at home, say what each thing in it is for, and tape a card inside the lid with your emergency number and your address.",
+   "ctx": "kit",
+   "kind": "attention",
+   "note": "Take everything out and name its use: plasters for small cuts, a dressing and a bandage for bleeding, gloves, scissors, tweezers. Throw out anything past its date and write down what needs replacing. If you have no kit yet, \"A home that works\" has a rung for putting one together; do that first."
+  },
+  {
+   "n": 4,
+   "test": "Draw a small \"cut\" on your arm in pen and go through cleaning and covering it: hands washed, rinsed under the tap, patted dry, a plaster on.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "For a real small cut or graze: wash your hands, rinse the cut under clean running water, pat it dry with something clean, and cover it with a plaster or a clean dressing. A deep or gaping cut, one with dirt or glass stuck in it, or an animal bite needs a doctor or nurse. A child can do the pen practice on their own arm."
+  },
+  {
+   "n": 5,
+   "test": "With a partner, press firmly on a pretend wound on their arm with a folded clean cloth for one full minute, as you would to stop bleeding.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Firm enough to hold the cloth still, never hard enough to hurt your partner. For real bleeding: press firmly on the wound with a clean pad or cloth and keep pressing; if blood comes through, put another pad on top and do not lift the first. For heavy bleeding, ring your emergency number (such as 112, 911 or 999), or get somebody else to, and keep pressing until help takes over. Wear gloves if you have them."
+  },
+  {
+   "n": 6,
+   "test": "Say out loud the steps for a burn, then set a timer for twenty minutes and see how long the cooling really takes.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Cool the burn under cool running water for at least twenty minutes, straight away. Take off rings or clothing near it unless they are stuck to the skin. Then cover it loosely with cling film or a clean plastic bag. No ice, butter or creams. Get medical help for a burn bigger than the person's hand, one on the face, hands, feet or private parts, or any burn on a baby or young child."
+  },
+  {
+   "n": 7,
+   "test": "Sit in the position for a nosebleed and hold it for one minute: sitting, leaning forward, pinching the soft part of your nose.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Lean forward, not back, so blood does not run down the throat. Pinch the soft part just below the hard bridge of the nose and breathe through your mouth; for a real nosebleed, keep pinching for ten minutes before you check. If it is still bleeding after about half an hour, or it started after a hard knock to the head, get medical help."
+  },
+  {
+   "n": 8,
+   "test": "Say out loud what to do for a bee sting, and the signs of a serious allergic reaction that mean ringing for help straight away.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "If a sting is left in the skin, scrape it out sideways with a fingernail or the edge of a card, then hold something cold wrapped in a cloth on it. Ring your emergency number (such as 112, 911 or 999) at once if the person has swelling of the face, lips, tongue or throat, trouble breathing, or feels faint. If they carry an adrenaline pen for allergies, help them use it. A sting in the mouth or throat needs medical help too."
+  },
+  {
+   "n": 9,
+   "test": "Write on a card, and keep it with the kit, the signs after a bump on the head that mean getting medical help.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "For a small bump: rest, and hold something cold wrapped in a cloth on it. Get medical help straight away if the person was knocked out even for a moment, is sick, is sleepy and hard to wake, is confused, has a headache that gets worse, has trouble seeing, speaking or walking, has blood or clear fluid from the nose or ears, or has a fit. Keep an eye on them for the next day or two."
+  },
+  {
+   "n": 10,
+   "test": "Say out loud the signs that somebody is getting too hot, and what to do while they cool down.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Signs: headache, dizziness, feeling sick, heavy sweating, pale clammy skin, cramps, being very thirsty. Move them somewhere cool, lie them down with their feet raised a little, give them sips of water, and cool their skin with water and a fan. If they are not better within half an hour, or they become confused, stop sweating while very hot, or collapse, ring your emergency number (such as 112, 911 or 999). The signs of getting too cold are on the \"Weather and tide\" ladder."
+  },
+  {
+   "n": 11,
+   "test": "Learn the four signs of a stroke, and say them to somebody else.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Many countries teach them as FAST: Face, one side has dropped or they cannot smile evenly; Arms, they cannot lift both and keep them there; Speech, it is slurred or muddled. Time: ring your emergency number (such as 112, 911 or 999) straight away and note the time it started. Some places teach two more, sudden loss of balance and sudden trouble seeing."
+  },
+  {
+   "n": 12,
+   "test": "With a grown-up lying on the floor pretending, go through checking for a response and for breathing.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Kneel beside them. Ask loudly \"Can you hear me? Open your eyes\" and tap their shoulders gently. Then tilt their head back gently with a hand on the forehead and two fingers under the chin, and look, listen and feel for normal breathing for up to ten seconds. In a real emergency, somebody rings your emergency number (such as 112, 911 or 999) as soon as the person does not respond."
+  },
+  {
+   "n": 13,
+   "test": "Roll a willing partner into the recovery position on a soft floor, and back again.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "This is for somebody who is not responding but is breathing normally. Take it slowly and gently; a course trainer will check your hands.",
+   "how": [
+    "Kneel beside them. Put the arm nearest you out at a right angle, and bring their far hand across to rest against the cheek nearest you.",
+    "Bend their far knee up, keep their hand on their cheek, and pull on the knee to roll them towards you onto their side.",
+    "Tilt their head back a little so the airway stays open, and keep checking their breathing until help arrives."
+   ]
+  },
+  {
+   "n": 14,
+   "test": "Say out loud what to do if somebody has a fit, and when to ring for help.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Move hard or sharp things away, put something soft under their head, and note the time. Do not hold them down and do not put anything in their mouth. Ring your emergency number (such as 112, 911 or 999) if the fit lasts more than five minutes, it is their first one, they are hurt, or they do not wake up properly after. When the shaking stops, if they are breathing, put them in the recovery position and stay with them."
+  },
+  {
+   "n": 15,
+   "test": "Act out the steps for a choking person on a big cushion or the back of a chair, never on a person.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "For a choking adult or child over one year old: if they can cough, tell them to keep coughing. If they cannot cough, speak or breathe, lean them forward and give up to five firm blows between the shoulder blades with the heel of your hand. If that does not clear it, give up to five pulls inwards and upwards with your fist just above the belly button. Keep repeating, and ring your emergency number (such as 112, 911 or 999) if it has not cleared. Babies under one are done differently, and a course shows how."
+  },
+  {
+   "n": 16,
+   "test": "Kneel by a firm cushion on the floor and give thirty chest presses in time to a song, then say what comes next.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "This is CPR for somebody who is not responding and not breathing normally, after ringing your emergency number (such as 112, 911 or 999). Heel of one hand in the centre of the chest, other hand on top, arms straight, shoulders over your hands, pressing hard and fast: about 100 to 120 times a minute, the beat of \"Stayin' Alive\" by the Bee Gees. On a real adult it means pressing about five to six centimetres deep, which is why you only ever practise on a cushion or a training dummy, never on a person. If you have not been trained in rescue breaths, keep pressing without stopping until help takes over."
+  },
+  {
+   "n": 17,
+   "test": "Find the nearest public defibrillator to your home or where you spend your day, and read the instructions on the cabinet.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "They are often in stations, shops, schools, sports clubs and community buildings, usually under a green sign with a heart and a lightning mark; some countries have a free map app of them. A defibrillator talks you through every step out loud, and it only gives a shock if the person needs one. Do not open the cabinet unless it is needed; some need a code from the emergency operator."
+  },
+  {
+   "n": 18,
+   "test": "Run through a whole pretend emergency with somebody at home, from finding them to help arriving, without dialling a real number.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "One person lies down and pretends. You check for danger, check for a response, say out loud what you would tell the operator, check breathing, then either roll them into the recovery position or move to a cushion beside them for CPR. Talk to them calmly the whole time; keeping a person calm is part of first aid. Swap and let them do it."
+  },
+  {
+   "n": 19,
+   "test": "Book and complete a proper hands-on first-aid course with a trainer and a training dummy.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Your national Red Cross or Red Crescent society runs them in most countries, and so do other first-aid charities, workplaces and community centres; some are free or low cost. Choose one where you practise CPR on a dummy, because a cushion cannot teach you how deep to press. If there is a course for children near you, a child can do that one."
+  },
+  {
+   "n": 20,
+   "test": "Be the first-aider for a family or group day out: kit packed, the nearest help known, and one other person shown where the kit is.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Before you set off, check the kit and add anything the day needs: sun cream, spare plasters, water. Know where the nearest defibrillator and medical help are, and how you would say where you are. Tell one other person where the kit is and how to make the call, in case the person who is hurt is you."
+  }
+ ]
+}

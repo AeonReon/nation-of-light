@@ -1,0 +1,116 @@
+{
+ "id": "words.hand",
+ "name": "Writing by hand",
+ "line": "From how you sit and hold the pen to a one-page letter by hand that somebody reads without asking what a word says.",
+ "size": "weeks",
+ "strand": "say-what-you-mean",
+ "who": "Everybody from about six; a child and a grown-up side by side",
+ "about": "For everybody from about six: a child and a grown-up can climb it side by side, and a grown-up whose writing has gone untidy since keyboards will find it useful too. It starts with how you sit and hold the pen, then where each letter starts, then letters sitting properly on a line with even gaps between words. The middle adds joined letters, copying, and a quick timed test of how much you can write clearly. It ends with a one-page letter by hand that the person you give it to reads without having to ask what a word says. A pen or pencil and any paper is all it needs; lined paper helps, and you can draw lines with a ruler.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Sit with both feet flat, the paper tilted, and the pen held lightly, and write your name three times.",
+   "ctx": "room",
+   "kind": "skill",
+   "mins": 3,
+   "note": "Hold the pen between your thumb and first finger, resting on your middle finger, a finger's width up from the tip, and do not squeeze. Tilt the paper a little so it lines up with your writing arm; if you are left-handed, tilt it the other way and keep your hand below the line you are writing. If you already write comfortably, sit and hold the pen this way on purpose and count it."
+  },
+  {
+   "n": 2,
+   "test": "Write the whole small alphabet, a to z, starting every letter in the right place.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Where a letter starts decides whether it can be written quickly later. Most letters start at the top. The round letters c, a, d, g, o and q start just below the top on the right and go round to the left; e starts in the middle. Write slowly and check each one against a printed alphabet.",
+   "how": [
+    "Write c, a, d, g, o, q: start near the top right, go round to the left.",
+    "Write l, i, t, u, y, j: start at the top, go down.",
+    "Write r, n, m, h, b, p, k: go down, then back up and over.",
+    "Write e, s, f, v, w, x, z last."
+   ]
+  },
+  {
+   "n": 3,
+   "test": "Write the capital letters A to Z, then your full name with a capital at the start of each part.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Capitals all stand the same height, as tall as the tallest small letters. Most start at the top. Check each one against a printed alphabet and write any you got wrong three more times."
+  },
+  {
+   "n": 4,
+   "test": "On lined paper, write 'The quick brown fox jumps over the lazy dog' with every letter sitting on the line.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "This sentence has every letter of the alphabet in it. Small letters like a, e and o sit on the line; tall letters like b, d, h, k, l and t reach up; letters with tails like g, j, p, q and y hang below. No lined paper? Draw lines two finger-widths apart on plain paper with a ruler or the edge of a book."
+  },
+  {
+   "n": 5,
+   "test": "Write three sentences about your day with an even gap between every word.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "The gap between words is about the width of one small letter o; a child can put a finger down as a spacer. Words squashed together are the most common reason handwriting is hard to read. Look at the three lines when you finish and fix any gap that is too big or too small by writing that line again."
+  },
+  {
+   "n": 6,
+   "test": "Write the numbers 0 to 9 clearly, then a list of ten things with a number next to each.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "A shopping list works well: 6 eggs, 2 onions, 1 loaf. Numbers get misread more than letters, so make 1 and 7 look different, close the top of 4 or leave it open but always the same way, and give 9 a straight or curved tail every time. Ask somebody to read the list back to you."
+  },
+  {
+   "n": 7,
+   "test": "Write the fox sentence five times, circle the worst letter, and write that letter ten times on its own.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Look for the one that leans the wrong way, sits off the line, or looks like a different letter. Write it ten times slowly, then write the whole sentence once more. Doing this once a day for a few days fixes letters faster than filling pages."
+  },
+  {
+   "n": 8,
+   "test": "Join the letters in five short words, in, an, it, up and us, writing each word three times without lifting the pen.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Joining lets the pen travel from the bottom of one letter up to the start of the next, so you write faster with less effort. The line leaves the first letter at the bottom and slides up to where the next letter begins. Some countries teach joined writing and some keep letters printed; try it here, and if clear printed letters suit you better, keep them and use the later rungs to get quicker."
+  },
+  {
+   "n": 9,
+   "test": "Write the fox sentence joined, or in quick clear print, three times.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Letters that do not join easily, like x, z and capitals, can stand apart; most joined writers leave some gaps. Keep the letters on the line and the gaps between words even, as on rungs four and five. Compare your third try with your first."
+  },
+  {
+   "n": 10,
+   "test": "Copy a paragraph of about fifty words from a book, clearly, and write down how many minutes it took.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Any book in the house works: a story, a recipe, instructions. Read a few words, write them without looking back at the book halfway, then read the next few. Write the time at the bottom; you will use it on rung twelve."
+  },
+  {
+   "n": 11,
+   "test": "Write a short note by hand to somebody in your home and leave it where they will find it.",
+   "ctx": "home",
+   "kind": "kindness",
+   "note": "Three or four lines: thank you for something, a plan for the weekend, or something you like about them. Put it on their pillow, a plate or a shoe. The test is that they read it without asking you what any word says."
+  },
+  {
+   "n": 12,
+   "test": "Copy another paragraph of about fifty words, clearly, and do it faster than on rung ten.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Use a different paragraph of about the same length. Read a longer chunk each time before you write it, and keep the pen moving rather than going back over letters. If it is faster but hard to read, it does not count yet: clear first, then quick."
+  },
+  {
+   "n": 13,
+   "test": "Write half a page by hand every day for seven days.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "A diary of the day, a list of plans, a copied poem, a recipe: anything, as long as it is by hand. The back of an old envelope counts. If you miss a day, carry on the next day and add a day at the end."
+  },
+  {
+   "n": 14,
+   "test": "Write a one-page letter by hand to somebody outside your home, and post it or give it to them.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "A grandparent, a friend, an old teacher, a neighbour. Tell them a few things that have happened and ask them something. Handing it over costs nothing; posting it needs a stamp. The far end of this ladder is a whole page they read without having to ask what a word says."
+  }
+ ]
+}

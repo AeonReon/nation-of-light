@@ -1,0 +1,119 @@
+{
+ "id": "order.giving",
+ "name": "Giving away",
+ "line": "From one bag by the front door to a giving bag kept by the door, and emptied when full, for eight weeks.",
+ "size": "weeks",
+ "strand": "look-after-the-place",
+ "about": "For everybody from about eight: a family can do it together, each person deciding about their own things. It starts with one bag of things nobody has used in a year and getting it out of the house the same day. Then it goes room by room: the kitchen, the books and games, the bathroom, the towels and sheets, the cupboard everybody avoids. The later rungs are the harder ones: a good thing given to somebody who will use it more, things kept only because they cost a lot or \"just in case\", and one thing sold. It ends with a giving bag that lives by the front door for eight weeks. Less to look after at home, and useful things in the hands of people who will use them.",
+ "who": "From about eight; a family can do it together",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Fill one bag with things nobody has used in a year, and put it by the front door.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 15,
+   "extra": true,
+   "note": "Any bag. Walk the house and fill it with things you have not used in a year: the spare mugs, the gadget still in its box, the clothes that have not fitted for a year. Only your own things, or things everybody in the house agrees about. Tie it and put it by the front door."
+  },
+  {
+   "n": 2,
+   "test": "Take the bag to a charity shop, a friend, or somebody from a free-giving group the same day.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "A charity shop or second-hand shop that raises money for a good cause, a school, a place of worship's collection, or a friend who wants something in it. Online free-giving groups let people collect from your doorstep; a grown-up arranges that and hands it over at the door. Check what a place accepts before you go. Out of the house today is the rung."
+  },
+  {
+   "n": 3,
+   "test": "Go through the kitchen cupboards and fill one bag to give away.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 20,
+   "extra": true,
+   "note": "Open every kitchen cupboard. The third spatula, the mugs nobody picks, the machine used twice, the extra lunch boxes without lids. Unopened food that is still in date can go to a food bank. Anything past its date goes in the bin, not the giving bag."
+  },
+  {
+   "n": 4,
+   "test": "Go through the books, games, toys and hobby things, and pass on the ones you have finished with.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 15,
+   "extra": true,
+   "note": "Books you will not read again, board games nobody asks for, toys a child has grown out of, the kit from a hobby you have stopped. A child chooses which of their own toys go; nobody gives a child's things away for them. Check games have all their pieces. A friend, a school, a library or a charity shop are all good homes."
+  },
+  {
+   "n": 5,
+   "test": "Clear the bathroom cupboard and the medicine box.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 15,
+   "extra": true,
+   "note": "Take everything out. Half-used bottles you do not like go in the bin, and unopened soaps and toiletries can go to a food bank or a shelter. A grown-up checks the dates on every medicine: out-of-date or unwanted medicines go back to a pharmacy, never in the bin or down the sink. Put what stays back out of reach of children."
+  },
+  {
+   "n": 6,
+   "test": "Go through the towels, sheets and blankets, and keep only what gets used.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Two towels and two sets of sheets per bed is plenty for most homes. Clean spares in good condition can go to a charity shop. Old, worn towels and blankets are often welcome at animal shelters: ask yours first. If your cupboard is already down to what gets used, check it and count it."
+  },
+  {
+   "n": 7,
+   "test": "Clear the cupboard, shed or garage corner everybody avoids, keeping to what you can reach from the floor.",
+   "ctx": "home",
+   "kind": "courage",
+   "note": "Pick one corner or one shelf and take everything out into the light. Heavy things are a job for two people, and nobody climbs up for the top shelf. Old paint and garden or car chemicals do not go in the bin or down a drain; your local council says where to take them. Whatever is left goes back in with space around it."
+  },
+  {
+   "n": 8,
+   "test": "Give away one thing that is good and that you like, to somebody who will use it more.",
+   "ctx": "home",
+   "kind": "kindness",
+   "mins": 10,
+   "extra": true,
+   "note": "Not the thing you do not want. Something good that you like and hardly use: a book you loved, a good coat, a tool, a game. Pick the person who will use it more and send them a message to say it is theirs. Then hand it over."
+  },
+  {
+   "n": 9,
+   "test": "Ask each person in the house to fill one bag of their own things too.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Ask, do not tell, and say what you have given already. Each person decides about their own things, and nobody sorts somebody else's bag. Offer to take the bags out for them. If you live alone, ask a friend or family member if they want to do a bag the same week."
+  },
+  {
+   "n": 10,
+   "test": "Let go of one thing you have kept only because it cost a lot.",
+   "ctx": "home",
+   "kind": "courage",
+   "note": "The expensive coat that never felt right, the exercise machine used as a shelf, the camera kept in its box. The money was spent the day you bought it; keeping the thing does not bring it back. Give it to somebody who will use it, or sell it at the next rung."
+  },
+  {
+   "n": 11,
+   "test": "Let go of one thing you keep \"just in case\" that you could easily borrow or get again.",
+   "ctx": "home",
+   "kind": "courage",
+   "note": "The second set of kitchen scales, the pile of spare cables, the suitcase you use once every few years. Ask: if I needed this, could I borrow one from a friend, or get one again easily? If yes, it can go. Write down who you would borrow it from."
+  },
+  {
+   "n": 12,
+   "test": "Sell one thing worth selling, instead of keeping it.",
+   "ctx": "home",
+   "kind": "courage",
+   "note": "A second-hand selling site or app, a notice board, or a friend who wants it. Take a clear photograph in daylight and write two honest lines about it, including any faults. When somebody comes to collect, a grown-up hands it over at the door or in a busy public place, and never shares bank passwords or codes. A young person sells only with a grown-up doing the arranging."
+  },
+  {
+   "n": 13,
+   "test": "A month after the first bag, write down anything you have missed from all the bags.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Think back through every bag and every room. Write down each thing you have wanted since it left, and what you did instead: borrowed it, did without, or got one again. For most people the list is short or empty, and that is useful to know for the next rung."
+  },
+  {
+   "n": 14,
+   "test": "Keep a giving bag by the front door for eight weeks, and take it out each time it is full.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Whenever anybody in the house finds something that is not used, it goes in the bag straight away. When the bag is full, it goes out that week, and a new empty bag takes its place. Count the bags at the end of the eight weeks."
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+# Writer J notes: the reading and language ladders
+
+## Who owns what (so these do not repeat words.books, mind.learn1, mind.findout, classic.stories)
+- `words.read` ends where `words.books` starts: a first unseen book read aloud with no help. It never mentions page counts, bedtime reading or chapter books.
+- `mind.learn1` already has "ten neat lines copied from a book", "five words of a language", "twenty words", "a short conversation" and "a poem by heart to somebody". I kept the same skills but changed the tasks: the handwriting copy is a timed 50-word paragraph, the language rungs are built round sentences about yourself, and the poem rungs go through beat, pauses and a poem evening.
+- `classic.stories` owns telling stories from memory and reading aloud to a younger child. I dropped the old words.read ending "read to somebody younger" for that reason.
+
+## words.read: Reading (20 rungs, no `from`)
+- Order: first sound by ear, then blending by ear (no letters yet), then letter sounds in small groups (s a t p i n, m d g o c k, e u r h b f l, j v w x y z qu). Each group is followed straight away by words built only from letters already learned. Then 5 sight words, sentences, sh/ch/th/ng/ck, side-by-side sounds (stop, milk), 10 more sight words, ai/ee/igh/oa/oo, a page of a first reading book, ar/or/ur/ow/oi/er, final-e words (cake, bike), a whole book over a few days, and finally an unseen book read aloud.
+- I checked every example word against the letters taught up to that rung. I swapped "pond" out of rung 11 because nd comes on rung 13.
+- "Your helper" means a grown-up for a child, or a friend or tutor for a grown-up learner. Nearly every rung is `with` because somebody has to listen.
+- Unsure: it is English-only (the about says so). The letter order follows common phonics teaching, not one programme. "Many libraries and adult learning centres run reading help at no cost" is hedged with "many". The helper for a grown-up learner is the weak point, so the about names one.
+
+## words.hand: Writing by hand (14 rungs, size weeks)
+- Renamed nothing. The old ladder ended on "something that changes a mind", which is persuasive writing, not handwriting. The line now ends on a one-page handwritten letter the reader reads without asking what a word says.
+- Order: sitting and pen grip (with a left-handed note), small letters from the right starting point (with a `how` by letter family), capitals, letters on the line (a sentence that uses every letter), gaps between words, numbers, fixing your worst letter, joining short words, a joined sentence, a timed 50-word copy, a note left for somebody at home, a faster timed copy, half a page a day for a week, and the letter.
+- Unsure: joined writing is taught in some countries and not others. Rung 8 asks you to try it once and says clear print is fine. That keeps it doable everywhere, but it makes rung 9 "joined, or quick clear print". Avoided words.callig (guide lines, a broad pen, beautiful quotations).
+
+## words.poems: renamed "Poems: learning them and writing them" (14 rungs, size weeks)
+- The old name "Poems and lines" was vague ("lines" can mean acting lines or a school punishment). Say if you would rather keep it.
+- Order: choose a short poem, 4 lines by heart, clap its beat, the whole poem next morning, say it to one person with pauses, a haiku (syllables explained), a 16–24-line poem, said to two or more, four rhyming lines about this week, copy five poems into a notebook, eight lines of your own revised, read them to one person, a ~30-line poem, and a poem evening at home.
+- The old last rung, "run a poetry evening for other people", became an evening at home. It is doable for a child and for a family.
+- Unsure about line counts: 'Who Has Seen the Wind?' has 8 lines, Stevenson's 'Rain' 4, 'Hope is the thing with feathers' 12, 'Stopping by Woods' 16, 'The Tyger' 24, and 'The Owl and the Pussy-cat' and 'If' each a little over 30. These are right as far as I know. Frost is still under copyright in some countries, but only the title is named.
+
+## words.lang: A new language (20 rungs, `from: 8`)
+- Order: choose a language and a free way to learn it, plus "Hello, my name is"; the sounds (with a note on other alphabets); greetings; 1–10; four sentences about yourself; labels at home; five questions; your sentences said to a person; to 100; 50 words over a week; a children's programme; five sentences about today; the past; written sentences corrected by a speaker; a two-minute conversation; a children's story; the future; a learners' video at normal speed; five minutes with a good speaker; ten minutes with a native speaker.
+- No brand names: "a language app with free lessons", "free video lessons", library courses, language-exchange websites. Safety lines: under-16s do online exchanges and forum posts with a grown-up, and nobody gives out their address or school.
+- Unsure: ten minutes about your life after about three months of a little most days is honest for a patient speaker and a closely related language, but ambitious for Japanese or Arabic. The note says mistakes are fine. `from: 8` because of the online and conversation rungs; a younger child could do rungs 1–12 with a grown-up.
+
+## words.irish: The old language of your place (20 rungs, id kept)
+- Kept the framing: the old or heritage language of where you live or where your family comes from. The about names Irish, Welsh, Scottish Gaelic, Māori, Hawaiian, Basque and Yiddish.
+- Order: the language's own name, greetings from a speaker's recording, your name and where you live, what your place name means, five place names told to somebody while you pass them, 1–10, "how are you" at home, labels, family words (and asking an older relative what they remember), an old saying, day and weather each morning for a week, the story of the language in ten lines, ten minutes of radio or video, a song or poem by heart, five sentences about today, a children's story, yesterday in three sentences, joining a class or group once, five minutes with a fluent speaker, and half an hour at a gathering speaking only the language.
+- What makes it different from words.lang: place names, family memory, a proverb, the language's story, songs, and joining the community of speakers, not a one-to-one conversation.
+- Unsure: the language names are Gaeilge, Cymraeg, Gàidhlig, te reo Māori, ʻōlelo Hawaiʻi and euskara, which I am confident of. I did not print the Yiddish self-name. "Some count in twenties" is true for Irish, Welsh and Basque traditional counting. For a family language spoken far away, place names come from "where your family came from", and rungs 18 and 20 allow an online gathering. A rare language may have no gathering at all; online is the only option there.
+
+## words.sign: Sign language (20 rungs)
+- Order: find your country's sign language and spell your name, the whole alphabet, six polite signs, reading someone else's finger-spelling (needs a second learner), "my name is", family signs, numbers, the question face in a mirror, question signs, ten everyday signs, five sentences about yourself, filming and fixing, time signs, yesterday in sign, watching a Deaf signer at their own speed, how to get attention and ask for "again, please", sixty signs tested, two minutes with a learner (voice off), a Deaf club or class once, and five minutes with a Deaf person.
+- Removed "be the one who includes somebody who signs without being asked": it waits on something happening. The courtesy rung (16) comes before the first meeting with Deaf people.
+- Facts I am fairly sure of but have not checked against a source: BSL, Auslan and NZSL finger-spell with two hands and ASL with one; raised eyebrows for yes/no questions and lowered for what/where questions in many sign languages; question signs often at the end; time shown forwards and back. Every one of these is hedged ("many", "often", "check whether yours does").
+- The final rung needs a Deaf person willing to chat with a learner. The note points to the group from rung 19. Under-16s go with a grown-up.

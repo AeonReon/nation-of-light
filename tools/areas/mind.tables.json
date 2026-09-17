@@ -1,0 +1,165 @@
+{
+ "id": "mind.tables",
+ "name": "Times tables",
+ "line": "From counting in tens and twos to fifty mixed questions from every table up to twelve in under three minutes, with no mistakes.",
+ "size": "months",
+ "strand": "say-what-you-mean",
+ "from": 7,
+ "who": "From about seven, and grown-ups who never learned them",
+ "about": "For anybody from about seven: a child with a grown-up beside them, or a grown-up who never quite learned the tables. It starts with counting in tens and twos, then takes the tables in the order that makes each one easier: ten, two and five, then three, four and eight, then nine, six, eleven and twelve, and seven last, when only one answer in it is new. It ends with fifty mixed questions from every table up to twelve, answered in under three minutes with no mistakes. Knowing them without stopping to think makes every later sum quicker, from sharing out sweets to doubling a recipe. Paper and a pen are all it needs.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Count out loud in tens from 10 to 120, then in twos from 2 to 24.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 2,
+   "note": "Say each number clearly at a steady pace. Twelve steps each, because this ladder goes up to twelve times. If you can already do this without thinking, do it once on purpose, backwards as well, and count the rung."
+  },
+  {
+   "n": 2,
+   "test": "Say the ten times table out loud, from 1 times 10 to 12 times 10, with no mistakes.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Say it the full way: one times ten is ten, two times ten is twenty. Any whole number times ten is that number with a nought on the end, so 7 times 10 is 70 and 12 times 10 is 120. If you slip, start again from the top."
+  },
+  {
+   "n": 3,
+   "test": "Say the two times table, from 1 times 2 to 12 times 2, with no mistakes.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Two times a number is that number doubled: 2 times 7 is 7 and 7 more, which is 14. Count in twos on your fingers at first if you need to. Say it once more the next day before you go on."
+  },
+  {
+   "n": 4,
+   "test": "Say the five times table, from 1 times 5 to 12 times 5, with no mistakes.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Every answer ends in 5 or 0. Five times a number is half of ten times it: 5 times 8 is half of 80, which is 40. The minute marks on a clock face go round in fives, if you have one to look at."
+  },
+  {
+   "n": 5,
+   "test": "Answer twenty mixed questions from the two, five and ten times tables, all correct.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Mixed is harder than in order, because you cannot count up from the answer before. In order you are counting; out of order you are remembering, which is the point. A grown-up or an older child can ask the questions instead of the scraps.",
+   "how": [
+    "Write 1 to 12 on twelve scraps of paper and put them in a cup.",
+    "Pull one out and multiply it by 2, 5 or 10, choosing a different one each time.",
+    "Say the answer out loud, put the scrap back, and pull again.",
+    "If you get one wrong, start the twenty again."
+   ]
+  },
+  {
+   "n": 6,
+   "test": "Draw a grid of 12 rows and 12 columns, fill in every answer you already know, and count the empty squares.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Write 1 to 12 along the top and down the side; each square is its row number times its column number. Fill in the rows and columns for 1 (one times a number is the number itself), 2, 5 and 10. You should have 64 empty squares, and because 3 times 4 is the same as 4 times 3, only 36 different answers are left to learn. Keep the grid and fill it in as you go up the ladder."
+  },
+  {
+   "n": 7,
+   "test": "Say the three times table, from 1 times 3 to 12 times 3, with no mistakes.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Three times a number is double it and one more of it: 3 times 7 is 14 and 7, which is 21. Count in threes out loud a few times first: 3, 6, 9, 12. Fill the new answers into your grid."
+  },
+  {
+   "n": 8,
+   "test": "Say the four times table, from 1 times 4 to 12 times 4, with no mistakes.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Four times a number is double it, then double again: 4 times 7 is 14, then 28. 4 times 12 is 24, then 48. Fill the new answers into your grid."
+  },
+  {
+   "n": 9,
+   "test": "Say the eight times table, from 1 times 8 to 12 times 8, with no mistakes.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Eight times a number is double it three times: 8 times 7 is 14, 28, 56. You already know eight times 1, 2, 3, 4, 5 and 10 from the other tables, so only 8 times 6, 7, 8, 9, 11 and 12 are really new. Fill them into your grid."
+  },
+  {
+   "n": 10,
+   "test": "Answer twenty mixed questions from the two, three, four, five, eight and ten times tables, all correct.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Use the scraps again, choosing a different table from these six each time. At the end, say any you had to stop and think about three times over. If you got one wrong, do another twenty the next day."
+  },
+  {
+   "n": 11,
+   "test": "Say the nine times table, from 1 times 9 to 12 times 9, with no mistakes.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Nine times a number is ten times it, take away one lot: 9 times 7 is 70 take away 7, which is 63. To check an answer from 9 times 2 to 9 times 10, add its two digits: they always come to 9, as in 63 and 36. After that, 9 times 11 is 99 and 9 times 12 is 108."
+  },
+  {
+   "n": 12,
+   "test": "Say the six times table, from 1 times 6 to 12 times 6, with no mistakes.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Six times a number is five times it and one more lot: 6 times 7 is 35 and 7, which is 42. When you multiply 6 by an even number, the answer ends in that number: 6 times 4 is 24, 6 times 8 is 48. The only new answers here are 6 times 6, 7, 11 and 12."
+  },
+  {
+   "n": 13,
+   "test": "Say the eleven and the twelve times tables, each from 1 to 12, with no mistakes.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Eleven times a number from 1 to 9 is that digit written twice: 11 times 4 is 44. Then 11 times 10 is 110, 11 times 11 is 121 and 11 times 12 is 132. Twelve times a number is ten times it and two times it added: 12 times 7 is 70 and 14, which is 84."
+  },
+  {
+   "n": 14,
+   "test": "Say the seven times table, from 1 times 7 to 12 times 7, with no mistakes.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Look at your grid: every answer in the sevens is already there except 7 times 7, which is 49. So this table is answers you know, said in a new order: 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84. Your grid should now be full."
+  },
+  {
+   "n": 15,
+   "test": "Fill in the whole 12 by 12 grid from memory on a clean sheet, with no mistakes and no time limit.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Put your old grid in another room first. When you finish, check every square against it. Any square you got wrong goes on a short list that you say out loud each day this week."
+  },
+  {
+   "n": 16,
+   "test": "Answer the ten harder questions in the note, shuffled, twice through with no mistakes.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "They are 6 times 7 (42), 6 times 8 (48), 6 times 9 (54), 7 times 8 (56), 7 times 9 (63), 8 times 9 (72), 7 times 12 (84), 8 times 12 (96), 9 times 12 (108) and 12 times 12 (144). Write each question on a scrap without its answer, shuffle them, and go. One that helps: 56 is 7 times 8, and the digits run 5, 6, 7, 8."
+  },
+  {
+   "n": 17,
+   "test": "Answer thirty mixed questions in a row from every table up to twelve, all correct.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Use the twelve scraps two at a time now: pull out two, multiply them, and put both back. Some will be easy, like 1 times 9, and the next might be 8 times 7. If you get one wrong, start the thirty again."
+  },
+  {
+   "n": 18,
+   "test": "Have somebody ask you thirty mixed questions, and answer each one within three seconds.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Anybody who can read two scraps can ask, even a younger child holding your grid to check. They count three in their head; a slow answer counts as a miss, and you get that one again at the end. Done when all thirty have been answered in time."
+  },
+  {
+   "n": 19,
+   "test": "Teach somebody one times table, using the method for it from this ladder, until they can say it with no mistakes.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "A younger child, a friend, or a grown-up who never learned the eights. Show them the method first, like double three times for the eights, then listen while they say it. It may take a few short goes on different days, and that still counts."
+  },
+  {
+   "n": 20,
+   "test": "Answer fifty mixed questions from every table up to twelve in under three minutes, with no mistakes.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Fifty in three minutes is under four seconds each, which leaves time to write. If you go over the time or make a mistake, do a new sheet another day. When you can do this, the tables are there whenever you need them.",
+   "how": [
+    "Ask somebody to write fifty questions on a sheet, or pull two scraps fifty times the day before and write the questions down.",
+    "Set a timer for three minutes.",
+    "Write each answer next to its question as fast as you can.",
+    "Check every answer against your grid."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,152 @@
+{
+ "id": "words.irish",
+ "name": "The old language of your place",
+ "line": "From the language's own name to half an hour at a gathering of speakers, speaking only that language when you speak.",
+ "size": "months",
+ "strand": "say-what-you-mean",
+ "who": "Everybody; a child and a grown-up side by side",
+ "about": "For everybody: a child and a grown-up can climb it side by side. It is about the old or heritage language of where you live or where your family comes from: Irish, Welsh, Scottish Gaelic, Māori, Hawaiian, Basque, Yiddish, and many more. It starts with the language's own name, a few greetings and your own name, then the place names around you and what they mean, the words for family, and an old saying. The middle adds songs, stories and listening to speakers, and it ends with half an hour at a class, gathering or online group of speakers, speaking only that language when you speak. These languages carry the names of the land and the people, and every new speaker helps keep one alive.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Find out the old language of where you live or where your family comes from, and learn to say its name in that language.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 10,
+   "note": "Irish is Gaeilge, Welsh is Cymraeg, Scottish Gaelic is Gàidhlig, Māori is te reo Māori, Hawaiian is ʻōlelo Hawaiʻi and Basque is euskara. If there are several, choose the one that means most to you. Listen to a speaker saying the name on a free video and copy it until it sounds the same."
+  },
+  {
+   "n": 2,
+   "test": "Say hello, goodbye and thank you in the language, copying a recording of a speaker.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Search for the name of the language and 'greetings'. Choose a recording by somebody who speaks it, and copy each word five times. Many of these languages have sounds your everyday language does not; take your time with those."
+  },
+  {
+   "n": 3,
+   "test": "Say in a full sentence your name and where you live.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Your free lessons or a free online dictionary will show the pattern, such as 'I am Sam and I live in ...'. Some of these languages have their own form of common first names; find out whether yours has one. Write the sentence down and say it until you do not need the paper."
+  },
+  {
+   "n": 4,
+   "test": "Find out what the name of your town, area or street means in the old language.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "In many places, the names on road signs came from an older language underneath, and they often describe the land: a hill, a ford, a church, an oak wood. Search for the place name and the word 'meaning', or ask at your local library. If your family's language comes from somewhere else, find the meaning of a place name from there."
+  },
+  {
+   "n": 5,
+   "test": "Learn what five place names near you mean, and tell somebody while you pass them.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Hills, rivers, villages, a road you use every day. Tell a child in the car or a friend on a walk: 'This place means the black pool.' If the place names near you did not come from this language, choose five from where your family came from and show them on a map."
+  },
+  {
+   "n": 6,
+   "test": "Count from one to ten in the language, and back down.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Count stairs, spoons, or steps on a walk. Counting backwards shows you really know them. Some of these languages count in an unusual way, such as in twenties; notice whether yours does."
+  },
+  {
+   "n": 7,
+   "test": "Ask somebody at home how they are in the language, and answer when they ask you.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Learn the question and two or three answers: well, not bad, tired. If nobody at home speaks it, teach them the question and the answers first; learning together is how many families bring these languages back. Do it every morning for a few days."
+  },
+  {
+   "n": 8,
+   "test": "Learn the words for ten things in your home, and put a paper label on each one.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Door, table, window, bed, cup, bread, water, fire, book, shoes. Strips of paper and tape are all you need. Say the word each time you touch the thing."
+  },
+  {
+   "n": 9,
+   "test": "Learn the words for mother, father, grandmother, grandfather, sister, brother and friend, and say who is in your family.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "'My mother is Ana. My grandfather is Tom.' If your family comes from the place the language belongs to, ask an older relative whether they remember words or family names in it. Write down anything they tell you, with who said it."
+  },
+  {
+   "n": 10,
+   "test": "Learn one old saying in the language, what each word means, and when people say it.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Most of these languages have proverbs about weather, work, family or friendship. Search for the language and 'proverbs', and choose one short enough to remember. Say it at the right moment this week, and explain it to somebody."
+  },
+  {
+   "n": 11,
+   "test": "Every morning for a week, say in the language what day it is and what the weather is like.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "Learn the days of the week and five weather words: sun, rain, wind, cold, warm. Say them at the window before breakfast. Seasons and weather differ from place to place, so learn the words for the weather you actually get."
+  },
+  {
+   "n": 12,
+   "test": "Find out the story of the language in about ten lines: where it was spoken, what happened to it, and who speaks it now.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Use a library book or two good websites and write it down in your own words. Some of these languages were once spoken by nearly everybody in a place, lost speakers, and are now growing again through schools and families. Knowing its story makes it easier to carry on learning it."
+  },
+  {
+   "n": 13,
+   "test": "Listen to ten minutes of radio, a video or a podcast in the language, and write down every word you recognise.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Many of these languages have their own radio, television or online channels, often free to watch. Choose something for children or learners to begin with. Do not stop to look words up; count the words you caught at the end."
+  },
+  {
+   "n": 14,
+   "test": "Learn a short song or poem in the language, and say or sing it from memory.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "A lullaby, a children's song, or a short poem that people there know. Learn the meaning line by line first, then two lines a day. Songs are how many of these languages were passed down, and they help with the sounds too."
+  },
+  {
+   "n": 15,
+   "test": "Say five sentences about what you are doing today.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "'I get up. I drink tea. I walk to school. I see my friend. I read.' Use the words from your labels and your family words. Say each one while you do the thing, and write them down afterwards to check."
+  },
+  {
+   "n": 16,
+   "test": "Read a short children's story in the language and understand most of it.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Free children's stories are online for many of these languages, and some libraries lend books in them. Read it once without a dictionary, then look up only what you needed. Tell the story to somebody in your everyday language to check."
+  },
+  {
+   "n": 17,
+   "test": "Tell somebody in the language, in three sentences, what you did yesterday.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Your lessons will show how to talk about the past; learn went, ate, saw and did first. A learner at home, a speaker, or a voice message to somebody learning with you all count. Getting the meaning across is the rung; small mistakes are fine."
+  },
+  {
+   "n": 18,
+   "test": "Find a class, conversation group or online group of speakers and learners, and join in once, even if you mostly listen.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "Libraries, cultural centres, community halls and churches often host them; for a language spoken far from where you live, an online group is the way. Say your name and where you live in the language when you arrive. Anybody under sixteen goes with a grown-up, or joins online with a grown-up in the room."
+  },
+  {
+   "n": 19,
+   "test": "Have a five-minute conversation with somebody who speaks the language well.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Somebody from the group on rung eighteen, an older relative, or a teacher. Ask them to speak slowly and not to switch into your everyday language. Talk about your family, your day and what you did yesterday."
+  },
+  {
+   "n": 20,
+   "test": "Spend half an hour at a gathering of speakers, and speak only that language whenever you speak.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "The group from rung eighteen, a language evening, a sports club or a church service held in the language, or an online gathering. Listening for most of it is fine; the rung is that every word you say is in the language. That is the far end of this ladder."
+  }
+ ]
+}

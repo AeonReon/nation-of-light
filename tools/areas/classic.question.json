@@ -1,0 +1,102 @@
+{
+ "id": "classic.question",
+ "name": "Asking the good question",
+ "line": "From asking \"why?\" three times to a fifteen-minute talk with somebody that ends in a better meaning for one word.",
+ "size": "weeks",
+ "strand": "say-what-you-mean",
+ "about": "For everybody from about seven: a child and a grown-up can climb it side by side. It starts with asking \"why?\" three times in a row and turning yes-or-no questions into open ones. Then you ask real questions of real people, wait for the answer, ask what a word means and how somebody knows what they know, and find what a plan takes for granted. It ends with a fifteen-minute talk with one person, testing what an everyday word really means with examples until you both have a better meaning than you started with. This is the old habit of Socrates, who taught mostly by asking, and it works at any age.",
+ "who": "From about seven; a child and a grown-up side by side",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Choose one thing you do or believe, ask \"why?\" about it three times in a row, and write down each answer.",
+   "note": "\"Why do I brush my teeth?\" \"To keep them clean.\" \"Why?\" \"So they do not decay.\" \"Why does that happen?\" By the third why you usually reach something you are less sure about, and that is the interesting part.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 3
+  },
+  {
+   "n": 2,
+   "test": "Write down three questions that can be answered \"yes\" or \"no\", then rewrite each so it needs a longer answer.",
+   "note": "\"Did you like the film?\" becomes \"What part of the film stayed with you?\" \"Was school good?\" becomes \"What was the best moment today?\" Questions starting with what, how and which usually get longer answers.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 3,
+   "test": "Ask somebody a question you really do not know the answer to, and listen to their whole answer.",
+   "note": "How their job works, how they learnt to cook a dish, what a game they play is about. A real question is one where you want the answer, not one where you already know it. Saying \"I do not know, can you tell me?\" is part of the rung.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 4,
+   "test": "Ask somebody a question, then say nothing and count five seconds in your head before you speak again.",
+   "note": "Many people fill a silence after about two seconds, before the other person has finished thinking. The longer answer that comes after a pause is often the better one.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 5,
+   "test": "Take the word \"brave\", and write one clear example of it and one case that looks like it but is not.",
+   "note": "Brave: telling the truth when you know you will be told off. Looks like it but is not: jumping off a high wall to show off. Now try to say in one sentence what makes the difference. That sentence is the start of a meaning.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "When somebody uses a word in a way you are not sure of, ask what they mean by it, and keep asking until you could explain it back.",
+   "note": "Somebody says a film was \"boring\" or a day was \"busy\". \"What made it boring?\" \"Boring like slow, or boring like you had seen it before?\" Ask kindly, as if you are curious, because you are.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Pick one thing you believe, write \"How do I know this?\", and write down your honest answer.",
+   "note": "Honest answers include: I saw it myself, somebody I trust told me, I read it, I worked it out, or I just always thought so. None of these is wrong to write. Knowing which one it is shows you how sure you can be.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "When somebody tells you what they think about something, ask \"How did you come to think that?\", and listen.",
+   "note": "Ask it about something ordinary: why they prefer one route to school, one team, one way of making tea. Say it gently, so it sounds interested, not like a challenge. People often enjoy being asked.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Take one plan at home, such as \"we leave at nine and arrive by ten\", and write down three things it takes for granted, each as a question.",
+   "note": "\"Will everybody be ready by nine?\" \"Will the traffic or the bus be normal?\" \"Do we know exactly where we are going?\" Asking \"what has to be true for this to work?\" finds the questions nobody asked.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Before a family or group plan is settled, ask out loud \"What have we not thought of?\", and wait for answers.",
+   "note": "A day out, a birthday, a move of furniture, a group project at school or work. Ask it once, calmly, then give people time. If nothing comes, that is fine too; the plan is safer for having been asked.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 11,
+   "test": "In a class, a meeting or a group conversation, ask one question you think others there are also wondering about.",
+   "note": "\"Sorry, can you say again what we need to bring?\" \"What happens if it rains?\" Often several people were waiting for somebody to ask. A child might do this in class, a grown-up at work or a club.",
+   "ctx": "with",
+   "kind": "courage"
+  },
+  {
+   "n": 12,
+   "test": "With one person, choose an everyday word like \"friend\" or \"clever\", and spend fifteen minutes testing a meaning for it with examples and questions, until you both write down a better meaning than your first.",
+   "note": "Start with a first try: \"A friend is somebody you like.\" Then ask questions: \"Do you like people who are not your friends?\" \"Can a friend be somebody you argue with?\" Change the meaning each time an example breaks it. A child and a grown-up doing this together is ideal.",
+   "how": [
+    "Write down a first meaning in one sentence.",
+    "Take turns to find an example that does not fit it.",
+    "Change the meaning so the example fits, and write the new version.",
+    "After fifteen minutes, compare your last meaning with your first."
+   ],
+   "ctx": "with",
+   "kind": "skill"
+  }
+ ]
+}

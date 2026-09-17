@@ -1,0 +1,152 @@
+{
+ "id": "words.sign",
+ "name": "Sign language",
+ "line": "From spelling your own name with your hands to a five-minute conversation in sign with a Deaf person, without using your voice.",
+ "size": "months",
+ "strand": "say-what-you-mean",
+ "who": "Everybody; a child and a grown-up side by side",
+ "about": "For everybody: a child and a grown-up can climb it side by side. Learn the sign language used where you live, because sign languages differ from country to country: British Sign Language, American Sign Language and Auslan are three different languages. It starts with the finger-spelling alphabet and your own name, then everyday signs, family, numbers, and the way the face asks a question. The middle adds sentences about yourself and your day, watching signers at their own speed, and how to get a Deaf person's attention politely. It ends with a five-minute conversation in sign with a Deaf person, without using your voice. Free video dictionaries and lessons, many made by Deaf signers, are all it needs.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Find the sign language used where you live, watch its finger-spelling alphabet on a free video, and spell your own name with your hands.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 10,
+   "note": "Search for the name of your country and 'sign language alphabet'. Some sign languages spell with two hands, such as British Sign Language and Auslan, and some with one, such as American Sign Language. If you are left-handed, use your left hand where the video uses the right."
+  },
+  {
+   "n": 2,
+   "test": "Finger-spell the whole alphabet slowly, checking each letter against the video.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Go through it in groups of five letters. Watch your hands in a mirror or on a phone camera, so you see what the other person sees. Letters that look alike are the ones to practise most."
+  },
+  {
+   "n": 3,
+   "test": "Sign hello, please, thank you, sorry, yes and no, copied from a video by a Deaf signer.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Many free video dictionaries show each sign with a Deaf person signing it. Copy the hand shape, where the hand is, and how it moves. If you already know these, sign them on purpose today and count it."
+  },
+  {
+   "n": 4,
+   "test": "Finger-spell three names to somebody learning with you, and read three names they spell to you.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Spell slowly and hold each letter still for a moment. Reading finger-spelling is harder than doing it, which is why this rung needs two people. If nobody at home is learning, teach one person the alphabet first; a child and a grown-up can learn it together."
+  },
+  {
+   "n": 5,
+   "test": "Sign 'My name is' followed by your finger-spelled name, and 'Nice to meet you'.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "These are the first things you sign when you meet somebody. Some sign languages leave out small words like 'is'; copy the order the video uses. Look at the person's face, not your own hands, while you sign."
+  },
+  {
+   "n": 6,
+   "test": "Learn the signs for mother, father, sister, brother, baby, grandmother, grandfather, friend and family, and sign who is in your family.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Use a free video dictionary for your sign language. Sign 'my mother' and point or finger-spell her name. Nine signs is a lot for one day, so take two or three days if you need them."
+  },
+  {
+   "n": 7,
+   "test": "Sign the numbers from one to ten, and back down.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Number signs differ between sign languages, so use the video for yours. Sign your age, and the number of people in your home. Counting backwards shows you really know them."
+  },
+  {
+   "n": 8,
+   "test": "In front of a mirror, ask three questions in sign with the right face for each.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "In many sign languages the face is part of the grammar. A question with a yes or no answer usually has raised eyebrows; a question starting with what, where or who usually has the eyebrows drawn down. Find a video that shows this for your sign language, and copy the face as well as the hands."
+  },
+  {
+   "n": 9,
+   "test": "Learn the signs for what, where, who, when, how and why, and ask somebody their name and where they live.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Use the face from rung eight with each one. The question sign often comes at the end of the sentence in sign; check the order on a video. A family member learning with you can answer."
+  },
+  {
+   "n": 10,
+   "test": "Learn ten everyday signs: eat, drink, sleep, work, school, home, go, want, like and help.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Two or three a day from the video dictionary. Use them at home while you do the thing: sign 'eat' at dinner, 'sleep' at bedtime. Signs you use in real moments stay with you."
+  },
+  {
+   "n": 11,
+   "test": "Sign five short sentences about yourself, such as where you live, what you like and what you do in the day.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "The order of signs is often different from the order of words in speech, so find a learners' video with example sentences and copy its order. Keep each sentence short. Write the five in your own language first so you know what you want to sign."
+  },
+  {
+   "n": 12,
+   "test": "Film yourself signing those five sentences on a phone, watch it back, and fix one thing.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Compare it with the video you learned from. Look at hand shapes, where your hands are, and your face. Film the sentences again with the one thing fixed and delete the first go if you like."
+  },
+  {
+   "n": 13,
+   "test": "Learn the signs for today, tomorrow, yesterday, morning, evening and the days of the week.",
+   "ctx": "room",
+   "kind": "skill",
+   "note": "Many sign languages show time by where the hand is: forwards for the future, back over the shoulder for the past. Check whether yours does. Sign the day each morning for a week to keep them."
+  },
+  {
+   "n": 14,
+   "test": "Sign three sentences about what you did yesterday to somebody learning with you, or film them and send them.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "'Yesterday I went to school. I ate pasta. I saw my grandmother.' Use the time signs from rung thirteen and the everyday signs from rung ten. If nobody is learning with you, send the video to a friend or a learners' group."
+  },
+  {
+   "n": 15,
+   "test": "Watch a short video of a Deaf person signing at their own speed, twice, and say three things it was about.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Look for videos in your sign language made for learners, or short news or stories signed by Deaf people. The first time, just watch the face and hands without stopping; the second time, catch details. Catching three things is the rung, even if much of it went past."
+  },
+  {
+   "n": 16,
+   "test": "Learn how to get a Deaf person's attention politely, and how to keep a conversation going when you do not understand.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "A small wave where they can see it, or a light tap on the shoulder, is usual; a quick flick of the room light is used too, to reach a whole room. Keep looking at the person's face while they sign, and learn the signs for 'again, please', 'slower, please' and 'I am learning'."
+  },
+  {
+   "n": 17,
+   "test": "Sign sixty signs you know without looking, while somebody says or points to each thing.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Make a list of sixty from the rungs so far and a few more you need, like colours and food. The other person calls them out in a mixed-up order, and you sign each one. Put any you miss on a card and practise them that week."
+  },
+  {
+   "n": 18,
+   "test": "Have a two-minute conversation in sign with another learner, without using your voice.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "Ask each other names, where you live, who is in your family and what you did yesterday. When you do not know a sign, finger-spell the word or point. Keeping your voice off the whole time is part of the rung."
+  },
+  {
+   "n": 19,
+   "test": "Go to a sign-language class, Deaf club event or signing social, and introduce yourself in sign.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "Search for your sign language and 'social' or 'club' near you; many welcome learners. If there is nothing near you, an online signing group for learners counts. Anybody under sixteen goes with a grown-up. Sign your name, that you are learning, and 'nice to meet you'."
+  },
+  {
+   "n": 20,
+   "test": "Have a five-minute conversation in sign with a Deaf person, without using your voice.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "At the group from rung nineteen, or with a Deaf person you know who is happy to chat with a learner. Talk about yourself, your family and your week, and use 'again, please' when you need it. That is the far end of this ladder."
+  }
+ ]
+}

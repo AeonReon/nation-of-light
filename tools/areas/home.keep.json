@@ -1,0 +1,97 @@
+{
+ "id": "home.keep",
+ "name": "Keeping a place",
+ "line": "From sweeping a floor properly to looking after the whole house for a day.",
+ "size": "weeks",
+ "strand": "look-after-the-place",
+ "from": 8,
+ "who": "From about eight; grown-ups who never learnt, too",
+ "about": "For anybody from about eight, with a grown-up showing them each job the first time; grown-ups who were never taught these count exactly the same. This is the ladder for the housework jobs themselves, done properly: sweeping, wiping, washing up, a basin, a toilet, a floor, the laundry from basket to drawer, a duvet cover and the rubbish. Then the jobs become a weekly habit, and it ends with looking after the whole house for a day. A person who can do these is a help in any home they live in, now and later.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Sweep one floor into a single pile and get all of it into the dustpan, with no line of dust left behind.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 10,
+   "note": "Start at the edges and sweep towards the middle, then into one pile. Hold the dustpan flat, sweep in, pull the pan back a little and sweep again for the last line. A damp piece of kitchen roll picks up what the brush will not."
+  },
+  {
+   "n": 2,
+   "test": "Clear a kitchen table or counter, wipe it properly, and dry it.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Move everything off first, not round it. Brush the crumbs into your hand or a dustpan, then wipe with a damp cloth and a little washing-up liquid in lines from the back to the front, then dry it with a tea towel. Put back only what lives there."
+  },
+  {
+   "n": 3,
+   "test": "Wash up a full sink of dishes in the right order: glasses, then cutlery, then plates and bowls, then pans.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Hot water with a squeeze of washing-up liquid; the cleanest things go first so the water stays clean for longer. Change the water when it goes greasy or cold. Take care with knives: wash them one at a time and never leave them hidden under the bubbles. If your home has a dishwasher, load it, run it, and empty it into the right cupboards instead."
+  },
+  {
+   "n": 4,
+   "test": "Clean a bathroom basin until it shines, including the plughole, round the taps and behind them.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "A cloth with a little washing-up liquid does most basins; an old toothbrush gets round the taps and into the plughole. Rinse and dry the taps so they shine. If a grown-up gives you a bathroom cleaner, use only that one: never mix two cleaning products, because some give off harmful fumes together."
+  },
+  {
+   "n": 5,
+   "test": "Clean a toilet: the outside, the seat on both sides, then the bowl and under the rim with the brush.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Rubber gloves if the house has them, and a cloth kept only for the toilet. Outside and seat first with the cloth, bowl last with the brush, then flush and rinse the brush in the clean water. Wash your hands well afterwards. A grown-up chooses the cleaner the first time."
+  },
+  {
+   "n": 6,
+   "test": "Hoover or mop the floor of a whole room, moving the chairs and small things out of the way first.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Chairs on the table or in the hall, shoes and bags out, then start at the far corner and work back towards the door so you do not walk on what you have done. No hoover or mop: a broom and then a damp cloth on your hands and knees does the same job."
+  },
+  {
+   "n": 7,
+   "test": "Sort a basket of washing by colour and by the label, and put one load through the machine or wash it by hand.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Whites and pale colours together, darks together, anything with a low temperature on the label kept apart. Check every pocket. A grown-up shows you the machine and the amount of powder the first time. No machine: warm water and a little soap in a basin or bath, then rinse and squeeze."
+  },
+  {
+   "n": 8,
+   "test": "Hang that load to dry so it creases as little as possible, then fold it and put every piece away where it lives.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Shake each piece out hard before it goes on the line or the rack, and hang shirts from the bottom or on a hanger. Fold when fully dry. Every piece goes to its own drawer or its owner's room, not into a pile on a bed."
+  },
+  {
+   "n": 9,
+   "test": "Put a clean cover on a duvet and pillows on your own.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "The easy way: turn the cover inside out, put your hands inside to the two far corners, grab two corners of the duvet through the cover, then shake it so the cover falls down over the duvet. Pillows go in corner first. If your bed has sheets and a blanket instead, make it with the top sheet tucked in and count it."
+  },
+  {
+   "n": 10,
+   "test": "Take out the rubbish and the recycling, sorted the way your local council asks, on the right day.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Look up what goes in which bin on your council's website or the leaflet that came with the bins, and which day they are collected. Squash the boxes, rinse the tins. A child can do the small bins round the house and a grown-up takes the big one to the street."
+  },
+  {
+   "n": 11,
+   "test": "Pick three jobs from this ladder that your home needs every week, and do them each week for four weeks without being asked.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "For example: the bathroom basin, the hoover in the living room, and the bins. Write the three on the fridge and tick each week. If you already do weekly jobs at home, take on one more and count the four weeks."
+  },
+  {
+   "n": 12,
+   "test": "Look after the house for a whole day: meals cleared away, floors swept, a load of washing done, bins out, and any pets and plants looked after.",
+   "ctx": "long",
+   "kind": "kindness",
+   "note": "Agree the day with the grown-ups or the people you live with, so they can have a day off from it. Write your list the night before. At the end of the day, walk them round: the kitchen clear, the floors done, the washing folded. A child does this with a grown-up at home, who stays out of the jobs."
+  }
+ ]
+}

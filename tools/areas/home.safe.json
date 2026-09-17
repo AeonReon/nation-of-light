@@ -1,0 +1,97 @@
+{
+ "id": "home.safe",
+ "name": "Staying safe",
+ "line": "From saying your own address to showing a younger child your home's fire plan.",
+ "size": "weeks",
+ "strand": "look-after-yourself",
+ "from": 7,
+ "who": "Children from about seven, with a grown-up beside them",
+ "about": "For children from about seven, with a grown-up beside them for every rung; the grown-up checks the home as the child learns. It starts with the things a child should know by heart: their address, a grown-up's phone number and the emergency number. Then the home: the smoke alarms, the way out and a meeting place outside. Then water, roads, and a few clear rules for being online. It ends with the child showing a younger one the fire plan, because explaining it is the best way to remember it. Nothing here is meant to worry anybody: each rung is a small, calm thing to know, and knowing it makes going out more relaxed, not less.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Say your full address from memory, including the town or area.",
+   "ctx": "room",
+   "kind": "skill",
+   "mins": 2,
+   "note": "House number, street, town or area, and the postcode or zip code if your country uses one. A grown-up checks it. If you live in two homes, learn both, one at a time."
+  },
+  {
+   "n": 2,
+   "test": "Say one grown-up's phone number from memory, then ring it to check you had it right.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Pick the grown-up most likely to answer. Say it in groups, the way a phone number is often written, and practise at breakfast for a few days. Ringing it, with the grown-up nearby, is how you know it is right."
+  },
+  {
+   "n": 3,
+   "test": "Say your emergency number and three times you would ring it, without dialling.",
+   "ctx": "room",
+   "kind": "attention",
+   "note": "Find out your emergency number (such as 112, 911 or 999) where you live. You ring it for a fire, for somebody badly hurt or who will not wake up, and for somebody in danger. It is never for testing. If it is ever rung by mistake, stay on the line and say it was a mistake, so they do not worry."
+  },
+  {
+   "n": 4,
+   "test": "With a grown-up, press the test button on every smoke alarm in your home and listen to the sound.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Most smoke alarms are on the ceiling, so the grown-up does the reaching, on a steady step or ladder, and the child counts the alarms and listens. That loud beeping means get out. If an alarm is silent, it needs a new battery or a new alarm; in some places the fire service will fit one for free. Test them once a month."
+  },
+  {
+   "n": 5,
+   "test": "Walk from your bedroom to the way out of your home with a grown-up, and choose a meeting place outside.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "A neighbour's gate, a lamp post, a tree across the street: somewhere everybody knows. The rules if the alarm goes: get out, stay out, and ring for help from outside. Never go back in for toys, bags or pets. If there is smoke, keep low, where the air is clearer."
+  },
+  {
+   "n": 6,
+   "test": "Do a practice fire drill with everybody in your home, from the alarm test sound to all standing at the meeting place.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "Press the alarm test button to start it. Everybody leaves the way you walked, closing doors behind them, and meets at the meeting place. Say who would help the youngest or anybody who needs help. Doing it once in the day makes it easy to picture at night."
+  },
+  {
+   "n": 7,
+   "test": "At a pool with a lifeguard, float on your back for a slow count of thirty, with a grown-up in the water beside you.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Lie back, ears in the water, tummy up, arms out wide, and breathe slowly. Floating is what to do if you ever fall into water: float first, then call or wave for help. If you cannot float yet, do it with the grown-up's hand under your back and count that."
+  },
+  {
+   "n": 8,
+   "test": "At a pool, lake, river or beach, find the rules or signs for where it is safe to swim, and say what to do if somebody else is in trouble in the water.",
+   "ctx": "out",
+   "kind": "attention",
+   "note": "Look for signs, flags and where the lifeguards are, and read them together. If somebody else is in trouble: never go in after them. Shout for a grown-up or a lifeguard, ring the emergency number, and throw them something that floats, like a ball or a ring."
+  },
+  {
+   "n": 9,
+   "test": "Cross a quiet road with a grown-up beside you, doing every part yourself.",
+   "ctx": "out",
+   "kind": "skill",
+   "note": "Stop at the edge of the pavement. Look and listen both ways, and look again, because traffic comes from different sides in different countries. Cross straight over when it is clear, walking, and keep looking as you go. Use a crossing with lights or stripes if there is one near."
+  },
+  {
+   "n": 10,
+   "test": "Walk a short route you know well, choosing every crossing yourself, with the grown-up a few steps behind.",
+   "ctx": "out",
+   "kind": "courage",
+   "note": "To a friend's house, a park, a shop at the end of the road. The grown-up says nothing unless something is unsafe. At the end, say which crossing was hardest to judge and why."
+  },
+  {
+   "n": 11,
+   "test": "Agree three rules with a grown-up for being online, and write them next to where the phone, tablet or computer lives.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "Good ones: never give your address, school or photos of yourself to somebody you have not met in real life. Tell a grown-up if anybody online asks you to keep a secret, asks to meet, or makes you feel odd, and you will not be in trouble for telling. Show a grown-up how to block and report somebody in an app or game you use."
+  },
+  {
+   "n": 12,
+   "test": "Show a younger child, or a visiting friend, your home's way out and meeting place, and say the rules to them.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Walk it together and say the rules: get out, stay out, ring for help from outside. Let them lead the walk the second time. If there is no younger child, show a grandparent or a friend who visits, and count it."
+  }
+ ]
+}

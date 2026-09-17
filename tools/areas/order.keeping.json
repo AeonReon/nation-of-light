@@ -1,0 +1,162 @@
+{
+ "id": "order.keeping",
+ "name": "Keeping it",
+ "line": "From a home for the five things that never get put away to a place that stays right for three months.",
+ "size": "months",
+ "strand": "look-after-the-place",
+ "who": "Grown-ups and teenagers; children join the evening round",
+ "about": "For grown-ups and teenagers who run a home, whether you own it, rent it or share it; children can join in with the evening round. This ladder is not about cleaning or clearing out: it is about the small systems that stop the mess coming back once a place is right. It starts with a home for the five things that never get put away, then builds an evening round, a weekly round, one in and one out, and a way of dealing with post the day it comes. It ends with the whole household keeping the place right for three months, with both rounds running and no big clear-out needed.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Choose a home for the five things in your house that never get put away.",
+   "ctx": "home",
+   "kind": "attention",
+   "mins": 15,
+   "extra": true,
+   "note": "Keys, glasses, chargers, the post, shoes: the things that always end up on the table. Walk the house and choose one spot for each, close to where you use it. A bowl by the door for keys counts, and so does a shoebox for chargers."
+  },
+  {
+   "n": 2,
+   "test": "Put each of those five things back in its home every time you finish with it, for three days.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "Every time, not just at bedtime. Keep a tally on a scrap of paper by the door if it helps. If you already do this with all five, do it on purpose for three days and count it."
+  },
+  {
+   "n": 3,
+   "test": "Move the home of any of the five that kept ending up somewhere else, to where it actually lands.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "If the keys went on the kitchen counter all three days, their home belongs on the kitchen counter, not by the door. A home only works if it is where your hand already goes. If all five stayed put, check them once more and count it."
+  },
+  {
+   "n": 4,
+   "test": "Choose three spots to put right every evening, and do it once, timing how long it takes.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Pick the three that spoil the room most when they are covered: the kitchen table, the counter by the kettle, the sofa. Tie it to something you already do every evening, like after the washing up or before you brush your teeth. Most people find it takes under ten minutes."
+  },
+  {
+   "n": 5,
+   "test": "Put those three spots right every evening for seven evenings in a row.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "Same three spots, same moment in the evening. If you missed a night, start the count again. If you already did a week of tidy nights on \"A home that works\", this is the shorter version tied to a fixed moment; do it on purpose and count it."
+  },
+  {
+   "n": 6,
+   "test": "For one whole day, put everything away as soon as you finish with it, and count the times you nearly put something down to do later.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "The cup goes to the sink, not the side table; the coat goes on the hook, not the chair. Make a mark on a piece of paper each time you catch yourself about to leave something. The count is the point: it shows where the evening round comes from."
+  },
+  {
+   "n": 7,
+   "test": "For one week, bring nothing new into the home without one thing of the same kind going out.",
+   "ctx": "long",
+   "kind": "courage",
+   "note": "A new mug in, an old mug out to give away; a new jumper in, an old one out. Food and everyday things that get used up do not count. Buying nothing new for the week counts too."
+  },
+  {
+   "n": 8,
+   "test": "Write a list for a half-hour weekly round that puts the whole place right, and do it once.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Choose a day that suits your week. A good list: every surface cleared, bags and coat pockets emptied, the fridge checked, the washing started, the evening spots done. Set a timer for thirty minutes and stop when it rings, even if the list is not finished.",
+   "how": [
+    "Choose the day and the time.",
+    "Write the list, no more than eight things.",
+    "Set a timer for thirty minutes and work down the list."
+   ]
+  },
+  {
+   "n": 9,
+   "test": "For two weeks, deal with every letter and piece of paper on the day it arrives.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Open it where it comes in. It goes one of three ways: do it, keep it in one folder, or recycle it. School letters and receipts count. This is the daily habit; a big pile that has built up is a one-off job on \"A home that works\"."
+  },
+  {
+   "n": 10,
+   "test": "Walk the whole home slowly, find the spot where things have started to pile up again, and put the worst one right today.",
+   "ctx": "home",
+   "kind": "attention",
+   "mins": 20,
+   "extra": true,
+   "note": "Walk every room the way a visitor would see it. Where are the piles back? The chair in the bedroom, the bottom of the stairs, the end of the kitchen counter. Pick the worst one and put it right today."
+  },
+  {
+   "n": 11,
+   "test": "Find the one spot that always goes wrong, and give it a new job.",
+   "ctx": "home",
+   "kind": "attention",
+   "mins": 15,
+   "extra": true,
+   "note": "Every home has a spot that always goes wrong: the hall table, the end of the kitchen counter. Watch what lands there. Then give it a new job: a hook for bags, a basket for post, or nothing on it at all."
+  },
+  {
+   "n": 12,
+   "test": "Catch a pile three times in one week, when it is only two things, and put both away.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Two things on a chair is the start of a pile. When you see two, put both away there and then, and make a mark for it. Three marks by the end of the week is the rung."
+  },
+  {
+   "n": 13,
+   "test": "Keep one in, one out going for a whole month.",
+   "ctx": "long",
+   "kind": "courage",
+   "note": "The same rule as the week, held for four. Keep a short list on your phone of what came in and what went out. By the end, you will notice you think twice before bringing things home."
+  },
+  {
+   "n": 14,
+   "test": "Do the weekly round four weeks running.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "Same day each week if you can. Change the list after the first two weeks if something on it never needs doing. If one week is missed, do it the next day and carry on."
+  },
+  {
+   "n": 15,
+   "test": "Agree with everybody you live with on one shared surface that stays clear, and keep it clear for a week.",
+   "ctx": "with",
+   "kind": "courage",
+   "note": "The kitchen table and the hall shelf are good choices. Ask, do not tell: \"Can we keep the table clear so we can all eat at it?\" Children can be in charge of checking it each evening. If you live alone, choose the surface a visitor sees first and tell a friend you are keeping it clear."
+  },
+  {
+   "n": 16,
+   "test": "Give everybody in the home one small evening job that is theirs, and keep it going for two weeks.",
+   "ctx": "with",
+   "kind": "kindness",
+   "note": "Shoes into the rack, cushions on the sofa, the table wiped, the dishwasher emptied. Choose jobs that suit each person; a child of four can put the shoes away. Thank people for doing theirs. If you live alone, give yourself one job at a second moment in the day, like a morning one, and count it."
+  },
+  {
+   "n": 17,
+   "test": "Leave every room as you found it, or better, every time you leave it, for a week.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Before you leave a room, look back from the door and take one thing with you if it does not belong. It adds a few seconds each time. This is what makes the evening round shorter."
+  },
+  {
+   "n": 18,
+   "test": "After a week when things slipped, do a weekly round and start the evening round again on the same day.",
+   "ctx": "home",
+   "kind": "courage",
+   "note": "Visitors, being ill, a trip away or a busy week all break the habit, and that is normal. The rung is starting again on one day, not waiting for next week. If nothing has slipped yet, do it after your next busy weekend and count it then."
+  },
+  {
+   "n": 19,
+   "test": "Keep the evening round and the weekly round going for a month, and write down the one change that made the most difference.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "Tick each evening and each week on a calendar. At the end, write one sentence: \"The bowl by the door made the most difference\", or \"the jobs for the children did\". That sentence is what you tell the next person who asks how you keep the place right."
+  },
+  {
+   "n": 20,
+   "test": "Keep the whole home in a state you are glad to walk into for three months, with both rounds running.",
+   "ctx": "long",
+   "kind": "skill",
+   "note": "Evening round, weekly round, one in and one out, the post dealt with each day. A slipped day is put right the next morning and the three months carry on. At the end there should be nothing for a big clear-out, because nothing has built up."
+  }
+ ]
+}

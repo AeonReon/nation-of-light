@@ -1,0 +1,157 @@
+{
+ "id": "words.read",
+ "name": "Reading",
+ "line": "From hearing the first sound in a word to reading a book you have never seen, aloud, with no help.",
+ "size": "months",
+ "strand": "say-what-you-mean",
+ "who": "A child from about four with a grown-up; grown-ups learning",
+ "about": "For a child from about four with a grown-up beside them, and for any grown-up who is still learning to read. It starts with sounds, not letter names: first hearing the sounds inside spoken words, then learning which letters make them, then pushing the sounds together to read a word. Letters and sound patterns come in small groups, each followed by real words and sentences to read, and it ends with a book you have never seen, read aloud from start to finish with no help. The rungs are for reading English, and ten minutes most days is plenty. A grown-up learner needs a helper too: a friend, a relative, or a volunteer, and many libraries and adult learning centres run reading help at no cost.",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Listen to your helper say five short words, and say the first sound of each one.",
+   "ctx": "with",
+   "kind": "attention",
+   "mins": 5,
+   "note": "Your helper says words like sun, map, dog, fish and tap, and you say 'sss', 'mmm', 'd', 'fff', 't'. No letters yet: this rung is only listening. Say each sound short, with no 'uh' on the end, so 'd' and not 'duh'. Your helper is a grown-up for a child, or a friend or tutor for a grown-up."
+  },
+  {
+   "n": 2,
+   "test": "Listen to your helper say the sounds of five words slowly, one sound at a time, and say each whole word.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "Your helper says 'c... a... t' and you say 'cat'. Good ones to start with: s-u-n, m-a-p, d-o-g, p-i-g, h-a-t. Still no letters: reading is this same pushing-together, done with your eyes later. If it is hard, your helper leaves shorter gaps between the sounds."
+  },
+  {
+   "n": 3,
+   "test": "Learn the sounds of the letters s, a, t, p, i and n, and say each sound when your helper points to the letter.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Say the sound, not the name: s is 'sss', a is the sound at the start of 'ant', t is a short 't', p is a short 'p', i is the sound at the start of 'ink', n is 'nnn'. Your helper writes the six letters large on paper and points in a mixed-up order. Say the sounds the way people around you say them. You know this rung when you get all six right twice in a row.",
+   "how": [
+    "Your helper writes s a t p i n on a sheet of paper.",
+    "They say each sound and you copy it.",
+    "They point in a mixed-up order and you say each sound."
+   ]
+  },
+  {
+   "n": 4,
+   "test": "Read six words made from those letters by saying each sound and pushing the sounds together: sat, pin, tap, nap, tip, pan.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Point under each letter as you say its sound, then say the sounds again faster until they make the word, just like on rung two. Your helper writes the words on paper, big and clear. If a word comes out wrong, go back to the first sound and try once more. Plenty more words work with these six letters: pat, tin, nip, sit."
+  },
+  {
+   "n": 5,
+   "test": "Learn the sounds of m, d, g, o, c and k, and say each one when your helper points to it.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "m is 'mmm', d is a short 'd', g is the hard sound at the start of 'got', o is the sound at the start of 'on'. The letters c and k make the same sound, the one at the start of 'cat' and 'kit'. Mix these six with the first six when your helper points, so the old ones stay fresh."
+  },
+  {
+   "n": 6,
+   "test": "Read ten words made from the twelve letters you know, sounding each one out.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "For example: dog, cat, mop, kid, map, pot, dig, cot, mat, got. Your helper writes them in a list and you read down it. Words you read quickly without sounding out still count; that is where reading is going."
+  },
+  {
+   "n": 7,
+   "test": "Listen to your helper say five words, and for each one say its sounds and point to the letters on a sheet.",
+   "ctx": "with",
+   "kind": "attention",
+   "note": "This is reading turned round, and it makes reading stronger. Your helper says 'map', you say 'm... a... p' and point to m, a and p on the sheet from rung three. A child who can hold a pencil can write the letters instead of pointing."
+  },
+  {
+   "n": 8,
+   "test": "Learn the sounds of e, u, r, h, b, f and l.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "e is the sound at the start of 'egg', u is the sound at the start of 'up', r is 'rrr', h is a soft breath, b is a short 'b', f is 'fff', l is 'lll'. Read a few words with them straight away: red, bus, hut, bed, fun, leg. Take two or three days over this rung if you need to."
+  },
+  {
+   "n": 9,
+   "test": "Learn the sounds of j, v, w, x, y, z and qu.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "j is the sound at the start of 'jam', v is 'vvv', w is the sound at the start of 'wet', y is the sound at the start of 'yes', z is 'zzz'. x makes two sounds together, 'ks', as at the end of 'box'. The letters q and u nearly always go together and say 'kw', as in 'quiz'. After this rung you know a sound for every letter."
+  },
+  {
+   "n": 10,
+   "test": "Learn to read five everyday words that do not follow the sounds: the, to, I, no and go.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Some very common words cannot be sounded out, so you learn them by sight. Your helper writes each one on a small piece of paper; you read them in a mixed-up order until you get all five right without stopping. Keep the papers and mix them in with the later word lists."
+  },
+  {
+   "n": 11,
+   "test": "Read three short sentences made of sound-out words and those five sight words.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "For example: 'The cat is on the bed.' 'I got a red hat.' 'The dog can go on the mat.' Your helper writes them out. Point under each word as you read, and read the whole sentence again once you have worked out every word."
+  },
+  {
+   "n": 12,
+   "test": "Learn the sounds that two letters make together, sh, ch, th, ng and ck, and read ten words with them in.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Two letters, one sound: sh as in 'ship', ch as in 'chip', th as in 'thin', ng as at the end of 'ring', ck as at the end of 'duck' (the same sound as c and k). Words to read: shop, fish, chin, much, this, moth, song, king, back, sock. Point under the two letters together, because they make one sound."
+  },
+  {
+   "n": 13,
+   "test": "Read ten words where two sounds sit side by side, like stop and milk, saying every sound.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "stop, frog, milk, jump, hand, best, crab, swim, lost, plan. Each letter still makes its own sound, so 'stop' is s... t... o... p. These words are longer, so take them slowly and push all the sounds together at the end."
+  },
+  {
+   "n": 14,
+   "test": "Learn ten more everyday sight words: he, she, we, me, be, was, you, they, said and my.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Use small pieces of paper again and mix them with the first five from rung ten. Some of these nearly follow the sounds, and noticing which part is odd helps you remember them. You know this rung when you read all fifteen in a mixed-up pile without stopping."
+  },
+  {
+   "n": 15,
+   "test": "Learn the sounds ai, ee, igh, oa and oo, and read ten words with them in.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "ai as in 'rain', ee as in 'feet', igh as in 'night', oa as in 'boat', oo as in 'moon'. Words to read: rain, tail, see, green, high, light, coat, road, food, soon. oo sometimes makes the shorter sound in 'book' and 'look'; if one way does not make a word you know, try the other."
+  },
+  {
+   "n": 16,
+   "test": "Read one page of a first reading book aloud, sounding out any word you do not know.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "A first reading book uses only the sounds taught so far, and many libraries lend them at no cost. You can also find free printable ones online, or your helper can write five short sentences on a sheet about something in your day. If you already read pages like this, read one on purpose today and count it."
+  },
+  {
+   "n": 17,
+   "test": "Learn the sounds ar, or, ur, ow, oi and er, and read ten words with them in.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "ar as in 'car', or as in 'fork', ur as in 'burn', ow as in 'cow', oi as in 'coin', er as in 'her'. Words to read: park, star, horse, short, turn, down, town, soil, boil, sister. ow can also say the sound in 'snow'; try both and choose the one that makes a word."
+  },
+  {
+   "n": 18,
+   "test": "Read ten words where an e on the end changes the sound in the middle, like cake and bike.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Read 'cap', then 'cape': the e at the end makes no sound, but it makes the a say its own name. The same happens with the other vowels. Words to read: cake, game, bike, time, home, rope, cube, tube, late, five."
+  },
+  {
+   "n": 19,
+   "test": "Read a whole first reading book on your own over a few days, then tell your helper what happened in it.",
+   "ctx": "long",
+   "kind": "attention",
+   "note": "Read a few pages a day, aloud or quietly, choosing a book at the level of rung sixteen or a little harder. When you finish, tell your helper who was in it and what happened, in your own words. Understanding the story is the point: sounding out is how you get there."
+  },
+  {
+   "n": 20,
+   "test": "Read a short book you have never seen before aloud to somebody, from start to finish, with no help.",
+   "ctx": "with",
+   "kind": "skill",
+   "note": "Choose a short first reading book or picture book from a library or a friend's shelf that you have not read before. Your listener only listens; if you cannot read a word, sound it out, just as you have done since rung four. That is the far end of this ladder, and the Reading books ladder starts from here."
+  }
+ ]
+}

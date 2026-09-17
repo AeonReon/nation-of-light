@@ -1,0 +1,165 @@
+{
+ "id": "money.invest",
+ "name": "Making money grow",
+ "line": "From writing down what you are saving for to teaching somebody how interest on interest works and what risk means.",
+ "size": "months",
+ "strand": "be-useful-to-somebody",
+ "from": 10,
+ "about": "For anybody from about ten; a child saves with a grown-up, and does not sign up for anything. This ladder is for learning how money can grow, and it is not financial advice: it never tells you what to put money into. It starts with a savings goal and a weekly habit, then works through interest, interest on interest, rising prices, the cost of debt, what risk means (using a dice game), and how fees and charges change the result. It ends with you teaching somebody how interest on interest works and what risk means. Anybody thinking of investing real money should first read the independent guidance published by their country's official financial regulator, or speak to a qualified, independent adviser.",
+ "who": "From about ten; a child saves with a grown-up",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Write down one thing you would like to save for, what it costs, and how many weeks it would take if you put aside the same amount each week.",
+   "note": "Something that costs 30, saving 3 a week, takes 10 weeks. Use the prices and money of wherever you live; the sums work the same in any currency. A child chooses the goal and the weekly amount with a grown-up.",
+   "ctx": "room",
+   "kind": "attention",
+   "mins": 5
+  },
+  {
+   "n": 2,
+   "test": "Start a savings record with three columns: the date, the amount put in, and the running total.",
+   "note": "A page in a notebook or a note on your phone. A child might keep the money in a jar at home, with the page beside it. Write your starting amount on the first line, even if it is nothing.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 3,
+   "test": "Put the same amount into your savings on the same day every week for eight weeks, and write each one in your record.",
+   "note": "The amount can be as small as one coin; the habit matters more than the size. If you already save regularly, do it on purpose on a fixed day and count it. Keep going with the other rungs while these weeks run.",
+   "ctx": "long",
+   "kind": "skill"
+  },
+  {
+   "n": 4,
+   "test": "Explain in your own words what interest is, with an example using 100.",
+   "note": "Interest is money paid for the use of money. When you keep money in a savings account, the bank may pay you interest; when you borrow, you pay it. If 100 earns 5 per cent a year, after one year there is 105. The rates in this ladder are round numbers for the sums, not what any bank offers.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 5,
+   "test": "On paper, work out what 100 becomes after three years at 10 per cent a year, first with interest paid only on the 100, then with interest also paid on the interest.",
+   "note": "Interest only on the 100: 110, 120, 130. Interest on the interest too: 110, then 121, then 133.10. The second way is called compound interest. The gap is small after three years and grows larger every year after.",
+   "how": [
+    "Year 1: 100 plus 10 per cent is 110.",
+    "Year 2, interest on the new total: 110 plus 11 is 121.",
+    "Year 3: 121 plus 12.10 is 133.10.",
+    "Compare 133.10 with 130."
+   ],
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 6,
+   "test": "With a calculator, work out what 100 becomes after 10, 20 and 30 years at 5 per cent a year, with interest on interest.",
+   "note": "Multiply by 1.05 once for each year: about 163 after 10 years, 265 after 20, and 432 after 30. The second ten years add more than the first, and the third more again. That is what time does to compound growth. Check your answers against these.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 7,
+   "test": "Divide 72 by an interest rate to estimate how many years money takes to double, then check one answer with a calculator.",
+   "note": "At 6 per cent: 72 divided by 6 is 12 years. Check: 1.06 multiplied by itself 12 times is about 2.01, so it has doubled. This \"rule of 72\" is a rough guide that works well for rates between about 2 and 15 per cent.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 8,
+   "test": "Ask somebody older what three everyday things cost when they were your age, and write those prices beside what the same things cost today.",
+   "note": "A loaf of bread, a bus fare, a stamp, a cinema ticket, a bottle of milk. Their memory will be rough, and that is fine. The point is to see that prices usually rise over the years, so the same money buys less.",
+   "ctx": "with",
+   "kind": "attention"
+  },
+  {
+   "n": 9,
+   "test": "Work out what 100 kept in a tin for ten years would buy if prices rose by 3 per cent every year.",
+   "note": "Divide 100 by 1.03 ten times, or by 1.34: about 74. The tin still holds 100, but it buys only what about 74 buys today. The general rise in prices is called inflation. The 3 per cent is an example, not a forecast.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 10,
+   "test": "Say which has to be bigger, the interest rate on savings or the rise in prices, for savings to buy more over time, and explain why with numbers.",
+   "note": "If savings earn 2 per cent and prices rise by 3 per cent, after a year 100 has become 102, but things that cost 100 now cost 103. The money grew, but it buys a little less. Only when interest is higher than the rise in prices does it buy more.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 11,
+   "test": "Work out what 500 borrowed at 20 per cent a year becomes after three years if nothing is paid back, and compare it with 500 saved at 4 per cent.",
+   "note": "Borrowed: 600, then 720, then 864. Saved: 520, then about 541, then about 562. Interest on interest works for you when you save and against you when you owe. Many store cards, credit cards and loans charge high rates; the rate is always in the small print.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 12,
+   "test": "Play the \"two savers\" dice game for twenty rounds, and write down where each saver ended and the lowest point each reached.",
+   "note": "Saver A gains 2 every round, no dice. Saver B rolls a dice each round: 1 loses 10, 2 loses 5, 3 is no change, 4 gains 5, 5 gains 10, 6 gains 15. Over many rounds Saver B gains about 2.50 a round on average, but some games end lower than A and some much higher. No dice? Use a free dice app, or six numbered scraps of paper in a cup.",
+   "how": [
+    "Both savers start with 100.",
+    "Each round, add 2 to Saver A and roll for Saver B.",
+    "Write both totals after each round.",
+    "After twenty rounds, circle each saver's final total and lowest total."
+   ],
+   "ctx": "home",
+   "kind": "attention"
+  },
+  {
+   "n": 13,
+   "test": "Play the game three more times, then write one sentence saying what \"risk\" means, using your results.",
+   "note": "Something like: \"Risk means not knowing what you will end with; Saver B could end higher or lower than Saver A.\" Look at how far B dropped in its worst game. In real life, a chance of higher growth usually comes with a chance of losing some money, and nobody can promise which it will be.",
+   "ctx": "home",
+   "kind": "skill"
+  },
+  {
+   "n": 14,
+   "test": "Explain what a share in a company is, and give two reasons its price can go up or down.",
+   "note": "A share is a small part of owning a company. Its price moves when more people want to buy it than sell it, or the other way round, which can happen because of how well the company does, news about it, or how people feel about the future. Knowing what a share is does not mean you should buy one.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 15,
+   "test": "Explain what a bank does with the money people keep in it, and find out whether savings kept in banks where you live are protected up to a limit if a bank fails.",
+   "note": "Banks keep some money ready and lend much of the rest to other people and businesses, charging them more interest than they pay savers. Many countries protect savings in banks up to a set amount. Your country's central bank or official financial regulator explains on its own website whether this applies where you live.",
+   "ctx": "room",
+   "kind": "skill"
+  },
+  {
+   "n": 16,
+   "test": "Work out what 1,000 growing at 5 per cent a year becomes after 20 years, then again with a yearly charge of 1 per cent taken off, and write the difference.",
+   "note": "At 5 per cent: about 2,653. With 1 per cent taken each year it grows at about 4 per cent: about 2,191. A charge that sounds small takes about 460 over twenty years. This is why reading the charges matters as much as reading the rate.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 17,
+   "test": "Read the details of one savings account from a bank, and write down the interest rate, how often it is paid, any fees, and any rules about taking money out.",
+   "note": "Look on a bank's website or a leaflet; a child does this with a grown-up and does not sign up for anything. Look for whether the rate is per year, whether it can change, and whether you lose interest for taking money out early. This rung is about reading, not choosing.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 18,
+   "test": "Write down four warning signs of a money scam, then find one scam warning published by your country's official financial regulator.",
+   "note": "Common signs: a promise of high returns with little or no risk; pressure to decide today; a message or call out of the blue; being told to keep it secret or to pay in an unusual way. If something promises growth with no risk, the promise itself is the warning. Many regulators keep a public list of warnings.",
+   "ctx": "room",
+   "kind": "attention"
+  },
+  {
+   "n": 19,
+   "test": "Keep up your weekly saving until it has run for twelve weeks, then add up how much you put in and how much, if any, came from interest.",
+   "note": "This continues rung 3. If your money is in a jar, all of it came from you, and that is worth writing down too. Compare the total with the goal from rung 1 and write how many weeks are left.",
+   "ctx": "long",
+   "kind": "skill"
+  },
+  {
+   "n": 20,
+   "test": "Teach somebody how interest on interest works, using the 100 at 10 per cent example, and what risk means, using the dice game, until they can explain both back to you.",
+   "note": "Write out the three years on paper together, then play five rounds of the dice game. Ask them to tell you in their own words what compound interest is and what risk is. A child can teach a grown-up, and a grown-up a child. Teach how it works, not what to buy.",
+   "ctx": "with",
+   "kind": "kindness"
+  }
+ ]
+}

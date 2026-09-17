@@ -1,0 +1,100 @@
+{
+ "id": "order.wardrobe",
+ "name": "The wardrobe",
+ "line": "From one sorted drawer of socks to a wardrobe where every piece has been worn in the last four weeks or kept on purpose.",
+ "size": "afternoon",
+ "strand": "look-after-the-place",
+ "about": "For everybody from about eight: a child sorts their own clothes with a grown-up beside them, and a grown-up does theirs. The climb goes through the clothes one kind at a time, starting with the smallest drawer, then bags what is leaving, puts back what stays so every piece can be seen, and sorts out what needs mending and what belongs to another season. It ends four weeks later with a simple test of what really gets worn. Getting dressed becomes quicker, and clothes that sat unworn go to somebody who will wear them.",
+ "who": "From about eight; a child with a grown-up",
+ "steps": [
+  {
+   "n": 1,
+   "test": "Take every sock and piece of underwear out of the drawer, and put back only what is in good condition and gets worn.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 10,
+   "note": "Tip the drawer out onto the bed. Match the pairs; single socks, holes, stretched or faded things go into a pile to leave. Put back what is left, folded or rolled so you can see each one. A child does their own drawer, with a grown-up checking what still fits."
+  },
+  {
+   "n": 2,
+   "test": "Take out every top, shirt and jumper, and put back only what fits now and you are glad to wear.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "All of them onto the bed, including the ones on the back of the door. Pick each one up and ask two questions: does it fit now, and have I worn it this year? Two yeses go back. Anything else goes in the pile to leave, or on a chair to try on at the next rung."
+  },
+  {
+   "n": 3,
+   "test": "Try on everything you are unsure about, including the trousers, skirts, dresses and coats, and keep only what fits now.",
+   "ctx": "home",
+   "kind": "courage",
+   "note": "Stand in front of a mirror and try each one properly, buttoned and zipped. Keep what fits your body today and that you would wear this month, not what might fit one day. A grown-up helps a child check sleeves and length, because children grow out of things quickly."
+  },
+  {
+   "n": 4,
+   "test": "Take out every pair of shoes, clean the ones that stay, and put aside any that hurt or have not been worn in a year.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Line them up on some newspaper. A pair that gives you sore feet, or that has sat unworn for a year, goes in the pile to leave. Wipe the rest with a damp cloth and put them back in pairs. If your shoes are all already clean and worn, sort them anyway and count it."
+  },
+  {
+   "n": 5,
+   "test": "Bag the clothes that are leaving: one bag to give away, and the worn-out ones kept apart.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Clean, wearable clothes go in one bag for a charity shop, a clothes bank, a younger cousin or a friend the same size. Clothes that are torn or worn thin go in a separate bag: many places have a clothes recycling bank, or cut them up into cleaning cloths. Tie the bags and put them by the front door to go out this week."
+  },
+  {
+   "n": 6,
+   "test": "Put back everything that stays so you can see every piece at once.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "Hang things of the same kind together: tops with tops, trousers with trousers. In drawers, fold each piece into a small rectangle and stand it on its edge, like files in a box, so you see every one when you open the drawer. Nothing hidden under anything else."
+  },
+  {
+   "n": 7,
+   "test": "Check every kept piece for a missing button, a loose hem or a broken zip, and put those in one bag to mend.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Look at buttons, hems, seams under the arms and zips. Put anything that needs work into one bag and write on it the date you will mend them by, within two weeks. The Mending ladder shows how to do zips and patches; buttons need only a needle and thread."
+  },
+  {
+   "n": 8,
+   "test": "Pack the clothes for the other season away somewhere else entirely.",
+   "ctx": "home",
+   "kind": "skill",
+   "mins": 20,
+   "extra": true,
+   "note": "Thick jumpers and coats in the warm months, light clothes in the cold months. Fold them into a bag, a box or a suitcase and put it under the bed or on a shelf you can reach from the floor. Where the weather is much the same all year, put away the clothes you only wear for rare occasions instead. What is left is only what you can wear this month."
+  },
+  {
+   "n": 9,
+   "test": "Work out what you are really missing, and write the list.",
+   "ctx": "home",
+   "kind": "attention",
+   "mins": 10,
+   "extra": true,
+   "note": "Look at what you wear every week and ask what would make mornings easier. A plain jumper that goes with everything, a pair of shoes that do not hurt. Write the list; buying is not today, knowing is. Many things on it can come from a friend, a family member or a clothes swap for free."
+  },
+  {
+   "n": 10,
+   "test": "Wash, dry and put away one whole load of washing on the same day, from the basket back into the wardrobe.",
+   "ctx": "home",
+   "kind": "skill",
+   "note": "The wardrobe stays sorted only if clean clothes reach it, instead of sitting in a pile. Fold or hang each piece as soon as it is dry, and put it back in its place from rung six. A child can match socks and put their own clothes away. If this is already how you do washing, do it on purpose and count it."
+  },
+  {
+   "n": 11,
+   "test": "Turn every hanger in the wardrobe back to front, and turn each one round the right way when you wear what is on it.",
+   "ctx": "home",
+   "kind": "attention",
+   "note": "Turn the hook so it faces the other way. After you wear something and put it back, hang it the normal way round. For folded clothes, keep what you have worn at the front of the drawer. Out-of-season clothes are not part of this test."
+  },
+  {
+   "n": 12,
+   "test": "Four weeks after turning the hangers, take out everything still back to front and decide about each piece.",
+   "ctx": "long",
+   "kind": "courage",
+   "note": "Whatever is still on a back-to-front hanger has not been worn for a month. For each one, either choose to keep it for a reason you can say out loud, such as a wedding outfit, or put it in a bag to give away. The wardrobe that is left holds clothes you wear."
+  }
+ ]
+}
