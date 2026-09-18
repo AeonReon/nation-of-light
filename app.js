@@ -167,9 +167,16 @@
   function hush() { SPK++; clearTimeout(whenQuiet._t); NAR.pause(); MAR.pause(); if (RIG) RIG.hush(); if (ARIG) ARIG.hush(); $('readbtn').classList.remove('on'); musicDuck(false); clearTimeout(marcusSay._t); $('bubble').hidden = true; $('abubble').hidden = true; if ($('popcap')) capHide(0); SPEAKING = null; MQ.length = 0; }
   /* the music (v81): every piece on the shelf, one after another with a stretch of the room alone
      between them (`music.gap` seconds). It was one 52-second nocturne, the same one every visit, then
-     silence. The very first Begin still opens on that nocturne; every other start takes the next piece. */
+     silence. The very first Begin still opens on that nocturne; every other start takes the next piece.
+     v89, his: EVERY visit opens on the nocturne ("it anchors the feeling, and I miss it when I first go
+     in"), and only staying on brings the others. `opening` = the first music of a visit; after it the
+     room walks through `music.pieces` (never the nocturne twice in a row), and the place in that walk is
+     kept in S.musicN, so tomorrow's second piece is not today's. */
   let MUSV = 0, MUST = null, MUSWANT = false, MUSGAP = null, MUSI = 0;
   const musicList = () => [(C.music && C.music.first) || { id: 'dawn' }].concat((C.music && C.music.pieces) || []);
+  /* index into musicList() of the next piece after the nocturne: 1..n, carried on from the last visit */
+  const nextPiece = () => { const n = ((C.music && C.music.pieces) || []).length; if (!n) return 0;
+    S.musicN = ((S.musicN || 0) + 1) % n; save(); return 1 + S.musicN; };
   const duckTo = () => $('stage').classList.contains('school') ? .26 : .14;
   function musicTo(v, ms) { clearInterval(MUST); const from = getVol(MUS), t0 = performance.now(); MUST = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / ms); setVol(MUS, from + (v - from) * k); if (k >= 1) clearInterval(MUST); }, 50); }
   function musicPlay() {
@@ -179,8 +186,8 @@
     MUS.play().then(() => musicTo((!NAR.paused || !MAR.paused) ? duckTo() : MUSV, 2600)).catch(() => {});
   }
   const lyreLit = on => { try { PORTICO.props.lyre.classList.toggle('play', on); } catch (e) {} };
-  function musicStart(v, opening) { if (!S.sound || S.musicOff) return; MUSWANT = true; MUSV = v || .55; if (opening) MUSI = 0; else { S.musicN = (S.musicN || 0) + 1; MUSI = S.musicN; save(); } musicPlay(); }
-  MUS.addEventListener('ended', () => { if (!MUSWANT) return; MUSI++; S.musicN = MUSI; save(); const G = (C.music && C.music.gap) || [20, 40]; MUSGAP = setTimeout(musicPlay, (G[0] + Math.random() * (G[1] - G[0])) * 1000); });
+  function musicStart(v, opening) { if (!S.sound || S.musicOff) return; MUSWANT = true; MUSV = v || .55; MUSI = opening ? 0 : nextPiece(); musicPlay(); }
+  MUS.addEventListener('ended', () => { if (!MUSWANT) return; MUSI = nextPiece(); const G = (C.music && C.music.gap) || [20, 40]; MUSGAP = setTimeout(musicPlay, (G[0] + Math.random() * (G[1] - G[0])) * 1000); });
   function musicDuck(on) { lyreDuck(on); if (MUS.paused || !MUSWANT) return; musicTo(on ? duckTo() : MUSV, on ? 350 : 1400); }
   function musicStop() { MUSWANT = false; clearTimeout(MUSGAP); MUS._held = false; lyreLit(false); if (MUS.paused) return; musicTo(0, 1200); setTimeout(() => { if (!MUSWANT) MUS.pause(); }, 1300); }
   const musicNow = () => musicList()[MUSI % musicList().length].id;
@@ -283,6 +290,9 @@
   }
   /* ---- things to touch in the portico: the brazier flares, the olive rustles and Aurelia reads a line, the lyre plays a while ---- */
   const atHome = () => $('stage').classList.contains('arrive');
+  /* v89: home MODE is not home SHOWING. A ladder, room or area opened from home keeps the stage in
+     home mode, so anything that redraws after an action asks this, not atHome(). */
+  const homeShowing = () => atHome() && !TRK && !CAT && !AREA && SEARCH === null;
   function tapBrazier(el) {
     ac(); sfx('flame'); PORTICO.flare(); sparks(); S.taps++; save();
     if (PORTICO.flame.classList.contains('out')) { PORTICO.setFlame('lit'); ambFire(true); clearTimeout(tapBrazier._t); tapBrazier._t = setTimeout(() => { if (!S.done.length) { PORTICO.setFlame('out'); ambFire(false); } }, 9000); }
@@ -531,7 +541,7 @@
     v.querySelector('#sharelink').addEventListener('click', () => { sfx('tap'); sharePanel(cover); });
     v.querySelector('#begin').addEventListener('click', () => {
       ac(); unlockAudio();
-      musicStart(null, !S.member && !S.done.length); ambStart();   /* only the very first Begin opens on the dawn nocturne */
+      musicStart(null, true); ambStart();   /* v89: every visit opens on the dawn nocturne */
       if (S.member && SCH) { sfx('tap'); unlockAudio(); closeVeil(enterSchool); }
       else if (back) { sfx('tap'); unlockAudio(); closeVeil(enter); }
       else { sfx('begin'); closeVeil(welcome); }
@@ -646,7 +656,7 @@
     backBtn(v, () => closeVeil(fromCover ? cover : doorPanel));
     v.querySelector('#codeform').addEventListener('submit', e => { e.preventDefault(); sfx('tap'); S.code = new FormData(e.target).get('code').trim(); save();
       const good = (C.codes || []).some(k => k.toLowerCase() === S.code.toLowerCase());
-      if (good && SCH) { S.member = true; save(); ac(); musicStart(.4); ambStart(); closeVeil(enterSchool); return; }
+      if (good && SCH) { S.member = true; save(); ac(); if (!MUSWANT) musicStart(.4, true); ambStart(); closeVeil(enterSchool); return; }
       const p = v.querySelector('.doorcard'); p.innerHTML = `<div class="eyebrow"><i></i>${D.codeTitle}</div><h2>Kept.</h2><p class="lede">${D.codeSoon}</p><button class="btn btn-gold" id="codeback2" style="width:100%">Back to the portico</button>`;
       p.querySelector('#codeback2').addEventListener('click', () => { sfx('tap'); closeVeil(() => { ARIG.show(false); restTablet(); }); }); });
   }
@@ -984,7 +994,7 @@
     if (RIG.hidden) { RIG.enter(); setTimeout(() => { ARIG.show(true); $('afig').classList.remove('walk-out-l', 'walk-in-l', 'popin', 'popout'); void $('afig').offsetWidth; $('afig').classList.add('walk-in-l'); }, 350); }
     else { RIG.show(true); ARIG.show(true); }
     paintTabs('home'); $('sline').textContent = ''; MODE = 'school';
-    if (!MUSWANT) musicStart(.4); ambStart(); if (points()) ambFire(true);
+    if (!MUSWANT) musicStart(.4, true); ambStart(); if (points()) ambFire(true);
     renderArrival(); idleRoom(50000);
     if ((S.school.visits || 0) <= 4 && S.taps < 3) setTimeout(() => PORTICO.props.lyre.classList.add('hint'), 2500);
     const vn = (S.school.visits || 0) + HOMEN;
@@ -1285,7 +1295,7 @@
       ${ix === mine && nx ? `<i class="hbar"><em style="width:${Math.max(4, Math.min(100, Math.round((p - st.at) / (nx.at - st.at) * 100)))}%"></em></i><p class="hn">${fmt1(H.next, { p, at: nx.at, title: nx.title })}</p>` : ''}
       <div class="hstrip">${H.stages.map((x, i) => `<button class="hst ${i === ix ? 'on' : ''} ${all || i <= mine ? '' : 'lk'}" data-hst="${i}" aria-label="${x.title}"><img src="${heroImg(x)}" alt=""></button>`).join('')}</div>
       <div class="hrow"><button class="linkbtn" id="hrename">${H.rename}</button><button class="linkbtn" id="hall">${all ? H.builderOff : H.builder}</button></div></div></div>`, 'deep herov');
-    backBtn(v, () => closeVeil(() => { if (atHome()) renderArrival(); }));
+    backBtn(v, () => closeVeil(() => { if (homeShowing()) renderArrival(); }));
     v.querySelectorAll('[data-hst]').forEach(b => b.addEventListener('click', () => { sfx('tap'); heroShow(+b.dataset.hst, all); }));
     v.querySelector('#hrename').addEventListener('click', () => { sfx('tap'); heroName(() => heroShow(at, all), true); });
     v.querySelector('#hall').addEventListener('click', () => { sfx('tap'); heroShow(ix, !all); });
@@ -1302,6 +1312,8 @@
   }
   function renderArrival() {
     const list = $('slist'), keep = list.scrollTop;
+    TRK = null; TRK_FROM = null; CAT = null; AREA = null; if (SEARCH !== null) { SEARCH = null; paintSearchBtn(); }
+    $('stage').classList.remove('room', 'searching');
     if (ROOMV === 'becoming') { becomingRoom(list); return; }
     if (ROOMV) { progressRoom(list); return; }
     stageBack(null); paintFlames(); const picks = todayPicks(), later = todayPicks('later'); const P = C.arrival, R = C.room, F = P.folds || {};
@@ -1983,7 +1995,7 @@
       el.addEventListener('click', go); el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(e); } }); });
     root.querySelectorAll('[data-commit]').forEach(b => b.addEventListener('click', () => { sfx('tap'); commitCard(trackById(b.dataset.commit), 'long'); }));
   }
-  const rerender = () => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); };
+  const rerender = () => { if (homeShowing()) renderArrival(); else renderSchool(); };
   function logPractice(tr) {
     const t = today(), p = prac(tr); if (p.days[t]) return;
     p.days[t] = 1; S.days[t] = (S.days[t] || 0) + 1; save();
@@ -2420,15 +2432,15 @@
       const hers = !up && where !== 'arrival' && n % 3 === 2 && C.aurelia.affirm && C.aurelia.affirm.length;
       const both = n % 5 === 0;
       const won = awards().find(x => x.earned && !hadIds.has(x.id));
-      if (won) { closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); setTimeout(() => trophyShow(won), 450); }); return; }
+      if (won) { closeVeil(() => { rerender(); setTimeout(() => trophyShow(won), 450); }); return; }
       /* the last rung. Nothing else that happens today outranks this. */
       if (!nextStep(tr) && !tr.solo) {
-        closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool();
+        closeVeil(() => { rerender();
           setTimeout(() => finishCard(tr), 420); });
         return;
       }
       if (saySlot(up ? 'rank' : (rusty ? 'rusty' : 'done'), null, sayCtx)) {
-        closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool();
+        closeVeil(() => { rerender();
           if (where !== 'track') setTimeout(() => afterStep(tr), 900); });
         return;
       }
@@ -2440,7 +2452,7 @@
         const y = gotAward && line('c-award') ? 'c-award' : (where === 'arrival' ? C.arrival.after : (up ? 'c-rank' : C.school.affirm[(n - 1) % C.school.affirm.length]));
         if (line(y)) { if (!inScene) { popIn('marcus'); if (both) popIn('aurelia'); } setTimeout(() => { if (!ARIG.hidden) ARIG.smile(3); marcusSay(line(y), up ? 'cheer' : (n % 2 ? 'cheer' : 'nod'), () => { if (!inScene) { popOut('marcus', 1400); if (both) popOut('aurelia', 1400); } }); }, inScene ? 400 : 900); }
       }
-      closeVeil(() => { if ($('stage').classList.contains('arrive')) renderArrival(); else renderSchool(); if (where !== 'track') setTimeout(() => afterStep(tr), 700); });
+      closeVeil(() => { rerender(); if (where !== 'track') setTimeout(() => afterStep(tr), 700); });
     });
   }
   /* the ask, timed to interest: nothing after one step; after the second, a soft yes or no, one tap out; after the third, the proper moment, once */
@@ -2560,7 +2572,7 @@
     const [c, v, av, sch] = await Promise.all([fetch('content.json', { cache: 'no-cache' }).then(r => r.json()), fetch('audio/marcus/visemes.json', { cache: 'no-cache' }).then(r => r.json()).catch(() => null), fetch('audio/voice/visemes.json', { cache: 'no-cache' }).then(r => r.json()).catch(() => null), fetch('school.json', { cache: 'no-cache' }).then(r => r.json()).catch(() => null)]);
     C = c; VIS = v; AVIS = av; SCH = sch;
     S.feed = S.feed || { posts: [], seen: [] }; FEED = S.feed.posts || [];
-    fetch('feed.json?x=' + Date.now()).then(r => r.json()).then(f => { FEED = (f && f.posts) || []; S.feed.posts = FEED; save(); if ($('stage').classList.contains('arrive')) renderArrival(); }).catch(() => {});
+    fetch('feed.json?x=' + Date.now()).then(r => r.json()).then(f => { FEED = (f && f.posts) || []; S.feed.posts = FEED; save(); if (homeShowing()) renderArrival(); }).catch(() => {});
     fetch('library.json', { cache: 'no-cache' }).then(r => r.json()).then(l => { LIB = (l && l.items) || []; }).catch(() => {});
     const ids = new Set(C.moves.map(m => m.id)); S.done = S.done.filter(id => ids.has(id)); S.skipped = S.skipped.filter(id => ids.has(id)); save();
     for (const k in C.marcus.lines) for (const l of C.marcus.lines[k]) LINES[l.id] = l;

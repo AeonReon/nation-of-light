@@ -762,3 +762,23 @@ Reset state in the console: `NOL.reset()`. State key `nol.v1` in localStorage.
   stronger, with gear added and choices that make him yours, and he wants it tried somewhere it cannot interfere with
   the school. So `hero.on: false` in content.json (code and pictures stay), and the experiment lives in its own app:
   `APPS/character-lab`. Bring it back here only when he says the lab version is good.
+- **v89 (2026-09-18, Opus session): Done on a ladder opened from home keeps you there; every visit opens on the nocturne.**
+  (1) **The bug, his words:** from home, open the long skill's ladder, tick a step Done, and "it glitches out and
+  makes me look like I'm on the home screen", then the long game tab "looks like I'm in the home section" until
+  pressed a few times. Cause: a ladder opened from home (`openTrack(tr, {home:true})`) leaves the stage in home MODE
+  (`.arrive`), and every redraw after Done asked `classList.contains('arrive')` — so it drew home over the ladder
+  while `TRK` stayed set and the stage kept its `.room` class: half home, half ladder, and the next taps fought
+  over it. Fix: **`homeShowing()` = home mode AND no ladder, room, area or search open** — the test for "redraw
+  home" everywhere (`rerender()`, the four Done branches in `stepSheet`, the late feed.json redraw, the hero
+  card's Back); and **`renderArrival()` now clears `TRK/TRK_FROM/CAT/AREA/SEARCH` and the `.room/.searching`
+  stage classes**, because drawing home means no school page is open any more. Verified in the preview: two
+  steps Done in a row stay on the ladder (1/20 → 2/20, the sheet offers step 2 straight after), one tap on The
+  long game lands on the long page, one on Home lands home with no `.room` left, Back returns home. **Rule: never
+  test `atHome()` to decide what to redraw — ask `homeShowing()`.**
+  (2) **Music, his:** "the first song should always be the original one … it anchors the feeling … I miss it
+  when I first go in", then variety if you stay. The Begin tap of EVERY visit now opens on `music.first` (dawn,
+  Chopin's Nocturne in E flat); before, only the very first visit ever did and each later visit opened one piece
+  further round. After it the room walks `music.pieces` in turn (`nextPiece()`, never the nocturne twice running),
+  and the place in that walk is `S.musicN`, so tomorrow's second piece is not today's. The member-code path no
+  longer restarts the music on the next piece and cuts the nocturne off (`if (!MUSWANT)`). The lyre and the sound
+  button turning music back on mid-visit still take the next piece — a deliberate choice to hear something.
